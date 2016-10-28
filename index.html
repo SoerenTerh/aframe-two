@@ -8,11 +8,46 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- Asset management system. -->
+      <a-assets>
+        <img id="autumn-sky" src="assets/clouds.jpg"></img>
+        <img id="autumn-leaves" src="assets/leaves.jpg"></img>
+        <img id="moss-green" src="assets/moss.png"></img>
+        <a-asset-item id="tree" src="assets/tree.dae">
+        <a-asset-item id="bench" src="assets/bench.dae">
+      </a-assets>
+      <!-- Scene. -->
+      
+      <a-sphere 
+        position="0 0.5 -5" 
+        radius="0.5" 
+        material="src: #moss-green">
+      </a-sphere>
+      
+      <a-entity 
+        collada-model="#tree"
+        position="5 0 15">
+      </a-entity>
+
+      <a-entity 
+        collada-model="#bench"
+        position="-2 0 -2"
+        rotation="0 50 0">
+      </a-entity>
+
+      <a-plane position="0 0 -2"
+        rotation="-90 0 0" 
+        width="18" 
+        height="12" 
+        material="src: #autumn-leaves; repeat: 4 4"
+      </a-plane>
+
+
+      <a-sky 
+        color="#ECECEC"
+        material= "src: #autumn-sky">
+      </a-sky>
     </a-scene>
   </body>
 </html>
