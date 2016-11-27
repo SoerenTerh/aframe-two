@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sprint02</title>
+        <meta name="description" content="Sprint02">
+        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!--camera-->
+            <a-camera
+                      position="-13 13 -13"
+                      rotation="0 -30 0"
+                      cursor-visible="true"
+                      cursor-scale="2"
+                      cursor-color="#0095DD"
+                      cursor-opacity="0.5"
+                      id="mainCamera">
+            </a-camera>
+
+
+            <!--town-->
+            <a-collada-model src="#model"></a-collada-model>
+            <a-collada-model position="0 0 0" src="models/blendswap/town.dae" id="town"></a-collada-model>
+            
+            <!--figure-->
+            <a-collada-model src="#model"></a-collada-model>
+            <a-collada-model position="0 0 0" src="models/blendswap/mannequin.dae" id="figure"></a-collada-model>
+            
+<!--
+            <a-assets>
+                <a-asset-item id="man-obj" src="/models/blendswap/mannequin.obj"></a-asset-item>
+                <a-asset-item id="man-mtl" src="/models/blendswap/mannequin.mtl"></a-asset-item>
+            </a-assets>
+            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl"></a-entity>
+-->
+
+            
+            <!--shop-->
+<!--
+            <a-collada-model src="#model"></a-collada-model>
+            <a-collada-model position="0 0 0" src="models/blendswap/shop.dae" id="shop"></a-collada-model>
+-->
+            <!--sky-->
+            <a-sky color="#B0C4DE" id="sky"></a-sky>
+        </a-scene>
+    </body>
+</html>
