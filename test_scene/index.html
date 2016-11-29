@@ -12,11 +12,13 @@
             <a-camera
                       position="-13 13 -13"
                       rotation="0 -30 0"
-                      cursor-visible="true"
-                      cursor-scale="2"
-                      cursor-color="#0095DD"
-                      cursor-opacity="0.5"
                       id="mainCamera">
+                <a-entity cursor="fuse: true; fuseTimeout: 500"
+                    position="0 0 -1"
+                    geometry="primitive: ring"
+                    scale="0.02 0.02 0.5"
+                    material="color: #0095DD; shader: flat">
+                </a-entity>
             </a-camera>
 
 
