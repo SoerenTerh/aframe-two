@@ -7,12 +7,12 @@
         <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
     </head>
     <body>
-        <a-scene>
+    <a-scene>
             <!--camera-->
-            <a-camera
+            <a-camera camera look-controls
                       position="-13 13 -13"
                       rotation="0 -30 0"
-                      id="mainCamera">
+                      id="mainCamera" camera="userHeight: 1.6">
                 <a-entity cursor="fuse: true; fuseTimeout: 500"
                     position="0 0 -1"
                     geometry="primitive: ring"
@@ -26,30 +26,34 @@
             <a-collada-model src="#model"></a-collada-model>
             <a-collada-model position="0 0 0" src="models/blendswap/town.dae" id="town"></a-collada-model>
             
-            <!--figure-->
-            <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="0 0 0" src="models/blendswap/mannequin.dae" id="figure"></a-collada-model>
-            
+
+
             <!-- tried to add box house, didn't work -->
-<!--  
+
+            <!--figure -->
             <a-assets>
-                <a-asset-item id="man-obj" src="/models/blendswap/mannequin.obj"></a-asset-item>
-                <a-asset-item id="man-mtl" src="/models/blendswap/mannequin.mtl"></a-asset-item>
-                <a-asset-item id="house" src="models/box.dae">
+                <a-asset-item id="man-obj" src="models/blendswap/mannequin.obj"></a-asset-item>
+                <a-asset-item id="mwc"  src="models/blendswap/mannequin.mtl"></a-asset-item>
             </a-assets>
 
-            <a-collada-model position="-13 13 -13" src="#house"></a-collada-model>
-            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl"></a-entity> -->
+        <!--<a-asset-item id="house" src="models/box.dae"></a-asset-item>-->
+            <!--<a-collada-model position="10 10 10" src="#house"></a-collada-model>-->
+            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl" position="0 0 -1" scale="0.15 0.15 0.15" ></a-entity>
 
-
-            
-            <!--shop-->
+        <!--shop-->
 <!--
+
             <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="0 0 0" src="models/blendswap/shop.dae" id="shop"></a-collada-model>
--->
+            <a-collada-model position="10 0 0" src="models/blendswap/shop.dae" id="shop"></a-collada-model>-->
+
             <!--sky-->
             <a-sky color="#B0C4DE" id="sky"></a-sky>
         </a-scene>
     </body>
 </html>
+
+
+<!-- figure, which didn't work in the scene
+            <a-collada-model src="#model"></a-collada-model>
+            <a-collada-model position="0 0 0" src="models/blendswap/mannequin.dae" id="figure" scale="0.02 0.02 0.5"></a-collada-model>
+-->
