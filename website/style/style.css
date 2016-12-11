@@ -7,7 +7,6 @@ body {
     font: 15px 'Source Code Pro', monospace;
 }
 
-
 h1, h2, h3, h4, h5 {
     font: 200% 'Amatic SC', cursive;
     color:turquoise;
@@ -40,11 +39,8 @@ nav, .navbar-brand{
 .grey {
     background: #f9f9f9;
 }
-.white {
-    padding-bottom: 150px;
-}
 
-.footer {
+.foot {
     background: #333;
 }
 
@@ -52,11 +48,15 @@ nav, .navbar-brand{
     padding-left: 5%;
     padding-right: 5%;
 }
+.site {
+	padding-bottom: 5%;
+}
+
 
 /*progressbar*/
 .progress {
     margin-top: 10%;
-    width: 105%;
+    width: 90%;
 }
 .one, .two, .three, .four, .five, .six, .seven, .eight{
     position:absolute;
@@ -67,44 +67,32 @@ nav, .navbar-brand{
     border-radius:25px;
 }
 .one{
-    left:12.5%;
+    left:11.25%;
 }
 .two{
-    left:25%;
+    left:22.5%;
 }
 .three{
-    left:37.5%;
+    left:33.75%;
 }
 .four {
-    left:50%;
+    left:45%;
 }
 .five {
-    left:62.5%;
+    left:56.25%;
 }
 .six {
-    left:75%;
+    left:67.5%;
 }
 .seven {
-    left:87.5%;
+    left:78.75%;
 }
 .eight {
-    left:100%;
+    left:89%;
 }
 
 .primary-color{
     background-color:turquoise;
-}
-.success-color{
-    background-color:#5cb85c;
-}
-.danger-color{
-    background-color:#d9534f;
-}
-.warning-color{
-    background-color:#f0ad4e;
-}
-.info-color{
-    background-color:#5bc0de;
 }
 .no-color{
     background-color:inherit;
@@ -119,4 +107,14 @@ nav, .navbar-brand{
     color: white;
     font-weight: bold;
     font: 30px 'Amatic SC', cursive;
+}
+
+/*fancybox*/
+a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+}
+a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
 }

@@ -74,5 +74,28 @@ $(document).ready(function () {
             $(".eightInfo").removeClass("hide");
         }
     });
+    
+        //fancybox
+    $(function () {
+        var addToAll = true,
+            gallery = true,
+            titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function () {
+            var $this = $(this),
+                title = $this.attr('title'),
+                src = $this.attr('data-big') || $this.attr('src'),
+                a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery) {
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        }
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+
+    
+
 
 });

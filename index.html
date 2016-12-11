@@ -13,26 +13,30 @@
 
         <!-- Bootstrap core CSS -->
         <link href="website/bootstrap/bootstrap.min.css" rel="stylesheet">
+<!--
         <link href="website/bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <link href="website/bootstrap/starter-template.css" rel="stylesheet">
         <script src="website/bootstrap/ie-emulation-modes-warning.js"></script>
+-->
         <link href="website/bootstrap/sticky-footer.css" rel="stylesheet">
 
         <!--icomoon-->
         <link href="icomoon.css" rel="stylesheet">
-
+        
+        <!--fancybox-->
+        <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+        
         <!--css-->
         <link href="website/style/style.css" rel="stylesheet">
 
     </head>
 
     <body>
-
         <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
+<!--                        <span class="sr-only">Toggle navigation</span>-->
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,19 +56,18 @@
             </div>
         </nav>
         
-        <div class="container-fluid">
-            <div class="white">
+        <div class="container-fluid site">
                 <div class="row">
                     <div class="progress">
                         <div class="one primary-color"><p>1</p></div>
                         <div class="two primary-color"><p>2</p></div>
-                        <div class="three primary-color current"><p>3</p></div>
-                        <div class="four no-color"><p>4</p></div>
+                        <div class="three primary-color"><p>3</p></div>
+                        <div class="four primary-color current"><p>4</p></div>
                         <div class="five no-color"><p>5</p></div>
                         <div class="six no-color"><p>6</p></div>
                         <div class="seven no-color"><p>7</p></div>
                         <div class="eight no-color"><p>8</p></div>
-                        <div class="progress-bar" style="width: 38%;"></div>
+                        <div class="progress-bar" style="width: 51%;"></div>
                     </div>
                 </div>
 
@@ -106,8 +109,8 @@
                         </div>
                     </div>
 
-                    <!--current-->
-                    <div class="threeInfo"> 
+                    
+                    <div class="threeInfo hide"> 
                         <div class="col-sm-4"><h2>01.12.2016 - 08.12.2016 <br>- Apple & Curtains</h2></div>
                         <div class="col-sm-8">
                             <p class=text>"3D Modelle liegen vor"</p>
@@ -121,10 +124,18 @@
                         </div>
                     </div>
 
-                    <div class="fourInfo hide">
-                        <div class="col-sm-4"><h2>08.12.2016 - 15.12.2016 </h2></div>
+                    <!--current-->
+                    <div class="fourInfo">
+                        <div class="col-sm-4"><h2>08.12.2016 - 15.12.2016 <br>- *Home* Run</h2></div>
                         <div class="col-sm-8">
                             <p class=text>"Personen werden animiert und die 'Bühnenwelt' zusammengesetzt"</p>
+                            <ul class='list'>
+                                <li>Modelle vervollständigen</li>
+                                <li>alle Modelle zu Szene zusammensetzen</li>
+                                <li>Figur animieren</li>
+                                <li>PowerPoint erstellen</li>
+                                <li>Webseite aktualisieren</li>
+                            </ul>                            
                         </div>
                     </div>
 
@@ -158,16 +169,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12 grey">
+
+        <footer class="footer">
+            <div class="container-fluid grey">
                     <h3>Grundkonzept</h3>
                     <p>Die Szene soll so gestaltet werden, dass der Benutzer zunächst vor dem Tabakladen steht. Der Benutzer sieht die angrenzende Umgebung um sich herum. Da der Bereich auf die Spielstätte beschränkt werden soll, befinden sich weiter weg liegende Bereiche im Dunkeln (Spotlights auf dem Bereich vor dem Tabakladen). Dem Benutzer soll es möglich sein, sich zu bewegen, um sich die direkte, ausgeleuchtete Umgebung anschauen zu können. Die weiteren, nicht ausgeleuchteten Bereiche können nicht betreten werden. Die Szene wird so lange abgespielt, bis eine neue Figur auftritt. Ist dies der Fall, wird die Szene so lange unterbrochen, bis der Benutzer die Tür, durch die die neue Figur auftritt, fixiert. Dies löst das Fortsetzen der Handlung aus. Die Szene soll als Loop gestaltet werden – sie soll wieder von vorne anfangen, wenn sie zu Ende ist, damit der Benutzer die Möglichkeit hat, sich die Umgebung anzuschauen, ohne die Szene selbst zu verpassen.</p>
                 </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="container">
+            <div class="container-fluid foot">
                 <p class="text-muted pull-right">Melanie Brüssel, Vera Heidkamp, Caterina Steins, Sören Terhorst</p>
             </div>
         </footer>
@@ -176,6 +184,10 @@
         <script>window.jQuery || document.write('<script src="website/bootstrap/jquery.min.js"><\/script>')</script>
         <script src="website/bootstrap/bootstrap.min.js"></script>
         <script src="website/bootstrap/ie10-viewport-bug-workaround.js"></script>
+        <!--fancybox-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+
 
         <!--JavaScipt-->
         <script src="website/script/script.js"></script>
