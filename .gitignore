@@ -2,8 +2,6 @@
 .idea/
 *.iml
 *.iws
-*.yml
 
 # npm
 node_modules/
-package.json
