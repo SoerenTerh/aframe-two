@@ -31,15 +31,20 @@
             <!-- tried to add box house, didn't work -->
 
             <!--figure -->
+
+
             <a-assets>
-                <a-asset-item id="man-obj" src="models/blendswap/mannequin.obj"></a-asset-item>
-                <a-asset-item id="mwc"  src="models/blendswap/mannequin.mtl"></a-asset-item>
+                <a-asset-item id="man-obj" src="c.obj"></a-asset-item>
+                <a-asset-item id="mwc"  src="c.mtl"></a-asset-item>
             </a-assets>
 
-        <!--<a-asset-item id="house" src="models/box.dae"></a-asset-item>-->
-            <!--<a-collada-model position="10 10 10" src="#house"></a-collada-model>-->
-            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl" position="0 0 -1" scale="0.15 0.15 0.15" ></a-entity>
 
+<a-entity obj-model="obj:#man-obj;mtl:#mwc" position="0 0 -1" scale="0.15 0.15 0.15" material="color:#82708f"></a-entity>
+
+        <!--<a-asset-item id="house" src="models/box.dae"></a-asset-item>-->
+            <!--<a-collada-model position="10 10 10" src="#house"></a-collada-model>
+            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl" position="0 0 -1" scale="0.15 0.15 0.15" ></a-entity>
+            
         <!--shop-->
 <!--
 
