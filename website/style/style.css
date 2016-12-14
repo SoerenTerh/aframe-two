@@ -1,0 +1,120 @@
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Source Code Pro', monospace;
+*/
+
+body {
+    font: 15px 'Source Code Pro', monospace;
+}
+
+h1, h2, h3, h4, h5 {
+    font: 200% 'Amatic SC', cursive;
+    color:turquoise;
+}
+h2 {
+    padding-top: 25px;
+}
+
+p {
+    padding-bottom: 15px;
+}
+
+.navText {
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+nav, .navbar-brand{
+    font: 30px 'Amatic SC', cursive;    
+}
+
+.icon-github:before {
+    content: "\eab0";
+}
+
+.text {
+    padding-top: 50px;
+    font-style: italic;
+}
+
+.grey {
+    background: #f9f9f9;
+}
+
+.foot {
+    background: #333;
+}
+
+.content, iframe {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.site {
+	padding-bottom: 5%;
+}
+
+
+/*progressbar*/
+.progress {
+    margin-top: 10%;
+    width: 90%;
+}
+.one, .two, .three, .four, .five, .six, .seven, .eight{
+    position:absolute;
+    margin-top:-10px;
+    z-index:1;
+    height:40px;
+    width:40px;
+    border-radius:25px;
+}
+.one{
+    left:11.25%;
+}
+.two{
+    left:22.5%;
+}
+.three{
+    left:33.75%;
+}
+.four {
+    left:45%;
+}
+.five {
+    left:56.25%;
+}
+.six {
+    left:67.5%;
+}
+.seven {
+    left:78.75%;
+}
+.eight {
+    left:89%;
+}
+
+.primary-color{
+    background-color:turquoise;
+}
+.no-color{
+    background-color:inherit;
+}
+.current {
+    background-color:orange;
+}
+
+.primary-color p, .no-color p{
+    margin-left: 40%;
+    margin-top:5%;
+    color: white;
+    font-weight: bold;
+    font: 30px 'Amatic SC', cursive;
+}
+
+/*fancybox*/
+a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+}
+a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+}
