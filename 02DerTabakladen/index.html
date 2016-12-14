@@ -21,35 +21,56 @@
                 </a-entity>
             </a-camera>
 
-
-            <!--town-->
-            <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="0 0 0" src="models/blendswap/town.dae" id="town"></a-collada-model>
-            
-
-
-            <!-- tried to add box house, didn't work -->
-
-            <!--figure -->
-
+           
 
             <a-assets>
-                <a-asset-item id="man-obj" src="c.obj"></a-asset-item>
-                <a-asset-item id="mwc"  src="c.mtl"></a-asset-item>
+			
+                <a-asset-item id="platzObj" src="models/UnsereAssets/platzmitpark.obj"></a-asset-item>
+                <a-asset-item id="platzMtl"  src="models/UnsereAssets/platzmitpark.mtl"></a-asset-item>
+				
+				<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
+                <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
+				
+				<a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
+                <a-asset-item id="ladentischMtl"  src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
+				
+				<a-asset-item id="platzObj" src="models/UnsereAssets/platzmitpark.obj"></a-asset-item>
+                <a-asset-item id="platzMtl"  src="models/UnsereAssets/platzmitpark.mtl"></a-asset-item>
+				
+				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabakladen.obj"></a-asset-item>
+                <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabakladen.mtl"></a-asset-item>
+				
+				<a-asset-item id="baeckerObj" src="models/UnsereAssets/baecker.obj"></a-asset-item>
+                <a-asset-item id="baeckerMtl"  src="models/UnsereAssets/baecker.mtl"></a-asset-item>
+				
+				<a-asset-item id="teppichladenObj" src="models/UnsereAssets/teppichladen.obj"></a-asset-item>
+                <a-asset-item id="tepichladenMtl"  src="models/UnsereAssets/teppichladen.mtl"></a-asset-item>
+				
+				<a-asset-item id="KuchenObj" src="models/UnsereAssets/Kuchen.obj"></a-asset-item>
+                <a-asset-item id="KuchenMtl"  src="models/UnsereAssets/Kuchen.mtl"></a-asset-item>
+				
+				<a-asset-item id="FladenObj" src="models/UnsereAssets/Fladenn.obj"></a-asset-item>
+                <a-asset-item id="FladenMtl"  src="models/UnsereAssets/Fladen.mtl"></a-asset-item>
+				
+				<a-asset-item id="LaterneObj" src="models/UnsereAssets/Laterne.obj"></a-asset-item>
+                <a-asset-item id="LaterneMtl"  src="models/UnsereAssets/Laterne.mtl"></a-asset-item>
+				
+				<a-asset-item id="SilberdollarObj" src="models/UnsereAssets/Silberdollar.obj"></a-asset-item>
+                <a-asset-item id="SilberdollarMtl"  src="models/UnsereAssets/Silberdollar.mtl"></a-asset-item>
+				
+				<a-asset-item id="MietvertragObj" src="models/UnsereAssets/Mietvertrag.obj"></a-asset-item>
+                <a-asset-item id="MietvertragMtl"  src="models/UnsereAssets/Mietvertrag.mtl"></a-asset-item>
+				
+				<a-asset-item id="SchlafplatzObj" src="models/UnsereAssets/Schlafplatz.obj"></a-asset-item>
+                <a-asset-item id="SchlafplatzMtl"  src="models/UnsereAssets/Schlafplatz.mtl"></a-asset-item>
+				
+				<a-asset-item id="Ablage_StellageObj" src="models/UnsereAssets/Ablage_Stellage.obj"></a-asset-item>
+                <a-asset-item id="Ablage_StellageMtl"  src="models/UnsereAssets/Ablage_Stellage.mtl"></a-asset-item>
+				
             </a-assets>
 
-
-<a-entity obj-model="obj:#man-obj;mtl:#mwc" position="0 0 -1" scale="0.15 0.15 0.15" material="color:#82708f"></a-entity>
-
-        <!--<a-asset-item id="house" src="models/box.dae"></a-asset-item>-->
-            <!--<a-collada-model position="10 10 10" src="#house"></a-collada-model>
-            <a-entity obj-model="obj: #man-obj; mtl: #man-mtl" position="0 0 -1" scale="0.15 0.15 0.15" ></a-entity>
-            
-        <!--shop-->
-<!--
-
-            <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="10 0 0" src="models/blendswap/shop.dae" id="shop"></a-collada-model>-->
+			<!-- Platz mit Park -->
+			<a-entity obj-model="obj:#platzObj;mtl:#platzMtl" position="0 0 -1" scale="0.15 0.15 0.15"></a-entity>
 
             <!--sky-->
             <a-sky color="#B0C4DE" id="sky"></a-sky>
