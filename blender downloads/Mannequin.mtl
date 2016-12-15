@@ -1,0 +1,12 @@
+# Blender MTL File: 'Mannequin.blend'
+# Material Count: 1
+
+newmtl Wood
+Ns 47.058824
+Ka 1.000000 1.000000 1.000000
+Kd 0.328744 0.243634 0.155841
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
