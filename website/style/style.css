@@ -24,8 +24,8 @@ p {
     padding-bottom: 0;
 }
 
-.navbar-nav > a {
-    background-color: #222;
+.navbar-nav > li > a {
+    background-color: #222 !important;
 }
 nav, .navbar-brand{
     font: 30px 'Amatic SC', cursive;    
