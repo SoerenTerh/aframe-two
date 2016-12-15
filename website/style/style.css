@@ -21,7 +21,11 @@ p {
 
 .navText {
     padding-top: 5px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
+}
+
+.navbar-nav > a {
+    background-color: #222;
 }
 nav, .navbar-brand{
     font: 30px 'Amatic SC', cursive;    
