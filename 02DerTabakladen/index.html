@@ -42,31 +42,25 @@
             </a-assets>
 
 			<!-- Platz mit Park -->
-			<a-entity obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
+			<a-entity obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
 
 			<!-- Brunnen -->
-			<a-entity obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
+			<a-entity obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible=""></a-entity>					 
 			
 			<!-- Tabakladen -->
-			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4 0 64.17" scale="0.09 0.11 0.1" rotation="0 -90.52733163067008 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
+			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4 0 64.17" scale="0.09 0.11 0.1" rotation="0 -90.52733163067008 0" visible="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
 			
 			<!-- Baecker -->
-			<a-entity obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -62.28" scale="3 4.5 7" rotation="0 89.38 0" visible="" material=""></a-entity>
+			<a-entity obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -62.28" scale="3 4.5 7" rotation="0 89.38 0" visible=""></a-entity>
 			
 			<!-- Teppichladen -->
-			<a-entity obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-54.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
+			<a-entity obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-54.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible=""></a-entity>
 			
 			
             <!--sky-->
-            <a-sky color="#B0C4DE" id="sky" material="" geometry="" scale="" position="" rotation="" visible=""></a-sky>
-			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas></a-scene>
+            <a-sky color="#B0C4DE" id="sky" geometry="" scale="" position="" rotation="" visible=""></a-sky>
+			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>
         </a-scene>
     <script src="utility.js"></script>
     </body>
 </html>
-
-
-<!-- figure, which didn't work in the scene
-            <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="0 0 0" src="models/blendswap/mannequin.dae" id="figure" scale="0.02 0.02 0.5"></a-collada-model>
--->

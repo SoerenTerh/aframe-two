@@ -5,6 +5,7 @@ font-family: 'Source Code Pro', monospace;
 
 body {
     font: 15px 'Source Code Pro', monospace;
+    padding-top: 65px; 
 }
 
 h1, h2, h3, h4, h5 {
@@ -21,7 +22,6 @@ p {
 
 .navText {
     padding-top: 5px;
-
     padding-bottom: 0;
 }
 
@@ -61,7 +61,7 @@ nav, .navbar-brand{
 
 /*progressbar*/
 .progress {
-    margin-top: 10%;
+    margin-top: 5%;
     width: 90%;
 }
 .one, .two, .three, .four, .five, .six, .seven, .eight{
