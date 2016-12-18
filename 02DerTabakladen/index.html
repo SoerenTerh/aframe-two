@@ -30,12 +30,6 @@
 				<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
                 <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
 				
-				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabak_new.obj"></a-asset-item>
-                <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabak_new.mtl"></a-asset-item>
-
-                <a-asset-item id="tabakladenTuerObj" src="models/UnsereAssets/tabakTuer.obj"></a-asset-item>
-                <a-asset-item id="tabakladenTuerMtl"  src="models/UnsereAssets/tabakTuer.mtl"></a-asset-item>
-				
 				<a-asset-item id="baeckerladenObj" src="models/UnsereAssets/baeckerladen.obj"></a-asset-item>
                 <a-asset-item id="baeckerladenMtl"  src="models/UnsereAssets/baeckerladen.mtl"></a-asset-item>
 
@@ -54,9 +48,9 @@
 			<a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
 			
 			<!-- Tabakladen -->
-			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="0 0 114.17" scale="0.1 0.1 0.1" rotation="0 -90 0" visible="" material=""></a-entity>
-
-            <a-entity id="tabakTuer" obj-model="obj:#tabakladenTuerObj;mtl:#tabakladenTuerMtl" position="0 0 114.17" scale="0.1 0.1 0.1" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
+            <a-entity collada-model="url(models/UnsereAssets/tabaktest.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>            
+            
+            <a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>    
 			
 			<!-- Baecker -->
 			<a-entity id="baeckerladen" obj-model="obj:#baeckerladenObj;mtl:#baeckerladenMtl" position="-5.88 0 -100.7" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>

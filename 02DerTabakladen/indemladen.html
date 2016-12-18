@@ -29,9 +29,6 @@
 
 			<a-assets>
 
-				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabakladen.obj"></a-asset-item>
-				<a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabakladen.mtl"></a-asset-item>
-
 				<a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
 				<a-asset-item id="ladentischMtl"  src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
 
@@ -119,11 +116,10 @@
 			</a-assets>
 
 			<!-- Tabakladen -->
-			<a-entity data-brackets-id="882" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4.33 0 3.26" scale="0.09 0.11 0.1" rotation="0 -90 0" visible="true" id="tabakladen"></a-entity>
+			<a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.33 0 3.26" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>   
 
 			<!-- Türe -->
-
-			<a-entity data-brackets-id="882" obj-model="obj:#TabakladenTObj;mtl:#TabakladenTMtl" position="4.33 0 3.26" scale="0.09 0.11 0.1" rotation="0 -90 0" visible="true" id="tabakladenT"></a-entity>
+			<a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" data-brackets-id="882" id="tabakladen" position="4.33 0 3.26" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>  
 
 			<!-- Ladentisch -->
 			<a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="8.54 0 -1" scale="0.08 0.16 0.16" rotation="" visible="" id="theke"></a-entity>
