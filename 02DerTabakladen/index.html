@@ -30,14 +30,17 @@
 				<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
                 <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
 				
-				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabakladen.obj"></a-asset-item>
-                <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabakladen.mtl"></a-asset-item>
+				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabak_new.obj"></a-asset-item>
+                <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabak_new.mtl"></a-asset-item>
 
-                <a-asset-item id="tabakladenTuerObj" src="models/UnsereAssets/door_handle_left.obj"></a-asset-item>
-                <a-asset-item id="tabakladenTuerMtl"  src="models/UnsereAssets/door_handle_left.mtl"></a-asset-item>
+                <a-asset-item id="tabakladenTuerObj" src="models/UnsereAssets/tabakTuer.obj"></a-asset-item>
+                <a-asset-item id="tabakladenTuerMtl"  src="models/UnsereAssets/tabakTuer.mtl"></a-asset-item>
 				
-				<a-asset-item id="baeckerObj" src="models/UnsereAssets/baecker.obj"></a-asset-item>
-                <a-asset-item id="baeckerMtl"  src="models/UnsereAssets/baecker.mtl"></a-asset-item>
+				<a-asset-item id="baeckerladenObj" src="models/UnsereAssets/baeckerladen.obj"></a-asset-item>
+                <a-asset-item id="baeckerladenMtl"  src="models/UnsereAssets/baeckerladen.mtl"></a-asset-item>
+
+                <a-asset-item id="baeckerladenTuerObj" src="models/UnsereAssets/baeckerDoor.obj"></a-asset-item>
+                <a-asset-item id="baeckerladenTuerMtl"  src="models/UnsereAssets/baeckerDoor.mtl"></a-asset-item>
 				
 				<a-asset-item id="teppichladenObj" src="models/UnsereAssets/teppichladen.obj"></a-asset-item>
                 <a-asset-item id="teppichladenMtl"  src="models/UnsereAssets/teppichladen.mtl"></a-asset-item>
@@ -53,10 +56,12 @@
 			<!-- Tabakladen -->
 			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="0 0 114.17" scale="0.1 0.1 0.1" rotation="0 -90 0" visible="" material=""></a-entity>
 
-            <a-entity id="tuer" obj-model="obj:#tabakladenTuerObj;mtl:#tabakladenTuerMtl" position="-39 0 108" scale="0.1 0.1 0.1" rotation="0 198 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
+            <a-entity id="tabakTuer" obj-model="obj:#tabakladenTuerObj;mtl:#tabakladenTuerMtl" position="0 0 114.17" scale="0.1 0.1 0.1" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
 			
 			<!-- Baecker -->
-			<a-entity id="baecker" obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -121.28" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
+			<a-entity id="baeckerladen" obj-model="obj:#baeckerladenObj;mtl:#baeckerladenMtl" position="-5.88 0 -100.7" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
+
+            <a-entity id="baeckerladenTuer" obj-model="obj:#baeckerladenTuerObj;mtl:#baeckerladenTuerMtl" position="-5.88 0 -100" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
 			
 			<!-- Teppichladen -->
 			<a-entity id="teppich" obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-90.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
