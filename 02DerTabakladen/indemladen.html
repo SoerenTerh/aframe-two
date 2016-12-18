@@ -5,7 +5,8 @@
 		<meta charset="utf-8">
 		<title>VR-Theater</title>
 		<meta name="description" content="VR-Theater">
-		<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+		<!--<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>-->
+		<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	</head>
@@ -145,8 +146,8 @@
 			<a-entity data-brackets-id="889" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="2.32 -0.31 12.74" scale="0.11 0.11 0.05" rotation="" visible="" id="mit rechnung"></a-entity>
 
 			<!-- Rechnungen -->
-			<a-entity data-brackets-id="898" obj-model="mtl:models/UnsereAssets/Rechnung.mtl;obj:models/UnsereAssets/Rechnung.obj" position="4.33 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="on:click;src: url(../assets/sounds/paper.wav)"></a-entity>
-			<a-entity data-brackets-id="899" obj-model="mtl:models/UnsereAssets/Rechnung.mtl;obj:models/UnsereAssets/Rechnung.obj" position="2.85 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="on:click;src: url(../assets/sounds/paper.wav)"></a-entity>
+			<a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src: url(../assets/sounds/paper.wav); on: click; volume: 0.1" ></a-entity>
+			<a-entity data-brackets-id="899" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="2.85 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src: url(../assets/sounds/paper.wav); on: click; volume: 0.1" ></a-entity>
 
 			<!-- Ablage_Stellage2 -->
 			<a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="-1.53 -0.31 12.66" scale="0.11 0.11 0.05" rotation="0 0 0" visible="" id="ohne rechnung"></a-entity>
