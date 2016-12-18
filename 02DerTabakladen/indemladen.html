@@ -110,37 +110,44 @@
 				<a-asset-item id="WerkzeugkisteObj" src="models/UnsereAssets/Werkzeugkiste.obj"></a-asset-item>
 				<a-asset-item id="WerkzeugkisteMtl"  src="models/UnsereAssets/Werkzeugkiste.mtl"></a-asset-item>
 
+				<a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
+				<a-asset-item id="RechnungMtl"  src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
+
 			</a-assets>
 
 			<!-- Tabakladen -->
-			<a-entity data-brackets-id="882" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4.33 0 3.26" scale="0.09 0.11 0.1" rotation="0 -90 0" visible="true" material="" id="tabakladen"></a-entity>
+			<a-entity data-brackets-id="882" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4.33 0 3.26" scale="0.09 0.11 0.1" rotation="0 -90 0" visible="true" id="tabakladen"></a-entity>
 
 			<!-- Ladentisch -->
-			<a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="8.54 0 -1" scale="0.08 0.16 0.16" rotation="" visible="" material="" id="theke"></a-entity>
+			<a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="8.54 0 -1" scale="0.08 0.16 0.16" rotation="" visible="" id="theke"></a-entity>
 
 			<!-- Kuchen -->
-			<a-entity data-brackets-id="884" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="4.7 3.77 1.49" scale="0.05 0.05 0.05" rotation="" visible="" material="" id="kuchen"></a-entity>
+			<a-entity data-brackets-id="884" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="4.7 3.77 1.49" scale="0.05 0.05 0.05" rotation="" visible="" id="kuchen"></a-entity>
 
 			<!-- Fladen -->
-			<a-entity data-brackets-id="885" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="8.21 3.79 6.04" scale="0.05 0.05 0.05" rotation="" visible="" material="" id="fladen"></a-entity>
+			<a-entity data-brackets-id="885" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="8.21 3.79 6.04" scale="0.05 0.05 0.05" rotation="" visible="" id="fladen"></a-entity>
 
 			<!-- Laterne -->
-			<a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="9 3.66 2.61" scale="0.06 0.06 0.06" rotation="" visible="" material="" id="kerze" sound="src: url(../assets/sounds/blow_candle.wav); on: click"></a-entity>
+			<a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="9 3.66 2.61" scale="0.06 0.06 0.06" rotation="" visible="" id="kerze" sound="src: url(../assets/sounds/blow_candle.wav); on: click"></a-entity>
 
 			<!-- Silberdollar -->
 
 
 			<!-- Schlafplatz -->
-			<a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-2.31 -0.03 7.33" scale="0.07 0.06 0.06" rotation="0 270 0" visible="" material="" id="bett" sound="src: url(../assets/sounds/snore.wav); on: click; volume: 0.1" ></a-entity>
+			<a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-2.31 -0.03 7.33" scale="0.07 0.06 0.06" rotation="0 270 0" visible="" id="bett" sound="src: url(../assets/sounds/snore.wav); on: click; volume: 0.1" ></a-entity>
 
 			<!-- Ablage_Stellage -->
-			<a-entity data-brackets-id="889" obj-model="obj:#Ablage_StellageObj;mtl:#Ablage_StellageMtl" position="2.32 -0.31 12.74" scale="0.11 0.11 0.05" rotation="" visible="" material="" id="mit rechnung"></a-entity>
+			<a-entity data-brackets-id="889" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="2.32 -0.31 12.74" scale="0.11 0.11 0.05" rotation="" visible="" id="mit rechnung"></a-entity>
+
+			<!-- Rechnungen -->
+			<a-entity data-brackets-id="898" obj-model="mtl:models/UnsereAssets/Rechnung.mtl;obj:models/UnsereAssets/Rechnung.obj" position="4.33 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="on:click;src: url(../assets/sounds/paper.wav)"></a-entity>
+			<a-entity data-brackets-id="899" obj-model="mtl:models/UnsereAssets/Rechnung.mtl;obj:models/UnsereAssets/Rechnung.obj" position="2.85 4.84 10.21" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="on:click;src: url(../assets/sounds/paper.wav)"></a-entity>
 
 			<!-- Ablage_Stellage2 -->
-			<a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="-1.53 -0.31 12.66" scale="0.11 0.11 0.05" rotation="0 0 0" visible="" material="" id="ohne rechnung"></a-entity>
+			<a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="-1.53 -0.31 12.66" scale="0.11 0.11 0.05" rotation="0 0 0" visible="" id="ohne rechnung"></a-entity>
 
 			<!-- Mietvertrag -->
-			<a-entity data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.5 6.20 -0.03" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="" material="" id="Vertrag" sound="src: url(../assets/sounds/paper.wav); on: click"></a-entity>
+			<a-entity data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.5 6.20 -0.03" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="" id="Vertrag" sound="src: url(../assets/sounds/paper.wav); on: click"></a-entity>
 
 			<!-- Notizbuch -->
 
@@ -152,13 +159,13 @@
 
 
 			<!-- ZigarettenkisteBläulich -->
-			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteBläulichObj;mtl:#ZigarettenkisteBläulichMtl" position="-1.21 2.92 13.7" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="" material="" id="blau"></a-entity>
+			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteBläulichObj;mtl:#ZigarettenkisteBläulichMtl" position="-1.21 2.92 13.7" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="" id="blau"></a-entity>
 
 			<!-- ZigarettenkisteGrünlich -->
-			<a-entity data-brackets-id="896" obj-model="obj:#ZigarettenkisteGrünlichObj;mtl:#ZigarettenkisteGrünlichMtl" position="0.45 4.16 13.48" scale="0.07 0.07 0.07" rotation="0 90 -18.33" visible="" material="" id="gruen"></a-entity>
+			<a-entity data-brackets-id="896" obj-model="obj:#ZigarettenkisteGrünlichObj;mtl:#ZigarettenkisteGrünlichMtl" position="0.45 4.16 13.48" scale="0.07 0.07 0.07" rotation="0 90 -18.33" visible="" id="gruen"></a-entity>
 
 			<!-- ZigarettenkisteRötlich -->
-			<a-entity data-brackets-id="897" obj-model="obj:#ZigarettenkisteRötlichObj;mtl:#ZigarettenkisteRötlichMtl" position="-0.61 5.47 13.25" scale="0.07 0.07 0.07" rotation="0 90 -18.33" visible="" material="" id="rot"></a-entity>
+			<a-entity data-brackets-id="897" obj-model="obj:#ZigarettenkisteRötlichObj;mtl:#ZigarettenkisteRötlichMtl" position="-0.61 5.47 13.25" scale="0.07 0.07 0.07" rotation="0 90 -18.33" visible="" id="rot"></a-entity>
 
 			
 

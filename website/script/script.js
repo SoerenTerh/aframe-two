@@ -1,5 +1,9 @@
 $(document).ready(function () {
     "use strict";
+    
+    $(".link").click(function () {
+        $(this).attr('target', '_blank');
+    });
 
     function hide() {
         $(".oneInfo").addClass("hide");
