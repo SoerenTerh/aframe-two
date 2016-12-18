@@ -11,9 +11,20 @@
 		<a-scene>
 
 			<!--camera 0 4 16.79-->
-			<a-entity position="1.08 4 9.52" >
+			<!--<a-entity position="1.08 4 9.52" >
 				<a-camera cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5" look-controls=""  wasd-controls=""  scale="1 1 1"  visible="true" ></a-camera>
 
+			</a-entity>-->
+
+			<a-entity position="1.08 4 9.52">
+				<a-camera userHeight="1.6" cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5" look-controls wasd-controls scale="1 1 1"  visible="true">
+					<a-entity cursor="fuse: true; fuseTimeout: 500"
+							  position="0 0 -1"
+							  geometry="primitive: ring"
+							  scale="0.01 0.01 0.01"
+							  material="color: white; shader: flat">
+					</a-entity>
+				</a-camera>
 			</a-entity>
 
 			<a-assets>
@@ -114,13 +125,13 @@
 			<a-entity data-brackets-id="885" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="5.62 3.79 0.52" scale="0.02 0.02 0.02" rotation="" visible="" material="" id="fladen"></a-entity>
 
 			<!-- Laterne -->
-			<a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="9 3.66 2.61" scale="0.06 0.06 0.06" rotation="" visible="" material="" id="kerze"></a-entity>
+			<a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="9 3.66 2.61" scale="0.06 0.06 0.06" rotation="" visible="" material="" id="kerze" sound="src: url(../assets/sounds/blow_candle.wav); on: click"></a-entity>
 
 			<!-- Silberdollar -->
 
 
 			<!-- Schlafplatz -->
-			<a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-2.31 -0.03 7.33" scale="0.07 0.06 0.06" rotation="0 270 0" visible="" material="" id="bett"></a-entity>
+			<a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-2.31 -0.03 7.33" scale="0.07 0.06 0.06" rotation="0 270 0" visible="" material="" id="bett" sound="src: url(../assets/sounds/snore.wav); on: click; volume: 0.1" ></a-entity>
 
 			<!-- Ablage_Stellage -->
 			<a-entity data-brackets-id="889" obj-model="obj:#Ablage_StellageObj;mtl:#Ablage_StellageMtl" position="2.32 -0.31 12.74" scale="0.11 0.11 0.05" rotation="" visible="" material="" id="mit rechnung"></a-entity>
@@ -129,7 +140,7 @@
 			<a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="-1.53 -0.31 12.66" scale="0.11 0.11 0.05" rotation="0 0 0" visible="" material="" id="ohne rechnung"></a-entity>
 
 			<!-- Mietvertrag -->
-			<a-entity data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.5 6.17 -0.03" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="" material="" id="Vertrag"></a-entity>
+			<a-entity data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.5 6.17 -0.03" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="" material="" id="Vertrag" sound="src: url(../assets/sounds/paper.wav); on: click"></a-entity>
 
 			<!-- Notizbuch -->
 
