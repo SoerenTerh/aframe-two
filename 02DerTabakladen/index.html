@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>VR-Theater</title>
+        <title>Vor dem Laden</title>
         <meta name="description" content="VR-Theater">
         <!--<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
         <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
@@ -32,6 +32,9 @@
 				
 				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabakladen.obj"></a-asset-item>
                 <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabakladen.mtl"></a-asset-item>
+
+                <a-asset-item id="tabakladenTuerObj" src="models/UnsereAssets/door_handle_left.obj"></a-asset-item>
+                <a-asset-item id="tabakladenTuerMtl"  src="models/UnsereAssets/door_handle_left.mtl"></a-asset-item>
 				
 				<a-asset-item id="baeckerObj" src="models/UnsereAssets/baecker.obj"></a-asset-item>
                 <a-asset-item id="baeckerMtl"  src="models/UnsereAssets/baecker.mtl"></a-asset-item>
@@ -42,19 +45,21 @@
             </a-assets>
 
 			<!-- Platz mit Park -->
-			<a-entity obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
+			<a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
 
 			<!-- Brunnen -->
-			<a-entity obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
+			<a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
 			
 			<!-- Tabakladen -->
-			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4 0 64.17" scale="0.09 0.11 0.1" rotation="0 -90.52733163067008 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
+			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="0 0 114.17" scale="0.1 0.1 0.1" rotation="0 -90 0" visible="" material=""></a-entity>
+
+            <a-entity id="tuer" obj-model="obj:#tabakladenTuerObj;mtl:#tabakladenTuerMtl" position="-39 0 108" scale="0.1 0.1 0.1" rotation="0 198 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
 			
 			<!-- Baecker -->
-			<a-entity obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -62.28" scale="3 4.5 7" rotation="0 89.38 0" visible="" material=""></a-entity>
+			<a-entity id="baecker" obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -121.28" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
 			
 			<!-- Teppichladen -->
-			<a-entity obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-54.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
+			<a-entity id="teppich" obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-90.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
 			
 			
             <!--sky-->
