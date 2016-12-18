@@ -6,9 +6,11 @@
 		<title>VR-Theater</title>
 		<meta name="description" content="VR-Theater">
 		<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 	</head>
 	<body>
-		<a-scene>
+		<a-scene id="innen">
 
 			<!--camera 0 4 16.79-->
 			<!--<a-entity position="1.08 4 9.52" >
@@ -110,8 +112,8 @@
 				<a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
 				<a-asset-item id="RechnungMtl"  src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
 
-				<a-asset-item id="TabakladenTObj" src="models/UnsereAssets/tabakTuer.obj"></a-asset-item>
-				<a-asset-item id="TabakladenTMtl"  src="models/UnsereAssets/tabakTuer.mtl"></a-asset-item>
+				<!--<a-asset-item id="TabakladenTObj" src="models/UnsereAssets/tabakTuer.obj"></a-asset-item>
+				<a-asset-item id="TabakladenTMtl"  src="models/UnsereAssets/tabakTuer.mtl"></a-asset-item>-->
 
 			</a-assets>
 
@@ -119,7 +121,7 @@
 			<a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.33 0 3.26" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>   
 
 			<!-- Türe -->
-			<a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" data-brackets-id="882" id="tabakladen" position="4.33 0 3.26" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>  
+			<a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="4.33 0 3.26" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click;"></a-entity>
 
 			<!-- Ladentisch -->
 			<a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="8.54 0 -1" scale="0.08 0.16 0.16" rotation="" visible="" id="theke"></a-entity>
@@ -175,5 +177,6 @@
 			<!--sky-->
 			<a-sky color="#B0C4DE" id="sky"></a-sky>
 		</a-scene>
+		<script src="utility_indoor.js"></script>
 	</body>
 </html>

@@ -4,16 +4,10 @@
 
 /* außen */
 
-document.querySelector('#tabakladen').addEventListener('click', function () {
+document.querySelector('#tabakladenTUERa').addEventListener('click', function () {
     var innen = "indemladen.html";
     setTimeout(function(){
         $( '#außen' ).fadeOut( "slow", function() {
             window.location = innen;
         })}, 2750);
     });
-
-
-
-
-
-/* innen */

@@ -45,12 +45,12 @@
 			<a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
 
 			<!-- Brunnen -->
-			<a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
+			<a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>
 			
 			<!-- Tabakladen -->
-            <a-entity collada-model="url(models/UnsereAssets/tabaktest.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>            
+            <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
             
-            <a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>    
+            <a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" id="tabakladenTUERa" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2"></a-entity>
 			
 			<!-- Baecker -->
 			<a-entity id="baeckerladen" obj-model="obj:#baeckerladenObj;mtl:#baeckerladenMtl" position="-5.88 0 -100.7" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
@@ -59,12 +59,12 @@
 			
 			<!-- Teppichladen -->
 			<a-entity id="teppich" obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-90.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
-			
-			
+
+
             <!--sky-->
             <a-sky color="#B0C4DE" id="sky" geometry="" scale="" position="" rotation="" visible=""></a-sky>
 			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>
         </a-scene>
-    <script src="utility.js"></script>
+    <script src="utility_outdoor.js"></script>
     </body>
 </html>
