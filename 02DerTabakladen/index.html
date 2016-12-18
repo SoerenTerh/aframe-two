@@ -5,25 +5,23 @@
         <title>VR-Theater</title>
         <meta name="description" content="VR-Theater">
         <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-        <script src="utility.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
-    <a-scene>
+    <a-scene id="außen">
             <!--camera-->
            <a-entity position="0 4 16.79">
         <a-camera userHeight="1.6" cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5" look-controls wasd-controls scale="1 1 1"  visible="true">
             <a-entity cursor="fuse: true; fuseTimeout: 500"
                       position="0 0 -1"
                       geometry="primitive: ring"
-                      scale="0.01 0.01 0.01"
+                      scale="0.025 0.025 0.025"
                       material="color: white; shader: flat">
             </a-entity>
         </a-camera>
     </a-entity>
 
-
-
-            <a-assets>
+        <a-assets>
 			
                 <a-asset-item id="platzObj" src="models/UnsereAssets/platzmitpark.obj"></a-asset-item>
                 <a-asset-item id="platzMtl" src="models/UnsereAssets/platzmitpark.mtl"></a-asset-item>
@@ -62,6 +60,7 @@
             <a-sky color="#B0C4DE" id="sky" material="" geometry="" scale="" position="" rotation="" visible=""></a-sky>
 			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas></a-scene>
         </a-scene>
+    <script src="utility.js"></script>
     </body>
 </html>
 
