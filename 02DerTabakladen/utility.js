@@ -6,10 +6,11 @@
 
 document.querySelector('#tabakladen').addEventListener('click', function () {
     var innen = "indemladen.html";
-    $( '#außen' ).fadeOut( "slow", function() {
-        window.location = innen;
+    setTimeout(function(){
+        $( '#außen' ).fadeOut( "slow", function() {
+            window.location = innen;
+        })}, 2750);
     });
-})
 
 
 
