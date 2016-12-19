@@ -29,12 +29,6 @@
 			
 			<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
             <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
-
-            <a-asset-item id="baeckerladenObj" src="models/UnsereAssets/baeckerladen.obj"></a-asset-item>
-            <a-asset-item id="baeckerladenMtl"  src="models/UnsereAssets/baeckerladen.mtl"></a-asset-item>
-			
-            <a-asset-item id="baeckerladenTuerObj" src="models/UnsereAssets/baeckerDoor.obj"></a-asset-item>
-            <a-asset-item id="baeckerladenTuerMtl"  src="models/UnsereAssets/baeckerDoor.mtl"></a-asset-item>
             
             <a-asset-item id="teppichladenObj" src="models/UnsereAssets/teppichladen.obj"></a-asset-item>
             <a-asset-item id="teppichladenMtl"  src="models/UnsereAssets/teppichladen.mtl"></a-asset-item>
@@ -54,15 +48,12 @@
             <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
         </a-entity>
 		
-		<!-- Baecker -->
-		<a-entity id="baeckerladen" obj-model="obj:#baeckerladenObj;mtl:#baeckerladenMtl" position="-5.88 0 -100.7" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
-
-        <a-entity id="baeckerladenTuer" obj-model="obj:#baeckerladenTuerObj;mtl:#baeckerladenTuerMtl" position="-5.88 0 -100" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
-
-        <!-- <a-entity collada-model="url(models/UnsereAssets/baeckerladen.dae)" id="baeckerladen" position="-5.88 0 -100.7" scale="10 10 10" rotation="0 89.38 0" visible="" material=""></a-entity>
+        <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -100" scale="10 10 10" rotation="0 90 0" visible="" material=""></a-entity>
         
-        <a-entity collada-model="url(models/UnsereAssets/baeckerladenTuer.dae)" id="baeckerladenTuer" position="-5.88 0 -100" scale="10 10 10" rotation="0 89.38 0" visible="" material="">
-		 -->
+        <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" position="9.2 1.2 -71" scale="9.5 9.7 10" rotation="0 89.38 0" visible="" material="">
+            <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 180 0" repeat="10"></a-animation>
+        </a-entity>
+		
 		<!-- Teppichladen -->
 		<a-entity id="teppich" obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-90.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
 
