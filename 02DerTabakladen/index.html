@@ -29,9 +29,7 @@
 			
 			<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
             <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
-            
-            <a-asset-item id="teppichladenObj" src="models/UnsereAssets/teppichladen.obj"></a-asset-item>
-            <a-asset-item id="teppichladenMtl"  src="models/UnsereAssets/teppichladen.mtl"></a-asset-item>
+
         </a-assets>
 
 		<!-- Platz mit Park -->
@@ -44,7 +42,6 @@
         <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 115" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
         
         <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" position="-13.7 1.1 85.5" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
-        <!-- Hier ist vermutlich der Punkt, an dem die Tür rotieren soll, in Maya falsch, muss ich mir noch mal genauer angucken. Aber grundsätzlich sollten Animationen so funktionieren -->
             <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
         </a-entity>
 		
@@ -55,11 +52,8 @@
         </a-entity>
 		
 		<!-- Teppichladen -->
-		<a-entity id="teppich" obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-90.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
 
-        <!-- <a-entity collada-model="url(models/UnsereAssets/teppichladen.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" visible="" material=""></a-entity>
-        
-        <a-entity collada-model="url(models/UnsereAssets/teppichladenTuer.dae)" id="teppichladenTuer" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" visible="" material=""> -->
+        <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" visible="" material=""></a-entity>
 
         <!--sky-->
         <a-sky color="#B0C4DE" id="sky" geometry="" scale="" position="" rotation="" visible=""></a-sky>
