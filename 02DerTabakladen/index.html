@@ -50,7 +50,10 @@
 			<!-- Tabakladen -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
             
-            <a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" id="tabakladenTUERa" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2"></a-entity>
+            <a-entity collada-model="url(models/UnsereAssets/tabakTuer.dae)" id="tabakladenTUERa" position="0 0 114.17" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
+            <!-- Hier ist vermutlich der Punkt, an dem die Tür rotieren soll, in Maya falsch, muss ich mir noch mal genauer angucken. Aber grundsätzlich sollten Animationen so funktionieren -->
+                <a-animation attribute="rotation" dur="10000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
+            </a-entity>
 			
 			<!-- Baecker -->
 			<a-entity id="baeckerladen" obj-model="obj:#baeckerladenObj;mtl:#baeckerladenMtl" position="-5.88 0 -100.7" scale="0.1 0.1 0.1" rotation="0 89.38 0" visible="" material=""></a-entity>
@@ -65,6 +68,7 @@
             <a-sky color="#B0C4DE" id="sky" geometry="" scale="" position="" rotation="" visible=""></a-sky>
 			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>
         </a-scene>
+    <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->    
     <script src="utility_outdoor.js"></script>
     </body>
 </html>
