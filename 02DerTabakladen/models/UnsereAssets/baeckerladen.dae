@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
-  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-12-19T13:40:59Z</created><keywords></keywords><modified>2016-12-19T13:40:59Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2016-12-19T14:04:36Z</created><keywords></keywords><modified>2016-12-19T14:04:36Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_materials>
     <material id="baecker_wall" name="baecker_wall">
       <instance_effect url="#baecker_wall-fx"/>
@@ -3522,6 +3522,104 @@
         <triangles count="12" material="roof_baecker"><input semantic="VERTEX" offset="0" source="#kaminOben-VERTEX"/><input semantic="NORMAL" offset="1" source="#kaminOben-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#kaminOben-UV0"/><p> 2 0 2 1 1 1 3 2 3 1 3 1 2 4 2 0 5 0 3 6 3 5 7 5 2 8 2 2 9 2 5 10 5 4 11 4 7 12 7 6 13 6 4 14 4 7 15 7 4 16 4 5 17 5 1 18 9 0 19 8 6 20 6 1 21 9 6 22 6 7 23 7 5 24 11 3 25 3 1 26 1 1 27 1 7 28 10 5 29 11 2 30 2 6 31 12 0 32 0 6 33 12 2 34 2 4 35 13</p></triangles>
       </mesh>
     </geometry>
+    <geometry id="pCube2-lib" name="pCube2Mesh">
+      <mesh>
+        <source id="pCube2-POSITION">
+          <float_array id="pCube2-POSITION-array" count="24">
+-11.361157 -14.571919 48.408409
+11.361157 -14.571919 48.408409
+-11.361157 14.571919 48.408409
+11.361157 14.571919 48.408409
+-11.361157 14.571919 -48.408409
+11.361157 14.571919 -48.408409
+-11.361157 -14.571919 -48.408409
+11.361157 -14.571919 -48.408409
+</float_array>
+          <technique_common>
+            <accessor source="#pCube2-POSITION-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pCube2-Normal0">
+          <float_array id="pCube2-Normal0-array" count="108">
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+-1.000000 0.000000 0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#pCube2-Normal0-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pCube2-UV0">
+          <float_array id="pCube2-UV0-array" count="28">
+0.375000 0.000000
+0.625000 0.000000
+0.375000 0.250000
+0.625000 0.250000
+0.375000 0.500000
+0.625000 0.500000
+0.375000 0.750000
+0.625000 0.750000
+0.375000 1.000000
+0.625000 1.000000
+0.875000 0.000000
+0.875000 0.250000
+0.125000 0.000000
+0.125000 0.250000
+</float_array>
+          <technique_common>
+            <accessor source="#pCube2-UV0-array" count="14" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pCube2-VERTEX">
+          <input semantic="POSITION" source="#pCube2-POSITION"/>
+        </vertices>
+        <triangles count="12" material="baecker_wall"><input semantic="VERTEX" offset="0" source="#pCube2-VERTEX"/><input semantic="NORMAL" offset="1" source="#pCube2-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#pCube2-UV0"/><p> 3 0 3 2 1 2 0 2 0 3 3 3 0 4 0 1 5 1 3 6 3 5 7 5 2 8 2 2 9 2 5 10 5 4 11 4 7 12 7 6 13 6 4 14 4 7 15 7 4 16 4 5 17 5 0 18 8 6 19 6 1 20 9 1 21 9 6 22 6 7 23 7 5 24 11 3 25 3 1 26 1 1 27 1 7 28 10 5 29 11 2 30 2 6 31 12 0 32 0 6 33 12 2 34 2 4 35 13</p></triangles>
+      </mesh>
+    </geometry>
   </library_geometries>
   <library_visual_scenes>
     <visual_scene id="baeckerladen" name="baeckerladen">
@@ -3529,6 +3627,7 @@
       <node name="roof" id="roof" sid="roof"><matrix sid="matrix">0.010000 0.000000 0.000000 0.000000 0.000000 0.010164 0.000000 2.410000 0.000000 0.000000 0.010000 0.006114 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#roof-lib"><bind_material><technique_common><instance_material symbol="roof_baecker" target="#roof_baecker"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
       <node name="window2" id="window2" sid="window2"><matrix sid="matrix">0.010000 0.000000 0.000000 -2.863441 0.000000 0.013567 0.000000 1.325527 0.000000 0.000000 0.010000 -0.659247 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#window2-lib"><bind_material><technique_common><instance_material symbol="window" target="#window"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
       <node name="Kamin" id="Kamin" sid="Kamin"><matrix sid="matrix">0.000000 0.000000 0.010000 0.000000 0.000000 0.010000 0.000000 0.000000 -0.010000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="kamin" id="kamin" sid="kamin"><matrix sid="matrix">0.772837 0.000000 -0.000000 47.139931 0.000000 1.087681 0.000000 473.528137 0.000000 0.000000 0.772837 -31.562283 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#kamin-lib"><bind_material><technique_common><instance_material symbol="roof_baecker" target="#roof_baecker"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="pCylinder4" id="pCylinder4" sid="pCylinder4"><matrix sid="matrix">0.369150 0.000000 -0.000000 64.504868 0.000000 0.955667 0.000000 546.503723 0.000000 0.000000 0.369150 -32.078148 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#pCylinder4-lib"><bind_material><technique_common><instance_material symbol="roof_baecker" target="#roof_baecker"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="pCylinder5" id="pCylinder5" sid="pCylinder5"><matrix sid="matrix">0.369150 0.000000 -0.000000 29.879852 0.000000 0.955667 0.000000 546.503723 0.000000 0.000000 0.369150 -32.078148 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#pCylinder5-lib"><bind_material><technique_common><instance_material symbol="roof_baecker" target="#roof_baecker"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="kaminOben" id="kaminOben" sid="kaminOben"><matrix sid="matrix">1.094845 0.000000 0.000000 47.071827 0.000000 0.955667 0.000000 557.690247 0.000000 0.000000 1.015501 -31.682306 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#kaminOben-lib"><bind_material><technique_common><instance_material symbol="roof_baecker" target="#roof_baecker"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
+      <node name="pCube2" id="pCube2" sid="pCube2"><matrix sid="matrix">0.010000 0.000000 0.000000 -2.885770 0.000000 0.013759 0.000000 2.202853 0.000000 0.000000 0.010000 1.043188 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#pCube2-lib"><bind_material><technique_common><instance_material symbol="baecker_wall" target="#baecker_wall"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
       <extra><technique profile="MAX3D"><frame_rate>24.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.041667</start_time><end_time>8.333333</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>
