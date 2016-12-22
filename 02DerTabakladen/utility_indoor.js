@@ -3,7 +3,7 @@
  */
 /* innen */
 
-/*document.querySelector('#tabakladenTUERi').addEventListener('hover', function () {
+/*document.querySelector('#tabakladenTUERi').addEventListener('click', function () {
     var out = "index.html";
     setTimeout(function () {
         $( '#innen' ).fadeOut( "slow", function () {

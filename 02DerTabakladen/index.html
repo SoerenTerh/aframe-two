@@ -4,21 +4,21 @@
         <meta charset="utf-8">
         <title>Vor dem Laden</title>
         <meta name="description" content="VR-Theater">
-        <!--<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>-->
-        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+<!--        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!--<script src="aframe-physics-system.min.js"></script>-->
-        <!--<script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.1.0/dist/aframe-physics-system.min.js"></script>-->
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.1.0/dist/aframe-physics-system.min.js"></script>
     </head>
     <body>
-        <a-scene physics="debug: true" id="außen"> <!--physics momentan auskommentiert-->
+        <a-scene physics="debug: true" id="außen">
             <!--camera-->
             <a-entity position="0 11 16.79">
                 <a-camera userHeight="1.6" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
                     <a-entity cursor="fuse: true; fuseTimeout: 500"
                               position="0 0 -1"
                               geometry="primitive: ring"
-                              scale="0.025 0.025 0.025"www
+                              scale="0.025 0.025 0.025"
                               material="color: white; shader: flat">
                     </a-entity></a-camera>
             </a-entity>
@@ -64,9 +64,6 @@
             <!-- Platz mit Park -->
             <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15"  sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true" static-body></a-entity>
             <a-plane static-body visible="false" height="100" width="100" rotation="-90 0 0"></a-plane>
-
-            <!-- Tabakladen -->
-            <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 115" scale="10 10 10" rotation="0 -90 0" ></a-entity>
 
             <!-- Teppichladen -->
             <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" ></a-entity>

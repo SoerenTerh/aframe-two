@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 		<title>VR-Theater</title>
 		<meta name="description" content="VR-Theater">
-		<!--<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>-->
-		<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+		<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+<!--		<script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	</head>
@@ -129,7 +129,7 @@
 
 			<!-- Türe -->
 			<!--achtung! versuch von click zu mouseenter-->
-			<a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.59 0 -24.46" scale="10 10 10" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.59 0 -24.46" scale="10 10 10" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
 				<a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="mouseenter"></a-animation>
 			</a-entity>
 			<!--versuch tür
@@ -155,8 +155,7 @@
 
 
 			<!-- Rechnungen -->
-			<a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 10.7 -3.36" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src:url(../assets/sounds/paper.wav);on:click;volume:0.1" visible="true" material=""></a-entity>
-			<a-entity data-brackets-id="899" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="2.85 10.68 -3.6" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src:url(../assets/sounds/paper.wav);on:click;volume:0.1" visible="true" material=""></a-entity>
+			<a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 10.7 -3.36" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src:url(../assets/sounds/paper.wav);on:click;volume:0.1" visible="true" material=""></a-entity>s
 
 			<!-- Ablage_Stellage -->
 			<a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-3" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-4" material=""></a-entity>
@@ -174,10 +173,10 @@
 			<a-entity data-brackets-id="891" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="true" id="Zigarette"  material=""></a-entity>
 
 			<!-- ZigarettenkisteAußen -->
-			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="7.75 11.95 -0.71" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="true" id="außen" material=""></a-entity>
+			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="7.75 11.95 -0.71" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="true" id="zaußen" material=""></a-entity>
 
 			<!-- ZigarettenkisteInnen -->
-			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="7.75 11.95 -0.71" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="true" id="innen" material=""></a-entity>
+			<a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="7.75 11.95 -0.71" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="true" id="zinnen" material=""></a-entity>
 
 			<!-- ZigarettenkisteBläulich 
 <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteBläulichObj;mtl:#ZigarettenkisteBläulichMtl" position="-1.21 10.39 -0.05" scale="0.09 0.09 0.09" rotation="0 89.95437383553924 -18.334649444186343" visible="true" id="blau" material=""></a-entity>-->
