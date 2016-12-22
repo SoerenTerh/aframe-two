@@ -13,12 +13,12 @@
     <body>
         <a-scene physics="debug: true" id="außen"> <!--physics momentan auskommentiert-->
             <!--camera-->
-            <a-entity position="0 4 16.79">
-                <a-camera userHeight="6" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
+            <a-entity position="0 11 16.79">
+                <a-camera userHeight="1.6" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
                     <a-entity cursor="fuse: true; fuseTimeout: 500"
                               position="0 0 -1"
                               geometry="primitive: ring"
-                              scale="0.025 0.025 0.025"
+                              scale="0.025 0.025 0.025"www
                               material="color: white; shader: flat">
                     </a-entity></a-camera>
             </a-entity>
@@ -36,59 +36,49 @@
             </a-assets>
 
             <!-- Brunnen -->
-            <a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>
+            <a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" material=""></a-entity>
 
             <!-- Tabakladen -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 115" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
 
+            <!-- Tabakladen Tür -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" position="-13.7 1.1 85.5" scale="10 10 10" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
                 <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
             </a-entity>
 
+            <!-- Bäcker -->
             <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -100" scale="10 10 10" rotation="0 90 0" visible="" material=""></a-entity>
 
+            <!-- Bäcker Tür -->
             <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" position="9.2 1.2 -71" scale="9.5 9.7 10" rotation="0 89.38 0" visible="" material="">
                 <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 180 0" repeat="10"></a-animation>
             </a-entity>
 
             <!--Figur
-<a-entity collada-model="url(models/UnsereAssets/figur.dae)" id="tfigur" position="20.7 1.1 85.5" scale="5 5 5" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
-<a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
-</a-entity> -->
-            <!-- Teppichladen -->
-            <!--lights-->
-            <a-light type="ambient" color="#ccc" light="" position="" rotation="" scale="" visible=""></a-light>
-            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="" rotation="" scale="" visible=""></a-light>
-            <a-light color="#ddf" position="3 10 -10" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
-
-            <!--figur-->
-            <a-entity id="figur" obj-model="obj:#figurObj" position="2 1.1 0" scale="6 6 6" material="color:#008080;metalness:0.1"></a-entity>
+            <a-entity collada-model="url(models/UnsereAssets/figur.dae)" id="tfigur" position="20.7 1.1 85.5" scale="5 5 5" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
+            <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
+            </a-entity> -->
+            <!--Testfigur-->
+            <a-entity id="figur" obj-model="obj:#figurObj" position="2 1.1 0" scale="8 8 8" material="color:#008080;metalness:0.1"></a-entity>
 
             <!-- Platz mit Park -->
             <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15"  sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true" static-body></a-entity>
             <a-plane static-body visible="false" height="100" width="100" rotation="-90 0 0"></a-plane>
 
-            <!-- Brunnen -->
-            <a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" dynamic-body="shape: box; mass: 2"></a-entity>
-
             <!-- Tabakladen -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 115" scale="10 10 10" rotation="0 -90 0" ></a-entity>
 
-            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" position="-13.7 1.1 85.5" scale="10 10 10" rotation="0 -90 0"  sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
-                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
-            </a-entity>
-
-            <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -100" scale="10 10 10" rotation="0 90 0" ></a-entity>
-
-            <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" position="9.2 1.2 -71" scale="9.5 9.7 10" rotation="0 89.38 0" >
-                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 180 0" repeat="10"></a-animation>
-            </a-entity>
-
             <!-- Teppichladen -->
             <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" ></a-entity>
+            
+            <!--lights-->
+            <a-light type="ambient" color="#ccc" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" position="3 10 -10" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
             <a-sky color="#B0C4DE" id="sky"></a-sky>
-            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>
+            <!-- führt zu fehler bei inspector
+            <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
         </a-scene>
         <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->    
         <script src="utility_outdoor.js"></script>
