@@ -128,9 +128,12 @@
 			<a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true" material=""></a-entity>   
 
 			<!-- Türe -->
-			<a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.59 0 -24.46" scale="10 10 10" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:click">
-				<a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
+			<!--achtung! versuch von click zu mouseenter-->
+			<a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.59 0 -24.46" scale="10 10 10" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
+				<a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="mouseenter"></a-animation>
 			</a-entity>
+			<!--versuch tür
+			<a-entity position="-6.34 9.94 -25.21" scale="1 1 1" geometry="height:20;width:10" id="doorbox" material="opacity:0;transparent:false"></a-entity>-->
 
 			<!-- Ladentisch -->
 			<a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
