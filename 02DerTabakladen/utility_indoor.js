@@ -3,17 +3,21 @@
  */
 /* innen */
 
-/*document.querySelector('#tabakladenTUERi').addEventListener('click', function () {
+$('#tabakladenTUERi').on('click', function () {
     var out = "index.html";
-    setTimeout(function () {
+    /*setTimeout(function () {*/
         $( '#innen' ).fadeOut( "slow", function () {
             window.location = out;
-        })}, 2750);
-});*/
+        });
+/*}, 2750);*/
+});
 
-var timeoutId = null;
 
-document.querySelector('#tabakladenTUERi').addEventListener('mouseenter', function () {
+
+
+/*var timeoutId = null;
+
+$('#tabakladenTUERi').on('mouseenter', function () {
     var out = "index.html";
     timeoutId = setTimeout(function () {
         $( '#innen' ).fadeOut( "slow", function () {
@@ -21,6 +25,6 @@ document.querySelector('#tabakladenTUERi').addEventListener('mouseenter', functi
         })}, 2750);
 });
 
-document.querySelector('#tabakladenTUERi').addEventListener('mouseleave', function () {
-    window.clearTimeout(timeoutId)
-});
+$('#tabakladenTUERi').on('mouseleave', function () {
+    window.clearTimeout(timeoutId);
+});*/
