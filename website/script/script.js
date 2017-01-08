@@ -14,14 +14,21 @@ $(document).ready(function () {
         $(".sixInfo").addClass("hide");
         $(".sevenInfo").addClass("hide");
         $(".eightInfo").addClass("hide");
+        $(".nineInfo").addClass("hide");
     }
     
     //Process Bar
     var endDate = new Date("02/09/2017"),
         beginDate = new Date("11/17/2016"),
-        totalTime = (endDate - beginDate),
+        
+        endHolidays = new Date("01/08/2017"),
+        beginHolidays = new Date("12/24/2016"),
+        holidays = (endHolidays - beginHolidays),
+        
+        totalTime = (endDate - beginDate + holidays),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
+//        dateProgress = new Date("01/12/2017")-beginDate,
         completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
         output = completionPercentage + 10 + "%";
     $(".progress-bar").css('width', output);
@@ -87,6 +94,13 @@ $(document).ready(function () {
         if ($(".eightInfo").hasClass("hide")) {
             hide();
             $(".eightInfo").removeClass("hide");
+        }
+    });
+    $(".nine").on('click mouseover', function () {
+        color(this);
+        if ($(".nineInfo").hasClass("hide")) {
+            hide();
+            $(".nineInfo").removeClass("hide");
         }
     });
     
