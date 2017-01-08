@@ -64,7 +64,7 @@ nav, .navbar-brand{
     margin-top: 5%;
     width: 90%;
 }
-.one, .two, .three, .four, .five, .six, .seven, .eight{
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -73,27 +73,30 @@ nav, .navbar-brand{
     border-radius:25px;
 }
 .one{
-    left:11.25%;
+    left:10%;
 }
 .two{
-    left:22.5%;
+    left:20%;
 }
 .three{
-    left:33.75%;
+    left:30%;
 }
 .four {
-    left:45%;
+    left:40%;
 }
 .five {
-    left:56.25%;
+    left:50%;
 }
 .six {
-    left:67.5%;
+    left:60%;
 }
 .seven {
-    left:78.75%;
+    left:70%;
 }
 .eight {
+    left:80%;
+}
+.nine {
     left:89%;
 }
 
