@@ -28,7 +28,11 @@ $(document).ready(function () {
         totalTime = (endDate - beginDate + holidays),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
+<<<<<<< HEAD
 //        dateProgress = new Date("01/12/2017")-beginDate,
+=======
+//        dateProgress = new Date("01/12/2017")- beginDate,
+>>>>>>> master
         completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
         output = completionPercentage + 10 + "%";
     $(".progress-bar").css('width', output);
