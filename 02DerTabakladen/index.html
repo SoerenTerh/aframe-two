@@ -2,70 +2,100 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>VR-Theater</title>
+        <title>Vor dem Laden</title>
         <meta name="description" content="VR-Theater">
-        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+        <!--        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.1.0/dist/aframe-physics-system.min.js"></script>
+        <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
+
+        <script src="script/entity.js"></script>
     </head>
     <body>
-    <a-scene id="außen">
+        <a-scene physics="debug: true" id="außen">
             <!--camera-->
-           <a-entity position="0 4 16.79">
-        <a-camera userHeight="1.6" cursor-visible="true" cursor-scale="2" cursor-color="#0095DD" cursor-opacity="0.5" look-controls wasd-controls scale="1 1 1"  visible="true">
-            <a-entity cursor="fuse: true; fuseTimeout: 500"
-                      position="0 0 -1"
-                      geometry="primitive: ring"
-                      scale="0.025 0.025 0.025"
-                      material="color: white; shader: flat">
+            <a-entity  id="camera" position="0 11 16.79">
+                <a-camera userHeight="1.6" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
+                    <a-entity id="cursor"
+                              cursor="fuse: true; fuseTimeout: 2500; maxDistance: 0.04"
+                              position="0 0 -1"
+                              geometry="primitive: ring"
+                              scale="0.04 0.04 0.04"
+                              material="color: white; shader: flat">
+                        <!--look for class"clickable"-->
+                        <a-animation begin="clickableFound" id="clickableFound"
+                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2850"></a-animation> 
+                        <!--click on class"clickable"-->
+                        <a-animation begin="clickableClick" 
+                                     easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="150" delay="1000"></a-animation>
+                    </a-entity>
+                </a-camera>
             </a-entity>
-        </a-camera>
-    </a-entity>
 
-        <a-assets>
-			
-                <a-asset-item id="platzObj" src="models/UnsereAssets/platzmitpark.obj"></a-asset-item>
-                <a-asset-item id="platzMtl" src="models/UnsereAssets/platzmitpark.mtl"></a-asset-item>
-				
-				<a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
+            <a-assets>
+                <a-asset-item id="platzObj" src="models/UnsereAssets/platz.obj"></a-asset-item>
+                <a-asset-item id="platzMtl" src="models/UnsereAssets/platz.mtl"></a-asset-item>
+
+                <a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
                 <a-asset-item id="brunnenMtl"  src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
-				
-				<a-asset-item id="tabakladenObj" src="models/UnsereAssets/tabakladen.obj"></a-asset-item>
-                <a-asset-item id="tabakladenMtl"  src="models/UnsereAssets/tabakladen.mtl"></a-asset-item>
-				
-				<a-asset-item id="baeckerObj" src="models/UnsereAssets/baecker.obj"></a-asset-item>
-                <a-asset-item id="baeckerMtl"  src="models/UnsereAssets/baecker.mtl"></a-asset-item>
-				
-				<a-asset-item id="teppichladenObj" src="models/UnsereAssets/teppichladen.obj"></a-asset-item>
-                <a-asset-item id="teppichladenMtl"  src="models/UnsereAssets/teppichladen.mtl"></a-asset-item>
-				
+                <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu.mtl"></a-asset-item>
+                <!--<a-asset-item id="figurMtl" src="models/UnsereAssets/figurNeu.mtl"></a-asset-item>-->
+                <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
+                <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
+
             </a-assets>
 
-			<!-- Platz mit Park -->
-			<a-entity obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material="" sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
+            <!-- Brunnen -->
+            <a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" material=""></a-entity>
 
-			<!-- Brunnen -->
-			<a-entity obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.15 0.15 0.15" rotation="" visible="" material=""></a-entity>					 
-			
-			<!-- Tabakladen -->
-			<a-entity id="tabakladen" obj-model="obj:#tabakladenObj;mtl:#tabakladenMtl" position="4 0 64.17" scale="0.09 0.11 0.1" rotation="0 -90.52733163067008 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click"></a-entity>
-			
-			<!-- Baecker -->
-			<a-entity obj-model="obj:#baeckerObj;mtl:#baeckerMtl" position="-5.88 0 -62.28" scale="3 4.5 7" rotation="0 89.38 0" visible="" material=""></a-entity>
-			
-			<!-- Teppichladen -->
-			<a-entity obj-model="obj:#teppichladenObj;mtl:#teppichladenMtl" position="-54.72 0 -4.24" scale="0.04 0.11 0.1" rotation="0 178.76283208081685 0" visible="" material=""></a-entity>
-			
-			
-            <!--sky-->
-            <a-sky color="#B0C4DE" id="sky" material="" geometry="" scale="" position="" rotation="" visible=""></a-sky>
-			<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas></a-scene>
+            <!-- Tabakladen -->
+            <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 115" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
+
+            <!-- Tabakladen Tür -->
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" class="clickable" position="-13.7 1.1 85.5" scale="10 10 10" rotation="0 -90 0" visible="" material=""   sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1">
+                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="mouseenter"></a-animation>
+                <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="click"></a-animation>
+
+            </a-entity>
+
+            <!-- Bäcker -->
+            <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -100" scale="10 10 10" rotation="0 90 0" visible="" material=""></a-entity>
+
+            <!-- Bäcker Tür -->
+            <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" class="clickable" position="9.2 1.2 -71" scale="9.5 9.7 10" rotation="0 89.38 0" visible="" material="">
+                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="mouseenter"></a-animation>
+                <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="click"></a-animation>
+            </a-entity>
+
+            <!--Figur
+<a-entity collada-model="url(models/UnsereAssets/figur.dae)" id="tfigur" position="20.7 1.1 85.5" scale="5 5 5" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
+<a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
+</a-entity> -->
+            <!--Testfigur-->
+            <a-entity id="figur" obj-model="obj:#figurObj" position="2 1.1 0" scale="8 8 8" material="color:#008080;metalness:0.1"></a-entity>
+
+            <!-- Platz mit Park -->
+            <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.15 0.15 0.15"  sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true" static-body></a-entity>
+            <a-plane static-body visible="false" height="100" width="100" rotation="-90 0 0"></a-plane>
+
+            <!-- Bäume -->
+            <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="1 0 -1" scale="0.15 0.15 0.15"></a-entity>
+
+            <!-- Teppichladen -->
+            <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" ></a-entity>
+
+            <!--lights-->
+            <a-light type="ambient" color="#ccc" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" position="3 10 -10" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
+
+            <a-sky color="#B0C4DE" id="sky"></a-sky>
+            <!-- führt zu fehler bei inspector
+<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
         </a-scene>
-    <script src="utility.js"></script>
+        <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->    
+        <script src="script/utility_outdoor.js"></script>
+        <script src="script/script.js"></script>
     </body>
 </html>
-
-
-<!-- figure, which didn't work in the scene
-            <a-collada-model src="#model"></a-collada-model>
-            <a-collada-model position="0 0 0" src="models/blendswap/mannequin.dae" id="figure" scale="0.02 0.02 0.5"></a-collada-model>
--->
