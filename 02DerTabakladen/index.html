@@ -25,9 +25,9 @@
                               material="color: white; shader: flat">
                         <!--look for class"clickable"-->
                         <a-animation begin="clickableFound" id="clickableFound"
-                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2850"></a-animation> 
+                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2850"></a-animation>
                         <!--click on class"clickable"-->
-                        <a-animation begin="clickableClick" 
+                        <a-animation begin="clickableClick"
                                      easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="150" delay="1000"></a-animation>
                     </a-entity>
                 </a-camera>
@@ -83,7 +83,9 @@
             <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="1 0 -1" scale="0.15 0.15 0.15"></a-entity>
 
             <!-- Teppichladen -->
-            <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="10 10 10" rotation="0 180 0" ></a-entity>
+
+            <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-90.72 0 -4.24" scale="8.5 8.5 8.5" rotation="0 180 0" ></a-entity>
+
 
             <!--lights-->
             <a-light type="ambient" color="#ccc" light="" position="" rotation="" scale="" visible=""></a-light>
@@ -94,8 +96,12 @@
             <!-- führt zu fehler bei inspector
 <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
         </a-scene>
-        <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->    
+        <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
         <script src="script/utility_outdoor.js"></script>
         <script src="script/script.js"></script>
     </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> develop
