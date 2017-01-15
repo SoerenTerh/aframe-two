@@ -1,6 +1,6 @@
-$(document).find(".clickable").each(function () {
-    this.setAttribute('event-animate', 'target:#cursor; event:clickableFound');
+$(".clickable").each(function () {
+    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
     setTimeout(function () {
-        this.setAttribute('event-animate', 'target:#cursor; event:clickableClick');
-    }, 2850);
+        $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
+    }, 1500);
 });
