@@ -76,13 +76,19 @@
                 <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
                 <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
 
-                <a-asset-item id="figurObj" src="models/mfigur.obj"></a-asset-item>
+                <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
                 <!--<a-asset-item id="figurMtl" src="models/mfigur.mtl"></a-asset-item>-->
+                
+                <a-asset-item id="SockelObj" src="models/UnsereAssets/Sockel.obj"></a-asset-item>
+                <a-asset-item id="SockelMtl" src="models/UnsereAssets/Sockel.mtl"></a-asset-item>
 
             </a-assets>
 
             <!--figur-->
             <a-entity id="figur" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity><a-entity id="figur-2" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true"></a-entity>
+            
+            <!--Sockel-->
+            <a-entity id="sockel" obj-model="obj:#SockelObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
 
             <!-- Tabakladen -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true" material=""></a-entity>   
