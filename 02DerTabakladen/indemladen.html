@@ -81,6 +81,9 @@
                 <a-asset-item id="SockelObj" src="models/UnsereAssets/Sockel.obj"></a-asset-item>
                 <a-asset-item id="SockelMtl" src="models/UnsereAssets/Sockel.mtl"></a-asset-item>
 
+                <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
+                <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
+
             </a-assets>
 
             <!--figur-->
@@ -94,7 +97,7 @@
 
             <!-- Türe -->
             <!--achtung! versuch von click zu mouseenter-->
-            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.59 0 -24.46" scale="10 10 10" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
                 <a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="mouseenter"></a-animation>
             </a-entity>
             <!--versuch tür
@@ -118,6 +121,10 @@
             
             <!-- Schlafplatz -->
             <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -16.44" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-3" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
+
+            <!-- Bettgestell -->
+            <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-1.92 1.77 28.88" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
+
 
 
             <!-- Rechnungen -->
