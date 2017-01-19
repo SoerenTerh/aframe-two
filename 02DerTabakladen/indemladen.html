@@ -8,13 +8,19 @@
         <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
         <!--        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.1.0/dist/aframe-physics-system.min.js"></script>
+        <!--        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.0/dist/aframe-physics-system.min.js"></script>-->
         <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
+<!--        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>-->
+        <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script> 
+        <script src="https://unpkg.com/aframe-maze-component@0.1.15/dist/aframe-maze-component.min.js"></script>
+        
+        <script src="https://rawgit.com/chenzlabs/stats-in-vr/master/dist/aframe-stats-in-vr-component.min.js"></script>
 
         <script src="script/entity.js"></script>
     </head>
     <body>
-        <a-scene physics="debug: true" id="innen">
+        <a-scene id="innen" >
+<!--            stats-in-vr-->
             <!--camera-->
             <a-entity position="-7 13 -25" rotation="0 180 0">
                 <a-camera userHeight="11" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
@@ -87,7 +93,20 @@
             </a-assets>
 
             <!--figur-->
-            <a-entity id="figur" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity><a-entity id="figur-2" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true"></a-entity>
+            <a-entity id="figur" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true" niffler>
+                <a-animation attribute="rotation"
+                             dur="10000"
+                             fill="forwards"
+                             to="0 360 0"
+                             begin="one" end="two"></a-animation></a-entity>
+            
+            <a-entity id="figur-2" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" niffler>
+                <a-animation attribute="rotation"
+                             dur="10000"
+                             fill="forwards"
+                             to="0 360 0"
+                             repeat="indefinite"
+                             begin="two"></a-animation></a-entity>
             
             <!--Sockel-->
             <a-entity id="sockel" obj-model="obj:#SockelObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
