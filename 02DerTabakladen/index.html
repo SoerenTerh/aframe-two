@@ -7,6 +7,7 @@
         
         <!--        jQuery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<<<<<<< HEAD
         
 <!--        a-frame-->
         <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
@@ -16,6 +17,9 @@
         <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script> 
         
 <!--        ?-->
+=======
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.1.0/dist/aframe-physics-system.min.js"></script>
+>>>>>>> origin/develop
         <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 
         <script src="script/entity.js"></script>
@@ -32,12 +36,17 @@
                                             #B0C4DE-->
 
             <!--camera-->
+<<<<<<< HEAD
             <a-entity  id="camera" position="0 5.8 0">
                 <a-entity camera
                           universal-controls
                           look-controls=""
                           kinematic-body
                           position="0 1 16">
+=======
+            <a-entity  id="camera" position="0 11 16.79">
+                <a-camera userHeight="1.6" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
+>>>>>>> origin/develop
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout: 2500; maxDistance: 0.04"
                               position="0 0 -1"
@@ -51,15 +60,16 @@
                         <a-animation begin="clickableClick"
                                      easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="500" delay="1000"></a-animation>
                     </a-entity>
-
-                </a-entity>
             </a-entity>
 
+<<<<<<< HEAD
             <a-assets timeout="10000">
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
             </a-assets>
 
+=======
+>>>>>>> origin/develop
             <a-assets>
                 <a-asset-item id="platzObj" src="models/UnsereAssets/platz.obj"></a-asset-item>
                 <a-asset-item id="platzMtl" src="models/UnsereAssets/platz.mtl"></a-asset-item>
@@ -98,6 +108,7 @@
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
 
             </a-assets>
+<<<<<<< HEAD
             
             <a-entity scale="0.5 0.5 0.5">
 
@@ -116,17 +127,32 @@
                     <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="mouseenter"></a-animation>
                     <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="click"></a-animation>
                 </a-entity>
+=======
 
-                <!-- Tabakladen - Ladentisch -->
-                <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-3.65 -0.75 116.62" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="thekeTabakladen" material=""></a-entity>
+            <!-- Brunnen -->
+            <a-entity id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" material=""></a-entity>
 
-                <!-- Tabakladen - Ablagen -->
-                <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 115.62" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage1" material=""></a-entity>
-                <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 123.37" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage2" material=""></a-entity>
-                <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 131.07" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage3" material=""></a-entity>
-                <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 138.80" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage4" material=""></a-entity>
-                <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 146.40" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage5" material=""></a-entity>
+            <!-- Tabakladen -->
+            <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 130.5" scale="10 10 10" rotation="0 -90 0" visible="" material=""></a-entity>
+>>>>>>> origin/develop
 
+            <!-- Tabakladen Tür -->
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 10 10.5" rotation="0 -90 0" visible="" material=""   sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1">
+                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="mouseenter"></a-animation>
+                <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="click"></a-animation>
+            </a-entity>
+
+            <!-- Tabakladen - Ladentisch -->
+            <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-3.65 -0.75 116.62" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="thekeTabakladen" material=""></a-entity>
+
+            <!-- Tabakladen - Ablagen -->
+            <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 115.62" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage1" material=""></a-entity>
+            <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 123.37" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage2" material=""></a-entity>
+            <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 131.07" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage3" material=""></a-entity>
+            <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 138.80" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage4" material=""></a-entity>
+            <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 146.40" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage5" material=""></a-entity>
+
+<<<<<<< HEAD
                 <!-- Schlafplatz -->
                 <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
                 <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
@@ -134,23 +160,35 @@
 
                 <!-- Bäcker -->
                 <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -120.5" scale="8 8 10" rotation="0 90 0" visible="" material=""></a-entity>
+=======
 
-                <!-- Bäcker Tür -->
-                <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" class="clickable" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible="" material="">
-                    <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="mouseenter"></a-animation>
-                    <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="click"></a-animation>
-                </a-entity>
+            <!-- Schlafplatz -->
+            <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
+            <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
+            <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-8.78 1.77 157.44" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
 
-                <!-- Bäckerei - Ladentisch -->
-                <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei" material=""></a-entity>
 
-                <!-- Bäckerei - Lampe -->
-                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.wav);on:click" material=""></a-entity>
+            <!-- Bäcker -->
+            <a-entity collada-model="url(models/UnsereAssets/baeckerladen_position.dae)" id="baeckerladen" position="-5.88 0.8 -120.5" scale="8 8 10" rotation="0 90 0" visible="" material=""></a-entity>
+>>>>>>> origin/develop
 
-                <!-- Bäckerei - Ablage f. Kuchen -->
-                <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -124.87" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-1" material=""></a-entity>
-                <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -114.17" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-2" material=""></a-entity>
+            <!-- Bäcker Tür -->
+            <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" class="clickable" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible="" material="">
+                <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="mouseenter"></a-animation>
+                <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="click"></a-animation>
+            </a-entity>
 
+            <!-- Bäckerei - Ladentisch -->
+            <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei" material=""></a-entity>
+
+            <!-- Bäckerei - Lampe -->
+            <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.wav);on:click" material=""></a-entity>
+
+            <!-- Bäckerei - Ablage f. Kuchen -->
+            <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -124.87" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-1" material=""></a-entity>
+            <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -114.17" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-2" material=""></a-entity>
+
+<<<<<<< HEAD
                 <!-- Bäckerei - Kuchen -->
                 <a-entity id="kuchen01" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="-14.72 9.45 -107.85" scale="0.05 0.05 0.05"></a-entity>
                 <a-entity id="kuchen02" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="9.33 8.97 -128.21" scale="0.05 0.05 0.05"></a-entity>
@@ -172,14 +210,54 @@
 
                 <!--Testfigur-->
                 <a-entity id="figur"  class="two, play" obj-model="obj:#figurObj" position="-4.77 1.5 6.52" scale="11 9.5 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
+=======
+            <!-- Bäckerei - Kuchen -->
+            <a-entity id="bKuchen_1" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="-14.72 9.45 -107.85" scale="0.05 0.05 0.05"></a-entity>
 
-                <!-- Platz mit Park -->
-                <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2"  sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true"></a-entity>
+            <a-entity id="bKuchen_2" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="9.33 8.97 -128.21" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity id="bKuchen_3" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="9.33 8.97 -125.24" scale="0.05 0.05 0.05"></a-entity>
+
+            <a-entity id="bKuchen_4" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="8.75 3.63 -128.41" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity id="bKuchen_5" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="8.77 3.63 -124.89" scale="0.05 0.05 0.05"></a-entity>
+
+            <a-entity id="bFladen_1" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.51 6.24 -129.06" scale="0.08 0.05 0.05"></a-entity>
+            <a-entity id="bFladen_2" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.73 6.24 -126.92" scale="0.08 0.05 0.05"></a-entity>
+            <a-entity id="bFladen_3" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.68 6.24 -124.85" scale="0.08 0.05 0.05"></a-entity>
 
 
-                <!-- Bäume -->
-                <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="11.5 0 -30.00" scale="0.15 0.15 0.15"></a-entity>
 
+            <a-entity id="bFladen_4" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.51 3.69 -118.02" scale="0.08 0.05 0.05"></a-entity>
+            <a-entity id="bFladen_5" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.73 3.69 -115.88" scale="0.08 0.05 0.05"></a-entity>
+            <a-entity id="bFladen_6" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.68 3.69 -113.92" scale="0.08 0.05 0.05"></a-entity>
+
+            <a-entity id="bKuchen_6" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="8.75 9.00 -118.18" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity id="bKuchen_7" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="8.75 9.00 -115.28" scale="0.05 0.05 0.05"></a-entity>
+
+            <a-entity id="bKuchen_8" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="9.33 6.20 -118.36" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity id="bKuchen_9" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="9.33 6.20 -115.24" scale="0.05 0.05 0.05"></a-entity>
+
+
+
+
+            <!--Figur
+<a-entity collada-model="url(models/UnsereAssets/figur.dae)" id="tfigur" position="20.7 1.1 85.5" scale="5 5 5" rotation="0 -90 0" visible="" material="" sound="src: url(../assets/sounds/squeeky_door.wav); on: click; volume: 1.2">
+<a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="click"></a-animation>
+</a-entity> -->
+            <!--Testfigur-->
+            <a-entity id="figur" obj-model="obj:#figurObj" position="2 1.1 0" scale="8 8 8" material="color:#008080;metalness:0.1"></a-entity>
+>>>>>>> origin/develop
+
+            <!-- Platz mit Park -->
+            <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2"  sound="src: url(../assets/sounds/outdoor.mp3); autoplay: true" static-body></a-entity>
+            <a-plane static-body visible="false" height="100" width="100" rotation="-90 0 0"></a-plane>
+
+            <!-- Bäume -->
+            <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="11.5 0 -30.00" scale="0.15 0.15 0.15"></a-entity>
+
+            <!-- Teppichladen -->
+            <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-109.25 0 -4.24" scale="4 6 5.5" rotation="0 180 0" ></a-entity>
+
+<<<<<<< HEAD
                 <!-- Teppichladen -->
                 <a-entity collada-model="url(models/UnsereAssets/teppichladen_position.dae)" id="teppichladen" position="-109.25 0 -4.24" scale="4 8 5.5" rotation="0 180 0" ></a-entity>
 
@@ -213,6 +291,23 @@
 
             </a-entity>
 
+=======
+            <!-- Teppichladen - Stellagen mit Teppich -->
+            <a-entity obj-model="obj:#teppichObj; mtl:#teppichMtl" id="teppich_1" position="-131 0 10.5" scale="4 4 4" rotation="-0.85 150 0" ></a-entity>
+            <a-entity obj-model="obj:#teppichObj; mtl:#teppichMtl" id="teppich_2" position="-112 0 15" scale="4 4 4" rotation="-0.85 180 0" ></a-entity>
+            <a-entity obj-model="obj:#teppichObj; mtl:#teppichMtl" id="teppich_3" position="-137.50 0 -4.5" scale="4 4 4" rotation="-0.85 90 0" ></a-entity>
+
+            <!-- Teppichladen - Ladentisch -->
+            <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-112.84 0 -19.20" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="theke" material=""></a-entity>
+
+
+            <!--lights-->
+            <a-light type="ambient" color="#ccc" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" position="3 10 -10" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
+
+            <a-sky color="#B0C4DE" id="sky"></a-sky>
+>>>>>>> origin/develop
             <!-- führt zu fehler bei inspector
 <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
         </a-scene>
