@@ -3,6 +3,7 @@ font-family: 'Amatic SC', cursive;
 font-family: 'Source Code Pro', monospace;
 */
 
+
 body {
     font: 15px 'Source Code Pro', monospace;
     padding-top: 65px; 
@@ -36,6 +37,18 @@ nav, .navbar-brand{
 
 .icon-github:before {
     content: "\eab0";
+}
+
+.textmitglieder {
+	padding-top: 150px;
+	
+}
+
+.mitglied{
+	font-style: italic;
+	color: #009EE8;
+	padding-left: 40%;
+	font: 300% 'Amatic SC';
 }
 
 .text {
@@ -128,3 +141,4 @@ a.fancybox img {
 a.fancybox:hover img {
         position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
 }
+
