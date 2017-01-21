@@ -36,7 +36,8 @@ function shutUp() {
 }
 
 
-var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt 
+//    , "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"
     two = ["#tabakladenTUERi", "#ShuiTa"], //ShuiTa Klopft
     talkTwo = ["#Frau", "#Neffe"],
     tree = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
@@ -95,13 +96,11 @@ function storyline(currentTarget, currentEvent) {
             try {
                 document.querySelector(fireAt).emit(currentEvent);
             } catch (err) {
+                
+//                Funktioniert leider noch nicht
 //                document.querySelector('#cursor').attr('text="text:error"')
                 document.querySelector('a-scene').append('<a-entity bmfont-text="text: Hello world"></a-entity>');
-                
-                
-//                <a-entity id="cursor" cursor="fuse:true;fuseTimeout:2500;maxDistance:0.04" position="0 0 -1" geometry="primitive:ring" scale="0.04 0.04 0.04" material="color:white;shader:flat" rotation="0 0 0" visible="true" raycaster="" text="text:error">
             }
-            
         }
         return 1;
     } else {

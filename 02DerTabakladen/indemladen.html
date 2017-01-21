@@ -124,7 +124,7 @@
 
             <a-entity id="figur-2"  class="two, play" obj-model="obj:#figurObj" position="-4.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
 
-            <a-entity id="Frau" class="one, play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore;on:one">
+            <a-entity id="Frau" class="one, play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore; on:one; poolSize:50; volume:2; loop:true">
             </a-entity>
 
             <!--Sockel-->
@@ -135,7 +135,7 @@
 
             <!-- Türe -->
             <!--achtung! versuch von click zu mouseenter-->
-            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"  sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"  sound="src:#squeeky_door;on:mouseenter">
                 <a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="mouseenter"></a-animation>
             </a-entity>
 
