@@ -10,7 +10,7 @@ body {
 
 h1, h2, h3, h4, h5 {
     font: 200% 'Amatic SC', cursive;
-    color:turquoise;
+    color:#5cffd6;
 }
 h2 {
     padding-top: 25px;
@@ -101,7 +101,7 @@ nav, .navbar-brand{
 }
 
 .primary-color{
-    background-color:turquoise;
+    background-color:#5cffd6;
 }
 .no-color{
     background-color:inherit;

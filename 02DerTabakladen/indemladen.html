@@ -5,25 +5,37 @@
         <meta charset="utf-8">
         <title>VR-Theater</title>
         <meta name="description" content="VR-Theater">
-        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
-        <!--        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>-->
+
+        <!--        jQuery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!--        <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.0/dist/aframe-physics-system.min.js"></script>-->
-        <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
-<!--        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>-->
+
+        <!--        a-frame-->
+        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+        <!--        a-frame extras (used are e.g. physics)-->
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
+        <!--        a-frame look controls-->
         <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script> 
-        <script src="https://unpkg.com/aframe-maze-component@0.1.15/dist/aframe-maze-component.min.js"></script>
-        
-        <script src="https://rawgit.com/chenzlabs/stats-in-vr/master/dist/aframe-stats-in-vr-component.min.js"></script>
+
+        <!--        ?-->
+        <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 
         <script src="script/entity.js"></script>
+        <link href="style/style.css" rel="stylesheet">
     </head>
     <body>
+        <div id="giveMeTime">
+            <div>
+                <img id="loader" src="gif/ring.gif" alt="loader"/>
+            </div>
+        </div>
+
         <a-scene id="innen" >
-<!--            stats-in-vr-->
             <!--camera-->
-            <a-entity position="-7 13 -25" rotation="0 180 0">
-                <a-camera userHeight="11" look-controls=""  wasd-controls="acceleration:250"  scale="1 1 1"  visible="true" kinematic-body="true">
+            <a-entity  id="camera" position="-6 13 -20" rotation="0 185 0">
+                <a-entity camera
+                          universal-controls
+                          look-controls=""
+                          position="0 1 0">
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout: 2500; maxDistance: 0.04"
                               position="0 0 -1"
@@ -32,15 +44,17 @@
                               material="color: white; shader: flat">
                         <!--look for class"clickable"-->
                         <a-animation begin="clickableFound" id="clickableFound"
-                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2850"></a-animation> 
+                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="1000"></a-animation>
                         <!--click on class"clickable"-->
-                        <a-animation begin="clickableClick" 
-                                     easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="150" delay="1000"></a-animation>
+                        <a-animation begin="clickableClick"
+                                     easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="500" delay="1000"></a-animation>
                     </a-entity>
-                </a-camera>
-            </a-entity>
 
+                </a-entity>
+            </a-entity>
+            
             <a-assets>
+                <audio id="snore" src="../assets/sounds/snoreSmall.wav"></audio>
 
                 <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
                 <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
@@ -83,47 +97,42 @@
 
                 <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
                 <!--<a-asset-item id="figurMtl" src="models/mfigur.mtl"></a-asset-item>-->
-                
+
                 <a-asset-item id="SockelObj" src="models/UnsereAssets/Sockel.obj"></a-asset-item>
                 <a-asset-item id="SockelMtl" src="models/UnsereAssets/Sockel.mtl"></a-asset-item>
 
                 <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
-
             </a-assets>
 
             <!--figur-->
-            <a-entity id="figur" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true" niffler>
-                <a-animation attribute="rotation"
-                             dur="10000"
-                             fill="forwards"
-                             to="0 360 0"
-                             begin="one" end="two"></a-animation></a-entity>
-            
-            <a-entity id="figur-2" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" niffler>
+            <a-entity id="Frau" class="one, play" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
+
+            <a-entity id="figur-2"  class="two, play" obj-model="obj:#figurObj" position="-4.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
+
+            <a-entity id="figur-3" class="one, play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore;on:one">
                 <a-animation attribute="rotation"
                              dur="10000"
                              fill="forwards"
                              to="0 360 0"
                              repeat="indefinite"
-                             begin="two"></a-animation></a-entity>
-            
+                             begin="one" end="two"></a-animation>
+            </a-entity>
+
             <!--Sockel-->
             <a-entity id="sockel" obj-model="obj:#SockelObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
 
             <!-- Tabakladen -->
-            <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true" material=""></a-entity>   
+            <a-entity static-body="shape:box" collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true" ></a-entity>   
 
             <!-- Türe -->
             <!--achtung! versuch von click zu mouseenter-->
-            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true" material="" sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"  sound="src:url(../assets/sounds/squeeky_door.wav);on:mouseenter">
                 <a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="mouseenter"></a-animation>
             </a-entity>
-            <!--versuch tür
-<a-entity position="-6.34 9.94 -25.21" scale="1 1 1" geometry="height:20;width:10" id="doorbox" material="opacity:0;transparent:false"></a-entity>-->
 
             <!-- Ladentisch -->
-            <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
+            <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" ></a-entity>
 
             <!-- Kuchen -->
 
@@ -132,63 +141,64 @@
 
 
             <!-- Laterne -->
-            <a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:url(../assets/sounds/blow_candle.wav);on:click" material=""></a-entity>
-            
+            <a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:url(../assets/sounds/blow_candle.wav);on:click" ></a-entity>
 
             <!-- Silberdollar -->
-            <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
-            
+            <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" ></a-entity>
+
             <!-- Schlafplatz -->
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -16.44" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-3" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click" ></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -16.44" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click" ></a-entity><a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-3" sound="src:url(../assets/sounds/snore.wav);on:click" ></a-entity>
 
             <!-- Bettgestell -->
-            <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-1.92 1.77 28.88" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" material=""></a-entity>
-
-
+            <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-1.92 1.77 28.88" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.wav);on:click" ></a-entity>
 
             <!-- Rechnungen -->
-            <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 10.7 -3.36" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src:url(../assets/sounds/paper.wav);on:click;volume:0.1" visible="true" material=""></a-entity>s
+            <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 10.7 -3.36" scale="0.12 0.12 0.12" rotation="-59.59 180 0" id="Rechnung" sound="src:url(../assets/sounds/paper.wav);on:click" visible="true" ></a-entity>s
 
             <!-- Ablage_Stellage -->
-            <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-3" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-4" material=""></a-entity>
+            <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung" ></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung-2" ></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-2" ></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-3" ></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-4" ></a-entity>
 
             <!-- Mietvertrag -->
-            <a-entity class="clickable" data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="true" id="Vertrag" sound="src:url(../assets/sounds/paper.wav);on:click" material=""></a-entity>
+            <a-entity class="clickable" data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 180 0" visible="true" id="Vertrag" sound="src:url(../assets/sounds/paper.wav);on:click" ></a-entity>
 
             <!-- Zigarette -->
-            <a-entity data-brackets-id="891" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette1" material="" >
+            <a-entity data-brackets-id="891" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette1"  >
                 <a-animation attribute="position" dur="3000" fill="forwards" from="7.75 11.95 -0.71" to="7.75 11.95 -1" repeat="0" begin="combineFuse" ></a-animation>
                 <a-animation attribute="position" dur="1500" fill="forwards" from="7.75 11.95 -1" to="7.75 11.95 -1.5" repeat="0" begin="combineClick" delay="3500"></a-animation>
             </a-entity>
-            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.55 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette2" material="" >
+            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.55 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette2"  >
                 <a-animation attribute="position" dur="3000" fill="forwards" from="7.55 11.95 -0.71" to="7.55 11.95 -1" repeat="0" begin="combineFuse" ></a-animation>
                 <a-animation attribute="position" dur="1500" fill="forwards" from="7.55 11.95 -1" to="7.55 11.95 -1.5" repeat="0" begin="combineClick" delay="3500"></a-animation>
             </a-entity>
-            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.35 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette3" material="" >
+            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.35 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette3"  >
                 <a-animation attribute="position" dur="3000" fill="forwards" from="7.35 11.95 -0.71" to="7.35 11.95 -1" repeat="0" begin="combineFuse" ></a-animation>
                 <a-animation attribute="position" dur="1500" fill="forwards" from="7.35 11.95 -1" to="7.35 11.95 -1.5" repeat="0" begin="combineClick" delay="3500"></a-animation>
             </a-entity>
-            <a-entity  obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.2 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette4" material="" >
+            <a-entity  obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="7.2 11.95 -0.71" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette4"  >
                 <a-animation attribute="position" dur="3000" fill="forwards" from="7.2 11.95 -0.71" to="7.2 11.95 -1" repeat="0" begin="combineFuse" ></a-animation>
                 <a-animation attribute="position" dur="1500" fill="forwards" from="7.2 11.95 -1" to="7.2 11.95 -1.5" repeat="0" begin="combineClick" delay="3500"></a-animation>
             </a-entity>
 
-
             <!-- ZigarettenkisteAußen -->
-            <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen" material=""></a-entity>
+            <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen" ></a-entity>
 
             <!-- ZigarettenkisteInnen -->
-<!--            rotation="0 89.95437383553924 -18.334649444186343"-->
-<!--            event-animate="target:#zigarette; event:combineFuse;  target:#zigarette; event:combineClick"-->
-            <a-entity class="clickable, zigarettenkisten" data-brackets-id="895" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen" material="" 
+            <a-entity class="clickable, zigarettenkisten" data-brackets-id="895" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="7.75 11.95 -0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen"  
                       event-animate="target:#zigarette1; event:combineFuse; target:#zigarette1; event:combineClick
                                      target:#zigarette2; event:combineFuse; target:#zigarette2 event:combineClick
                                      target:#zigarette3; event:combineFuse; target:#zigarette3; event:combineClick
                                      target:#zigarette4; event:combineFuse; target:#zigarette4; event:combineClick">
                 <a-animation attribute="position" dur="3000" fill="forwards" from="7.75 11.95 -0.71" to="7.75 11.95 -1" repeat="0" begin="mouseenter"></a-animation>
                 <a-animation attribute="position" dur="1500" fill="forwards" from="7.75 11.95 -1" to="7.75 11.95 -1.5" repeat="0" begin="click"></a-animation>
-                
             </a-entity>
+
+            <!--                ground-->
+            <a-box scale="0.08 0.20 0.11" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="4.19 -0.08 6.5" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
+
+            <!--lights-->⁄
+            <a-light type="ambient" color="#ccc" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
             <!--sky-->
             <a-sky color="#000" id="sky"></a-sky>

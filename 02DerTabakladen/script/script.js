@@ -1,116 +1,143 @@
 $(".clickable").each(function () {
+    'use strict';
     $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
     $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
 });
 
+var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+
+var persons = ["#Frau",
+               "#Neffe",
+               "#Mann",
+
+               "#Schwägerin",
+               "#Bruder",
+
+               "#Großvater",
+               "#Junge",
+
+               "#Nichte",
+
+               "#ShuiTa",
+               "#Schreiner",
+               "#Polizist",
+               "#Hausbesitzerin"];
+
+var at = eventArr[0];
+var i = 0, j = 0;
+var currentTarget;
+var fireAt;
 
 
-//document.getElementById('figur').emit('one');
-document.querySelector('#figur').emit('one');
-
-var one = document.querySelector('#figur');
-var two = document.querySelector('#figur-2');
-var at = "one";
-if (one !== undefined) {
-    $(one).on('fusing', function () {
-            if( at == "one") {
-            one.emit('one');
-            at="two"
-            }
-    });
-}
-    
-    
-    if (two !== undefined) {
-        $(two).on('fusing', function () {
-            if( at == "two") {
-                two.emit('two');
-                at="two"
-            }
-        });
+function shutUp() {
+    for (i = 0; i < persons.length; i++) {
+        document.querySelector(person[i]).removeAttribute("material");
     }
+}
+
+
+var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+    two = ["#tabakladenTUERi", "#ShuiTa"], //ShuiTa Klopft
+    talkTwo = ["#Frau", "#Neffe"],
+    tree = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
+    four = ["#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
+    five = ["#ShuiTa", "#kerze"], //ShuiTa geht zu lampe und löscht diese
+    six = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
+    seven = ["#Mann", "#Frau", "#Neffe",  '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
+    eight = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwägerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
+    nine = ["#Neffe", "#Bruder", '#Schwägerin', "#Nichte"], //Neffe, Bruder, Schwägerin & Nichte verlassen Laden
+    ten = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
+    eleven = [],
+    twelve = [],
+    thirteen = [],
+    fourteen = [],
+    fivteen = [],
+    sixteen = [],
+    seventeen = [],
+    eighteen = [],
+    nineteen = [],
+    twenty = [];
+
+//Frau
+//Neffe
+//Mann
+
+//Schwägerin
+//Bruder
+
+//Großvater
+//Junge
+
+//Nichte
+
+//ShuiTa
+//Schreiner
+//Polizist
+//Hausbesitzerin
+
+//Ich glaube, die Alte ist zuviel, oder? 
+//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen. 
+//Dann kommen Mann und Frau (die schwangere und der Bruder), 
+//dann der Greis mit dem Jungen. Als letztes die Nichte.
+   
 
 
 
-//document.querySelector('#figur').addEventListener('click', function () {
-//    if( at !== "two") {
-//        at = "two";
-//        camera.emit('two');
-//    }
-//});
-//
-//three.addEventListener('click', function () {
-//    if( at !== "three") {
-//        at = "three";
-//        camera.emit('three');
-//    }
-//});
+//Trigger all neccessary events at that point in the story
+function storyline(currentTarget, currentEvent) {
+    'use strict';
+    console.log("Target= " + currentTarget);
+    if (window[currentEvent].length != 0) {
+        for (j = 0; j < window[currentEvent].length; j++) {
+            fireAt = window[currentEvent][j];
+            console.log("Fire at= " + fireAt);
+            complexChanges(currentEvent, fireAt);
+            try {
+                document.querySelector(fireAt).emit(currentEvent);
+            } catch (err) {
+//                document.querySelector('#cursor').attr('text="text:error"')
+                document.querySelector('a-scene').append('<a-entity bmfont-text="text: Hello world"></a-entity>');
+                
+                
+//                <a-entity id="cursor" cursor="fuse:true;fuseTimeout:2500;maxDistance:0.04" position="0 0 -1" geometry="primitive:ring" scale="0.04 0.04 0.04" material="color:white;shader:flat" rotation="0 0 0" visible="true" raycaster="" text="text:error">
+            }
+            
+        }
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
+//look for more complex changes on entities (e.g. light)
+function complexChanges(currentTarget, fireAt) {
+    'use strict';
+    if (currentTarget == "one" && fireAt == "#kerze") {
+        $(fireAt).append('<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>');
+    }
+}
 
+//start storyline
+document.querySelector('a-scene').addEventListener('loaded', function () {
+    'use strict';
+    $("#giveMeTime").remove();
+    
+    currentTarget = "#one";
+    at = "one";
+    if ((storyline(currentTarget, at)) == 1) {
+        at = eventArr[++i];
+    }
+});
 
-//var event = new Event('one');
-
-//// Listen for the event.
-//elem.addEventListener('one', function (e) { ... }, false);
-//
-//                                             // Dispatch the event.
-//                                             elem.dispatchEvent(event);
-//
-//                                             var el = document.querySelector('a-entity');
-//                                             el.emit('one');
-//
-//
-//                                             var el3 = document.getElementById('figur');
-//                                             el3.emit('one');
-//
-//
-//
-//
-//                                             ////var entityEl = document.getElementById('figur');
-//                                             ////entityEl.emit('one');
-//                                             //
-//                                             ////$("#figur").dispatchEvent('one');
-//                                             //
-//                                             //
-//                                             ////var entityEl = document.getElementById('figur');
-//                                             ////entityEl.emit('one', {}, true);
-//                                             ////
-//                                             ////setTimeout(funk, 5000)
-//                                             ////
-//                                             ////
-//                                             ////function funk() {
-//                                             ////    entityEl.emit('two', {}, true);
-//                                             ////}
-//                                             //
-//                                             //$(document).emit("one");
-//                                             //
-//                                             //
-//                                             //var spinner_obj = document.getElementById('figur');
-//                                             //THREE.EventDispatcher.call( spinner_obj );
-//                                             //spinner_obj.addEventListener('one', function(event) {alert("GOT THE EVENT");});
-//                                             //spinner_obj.dispatchEvent({type:'one'});
-//                                             //
-//                                             //
-//                                             //
-//                                             //
-//                                             //function niffler() {
-//                                             //    var el = this.el;
-//                                             //    var targetEl = this.data.target;
-//                                             //    var eventName = this.data.event;
-//                                             //
-//                                             //    el.addEventListener('click', function () {
-//                                             //        targetEl.emit(eventName);
-//                                             //    })
-//                                             //};
-//                                             //
-//                                             //var event = new CustomEvent(
-//                                             //    "one", 
-//                                             //    {
-//                                             //        detail: {
-//                                             //            message: "Hello World!",
-//                                             //            time: new Date(),
-//                                             //        },
-//                                             //        bubbles: true,
-//                                             //        cancelable: true
-//                                             //    }
-//                                             //);
+//trigger storyline after start was iniciated
+$(".play").on('fusing', function () {
+    'use strict';
+    currentTarget = $(this).closest("a-entity").attr("class");
+    if (currentTarget.search(at) != -1) {
+        currentTarget = "#" + at;
+        if ((storyline(currentTarget, at)) == 1) {
+            at = eventArr[++i];
+        }
+    }
+    console.log("Next= " + at);
+});
