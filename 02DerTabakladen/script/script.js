@@ -47,21 +47,21 @@ var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", 
 at = eventArr[0];
 
 var persons = ["#Frau",
-               "#Neffe",
-               "#Mann",
+    "#Neffe",
+    "#Mann",
 
-               "#Schwaegerin",
-               "#Bruder",
+    "#Schwaegerin",
+    "#Bruder",
 
-               "#Großvater",
-               "#Junge",
+    "#Großvater",
+    "#Junge",
 
-               "#Nichte",
+    "#Nichte",
 
-               "#ShuiTa",
-               "#Schreiner",
-               "#Polizist",
-               "#Hausbesitzerin"];
+    "#ShuiTa",
+    "#Schreiner",
+    "#Polizist",
+    "#Hausbesitzerin"];
 
 
 
@@ -74,7 +74,7 @@ function shutUp() {
 }
 
 
-var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt 
+var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi", "#ShuiTa", "#figur-2"], //ShuiTa Klopft
     talkTwo = ["#Frau", "#Neffe"],
     three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
@@ -113,9 +113,9 @@ var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", 
 //Polizist
 //Hausbesitzerin
 
-//Ich glaube, die Alte ist zuviel, oder? 
-//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen. 
-//Dann kommen Mann und Frau (die schwangere und der Bruder), 
+//Ich glaube, die Alte ist zuviel, oder?
+//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen.
+//Dann kommen Mann und Frau (die schwangere und der Bruder),
 //dann der Greis mit dem Jungen. Als letztes die Nichte.
 
 
@@ -134,7 +134,7 @@ function storyline(currentTarget, currentEvent) {
 //                setTimeout(function () {
                 document.querySelector(fireAt).emit(currentEvent);
 //                }, 2500);
-                    
+
             } catch (err) {
                 console.log(err + " - while firing at  " + fireAt);
             }
@@ -182,3 +182,4 @@ $(".play").on('fusing', function () {
     }
     console.log("Next= " + at);
 });
+0
