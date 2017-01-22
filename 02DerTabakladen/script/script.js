@@ -80,6 +80,10 @@ function complexChanges(currentTarget, fireAt) {
     if (currentTarget == "one" && fireAt == "#kerze") {
         $(fireAt).append('<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>');
     }
+    if (currentTarget == "two") {
+        $('#Bruder, #Frau, #Mann, #Schwaegerin, #Großvater, #Neffe, #Nichte, #Junge').removeAttr('sound');
+        console.log("Done.Muted.");
+    }
 }
 
 //starts narration when .play was found
@@ -117,11 +121,6 @@ $(".clickable").on('fusing', function () {
         currentTarget = $(this).closest("a-entity").attr("class");
         playableFound(currentTarget);
 
-        $('#Bruder, #Frau, #Mann, #Schwaegerin, #Großvater, #Neffe, #Nichte, #Junge').removeAttr('sound');
-            console.log("Done.Muted.");
-
-        //        at = "#three";
-
     } else {
         currentTarget = '#' + $(this).closest("a-entity").attr('id');
         console.log(currentTarget);
@@ -131,7 +130,7 @@ $(".clickable").on('fusing', function () {
         document.querySelector(currentTarget).emit(trigggerEvent);
         lastClickableFused = currentTarget;
     }
-    
+
 
 });
 
