@@ -47,21 +47,26 @@ var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", 
 at = eventArr[0];
 
 var persons = ["#Frau",
-               "#Neffe",
-               "#Mann",
+    "#Neffe",
+    "#Mann",
 
+<<<<<<< HEAD
                "#Schwaegerin",
                "#Bruder",
+=======
+    "#Schwägerin",
+    "#Bruder",
+>>>>>>> origin/develop
 
-               "#Großvater",
-               "#Junge",
+    "#Großvater",
+    "#Junge",
 
-               "#Nichte",
+    "#Nichte",
 
-               "#ShuiTa",
-               "#Schreiner",
-               "#Polizist",
-               "#Hausbesitzerin"];
+    "#ShuiTa",
+    "#Schreiner",
+    "#Polizist",
+    "#Hausbesitzerin"];
 
 
 
@@ -74,8 +79,14 @@ function shutUp() {
 }
 
 
+<<<<<<< HEAD
 var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt 
     two = ["#tabakladenTUERi", "#ShuiTa", "#figur-2"], //ShuiTa Klopft
+=======
+var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt
+//    , "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"
+    two = ["#tabakladenTUERi", "#ShuiTa"], //ShuiTa Klopft
+>>>>>>> origin/develop
     talkTwo = ["#Frau", "#Neffe"],
     three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
@@ -113,9 +124,9 @@ var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", 
 //Polizist
 //Hausbesitzerin
 
-//Ich glaube, die Alte ist zuviel, oder? 
-//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen. 
-//Dann kommen Mann und Frau (die schwangere und der Bruder), 
+//Ich glaube, die Alte ist zuviel, oder?
+//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen.
+//Dann kommen Mann und Frau (die schwangere und der Bruder),
 //dann der Greis mit dem Jungen. Als letztes die Nichte.
 
 
@@ -133,10 +144,24 @@ function storyline(currentTarget, currentEvent) {
             try {
 //                setTimeout(function () {
                 document.querySelector(fireAt).emit(currentEvent);
+<<<<<<< HEAD
 //                }, 2500);
                     
             } catch (err) {
                 console.log(err + " - while firing at  " + fireAt);
+=======
+
+                if(fireAt == "kerze"){
+                    var test = $('#' + fireAt).attr("sound",{
+                        autoplay: true
+                    });
+                }
+            } catch (err) {
+
+//                Funktioniert leider noch nicht
+//                document.querySelector('#cursor').attr('text="text:error"')
+                document.querySelector('a-scene').append('<a-entity bmfont-text="text: Hello world"></a-entity>');
+>>>>>>> origin/develop
             }
         }
         return 1;
@@ -156,6 +181,7 @@ function complexChanges(currentTarget, fireAt) {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
+<<<<<<< HEAD
 
     setTimeout(function () {
         $("#giveMeTime").remove();
@@ -168,6 +194,15 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     }, 2500);
 
 
+=======
+    $("#giveMeTime").remove();
+
+    currentTarget = "#one";
+    at = "one";
+    if ((storyline(currentTarget, at)) == 1) {
+        at = eventArr[++i];
+    }
+>>>>>>> origin/develop
 });
 
 //trigger storyline after start was iniciated
@@ -182,3 +217,4 @@ $(".play").on('fusing', function () {
     }
     console.log("Next= " + at);
 });
+0
