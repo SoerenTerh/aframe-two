@@ -7,21 +7,21 @@ $(".clickable").each(function () {
 var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
 
 var persons = ["#Frau",
-               "#Neffe",
-               "#Mann",
+    "#Neffe",
+    "#Mann",
 
-               "#Schwägerin",
-               "#Bruder",
+    "#Schwägerin",
+    "#Bruder",
 
-               "#Großvater",
-               "#Junge",
+    "#Großvater",
+    "#Junge",
 
-               "#Nichte",
+    "#Nichte",
 
-               "#ShuiTa",
-               "#Schreiner",
-               "#Polizist",
-               "#Hausbesitzerin"];
+    "#ShuiTa",
+    "#Schreiner",
+    "#Polizist",
+    "#Hausbesitzerin"];
 
 var at = eventArr[0];
 var i = 0, j = 0;
@@ -36,7 +36,7 @@ function shutUp() {
 }
 
 
-var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt 
+var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt
 //    , "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"
     two = ["#tabakladenTUERi", "#ShuiTa"], //ShuiTa Klopft
     talkTwo = ["#Frau", "#Neffe"],
@@ -76,11 +76,11 @@ var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt
 //Polizist
 //Hausbesitzerin
 
-//Ich glaube, die Alte ist zuviel, oder? 
-//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen. 
-//Dann kommen Mann und Frau (die schwangere und der Bruder), 
+//Ich glaube, die Alte ist zuviel, oder?
+//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen.
+//Dann kommen Mann und Frau (die schwangere und der Bruder),
 //dann der Greis mit dem Jungen. Als letztes die Nichte.
-   
+
 
 
 
@@ -95,8 +95,14 @@ function storyline(currentTarget, currentEvent) {
             complexChanges(currentEvent, fireAt);
             try {
                 document.querySelector(fireAt).emit(currentEvent);
+
+                if(fireAt == "kerze"){
+                    var test = $('#' + fireAt).attr("sound",{
+                        autoplay: true
+                    });
+                }
             } catch (err) {
-                
+
 //                Funktioniert leider noch nicht
 //                document.querySelector('#cursor').attr('text="text:error"')
                 document.querySelector('a-scene').append('<a-entity bmfont-text="text: Hello world"></a-entity>');
@@ -120,7 +126,7 @@ function complexChanges(currentTarget, fireAt) {
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
     $("#giveMeTime").remove();
-    
+
     currentTarget = "#one";
     at = "one";
     if ((storyline(currentTarget, at)) == 1) {
@@ -140,3 +146,4 @@ $(".play").on('fusing', function () {
     }
     console.log("Next= " + at);
 });
+0
