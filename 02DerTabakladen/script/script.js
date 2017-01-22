@@ -30,7 +30,7 @@ var persons = ["#Frau",
                "#Hausbesitzerin"];
 
 var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#figur-2"], //ShuiTa Klopft"#ShuiTa"
+    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner"], //ShuiTa Klopft
     talkTwo = ["#Frau", "#Neffe"],
     three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
@@ -81,8 +81,10 @@ function complexChanges(currentTarget, fireAt) {
         $(fireAt).append('<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>');
     }
     if (currentTarget == "two") {
-        $('#Bruder, #Frau, #Mann, #Schwaegerin, #Großvater, #Neffe, #Nichte, #Junge').removeAttr('sound');
-        console.log("Done.Muted.");
+        for (j = 0; j < one.length; j++) { 
+            $(one[j]).removeAttr('sound');
+            console.log("Done.Muted.");
+        }
     }
 }
 
@@ -166,6 +168,10 @@ $(".play").on('fusing', function () {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
+    var el = document.querySelectorAll('.one');
+    for (i = 0; i < el.length; i++) {
+        el[i].setAttribute('material', 'color', 'black');
+    }
 
     setTimeout(function () {
         $("#giveMeTime").remove();
