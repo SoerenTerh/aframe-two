@@ -120,10 +120,7 @@ $(".clickable").on('fusing', function () {
         $('#Bruder, #Frau, #Mann, #Schwaegerin, #Großvater, #Neffe, #Nichte, #Junge').removeAttr('sound');
             console.log("Done.Muted.");
 
-
-
-
-//        at = "#three";
+        //        at = "#three";
 
     } else {
         currentTarget = '#' + $(this).closest("a-entity").attr('id');
