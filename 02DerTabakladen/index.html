@@ -23,9 +23,7 @@
     </head>
     <body>
         <div id="giveMeTime">
-            <div>
-                <img id="loader" src="gif/ring.gif" alt="loader"/>
-            </div>
+            <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
         <a-scene physics="debug: false" id="außen">
             <!-- fog="style: linear; color:black; near:1" 
@@ -39,19 +37,21 @@
                           kinematic-body
                           position="0 1 16">
                     <a-entity id="cursor"
-                              cursor="fuse: true; fuseTimeout: 2500; maxDistance: 0.04"
+                              cursor="fuse: true; fuseTimeout:2500"
                               position="0 0 -1"
                               geometry="primitive: ring"
                               scale="0.04 0.04 0.04"
-                              material="color: white; shader: flat">
-                        <!--look for class"clickable"-->
-                        <a-animation begin="clickableFound" id="clickableFound"
-                                     easing="ease-in" attribute="scale" fill="forwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="1000"></a-animation>
-                        <!--click on class"clickable"-->
-                        <a-animation begin="clickableClick"
-                                     easing="ease-in" attribute="scale" fill="forwards" from="0.01 0.01 0.01" to="0.04 0.04 0.04" dur="500" delay="1000"></a-animation>
+                              material="color: white">
+                        <!--on .clickable"-->
+                        <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
+                                     fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
+                                     fill="forwards" from="0.01 0.01 0.01" to="0.06 0.06 0.06" dur="1000"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="black"></a-animation>
+                        <a-animation begin="notClickable" easing="ease-in" attribute="scale"
+                                     fill="forwards" to="0.04 0.04 0.04"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="white" delay="1000"></a-animation>
                     </a-entity>
-
                 </a-entity>
             </a-entity>
 
@@ -61,20 +61,20 @@
             </a-assets>
 
             <a-assets>
-                <audio id="coin" src="../assets/sounds/coin.wav"></audio>
-                <audio id="door_knock" src="../assets/sounds/door_knock.wav"></audio>
-                <audio id="drawer" src="../assets/sounds/drawer.wav"></audio>
-                <audio id="fall" src="../assets/sounds/fall.wav"></audio>
-                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.wav"></audio>
-                <audio id="footsteps" src="../assets/sounds/footsteps.wav"></audio>
-                <audio id="getup_bed" src="../assets/sounds/getup_bed.wav"></audio>
-                <audio id="outdoor" src="../assets/sounds/outdoor.wav"></audio>
-                <audio id="paper_rip" src="../assets/sounds/paper_rip.wav"></audio>
-                <audio id="paper" src="../assets/sounds/paper.wav"></audio>
-                <audio id="place_object" src="../assets/sounds/place_object.wav"></audio>
-                <audio id="snore_girl" src="../assets/sounds/snore_girl.wav"></audio>
-                <audio id="snore" src="../assets/sounds/snore.wav"></audio>
-                <audio id="squeeky_door" src="../assets/sounds/squeeky_door.wav"></audio>
+                <audio id="coin" src="../assets/sounds/coin.wav" preload="auto"></audio>
+                <audio id="door_knock" src="../assets/sounds/door_knock.wav" preload="auto"></audio>
+                <audio id="drawer" src="../assets/sounds/drawer.wav" preload="auto"></audio>
+                <audio id="fall" src="../assets/sounds/fall.wav" preload="auto"></audio>
+                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.wav" preload="auto"></audio>
+                <audio id="footsteps" src="../assets/sounds/footsteps.wav" preload="auto"></audio>
+                <audio id="getup_bed" src="../assets/sounds/getup_bed.wav" preload="auto"></audio>
+                <audio id="outdoor" src="../assets/sounds/outdoor.wav" preload="auto"></audio>
+                <audio id="paper_rip" src="../assets/sounds/paper_rip.wav" preload="auto"></audio>
+                <audio id="paper" src="../assets/sounds/paper.wav" preload="auto"></audio>
+                <audio id="place_object" src="../assets/sounds/place_object.wav" preload="auto"></audio>
+                <audio id="snore_girl" src="../assets/sounds/snore_girl.wav" preload="auto"></audio>
+                <audio id="snore" src="../assets/sounds/snore.wav" preload="auto"></audio>
+                <audio id="squeeky_door" src="../assets/sounds/squeeky_door.wav" preload="auto"></audio>
                 
                 <a-asset-item id="platzObj" src="models/UnsereAssets/platz.obj"></a-asset-item>
                 <a-asset-item id="platzMtl" src="models/UnsereAssets/platz.mtl"></a-asset-item>
@@ -128,8 +128,8 @@
 
                 <!-- Tabakladen Tür -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" visible="" sound="src: #squeeky_door; on: click; volume: 1">
-                    <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="mouseenter"></a-animation>
-                    <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="click"></a-animation>
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
+                    <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 </a-entity>
 
                 <!-- Tabakladen - Ladentisch -->
@@ -152,8 +152,8 @@
 
                 <!-- Bäcker Tür -->
                 <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" class="clickable" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible="" >
-                    <a-animation attribute="rotation" dur="3000" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="mouseenter"></a-animation>
-                    <a-animation attribute="rotation" dur="1500" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="click"></a-animation>
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="clickableFound"></a-animation>
+                    <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="clickableClick"></a-animation>
                 </a-entity>
 
                 <!-- Bäckerei - Ladentisch -->

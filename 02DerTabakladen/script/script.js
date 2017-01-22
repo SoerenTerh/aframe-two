@@ -1,16 +1,56 @@
-$(".clickable").each(function () {
+var at = 0;
+var trigggerEvent = 0;
+var i = 0, j = 0;
+var currentTarget;
+var fireAt;
+var lastClickableFused;
+var nowClicked;
+//
+//$(".clickable").each(function () {
+//    'use strict';
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
+//});
+
+$(".clickable").on('fusing', function () {
     'use strict';
-    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
-    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
+    currentTarget = '#' + $(this).closest("a-entity").attr('id');
+    console.log(currentTarget);
+    trigggerEvent = "clickableFound";
+    document.querySelector("#cursor").emit(trigggerEvent);
+    document.querySelector(currentTarget).emit(trigggerEvent);
+    lastClickableFused = currentTarget;
+
+});
+$(".clickable").on('click', function () {
+    'use strict';
+    currentTarget = '#' + $(this).closest("a-entity").attr('id');
+    trigggerEvent = "clickableClick";
+    nowClicked = currentTarget;
+    if (nowClicked == lastClickableFused) {
+        document.querySelector("#cursor").emit(trigggerEvent);
+        document.querySelector(currentTarget).emit(trigggerEvent);
+    }
 });
 
+$("a-entity").on('fusing', function () {
+    'use strict';
+    currentTarget = "#cursor";
+    trigggerEvent = "notClickable";
+    document.querySelector(currentTarget).emit(trigggerEvent);
+});
+
+
+
+
 var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+at = eventArr[0];
 
 var persons = ["#Frau",
                "#Neffe",
                "#Mann",
 
-               "#Schwägerin",
+               "#Schwaegerin",
                "#Bruder",
 
                "#Großvater",
@@ -23,30 +63,27 @@ var persons = ["#Frau",
                "#Polizist",
                "#Hausbesitzerin"];
 
-var at = eventArr[0];
-var i = 0, j = 0;
-var currentTarget;
-var fireAt;
+
 
 
 function shutUp() {
+    'use strict';
     for (i = 0; i < persons.length; i++) {
-        document.querySelector(person[i]).removeAttribute("material");
+        document.querySelector(persons[i]).removeAttribute("color");
     }
 }
 
 
-var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt 
-//    , "#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"
-    two = ["#tabakladenTUERi", "#ShuiTa"], //ShuiTa Klopft
+var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt 
+    two = ["#tabakladenTUERi", "#ShuiTa", "#figur-2"], //ShuiTa Klopft
     talkTwo = ["#Frau", "#Neffe"],
-    tree = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#Neffe", "#Mann", '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
+    three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
+    four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
     five = ["#ShuiTa", "#kerze"], //ShuiTa geht zu lampe und löscht diese
     six = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
-    seven = ["#Mann", "#Frau", "#Neffe",  '#Schwägerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
-    eight = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwägerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
-    nine = ["#Neffe", "#Bruder", '#Schwägerin', "#Nichte"], //Neffe, Bruder, Schwägerin & Nichte verlassen Laden
+    seven = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
+    eight = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
+    nine = ["#Neffe", "#Bruder", '#Schwaegerin', "#Nichte"], //Neffe, Bruder, Schwaegerin & Nichte verlassen Laden
     ten = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
     eleven = [],
     twelve = [],
@@ -63,7 +100,7 @@ var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt
 //Neffe
 //Mann
 
-//Schwägerin
+//Schwaegerin
 //Bruder
 
 //Großvater
@@ -80,7 +117,7 @@ var one = ["#kerze", "#Frau"], //alle schlafen + Lampe brennt
 //Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen. 
 //Dann kommen Mann und Frau (die schwangere und der Bruder), 
 //dann der Greis mit dem Jungen. Als letztes die Nichte.
-   
+
 
 
 
@@ -94,12 +131,12 @@ function storyline(currentTarget, currentEvent) {
             console.log("Fire at= " + fireAt);
             complexChanges(currentEvent, fireAt);
             try {
+//                setTimeout(function () {
                 document.querySelector(fireAt).emit(currentEvent);
+//                }, 2500);
+                    
             } catch (err) {
-                
-//                Funktioniert leider noch nicht
-//                document.querySelector('#cursor').attr('text="text:error"')
-                document.querySelector('a-scene').append('<a-entity bmfont-text="text: Hello world"></a-entity>');
+                console.log(err + " - while firing at  " + fireAt);
             }
         }
         return 1;
@@ -119,13 +156,18 @@ function complexChanges(currentTarget, fireAt) {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
-    $("#giveMeTime").remove();
-    
-    currentTarget = "#one";
-    at = "one";
-    if ((storyline(currentTarget, at)) == 1) {
-        at = eventArr[++i];
-    }
+
+    setTimeout(function () {
+        $("#giveMeTime").remove();
+
+        currentTarget = "#one";
+        at = "one";
+        if ((storyline(currentTarget, at)) == 1) {
+            at = eventArr[++i];
+        }
+    }, 2500);
+
+
 });
 
 //trigger storyline after start was iniciated

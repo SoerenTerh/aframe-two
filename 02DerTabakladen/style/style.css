@@ -12,6 +12,7 @@
 }
 
 #loader:before {
+    content: '';
     display: block;
     position: fixed;
     top: 0;
