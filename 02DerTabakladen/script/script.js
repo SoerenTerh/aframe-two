@@ -16,6 +16,22 @@ $(".clickable").on('fusing', function () {
     'use strict';
     currentTarget = '#' + $(this).closest("a-entity").attr('id');
     console.log(currentTarget);
+
+    if(at == "two"){
+        console.log("TWO!");
+
+        /*var testimonialElements = $(".one"); Loop wird nicht durchlaufen
+        for(var i=0; i<testimonialElements.length; i++){
+            var element = testimonialElements.eq(i);
+            element.removeAttr("sound");
+            console.log("LOOOOOOOOOOOOOOOOP");
+        }*/
+
+        at = "#three";
+
+
+    }
+
     trigggerEvent = "clickableFound";
     document.querySelector("#cursor").emit(trigggerEvent);
     document.querySelector(currentTarget).emit(trigggerEvent);
@@ -163,6 +179,9 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
         currentTarget = "#one";
         at = "one";
         if ((storyline(currentTarget, at)) == 1) {
+            at = eventArr[++i];
+        }
+        else if ((storyline(currentTarget, at)) == 2) {
             at = eventArr[++i];
         }
     }, 2500);
