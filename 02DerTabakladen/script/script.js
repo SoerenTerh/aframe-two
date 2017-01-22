@@ -1,3 +1,4 @@
+//Variables
 var at = 0;
 var trigggerEvent = 0;
 var i = 0, j = 0;
@@ -5,90 +6,28 @@ var currentTarget;
 var fireAt;
 var lastClickableFused;
 var nowClicked;
-//
-//$(".clickable").each(function () {
-//    'use strict';
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
-//});
-
-$(".clickable").on('fusing', function () {
-    'use strict';
-    currentTarget = '#' + $(this).closest("a-entity").attr('id');
-    console.log(currentTarget);
-
-    if(at == "two"){
-        console.log("TWO!");
-
-        /*var testimonialElements = $(".one"); Loop wird nicht durchlaufen
-        for(var i=0; i<testimonialElements.length; i++){
-            var element = testimonialElements.eq(i);
-            element.removeAttr("sound");
-            console.log("LOOOOOOOOOOOOOOOOP");
-        }*/
-
-        at = "#three";
 
 
-    }
-
-    trigggerEvent = "clickableFound";
-    document.querySelector("#cursor").emit(trigggerEvent);
-    document.querySelector(currentTarget).emit(trigggerEvent);
-    lastClickableFused = currentTarget;
-
-});
-$(".clickable").on('click', function () {
-    'use strict';
-    currentTarget = '#' + $(this).closest("a-entity").attr('id');
-    trigggerEvent = "clickableClick";
-    nowClicked = currentTarget;
-    if (nowClicked == lastClickableFused) {
-        document.querySelector("#cursor").emit(trigggerEvent);
-        document.querySelector(currentTarget).emit(trigggerEvent);
-    }
-});
-
-$("a-entity").on('fusing', function () {
-    'use strict';
-    currentTarget = "#cursor";
-    trigggerEvent = "notClickable";
-    document.querySelector(currentTarget).emit(trigggerEvent);
-});
-
-
-
-
+//Arrays
 var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
 at = eventArr[0];
 
 var persons = ["#Frau",
-    "#Neffe",
-    "#Mann",
+               "#Neffe",
+               "#Mann",
 
-    "#Schwaegerin",
-    "#Bruder",
+               "#Schwaegerin",
+               "#Bruder",
 
-    "#Großvater",
-    "#Junge",
+               "#Großvater",
+               "#Junge",
 
-    "#Nichte",
+               "#Nichte",
 
-    "#ShuiTa",
-    "#Schreiner",
-    "#Polizist",
-    "#Hausbesitzerin"];
-
-
-
-
-function shutUp() {
-    'use strict';
-    for (i = 0; i < persons.length; i++) {
-        document.querySelector(persons[i]).removeAttribute("color");
-    }
-}
-
+               "#ShuiTa",
+               "#Schreiner",
+               "#Polizist",
+               "#Hausbesitzerin"];
 
 var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi", "#ShuiTa", "#figur-2"], //ShuiTa Klopft
@@ -112,31 +51,8 @@ var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", 
     nineteen = [],
     twenty = [];
 
-//Frau
-//Neffe
-//Mann
 
-//Schwaegerin
-//Bruder
-
-//Großvater
-//Junge
-
-//Nichte
-
-//ShuiTa
-//Schreiner
-//Polizist
-//Hausbesitzerin
-
-//Ich glaube, die Alte ist zuviel, oder?
-//Also, als Erstes kommt das ältere Ehepaar, mit dem Neffen.
-//Dann kommen Mann und Frau (die schwangere und der Bruder),
-//dann der Greis mit dem Jungen. Als letztes die Nichte.
-
-
-
-
+//Functions
 //Trigger all neccessary events at that point in the story
 function storyline(currentTarget, currentEvent) {
     'use strict';
@@ -147,10 +63,7 @@ function storyline(currentTarget, currentEvent) {
             console.log("Fire at= " + fireAt);
             complexChanges(currentEvent, fireAt);
             try {
-//                setTimeout(function () {
                 document.querySelector(fireAt).emit(currentEvent);
-//                }, 2500);
-
             } catch (err) {
                 console.log(err + " - while firing at  " + fireAt);
             }
@@ -169,6 +82,91 @@ function complexChanges(currentTarget, fireAt) {
     }
 }
 
+//starts narration when .play was found
+function playableFound(currentTarget) {
+    'use strict';
+    if (currentTarget.search(at) != -1) {
+        currentTarget = "#" + at;
+        if ((storyline(currentTarget, at)) == 1) {
+            at = eventArr[++i];
+        }
+    }
+    console.log("Next= " + at);
+}
+
+//remove color from all persons
+function shutUp() {
+    'use strict';
+    for (i = 0; i < persons.length; i++) {
+        document.querySelector(persons[i]).removeAttribute("color");
+    }
+}
+
+//Event Methods
+
+//$(".clickable").each(function () {
+//    'use strict';
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
+//});
+
+//Cursor found .clickable
+$(".clickable").on('fusing', function () {
+    'use strict';
+    if (at == "two") {
+        currentTarget = $(this).closest("a-entity").attr("class");
+        playableFound(currentTarget);
+
+        /*var testimonialElements = $(".one"); Loop wird nicht durchlaufen
+        for(var i=0; i<testimonialElements.length; i++){
+            var element = testimonialElements.eq(i);
+            element.removeAttr("sound");
+            console.log("LOOOOOOOOOOOOOOOOP");
+        }*/
+//        at = "#three";
+
+    } else {
+        currentTarget = '#' + $(this).closest("a-entity").attr('id');
+        console.log(currentTarget);
+
+        trigggerEvent = "clickableFound";
+        document.querySelector("#cursor").emit(trigggerEvent);
+        document.querySelector(currentTarget).emit(trigggerEvent);
+        lastClickableFused = currentTarget;
+    }
+    
+
+});
+
+//Cursor triggers click on .clickable
+$(".clickable").on('click', function () {
+    'use strict';
+    currentTarget = '#' + $(this).closest("a-entity").attr('id');
+    trigggerEvent = "clickableClick";
+    nowClicked = currentTarget;
+    if (nowClicked == lastClickableFused) {
+        document.querySelector("#cursor").emit(trigggerEvent);
+        document.querySelector(currentTarget).emit(trigggerEvent);
+    }
+});
+
+//Cursor is not on .clickable
+$("a-entity").on('fusing', function () {
+    'use strict';
+    currentTarget = "#cursor";
+    trigggerEvent = "notClickable";
+    document.querySelector(currentTarget).emit(trigggerEvent);
+});
+
+//trigger storyline after start was iniciated
+$(".play").on('fusing', function () {
+    'use strict';
+    currentTarget = $(this).closest("a-entity").attr("class");
+    playableFound(currentTarget);
+});
+
+
+//Event Listener
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
@@ -181,23 +179,5 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
         if ((storyline(currentTarget, at)) == 1) {
             at = eventArr[++i];
         }
-        else if ((storyline(currentTarget, at)) == 2) {
-            at = eventArr[++i];
-        }
     }, 2500);
-
-
-});
-
-//trigger storyline after start was iniciated
-$(".play").on('fusing', function () {
-    'use strict';
-    currentTarget = $(this).closest("a-entity").attr("class");
-    if (currentTarget.search(at) != -1) {
-        currentTarget = "#" + at;
-        if ((storyline(currentTarget, at)) == 1) {
-            at = eventArr[++i];
-        }
-    }
-    console.log("Next= " + at);
 });
