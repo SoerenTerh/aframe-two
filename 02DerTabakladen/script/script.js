@@ -30,7 +30,7 @@ var persons = ["#Frau",
                "#Hausbesitzerin"];
 
 var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi", "#ShuiTa", "#figur-2"], //ShuiTa Klopft
+    two = ["#tabakladenTUERi",  "#figur-2"], //ShuiTa Klopft"#ShuiTa"
     talkTwo = ["#Frau", "#Neffe"],
     three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
@@ -117,12 +117,12 @@ $(".clickable").on('fusing', function () {
         currentTarget = $(this).closest("a-entity").attr("class");
         playableFound(currentTarget);
 
-        /*var testimonialElements = $(".one"); Loop wird nicht durchlaufen
-        for(var i=0; i<testimonialElements.length; i++){
-            var element = testimonialElements.eq(i);
-            element.removeAttr("sound");
-            console.log("LOOOOOOOOOOOOOOOOP");
-        }*/
+        $('#Bruder, #Frau, #Mann, #Schwaegerin, #Großvater, #Neffe, #Nichte, #Junge').removeAttr('sound');
+            console.log("Done.Muted.");
+
+
+
+
 //        at = "#three";
 
     } else {

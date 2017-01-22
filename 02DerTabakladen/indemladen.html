@@ -132,7 +132,7 @@
     </a-entity>
     <a-entity id="Mann" class="one, play" obj-model="obj:#figurObj" position="-2.88 0.63 -18.5" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore;on:one;poolSize:50;volume:1;loop:true; delay:1500">
     </a-entity>
-    <a-entity id="Bruder" class="one, play" obj-model="obj:#figurObj" position="6.14 0.63 14.62" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore;on:one;poolSize:50;volume:3;loop:true; delay:2000">
+    <a-entity id="Bruder" class="one, play" obj-model="obj:#figurObj" position="6.14 0.63 14.62" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore;on:one;poolSize:50;volume:3;loop:true;">
     </a-entity>
     <a-entity id="Schwaegerin" class="one, play" obj-model="obj:#figurObj" position="5.32 0.63 21.89" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" sound="src:#snore_girl;on:one;poolSize:50;volume:6;loop:true">
     </a-entity>
@@ -153,7 +153,7 @@
 
     <!-- Türe -->
     <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two, play, clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
-              sound="src:#door_knock;on:two;poolSize:50;volume:30;loop:true" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
+              sound="src:#door_knock;on:two;poolSize:50;volume:30;" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
         <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
         <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
     </a-entity>
