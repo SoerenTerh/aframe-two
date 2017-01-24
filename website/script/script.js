@@ -28,13 +28,9 @@ $(document).ready(function () {
         totalTime = (endDate - beginDate + holidays),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
-<<<<<<< HEAD
-//        dateProgress = new Date("01/12/2017")- beginDate,
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
-=======
 //                dateProgress = new Date("01/26/2017")- beginDate,
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100)*1.1),
->>>>>>> develop
+        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.1),
+
         output = completionPercentage + 10 + "%";
     $(".progress-bar").css('width', output);
 
@@ -128,8 +124,4 @@ $(document).ready(function () {
             titlePosition: titlePosition
         });
     });
-
-
-
-
 });
