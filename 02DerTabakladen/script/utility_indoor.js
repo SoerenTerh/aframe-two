@@ -9,7 +9,7 @@ $('#tabakladenTUERi').on('click', function () {
         $( '#innen' ).fadeOut( "slow", function () {
             window.location = out;
         });
-}, 1500);
+    }, 1500);
 });
 
 

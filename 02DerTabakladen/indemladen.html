@@ -1,253 +1,353 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- In dem Laden -->
-    <meta charset="utf-8">
-    <title>VR-Theater</title>
-    <meta name="description" content="VR-Theater">
+    <head>
+        <!-- In dem Laden -->
+        <meta charset="utf-8">
+        <title>VR-Theater</title>
+        <meta name="description" content="VR-Theater">
 
-    <!--        jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- jQuery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--        a-frame-->
-    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
-    <!--        a-frame extras (used are e.g. physics)-->
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
-    <!--        a-frame look controls-->
-    <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+        <!-- a-frame-->
+        <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+        <!-- a-frame extras (used are e.g. physics)-->
+        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
+        <!-- a-frame look controls-->
+        <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+        <!-- a-frame event set component-->
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.2/dist/aframe-event-set-component.min.js"></script>
 
-    <!--        ?-->
-    <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@^3.0.0/dist/aframe-event-set-component.min.js"></script>
+        <!-- ?-->
+        <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 
-    <script src="script/entity.js"></script>
-    <link href="style/style.css" rel="stylesheet">
-</head>
-<body>
-<div id="giveMeTime">
-    <img id="loader" src="gif/ring.gif" alt="loader"/>
-</div>
 
-<a-scene id="innen" >
-    <!--camera-->
-    <a-entity  id="camera" position="-6 13 -20" rotation="0 185 0">
-        <a-entity camera
-                  universal-controls
-                  look-controls=""
-                  position="0 1 0">
-            <a-entity id="cursor"
-                      cursor="fuse: true; fuseTimeout:2500"
-                      position="0 0 -1"
-                      geometry="primitive: ring"
-                      scale="0.04 0.04 0.04"
-                      material="color: white">
-                <!--on .clickable"-->
-                <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
-                             fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
-                <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
-                             fill="forwards" from="0.01 0.01 0.01" to="0.06 0.06 0.06" dur="1000"></a-animation>
-                <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="black"></a-animation>
-                <a-animation begin="notClickable" easing="ease-in" attribute="scale"
-                             fill="forwards" to="0.04 0.04 0.04"></a-animation>
-                <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="white" delay="1000"></a-animation>
+        <script src="script/entity.js"></script>
+        <link href="style/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="giveMeTime">
+            <img id="loader" src="gif/ring.gif" alt="loader"/>
+        </div>
+
+        <a-scene id="innen" >
+            <!-- camera-->
+            <a-entity  id="camera" position="-6 13 -20" rotation="0 185 0">
+                <a-entity camera
+                          universal-controls
+                          look-controls=""
+                          position="0 1 0">
+                    <a-entity id="cursor"
+                              cursor="fuse: true; fuseTimeout:2500"
+                              position="0 0 -1"
+                              geometry="primitive: ring"
+                              scale="0.04 0.04 0.04"
+                              material="color: white">
+                        <!-- on .clickable"-->
+                        <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
+                                     fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
+                                     fill="forwards" from="0.01 0.01 0.01" to="0.06 0.06 0.06" dur="1000"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="black"></a-animation>
+                        <a-animation begin="notClickable" easing="ease-in" attribute="scale"
+                                     fill="forwards" to="0.04 0.04 0.04"></a-animation>
+                        <a-animation begin="clickableClick" easing="ease-in" attribute="material.color" to="white" delay="1000"></a-animation>
+                    </a-entity>
+                </a-entity>
             </a-entity>
-        </a-entity>
-    </a-entity>
 
-    <a-assets>
-        <audio id="blow_candle" src="../assets/sounds/blow_candle.wav"></audio>
-        <audio id="coin" src="../assets/sounds/coin.wav"></audio>
-        <audio id="door_knock" src="../assets/sounds/door_knock.wav"></audio>
-        <audio id="drawer" src="../assets/sounds/drawer.wav"></audio>
-        <audio id="fall" src="../assets/sounds/fall.wav"></audio>
-        <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.wav"></audio>
-        <audio id="footsteps" src="../assets/sounds/footsteps.wav"></audio>
-        <audio id="getup_bed" src="../assets/sounds/getup_bed.wav"></audio>
-        <audio id="outdoor" src="../assets/sounds/outdoor.wav"></audio>
-        <audio id="paper_rip" src="../assets/sounds/paper_rip.wav"></audio>
-        <audio id="paper" src="../assets/sounds/paper.wav"></audio>
-        <audio id="place_object" src="../assets/sounds/place_object.wav"></audio>
-        <audio id="snore_girl" src="../assets/sounds/snore_girl.wav"></audio>
-        <audio id="snore" src="../assets/sounds/snore.wav"></audio>
-        <audio id="squeeky_door" src="../assets/sounds/squeeky_door.wav"></audio>
+            <a-assets>
+                <audio id="blow_candle" src="../assets/sounds/blow_candle.wav"></audio>
+                <audio id="coin" src="../assets/sounds/coin.wav"></audio>
+                <audio id="door_knock" src="../assets/sounds/door_knock.wav"></audio>
+                <audio id="drawer" src="../assets/sounds/drawer.wav"></audio>
+                <audio id="fall" src="../assets/sounds/fall.wav"></audio>
+                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.wav"></audio>
+                <audio id="footsteps" src="../assets/sounds/footsteps.wav"></audio>
+                <audio id="getup_bed" src="../assets/sounds/getup_bed.wav"></audio>
+                <audio id="outdoor" src="../assets/sounds/outdoor.wav"></audio>
+                <audio id="paper_rip" src="../assets/sounds/paper_rip.wav"></audio>
+                <audio id="paper" src="../assets/sounds/paper.wav"></audio>
+                <audio id="place_object" src="../assets/sounds/place_object.wav"></audio>
+                <audio id="snore_girl" src="../assets/sounds/snore_girl.wav"></audio>
+                <audio id="snore" src="../assets/sounds/snore.wav"></audio>
+                <audio id="squeeky_door" src="../assets/sounds/squeeky_door.wav"></audio>
 
 
-        <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
-        <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
+                <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
+                <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
 
-        <a-asset-item id="KuchenObj" src="models/UnsereAssets/Kuchen.obj"></a-asset-item>
-        <a-asset-item id="KuchenMtl" src="models/UnsereAssets/Kuchen.mtl"></a-asset-item>
+                <a-asset-item id="KuchenObj" src="models/UnsereAssets/Kuchen.obj"></a-asset-item>
+                <a-asset-item id="KuchenMtl" src="models/UnsereAssets/Kuchen.mtl"></a-asset-item>
 
-        <a-asset-item id="FladenObj" src="models/UnsereAssets/Fladen.obj"></a-asset-item>
-        <a-asset-item id="FladenMtl" src="models/UnsereAssets/Fladen.mtl"></a-asset-item>
+                <a-asset-item id="FladenObj" src="models/UnsereAssets/Fladen.obj"></a-asset-item>
+                <a-asset-item id="FladenMtl" src="models/UnsereAssets/Fladen.mtl"></a-asset-item>
 
-        <a-asset-item id="LaterneObj" src="models/UnsereAssets/Laterne.obj"></a-asset-item>
-        <a-asset-item id="LaterneMtl" src="models/UnsereAssets/Laterne.mtl"></a-asset-item>
+                <a-asset-item id="LaterneObj" src="models/UnsereAssets/Laterne.obj"></a-asset-item>
+                <a-asset-item id="LaterneMtl" src="models/UnsereAssets/Laterne.mtl"></a-asset-item>
 
-        <a-asset-item id="SilberdollarObj" src="models/UnsereAssets/Silberdollar.obj"></a-asset-item>
-        <a-asset-item id="SilberdollarMtl" src="models/UnsereAssets/Silberdollar.mtl"></a-asset-item>
+                <a-asset-item id="SilberdollarObj" src="models/UnsereAssets/Silberdollar.obj"></a-asset-item>
+                <a-asset-item id="SilberdollarMtl" src="models/UnsereAssets/Silberdollar.mtl"></a-asset-item>
 
-        <a-asset-item id="MietvertragObj" src="models/UnsereAssets/Mietvertrag.obj"></a-asset-item>
-        <a-asset-item id="MietvertragMtl" src="models/UnsereAssets/Mietvertrag.mtl"></a-asset-item>
+                <a-asset-item id="MietvertragObj" src="models/UnsereAssets/Mietvertrag.obj"></a-asset-item>
+                <a-asset-item id="MietvertragMtl" src="models/UnsereAssets/Mietvertrag.mtl"></a-asset-item>
 
-        <a-asset-item id="SchlafplatzObj" src="models/UnsereAssets/Schlafplatz.obj"></a-asset-item>
-        <a-asset-item id="SchlafplatzMtl" src="models/UnsereAssets/Schlafplatz.mtl"></a-asset-item>
+                <a-asset-item id="SchlafplatzObj" src="models/UnsereAssets/Schlafplatz.obj"></a-asset-item>
+                <a-asset-item id="SchlafplatzMtl" src="models/UnsereAssets/Schlafplatz.mtl"></a-asset-item>
 
-        <a-asset-item id="Ablage_StellageObj" src="models/UnsereAssets/Ablage_Stellage.obj"></a-asset-item>
-        <a-asset-item id="Ablage_StellageMtl" src="models/UnsereAssets/Ablage_Stellage.mtl"></a-asset-item>
+                <a-asset-item id="Ablage_StellageObj" src="models/UnsereAssets/Ablage_Stellage.obj"></a-asset-item>
+                <a-asset-item id="Ablage_StellageMtl" src="models/UnsereAssets/Ablage_Stellage.mtl"></a-asset-item>
 
-        <a-asset-item id="Ablage_Stellage_ohne_RechnungObj" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.obj"></a-asset-item>
-        <a-asset-item id="Ablage_Stellage_ohne_RechnungMtl" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.mtl"></a-asset-item>
+                <a-asset-item id="Ablage_Stellage_ohne_RechnungObj" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.obj"></a-asset-item>
+                <a-asset-item id="Ablage_Stellage_ohne_RechnungMtl" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.mtl"></a-asset-item>
 
-        <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/Zigarette.obj"></a-asset-item>
-        <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/Zigarette.mtl"></a-asset-item>
+                <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/Zigarette.obj"></a-asset-item>
+                <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/Zigarette.mtl"></a-asset-item>
 
-        <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/ZigarettenkisteAu%C3%9Fen.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/ZigarettenkisteAu%C3%9Fen.mtl"></a-asset-item>
+                <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/ZigarettenkisteAu%C3%9Fen.obj"></a-asset-item>
+                <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/ZigarettenkisteAu%C3%9Fen.mtl"></a-asset-item>
 
-        <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/ZigarettenkisteInnen.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/ZigarettenkisteInnen.mtl"></a-asset-item>
+                <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/ZigarettenkisteInnen.obj"></a-asset-item>
+                <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/ZigarettenkisteInnen.mtl"></a-asset-item>
 
-        <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
-        <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
+                <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
+                <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
 
-        <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
-        <!--<a-asset-item id="figurMtl" src="models/mfigur.mtl"></a-asset-item>-->
+                <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
+                <!-- <a-asset-item id="figurMtl" src="models/mfigur.mtl"></a-asset-item>-->
 
-        <a-asset-item id="SockelObj" src="models/UnsereAssets/Sockel.obj"></a-asset-item>
-        <a-asset-item id="SockelMtl" src="models/UnsereAssets/Sockel.mtl"></a-asset-item>
+                <a-asset-item id="SockelObj" src="models/UnsereAssets/Sockel.obj"></a-asset-item>
+                <a-asset-item id="SockelMtl" src="models/UnsereAssets/Sockel.mtl"></a-asset-item>
 
-        <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
-        <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
-    </a-assets>
+                <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
+                <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
+            </a-assets>
 
-    <!--figur-->
-    <a-entity id="figur-4" class="one, clickable, play" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true">
-        <a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="clickableClick"></a-animation>
-    </a-entity>
-
-
-    <a-entity id="Frau" class="one three play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-90 -90 0" visible="true" 
-              sound="src:#snore_girl;on:one;poolSize:50;volume:5;loop:true"
-              event-set__1="_event: one; material.color: red">
-        <a-animation id="FrauAnimThree" attribute="rotation" dur="2500" rotation="-90 -90 0" to="0 -90  0" repeat="0" begin="three"></a-animation>
-<!--        <a-animation id="FrauAnimThree2" attribute="position" dur="2500" from="-1.03 0.63 -25.84" to="-1.03 8.63 -25.84" repeat="0" begin="three" delay="2500"></a-animation>-->
-        
-    </a-entity>
-    <a-entity id="Mann" class="one, play" obj-model="obj:#figurObj" position="-2.88 0.63 -18.5" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" 
-              sound="src:#snore;on:one;poolSize:50;volume:1;loop:true">
-    </a-entity>
-    <a-entity id="Bruder" class="one, play" obj-model="obj:#figurObj" position="6.14 0.63 14.62" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" 
-              sound="src:#snore;on:one;poolSize:50;volume:3;loop:true;">
-    </a-entity>
-    <a-entity id="Schwaegerin" class="one, play" obj-model="obj:#figurObj" position="5.32 0.63 21.89" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" 
-              sound="src:#snore_girl;on:one;poolSize:50;volume:6;loop:true">
-    </a-entity>
-    <a-entity id="Großvater" class="one, play" obj-model="obj:#figurObj" position="2.91 0.63 20.38" scale="11 11 11" material="color:#408080" rotation="-90 90 0" visible="true" 
-              sound="src:#snore;on:one;poolSize:50;volume:4;loop:true">
-    </a-entity>
-    <a-entity id="Neffe" class="one, play" obj-model="obj:#figurObj" position="2.74 0.63 -1.8" scale="11 11 11" material="color:#408080" rotation="-90 90 0" visible="true" 
-              sound="src:#snore;on:one;poolSize:50;volume:2;loop:true">
-    </a-entity>
-    <a-entity id="Nichte" class="one, play" obj-model="obj:#figurObj" position="14.28 13.86 6.94" scale="11 11 11" material="color:#408080" rotation="-90 0 0" visible="true" 
-              sound="src:#snore_girl;on:one;poolSize:50;volume:7;loop:true">
-    </a-entity>
-    <a-entity id="Junge" class="one, play" obj-model="obj:#figurObj" position="22.03 13.37 -20.92" scale="8.36 8.36 8.36" material="color:#408080" rotation="-90 -180 0" visible="true" 
-              sound="src:#snore;on:one;poolSize:50;volume:1;loop:true">
-    </a-entity>
-
-    <a-entity id="ShuiTa"  class="two, play" obj-model="obj:#figurObj" position="-8.09 0 -35" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="false"
-              event-set__1="_event: two; visible: true"></a-entity>
-    <a-entity id="Schreiner"  class="two, play" visible="false" 
-              event-set__1="_event: two; visible: true">
-        <a-entity obj-model="obj:#figurObj" position="-12.05 0 -36.55" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="true"
-              ></a-entity>
-
-        <!--Sockel-->
-        <a-entity id="sockel" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
-    </a-entity>
-    <!-- Tabakladen -->
-    <a-entity static-body="shape:box" collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
-
-    <!-- Türe -->
-    <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three play clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
-              sound="src:#door_knock;on:two;poolSize:50;volume:30;" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
-        <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
-        <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
-        <a-animation id="tabakladenTUERiAnimThree" attribute="rotation" dur="2500" fill="forward" from="0 -90 0" to="0 0 0" repeat="0" begin="three"></a-animation>
-    </a-entity>
-
-    <!-- Ladentisch -->
-    <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
-
-    <!-- Kuchen -->
+            <!--
+figur
+<a-entity id="figur-4" class="one clickable play" obj-model="obj:#figurObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true">
+<a-animation attribute="rotation" dur="4000" fill="backwards" from="0 -90 0" to="0 0 0" repeat="1" begin="clickableClick"></a-animation>
+</a-entity>
+-->
 
 
-    <!-- Fladen -->
+            <!--            Frau-->
+            <a-entity id="containerFrau"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Frau" class="one three play" obj-model="obj:#figurObj" position="1.03 0.63 -25.09" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="-90 -90 0" visible="true" 
+                          sound="src:#snore_girl;on:one;poolSize:50;volume:5;loop:true"
+                          event-set__1="_event: two; material.color: red"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+
+                    <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="three"></a-animation>
+                    <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="1.03 2 -25.09" repeat="0" begin="three"></a-animation>
+
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="5.08 2 -21.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                          event-set__3="_event: three; visible: true"></a-entity>
+            </a-entity>
+
+            <!--            Mann-->
+            <a-entity id="containerMann"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Mann" class="one play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75" scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true" 
+                          sound="src:#snore;on:one;poolSize:50;volume:1;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="6.17 2 -13.87" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Bruder-->
+            <a-entity id="containerBruder"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Bruder" class="one play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true" 
+                          sound="src:#snore;on:one;poolSize:50;volume:3;loop:true;"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelBruder" obj-model="obj:#SockelObj" position="-12.28 2 18.92" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Schwaegerin-->
+            <a-entity id="containerSchwaegerin"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Schwaegerin" class="one play" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true" 
+                          sound="src:#snore_girl;on:one;poolSize:50;volume:6;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="11.47 2 26.02" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Großvater-->
+            <a-entity id="containerGroßvater"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Großvater" class="one play" obj-model="obj:#figurObj" position="0.91 0.63 19,59" scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="-90 90 0" visible="true" 
+                          sound="src:#snore;on:one;poolSize:50;volume:4;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="5.62 2 15.41" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Neffe-->
+            <a-entity id="containerNeffe"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Neffe" class="one play" obj-model="obj:#figurObj" position="0.74 0.63 -2.7" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="-90 90 0" visible="true" 
+                          sound="src:#snore;on:one;poolSize:50;volume:2;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="5.62 2 -6.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Nichte-->
+            <a-entity id="containerNichte"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Nichte" class="one play" obj-model="obj:#figurObj" position="15 13.86 4.94" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="-90 0 0" visible="true" 
+                          sound="src:#snore_girl;on:one;poolSize:50;volume:7;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelNichte" obj-model="obj:#SockelObj" position="17.63 2 5.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            Junge-->
+            <a-entity id="containerJunge"  class="two play"  
+                      position="0 0 0">
+                <a-entity id="Junge" class="one play" obj-model="obj:#figurObj" position="20.03 13.37 -18.88" scale="6.65 6.65 6.65" material="color:#D9D9D9" rotation="-90 -180 0" visible="true" 
+                          sound="src:#snore;on:one;poolSize:50;volume:1;loop:true"
+                          event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="17.21 2 -19.52" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"></a-entity>
+            </a-entity>
+
+            <!--            ShuiTa-->
+            <a-entity id="containerShuiTa"  class="two play" visible="false" 
+                      event-set__2="_event: two; visible: true"  position="0 0 0">
+                <a-entity id="ShuiTa"  class="two play" obj-model="obj:#figurObj" position="-8.09 2 -35" scale="9.5 9.2 9.5" material="color:#262626" rotation="0 0 0" visible="true"
+                          event-set__2="_event: two; visible: true"></a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0.09 2 -34.20" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+            </a-entity>
+
+            <!--            Schreiner-->
+            <a-entity id="containerSchreiner"  class="two play" visible="false" 
+                      event-set__2="_event: two; visible: true"  position="0 0 0">
+                <a-entity id="Schreiner" obj-model="obj:#figurObj" position="-11.42 2.00 -36.67"  scale="9.5 9.7 9.5" material="color:#CCCCCC" rotation="0 0 0" visible="true">
+                </a-entity>
+
+                <!-- Sockel-->
+                <a-entity id="sockelSchreiner" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+            </a-entity>
+
+            <!-- Tabakladen -->
+            <a-entity static-body="shape:box" collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
+
+            <!-- Türe -->
+            <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three play clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
+                      sound="src:#door_knock;on:two;poolSize:50;volume:30;" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
+                <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
+                <a-animation id="tabakladenTUERiAnimThree" class="wait"  attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="three"></a-animation>
+            </a-entity>
+
+            <!-- Ladentisch -->
+            <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
+
+            <!-- Kuchen -->
 
 
-    <!-- Laterne -->
-    <a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:#blow_candle;on:click" material=""><a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity><a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity></a-entity>
-
-    <!-- Silberdollar -->
-    <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
-
-    <!-- Schlafplatz -->
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="4.68 -0.02 -12.12" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-2" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.3 -0.02 27.59" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-3" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.65 -0.02 20.77" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-4" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.63 -0.02 13.73" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-5" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.86 0.02 -8.49" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-6" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-7" material=""></a-entity>
-    <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="17.06 12.53 -15.32" scale="0.11 0.06 0.12" rotation="0 -90 0" visible="true" id="bett-8" material=""></a-entity>
-
-    <!-- Bettgestell -->
-    <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-4.49 0 31.24" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" material=""></a-entity>
-
-    <!-- Rechnungen -->
-    <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36" scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click" visible="true" material=""></a-entity>s
-
-    <!-- Ablage_Stellage -->
-    <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-3" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-4" material=""></a-entity>
-
-    <!-- Mietvertrag -->
-    <a-entity class="clickable" data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="5.43 14.15 -3.88" scale="0.28 0.28 0.28" rotation="-90 180 0" visible="true" id="Vertrag" sound="src:#paper;on:click" material=""></a-entity>
-
-    <!-- Zigarette -->
-    <a-entity data-brackets-id="891" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette1" material="">
-    </a-entity>
-    <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.25 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette2" material="">
-    </a-entity>
-    <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.40 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette3" material="">
-    </a-entity>
-    <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.6 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette4" material="">
-    </a-entity>
-
-    <!-- ZigarettenkisteAußen -->
-    <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen" material=""></a-entity>
+            <!-- Fladen -->
 
 
-    <!-- ZigarettenkisteInnen -->
-    <a-entity class="clickable" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen" material="">
-        <a-animation attribute="position" dur="2500" fill="forwards" from="-11.05 9.45 3.17" to="-11.05 9.45 2.95" repeat="0" begin="clickableFound"></a-animation>
-        <a-animation attribute="position" dur="1000" fill="forwards" from="-11.05 9.45 2.95" to="-11.05 9.45 2.54" repeat="0" begin="clickableClick"></a-animation>
-    </a-entity>
+            <!-- Laterne -->
+            <a-entity data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:#blow_candle;on:click" material="" class="one play">
+                <a-entity class="one play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"  
+                          event-set__1="_event: one; visible: true"
+                          event-set__2="_event: five; visible: false">
+                    <a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="five" begin="one"></a-animation>
+                </a-entity>
+
+                <!--        <a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>-->
+                <!--
+<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true">
+<a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation>
+</a-entity>
+-->
+            </a-entity>
+
+            <!-- Silberdollar -->
+            <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
+
+            <!-- Schlafplatz -->
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="7.78 -0.02 -12.12" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-2" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.3 -0.02 27.59" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-3" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.65 -0.02 20.77" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-4" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.63 -0.02 13.73" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-5" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.86 0.02 -8.49" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-6" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-7" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="17.06 12.53 -15.32" scale="0.11 0.06 0.12" rotation="0 -90 0" visible="true" id="bett-8" material=""></a-entity>
+
+            <!-- Bettgestell -->
+            <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-4.49 0 31.24" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" material=""></a-entity>
+
+            <!-- Rechnungen -->
+            <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36" scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click" visible="true" material=""></a-entity>s
+
+            <!-- Ablage_Stellage -->
+            <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="ohne rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-2" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-3" material=""></a-entity><a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="rechnung-4" material=""></a-entity>
+
+            <!-- Mietvertrag -->
+            <a-entity class="clickable" data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="5.43 14.15 -3.88" scale="0.28 0.28 0.28" rotation="-90 180 0" visible="true" id="Vertrag" sound="src:#paper;on:click" material=""></a-entity>
+
+            <!-- Zigarette -->
+            <a-entity data-brackets-id="891" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette1" material="">
+            </a-entity>
+            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.25 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette2" material="">
+            </a-entity>
+            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.40 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette3" material="">
+            </a-entity>
+            <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" position="-11.6 9.45 3.17" scale="0.15 0.15 0.15" rotation="-90 90 0" visible="true" id="zigarette4" material="">
+            </a-entity>
+
+            <!-- ZigarettenkisteAußen -->
+            <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen" material=""></a-entity>
 
 
-    <!-- ground-->
-    <a-box scale="0.20 0.05 0.25" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="4.19 -0.08 6.5" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="#333437"></a-box>
+            <!-- ZigarettenkisteInnen -->
+            <a-entity class="clickable" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="-11.05 9.45 3.17" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen" material="">
+                <a-animation attribute="position" dur="2500" fill="forwards" from="-11.05 9.45 3.17" to="-11.05 9.45 2.95" repeat="0" begin="clickableFound"></a-animation>
+                <a-animation attribute="position" dur="1000" fill="forwards" from="-11.05 9.45 2.95" to="-11.05 9.45 2.54" repeat="0" begin="clickableClick"></a-animation>
+            </a-entity>
 
-    <!--lights-->⁄
-    <a-light type="ambient" color="#ccc" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
-    <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
-    <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
-    <!--sky-->
-    <a-sky color="#B0C4DE" id="sky"></a-sky>
-</a-scene>
-<!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
-<script src="script/utility_indoor.js"></script>
-<script src="script/script.js"></script>
-</body>
+            <!-- ground-->
+            <a-box scale="0.20 0.05 0.25" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="4.19 -0.08 6.5" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="#333437"></a-box>
+
+            <!-- lights-->⁄
+            <a-light type="ambient" color="#ccc" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
+            <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
+
+            <!-- sky-->
+            <a-sky color="#B0C4DE" id="sky"></a-sky>
+        </a-scene>
+        <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
+        <script src="script/utility_indoor.js"></script>
+        <script src="script/script.js"></script>
+    </body>
 </html>

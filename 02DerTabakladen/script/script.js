@@ -29,12 +29,12 @@ var persons = ["#Frau",
                "#Polizist",
                "#Hausbesitzerin"];
 
-var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner"], //ShuiTa Klopft
+var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //ShuiTa Klopft (schnarchen stoppt)
     talkTwo = ["#Frau", "#Neffe"],
-    three = ["#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
+    three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
-    five = ["#ShuiTa", "#kerze"], //ShuiTa geht zu lampe und löscht diese
+    five = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     six = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
     seven = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
     eight = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
@@ -62,7 +62,7 @@ function storyline(currentTarget, currentEvent) {
             animated = 0;
         (function startNext() {
             function wait(animated) {
-                document.querySelector(animated).addEventListener('animationend', function() {
+                document.querySelector(animated).addEventListener('animationend', function () {
                     console.log("--------------------Animation End--------------------");
                     startNext();
                 });
@@ -71,7 +71,6 @@ function storyline(currentTarget, currentEvent) {
             if (k <  window[currentEvent].length) {
                 fireAt = window[currentEvent][k];
                 console.log("Fire at= " + fireAt);
-                complexChanges(currentEvent, fireAt);
                 try {
                     document.querySelector(fireAt).emit(currentEvent);
                 } catch (err) {
@@ -79,11 +78,18 @@ function storyline(currentTarget, currentEvent) {
                 }
                 k++;
                 try {
-                    if (typeof document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
+                    if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
                         console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
                         animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
                         console.log(animated);
+                    }
+
+
+                    if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
+
                         wait(animated);
+                    } else {
+                        startNext();
                     }
 
                 } catch (err2) {
@@ -100,24 +106,6 @@ function storyline(currentTarget, currentEvent) {
     }
 }
 
-
-//look for more complex changes on entities (e.g. light)
-function complexChanges(currentTarget, fireAt) {
-    'use strict';
-    if (currentTarget === "one" && fireAt === "#kerze") {
-        $(fireAt).append('<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>');
-    }
-    if (currentTarget === "two") {
-        for (j = 0; j < one.length; j++) {
-            $(one[j]).removeAttr('sound');
-            console.log("Done.Muted.");
-        }
-    }
-    if (currentTarget === "tree" && fireAt === "#tabakladenTUERi") {
-        console.log("door: " + fireAt);
-        document.querySelector(fireAt).setAttribute('rotation', '0 0 0');
-    }
-}
 
 //starts narration when .play was found
 function playableFound(currentTarget) {
