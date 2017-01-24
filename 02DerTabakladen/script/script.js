@@ -57,43 +57,74 @@ var one = ["#kerze", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", 
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
-    if (window[currentEvent].length != 0) {
-        for (j = 0; j < window[currentEvent].length; j++) {
-            fireAt = window[currentEvent][j];
-            console.log("Fire at= " + fireAt);
-            complexChanges(currentEvent, fireAt);
-            try {
-                document.querySelector(fireAt).emit(currentEvent);
-            } catch (err) {
-                console.log(err + " - while firing at  " + fireAt);
+    if (window[currentEvent].length !== 0) {
+        var k = 0,
+            animated = 0;
+        (function startNext() {
+            function wait(animated) {
+                document.querySelector(animated).addEventListener('animationend', function() {
+                    console.log("--------------------Animation End--------------------");
+                    startNext();
+                });
+
             }
-        }
+            if (k <  window[currentEvent].length) {
+                fireAt = window[currentEvent][k];
+                console.log("Fire at= " + fireAt);
+                complexChanges(currentEvent, fireAt);
+                try {
+                    document.querySelector(fireAt).emit(currentEvent);
+                } catch (err) {
+                    console.log(err + " - while firing at  " + fireAt);
+                }
+                k++;
+                try {
+                    if (typeof document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
+                        console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
+                        animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
+                        console.log(animated);
+                        wait(animated);
+                    }
+
+                } catch (err2) {
+                    console.log("No animation at: " + currentEvent + "-->" + fireAt);
+                    startNext();
+                }
+            }
+        }());
+
+
         return 1;
     } else {
         return 0;
     }
 }
 
+
 //look for more complex changes on entities (e.g. light)
 function complexChanges(currentTarget, fireAt) {
     'use strict';
-    if (currentTarget == "one" && fireAt == "#kerze") {
+    if (currentTarget === "one" && fireAt === "#kerze") {
         $(fireAt).append('<a-entity light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="true"><a-animation attribute="light.decay" from="1" to="1.5" repeat="indefinite" direction="alternate" end="six"></a-animation></a-entity>');
     }
-    if (currentTarget == "two") {
-        for (j = 0; j < one.length; j++) { 
+    if (currentTarget === "two") {
+        for (j = 0; j < one.length; j++) {
             $(one[j]).removeAttr('sound');
             console.log("Done.Muted.");
         }
+    }
+    if (currentTarget === "tree" && fireAt === "#tabakladenTUERi") {
+        console.log("door: " + fireAt);
+        document.querySelector(fireAt).setAttribute('rotation', '0 0 0');
     }
 }
 
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (currentTarget.search(at) != -1) {
+    if (currentTarget.search(at) !== -1) {
         currentTarget = "#" + at;
-        if ((storyline(currentTarget, at)) == 1) {
+        if ((storyline(currentTarget, at)) === 1) {
             at = eventArr[++i];
         }
     }
@@ -119,7 +150,7 @@ function shutUp() {
 //Cursor found .clickable
 $(".clickable").on('fusing', function () {
     'use strict';
-    if (at == "two") {
+    if (at === "two" || at === "three") {
         currentTarget = $(this).closest("a-entity").attr("class");
         playableFound(currentTarget);
 
@@ -139,12 +170,14 @@ $(".clickable").on('fusing', function () {
 //Cursor triggers click on .clickable
 $(".clickable").on('click', function () {
     'use strict';
-    currentTarget = '#' + $(this).closest("a-entity").attr('id');
-    trigggerEvent = "clickableClick";
-    nowClicked = currentTarget;
-    if (nowClicked == lastClickableFused) {
-        document.querySelector("#cursor").emit(trigggerEvent);
-        document.querySelector(currentTarget).emit(trigggerEvent);
+    if (at !== "two" || at !== "three") {
+        currentTarget = '#' + $(this).closest("a-entity").attr('id');
+        trigggerEvent = "clickableClick";
+        nowClicked = currentTarget;
+        if (nowClicked === lastClickableFused) {
+            document.querySelector("#cursor").emit(trigggerEvent);
+            document.querySelector(currentTarget).emit(trigggerEvent);
+        }
     }
 });
 
@@ -168,17 +201,17 @@ $(".play").on('fusing', function () {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
-    var el = document.querySelectorAll('.one');
-    for (i = 0; i < el.length; i++) {
-        el[i].setAttribute('material', 'color', 'black');
-    }
+    //    var el = document.querySelectorAll('.one');
+    //    for (i = 0; i < el.length; i++) {
+    //        el[i].setAttribute('material', 'color', 'black');
+    //    }
 
     setTimeout(function () {
         $("#giveMeTime").remove();
 
         currentTarget = "#one";
         at = "one";
-        if ((storyline(currentTarget, at)) == 1) {
+        if ((storyline(currentTarget, at)) === 1) {
             at = eventArr[++i];
         }
     }, 2500);

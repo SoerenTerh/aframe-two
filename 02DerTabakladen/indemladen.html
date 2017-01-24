@@ -18,6 +18,7 @@
 
     <!--        ?-->
     <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^3.0.0/dist/aframe-event-set-component.min.js"></script>
 
     <script src="script/entity.js"></script>
     <link href="style/style.css" rel="stylesheet">
@@ -126,8 +127,12 @@
     </a-entity>
 
 
-    <a-entity id="Frau" class="one, play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" 
-              sound="src:#snore_girl;on:one;poolSize:50;volume:5;loop:true">
+    <a-entity id="Frau" class="one three play" obj-model="obj:#figurObj" position="-1.03 0.63 -25.84" scale="11 11 11" material="color:#408080" rotation="-90 -90 0" visible="true" 
+              sound="src:#snore_girl;on:one;poolSize:50;volume:5;loop:true"
+              event-set__1="_event: one; material.color: red">
+        <a-animation id="FrauAnimThree" attribute="rotation" dur="2500" rotation="-90 -90 0" to="0 -90  0" repeat="0" begin="three"></a-animation>
+<!--        <a-animation id="FrauAnimThree2" attribute="position" dur="2500" from="-1.03 0.63 -25.84" to="-1.03 8.63 -25.84" repeat="0" begin="three" delay="2500"></a-animation>-->
+        
     </a-entity>
     <a-entity id="Mann" class="one, play" obj-model="obj:#figurObj" position="-2.88 0.63 -18.5" scale="11 11 11" material="color:#408080" rotation="-89.95437383553924 -90 0" visible="true" 
               sound="src:#snore;on:one;poolSize:50;volume:1;loop:true">
@@ -151,20 +156,25 @@
               sound="src:#snore;on:one;poolSize:50;volume:1;loop:true">
     </a-entity>
 
-    <a-entity id="ShuiTa"  class="two, play" obj-model="obj:#figurObj" position="-8.09 0 -35" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="true"></a-entity>
-    <a-entity id="Schreiner"  class="two, play" obj-model="obj:#figurObj" position="-12.05 0 -36.55" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="true"></a-entity>
+    <a-entity id="ShuiTa"  class="two, play" obj-model="obj:#figurObj" position="-8.09 0 -35" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="false"
+              event-set__1="_event: two; visible: true"></a-entity>
+    <a-entity id="Schreiner"  class="two, play" visible="false" 
+              event-set__1="_event: two; visible: true">
+        <a-entity obj-model="obj:#figurObj" position="-12.05 0 -36.55" scale="11 11 11" material="color:#ffa477" rotation="0 0 0" visible="true"
+              ></a-entity>
 
-    <!--Sockel-->
-    <a-entity id="sockel" obj-model="obj:#SockelObj" position="-0.77 0 6.52" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
-
+        <!--Sockel-->
+        <a-entity id="sockel" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>
+    </a-entity>
     <!-- Tabakladen -->
     <a-entity static-body="shape:box" collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="4.31 0 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
 
     <!-- Türe -->
-    <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two, play, clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
+    <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three play clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
               sound="src:#door_knock;on:two;poolSize:50;volume:30;" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
-        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
-        <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
+        <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
+        <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
+        <a-animation id="tabakladenTUERiAnimThree" attribute="rotation" dur="2500" fill="forward" from="0 -90 0" to="0 0 0" repeat="0" begin="three"></a-animation>
     </a-entity>
 
     <!-- Ladentisch -->
