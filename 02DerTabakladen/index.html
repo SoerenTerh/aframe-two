@@ -25,7 +25,7 @@
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
-        <a-scene physics="debug: false" id="außen">
+        <a-scene physics="debug: true" id="außen">
             <!-- fog="style: linear; color:black; near:1"
 #B0C4DE-->
 
@@ -114,6 +114,7 @@
 
             </a-assets>
 
+
             <a-entity scale="0.5 0.5 0.5">
 
                 <!--                test-box-->
@@ -122,7 +123,7 @@
 -->
                 <!-- Brunnen -->
                 <a-entity static-body="shape:box" id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" ></a-entity>
-                
+
                 <!-- Ta⁄bakladen -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen1.DAE)" id="tabakladen" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible="" ></a-entity>
 
@@ -134,6 +135,7 @@
 
                 <!-- Tabakladen - Ladentisch -->
                 <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-3.65 -0.75 116.62" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="thekeTabakladen" ></a-entity>
+                <a-box id="tabakBox" static-body="shape:Primitives" position="0 0 125" width="45" height="20" depth="60" visible="false"></a-box>
 
                 <!-- Tabakladen - Ablagen -->
                 <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 115.62" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage1" ></a-entity>
@@ -149,6 +151,7 @@
 
                 <!-- Bäcker -->
                 <a-entity collada-model="url(models/UnsereAssets/baeckerei.DAE)" id="baeckerladen" position="-5.88 0.8 -120.5" scale="8 8 10" rotation="0 90 0" visible="" ></a-entity>
+                <a-box id="baeckerBox" static-body="shape:Primitives" position="-5.88 0.8 -120.5" width="70" height="20" depth="40" visible="false" rotation="0 90 0"></a-box>
 
                 <!-- Bäcker Tür -->
                 <a-entity collada-model="url(models/UnsereAssets/baeckerTuer_position.dae)" id="baeckerladenTuer" class="clickable" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible="" >
