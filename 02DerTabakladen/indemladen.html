@@ -261,7 +261,8 @@ figur
 
             <!-- Türe -->
             <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three play clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
-                      sound="src:#door_knock;on:two;poolSize:50;volume:30;" sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
+                      sound="src:#door_knock;on:two;poolSize:50;volume:30;"
+                      sound__1="src:#squeeky_door;on:clickableFound;poolSize:50;volume:10">
                 <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                 <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 <a-animation id="tabakladenTUERiAnimThree" class="wait"  attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="three"></a-animation>
@@ -269,7 +270,7 @@ figur
 
             <!-- Ladentisch -->
             <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
-            <a-box id="ladentischBox" static-body="shape:Primitives" position="2 4 -4.0" width=23 height="10" depth="10" visible="false"></a-box>
+            <a-box id="ladentischBox" static-body="shape:Primitives" position="-2 4 0" width=23 height="10" depth="4" visible="false"></a-box>
 
             <!-- Kuchen -->
 

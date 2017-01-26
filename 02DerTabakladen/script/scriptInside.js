@@ -9,7 +9,9 @@ var nowClicked;
 
 
 //Arrays
-var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
+var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+                "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+                "vOne", "vTwo"];
 at = eventArr[0];
 
 var persons = ["#Frau",
@@ -50,7 +52,12 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     eighteen = [],
     nineteen = [],
     twenty = [];
+    vOne = []
 
+// Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
+// Sören: Die Frau erschüttert: "Und wir hielten Sie für einen guten Menschen!" bis Shui Ta Er macht sich daran, den Laden aufzuräumen
+// Vera: Der Schreiner: "Ich sehe, dass Sie sich bemühen" bis "Die Bretter sind verschnitten, Herr!"
+// Cata: ab Shui Ta: "Eben. Darum biete ich Ihnen auch nur 20 Silberdollar"
 
 //Functions
 //Trigger all neccessary events at that point in the story
