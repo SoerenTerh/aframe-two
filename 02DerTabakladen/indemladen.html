@@ -166,7 +166,7 @@ figur
 
             <!--            Bruder-->
             <a-entity id="containerBruder"  class="two play"
-                      position="0 0 0">
+                      position="0 0 0" event-set__sTwo_P1="position: 14.30 0.28  -19.39" event-set__sTwo_P4="_event: sTwo_P4; visible: false">
                 <a-entity id="Bruder" class="one play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true"
                           sound="src:#snore;on:one;poolSize:50;volume:3;loop:true;"
                           event-set__2="_event: two; sound.loop: false; sound.volume: 0">
@@ -178,7 +178,7 @@ figur
 
             <!--            Schwaegerin-->
             <a-entity id="containerSchwaegerin"  class="two play"
-                      position="0 0 0">
+                      position="0 0 0" event-set__sTwo_P1="position: 14.30 0.28  -19.39" event-set__sTwo_P4="_event: sTwo_P4; visible: false">
                 <a-entity id="Schwaegerin" class="one play" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
                           sound="src:#snore_girl;on:one;poolSize:50;volume:6;loop:true"
                           event-set__2="_event: two; sound.loop: false; sound.volume: 0">
@@ -202,7 +202,7 @@ figur
 
             <!--            Neffe-->
             <a-entity id="containerNeffe"  class="two play"
-                      position="0 0 0">
+                      position="0 0 0" event-set__sTwo_P1="position: 14.30 0.28  -19.39" event-set__sTwo_P4="_event: sTwo_P4; visible: false">
                 <a-entity id="Neffe" class="one play" obj-model="obj:#figurObj" position="0.74 0.63 -2.7" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="-90 90 0" visible="true"
                           sound="src:#snore;on:one;poolSize:50;volume:2;loop:true"
                           event-set__2="_event: two; sound.loop: false; sound.volume: 0">
@@ -214,7 +214,7 @@ figur
 
             <!--            Nichte-->
             <a-entity id="containerNichte"  class="two play"
-                      position="0 0 0">
+                      position="0 0 0" event-set__sTwo_P1="position: 14.30 0.28  -19.39" event-set__sTwo_P4="_event: sTwo_P4; visible: false">
                 <a-entity id="Nichte" class="one play" obj-model="obj:#figurObj" position="15 13.86 4.94" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="-90 0 0" visible="true"
                           sound="src:#snore_girl;on:one;poolSize:50;volume:7;loop:true"
                           event-set__2="_event: two; sound.loop: false; sound.volume: 0">
@@ -225,11 +225,13 @@ figur
             </a-entity>
 
             <!--            Junge-->
-            <a-entity id="containerJunge"  class="two play"
-                      position="0 0 0">
+            <a-entity id="containerJunge"  class="two sOne_P2 sOne_P3 sOne_P4 play"
+                      position="0 0 0" event-set__sOne_P4="_event: sOne_P4; visible: false">
                 <a-entity id="Junge" class="one play" obj-model="obj:#figurObj" position="20.03 13.37 -18.88" scale="6.65 6.65 6.65" material="color:#D9D9D9" rotation="-90 -180 0" visible="true"
                           sound="src:#snore;on:one;poolSize:50;volume:1;loop:true"
                           event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                    <a-animation id="Junge_sOne-p2" class="wait" attribute="position" dur="2500" to="14.30 0.28  -19.39" repeat="0" begin="sOne_P2"></a-animation>
+                    <a-animation id="Junge_sOne-p3" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0" begin="sOne_P3"></a-animation>
                 </a-entity>
 
                 <!-- Sockel-->
@@ -266,6 +268,8 @@ figur
                 <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                 <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 <a-animation id="tabakladenTUERiAnimThree" class="wait"  attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="three"></a-animation>
+                <a-animation id="tabakladenTUERiAnim--sOne_P3" class="wait"  attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sOne_P3"></a-animation>
+                <a-animation id="tabakladenTUERiAnim--sTwo_P3" class="wait"  attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sTwo_P3"></a-animation>
             </a-entity>
 
             <!-- Ladentisch -->
@@ -298,12 +302,12 @@ figur
             <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
 
             <!-- Schlafplatz -->
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" material=""></a-entity>
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="7.78 -0.02 -12.12" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-2" material=""></a-entity>
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.3 -0.02 27.59" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-3" material=""></a-entity>
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.65 -0.02 20.77" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-4" material=""></a-entity>
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.63 -0.02 13.73" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-5" material=""></a-entity>
-            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.86 0.02 -8.49" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-6" material=""></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.47 2.52 25.03; rotation: 0 180 0;"></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="7.78 -0.02 -12.12" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-2" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.82 2.39 24.72; rotation: 0 180 0;"></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.3 -0.02 27.59" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-3" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.85 2.53 24.72; rotation: 0 180 0;"></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.65 -0.02 20.77" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-4" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.51 2.70 25.35; rotation: 0 180 0;"></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.63 -0.02 13.73" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-5" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.31 2.68 24.87"></a-entity>
+            <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.86 0.02 -8.49" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-6" material="" event-set__sFour_P1="_event: sFour_P1; visible: false" event-set__sFour_P2="_event: sFour_P1; visible: true; position: -4.17 2.83 25.57"></a-entity>
             <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-7" material=""></a-entity>
             <a-entity data-brackets-id="888" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="17.06 12.53 -15.32" scale="0.11 0.06 0.12" rotation="0 -90 0" visible="true" id="bett-8" material=""></a-entity>
 
