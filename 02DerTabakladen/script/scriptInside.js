@@ -10,7 +10,8 @@ var nowClicked;
 
 //Arrays
 var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
-                "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+                "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "sOne_P1", "sOne_P2", "sOne_P3",
+                "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
                 "vOne", "vTwo"];
 at = eventArr[0];
 
@@ -53,10 +54,28 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     nineteen = [],
     twenty = [],
 
-    sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
+    /*sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
     sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
     sThree = ["#Neffe", "#Bruder", '#Schwaegerin', "#Nichte"], //Neffe, Bruder, Schwaegerin & Nichte verlassen Laden
     sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
+    */
+
+    sOne_P1 = ["#Mann"], // Rotation vor
+    sOne_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
+    sOne_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
+    sOne_P4 = ["#ContainerJunge"], // Junge ausblenden
+
+    sTwo_P1 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen an Ladentisch vorbei
+    sTwo_P2 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen Richtung Türe vorbei
+    sTwo_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
+    sTwo_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
+
+    sThree = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
+
+    sFour_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
+    sFour_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
+
+
     
     vOne = [];
     
