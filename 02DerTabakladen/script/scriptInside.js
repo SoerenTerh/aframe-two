@@ -12,7 +12,9 @@ var nowClicked;
 var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
                 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "sOne_P1", "sOne_P2", "sOne_P3",
                 "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
-                "vOne", "vTwo"];
+                "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
+                "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
+                "vTwenty", "vTwentyone", "vTwentytwo", "vTwentythree"];
 at = eventArr[0];
 
 var persons = ["#Frau",
@@ -76,9 +78,31 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFour_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
 
 
-    
-    vOne = [];
-    
+
+    vOne = ["#Schreiner"]; // Schreiner redet
+    vTwo = ["#ShuiTa", "#Rechnung"]; // zieht Rechnung aus Tasche
+    vThree = ["#Schreiner"]; // redet
+    vFour = ["#ShuiTa"];
+    vFive = ["#Schreiner"];
+    vSix = ["#ShuiTa"];
+    vSeven = ["#Mann"]; // lacht
+    vEight = ["#Schreiner"];
+    vNine = ["#ShuiTa"];
+    vTen = ["#Schreiner"];
+    vEleven = ["#ShuiTa"];
+    vTwelve = ["#Frau"];
+    vThirteen = ["#Schreiner"];
+    vFourteen = ["#ShuiTa"];
+    vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"]; // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#Schreiner"]; // redet
+    vSeventeen = ["#ShuiTa"]; // redet zu Mann
+    vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"]; // trägt 2. Stellage zur Tür
+    vNineteen = ["#Schreiner"];
+    vTwenty = ["#ShuiTa"];
+    vTwentyone = ["#Schreiner"];
+    vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"]; // Mann trägt Stellage aus Tür raus
+    vTwentythree = ["#Schreiner"];
+
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
 // Sören: Die Frau erschüttert: "Und wir hielten Sie für einen guten Menschen!" bis Shui Ta Er macht sich daran, den Laden aufzuräumen
