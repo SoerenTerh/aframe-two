@@ -10,7 +10,7 @@ var nowClicked = 0;
 var next = true;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "three", "four",
+var eventArr = ["one", "two", "twoTalk", "three", "four", "vOne",
                 "five", "six", "seven", "eight", "nine", "ten",
                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
                 "sOne_P1", "sOne_P2", "sOne_P3",
@@ -61,6 +61,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     twoTalk = ["#Frau", "#Neffe"],
     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#ShuiTa", "#Schreiner"], //ShuiTa und schreine treten ein
+    vOne = ["#Schreiner"],
     five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
     six = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
