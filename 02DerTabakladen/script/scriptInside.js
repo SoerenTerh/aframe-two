@@ -10,7 +10,8 @@ var nowClicked = 0;
 var next = true;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+var eventArr = ["one", "two", "twoTalk", "three", "four",
+                "five", "six", "seven", "eight", "nine", "ten",
                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
                 "sOne_P1", "sOne_P2", "sOne_P3",
                 "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
