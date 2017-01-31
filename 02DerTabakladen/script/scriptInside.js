@@ -1,7 +1,7 @@
 //Variables
 var at = 0;
 var trigggerEvent = 0;
-var i = 0, j = 0;
+var i = 0, j = 0, l = 0;
 var currentTarget = 0;
 var fireAt = 0;
 var fireAtString = 0;
@@ -10,7 +10,7 @@ var nowClicked = 0;
 var next = true;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk", "eight", "nine", "ten",
                 "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
                 "sOne_P1", "sOne_P2", "sOne_P3",
                 "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
@@ -56,26 +56,33 @@ var personColors = ["#4D4D4D",
 
 
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //ShuiTa Klopft (schnarchen stoppt)
+    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
+    twoTalk2 = ["#Frau"], //Frau lacht
     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#ShuiTa", "#Schreiner"], //ShuiTa und schreine treten ein
-    five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
+    four = ["#ShuiTa", "#Schreiner"], //ShuiTa und Schreiner treten ein
+    fourTalk = ["#ShuiTa", "#Frau"],
+    fourTalk2 = ["#ShuiTa"],
+    five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //alle Wachen auf
+    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
+    fiveTalk2 = ["#Neffe"],
     six = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
+    sixTalk = ["#ShuiTa",  "#Mann"],
     seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
-    eight = [],
-    nine = [],
-    ten = [],
-    eleven = [],
-    twelve = [],
-    thirteen = [],
-    fourteen = [],
-    fivteen = [],
-    sixteen = [],
-    seventeen = [],
-    eighteen = [],
-    nineteen = [],
-    twenty = [],
+    sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
+    //    eight = [],
+    //    nine = [],
+    //    ten = [],
+    //    eleven = [],
+    //    twelve = [],
+    //    thirteen = [],
+    //    fourteen = [],
+    //    fivteen = [],
+    //    sixteen = [],
+    //    seventeen = [],
+    //    eighteen = [],
+    //    nineteen = [],
+    //    twenty = [],
 
     /*sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
     sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
@@ -172,7 +179,7 @@ function storyline(currentTarget, currentEvent) {
 
                 if (currentEvent.search("Talk") !== -1) {
                     try {
-                        document.querySelector(fireAt + ' > a-sound').emit(currentEvent);
+                        document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').emit(currentEvent);
                     } catch (err) {
                         console.log(err + " - while firing at  " + fireAt);
                     }
@@ -188,8 +195,8 @@ function storyline(currentTarget, currentEvent) {
 
 
                         if (narrate !== null) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'red');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'red'); //Test
+                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
                             wait2(narrate);
                         } else {
                             startNext();
@@ -214,6 +221,10 @@ function storyline(currentTarget, currentEvent) {
                             console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
                             animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
                             console.log(animated);
+                        }
+                        if (currentEvent.search("All") !== -1) {
+                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
