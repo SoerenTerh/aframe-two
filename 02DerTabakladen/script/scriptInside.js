@@ -4,12 +4,14 @@ var trigggerEvent = 0;
 var i = 0, j = 0;
 var currentTarget;
 var fireAt;
+var fireAtString;
 var lastClickableFused;
 var nowClicked;
+var next = true;
 
 
 //Arrays
-var eventArr = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+var eventArr = ["one", "two", "twoTalk", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
                 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "sOne_P1", "sOne_P2", "sOne_P3",
                 "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
                 "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
@@ -34,9 +36,28 @@ var persons = ["#Frau",
                "#Polizist",
                "#Hausbesitzerin"];
 
+
+var personColors = ["#4D4D4D",
+               "#A6A6A6",
+               "#404040",
+
+               "#737373",
+               "#595959",
+
+               "#8C8C8C",
+               "#D9D9D9",
+
+               "#BFBFBF",
+
+               "#262626",
+               "#CCCCCC",
+               "#FFF",
+               "#FFF"];
+
+
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //ShuiTa Klopft (schnarchen stoppt)
-    talkTwo = ["#Frau", "#Neffe"],
+    twoTalk = ["#Frau", "#Neffe"],
     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
     five = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
@@ -79,28 +100,28 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 
 
 
-    vOne = ["#Schreiner"]; // Schreiner redet
-    vTwo = ["#ShuiTa", "#Rechnung"]; // zieht Rechnung aus Tasche
-    vThree = ["#Schreiner"]; // redet
-    vFour = ["#ShuiTa"];
-    vFive = ["#Schreiner"];
-    vSix = ["#ShuiTa"];
-    vSeven = ["#Mann"]; // lacht
-    vEight = ["#Schreiner"];
-    vNine = ["#ShuiTa"];
-    vTen = ["#Schreiner"];
-    vEleven = ["#ShuiTa"];
-    vTwelve = ["#Frau"];
-    vThirteen = ["#Schreiner"];
-    vFourteen = ["#ShuiTa"];
-    vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"]; // nimmt Stellage und trägt zur Tür
-    vSixteen = ["#Schreiner"]; // redet
-    vSeventeen = ["#ShuiTa"]; // redet zu Mann
-    vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"]; // trägt 2. Stellage zur Tür
-    vNineteen = ["#Schreiner"];
-    vTwenty = ["#ShuiTa"];
-    vTwentyone = ["#Schreiner"];
-    vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"]; // Mann trägt Stellage aus Tür raus
+    vOne = ["#Schreiner"], // Schreiner redet
+    vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
+    vThree = ["#Schreiner"], // redet
+    vFour = ["#ShuiTa"],
+    vFive = ["#Schreiner"],
+    vSix = ["#ShuiTa"],
+    vSeven = ["#Mann"], // lacht
+    vEight = ["#Schreiner"],
+    vNine = ["#ShuiTa"],
+    vTen = ["#Schreiner"],
+    vEleven = ["#ShuiTa"],
+    vTwelve = ["#Frau"],
+    vThirteen = ["#Schreiner"],
+    vFourteen = ["#ShuiTa"],
+    vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#Schreiner"], // redet
+    vSeventeen = ["#ShuiTa"], // redet zu Mann
+    vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    vNineteen = ["#Schreiner"],
+    vTwenty = ["#ShuiTa"],
+    vTwentyone = ["#Schreiner"],
+    vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
     vTwentythree = ["#Schreiner"];
 
 
@@ -110,49 +131,109 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 // Cata: ab Shui Ta: "Eben. Darum biete ich Ihnen auch nur 20 Silberdollar"
 
 //Functions
+function getColorOfPerson (fireAt) {
+    for (i = 0; i < persons.length; i++) {
+        if (persons[i] === fireAt) {
+            return personColors[i];
+        }
+    }
+}
+
 //Trigger all neccessary events at that point in the story
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
     if (window[currentEvent].length !== 0) {
         var k = 0,
-            animated = 0;
+            animated = 0,
+            narrate = 0;
+        next = false;
         (function startNext() {
+
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function () {
                     console.log("--------------------Animation End--------------------");
                     startNext();
                 });
-
+            }
+            function wait2(narrate) {
+                document.querySelector(narrate).addEventListener('sound-ended', function () {
+                    console.log("\'" + getColorOfPerson(fireAt) + "\'");
+                    document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
+                    document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt)); //Test
+                    console.log("--------------------Narration End--------------------");
+                    
+                    startNext();
+                });
             }
             if (k <  window[currentEvent].length) {
+                next = false;
                 fireAt = window[currentEvent][k];
+                fireAtString = fireAt.slice(1);
+                console.log(fireAtString);
                 console.log("Fire at= " + fireAt);
-                try {
-                    document.querySelector(fireAt).emit(currentEvent);
-                } catch (err) {
-                    console.log(err + " - while firing at  " + fireAt);
-                }
-                k++;
-                try {
-                    if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
-                        console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
-                        animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
-                        console.log(animated);
+
+
+                if (currentEvent.search("Talk") !== -1) {
+                    try {
+                        document.querySelector(fireAt + ' > a-sound').emit(currentEvent);
+                    } catch (err) {
+                        console.log(err + " - while firing at  " + fireAt);
                     }
 
+                    k++;
+                    try {
 
-                    if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
+                        if (document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]') !== null) {
+                            console.log(document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]'));
+                            narrate = "#" + document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').id;
+                            console.log(narrate);
+                        }
 
-                        wait(animated);
-                    } else {
+
+                        if (narrate !== null) {
+                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'red');
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'red'); //Test
+                            wait2(narrate);
+                        } else {
+                            startNext();
+                        }
+
+                    } catch (err6) {
+                        console.log("No narration at: " + currentEvent + "-->" + fireAt);
+                        startNext();
+                    }
+                    
+                    
+                    
+                } else {
+                    try {
+                        document.querySelector(fireAt).emit(currentEvent);
+                    } catch (err8) {
+                        console.log(err8 + " - while firing at  " + fireAt);
+                    }
+                    k++;
+                    try {
+                        if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
+                            console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
+                            animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
+                            console.log(animated);
+                        }
+
+                        if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
+                            wait(animated);
+                        } else {
+                            startNext();
+                        }
+
+                    } catch (err2) {
+                        console.log("No animation at: " + currentEvent + "-->" + fireAt);
                         startNext();
                     }
 
-                } catch (err2) {
-                    console.log("No animation at: " + currentEvent + "-->" + fireAt);
-                    startNext();
                 }
+            } else {
+                next = true;
             }
         }());
 
@@ -167,22 +248,25 @@ function storyline(currentTarget, currentEvent) {
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (currentTarget.search(at) !== -1) {
-        currentTarget = "#" + at;
-        if ((storyline(currentTarget, at)) === 1) {
-            at = eventArr[++i];
+    if (next === true) {
+        if (currentTarget.search(at) !== -1) {
+            currentTarget = "#" + at;
+            if ((storyline(currentTarget, at)) === 1) {
+                    at = eventArr[++i];
+            }
         }
+        console.log("Next= " + at);
     }
-    console.log("Next= " + at);
+    
 }
 
-//remove color from all persons
-function shutUp() {
-    'use strict';
-    for (i = 0; i < persons.length; i++) {
-        document.querySelector(persons[i]).removeAttribute("color");
-    }
-}
+////remove color from all persons
+//function shutUp() {
+//    'use strict';
+//    for (i = 0; i < persons.length; i++) {
+//        document.querySelector(persons[i]).removeAttribute("color");
+//    }
+//}
 
 //Event Methods
 
@@ -238,26 +322,37 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    playableFound(currentTarget);
+    if (next === true) {
+        playableFound(currentTarget);
+    }
+    
 });
 
+
+//auto-enter VR (https://github.com/aframevr/aframe/issues/1473)
+window.addEventListener('load', function () {
+    var scene = document.querySelector('a-scene');
+    if (scene.hasLoaded) {
+        scene.enterVR();
+//    } else {
+//        el.addEventListener('loaded', function () {
+//            scene.enterVR();
+//        });
+    }
+});
 
 //Event Listener
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function () {
     'use strict';
-    //    var el = document.querySelectorAll('.one');
-    //    for (i = 0; i < el.length; i++) {
-    //        el[i].setAttribute('material', 'color', 'black');
-    //    }
-
     setTimeout(function () {
         $("#giveMeTime").remove();
 
         currentTarget = "#one";
         at = "one";
         if ((storyline(currentTarget, at)) === 1) {
-            at = eventArr[++i];
+                at = eventArr[++i];
+            
         }
     }, 2500);
 });
