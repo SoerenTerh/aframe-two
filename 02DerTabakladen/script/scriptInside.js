@@ -2,17 +2,17 @@
 var at = 0;
 var trigggerEvent = 0;
 var i = 0, j = 0;
-var currentTarget;
-var fireAt;
-var fireAtString;
-var lastClickableFused;
-var nowClicked;
+var currentTarget = 0;
+var fireAt = 0;
+var fireAtString = 0;
+var lastClickableFused = 0;
+var nowClicked = 0;
 var next = true;
 
-
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
-                "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "sOne_P1", "sOne_P2", "sOne_P3",
+var eventArr = ["one", "two", "twoTalk", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+                "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+                "sOne_P1", "sOne_P2", "sOne_P3",
                 "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
                 "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
                 "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
@@ -38,31 +38,31 @@ var persons = ["#Frau",
 
 
 var personColors = ["#4D4D4D",
-               "#A6A6A6",
-               "#404040",
+                    "#A6A6A6",
+                    "#404040",
 
-               "#737373",
-               "#595959",
+                    "#737373",
+                    "#595959",
 
-               "#8C8C8C",
-               "#D9D9D9",
+                    "#8C8C8C",
+                    "#D9D9D9",
 
-               "#BFBFBF",
+                    "#BFBFBF",
 
-               "#262626",
-               "#CCCCCC",
-               "#FFF",
-               "#FFF"];
+                    "#262626",
+                    "#CCCCCC",
+                    "#FFF",
+                    "#FFF"];
 
 
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
-    five = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
-    six = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
-    seven = [],
+    four = ["#ShuiTa", "#Schreiner"], //ShuiTa und schreine treten ein
+    five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
+    six = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
+    seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
     eight = [],
     nine = [],
     ten = [],
@@ -98,8 +98,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFour_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
     sFour_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
 
-
-
     vOne = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
     vThree = ["#Schreiner"], // redet
@@ -131,10 +129,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 // Cata: ab Shui Ta: "Eben. Darum biete ich Ihnen auch nur 20 Silberdollar"
 
 //Functions
-function getColorOfPerson (fireAt) {
-    for (i = 0; i < persons.length; i++) {
-        if (persons[i] === fireAt) {
-            return personColors[i];
+function getColorOfPerson(fireAt) {
+    'use strict';
+    for (j = 0; i < persons.length; j++) {
+        if (persons[j] === fireAt) {
+            return personColors[j];
         }
     }
 }
@@ -158,11 +157,9 @@ function storyline(currentTarget, currentEvent) {
             }
             function wait2(narrate) {
                 document.querySelector(narrate).addEventListener('sound-ended', function () {
-                    console.log("\'" + getColorOfPerson(fireAt) + "\'");
                     document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
                     document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt)); //Test
                     console.log("--------------------Narration End--------------------");
-                    
                     startNext();
                 });
             }
@@ -170,7 +167,6 @@ function storyline(currentTarget, currentEvent) {
                 next = false;
                 fireAt = window[currentEvent][k];
                 fireAtString = fireAt.slice(1);
-                console.log(fireAtString);
                 console.log("Fire at= " + fireAt);
 
 
@@ -203,9 +199,9 @@ function storyline(currentTarget, currentEvent) {
                         console.log("No narration at: " + currentEvent + "-->" + fireAt);
                         startNext();
                     }
-                    
-                    
-                    
+
+
+
                 } else {
                     try {
                         document.querySelector(fireAt).emit(currentEvent);
@@ -252,24 +248,14 @@ function playableFound(currentTarget) {
         if (currentTarget.search(at) !== -1) {
             currentTarget = "#" + at;
             if ((storyline(currentTarget, at)) === 1) {
-                    at = eventArr[++i];
+                at = eventArr[++i];
             }
         }
         console.log("Next= " + at);
     }
-    
 }
 
-////remove color from all persons
-//function shutUp() {
-//    'use strict';
-//    for (i = 0; i < persons.length; i++) {
-//        document.querySelector(persons[i]).removeAttribute("color");
-//    }
-//}
-
 //Event Methods
-
 //$(".clickable").each(function () {
 //    'use strict';
 //    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
@@ -322,22 +308,21 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    if (next === true) {
-        playableFound(currentTarget);
-    }
-    
+    playableFound(currentTarget);
+
 });
 
 
 //auto-enter VR (https://github.com/aframevr/aframe/issues/1473)
 window.addEventListener('load', function () {
+    'use strict';
     var scene = document.querySelector('a-scene');
     if (scene.hasLoaded) {
         scene.enterVR();
-//    } else {
-//        el.addEventListener('loaded', function () {
-//            scene.enterVR();
-//        });
+        //    } else {
+        //        el.addEventListener('loaded', function () {
+        //            scene.enterVR();
+        //        });
     }
 });
 
@@ -351,8 +336,8 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
         currentTarget = "#one";
         at = "one";
         if ((storyline(currentTarget, at)) === 1) {
-                at = eventArr[++i];
-            
+            at = eventArr[++i];
+
         }
     }, 2500);
 });
