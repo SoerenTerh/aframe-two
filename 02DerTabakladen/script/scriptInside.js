@@ -12,8 +12,9 @@ var next = true;
 
 //Arrays
 var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourStart",
-                "sFourTalk1", "sFourTalk2", "sFourTalk3", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
+                
+                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
+                "sFourTalk1", "sFourTalk2", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
                 "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
                 "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
@@ -97,10 +98,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sTwoTalk = ["#Neffe"],
     sThreeTalk = ["#Mann"],
 
-    sFourStart = ["#Mann"], // Rotation vor
-    sFourTalk1 = ["#Mann"],
-    sFourTalk2 = ["#Schwaegerin"],
-    sFourTalk3 = ["#Mann"],
+    sFourTalkStart = ["#Mann"], // Rotation vor
+    sFourTalk1 = ["#Mann", "#Schwaegerin"],
+    sFourTalk2 = ["#Mann"],
     sFour_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
     sFour_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
     sFour_P4 = ["#ContainerJunge"], // Junge ausblenden
