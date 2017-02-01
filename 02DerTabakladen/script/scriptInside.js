@@ -11,7 +11,7 @@ var next = true;
 
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", , "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourStart",
                 "sFourTalk1", "sFourTalk2", "sFourTalk3", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
@@ -152,9 +152,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 // Cata: ab Shui Ta: "Eben. Darum biete ich Ihnen auch nur 20 Silberdollar"
 
 //Functions
+//change color back to normal
 function getColorOfPerson(fireAt) {
     'use strict';
-    for (j = 0; i < persons.length; j++) {
+    for (j = 0; j < persons.length; j++) {
         if (persons[j] === fireAt) {
             return personColors[j];
         }
