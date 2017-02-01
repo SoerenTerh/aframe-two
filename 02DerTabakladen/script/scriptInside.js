@@ -9,11 +9,13 @@ var lastClickableFused = 0;
 var nowClicked = 0;
 var next = true;
 
+
 //Arrays
 var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "vOneTalk",
-                "sOne_P1", "sOne_P2", "sOne_P3",
-                "sOne_P4", "sTwo_P1", "sTwo_P2", "sTwo_P3", "sTwo_P4", "sThree", "sFour_P1", "sFour_P2",
+                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFour_P1",
+                "sFourTalk1", "sFourTalk2", "sFourTalk3", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
+                "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
                 "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
                 "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
                 "vTwenty", "vTwentyone", "vTwentytwo", "vTwentythree"];
@@ -93,20 +95,33 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
     */
 
-    sOne_P1 = ["#Mann"], // Rotation vor
-    sOne_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
-    sOne_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
-    sOne_P4 = ["#ContainerJunge"], // Junge ausblenden
+    sOneTalk = ["#Frau"],
+    sTwoTalk = ["#Neffe"],
+    sThreeTalk = ["#Mann"],
 
-    sTwo_P1 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen an Ladentisch vorbei
-    sTwo_P2 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen Richtung Türe vorbei
-    sTwo_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
-    sTwo_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
+    sFour_P1 = ["#Mann"], // Rotation vor
+    sFourTalk1 = ["#Mann"],
+    sFourTalk2 = ["#Schwaegerin"],
+    sFourTalk3 = ["#Mann"],
+    sFour_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
+    sFour_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
+    sFour_P4 = ["#ContainerJunge"], // Junge ausblenden
 
-    sThree = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
+    sFiveTalk = ["#ShuiTa"],
+    sFiveTalk2 = ["#Neffe"],
+    sFive_P1 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen an Ladentisch vorbei
+    sFive_P2 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen Richtung Türe vorbei
+    sFiveTalk3 = ["#Schwaegerin"],
+    sFive_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
+    sFive_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
 
-    sFour_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
-    sFour_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
+    sSixTalk1 = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
+    sSixTalk2 = ["#Mann"],
+    sSixTalk3 = ["#ShuiTa"],
+    sSixTalk4 = ["#ShuiTa"],
+
+    sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
+    sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
 
     vOne = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
