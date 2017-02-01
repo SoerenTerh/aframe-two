@@ -30,15 +30,15 @@
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
 
-        <a-scene id="innen" physics="debug: false" position="6 0 -20" rotation= "0 185 0">
+        <a-scene id="innen" physics="debug: true" >
+<!--            position="6 0 -20" rotation= "0 185 0"-->
             <!-- camera-->
-            <a-entity  id="camera" position="0 13 0">
+            <a-entity  id="camera" position="0 13.6 0">
                 <a-entity camera
                           universal-controls
                           look-controls=""
-                          position="-6 1 -20"
-                          rotation="0 -185 0"
-                          kinematic-body>
+                          position="5 2 20"
+                          kinematic-body> <!--rotation="0 -185 0"-->
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout:2500"
                               position="0 0 -1"
@@ -166,6 +166,8 @@
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
             </a-assets>
 
+            <a-entity rotation="0 180 0">
+                
             <!--Frau-->
             <a-entity id="containerFrau" position="0 0 0">
                 <a-entity id="Frau" class="one two twoTalk twoTalk2 three fourTalk play" obj-model="obj:#figurObj" position="1.03 0.63 -25.09" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="-90 -90 0" visible="true"
@@ -440,6 +442,7 @@
 
             <!-- sky-->
             <a-sky color="#B0C4DE" id="sky"></a-sky>
+            </a-entity>
         </a-scene>
         <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
         <script src="script/utility_indoor.js"></script>

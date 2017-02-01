@@ -12,6 +12,8 @@
 }
 
 #loader:before {
+    background: white;
+    z-index: 999;
     content: '';
     display: block;
     position: fixed;
@@ -19,4 +21,13 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#giveMeTime {
+    background: white;
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
 }
