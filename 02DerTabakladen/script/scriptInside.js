@@ -11,9 +11,8 @@ var next = true;
 
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
-                "vOneTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFour_P1",
+var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", , "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourStart",
                 "sFourTalk1", "sFourTalk2", "sFourTalk3", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
                 "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
@@ -69,7 +68,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
     fiveTalk2 = ["#Neffe"],
 
-    vOneTalk = ["#Schreiner"],
     five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
     six = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     sixTalk = ["#ShuiTa",  "#Mann"],
@@ -99,7 +97,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sTwoTalk = ["#Neffe"],
     sThreeTalk = ["#Mann"],
 
-    sFour_P1 = ["#Mann"], // Rotation vor
+    sFourStart = ["#Mann"], // Rotation vor
     sFourTalk1 = ["#Mann"],
     sFourTalk2 = ["#Schwaegerin"],
     sFourTalk3 = ["#Mann"],
