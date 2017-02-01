@@ -51,6 +51,12 @@ nav, .navbar-brand{
 	font: 300% 'Amatic SC';
 }
 
+@media screen and (max-width: 480px){
+    .mitglied {
+        padding-left: 20%;
+    }
+}
+
 .text {
     padding-top: 50px;
     font-style: italic;
