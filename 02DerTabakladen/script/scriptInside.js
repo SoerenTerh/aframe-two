@@ -10,14 +10,22 @@ var nowClicked = 0;
 var next = true;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four",
-                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
-                "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
-                "vOneTalk", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
-                "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
-                "vTwenty", "vTwentyone", "vTwentytwo", "vTwentythree"];
+var eventArr = ["one", "two",
+//"twoTalk", "twoTalk2",
+"three", "four",
+                // "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+                // "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
+                // "sFourTalk1", "sFourTalk2", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
+                // "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
+                "vOneTalk",
+                //"vTwo",
+                // "vTwoTalk", "vThreeTalk", "vFourTalk", "vFiveTalk", "vSixTalk", "vSevenTalk", "vEightTalk",
+                // "vNineTalk", "vTenTalk","vElevenTalk", "vTwelveTalk", "vThirteenTalk","vFourteenTalk",
+                "vSixteenTalk", "vSeventeenTalk", "vEighteenTalk", "vNineteenTalk", "vTwentyTalk", "v21Talk", "v22Talk"
+                // "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
+                // "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
+                // "vTwenty", "vTwentyone", "vTwentytwo", "vTwentythree"
+              ];
 at = eventArr[0];
 
 var persons = ["#Frau",
@@ -56,136 +64,139 @@ var personColors = ["#4D4D4D",
                     "#FFF"];
 
 
-var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
-    twoTalk = ["#Frau", "#Neffe"],
-    twoTalk2 = ["#Frau"], //Frau lacht
-    three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
-    fourTalk = ["#ShuiTa", "#Frau"],
-    fourTalk2 = ["#ShuiTa"],
-    five = ["#sockelNeffe", "#Neffe",
-            "#sockelMann", "#Mann",
-            '#sockelSchwaegerin', '#Schwaegerin',
-            "#sockelGroßvater", "#Großvater",
-            "#sockelJunge", "#Junge",
-            "#sockelBruder", "#Bruder",
-            "#sockelNichte", "#Nichte"], //alle Wachen auf
-    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
-    fiveTalk2 = ["#Neffe"],
+// var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+//     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+//     twoTalk = ["#Frau", "#Neffe"],
+//     twoTalk2 = ["#Frau"], //Frau lacht
+//     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+//     four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
+//     fourTalk = ["#ShuiTa", "#Frau"],
+//     fourTalk2 = ["#ShuiTa"],
+//     five = ["#sockelNeffe", "#Neffe",
+//             "#sockelMann", "#Mann",
+//             '#sockelSchwaegerin', '#Schwaegerin',
+//             "#sockelGroßvater", "#Großvater",
+//             "#sockelJunge", "#Junge",
+//             "#sockelBruder", "#Bruder",
+//             "#sockelNichte", "#Nichte"], //alle Wachen auf
+//     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
+//     fiveTalk2 = ["#Neffe"],
+//
+//     six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
+//     sixTalk = ["#ShuiTa",  "#Mann"],
+//     seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
+//     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
+//     //    eight = [],
+//     //    nine = [],
+//     //    ten = [],
+//     //    eleven = [],
+//     //    twelve = [],
+//     //    thirteen = [],
+//     //    fourteen = [],
+//     //    fivteen = [],
+//     //    sixteen = [],
+//     //    seventeen = [],
+//     //    eighteen = [],
+//     //    nineteen = [],
+//     //    twenty = [],
+//
+//     /*sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
+//     sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
+//     sThree = ["#Neffe", "#Bruder", '#Schwaegerin', "#Nichte"], //Neffe, Bruder, Schwaegerin & Nichte verlassen Laden
+//     sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
+//     */
+//
+//     sOneTalk = ["#Frau"],
+//     sTwoTalk = ["#Neffe"],
+//     sThreeTalk = ["#Mann"],
+//
+//     sFourTalkStart = ["#Mann"], // Rotation vor
+//     sFourTalk1 = ["#Mann", "#Schwaegerin"],
+//     sFourTalk2 = ["#Mann"],
+//     sFour_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
+//     sFour_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
+//     sFour_P4 = ["#ContainerJunge"], // Junge ausblenden
+//
+//     sFiveTalk = ["#ShuiTa"],
+//     sFiveTalk2 = ["#Neffe"],
+//     sFive_P1 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen an Ladentisch vorbei
+//     sFive_P2 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen Richtung Türe vorbei
+//     sFiveTalk3 = ["#Schwaegerin"],
+//     sFive_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
+//     sFive_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
+//
+//     sSixTalk1 = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
+//     sSixTalk2 = ["#Mann"],
+//     sSixTalk3 = ["#ShuiTa"],
+//     sSixTalk4 = ["#ShuiTa"],
+//
+//     sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
+//     sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
+//
+//     vOneTalk = ["#Schreiner"], // Schreiner redet
+//     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
+//     vThree = ["#Schreiner"], // redet
+//     vFour = ["#ShuiTa"],
+//     vFive = ["#Schreiner"],
+//     vSix = ["#ShuiTa"],
+//     vSeven = ["#Mann"], // lacht
+//     vEight = ["#Schreiner"],
+//     vNine = ["#ShuiTa"],
+//     vTen = ["#Schreiner"],
+//     vEleven = ["#ShuiTa"],
+//     vTwelve = ["#Frau"],
+//     vThirteen = ["#Schreiner"],
+//     vFourteen = ["#ShuiTa"],
+//     vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+//     vSixteen = ["#Schreiner"], // redet
+//     vSeventeen = ["#ShuiTa"], // redet zu Mann
+//     vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+//     vNineteen = ["#Schreiner"],
+//     vTwenty = ["#ShuiTa"],
+//     vTwentyone = ["#Schreiner"],
+//     vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+//     vTwentythree = ["#Schreiner"];
 
-    six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
-    sixTalk = ["#ShuiTa",  "#Mann"],
-    seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
-    sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
-    //    eight = [],
-    //    nine = [],
-    //    ten = [],
-    //    eleven = [],
-    //    twelve = [],
-    //    thirteen = [],
-    //    fourteen = [],
-    //    fivteen = [],
-    //    sixteen = [],
-    //    seventeen = [],
-    //    eighteen = [],
-    //    nineteen = [],
-    //    twenty = [],
+    //Vera Testreihenfolge
+    var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+        two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+        twoTalk = ["#Frau", "#Neffe"],
+        twoTalk2 = ["#Frau"], //Frau lacht
+        three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+        four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
 
-    /*sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
-    sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
-    sThree = ["#Neffe", "#Bruder", '#Schwaegerin', "#Nichte"], //Neffe, Bruder, Schwaegerin & Nichte verlassen Laden
-    sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
-    */
-
-    sOneTalk = ["#Frau"],
-    sTwoTalk = ["#Neffe"],
-    sThreeTalk = ["#Mann"],
-
-    sFourTalkStart = ["#Mann"], // Rotation vor
-    sFourTalk1 = ["#Mann", "#Schwaegerin"],
-    sFourTalk2 = ["#Mann"],
-    sFour_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
-    sFour_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
-    sFour_P4 = ["#ContainerJunge"], // Junge ausblenden
-
-    sFiveTalk = ["#ShuiTa"],
-    sFiveTalk2 = ["#Neffe"],
-    sFive_P1 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen an Ladentisch vorbei
-    sFive_P2 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Bewegen Richtung Türe vorbei
-    sFiveTalk3 = ["#Schwaegerin"],
-    sFive_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
-    sFive_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
-
-    sSixTalk1 = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
-    sSixTalk2 = ["#Mann"],
-    sSixTalk3 = ["#ShuiTa"],
-    sSixTalk4 = ["#ShuiTa"],
-
-    sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
-    sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
-
-    vOneTalk = ["#Schreiner"], // Schreiner redet
-    vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
-    vThree = ["#Schreiner"], // redet
-    vFour = ["#ShuiTa"],
-    vFive = ["#Schreiner"],
-    vSix = ["#ShuiTa"],
-    vSeven = ["#Mann"], // lacht
-    vEight = ["#Schreiner"],
-    vNine = ["#ShuiTa"],
-    vTen = ["#Schreiner"],
-    vEleven = ["#ShuiTa"],
-    vTwelve = ["#Frau"],
-    vThirteen = ["#Schreiner"],
-    vFourteen = ["#ShuiTa"],
-    vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
-    vSixteen = ["#Schreiner"], // redet
-    vSeventeen = ["#ShuiTa"], // redet zu Mann
-    vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
-    vNineteen = ["#Schreiner"],
-    vTwenty = ["#ShuiTa"],
-    vTwentyone = ["#Schreiner"],
-    vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
-    vTwentythree = ["#Schreiner"];
-
-    // Vera Testreihenfolge
-    // var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-    //     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
-    //     twoTalk = ["#Frau", "#Neffe"],
-    //     twoTalk2 = ["#Frau"], //Frau lacht
-    //     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
-    //     four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
-    //
-    //     vOneTalk = ["#Schreiner"], // Schreiner redet
-    //     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
-    //     vThree = ["#Schreiner"], // redet
-    //     vFour = ["#ShuiTa"],
-    //     vFive = ["#Schreiner"],
-    //     vSix = ["#ShuiTa"],
-    //     vSeven = ["#Mann"], // lacht
-    //     vEight = ["#Schreiner"],
-    //     vNine = ["#ShuiTa"],
-    //     vTen = ["#Schreiner"],
-    //     vEleven = ["#ShuiTa"],
-    //     vTwelve = ["#Frau"],
-    //     vThirteen = ["#Schreiner"],
-    //     vFourteen = ["#ShuiTa"],
-    //     vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
-    //     vSixteen = ["#Schreiner"], // redet
-    //     vSeventeen = ["#ShuiTa"], // redet zu Mann
-    //     vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
-    //     vNineteen = ["#Schreiner"],
-    //     vTwenty = ["#ShuiTa"],
-    //     vTwentyone = ["#Schreiner"],
-    //     vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
-    //     vTwentythree = ["#Schreiner"];
+        vOneTalk = ["#Schreiner"], // Schreiner redet
+        // vTwo = ["#ShuiTag", "Rechnung"],
+        // vTwoTalk = ["#ShuiTa"], // zieht Rechnung aus Tasche
+        // vThreeTalk = ["#Schreiner"], // redet
+        // vFourTalk = ["#ShuiTa"],
+        // vFiveTalk = ["#Schreiner"],
+        // vSixTalk = ["#ShuiTa"],
+        // vSevenTalk = ["#Mann"], // lacht
+        // vEightTalk = ["#Schreiner"],
+        // vNineTalk = ["#ShuiTa"],
+        // vTenTalk = ["#Schreiner"],
+        // vElevenTalk = ["#ShuiTa"],
+        // vTwelveTalk = ["#Frau"],
+        // vThirteenTalk = ["#Schreiner"],
+        // vFourteenTalk = ["#ShuiTa"],
+        // vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+        vSixteenTalk = ["#Schreiner"], // redet
+        vSeventeenTalk = ["#ShuiTa"], // redet zu Mann
+        vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+        vEighteenTalk = ["#Mann"], // trägt 2. Stellage zur Tür
+        vNineteenTalk = ["#Schreiner"],
+        vTwentyTalk = ["#ShuiTa"],
+        v21Talk = ["#Schreiner"],
+        v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+        v22Talk = ["Schreiner"]; // Mann trägt Stellage aus Tür raus
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
+// Melanie 2: Der Mann: "Wenn er quathsct, bis der Junge ..." bis Shui Ta: "Ich bin außer mir, dass in meinem Lokal"
 // Sören: Die Frau erschüttert: "Und wir hielten Sie für einen guten Menschen!" bis Shui Ta Er macht sich daran, den Laden aufzuräumen
-// Vera: Der Schreiner: "Ich sehe, dass Sie sich bemühen" bis "Die Bretter sind verschnitten, Herr!"
-// Cata: ab Shui Ta: "Eben. Darum biete ich Ihnen auch nur 20 Silberdollar"
+// Vera: Der Schreiner: "Ich sehe, dass Sie sich bemühen" bis Shui Ta: "Vielleicht ein wenig warm"
+// Cata: Die Frau: "Er hat zugesehen,als der Junge wegging!" bis Der Großvater: "Guten Tag" (und alle raus)
 
 //Functions
 //change color back to normal
@@ -202,7 +213,6 @@ function getColorOfPerson(fireAt) {
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
-    console.log("HALLO!!!");
     if (window[currentEvent].length !== 0) {
         var k = 0,
             animated = 0,

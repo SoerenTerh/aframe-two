@@ -130,12 +130,11 @@
                 <audio id="shuiV14" src="../assets/audio/dritteSeite/shui14.mp3" preload="auto"></audio>
                 <audio id="schreinerV16" src="../assets/audio/dritteSeite/schreiner7.mp3" preload="auto"></audio>
                 <audio id="shuiV17" src="../assets/audio/dritteSeite/shui15.mp3" preload="auto"></audio>
-                <audio id="mannV18" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-                <audio id="schreinerV19" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-                <audio id="shuiV20" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-                <audio id="schreinerV21" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-                <audio id="schreinerV22" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-                <audio id="schreinerV23" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
+                <audio id="mannV18" src="../assets/audio/vierteSeite/mann9.mp3" preload="auto"></audio>
+                <audio id="schreinerV19" src="../assets/audio/vierteSeite/schreiner8.mp3" preload="auto"></audio>
+                <audio id="shuiV20" src="../assets/audio/vierteSeite/shui16.mp3" preload="auto"></audio>
+                <audio id="schreinerV21" src="../assets/audio/vierteSeite/schreiner9.mp3" preload="auto"></audio>
+                <audio id="schreinerV22" src="../assets/audio/vierteSeite/schreiner10.mp3" preload="auto"></audio>
 
 
 
@@ -193,15 +192,20 @@
 
                 <!--Frau-->
                 <a-entity id="containerFrau" position="0 0 0">
-                    <a-entity id="Frau" class="one two twoTalk twoTalk2 three fourTalk sOneTalk play" obj-model="obj:#figurObj" position="1.03 0.63 -25.09" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="-90 -90 0" visible="true"
+                    <a-entity id="Frau" class="one two twoTalk twoTalk2 three fourTalk sOneTalk vTwelveTalk play" obj-model="obj:#figurObj"
+                              position="1.03 0.63 -25.09" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="-90 -90 0" visible="true"
                               sound="src:#snore_girl; on:one; poolsize:100; volume:5; loop:true"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="three"></a-animation>
-                        <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="1.03 2 -25.09" repeat="0" begin="three"></a-animation>
+                        <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0"
+                              repeat="0" begin="three"></a-animation>
+                        <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="1.03 2 -25.09"
+                              repeat="0" begin="three"></a-animation>
                         <a-sound id="twoTalkFrau" class="wait" src="#frau1" volume="10" on="twoTalk"></a-sound>
                         <a-sound id="twoTalkFrau2" class="wait" src="#frau2" volume="10" on="twoTalk2"></a-sound>
                         <a-sound id="fourTalkFrau" class="wait" src="#frau3" volume="10" on="fourTalk"></a-sound>
                         <a-sound id="sOneTalkFrau" class="wait" src="#frau4" volume="10" on="sOneTalk"></a-sound>
+                        <a-sound id="vTwelveTalkFrau" class="wait" src="#frauV12" volume="10" on="vTwelveTalk"></a-sound>
+
                     </a-entity>
 
                     <!-- Sockel-->
@@ -211,7 +215,9 @@
 
                 <!--Mann-->
                 <a-entity id="containerMann"  position="0 0 0">
-                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk3 sSixTalk2 play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75" scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1
+                              sFourTalk3 sSixTalk2 vSevenTalk vEighteenTalk play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75"
+                              scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #404040"
@@ -226,6 +232,8 @@
                         <a-sound id="sFourTalk1Mann" class="wait" src="#mann5" volume="10" on="sFourTalk1"></a-sound>
                         <a-sound id="sFourTalk3Mann" class="wait" src="#mann5" volume="10" on="sFourTalk3"></a-sound>
                         <a-sound id="sSixTalk2Mann" class="wait" src="#mann6" volume="10" on="sSixTalk2"></a-sound>
+                        <a-sound id="vSevenTalkMann" class="wait" src="#mannV7" volume="10" on="vSevenTalk"></a-sound>
+                        <a-sound id="vEighteenTalkMann" class="wait" src="#mannV18" volume="10" on="vEighteenTalk"></a-sound>
 
                     </a-entity>
 
@@ -353,11 +361,18 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--ShuiTa-->
                 <a-entity id="containerShuiTa" class="two four six play" position="0 0 0" visible="false"
                           event-set__2="_event: two; visible: true">
-                    <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 play" obj-model="obj:#figurObj" position="-8.09 2 -35" scale="9.5 9.2 9.5" material="color:#262626" rotation="0 0 0" visible="true"
+                    <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk
+                              sSixTalk1 sSixTalk3 sSixTalk4 vTwoTalk vFourTalk vSixTalk vNineTalk vElevenTalk
+                              vFourteenTalk vSeventeenTalk vTwentyTalk play"
+                              obj-model="obj:#figurObj" position="-8.09 2 -35" scale="9.5 9.2 9.5"
+                              material="color:#262626" rotation="0 0 0" visible="true"
                               event-set__2="_event: two; visible: true">
-                        <a-animation id="ShuiTaAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0" begin="four"></a-animation>
-                        <a-animation id="ShuiTaAnimFour3" class="wait" attribute="position" dur="2500" to="-0.45 2 -34.21" repeat="0" begin="four"></a-animation>
-                        <a-animation id="ShuiTaAnimSeven" class="wait" attribute="rotation" dur="2500" from="0 150 0" to="0 210 0" repeat="3" direction="alternate"  begin="seven"></a-animation> <!--rotationsachse....-->
+                        <a-animation id="ShuiTaAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 180 0"
+                              repeat="0" begin="four"></a-animation>
+                        <a-animation id="ShuiTaAnimFour3" class="wait" attribute="position" dur="2500"
+                              to="-0.45 2 -34.21" repeat="0" begin="four"></a-animation>
+                        <a-animation id="ShuiTaAnimSeven" class="wait" attribute="rotation" dur="2500" from="0 150 0"
+                              to="0 210 0" repeat="3" direction="alternate"  begin="seven"></a-animation> <!--rotationsachse....-->
 
                         <a-sound id="fourTalkShuiTa" class="wait" src="#shui1" volume="15" on="fourTalk"></a-sound>
                         <a-sound id="fourTalkShuiTa2" class="wait" src="#shui2" volume="15" on="fourTalk2"></a-sound>
@@ -367,26 +382,52 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="sSixTalk1ShuiTa" class="wait" src="#shui6" volume="15" on="sSixTalk1"></a-sound>
                         <a-sound id="sSixTalk3ShuiTa" class="wait" src="#shui7" volume="15" on="sSixTalk3"></a-sound>
                         <a-sound id="sSixTalk4ShuiTa" class="wait" src="#shui8" volume="15" on="sSixTalk4"></a-sound>
+                        <a-sound id="vTwoTalkShui" class="wait" src="#shuiV2" volume="10" on="vTwoTalk"></a-sound>
+                        <a-sound id="vFourTalkShui" class="wait" src="#shuiV4" volume="10" on="vFourTalk"></a-sound>
+                        <a-sound id="vSixTalkShui" class="wait" src="#shuiV6" volume="10" on="vSixTalk"></a-sound>
+                        <a-sound id="vNineTalkShui" class="wait" src="#shuiV9" volume="10" on="vNineTalk"></a-sound>
+                        <a-sound id="vElevenTalkShui" class="wait" src="#shuiV11" volume="10" on="vElevenTalk"></a-sound>
+                        <a-sound id="vFourteenTalkShui" class="wait" src="#shuiV14" volume="10" on="vFourteenTalk"></a-sound>
+                        <a-sound id="vSeventeenTalkShui" class="wait" src="#shuiV17" volume="10" on="vSeventeenTalk"></a-sound>
+                        <a-sound id="vTwentyTalkSchreiner" class="wait" src="#shuiV20" volume="10" on="vTwentyTalk"></a-sound>
+
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0.09 2 -34.20" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0.09 2 -34.20" scale="11 11 11"
+                          material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
-                    <a-animation id="ShuiTaAnimFour" class="wait" attribute="position" dur="2500" to="1.03 0 22" repeat="0" begin="four"></a-animation>
-                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="16.61 0 47.75" repeat="0" begin="six"></a-animation> <!--more details!!-->
+                    <a-animation id="ShuiTaAnimFour" class="wait" attribute="position" dur="2500" to="1.03 0 22" repeat="0"
+                          begin="four"></a-animation>
+                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="16.61 0 47.75" repeat="0"
+                          begin="six"></a-animation> <!--more details!!-->
                 </a-entity>
 
                 <!--Schreiner-->
 
                 <a-entity id="containerSchreiner"  class="two four play" visible="false" position="0 0 0"
                           event-set__2="_event: two; visible: true"  >
-                    <a-entity id="Schreiner" class="two four vOneTalk play" obj-model="obj:#figurObj" position="-11.42 2.00 -36.67"  scale="9.5 9.7 9.5"
+                    <a-entity id="Schreiner" class="two four vOneTalk vThreeTalk vFiveTalk vEightTalk vTenTalk
+                              vThirteenTalk vSixteenTalk vNineteenTalk v21Talk v22Talk play"
+                              obj-model="obj:#figurObj" position="-11.42 2.00 -36.67"  scale="9.5 9.7 9.5"
                               material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
-                        <a-animation id="SchreinerAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 150.11 0" repeat="0" begin="four"></a-animation>
-                        <a-animation id="SchreinerAnimFour3" class="wait" attribute="position" dur="2500" to="-4.46 2 -34.39" repeat="0" begin="four"></a-animation>
+                        <a-animation id="SchreinerAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 150.11 0"
+                              repeat="0" begin="four"></a-animation>
+                        <a-animation id="SchreinerAnimFour3" class="wait" attribute="position" dur="2500" to="-4.46 2 -34.39"
+                              repeat="0" begin="four"></a-animation>
 
-                        <a-sound id="vOneTalk" class="wait" src="#schreinerV1" volume="5" on="vOneTalk"></a-sound>
+                        <a-sound id="vOneTalk" class="wait" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
+                        <a-sound id="vThreeTalkSchreiner" class="wait" src="#schreinerV3" volume="10" on="vThreeTalk"></a-sound>
+                        <a-sound id="vFiveTalkSchreiner" class="wait" src="#schreinerV5" volume="10" on="vFiveTalk"></a-sound>
+                        <a-sound id="vEightTalkSchreiner" class="wait" src="#schreinerV8" volume="10" on="vEightTalk"></a-sound>
+                        <a-sound id="vTenTalkSchreiner" class="wait" src="#schreinerV10" volume="10" on="vTenTalk"></a-sound>
+                        <a-sound id="vThirteenTalkSchreiner" class="wait" src="#schreinerV13" volume="10" on="vThirteenTalk"></a-sound>
+                        <a-sound id="vSixteenTalkSchreiner" class="wait" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
+                        <a-sound id="vNineteenTalkSchreiner" class="wait" src="#schreinerV19" volume="10" on="vNineteenTalk"></a-sound>
+                        <a-sound id="v21Talk" class="wait" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
+                        <a-sound id="v21Talk" class="wait" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
+
 
                     </a-entity>
 
