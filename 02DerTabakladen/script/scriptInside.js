@@ -61,16 +61,21 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
-    three = ["#sockelFrau", "#Frau", "#tabakladenTUERi", "#Schreiner", "#ShuiTa"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#ShuiTa", "#Schreiner"], //ShuiTa und Schreiner treten ein
+    three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+    four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
     fourTalk = ["#ShuiTa", "#Frau"],
     fourTalk2 = ["#ShuiTa"],
-    five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //alle Wachen auf
+    five = ["#sockelNeffe", "#Neffe",
+            "#sockelMann", "#Mann",
+            '#sockelSchwaegerin', '#Schwaegerin',
+            "#sockelGroßvater", "#Großvater",
+            "#sockelJunge", "#Junge",
+            "#sockelBruder", "#Bruder",
+            "#sockelNichte", "#Nichte"], //alle Wachen auf
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
     fiveTalk2 = ["#Neffe"],
 
-    five = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle Wachen auf
-    six = ["#ShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
+    six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     sixTalk = ["#ShuiTa",  "#Mann"],
     seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
@@ -313,7 +318,7 @@ $(".clickable").on('fusing', function () {
 //Cursor triggers click on .clickable
 $(".clickable").on('click', function () {
     'use strict';
-    if (at !== "two" || at !== "three") {
+    if (at !== "two" || at !== "three" || at !== "four") {
         currentTarget = '#' + $(this).closest("a-entity").attr('id');
         trigggerEvent = "clickableClick";
         nowClicked = currentTarget;
@@ -367,5 +372,5 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
             at = eventArr[++i];
 
         }
-    }, 2500);
+    }, 5000);
 });
