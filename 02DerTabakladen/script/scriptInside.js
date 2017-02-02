@@ -9,14 +9,13 @@ var lastClickableFused = 0;
 var nowClicked = 0;
 var next = true;
 
-
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
-                
+var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four",
+                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
-                "vOne", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
+                "vOneTalk", "vTwo", "vThree", "vFour", "vFive", "vSix", "vSeven", "vEight", "vNine", "vTen", "vEleven",
                 "vTwelve", "vThirteen", "vFourteen", "vFifteen", "vSixteen", "vSeventeen", "vEighteen", "vNineteen",
                 "vTwenty", "vTwentyone", "vTwentytwo", "vTwentythree"];
 at = eventArr[0];
@@ -126,7 +125,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
     sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
 
-    vOne = ["#Schreiner"], // Schreiner redet
+    vOneTalk = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
     vThree = ["#Schreiner"], // redet
     vFour = ["#ShuiTa"],
@@ -150,6 +149,38 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
     vTwentythree = ["#Schreiner"];
 
+    // Vera Testreihenfolge
+    // var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+    //     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+    //     twoTalk = ["#Frau", "#Neffe"],
+    //     twoTalk2 = ["#Frau"], //Frau lacht
+    //     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+    //     four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
+    //
+    //     vOneTalk = ["#Schreiner"], // Schreiner redet
+    //     vTwo = ["#ShuiTa", "#Rechnung"], // zieht Rechnung aus Tasche
+    //     vThree = ["#Schreiner"], // redet
+    //     vFour = ["#ShuiTa"],
+    //     vFive = ["#Schreiner"],
+    //     vSix = ["#ShuiTa"],
+    //     vSeven = ["#Mann"], // lacht
+    //     vEight = ["#Schreiner"],
+    //     vNine = ["#ShuiTa"],
+    //     vTen = ["#Schreiner"],
+    //     vEleven = ["#ShuiTa"],
+    //     vTwelve = ["#Frau"],
+    //     vThirteen = ["#Schreiner"],
+    //     vFourteen = ["#ShuiTa"],
+    //     vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    //     vSixteen = ["#Schreiner"], // redet
+    //     vSeventeen = ["#ShuiTa"], // redet zu Mann
+    //     vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    //     vNineteen = ["#Schreiner"],
+    //     vTwenty = ["#ShuiTa"],
+    //     vTwentyone = ["#Schreiner"],
+    //     vTwentytwo = ["#ShuiTag", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+    //     vTwentythree = ["#Schreiner"];
+
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
 // Sören: Die Frau erschüttert: "Und wir hielten Sie für einen guten Menschen!" bis Shui Ta Er macht sich daran, den Laden aufzuräumen
@@ -171,6 +202,7 @@ function getColorOfPerson(fireAt) {
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
+    console.log("HALLO!!!");
     if (window[currentEvent].length !== 0) {
         var k = 0,
             animated = 0,
