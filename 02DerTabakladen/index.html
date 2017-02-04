@@ -55,12 +55,10 @@
                 </a-entity>
             </a-entity>
 
-            <a-assets timeout="10000">
+            <a-assets timeout="5000">
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
-            </a-assets>
-
-            <a-assets>
+                
                 <audio id="coin" src="../assets/sounds/coin.wav" preload="auto"></audio>
                 <audio id="door_knock" src="../assets/sounds/door_knock.wav" preload="auto"></audio>
                 <audio id="drawer" src="../assets/sounds/drawer.wav" preload="auto"></audio>
@@ -112,6 +110,8 @@
                 <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
 
+                
+                <img src="../assets/panorama-3.png" id="sky" alt="sky">
             </a-assets>
 
 
@@ -216,8 +216,7 @@
                 <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -50" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" position="-50 80 -50" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
-                <a-sky material="fog: false" color="#B0C4DE" id="sky"></a-sky>
-
+                
                 <!--                <a-grid scale="5.5 5.5 5.5" static-body position="" rotation="" visible="" geometry="" ></a-grid>-->
 
                 <!--                ground-->
@@ -229,8 +228,11 @@
                 <a-box static-body="shape:Primitives" position="0 10 -155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 <a-box static-body="shape:Primitives" position="0 10 155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
 
+<!--                <a-sky color="#B0C4DE" id="sky"></a-sky>-->
 
             </a-entity>
+            <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
+
 
             <!-- führt zu fehler bei inspector
 <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
