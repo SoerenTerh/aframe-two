@@ -300,7 +300,8 @@
                 </a-entity>
 
                 <!--Bruder-->
-                <a-entity id="containerBruder" position="0 0 0">
+                <a-entity id="containerBruder" position="0 0 0"
+                          event-set__sFive_P3="_event: sFive_P3; visible: false">
                     <!--event-set__sTwo_P1="_event: ;position: 14.30 0.28  -19.39"
 event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-entity id="Bruder" class="one five fiveAll sFive_P1 sFive_P2 sFive_P3 play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true"
@@ -308,7 +309,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #595959"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0"
-                              event-sFive_P3="_event: sFive_P3; visible: false">
+                              >
                         <a-animation id="BruderAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
                         <a-animation id="BruderAnimFive2" attribute="position" dur="2500" to="8.14 2 15.00" repeat="0" begin="five"></a-animation>
 
