@@ -37,7 +37,7 @@
                 <a-entity camera
                           universal-controls
                           look-controls=""
-                          position="5 0 20"
+                          position="12.30 0 22.42"
                           kinematic-body> <!--rotation="0 -185 0"-->
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout:2500"
@@ -223,6 +223,8 @@
 
                 <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
+
+                <img src="../assets/panorama-3.png" id="sky" alt="sky">
             </a-assets>
 
             <a-entity rotation="0 180 0">
@@ -255,7 +257,7 @@
 
                 <!--Mann-->
                 <a-entity id="containerMann"  position="0 0 0">
-                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1
+                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFour_P2
                               sFourTalk3 sSixTalk2 vSixTalk vEighteenTalk v25Talk v29Talk play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
@@ -270,8 +272,7 @@
                         <a-sound id="sThreeTalkMann" class="wait" src="#mann3" volume="10" on="sThreeTalk"></a-sound>
                         <a-sound id="sFourTalkStartMann" class="wait" src="#mann4" volume="10" on="sFourTalkStart"></a-sound>
                         <a-sound id="sFourTalk1Mann" class="wait" src="#mann5" volume="10" on="sFourTalk1"></a-sound>
-                        <a-sound id="sFourTalk3Mann" class="wait" src="#mann5" volume="10" on="sFourTalk3"></a-sound>
-                        <a-sound id="sSixTalk2Mann" class="wait" src="#mann6" volume="10" on="sSixTalk2"></a-sound>
+                        <a-sound id="sFourTalk2-Mann" class="wait" src="#mann6" volume="10" on="sFourTalk2"></a-sound>
                         <a-sound id="vSixTalkMann" class="wait" src="#mannV7" volume="10" on="vSixTalk"></a-sound>
                         <a-sound id="vEighteenTalkMann" class="wait" src="#mannV18" volume="10" on="vEighteenTalk"></a-sound>
                         <a-sound id="v25TalkMann" class="wait" src="#mannV25" volume="10" on="v25Talk"></a-sound>
@@ -297,11 +298,17 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                         <a-animation id="BruderAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
                         <a-animation id="BruderAnimFive2" attribute="position" dur="2500" to="8.14 2 15.00" repeat="0" begin="five"></a-animation>
+
+                        <a-animation id="BruderAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P1"></a-animation>
+                        <a-animation id="BruderAnimFiveP1-2" attribute="position" dur="2500" to="11.49 2 19.23" repeat="0" begin="sFive_P1"></a-animation>
+
                     </a-entity>
 
                     <!-- Sockel-->
                     <a-entity id="sockelBruder" obj-model="obj:#SockelObj" position="12.28 2 19.31" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
+
+                    <a-animation id="BruderAnimsFive_P2" attribute="position" dur="2500" to="-11.94 0 -33.25" repeat="0" begin="sFive_P2"></a-animation>
                 </a-entity>
 
                 <!--Schwaegerin-->
@@ -356,11 +363,18 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="fiveTalkNeffe" class="wait" src="#neffe2" volume="15" on="fiveTalk2"></a-sound>
                         <a-sound id="sTwoTalkNeffe" class="wait" src="#neffe3" volume="15" on="sTwoTalk"></a-sound>
                         <a-sound id="sFiveTalk2Neffe" class="wait" src="#neffe4" volume="15" on="sFiveTalk2"></a-sound>
+
+                        <a-animation id="neffeAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P1"></a-animation>
+                        <a-animation id="neffeAnimFiveP1-2" attribute="position" dur="2500" to="5.06 2 -6.34" repeat="0" begin="sFive_P1"></a-animation>
+
                     </a-entity>
 
                     <!-- Sockel-->
                     <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="5.62 2 -6.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
+
+                    <a-animation id="neffeAnimsFive_P2" attribute="position" dur="2500" to="-8.75 0 -14.25" repeat="0" begin="sFive_P2"></a-animation>
+
                 </a-entity>
 
                 <!--Nichte-->
@@ -382,27 +396,27 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Junge-->
-                <a-entity id="containerJunge"  class="sOne_P2 sOne_P3 sOne_P4 play" position="0 0 0"
-                          event-set__sOne_P4="_event: sOne_P4; visible: false">
+                <a-entity id="containerJunge"  class="sOne_P2 sOne_P3 sFourP3begin sFour_P3 play" position="0 0 0"
+                          event-set__sFour_P3="_event: sFour_P3; visible: false">
                     <a-entity id="Junge" class="one five fiveAll v40Talk3 play" obj-model="obj:#figurObj" position="20.03 13.37 -18.88" scale="6.65 6.65 6.65" material="color:#D9D9D9" rotation="-90 -180 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #D9D9D9"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                         <a-animation id="JungeAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="JungeAnimFive2" attribute="position" dur="2500" to="12.92 2 -22.36" repeat="0" begin="five"></a-animation>
+                        <a-animation id="JungeAnimFive2" attribute="position" dur="2500" to="12.92 2 -19.38" repeat="0" begin="five"></a-animation>
 
-                        <a-animation id="Junge_sOne-p2" class="wait" attribute="position" dur="2500" to="14.30 0.28  -19.39" repeat="0" begin="sFour_P2"></a-animation>
-                        <a-animation id="Junge_sOne-p3" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0" begin="sFour_P3"></a-animation>
+                        <a-animation id="Junge_sFour_P2-2" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0" begin="sFourP3begin"></a-animation>
 
                         <a-sound id="v40Talk3Junge" class="wait" src="#jungeV40_3" volume="15" on="v40Talk3"></a-sound>
-
 
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="17.21 2 -19.52" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
-                              event-set__5="_event: five; visible: true"></a-entity>
+                    <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="17.21 2 -16.5" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                              event-set__5="_event: five; visible: true"
+                              event-set__sFourP3begin="_event: sFourP3begin; position: 14.46 2 -19.34"></a-entity>
+                    <a-animation id="JungeSockel_sFour_P2" class="wait" attribute="position" dur="2500" to="-18.81 2 0" repeat="0" begin="sFourP3begin"></a-animation>
                 </a-entity>
 
                 <!--ShuiTa-->
@@ -539,15 +553,15 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen1.DAE)" id="tabakladen" position="4.31 -1.02 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
 
                 <!-- Türe -->
-                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three four play clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
+                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;"
                           sound__1="src:#squeeky_door;on:clickableFound;poolsize:100;volume:10">
                     <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                     <a-animation id="tabakladenTUERiAnimThree" class="wait" attribute="rotation" dur="2500"  to="0 0 0" repeat="0" begin="three"></a-animation>
                     <a-animation id="tabakladenTUERiAnimFour" class="wait" attribute="rotation" dur="2500"  to="0 -90 0" repeat="0" begin="four"></a-animation>
-                    <a-animation id="tabakladenTUERiAnim--sOne_P3" class="wait" attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sOne_P3"></a-animation>
-                    <a-animation id="tabakladenTUERiAnim--sTwo_P3" class="wait" attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sTwo_P3"></a-animation>
+                    <a-animation id="tabakladenTUERiAnim--sFourP3begin" class="wait" attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sFourP3begin"></a-animation>
+                    <a-animation id="tabakladenTUERiAnim--sFour_P3" class="wait" attribute="rotation" dur="2500"  to="0 -90  0" repeat="0" begin="sFour_P3"></a-animation>
                 </a-entity>
 
                 <!-- Ladentisch -->
@@ -660,7 +674,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
                 <!-- sky-->
-                <a-sky color="#B0C4DE" id="sky"></a-sky>
+                <a-sky src="#sky" id="sky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
             </a-entity>
         </a-scene>
         <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->

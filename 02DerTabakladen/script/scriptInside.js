@@ -14,8 +14,8 @@ var eventArr = ["one", "two",
                 "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
-                "five",// "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFour_P2", "sFour_P3", "sFour_P4", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
+                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
+                "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFiveTalk3", "sFive_P3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P2",
                 "vOneTalk",
                 "vTwo",
@@ -112,12 +112,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   sTwoTalk = ["#Neffe"],
   sThreeTalk = ["#Mann"],
 
-  sFourTalkStart = ["#Mann"], // Rotation vor
-  sFourTalk1 = ["#Mann", "#Schwaegerin"],
-  sFourTalk2 = ["#Mann"],
-  sFour_P2 = ["#Mann", "#Junge"], // Rotation zurück - Junge Position Richtung Türe
-  sFour_P3 = ["#Junge", "#tabakladenTUERi"], // Junge drehen vor die Türe - Türe auf
-  sFour_P4 = ["#ContainerJunge"], // Junge ausblenden
+    sFourTalkStart = ["#Mann"],
+    sFourTalk1 = ["#Mann", "#Schwaegerin"],
+    sFourTalk2 = ["#Mann"],
+    sFourP3begin = ["#Junge", "#tabakladenTUERi"],
+    sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
   sFiveTalk = ["#ShuiTa"],
   sFiveTalk2 = ["#Neffe"],
@@ -127,10 +126,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   sFive_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
   sFive_P4 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"], // Figuren ausblenden
 
-  sSixTalk1 = ["#ShuiTa"], // Shui Ta zum Schreiner drehen
-  sSixTalk2 = ["#Mann"],
-  sSixTalk3 = ["#ShuiTa"],
-  sSixTalk4 = ["#ShuiTa"],
+    sSixTalk1 = ["#ShuiTa"],
+    sSixTalk2 = ["#Mann"],
+    sSixTalk3 = ["#ShuiTa"],
+    sSixTalk4 = ["#ShuiTa"],
 
   sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
   sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
