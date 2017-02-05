@@ -15,7 +15,7 @@ var eventArr = ["one", "two",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFiveTalk3",
+                "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P32", "sFiveTalk3",
                 "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P22", "sSeven_P2",
                 "vOneTalk",
                 "vTwo",
@@ -115,6 +115,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   sFourTalkStart = ["#Mann"],
   sFourTalk1 = ["#Mann", "#Schwaegerin"],
   sFourTalk2 = ["#Mann"],
+  sFourACC = ["#Mann, #Neffe, #Schwaegerin"]
   sFourP3begin = ["#Junge", "#tabakladenTUERi"],
   sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
@@ -123,6 +124,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
   sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
   sFive_P3 = ["#Neffe", "#Bruder", "#Schwaegerin", "#Nichte"],
+  sFive_P3end = ["#Schwaegerin"],
   sFiveTalk3 = ["#Schwaegerin"],
   sFive_P4 = ["#Schwaegerin", "#Nichte", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
 

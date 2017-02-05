@@ -224,6 +224,32 @@
                 <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
                 <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
 
+
+                <!-- Identifizierung: Gegenstände -->
+                <a-asset-item id="MonokelObj" src="models/UnsereAssets/Monokel.obj"></a-asset-item>
+                <a-asset-item id="MonokelMtl" src="models/UnsereAssets/Monokel.mtl"></a-asset-item>
+
+                <a-asset-item id="KappeObj" src="models/UnsereAssets/Kappe.obj"></a-asset-item>
+                <a-asset-item id="KappeMtl" src="models/UnsereAssets/Kappe.mtl"></a-asset-item>
+
+                <a-asset-item id="HausschuheObj" src="models/UnsereAssets/Hausschuhe.obj"></a-asset-item>
+                <a-asset-item id="HausschuheMtl" src="models/UnsereAssets/Hausschuhe.mtl"></a-asset-item>
+
+                <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/Kappe_gedreht.obj"></a-asset-item>
+                <a-asset-item id="Kappe_gedrehtMtl" src="models/UnsereAssets/Kappe_gedreht.mtl"></a-asset-item>
+
+                <a-asset-item id="WerkzeugkisteObj" src="models/UnsereAssets/Werkzeugkiste.obj"></a-asset-item>
+                <a-asset-item id="WerkzeugkisteMtl" src="models/UnsereAssets/Werkzeugkiste.mtl"></a-asset-item>
+
+                <a-asset-item id="WerkzeugkisteObj" src="models/UnsereAssets/Werkzeugkiste.obj"></a-asset-item>
+                <a-asset-item id="WerkzeugkisteMtl" src="models/UnsereAssets/Werkzeugkiste.mtl"></a-asset-item>
+
+                <a-asset-item id="BartObj" src="models/UnsereAssets/Bart.obj"></a-asset-item>
+                <a-asset-item id="BartMtl" src="models/UnsereAssets/Bart.mtl"></a-asset-item>
+
+                <a-asset-item id="KochlöffelObj" src="models/UnsereAssets/Kochlöffel.obj"></a-asset-item>
+                <a-asset-item id="KochlöffelMtl" src="models/UnsereAssets/Kochlöffel.mtl"></a-asset-item>
+
                 <img src="../assets/panorama-3.png" id="sky" alt="sky">
             </a-assets>
 
@@ -250,6 +276,10 @@
 
                     </a-entity>
 
+                    <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="-49.72 7.13 -22.56" scale="2 2 2" rotation="0 0 0" visible="false"
+                              event-set__sFourACC="_event: sFourACC; visible: true">
+                    </a-entity>
+
                     <!-- Sockel-->
                     <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="5.08 2 -21.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__3="_event: three; visible: true"></a-entity>
@@ -257,7 +287,7 @@
 
                 <!--Mann-->
                 <a-entity id="containerMann"  position="0 0 0">
-                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFour_P2
+                    <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC
                               sFourTalk3 sSixTalk2 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk v25Talk v29Talk play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
@@ -287,6 +317,10 @@
                         <a-sound id="v29TalkMann" class="wait" src="#mannV29" volume="10" on="v29Talk"></a-sound>
                         <a-sound id="v30TalkMann" class="wait" src="#mannV30" volume="10" on="v30Talk"></a-sound>
 
+                    </a-entity>
+
+                    <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="3.10 0.28 11.35" scale="1 1 1" rotation="0 270.00 0" visible="false"
+                              event-set__sFourACC="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -329,7 +363,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity id="containerSchwaegerin" position="0 0 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P4="_event: sFive_P4; visible: false">
-                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFive_P3 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3end sFiveTalk3 sFive_P4" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:6;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #737373"
@@ -341,21 +375,33 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="sFiveTalk3Schwaegerin" class="wait" src="#schwaegerin3" volume="10" on="sFiveTalk3"></a-sound>
 
                         <a-animation id="SchwaegerinAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
-                        <a-animation id="SchwaegerinAnimFiveP1-2" attribute="position" dur="2500" to="5.06 2 -6.34" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="SchwaegerinAnimFiveP1-2" attribute="position" dur="2500" to="10.86 2 26.32" repeat="0" begin="sFive_P3"></a-animation>
 
                     </a-entity>
+                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
+                              event-set__5="_event: five; visible: true">
+                        <a-animation id="SchwaegerinSchuh1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="SchwaegerinSchuh1-2" attribute="position" dur="2500" to="9.60 2 26.38" repeat="0" begin="sFive_P3"></a-animation>
+                    </a-entity>
+                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 21.55" scale="1 1 1" rotation="0 -90 0" visible="false"
+                              event-set__5="_event: five; visible: true">
+                        <a-animation id="SchwaegerinSchuh2" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>
+                    </a-entity>
+
+
 
                     <!-- Sockel-->
                     <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="11.47 2 26.02" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
-                              event-set__5="_event: five; visible: true"></a-entity>
+                              event-set__sFourACC="_event: sFourACC; visible: true"></a-entity>
 
-                    <a-animation id="SchwaegerinFive_P2" attribute="position" dur="2500" to="-8.75 0 -14.25" repeat="0" begin="sFive_P2"></a-animation>
+                    <a-animation id="SchwaegerinFive_P2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end"></a-animation>
 
                 </a-entity>
 
                 <!--Großvater-->
                 <a-entity id="containerGroßvater" position="0 0 0">
-                    <a-entity id="Großvater" class="one five fiveAll play" obj-model="obj:#figurObj" position="0.91 0.63 19.59" scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="-90 90 0" visible="true"
+                    <a-entity id="Großvater" class="one five fiveAll sFourACC play" obj-model="obj:#figurObj" position="0.91 0.63 19.59" scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="-90 90 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:4;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #8C8C8C"
@@ -364,13 +410,17 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="0.91 2 19.59" repeat="0" begin="five"></a-animation>
                     </a-entity>
 
+                    <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
+                              event-set__5="_event: five; visible: true">
+                    </a-entity>
+
                     <!-- Sockel-->
                     <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="5.62 2 15.41" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
-                              event-set__5="_event: five; visible: true"></a-entity>
+                              event-set__sFourACC="_event: sFourACC; visible: true"></a-entity>
                 </a-entity>
 
                 <!--Neffe-->
-                <a-entity id="containerNeffe"  class="five sFive_P1 sFive_P2 sFive_P3 play" position="0 0 0"
+                <a-entity id="containerNeffe"  class="five sFourACC sFive_P1 sFive_P2 sFive_P3 play" position="0 0 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P3="_event: sFive_P3; visible: false">
                     <a-entity id="Neffe" class="one twoTalk fiveAll fiveTalk2 sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj" position="0.74 0.63 -2.7" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="-90 90 0" visible="true"
@@ -389,6 +439,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="neffeAnimsFiveP1-2" attribute="position" dur="2500" to="5.06 2 -6.34" repeat="0" begin="sFive_P1"></a-animation>
 
                     </a-entity>
+
+                    <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0.95 -0.46 -2.08" scale="1 1 1" rotation="0 -270 0" visible="false"
+                              event-set__sFourACC="_event: sFourACC; visible: true">
+                    </a-entity>
+
 
                     <!-- Sockel-->
                     <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="5.62 2 -6.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
@@ -410,8 +465,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="NichteAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
                         <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="13.76 2 1.07" repeat="0" begin="five"></a-animation>
 
-                        <a-animation id="NichteAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
-                        <a-animation id="NichteAnimFiveP1-2" attribute="position" dur="2500" to="11.49 2 19.23" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="NichteAnimsFiveP1" attribute="rotation" dur="2500" to="0 -180.00  0" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="NichteAnimFiveP1-2" attribute="position" dur="2500" to="17.02 2 5.16" repeat="0" begin="sFive_P3"></a-animation>
 
                     </a-entity>
 
@@ -419,7 +474,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-entity id="sockelNichte" obj-model="obj:#SockelObj" position="17.63 2 5.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
-                    <a-animation id="NichteAnimsFive_P2" attribute="position" dur="2500" to="-11.94 0 -33.25" repeat="0" begin="sFive_P3"></a-animation>
+                    <a-animation id="NichteAnimsFive_P2" attribute="position" dur="2500" to="-15.65 0 -15.87" repeat="0" begin="sFive_P3"></a-animation>
                 </a-entity>
 
                 <!--Junge-->
@@ -499,6 +554,12 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     </a-entity>
 
+                    <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="1.00 -0.62 -32.86" scale="1 1 1" rotation="0 180.00 0" visible="true">
+                        <a-animation id="ShuiTaAnimFourACC" class="wait" attribute="position" dur="2500" to="0.58 -1.05 -34.09" repeat="0"
+                                     begin="four"></a-animation>
+                    </a-entity>
+
+
                     <!-- Sockel-->
                     <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0.09 2 -34.20" scale="11 11 11"
                           material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
@@ -537,6 +598,9 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="v27TalkSchreiner" class="wait" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
 
 
+                    </a-entity>
+
+                    <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj; mtl: #WerkzeugkisteMtl" position="-8.70 5.67 -37.73" scale="0.75 0.5 0.75" rotation="0 -22.10 0" visible="true">
                     </a-entity>
 
                     <!-- Sockel-->
