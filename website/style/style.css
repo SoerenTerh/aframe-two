@@ -78,7 +78,14 @@ nav, .navbar-brand{
 }
 
 .foot {
+    font-size: 80%;
     background: #333;
+    bottom: 0px;
+}
+
+.text-muted {
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 .content, iframe {
