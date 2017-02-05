@@ -335,7 +335,7 @@
                           event-set__sFive_P3="_event: sFive_P3; visible: false">
                     <!--event-set__sTwo_P1="_event: ;position: 14.30 0.28  -19.39"
 event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
-                    <a-entity id="Bruder" class="one five fiveAll sFive_P1 sFive_P2 sFive_P3 play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Bruder" class="one five fiveAll sFive_P1 sFive_P2 sFive_P3s sFive_P3end sFiveTalk3 play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:3;loop:true;"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #595959"
@@ -360,7 +360,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity id="containerSchwaegerin" position="0 0 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P4="_event: sFive_P4; visible: false">
-                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3end sFiveTalk3 sFive_P4" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3s sFive_P3end sFive_P3end2 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:6;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #737373"
@@ -371,10 +371,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
                         <a-sound id="sFiveTalk3Schwaegerin" class="wait" src="#schwaegerin3" volume="10" on="sFiveTalk3"></a-sound>
 
-                        <a-animation id="SchwaegerinAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
-                        <a-animation id="SchwaegerinAnimFiveP1-2" attribute="position" dur="2500" to="10.86 2 26.32" repeat="0" begin="sFive_P3"></a-animation>
+                        <a-animation id="SchwaegerinAnimsFive_P3s" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3s"></a-animation>
+                        <a-animation id="SchwaegerinAnimsFive_P3end" attribute="position" dur="2500" to="10.86 2 26.32" repeat="0" begin="sFive_P3end"></a-animation>
 
                     </a-entity>
+                    <!--
                     <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
                               event-set__sFourACC="_event: sFourACC; visible: true">
                         <a-animation id="SchwaegerinSchuh1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
@@ -385,14 +386,14 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="SchwaegerinSchuh2" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
                         <a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>
                     </a-entity>
-
+                    -->
 
 
                     <!-- Sockel-->
                     <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="11.47 2 26.02" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
-                    <a-animation id="SchwaegerinFive_P2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end"></a-animation>
+                    <a-animation id="SchwaegerinsFive_P3end2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end2"></a-animation>
 
                 </a-entity>
 
@@ -452,8 +453,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--Nichte-->
                 <a-entity id="containerNichte"  position="0 0 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
-                          event-set__sFive_P4="_event: sFive_P4; visible: false">
-                    <a-entity id="Nichte" class="one five fiveAll play" obj-model="obj:#figurObj" position="15 13.86 4.94" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="-90 0 0" visible="true"
+                          event-set__sFive_P3no="_event: sFive_P3no; visible: false">
+                    <a-entity id="Nichte" class="one five sFive_P3no fiveAll play" obj-model="obj:#figurObj" position="15 13.86 4.94" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="-90 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:7;loop:true"
                               sound__5="src:#gaeste1; class:wait; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #BFBFBF"
