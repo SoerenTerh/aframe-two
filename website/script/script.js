@@ -35,12 +35,12 @@ $(document).ready(function () {
         completionPercentage = 0,
         output = 0;
     
-    if (dateProgress < endDate) {
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.07);
-        output = completionPercentage  + "%";
-    } else {
-        output = 91  + "%";
-    }
+//    if (dateProgress < endDate) {
+//        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.07);
+//        output = completionPercentage  + "%";
+//    } else {
+    output = 91  + "%";
+//    }
 
 
 
