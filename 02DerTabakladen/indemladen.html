@@ -468,17 +468,17 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!--Schreiner-->
 
-                <a-entity id="containerSchreiner"  class="two four play" visible="false" position="0 0 0"
+                <a-entity id="containerSchreiner"  class="two four vFifteen play" visible="false" position="0 0 0"
                           event-set__2="_event: two; visible: true"  >
                     <a-entity id="Schreiner" class="two four vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk
-                              vElevenTalk vSixteenTalk vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
+                              vElevenTalk vFifteen vSixteenTalk vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
                               obj-model="obj:#figurObj" position="-11.42 2.00 -36.67"  scale="9.5 9.7 9.5"
                               material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
                         <a-animation id="SchreinerAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 150.11 0"
                               repeat="0" begin="four"></a-animation>
                         <a-animation id="SchreinerAnimFour3" class="wait" attribute="position" dur="2500" to="-4.46 2 -34.39"
-                              repeat="0" begin="four"></a-animation>
+                              repeat="0" begin="four"></a-animation>14 1 -18
 
                         <a-sound id="vOneTalk" class="wait" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
                         <a-sound id="vTwoTalkSchreiner" class="wait" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
@@ -497,9 +497,16 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelSchreiner" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    <a-entity id="sockelSchreiner" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11"
+                              material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
-                    <a-animation id="SchreinerAnimFour" class="wait" attribute="position" dur="2500" to="-2.33 0 22.87" repeat="0" begin="four"></a-animation>
+                    <a-animation id="SchreinerAnimFour" class="wait" attribute="position" dur="2500" to="-2.33 0 22.87"
+                                repeat="0" begin="four"></a-animation>
+                    <a-animation id="SchreinerAnimFifteen" class="wait" attribute="position" dur="2500" to="21 1 18"
+                                repeat="0" begin="vFifteen"></a-animation>
+                    <a-animation id="SchreinerAnimVSixteen" attribute="position" dur="2500" to="0 0 0" repeat="0"
+                                begin="vSixteen"></a-animation>
+
                 </a-entity>
 
                 <!-- Polizist -->
@@ -587,14 +594,38 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-4.49 0 31.24" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" material=""></a-entity>
 
                 <!-- Rechnungen -->
-                <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36" scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click" visible="true" material=""></a-entity>s
+                <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36"
+                          scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click"
+                          visible="true" material="" class="vTwo vFive play">
+                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="rotation" dur="200" to="0 180 0"
+                                repeat="0" begin="vTwo"></a-animation>
+                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="position" dur="200" to="-3 9 -18"
+                                repeat="0" begin="vTwo"></a-animation>
+                    <a-animation id="RechnungAnimVFive" class="wait" attribute="rotation" dur="200" to="-90 180 0"
+                                repeat="0" begin="vFive"></a-animation>
+                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="position" dur="200" to="4.33 13.39 -3.36"
+                                repeat="0" begin="vFive"></a-animation>
+                </a-entity>
 
                 <!-- Ablage_Stellage -->
-                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="stellage_ohne-rechnung" material=""></a-entity>
-                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="stellage_ohne-rechnung-2" material=""></a-entity>
-                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="stellage_rechnung" material=""></a-entity>
-                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="stellage_rechnung-2" material=""></a-entity>
-                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="stellage_rechnung-3" material=""></a-entity>
+                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
+                          position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
+                          id="stellage_ohne-rechnung" material="" class="vSixteen">
+                  <a-animation id="StellageAnimVSixteen" attribute="position" dur="2500" to="0 0 0" repeat="0"
+                                      begin="vSixteen"></a-animation>
+                </a-entity>
+                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
+                          position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
+                          id="stellage_ohne-rechnung-2" material=""></a-entity>
+                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
+                          position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
+                          id="stellage_rechnung" material=""></a-entity>
+                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
+                          position="21.03 -0.31 4.7" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
+                          id="stellage_rechnung-2" material=""></a-entity>
+                <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
+                          position="21.03 -0.31 12.52" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
+                          id="stellage_rechnung-3" material=""></a-entity>
 
                 <!-- Mietvertrag -->
                 <a-entity class="clickable" data-brackets-id="891" obj-model="obj:#MietvertragObj;mtl:#MietvertragMtl" position="5.43 14.15 -3.88" scale="0.28 0.28 0.28" rotation="-90 180 0" visible="true" id="Vertrag" sound="src:#paper;on:click" material=""></a-entity>
