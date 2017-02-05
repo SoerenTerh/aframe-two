@@ -47,9 +47,20 @@ nav, .navbar-brand{
 .mitglied{
 	font-style: italic;
 	color: #009EE8;
-	padding-left: 40%;
+    text-align: center;
 	font: 300% 'Amatic SC';
 }
+
+.mitgliedLink{
+    text-align: center;
+    color: black;
+    margin-top: -25px;
+}
+
+.mitgliedLink > a:link, .mitgliedLink > a:visited, .mitgliedLink > a:hover, .mitgliedLink > a:active {
+    color: black;
+}
+
 
 @media screen and (max-width: 480px){
     .mitglied {
@@ -80,11 +91,14 @@ nav, .navbar-brand{
 
 
 /*progressbar*/
+.progress-bar {
+   border: 0px solid rgba(245, 245, 245, 1); border-radius: 15px; height: 20px;}
+
 .progress {
     margin-top: 5%;
-    width: 90%;
+    width: 91%;
 }
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine{
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -93,32 +107,36 @@ nav, .navbar-brand{
     border-radius:25px;
 }
 .one{
-    left:10%;
+    left:9%;
 }
 .two{
-    left:20%;
+    left:18%;
 }
 .three{
-    left:30%;
+    left:27%;
 }
 .four {
-    left:40%;
+    left:36%;
 }
 .five {
-    left:50%;
+    left:45%;
 }
 .six {
-    left:60%;
+    left:54%;
 }
 .seven {
-    left:70%;
+    left:63%;
 }
 .eight {
-    left:80%;
+    left:72%;
 }
 .nine {
-    left:89%;
+    left:81%;
 }
+.future {
+    left:90%;
+}
+
 
 .primary-color{
     background-color:turquoise;
@@ -136,6 +154,10 @@ nav, .navbar-brand{
     color: white;
     font-weight: bold;
     font: 30px 'Amatic SC', cursive;
+}
+
+.imgUs {
+    margin: 0 auto
 }
 
 /*fancybox*/
