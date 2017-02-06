@@ -604,16 +604,20 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <!-- Sockel-->
                     <a-entity id="sockelSchreiner" obj-model="obj:#SockelObj" position="8 0 0.5" scale="11 11 11"
                               material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-
+                    <!-- Schreiner in Laden -->
                     <a-animation id="SchreinerAnimFour" class="wait" attribute="position" dur="2500" to="-6 2 -12"
                                 repeat="0" begin="four"></a-animation>
                     <a-animation id="SchreinerAnimFour" class="wait" attribute="rotation" dur="2500" to="0 150 0"
                                 repeat="0" begin="four"></a-animation>
-                    <a-animation id="SchreinerAnimFifteen" class="wait" attribute="position" dur="2500" to="14 1 -14.5"
+                    <!-- zu Stellage -->
+                    <a-animation id="SchreinerAnimFifteen" class="wait" attribute="position" dur="2500" to="14 2 -14.5"
                                 repeat="0" begin="vFifteen"></a-animation>
                     <a-animation id="SchreinerAnimVFifteen" class="wait" attribute="rotation" dur="2500" to="0 90 0"
                                 repeat="0" begin="vFifteen"></a-animation>
-                    <a-animation id="SchreinerAnimVSixteen" attribute="position" dur="2500" to="0 90 0" repeat="0"
+                    <!-- zu Tür -->
+                    <a-animation id="SchreinerAnimVSixteen" attribute="position" dur="2500" to="2 2 -15" repeat="0"
+                                begin="vSixteen"></a-animation>
+                    <a-animation id="SchreinerAnimVSixteen" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                 begin="vSixteen"></a-animation>
 
                 </a-entity>
@@ -709,13 +713,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36"
                           scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click"
                           visible="true" material="" class="vTwo vFive play">
-                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="rotation" dur="200" to="0 180 0"
+                    <a-animation id="RechnungAnimVTwoR" class="wait" attribute="rotation" dur="200" to="0 180 0"
                                 repeat="0" begin="vTwo"></a-animation>
-                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="position" dur="200" to="-3 9 -18"
+                    <a-animation id="RechnungAnimVTwoP" class="wait" attribute="position" dur="200" to="-3 9 -18"
                                 repeat="0" begin="vTwo"></a-animation>
-                    <a-animation id="RechnungAnimVFive" class="wait" attribute="rotation" dur="200" to="-90 180 0"
+                    <a-animation id="RechnungAnimVFiveR" class="wait" attribute="rotation" dur="200" to="-90 180 0"
                                 repeat="0" begin="vFive"></a-animation>
-                    <a-animation id="RechnungAnimVTwo" class="wait" attribute="position" dur="200" to="4.33 13.39 -3.36"
+                    <a-animation id="RechnungAnimVFiveP" class="wait" attribute="position" dur="200" to="4.33 13.39 -3.36"
                                 repeat="0" begin="vFive"></a-animation>
                 </a-entity>
 
@@ -723,8 +727,10 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
                           id="stellage_ohne-rechnung" material="" class="vSixteen">
-                  <a-animation id="StellageAnimVSixteen" attribute="position" dur="2500" to="0 0 0" repeat="0"
-                                      begin="vSixteen"></a-animation>
+                  <a-animation id="StellageAnimVSixteenP" attribute="position" dur="2500" to="0 0 -22" repeat="0"
+                          begin="vSixteen"></a-animation>
+                  <a-animation id="StellageAnimVSixteenR" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                          begin="vSixteen"></a-animation>
                 </a-entity>
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
