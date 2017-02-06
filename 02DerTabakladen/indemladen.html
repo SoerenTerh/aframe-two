@@ -501,19 +501,19 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--ShuiTa-->
-                <a-entity id="containerShuiTa" class="two four six play" position="0 0 0" visible="false"
+                <a-entity id="containerShuiTa" class="two four six play" position="-8.09 2 -35" visible="false"
                           event-set__2="_event: two; visible: true">
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk
                               sSixTalk1 sSixTalk3 sSixTalk4 vTwoTalk vSixTalk vNineTalk vElevenTalk
                               vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
                               v31Talk v33Talk v34Talk v36Talk v37Talk v38Talk v39Talk v40Talk v43Talk play"
-                              obj-model="obj:#figurObj" position="-8.09 2 -35" scale="9.5 9.2 9.5"
+                              obj-model="obj:#figurObj" position="0 0 0" scale="9.5 9.2 9.5"
                               material="color:#262626" rotation="0 0 0" visible="true"
                               event-set__2="_event: two; visible: true">
-                        <a-animation id="ShuiTaAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 180 0"
+                        <!-- <a-animation id="ShuiTaAnimFour2" class="wait" attribute="rotation" dur="2500" to="0 180 0"
                               repeat="0" begin="four"></a-animation>
                         <a-animation id="ShuiTaAnimFour3" class="wait" attribute="position" dur="2500"
-                              to="-0.45 2 -34.06" repeat="0" begin="four"></a-animation>
+                              to="-0.45 2 -34.06" repeat="0" begin="four"></a-animation> -->
                         <a-animation id="ShuiTaAnimSeven" class="wait" attribute="rotation" dur="500" from="0 150 0"
                               to="0 210 0" repeat="2" direction="alternate"  begin="seven"></a-animation> <!--rotationsachse....-->
 
@@ -552,18 +552,20 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     </a-entity>
 
                     <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl"
-                              position="0.54 -0.62 -33.83" scale="1 1 1" rotation="0 180 0" visible="true">
-                        <a-animation class="wait" attribute="position" to="0.54 -0.62 -33.83" begin="seven"></a-animation>
+                              position="5 12 0" scale="1 1 1" rotation="0 180 0" visible="true">
+                        <!-- <a-animation class="wait" attribute="position" to="0.54 -0.62 -33.83" begin="seven"></a-animation> -->
                     </a-entity>
 
 
                     <!-- Sockel-->
-                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0.09 2 -34.20" scale="11 11 11"
+                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="8.25 0 0.75" scale="11 11 11"
                           material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
-                    <a-animation id="ShuiTaAnimFour" class="wait" attribute="position" dur="2500" to="1.03 0 22" repeat="0"
+                    <a-animation id="ShuiTaAnimFourP" class="wait" attribute="position" dur="2500" to="0.5 2 -13" repeat="0"
                           begin="four"></a-animation>
-                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="16.61 0 47.75" repeat="0"
+                    <a-animation id="ShuiTaAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                          begin="four"></a-animation>
+                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="18 0 18" repeat="0"
                           begin="six"></a-animation> <!--more details!!-->
                 </a-entity>
 
@@ -623,11 +625,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!-- Polizist -->
-                <a-entity id="containerPolizist"  class="v32 play" visible="false" position="0 0 0"
+                <a-entity id="containerPolizist"  class="v32 play" visible="false" position="-11.42 2.00 -36.67"
                           event-set="_event: v32; visible: true"  >
                     <a-entity id="Polizist" class="v32 v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk
                               v42Talk v43Talk play"
-                              obj-model="obj:#figurObj" position="-11.42 2.00 -36.67"  scale="9.5 9.7 9.5"
+                              obj-model="obj:#figurObj" position="0 0 0"  scale="9.5 9.7 9.5"
                               material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
 
@@ -644,7 +646,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="-3.29 2.00 -36.09" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="8 0 0.5" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
                 </a-entity>
 
