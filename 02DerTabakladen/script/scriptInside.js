@@ -30,8 +30,8 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
-                "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
-               ];
+				        "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+              ];
 
 at = eventArr[0];
 
@@ -119,76 +119,76 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
      sFourACC4 = ["#Großvater"],
      sFourACC5 = ["#Schwaegerin"],
      */
-    sFourP3begin = ["#Junge", "#tabakladenTUERi"],
-    sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
+  sFourP3begin = ["#Junge", "#tabakladenTUERi"],
+  sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
-    sFiveTalk = ["#ShuiTa"],
-    sFiveTalk2 = ["#Neffe"],
-    sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
-    sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
-    sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
-    sFive_P3no = ["#Nichte"],
-    sFive_P3s = ["#Schwaegerin"],
-    sFive_P3end = ["#Schwaegerin"],
-    sFive_P3end2 = ["#Schwaegerin"],
-    sFiveTalk3 = ["#Schwaegerin"],
-    sFive_P4 = ["#Schwaegerin", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
+  sFiveTalk = ["#ShuiTa"],
+  sFiveTalk2 = ["#Neffe"],
+  sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
+  sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
+  sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
+  sFive_P3no = ["#Nichte"],
+  sFive_P3s = ["#Schwaegerin"],
+  sFive_P3end = ["#Schwaegerin"],
+  sFive_P3end2 = ["#Schwaegerin"],
+  sFiveTalk3 = ["#Schwaegerin"],
+  sFive_P4 = ["#Schwaegerin", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
 
-    sSixTalk1 = ["#ShuiTa"],
-    sSixTalk2 = ["#Mann"],
-    sSixTalk3 = ["#ShuiTa"],
-    sSixTalk4 = ["#ShuiTa"],
+  sSixTalk1 = ["#ShuiTa"],
+  sSixTalk2 = ["#Mann"],
+  sSixTalk3 = ["#ShuiTa"],
+  sSixTalk4 = ["#ShuiTa"],
 
-    sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
-    sSeven_P22 = ["#Mann"],
-    sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
+  sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
+  sSeven_P22 = ["#Mann"],
+  sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
 
 
-    vOneTalk = ["#Schreiner"], // Schreiner redet
-    vTwo = ["#Rechnung"], // Rechnung fliegt zu ShuiTa
-    vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
-    vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
-    vFive = ["#Rechnung"], // Rechnung wieder weg
-    vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ], // 20 Dollar, Nussbaum
-    vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
-    vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
-    vFifteen = ["#containerSchreiner"], // geht zu Stellage
-    vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
-    vSixteen = ["#containerSchreiner", "stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
-    vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
-    vEighteen = ["#Mann"], // umdrehen
-    vEighteen2 = ["#Mann"], // zu Stellage
-    vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
-    vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
-    v21Talk = ["#Schreiner"], // 100
-    //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
-    v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
-    v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
-    //v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
-    v25Talk = ["#Mann"], // genug für verschnittene Bretter
-    //v26 = ["#Mann"], // trägt 2. Stellage zurück
-    v27Talk = ["#Schreiner"], // zu betrinken
-    v28 = ["#Schreiner"], // ab
-    v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
-    v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
-    v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
-    v31Talk = ["#ShuiTa"], // Wie ihr wollt
-    v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
-    v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
-    v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
-    v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
-    //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
-    v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
-    v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
-    //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
-    v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
-    v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
-    v40Talk2 = ["#Polizist"], //  Halt
-    v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
-    v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
-    v42Talk = ["#Polizist"], // aufklären?
-    v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
+  vOneTalk = ["#Schreiner"], // Schreiner redet
+  vTwo = ["#Rechnung"], // Rechnung fliegt zu ShuiTa
+  vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
+  vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
+  vFive = ["#Rechnung"], // Rechnung wieder weg
+  vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ], // 20 Dollar, Nussbaum
+  vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
+  vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
+  vFifteen = ["#containerSchreiner"], // geht zu Stellage
+  vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
+  vSixteen = ["#containerSchreiner", "stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+  vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
+  vEighteen = ["#Mann"] // umdrehen
+  vEighteen2 = ["#Mann"] // zu Stellage
+  vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+  vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
+  v21Talk = ["#Schreiner"], // 100
+  //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+  v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
+  v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
+  //v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
+  v25Talk = ["#Mann"], // genug für verschnittene Bretter
+  //v26 = ["#Mann"], // trägt 2. Stellage zurück
+  v27Talk = ["#Schreiner"] // zu betrinken
+  v28 = ["#Schreiner"] // ab
+  v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
+  v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
+  v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
+  v31Talk = ["#ShuiTa"], // Wie ihr wollt
+  v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
+  v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
+  v33Talk = ["#ShuiTa"], // "Shui Ta"
+  v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
+  v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
+  //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
+  v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
+  v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
+  //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
+  v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
+  v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
+  v40Talk2 = ["#Polizist"], //  Halt
+  v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
+  v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
+  v42Talk = ["#Polizist"], // aufklären?
+  v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
 
 
     //fünfteSeite
