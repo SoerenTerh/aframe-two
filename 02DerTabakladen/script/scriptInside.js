@@ -22,16 +22,16 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
                 "vSixteenTalk", "vEighteenTalk",
-                "vEighteen", "vEighteen2",
+                "vEighteen", "vEighteen2", "vEighteen3",
                 "v21Talk",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
                 "v29Talk", "v30Talk", "v31Talk", "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk", 
+                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
 				"cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
-				
-                
+
+
                 ];
 at = eventArr[0];
 
@@ -165,8 +165,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
   vSixteen = ["#containerSchreiner", "stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
   vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
-  vEighteen = ["#Mann"] // zu Stellage
-  vEighteen2 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+  vEighteen = ["#Mann"] // umdrehen
+  vEighteen2 = ["#Mann"] // zu Stellage
+  vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
   vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
   v21Talk = ["#Schreiner"], // 100
   //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
@@ -250,7 +251,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
   cSevenTalk = ["#Großvater"], // Guten Tag
   cEight = ["#containerGrossvater" ]; //Grossvater ab
-  
+
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
 // Melanie 2: Der Mann: "Wenn er quathsct, bis der Junge ..." bis Shui Ta: "Ich bin außer mir, dass in meinem Lokal"
