@@ -23,7 +23,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "vFifteen", "vFourteenTalk", "vSixteen",
                 "vSixteenTalk", "vEighteenTalk", "v21Talk",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
-                "v29Talk", "v30Talk", "v31Talk",
+                "v29Talk", "v30Talk", "v31Talk", "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk", 
@@ -179,7 +179,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
   v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
   v31Talk = ["#ShuiTa"], // Wie ihr wollt
-  //v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
+  v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
   v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
   v33Talk = ["#ShuiTa"], // "Shui Ta"
   v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
