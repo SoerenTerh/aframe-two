@@ -10,8 +10,7 @@ var nowClicked = 0;
 var next = true;
 
 //Arrays
-var eventArr = ["one", "two",
-                "twoTalk", "twoTalk2",
+var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
@@ -29,7 +28,10 @@ var eventArr = ["one", "two",
                 "v29Talk", "v30Talk", "v31Talk", "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk"
+                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk", 
+				"cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+				
+                
                 ];
 at = eventArr[0];
 
@@ -194,7 +196,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
   v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
   v42Talk = ["#Polizist"], // aufklären?
-  v43Talk = ["#Polizist", "#ShuiTa"]; // auf Wache, außer mir
+  v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
 
   // //Vera Testreihenfolge
   // var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
@@ -240,7 +242,15 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   //     v42Talk = ["#Polizist"],
   //     v43Talk = ["#Polizist", "#ShuiTa"];
 
-
+  cOneTalk = ["#Frau"], // Frau redet
+  cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
+  cThree = ["#containerShui"]
+  cFourTalk = ["#Polizist"], //vorwärts
+  cFive = ["#containerPolizist"], //Polizist treibt sie
+  cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+  cSevenTalk = ["#Großvater"], // Guten Tag
+  cEight = ["#containerGrossvater" ]; //Grossvater ab
+  
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
 // Melanie 2: Der Mann: "Wenn er quathsct, bis der Junge ..." bis Shui Ta: "Ich bin außer mir, dass in meinem Lokal"
