@@ -30,7 +30,7 @@
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
 
-        <a-scene id="innen" physics="debug: true" >
+        <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
             <!--            position="6 0 -20" rotation= "0 185 0"-->
             <!-- camera-->
             <a-entity  id="camera" position="0 13.6 0">
@@ -314,7 +314,7 @@
                     </a-entity>
 
                     <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="-49.72 7.13 -22.56" scale="2 2 2" rotation="0 0 0" visible="false"
-                              event-set__sFourACC="_event: sFourACC; visible: true">
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -352,7 +352,7 @@
                     </a-entity>
 
                     <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="-0.6 -2.6 0" scale="1 1 1" rotation="0 0 0" visible="false"
-                              event-set__sFourACC="_event: sFourACC; visible: true">
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -423,25 +423,24 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="SchwaegerinAnimsFive_P3end" attribute="position" dur="2500" to="10.86 2 26.32" repeat="0" begin="sFive_P3end"></a-animation>-->
 
                     </a-entity>
-                    <!--
-<a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
-event-set__sFourACC="_event: sFourACC; visible: true">
-<a-animation id="SchwaegerinSchuh1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
-<a-animation id="SchwaegerinSchuh1-2" attribute="position" dur="2500" to="9.60 2 26.38" repeat="0" begin="sFive_P3"></a-animation>
-</a-entity>
-<a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 21.55" scale="1 1 1" rotation="0 -90 0" visible="false"
-event-set__sFourACC="_event: sFourACC; visible: true">
-<a-animation id="SchwaegerinSchuh2" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
-<a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>
-</a-entity>
--->
+
+                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="true">
+                    <!--<a-animation id="SchwaegerinSchuh1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
+                    <a-animation id="SchwaegerinSchuh1-2" attribute="position" dur="2500" to="9.60 2 26.38" repeat="0" begin="sFive_P3"></a-animation>-->
+                    </a-entity>
+                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 21.55" scale="1 1 1" rotation="0 -90 0" visible="true">
+                    <!--event-set__sFourACC="_event: sFourACC; visible: true">
+                    <a-animation id="SchwaegerinSchuh2" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
+                    <a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>-->
+                    </a-entity>
+
 
 
                     <!-- Sockel-->
                     <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="11.47 2 26.02" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
-                    <a-animation id="SchwaegerinsFive_P3end2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end2"></a-animation>
+                    <!--<a-animation id="SchwaegerinsFive_P3end2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end2"></a-animation>-->
 
                 </a-entity>
 
@@ -459,7 +458,7 @@ event-set__sFourACC="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
-                              event-set__sFourACC="_event: sFourACC; visible: true">
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -489,7 +488,7 @@ event-set__sFourACC="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0.95 -0.46 -2.08" scale="1 1 1" rotation="0 -270 0" visible="false"
-                              event-set__sFourACC="_event: sFourACC; visible: true">
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
