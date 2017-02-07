@@ -13,7 +13,7 @@ var timeoutId = null;
 //Arrays
 var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                /*"fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no", "sFive_P3s",
                 "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
@@ -29,7 +29,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v29Talk", "v30Talk", "v31Talk", "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",*/
+                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
                ];
 
