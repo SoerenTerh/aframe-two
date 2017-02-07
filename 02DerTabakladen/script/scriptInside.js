@@ -15,9 +15,9 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no", "sFive_P3s",
-                "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
-                "sFive_P4", "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSixTalk4", "sSeven_P1", "sSeven_P22", "sSeven_P2",
+                "sFourTalk1", "sFourTalk2", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
+                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -122,26 +122,28 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
-    sFiveTalk = ["#ShuiTa"],
-    sFiveTalk2 = ["#Neffe"],
-    sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
-    sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
-    sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
-    sFive_P3no = ["#Nichte"],
-    sFive_P3s = ["#Schwaegerin"],
-    sFive_P3end = ["#Schwaegerin"],
-    sFive_P3end2 = ["#Schwaegerin"],
-    sFiveTalk3 = ["#Schwaegerin"],
-    sFive_P4 = ["#Schwaegerin", "#tabakladenTUERi"], // Drehen vor die Türe - Türe auf
+  sFiveTalk = ["#ShuiTa"],
+  sFiveTalk2 = ["#Neffe"],
+  sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
+  sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
+  sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
+  sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
+  //sFive_P3s = ["#Schwaegerin"],
+  //sFive_P3end = ["#Schwaegerin"],
+  //sFive_P3end2 = ["#Schwaegerin"],
+  //sFiveTalk3 = ["#Schwaegerin"],
+ // Drehen vor die Türe - Türe auf
 
-    sSixTalk1 = ["#ShuiTa"],
-    sSixTalk2 = ["#Mann"],
-    sSixTalk3 = ["#ShuiTa"],
-    sSixTalk4 = ["#ShuiTa"],
+  sSixTalk1 = ["#ShuiTa", "#Mann"],
+  sSixTalk2 = ["#ShuiTa"],
+  sSixTalk3 = ["#ShuiTa"],
 
-    sSeven_P1 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann räumt Schlafplätze vom Boden auf
-    sSeven_P22 = ["#Mann"],
-    sSeven_P2 = ["#Mann", "#bett", "bett-2", "bett-3", "bett-4", "bett-5", "bett-6", "bett-7", "bett-8"], // Mann legt Schlafplätze auf dem Regal ab
+  sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Mann räumt Schlafplätze vom Boden auf
+
+  sSeven_P2rot = ["#ShuiTa"],
+  sSeven_PickUp2 = ["#ShuiTa", "#bett-3", "#bett-4", "#bett-5"],
+  sSeven_P2end = ["#ShuiTa"], // Mann legt Schlafplätze auf dem Regal ab
+    sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
 
     vOneTalk = ["#Schreiner"], // Schreiner redet
