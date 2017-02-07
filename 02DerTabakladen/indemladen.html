@@ -292,16 +292,12 @@
             <a-entity rotation="0 180 0">
 
                 <!--Frau-->
-                <a-entity id="containerFrau" class="cSixAll play" position="0 0 0">
+                <a-entity id="containerFrau" class="cSixAll play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0">
                     <a-entity id="Frau" class="one two twoTalk twoTalk2 three fourTalk sOneTalk sFourACC vElevenTalk v22Talk cOneTalk play"
                               obj-model="obj:#figurObj"
-                              position="1.03 0.63 -25.09" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="-90 -90 0" visible="true"
+                              position="0 2 0" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl; on:one; poolsize:100; volume:5; loop:true"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0"
-                                     repeat="0" begin="three"></a-animation>
-                        <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="1.03 2 -25.09"
-                                     repeat="0" begin="three"></a-animation>
                         <a-sound id="twoTalkFrau" class="wait" src="#frau1" volume="10" on="twoTalk"></a-sound>
                         <a-sound id="twoTalkFrau2" class="wait" src="#frau2" volume="10" on="twoTalk2"></a-sound>
                         <a-sound id="fourTalkFrau" class="wait" src="#frau3" volume="10" on="fourTalk"></a-sound>
@@ -318,17 +314,22 @@
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="5.08 2 -21.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__3="_event: three; visible: true"></a-entity>
+                    <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0"
+                                 repeat="0" begin="three"></a-animation>
+                    <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="-1.71 0.00  -21.22"
+                                 repeat="0" begin="three"></a-animation>
                 </a-entity>
 
                 <!--Mann-->
 
-                <a-entity id="containerMann" class="cSixAll play" position="2.12 2 -17.75" rotation="-90 -90 0">
+                <a-entity id="containerMann" class="cSixAll play" position="-1.09 2 -14.02" rotation="-90 -90 0">
 
 
                     <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC
-                              sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk vEighteen vEighteen2 v25Talk v29Talk play" obj-model="obj:#figurObj" position="0 -0.4 0"
+                              sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk vEighteen vEighteen2 v25Talk v29Talk play" obj-model="obj:#figurObj"
+                              position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
@@ -351,15 +352,17 @@
 
                     </a-entity>
 
-                    <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="-0.6 -2.6 0" scale="1 1 1" rotation="0 0 0" visible="false"
+                    <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="0 0 0" scale="1 1 1" rotation="0 0 0" visible="false"
                               event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="8 0 0.75" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
                     <a-animation id="MannAnimFive" attribute="rotation" class="wait" dur="2500" to="0 -90 0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="MannAnimFive2" attribute="position" class="wait" dur="2500" to="3.01 0.00 -14.02" repeat="0" begin="five"></a-animation>
+
 
 
                     <a-animation id="MannAnimsSeven_P1" attribute="rotation" class="wait" dur="2500" to="0 0 0" repeat="0" begin="sSeven_P1"></a-animation>
@@ -379,18 +382,16 @@
                 </a-entity>
 
                 <!--Bruder-->
-                <a-entity id="containerBruder" position="0 0 0"
+                <a-entity id="containerBruder" position="6.92 0.90 18.66" rotation="-90 -90 0"
                           event-set__sFive_P3="_event: sFive_P3; visible: false">
                     <!--event-set__sTwo_P1="_event: ;position: 14.30 0.28  -19.39"
 event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
-                    <a-entity id="Bruder" class="one five fiveAll sFive_P1 sFive_P2 sFive_P3s sFive_P3end sFiveTalk3 play" obj-model="obj:#figurObj" position="8.14 0.63 15.00" scale="9.5 9.7 9.5" material="color:#595959" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Bruder" class="one five fiveAll sFive_P1 sFive_P2 sFive_P3s sFive_P3end sFiveTalk3 play" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5" material="color:#595959" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:3;loop:true;"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #595959"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0"
                               >
-                        <a-animation id="BruderAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="BruderAnimFive2" attribute="position" dur="2500" to="8.14 2 15.00" repeat="0" begin="five"></a-animation>
 
                         <a-animation id="BruderAnimsFiveP1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P1"></a-animation>
                         <a-animation id="BruderAnimFiveP1-2" attribute="position" dur="2500" to="11.49 2 19.23" repeat="0" begin="sFive_P1"></a-animation>
@@ -398,23 +399,25 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelBruder" obj-model="obj:#SockelObj" position="12.28 2 19.31" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelBruder" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
+
+                    <a-animation id="BruderAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="BruderAnimFive2" attribute="position" dur="2500" to="6.92 0 18.66" repeat="0" begin="five"></a-animation>
 
                     <a-animation id="BruderAnimsFive_P2" attribute="position" dur="2500" to="-11.94 0 -33.25" repeat="0" begin="sFive_P2"></a-animation>
                 </a-entity>
 
                 <!--Schwaegerin-->
-                <a-entity id="containerSchwaegerin" position="0 0 0"
+                <a-entity id="containerSchwaegerin" position="5.12 1.40 25.73" rotation="-90 -90 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P4="_event: sFive_P4; visible: false">
-                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3s sFive_P3end sFive_P3end2 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj" position="7.32 0.63 22.12" scale="9.5 9.6 9.5" material="color:#737373" rotation="-89.95437383553924 -90 0" visible="true"
+                    <a-entity id="Schwaegerin" class="one five fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3s sFive_P3end sFive_P3end2 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj"
+                              position="0 0 0" scale="9.5 9.6 9.5" material="color:#737373" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:6;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #737373"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="SchaegerinAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="SchwaegerinAnimFive2" attribute="position" dur="2500" to="7.32 2 22.12" repeat="0" begin="five"></a-animation>
                         <a-sound id="sevenTalkSchwaegerin" class="wait" src="#schwaegerin1" volume="10" on="sevenTalk"></a-sound>
                         <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
                         <!--<a-sound id="sFiveTalk3Schwaegerin" class="wait" src="#schwaegerin3" volume="10" on="sFiveTalk3"></a-sound>
@@ -434,10 +437,12 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>-->
                     </a-entity>
 
+                    <a-animation id="SchaegerinAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="SchwaegerinAnimFive2" attribute="position" dur="2500" to="7.82 0 25.73" repeat="0" begin="five"></a-animation>
 
 
                     <!-- Sockel-->
-                    <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="11.47 2 26.02" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
                     <!--<a-animation id="SchwaegerinsFive_P3end2" attribute="position" dur="2500" to="-12.46 0 -43.07" repeat="0" begin="sFive_P3end2"></a-animation>-->
@@ -445,14 +450,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Großvater-->
-                <a-entity id="containerGroßvater" class="cEight play" position="0 0 0">
-                    <a-entity id="Großvater" class="one five fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0.91 0.63 19.59" scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="-90 90 0" visible="true"
+                <a-entity id="containerGroßvater" class="cEight play" position="3.64 1.26 15.21" rotation="-90 90 0">
+                    <a-entity id="Großvater" class="one five fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
+                              scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:4;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #8C8C8C"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="GroßvaterAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="0.91 2 19.59" repeat="0" begin="five"></a-animation>
 
 						<a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
                     </a-entity>
@@ -461,22 +465,25 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
+                    <a-animation id="GroßvaterAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="1.61 0 15.21" repeat="0" begin="five"></a-animation>
+
+
                     <!-- Sockel-->
-                    <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="5.62 2 15.41" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
                 </a-entity>
 
                 <!--Neffe-->
-                <a-entity id="containerNeffe"  class="five sFourACC sFive_P1 sFive_P2 sFive_P3 play" position="0 0 0"
+                <a-entity id="containerNeffe"  class="five sFourACC sFive_P1 sFive_P2 sFive_P3 play" position="2.44 1.76 -6.73" rotation="-90 90 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P3="_event: sFive_P3; visible: false">
-                    <a-entity id="Neffe" class="one twoTalk fiveAll fiveTalk2 sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj" position="0.74 0.63 -2.7" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="-90 90 0" visible="true"
+                    <a-entity id="Neffe" class="one twoTalk fiveAll fiveTalk2 sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #A6A6A6"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="NeffeAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="NeffeAnimFive2" attribute="position" dur="2500" to="0.74 2 -2.7" repeat="0" begin="five"></a-animation>
+
                         <a-sound id="twoTalkNeffe" class="wait" src="#neffe1" volume="10" on="twoTalk"></a-sound>
                         <a-sound id="fiveTalkNeffe" class="wait" src="#neffe2" volume="10" on="fiveTalk2"></a-sound>
                         <a-sound id="sTwoTalkNeffe" class="wait" src="#neffe3" volume="10" on="sTwoTalk"></a-sound>
@@ -491,8 +498,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
+                    <a-animation id="NeffeAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="NeffeAnimFive2" attribute="position" dur="2500" to="1.99 0 -6.29" repeat="0" begin="five"></a-animation>
+
                     <!-- Sockel-->
-                    <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="5.62 2 -6.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
                     <a-animation id="neffeAnimssFive_P2" attribute="position" dur="2500" to="-8.75 0 -14.25" repeat="0" begin="sFive_P2"></a-animation>
@@ -500,64 +510,69 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Nichte-->
-                <a-entity id="containerNichte"  position="0 0 0"
+                <a-entity id="containerNichte"  position="18.66 13.98 7.15" rotation="-90 0 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P3no="_event: sFive_P3no; visible: false">
-                    <a-entity id="Nichte" class="one five sFive_P3no fiveAll play" obj-model="obj:#figurObj" position="15 13.86 4.94" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="-90 0 0" visible="true"
+                    <a-entity id="Nichte" class="one five sFive_P3no fiveAll play" obj-model="obj:#figurObj"
+                              position="0 2 0" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:7;loop:true"
                               sound__5="src:#gaeste1; class:wait; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #BFBFBF"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="NichteAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="13.76 2 1.07" repeat="0" begin="five"></a-animation>
 
                         <a-animation id="NichteAnimsFiveP1" attribute="rotation" dur="2500" to="0 -180.00  0" repeat="0" begin="sFive_P3"></a-animation>
                         <a-animation id="NichteAnimFiveP1-2" attribute="position" dur="2500" to="17.02 2 5.16" repeat="0" begin="sFive_P3"></a-animation>
 
                     </a-entity>
 
+                    <a-animation id="NichteAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="12.13 0 -3.84" repeat="0" begin="five"></a-animation>
+
                     <!-- Sockel-->
-                    <a-entity id="sockelNichte" obj-model="obj:#SockelObj" position="17.63 2 5.12" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelNichte" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
                     <a-animation id="NichteAnimsFive_P2" attribute="position" dur="2500" to="-15.65 0 -15.87" repeat="0" begin="sFive_P3"></a-animation>
                 </a-entity>
 
                 <!--Junge-->
-                <a-entity id="containerJunge"  class="sOne_P2 sOne_P3 sFourP3begin sFour_P3 cSixAll play" position="0 0 0"
+                <a-entity id="containerJunge"  class="sOne_P2 sOne_P3 sFourP3begin sFour_P3 cSixAll play" position="19.02 13.52 -22.88" rotation="-90 -180 0"
                           event-set__sFour_P3="_event: sFour_P3; visible: false">
-                    <a-entity id="Junge" class="one five fiveAll v40Talk3 play" obj-model="obj:#figurObj" position="20.03 13.37 -18.88" scale="6.65 6.65 6.65" material="color:#D9D9D9" rotation="-90 -180 0" visible="true"
+                    <a-entity id="Junge" class="one five fiveAll v40Talk3 play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D9D9D9" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #D9D9D9"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="JungeAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="JungeAnimFive2" attribute="position" dur="2500" to="12.92 2 -19.38" repeat="0" begin="five"></a-animation>
-
+                        <!--
                         <a-animation id="Junge_sFourP3begin" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0" begin="sFourP3begin"></a-animation>
                         <a-animation id="Junge_sFourP3begin-2" class="wait" attribute="position" dur="2500" to="15.59 2 -16.85" repeat="0" begin="sFourP3begin"></a-animation>
-
+-->
 
                         <a-sound id="v40Talk3Junge" class="wait" src="#jungeV40_3" volume="10" on="v40Talk3"></a-sound>
 
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="17.21 2 -16.5" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"
                               event-set__sFourP3begin="_event: sFourP3begin; position: 14.46 2 -19.34"></a-entity>
-                    <a-animation id="JungeSockel_sFour_P2" class="wait" attribute="position" dur="2500" to="-18.81 2 0" repeat="0" begin="sFourP3begin"></a-animation>
+                    <!--<a-animation id="JungeSockel_sFour_P2" class="wait" attribute="position" dur="2500" to="-18.81 2 0" repeat="0" begin="sFourP3begin"></a-animation>-->
+
+
+                    <a-animation id="JungeAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
+                    <a-animation id="JungeAnimFive2" attribute="position" dur="2500" to="12.92 2 -14.12" repeat="0" begin="five"></a-animation>
+
                 </a-entity>
 
                 <!--ShuiTa-->
 
-                <a-entity id="containerShuiTa" class="two four six v32 cThree cThree1 play" position="-8.09 2 -35" visible="false"
+                <a-entity id="containerShuiTa" class="two four six v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"
 
                           event-set__2="_event: two; visible: true">
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp2 sSeven_P2end vTwoTalk vSixTalk vNineTalk vElevenTalk
                               vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
                               v31Talk v33Talk v34Talk v36Talk v37Talk v38Talk v39Talk v40Talk v43Talk cTwoTalk play"
-                              obj-model="obj:#figurObj" position="0 0 0" scale="9.5 9.2 9.5"
+                              obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5"
                               material="color:#262626" rotation="0 0 0" visible="true"
                               event-set__2="_event: two; visible: true">
 
@@ -597,16 +612,16 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     </a-entity>
 
                     <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl"
-                              position="-0.69 -2.87 -0.17" scale="1 1 1" rotation="0 0 0" visible="true">
+                              position="-4.42 -0.84 -0.47" scale="1 1 1" rotation="0 0 0" visible="true">
                         <!-- <a-animation class="wait" attribute="position" to="0.54 -0.62 -33.83" begin="seven"></a-animation> -->
                     </a-entity>
 
 
                     <!-- Sockel-->
-                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="8.02 0.16 0.38" scale="11 11 11"
+                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11"
                               material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
-                    <a-animation id="ShuiTaAnimFourP" class="wait" attribute="position" dur="2500" to="0.5 2 -13" repeat="0"
+                    <a-animation id="ShuiTaAnimFourP" class="wait" attribute="position" dur="2500" to="-3.10 0 -13" repeat="0"
                           begin="four"></a-animation>
                     <a-animation id="ShuiTaAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                           begin="four"></a-animation>
@@ -633,7 +648,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!--Schreiner-->
 
-                <a-entity id="containerSchreiner"  class="two four vFifteen vSixteen play" visible="false" position="-13.44 2.00 -38.82"
+                <a-entity id="containerSchreiner"  class="two four vFifteen vSixteen play" visible="false" position="-13.44 0 -38.82"
                           event-set__2="_event: two; visible: true"  >
                     <a-entity id="Schreiner" class="two four vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk
                               vElevenTalk vFifteen vSixteenTalk vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
@@ -665,7 +680,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
                     <!-- Schreiner in Laden -->
-                    <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-6 2 -12"
+                    <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-9.00 0 -16.70"
                                 repeat="0" begin="four"></a-animation>
                     <a-animation id="SchreinerAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 150 0"
                                 repeat="0" begin="four"></a-animation>
