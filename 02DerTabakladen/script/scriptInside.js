@@ -8,6 +8,7 @@ var fireAtString = 0;
 var lastClickableFused = 0;
 var nowClicked = 0;
 var next = true;
+var timeoutId = null;
 
 //Arrays
 var eventArr = ["one", "two", "twoTalk", "twoTalk2",
@@ -29,10 +30,9 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
-				"cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+				        "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+              ];
 
-
-                ];
 at = eventArr[0];
 
 var persons = ["#Frau",
@@ -70,7 +70,7 @@ var personColors = ["#4D4D4D",
                     "#FFF",
                     "#FFF"];
 
-
+//ersteSeite
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
@@ -93,19 +93,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sixTalk = ["#ShuiTa",  "#Mann"],
     seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
-      //  eight = [],
-      //  nine = [],
-      //  ten = [],
-      //  eleven = [],
-      //  twelve = [],
-      //  thirteen = [],
-      //  fourteen = [],
-      //  fivteen = [],
-      //  sixteen = [],
-      //  seventeen = [],
-      //  eighteen = [],
-      //  nineteen = [],
-      //  twenty = [],
+    //  eight = [],
+    //  nine = [],
+    //  ten = [],
+
 
     /*sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
     sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
@@ -113,14 +104,14 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
     */
 
-  sOneTalk = ["#Frau"],
-  sTwoTalk = ["#Neffe"],
-  sThreeTalk = ["#Mann"],
+    sOneTalk = ["#Frau"],
+    sTwoTalk = ["#Neffe"],
+    sThreeTalk = ["#Mann"],
 
-  sFourTalkStart = ["#Mann"],
-  sFourTalk1 = ["#Mann", "#Schwaegerin"],
-  sFourTalk2 = ["#Mann"],
-  //sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],
+    sFourTalkStart = ["#Mann"],
+    sFourTalk1 = ["#Mann", "#Schwaegerin"],
+    sFourTalk2 = ["#Mann"],
+    //sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],
 
     /*sFourACC1 = ["#accMann"],
      sFourACC2 = ["#accNeffe"],
@@ -199,58 +190,43 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
   v42Talk = ["#Polizist"], // aufklären?
   v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
 
-  // //Vera Testreihenfolge
-  // var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
-  //     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
-  //     //twoTalk = ["#Frau", "#Neffe"],
-  //     three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
-  //     four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
-  //
-  //     // vOneTalk = ["#Schreiner"], // Schreiner redet
-  //     // //vTwo = ["#ShuiTag", "Rechnung"],
-  //     // vTwoTalk = ["#ShuiTa", "#Schreiner"], // zieht Rechnung aus Tasche
-  //     // vFourTalk = ["#ShuiTa", "#Schreiner"],
-  //     // vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ],
-  //     // vNineTalk = ["#ShuiTa", "#Schreiner"],
-  //     // vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"],
-  //     // vFourteenTalk = ["#ShuiTa"],
-  //     // //vFifteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
-  //     // vSixteenTalk = ["#Schreiner", "#ShuiTa"],
-  //     // //vEighteen = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
-  //     // vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"],
-  //     v21Talk = ["#Schreiner"],
-  //     //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
-  //     v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"],
-  //     v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
-  //     v25Talk = ["#Mann"],
-  //     //v26 = ["#Mann"], // trägt Stellagen zurück
-  //     v27Talk = ["#Schreiner"] // ab
-  //     v28Talk = ["#Mann", "#Frau", "#ShuiTa"],
-  //     v29Talk = ["#Mann", "#ShuiTa"],
-  //     v30Talk = ["#Mann", "#ShuiTa"],
-  //     v31Talk = ["#ShuiTa"],
-  //     //v32 = ["#ShuiTa", "#Polizist"],
-  //     v33Talk = ["#ShuiTa"],
-  //     v34Talk = ["#ShuiTa", "#Polizist"],
-  //     v36Talk = ["#ShuiTa", "#Mann"],
-  //     v37Talk = ["#ShuiTa", "#Polizist", "#Frau"],
-  //     v38Talk = ["#ShuiTa", "#Polizist", "#Mann"],
-  //     v39Talk = ["#ShuiTa", "#Mann"],
-  //     v40Talk = ["#ShuiTa", "#Polizist"],
-  //     v40Talk2 = ["#Polizist"],
-  //     v40Talk3 = ["#Polizist", "#Junge"],
-  //     v41Talk = ["#Polizist", "#Frau"],
-  //     v42Talk = ["#Polizist"],
-  //     v43Talk = ["#Polizist", "#ShuiTa"];
 
-  cOneTalk = ["#Frau"], // Frau redet
-  cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
-  cThree = ["#containerShui"]
-  cFourTalk = ["#Polizist"], //vorwärts
-  cFive = ["#containerPolizist"], //Polizist treibt sie
-  cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
-  cSevenTalk = ["#Großvater"], // Guten Tag
-  cEight = ["#containerGrossvater" ]; //Grossvater ab
+    //fünfteSeite
+    m5zeroTalk = ["#Mann"], //mann14
+
+    m5one = ["#Mann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
+    m5oneTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
+
+    m5three = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
+    m5threeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
+
+    m5four = ["#Polizist"], //tritt ein
+    m5fourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
+
+    m5five = [], //Man verbeugt sich?? ("#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte")
+    m5fiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
+    m5fiveTalk2 = ["#ShuiTa", "#tabakladenTUERi", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
+
+    m5six = ["#Junge", "#fladen01", "#kuchen01"], //Kuch*en* und Flad*en* fallen aus Bluse
+    m5six2 = ["#Frau", "#Junge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
+    m5six2Talk = ["#Polizist"], //polizist6
+
+    m5seven = ["#Polizist"], //Hält Jungen fest
+    m5sevenTalk = ["#Polizist", "#Junge"], //polizist7, junge1
+    m5sevenTalk2 = ["#Polizist", "#Frau"], //polizist8, frau9
+    m5sevenTalk3 = ["#Polizist"], //polizist9,
+    //Timeout -> ShuiTa schweigt
+    m5sevenTalk4 = ["#Polizist", "#ShuiTa"], //polizist10, shui32
+
+
+    cOneTalk = ["#Frau"], // Frau redet
+    cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
+    cThree = ["#containerShui"],
+    cFourTalk = ["#Polizist"], //vorwärts
+    cFive = ["#containerPolizist"], //Polizist treibt sie
+    cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+    cSevenTalk = ["#Großvater"], // Guten Tag
+    cEight = ["#containerGrossvater" ]; //Grossvater ab
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
@@ -383,13 +359,38 @@ function playableFound(currentTarget) {
     if (next === true) {
         if (currentTarget.search(at) !== -1) {
             currentTarget = "#" + at;
+            window.clearTimeout(timeoutId);
             if ((storyline(currentTarget, at)) === 1) {
                 at = eventArr[++i];
             }
         }
         console.log("Next= " + at);
+        timeoutId = setTimeout(function () {
+            for (j; j < window[at].length; j++) {
+                fireAt = window[at][j];
+                console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+            }
+        }, 5000);
     }
 }
+
+//function hint(currentTarget) {
+//    'use strict';
+//    if (next === true) {
+//        if (currentTarget.search(at) !== -1) {
+//            currentTarget = "#" + at;
+//            if ((storyline(currentTarget, at)) === 1) {
+//                at = eventArr[++i];
+//            }
+//        }
+//        console.log("Next= " + at);
+//    }
+//}
+
+
+
 
 //Event Methods
 //$(".clickable").each(function () {
@@ -475,5 +476,5 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
             at = eventArr[++i];
 
         }
-    }, 5000);
+    }, 10000);
 });
