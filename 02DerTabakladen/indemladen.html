@@ -174,15 +174,15 @@
                 <audio id="polizistV42" src="../assets/audio/sechsteSeite/polizist9.mp3" preload="auto"></audio>
                 <audio id="polizistV43" src="../assets/audio/sechsteSeite/polizist10.mp3" preload="auto"></audio>
                 <audio id="shuiV43" src="../assets/audio/sechsteSeite/shui31.mp3" preload="auto"></audio>
-				
+
 				<!--Seite 200-->
-		
+
                 <audio id="cFrau10" src="../assets/audio/sechsteSeite/frau10.mp3" preload="auto"></audio>
                 <audio id="cShui33" src="../assets/audio/sechsteSeite/shui33.mp3" preload="auto"></audio>
                 <audio id="cPolizist11" src="../assets/audio/sechsteSeite/polizist11.mp3" preload="auto"></audio>
                 <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
 				<audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
-              
+
 
 
                 <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
@@ -293,11 +293,9 @@
                 </a-entity>
 
                 <!--Mann-->
-<<<<<<< HEAD
-                <a-entity id="containerMann"  position="2.12 2 -17.75" rotation="-90 -90 0">
-=======
-                <a-entity id="containerMann" class="cSixAll play" position="0 0 0">
->>>>>>> origin/develop
+
+                <a-entity id="containerMann" class="cSixAll play" position="2.12 2 -17.75" rotation="-90 -90 0">
+
                     <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC
                               sFourTalk3 sSixTalk2 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk v25Talk v29Talk play" obj-model="obj:#figurObj" position="0 -0.4 0"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
@@ -416,7 +414,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                         <a-animation id="GroßvaterAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
                         <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="0.91 2 19.59" repeat="0" begin="five"></a-animation>
-						
+
 						<a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
                     </a-entity>
 
