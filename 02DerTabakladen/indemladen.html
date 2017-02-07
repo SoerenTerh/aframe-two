@@ -283,23 +283,14 @@
                 </a-entity>
 
                 <!--Mann-->
-                <a-entity id="containerMann"  position="0 0 0">
+                <a-entity id="containerMann"  position="2.12 2 -17.75" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one five fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC
-                              sFourTalk3 sSixTalk2 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk v25Talk v29Talk play" obj-model="obj:#figurObj" position="2.12 0.63 -17.75"
-                              scale="9.5 9.5 9.5" material="color:#404040" rotation="-89.95437383553924 -90 0" visible="true"
+                              sFourTalk3 sSixTalk2 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk v25Talk v29Talk play" obj-model="obj:#figurObj" position="0 -0.4 0"
+                              scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #404040"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-animation id="MannAnimFive" attribute="rotation" dur="2500" to="0 -90  0" repeat="0" begin="five"></a-animation>
-                        <a-animation id="MannAnimFive2" attribute="position" dur="2500" to="2.12 2 -17.75" repeat="0" begin="five"></a-animation>
-
-                        <a-animation id="MannAnimsSeven_P1" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="sSeven_P1"></a-animation>
-                        <a-animation id="MannAnimsSeven_P1" attribute="position" dur="2500" to="1.91 2 -10.53" repeat="0" begin="sSeven_P1"></a-animation>
-
-                        <a-animation id="MannAnimsSeven_P1" attribute="rotation" dur="2500" to="0 0  0" repeat="0" begin="sSeven_P1"></a-animation>
-                        <a-animation id="MannAnimsSeven_P1" attribute="position" dur="2500" to="-1.97 2 -14.62" repeat="0" begin="sSeven_P1"></a-animation>
-
 
                         <a-sound id="sixTalkMann" class="wait" src="#mann1" volume="10" on="sixTalk"></a-sound>
                         <a-sound id="sevenTalkMann" class="wait" src="#mann2" volume="10" on="sevenTalk"></a-sound>
@@ -321,12 +312,17 @@
                     </a-entity>
 
                     <!-- Sockel-->
-                    <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="6.17 2 -13.87" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+                    <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="8 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
 
-                    <a-animation id="MannAnimFive2" attribute="position" dur="2500" to="9.11 0.00 20.85" repeat="0" begin="sSeven_P22"></a-animation>
+                    <a-animation id="MannAnimFive" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="five"></a-animation>
 
-                    <a-animation id="MannAnimsSeven_P2" attribute="position" dur="2500" to="-5.33 0.00 35.18" repeat="0" begin="sSeven_P2"></a-animation>
+                    <a-animation id="MannAnimsSeven_P1" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="sSeven_P1"></a-animation>
+                    <a-animation id="MannAnimsSeven_P1" attribute="position" dur="2500" to="-2 2 -14.75" repeat="0" begin="sSeven_P1"></a-animation>
+
+                    <a-animation id="MannAnimFive2" attribute="position" dur="2500" to="11 2 3" repeat="0" begin="sSeven_P22"></a-animation>
+
+                    <a-animation id="MannAnimsSeven_P2" attribute="position" dur="2500" to="-3 2 18" repeat="0" begin="sSeven_P2"></a-animation>
 
                 </a-entity>
 
@@ -558,7 +554,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
 
                     <!-- Sockel-->
-                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="8.25 0 0.75" scale="11 11 11"
+                    <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="8 0 0" scale="11 11 11"
                           material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
                     <a-animation id="ShuiTaAnimFourP" class="wait" attribute="position" dur="2500" to="0.5 2 -13" repeat="0"
