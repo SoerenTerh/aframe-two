@@ -75,23 +75,23 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
-    three = ["#sockelFrau", "#Frau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
-    four = ["#ShuiTa", "#Schreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
+    three = ["#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+    four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
     fourTalk = ["#ShuiTa", "#Frau"],
     fourTalk2 = ["#ShuiTa"],
-    five = ["#sockelNeffe", "#Neffe",
-            "#sockelMann", "#Mann",
-            '#sockelSchwaegerin', '#Schwaegerin',
-            "#sockelGroßvater", "#Großvater",
-            "#sockelJunge", "#Junge",
-            "#sockelBruder", "#Bruder",
-            "#sockelNichte", "#Nichte"], //alle Wachen auf
+    five = ["#sockelNeffe", "#containerNeffe",
+            "#sockelMann", "#containerMann",
+            '#sockelSchwaegerin', '#containerSchwaegerin',
+            "#sockelGroßvater", "#containerGroßvater",
+            "#sockelJunge", "#containerJunge",
+            "#sockelBruder", "#containerBruder",
+            "#sockelNichte", "#containerNichte"], //alle Wachen auf
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
     fiveTalk2 = ["#Neffe"],
 
     six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     sixTalk = ["#ShuiTa",  "#Mann"],
-    seven = ["#ShuiTa"], //ShuiTa Schüttelt Kopf
+    seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
     //  eight = [],
     //  nine = [],
