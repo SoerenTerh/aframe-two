@@ -122,27 +122,27 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
-  sFiveTalk = ["#ShuiTa"],
-  sFiveTalk2 = ["#Neffe"],
-  sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
-  sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
-  sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
-  sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
-  //sFive_P3s = ["#Schwaegerin"],
-  //sFive_P3end = ["#Schwaegerin"],
-  //sFive_P3end2 = ["#Schwaegerin"],
-  //sFiveTalk3 = ["#Schwaegerin"],
- // Drehen vor die Türe - Türe auf
+    sFiveTalk = ["#ShuiTa"],
+    sFiveTalk2 = ["#Neffe"],
+    sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
+    sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
+    sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
+    sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
+    //sFive_P3s = ["#Schwaegerin"],
+    //sFive_P3end = ["#Schwaegerin"],
+    //sFive_P3end2 = ["#Schwaegerin"],
+    //sFiveTalk3 = ["#Schwaegerin"],
+    // Drehen vor die Türe - Türe auf
 
-  sSixTalk1 = ["#ShuiTa", "#Mann"],
-  sSixTalk2 = ["#ShuiTa"],
-  sSixTalk3 = ["#ShuiTa"],
+    sSixTalk1 = ["#ShuiTa", "#Mann"],
+    sSixTalk2 = ["#ShuiTa"],
+    sSixTalk3 = ["#ShuiTa"],
 
-  sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Mann räumt Schlafplätze vom Boden auf
+    sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Mann räumt Schlafplätze vom Boden auf
 
-  sSeven_P2rot = ["#ShuiTa"],
-  sSeven_PickUp2 = ["#ShuiTa", "#bett-3", "#bett-4", "#bett-5"],
-  sSeven_P2end = ["#ShuiTa"], // Mann legt Schlafplätze auf dem Regal ab
+    sSeven_P2rot = ["#ShuiTa"],
+    sSeven_PickUp2 = ["#ShuiTa", "#bett-3", "#bett-4", "#bett-5"],
+    sSeven_P2end = ["#ShuiTa"], // Mann legt Schlafplätze auf dem Regal ab
     sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
 
@@ -224,7 +224,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-	cThree1 = ["#containerShuiTa"],
+    cThree1 = ["#containerShuiTa"],
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
