@@ -17,7 +17,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2", "sFourACC", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+           "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -224,7 +224,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-    cThree1 = ["#containerShuiTa"],
+    
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
