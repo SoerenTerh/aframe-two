@@ -30,7 +30,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+                "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -228,8 +228,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
-    cEight = ["#containerGrossvater" ]; //Grossvater ab
+    cEight = ["#containerGroßvater" ],
+	cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
