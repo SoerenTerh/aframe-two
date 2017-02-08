@@ -1,7 +1,7 @@
 //Variables
 var at = 0;
 var trigggerEvent = 0;
-var i = 0, j = 0, l = 0;
+var i = 0, j = 0, l = 0, m = 0;
 var currentTarget = 0;
 var fireAt = 0;
 var fireAtString = 0;
@@ -11,9 +11,10 @@ var next = true;
 var timeoutId = null;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2",
+var eventArr = ["one",
+                "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
@@ -97,6 +98,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
     fiveTalk2 = ["#Neffe"],
 
+    fiveAndAHalf = ["#containerShuiTa"],
     six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     sixTalk = ["#ShuiTa",  "#Mann"],
     seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
@@ -364,8 +366,8 @@ function playableFound(currentTarget) {
             if (next === true) {
                 console.log("Next= " + at);
                 timeoutId = setTimeout(function () {
-                    for (j; j < window[at].length; j++) {
-                        fireAt = window[at][j];
+                    for (m; m < window[at].length; m++) {
+                        fireAt = window[at][m];
                         console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
                         //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
                         document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');

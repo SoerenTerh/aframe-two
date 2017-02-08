@@ -505,7 +505,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
 
                         <a-sound id="twoTalkNeffe" class="wait" src="#neffe1" volume="10" on="twoTalk"></a-sound>
-                        <a-sound id="fiveTalkNeffe" class="wait" src="#neffe2" volume="10" on="fiveTalk2"></a-sound>
+                        <a-sound id="fiveTalkNeffe" class="wait" src="#neffe2" volume="20" on="fiveTalk2"></a-sound>
                         <a-sound id="sTwoTalkNeffe" class="wait" src="#neffe3" volume="10" on="sTwoTalk"></a-sound>
                         <a-sound id="sFiveTalk2Neffe" class="wait" src="#neffe4" volume="10" on="sFiveTalk2"></a-sound>
                     </a-entity>
@@ -588,11 +588,9 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--ShuiTa-->
 
 
-                <a-entity id="containerShuiTa" class="two four six v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"
+                <a-entity id="containerShuiTa" class="two four fiveAndAHalf six v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"
 				   event-set__2="_event: two; visible: true">
                <!-- <a-entity id="containerShuiTa" class="two four six seven v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"-->
-
-
 
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp2 sSeven_P2end vTwoTalk vSixTalk vNineTalk vElevenTalk
                                                   vFourTalk vSixTalk vNineTalk vElevenTalk vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
@@ -647,13 +645,18 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     <!-- Sockel-->
                     <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11"
-                              material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                              material="color:#000000" rotation="0 -180 0" visible="true">
+                    </a-entity>
 
+                    
+                    
                     <a-animation id="ShuiTaAnimFourP" class="wait" attribute="position" dur="2500" to="-3.10 0 -13" repeat="0"
                                  begin="four"></a-animation>
                     <a-animation id="ShuiTaAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                  begin="four"></a-animation>
-                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="18 0 18" repeat="0"
+                    <a-animation id="ShuiTaAnimFiveAndAHalf" class="wait" attribute="position" dur="2500" to="12.88 0 -13" repeat="0" 
+                                 begin="fiveAndAHalf"></a-animation>
+                    <a-animation id="ShuiTaAnimSix" class="wait" attribute="position" dur="2500" to="12.88 0 18" repeat="0"
                                  begin="six"></a-animation> <!--more details!!-->
 
                     <a-animation id="ShuiTasSevenP1" class="wait" attribute="position" to="9.05 0 -8.38" repeat="0" begin="sSeven_P1"></a-animation>
