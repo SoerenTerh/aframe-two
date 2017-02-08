@@ -11,7 +11,8 @@ var next = true;
 var timeoutId = null;
 
 //Arrays
-var eventArr = ["one", "two", "twoTalk", "twoTalk2",
+var eventArr = ["one",
+                "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
