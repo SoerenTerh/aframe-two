@@ -432,6 +432,12 @@ $(".clickable").on('click', function () {
     }
 });
 
+$(".clickableTrigger").on('click', function () {
+    'use strict';
+    trigggerEvent = "clickableFound";
+    document.querySelector("#cursor").emit(trigggerEvent);
+});
+
 //Cursor is not on .clickable
 $("a-entity").on('fusing', function () {
     'use strict';
