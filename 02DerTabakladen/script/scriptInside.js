@@ -38,7 +38,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
                 "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cFive1", "cFive2", "cSix", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -170,9 +170,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
-    v21 = [ "#Mann", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+    v21 = [ "#Mann", "#tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
     v21_2 = ["#Mann", "#stellage_ohne-rechnung"],
-    v21_3 = [ "#Mann", "tabakladenTUERi"], // Mann kommt wieder rein
+    v21_3 = [ "#Mann", "#tabakladenTUERi"], // Mann kommt wieder rein
     v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
     v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
     //v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
@@ -221,11 +221,13 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-
+    cThree1 = ["#containerShuiTa"],
     cFourTalk = ["#Polizist"], //vorwärts
-    cFive = ["#containerPolizist"], //Polizist treibt sie
-    cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
-    cSeven = ["#containerGroßvater"],
+    cFive = ["#containerPolizist"],
+	cFive1 = ["#containerPolizist"],
+	cFive2 = ["#containerPolizist"],//Polizist treibt sie
+    cSix = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ],
     cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
