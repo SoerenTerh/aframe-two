@@ -313,7 +313,8 @@
 
                 <a-entity id="containerMann" class="five cSixAll play" position="-1.09 2 -14.02" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1
-                              sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk vEighteen vEighteen2 v25Talk v29Talk play" obj-model="obj:#figurObj"
+                              sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk
+                              vEighteen vEighteen2 vEighteen3 v25Talk v29Talk play" obj-model="obj:#figurObj"
                               position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
@@ -364,6 +365,10 @@
                     <a-animation id="MannAnimV18_2P" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0" begin="vEighteen2"></a-animation>
                     <a-animation id="MannAnimV18_2R" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0" begin="vEighteen2"></a-animation>
 
+                    <a-animation id="MannAnimV18_3P" attribute="position" dur="2500" to="-7 2 -16" repeat="0"
+                                 begin="vEighteen3"></a-animation>
+                    <a-animation id="MannAnimV18_3R" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                                 begin="vEigtheen3"></a-animation>
 
                 </a-entity>
 
@@ -790,7 +795,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                   v29Talk v30Talk v31Talk
                                   v33Talk
                                   v34Talk
-                                  cOneTalk cTwoTalk cThree cFourTalk cFive cSixAll cSeven cSevenTalk cEight cNine play" 
+                                  cOneTalk cTwoTalk cThree cFourTalk cFive cSixAll cSeven cSevenTalk cEight cNine play"
                           data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:#blow_candle;on:click" material="" >
 <!--                    class="one play"-->
                     <a-entity class="one six play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"
@@ -839,7 +844,6 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!-- Ablage_Stellage -->
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
-
                           id="stellage_ohne-rechnung" material="" class="vSixteen play">
                   <a-animation id="StellageAnimVSixteenP" attribute="position" dur="2500" to="-4 -0.31 -23" repeat="0"
                           begin="vSixteen"></a-animation>
@@ -860,7 +864,12 @@ begin="vSixteen"></a-animation>
                 </a-entity>
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
-                          id="stellage_ohne-rechnung-2" material=""></a-entity>
+                          id="stellage_ohne-rechnung-2" class="vEighteen3 play" material="">
+                  <a-animation id="StellageAnimV18_3P" attribute="position" dur="2500" to="-4 -0.31 -23" repeat="0"
+                          begin="vEighteen3"></a-animation>
+                  <a-animation id="StellageAnimV18_3R" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                          begin="vEighteen3"></a-animation>
+                </a-entity>
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
                           id="stellage_rechnung" material=""></a-entity>

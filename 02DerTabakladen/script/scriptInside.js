@@ -24,9 +24,10 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
-                "vSixteenTalk", "vEighteenTalk",
+                "vSixteenTalk",
                 "vEighteen", "vEighteen2",
-                //"vEighteen3",
+                "vEighteen3",
+                "vEighteenTalk",
                 "v21Talk",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
                 "v29Talk", "v30Talk", "v31Talk",
@@ -163,7 +164,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
-    //vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
     //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
