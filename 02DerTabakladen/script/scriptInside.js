@@ -23,10 +23,12 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
                 "vSixteenTalk", "vEighteenTalk",
-                "vEighteen", "vEighteen2", "vEighteen3",
+                "vEighteen", "vEighteen2",
+                //"vEighteen3",
                 "v21Talk",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
-                "v29Talk", "v30Talk", "v31Talk", "v32",
+                "v29Talk", "v30Talk", "v31Talk",
+                //"v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
@@ -160,7 +162,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
-    vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    //vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
     //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
@@ -178,19 +180,19 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
-    v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
-    //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
-    v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
-    v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
-    //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
-    v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
-    v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
-    v40Talk2 = ["#Polizist"], //  Halt
-    v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
-    v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
-    v42Talk = ["#Polizist"], // aufklären?
-    v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
+    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
+    // v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
+    // //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
+    // v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
+    // v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
+    // //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
+    // v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
+    // v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
+    // v40Talk2 = ["#Polizist"], //  Halt
+    // v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
+    // v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
+    // v42Talk = ["#Polizist"], // aufklären?
+    // v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
 
 
     //fünfteSeite
@@ -224,7 +226,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-    
+
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
