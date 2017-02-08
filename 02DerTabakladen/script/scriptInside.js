@@ -35,6 +35,9 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
+                "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
+                "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
+                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
                 "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
