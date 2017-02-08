@@ -32,10 +32,12 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v29Talk", "v30Talk", "v31Talk",
                 //"v32",
                 "v33Talk",
-                "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
+                "v34Talk", 
+
                 "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
+//                "v36Talk", "v37Talk", "v38Talk", "v39Talk",
+//                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
 
 at = eventArr[0];
 
