@@ -301,8 +301,7 @@ function storyline(currentTarget, currentEvent) {
 
 
                         if (narrate !== null) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                             wait2(narrate);
                         } else {
                             startNext();
@@ -329,8 +328,7 @@ function storyline(currentTarget, currentEvent) {
                             console.log(animated);
                         }
                         if (currentEvent.search("All") !== -1) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
@@ -361,23 +359,25 @@ function storyline(currentTarget, currentEvent) {
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (next === true) {
-        if (currentTarget.search(at) !== -1) {
-            currentTarget = "#" + at;
-            window.clearTimeout(timeoutId);
-            if ((storyline(currentTarget, at)) === 1) {
-                at = eventArr[++i];
+    if (i < eventArr.length) {
+        if (next === true) {
+            if (currentTarget.search(at) !== -1) {
+                currentTarget = "#" + at;
+                window.clearTimeout(timeoutId);
+                if ((storyline(currentTarget, at)) === 1) {
+                    at = eventArr[++i];
+                }
             }
+            console.log("Next= " + at);
+            timeoutId = setTimeout(function () {
+                for (j; j < window[at].length; j++) {
+                    fireAt = window[at][j];
+                    console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                    //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                    document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+                }
+            }, 5000);
         }
-        console.log("Next= " + at);
-        timeoutId = setTimeout(function () {
-            for (j; j < window[at].length; j++) {
-                fireAt = window[at][j];
-                console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-                document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-            }
-        }, 5000);
     }
 }
 
@@ -450,7 +450,10 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    playableFound(currentTarget);
+    if (i < eventArr.length) {
+        playableFound(currentTarget);
+    }
+    
 
 });
 
