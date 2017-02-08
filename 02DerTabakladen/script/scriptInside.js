@@ -182,19 +182,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
     v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
-    // v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
-    // //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
-    // v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
-    // v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
-    // //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
-    // v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
-    // v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
-    // v40Talk2 = ["#Polizist"], //  Halt
-    // v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
-    // v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
-    // v42Talk = ["#Polizist"], // aufklären?
-    // v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
-
+  
 
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
