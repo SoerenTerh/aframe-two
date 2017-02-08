@@ -314,7 +314,7 @@
                 <a-entity id="containerMann" class="five cSixAll play" position="-1.09 2 -14.02" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1
                               sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk
-                              vEighteen vEighteen2 vEighteen3 v25Talk v29Talk play" obj-model="obj:#figurObj"
+                              vEighteen vEighteen2 vEighteen3 v21 v21_2 v25Talk v29Talk play" obj-model="obj:#figurObj"
                               position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
@@ -369,6 +369,11 @@
                                  begin="vEighteen3"></a-animation>
                     <a-animation id="MannAnimV18_3R" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                  begin="vEigtheen3"></a-animation>
+
+                    <a-animation id="MannAnimV21" attribute="position" dur="2500" to="-7 2 -16" repeat="0"
+                                begin="v21"></a-animation>
+                    <a-animation id="MannAnimV21_2" attribute="position" dur="2500" to="-14 2 -16" repeat="0"
+                                begin="v21_2"></a-animation>
 
                 </a-entity>
 
@@ -846,11 +851,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!-- Ablage_Stellage -->
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
-                          id="stellage_ohne-rechnung" material="" class="vSixteen play">
+                          id="stellage_ohne-rechnung" material="" class="vSixteen v21_2 play">
                   <a-animation id="StellageAnimVSixteenP" attribute="position" dur="2500" to="-4 -0.31 -23" repeat="0"
                           begin="vSixteen"></a-animation>
                   <a-animation id="StellageAnimVSixteenR" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                           begin="vSixteen"></a-animation>
+                  <a-animation id="StellageAnimV21_2" attribute="position" dur="2500" to="-14 -0.31 -23" repeat="0"
+                          begin="v21_2"></a-animation>
 
                     <!--
 <<<<<<< HEAD
