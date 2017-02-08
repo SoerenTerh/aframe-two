@@ -456,7 +456,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Großvater-->
-                <a-entity id="containerGroßvater" class="cEight play" position="3.64 1.26 15.21" rotation="-90 90 0">
+                <a-entity id="containerGroßvater" class="cSeven cEight cNine play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cNine; visible: false">
+				
                     <a-entity id="Großvater" class="one five fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:4;loop:true"
@@ -473,6 +474,9 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     <a-animation id="GroßvaterAnimFive" attribute="rotation" dur="2500" to="0 125.00  0" repeat="0" begin="five"></a-animation>
                     <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="-3.07 0 15.21" repeat="0" begin="five"></a-animation>
+					<a-animation id="cGrossvaterSeven" class="wait" attribute="position" dur="2500" to="33.42 0 6.65" repeat="0" begin="cSeven"></a-animation>
+					<a-animation id="cGrossvaterSeven1" class="wait" attribute="rotation" dur="2500" to="0 87.66 0" repeat="0" begin="cSeven"></a-animation>
+					<a-animation id="cGrossvaterEightAnim" attribute="position" dur="2500" to="-3.07 0 15.21" repeat="0" begin="cEight"></a-animation>
 
 
                     <!-- Sockel-->
@@ -572,7 +576,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!--ShuiTa-->
 
-                <a-entity id="containerShuiTa" class="two four six v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"
+                <a-entity id="containerShuiTa" class="two four six v32 cThree play" position="-8.09 0 -35" visible="false"
 
                           event-set__2="_event: two; visible: true">
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp2 sSeven_P2end vTwoTalk vSixTalk vNineTalk vElevenTalk
@@ -647,8 +651,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                           begin="v32"></a-animation>
 				    <a-animation id="cShuiThreeAnim" class="wait" attribute="rotation" dur="3500" to="10 180 0" repeat="0"
                           begin="cThree"></a-animation>
-				   <a-animation id="cShuiThreeAnim1" class="wait" attribute="rotation" dur="3500" to="0 180 0" repeat="0"
-                          begin="cThree1"></a-animation>
+				   <a-animation id="cShuiThreeAnim1"  class="wait" attribute="rotation" dur="3500" to="0 180 0" repeat="0"
+                          begin="cThree"></a-animation>
 
                 </a-entity>
 
@@ -705,7 +709,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!-- Polizist -->
 
-                <a-entity id="containerPolizist"  class="v32 play" visible="false" position="11.42 2.00 -36.67"
+                <a-entity id="containerPolizist"  class="v32 cFive play" visible="true" position="11.42 2.00 -36.67"
                           event-set="_event: v32; visible: true"  ><!---11.42 2.00 -36.67-->
                     <a-entity id="Polizist" class="v32 v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk cTwoTalk cFourTalkplay"
                               obj-model="obj:#figurObj" position="0 0 0"  scale="9.5 9.7 9.5" material="color:#CCCCCC" rotation="0 0 0" visible="true">
@@ -719,13 +723,26 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="v41TalkPolizist" class="wait" src="#polizistV41" volume="10" on="v41Talk"></a-sound>
                         <a-sound id="v42TalkPolizist" class="wait" src="#polizistV42" volume="10" on="v42Talk"></a-sound>
                         <a-sound id="v43TalkPolizist" class="wait" src="#polizistV43" volume="10" on="v43Talk"></a-sound>
-            						<a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
-            						<a-sound id="cFourTalkPolizist" class="wait" src="#cPolizist12" volume="10" on="cFourTalk"></a-sound>
+            			<a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
+            			<a-sound id="cFourTalkPolizist" class="wait" src="#cPolizist12" volume="10" on="cFourTalk"></a-sound>
 
                     </a-entity>
 
                     <!-- Sockel-->
                     <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="8 0 0.5" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+					
+					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-22.18 180 58.42" repeat="0"
+                                begin="cFive"></a-animation>
+					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 121.74 0" repeat="0"
+                                begin="cFive"></a-animation>
+					<a-animation id="cPolizistFiveAnim3" class="wait"attribute="position" dur="2500" to="-9.17 0 58.42" repeat="0"
+                                begin="cFive"></a-animation>
+					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 -177.62 0" repeat="0"
+                                begin="cFive"></a-animation>
+					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-23.40 0 30.50" repeat="0"
+                                begin="cFive"></a-animation>
+					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 102.56 0" repeat="0"
+                                begin="cFive"></a-animation>
 
                 </a-entity>
 

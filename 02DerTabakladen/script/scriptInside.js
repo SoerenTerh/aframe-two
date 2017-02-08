@@ -13,11 +13,11 @@ var timeoutId = null;
 //Arrays
 var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
+               /* "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFourACC", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourTalk1", "sFourTalk2", "sFourACC", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",*/
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+                /*"sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -29,8 +29,8 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v29Talk", "v30Talk", "v31Talk", "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cSixAll", "cSevenTalk", "cEight"
+                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",*/
+                "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -224,13 +224,15 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-	cThree1 = ["#containerShuiTa"],
+	//cThree1 = ["#containerShuiTa"],
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+	cSeven =["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
-    cEight = ["#containerGrossvater" ]; //Grossvater ab
-
+    cEight = ["#containerGroßvater" ]
+	cNine = ["#containerGroßvater"]; //Grossvater ab
+//  bis 5 erledigt+ 7,8,9
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
 // Melanie 2: Der Mann: "Wenn er quathsct, bis der Junge ..." bis Shui Ta: "Ich bin außer mir, dass in meinem Lokal"
