@@ -2,6 +2,7 @@
  * Created by Sören on 18.12.2016.
  */
 /* innen */
+var entity = document.querySelector('#camera');
 
 $('#tabakladenTUERi').on('click', function () {
     var out = "index.html";
@@ -12,6 +13,15 @@ $('#tabakladenTUERi').on('click', function () {
     }, 1500);
 });
 
+$('#triggerTuer').on('click', function () {
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -8.05, y:13.6, z:3});
+    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:15, z:0});
+});
+
+$('#triggerHinten').on('click', function () {
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -11.25, y:13.60, z:2.86});
+    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:90.00, z:0});
+});
 
 
 

@@ -15,7 +15,9 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFourACC", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourTalk1", "sFourTalk2",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
            "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
@@ -111,14 +113,13 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourTalkStart = ["#Mann"],
     sFourTalk1 = ["#Mann", "#Schwaegerin"],
     sFourTalk2 = ["#Mann"],
-    sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],
+    /*sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],*/
 
-    /*sFourACC1 = ["#accMann"],
+    sFourACC1 = ["#accMann"],
      sFourACC2 = ["#accNeffe"],
      sFourACC3 = ["#Frau"],
      sFourACC4 = ["#Großvater"],
-     sFourACC5 = ["#Schwaegerin"],
-     */
+
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
