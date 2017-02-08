@@ -14,13 +14,13 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
+                /*"fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
-                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
-                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",*/
+                //"sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+              /*  "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -38,7 +38,7 @@ var eventArr = ["one",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
                 "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
-                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
+                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",*/
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cFive1", "cFive2", "cSix", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
@@ -265,7 +265,7 @@ function storyline(currentTarget, currentEvent) {
             }
             function wait2(narrate) {
                 document.querySelector(narrate).addEventListener('sound-ended', function () {
-                    document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
+                  //  document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
                     document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt)); //Test
                     console.log("--------------------Narration End--------------------");
                     startNext();
