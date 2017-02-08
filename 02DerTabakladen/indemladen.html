@@ -33,7 +33,7 @@
         <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
             <!--            position="6 0 -20" rotation= "0 185 0"-->
             <!-- camera-->
-            <a-entity  id="camera" position="-6.75 13.6 0">
+            <a-entity  id="camera" position="0.00 13.6 0">
                 <a-entity camera
                           universal-controls
                           look-controls=""
@@ -759,11 +759,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!-- Tabakladen -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen1.DAE)" id="tabakladen" position="4.31 -1.02 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
 
-                <a-box id="triggerTuer" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="6.23 20.54 -19.92">
+                <a-box id="triggerTuer" class="clickable" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="6.23 20.54 -19.92">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
-                <a-box id="triggerHinten" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="-10.50 20.54 8.12">
+                <a-box id="triggerHinten" class="clickable" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="-10.50 20.54 8.12">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
