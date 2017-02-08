@@ -19,7 +19,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
                 "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-           "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -32,12 +32,10 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "v29Talk", "v30Talk", "v31Talk",
                 //"v32",
                 "v33Talk",
-                "v34Talk", 
-
+                "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
+                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
                 "cOneTalk", "cTwoTalk", "cThree", "cFourTalk", "cFive", "cSixAll", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
-//                "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-//                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
 
 at = eventArr[0];
 
@@ -120,9 +118,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     /*sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],*/
 
     sFourACC1 = ["#accMann"],
-     sFourACC2 = ["#accNeffe"],
-     sFourACC3 = ["#Frau"],
-     sFourACC4 = ["#Großvater"],
+    sFourACC2 = ["#accNeffe"],
+    sFourACC3 = ["#Frau"],
+    sFourACC4 = ["#Großvater"],
 
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
@@ -184,7 +182,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
     v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
-  
+
 
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
@@ -221,10 +219,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
-	cSeven = ["#containerGroßvater"],
+    cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ],
-	cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
+    cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
@@ -367,7 +365,7 @@ function playableFound(currentTarget) {
                     for (j; j < window[at].length; j++) {
                         fireAt = window[at][j];
                         console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-//                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                        //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
                         document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
                     }
                 }, 5000);

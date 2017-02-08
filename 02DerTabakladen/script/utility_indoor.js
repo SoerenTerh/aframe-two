@@ -14,7 +14,7 @@ $('#tabakladenTUERi').on('click', function () {
 });
 
 $('#triggerTuer').on('click', function () {
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -8.05, y:13.6, z:3});
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: 0.25, y:13.6, z:0});
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:15, z:0});
 });
 
