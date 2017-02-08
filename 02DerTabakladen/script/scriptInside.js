@@ -15,18 +15,23 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2", "sFourACC", "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourTalk1", "sFourTalk2",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-           "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
-                "vSixteenTalk", "vEighteenTalk",
-                "vEighteen", "vEighteen2", "vEighteen3",
-                "v21Talk",
+                "vSixteenTalk",
+                "vEighteen", "vEighteen2",
+                "vEighteen3",
+                "vEighteenTalk",
+                "v21Talk", "v21", "v21_2", "v21_3",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
-                "v29Talk", "v30Talk", "v31Talk", "v32",
+                "v29Talk", "v30Talk", "v31Talk",
+                //"v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
@@ -111,14 +116,13 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourTalkStart = ["#Mann"],
     sFourTalk1 = ["#Mann", "#Schwaegerin"],
     sFourTalk2 = ["#Mann"],
-    sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],
+    /*sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],*/
 
-    /*sFourACC1 = ["#accMann"],
-     sFourACC2 = ["#accNeffe"],
-     sFourACC3 = ["#Frau"],
-     sFourACC4 = ["#Großvater"],
-     sFourACC5 = ["#Schwaegerin"],
-     */
+    sFourACC1 = ["#accMann"],
+    sFourACC2 = ["#accNeffe"],
+    sFourACC3 = ["#Frau"],
+    sFourACC4 = ["#Großvater"],
+
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
@@ -156,14 +160,16 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
     vFifteen = ["#containerSchreiner"], // geht zu Stellage
     vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
-    vSixteen = ["#containerSchreiner", "stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#containerSchreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
     vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
     vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
-    //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+    v21 = [ "#Mann", "#tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
+    v21_2 = ["#Mann", "#stellage_ohne-rechnung"],
+    v21_3 = [ "#Mann", "#tabakladenTUERi"], // Mann kommt wieder rein
     v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
     v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
     //v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
@@ -178,19 +184,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
-    v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
-    //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
-    v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
-    v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
-    //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
-    v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
-    v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
-    v40Talk2 = ["#Polizist"], //  Halt
-    v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
-    v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
-    v42Talk = ["#Polizist"], // aufklären?
-    v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
+    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
 
 
     //fünfteSeite
@@ -233,7 +227,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ],
-	cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
+    cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
@@ -303,8 +297,7 @@ function storyline(currentTarget, currentEvent) {
 
 
                         if (narrate !== null) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                             wait2(narrate);
                         } else {
                             startNext();
@@ -331,8 +324,7 @@ function storyline(currentTarget, currentEvent) {
                             console.log(animated);
                         }
                         if (currentEvent.search("All") !== -1) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
@@ -363,23 +355,27 @@ function storyline(currentTarget, currentEvent) {
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (next === true) {
-        if (currentTarget.search(at) !== -1) {
-            currentTarget = "#" + at;
-            window.clearTimeout(timeoutId);
-            if ((storyline(currentTarget, at)) === 1) {
-                at = eventArr[++i];
+    if (i < eventArr.length && at !== undefined) {
+        if (next === true) {
+            if (currentTarget.search(at) !== -1) {
+                currentTarget = "#" + at;
+                window.clearTimeout(timeoutId);
+                if ((storyline(currentTarget, at)) === 1) {
+                    at = eventArr[++i];
+                }
+            }
+            if (next === true) {
+                console.log("Next= " + at);
+                timeoutId = setTimeout(function () {
+                    for (j; j < window[at].length; j++) {
+                        fireAt = window[at][j];
+                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+                    }
+                }, 5000);
             }
         }
-        console.log("Next= " + at);
-        timeoutId = setTimeout(function () {
-            for (j; j < window[at].length; j++) {
-                fireAt = window[at][j];
-                console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-                document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-            }
-        }, 5000);
     }
 }
 
@@ -440,6 +436,12 @@ $(".clickable").on('click', function () {
     }
 });
 
+$(".clickableTrigger").on('click', function () {
+    'use strict';
+    trigggerEvent = "clickableFound";
+    document.querySelector("#cursor").emit(trigggerEvent);
+});
+
 //Cursor is not on .clickable
 $("a-entity").on('fusing', function () {
     'use strict';
@@ -452,7 +454,10 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    playableFound(currentTarget);
+    if (i < eventArr.length && at !== undefined) {
+        playableFound(currentTarget);
+    }
+
 
 });
 
