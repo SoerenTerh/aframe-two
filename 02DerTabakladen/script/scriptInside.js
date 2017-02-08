@@ -25,10 +25,12 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
                 "vSixteenTalk", "vEighteenTalk",
-                "vEighteen", "vEighteen2", "vEighteen3",
+                "vEighteen", "vEighteen2",
+                //"vEighteen3",
                 "v21Talk",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
-                "v29Talk", "v30Talk", "v31Talk", "v32",
+                "v29Talk", "v30Talk", "v31Talk",
+                //"v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
@@ -157,11 +159,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
     vFifteen = ["#containerSchreiner"], // geht zu Stellage
     vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
-    vSixteen = ["#containerSchreiner", "stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#containerSchreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
     vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
-    vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    //vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
     //v21 = ["#ShuiTa", "#Mann", "#stellage_ohne-rechnung-2", "tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
@@ -179,19 +181,19 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32 = ["#ShuiTa", "#Polizist"], // Shui zur Tür, Polizist taucht auf
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm
-    v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
-    //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
-    v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
-    v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
-    //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
-    v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
-    v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
-    v40Talk2 = ["#Polizist"], //  Halt
-    v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
-    v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
-    v42Talk = ["#Polizist"], // aufklären?
-    v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
+    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
+    // v36Talk = ["#ShuiTa", "#Mann"], // vielleicht, Junge? geschnappt
+    // //v36 = ["#Mann"] // gibt Shui Zeichen = zu Shui fahren?
+    // v37Talk = ["#ShuiTa", "#Polizist", "#Frau"], // Unterschied, sei ruhig
+    // v38Talk = ["#ShuiTa", "#Polizist", "#Mann"], // herein, gütig, extra herein
+    // //v39 = ["#Polizist"] // Polizist rein, Mann wieder zu Frau? Oder vorher?
+    // v39Talk = ["#ShuiTa", "#Mann"], // Gäste, da gehen wir also
+    // v40Talk = ["#ShuiTa", "#Polizist"], // Kusine ausrichten, Rufe Straße (wer?), Was ist das?
+    // v40Talk2 = ["#Polizist"], //  Halt
+    // v40Talk3 = ["#Polizist", "#Junge"], // Woher Kuchen? von da drüben
+    // v41Talk = ["#Polizist", "#Frau"], // Diebstahl? wussten nix
+    // v42Talk = ["#Polizist"], // aufklären?
+    // v43Talk = ["#Polizist", "#ShuiTa"], // auf Wache, außer mir
 
 
     //fünfteSeite
@@ -225,7 +227,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
-    
+
     cFourTalk = ["#Polizist"], //vorwärts
     cFive = ["#containerPolizist"], //Polizist treibt sie
     cSixAll = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
@@ -302,8 +304,7 @@ function storyline(currentTarget, currentEvent) {
 
 
                         if (narrate !== null) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                             wait2(narrate);
                         } else {
                             startNext();
@@ -330,8 +331,7 @@ function storyline(currentTarget, currentEvent) {
                             console.log(animated);
                         }
                         if (currentEvent.search("All") !== -1) {
-                            document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'white');
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise'); //Test
+                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
@@ -362,23 +362,27 @@ function storyline(currentTarget, currentEvent) {
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (next === true) {
-        if (currentTarget.search(at) !== -1) {
-            currentTarget = "#" + at;
-            window.clearTimeout(timeoutId);
-            if ((storyline(currentTarget, at)) === 1) {
-                at = eventArr[++i];
+    if (i < eventArr.length && at !== undefined) {
+        if (next === true) {
+            if (currentTarget.search(at) !== -1) {
+                currentTarget = "#" + at;
+                window.clearTimeout(timeoutId);
+                if ((storyline(currentTarget, at)) === 1) {
+                    at = eventArr[++i];
+                }
+            }
+            if (next === true) {
+                console.log("Next= " + at);
+                timeoutId = setTimeout(function () {
+                    for (j; j < window[at].length; j++) {
+                        fireAt = window[at][j];
+                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+//                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+                    }
+                }, 5000);
             }
         }
-        console.log("Next= " + at);
-        timeoutId = setTimeout(function () {
-            for (j; j < window[at].length; j++) {
-                fireAt = window[at][j];
-                console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-                document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-            }
-        }, 5000);
     }
 }
 
@@ -451,7 +455,10 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    playableFound(currentTarget);
+    if (i < eventArr.length && at !== undefined) {
+        playableFound(currentTarget);
+    }
+
 
 });
 
