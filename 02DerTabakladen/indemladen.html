@@ -290,8 +290,8 @@
 
 				<a-asset-item id="PolizeiObj" src="models/UnsereAssets/000/polizei000.obj"></a-asset-item>
                 <a-asset-item id="PolizeiMtl" src="models/UnsereAssets/000/polizei000.mtl"></a-asset-item>
-				
-				
+
+
                 <img src="../assets/panorama-3.png" id="audience" alt="audience">
             </a-assets>
 
@@ -322,7 +322,7 @@
                     <!-- Sockel-->
                     <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__3="_event: three; visible: true"></a-entity>
-                    
+
 <!--                    erste Seite-->
                     <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90  0"
                                  repeat="0" begin="three"></a-animation>
@@ -370,7 +370,7 @@
 
                     <a-animation id="MannAnimFive" attribute="rotation" class="wait" dur="2500" to="0 -90 0" repeat="0" begin="five"></a-animation>
                     <a-animation id="MannAnimFive2_P1" attribute="position" class="wait" dur="2500" to="3.01 0.00 -14.02" repeat="0" begin="five"></a-animation>
-                    
+
 
 
 
@@ -461,7 +461,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--Großvater-->
 
                 <a-entity id="containerGroßvater" class="cSeven cEight cNine play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cNine; visible: false">
-				
+
                     <a-entity id="Großvater" class="one five fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
 					 scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:4;loop:true"
@@ -471,7 +471,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                <!-- <a-entity id="containerGroßvater" class="five cEight play" position="3.64 1.26 15.21" rotation="-90 90 0">
                     <a-entity id="Großvater" class="one  fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"-->
 
-                             
+
 
 						<a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
                     </a-entity>
@@ -588,7 +588,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 				   event-set__2="_event: two; visible: true">
                <!-- <a-entity id="containerShuiTa" class="two four six seven v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"-->
 
-                       
+
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp2 sSeven_P2end vTwoTalk vSixTalk vNineTalk vElevenTalk
                               vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
                               v31Talk v33Talk v34Talk v36Talk v37Talk v38Talk v39Talk v40Talk v43Talk cTwoTalk play"
@@ -705,7 +705,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="SchreinerAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 150 0"
                                 repeat="0" begin="four"></a-animation>
                     <!-- zu Stellage -->
-                    <a-animation id="SchreinerAnimFifteenP" class="wait" attribute="position" dur="2500" to="14 2 -14.5"
+                    <a-animation id="SchreinerAnimFifteenP" class="wait" attribute="position" dur="2500" to="12 2 -28"
                                 repeat="0" begin="vFifteen"></a-animation>
                     <a-animation id="SchreinerAnimVFifteenR" class="wait" attribute="rotation" dur="2500" to="0 90 0"
                                 repeat="0" begin="vFifteen"></a-animation>
@@ -740,7 +740,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     <!-- Sockel-->
                     <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="8 0 0.5" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-					
+
 					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-22.18 180 58.42" repeat="0"
                                 begin="cFive"></a-animation>
 					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 121.74 0" repeat="0"
@@ -763,15 +763,15 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;"
                           sound__1="src:#squeeky_door;on:clickableFound;poolsize:100;volume:10">
-                    
+
 
                     <a-animation attribute="rotation" dur="2500" fill="backwards" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
-                    
+
 <!--                    erste Seite-->
                     <a-animation id="tabakladenTUERiAnimThree" class="wait" attribute="rotation" dur="2500"  to="0 0 0" repeat="0" begin="three"></a-animation>
                     <a-animation id="tabakladenTUERiAnimFour" class="wait" attribute="rotation" dur="2500"  to="0 -90 0" repeat="0" begin="four"></a-animation>
-                    
+
 <!--                    zweite Seite-->
                     <a-animation id="tabakladenTUERiAnim--sFourP3begin" class="wait" attribute="rotation" dur="2500"  to="0 0  0" repeat="0" begin="sFourP3begin"></a-animation>
                     <a-animation id="tabakladenTUERiAnim--sFour_P3" class="wait" attribute="rotation" dur="2500"  to="0 -90  0" repeat="0" begin="sFour_P3"></a-animation>
