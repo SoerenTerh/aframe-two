@@ -359,7 +359,7 @@ function storyline(currentTarget, currentEvent) {
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
-    if (i < eventArr.length) {
+    if (i < eventArr.length && at !== undefined) {
         if (next === true) {
             if (currentTarget.search(at) !== -1) {
                 currentTarget = "#" + at;
@@ -368,15 +368,17 @@ function playableFound(currentTarget) {
                     at = eventArr[++i];
                 }
             }
-            console.log("Next= " + at);
-            timeoutId = setTimeout(function () {
-                for (j; j < window[at].length; j++) {
-                    fireAt = window[at][j];
-                    console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                    //                document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-                    document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-                }
-            }, 5000);
+            if (next === true) {
+                console.log("Next= " + at);
+                timeoutId = setTimeout(function () {
+                    for (j; j < window[at].length; j++) {
+                        fireAt = window[at][j];
+                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+//                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+                    }
+                }, 5000);
+            }
         }
     }
 }
@@ -450,10 +452,10 @@ $("a-entity").on('fusing', function () {
 $(".play").on('fusing', function () {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
-    if (i < eventArr.length) {
+    if (i < eventArr.length && at !== undefined) {
         playableFound(currentTarget);
     }
-    
+
 
 });
 
