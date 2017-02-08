@@ -33,7 +33,7 @@
         <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
             <!--            position="6 0 -20" rotation= "0 185 0"-->
             <!-- camera-->
-            <a-entity  id="camera" position="-6.75 13.6 0">
+            <a-entity  id="camera" position="0 13.6 0">
                 <a-entity camera
                           universal-controls
                           look-controls=""
@@ -158,25 +158,6 @@
                 <audio id="shuiV36" src="../assets/audio/vierteSeite/shui26.mp3" preload="auto"></audio>
 
                 <!--fünfteSeite-->
-                <audio id="mannV36" src="../assets/audio/fuenfteSeite/mann14.mp3" preload="auto"></audio>
-                <audio id="shuiV37" src="../assets/audio/fuenfteSeite/shui27.mp3" preload="auto"></audio>
-                <audio id="polizistV37" src="../assets/audio/fuenfteSeite/polizist3.mp3" preload="auto"></audio>
-                <audio id="frauV37" src="../assets/audio/fuenfteSeite/frau8.mp3" preload="auto"></audio>
-                <audio id="shuiV38" src="../assets/audio/fuenfteSeite/shui28.mp3" preload="auto"></audio>
-                <audio id="polizistV38" src="../assets/audio/fuenfteSeite/polizist4.mp3" preload="auto"></audio>
-                <audio id="mannV38" src="../assets/audio/fuenfteSeite/mann15.mp3" preload="auto"></audio>
-                <audio id="shuiV39" src="../assets/audio/fuenfteSeite/shui29.mp3" preload="auto"></audio>
-                <audio id="mannV39" src="../assets/audio/fuenfteSeite/mann16.mp3" preload="auto"></audio>
-                <audio id="shuiV40" src="../assets/audio/fuenfteSeite/shui30.mp3" preload="auto"></audio>
-                <audio id="polizistV40" src="../assets/audio/fuenfteSeite/polizist5.mp3" preload="auto"></audio>
-                <audio id="polizistV40_2" src="../assets/audio/fuenfteSeite/polizist6.mp3" preload="auto"></audio>
-                <audio id="polizistV40_3" src="../assets/audio/fuenfteSeite/polizist7.mp3" preload="auto"></audio>
-                <audio id="jungeV40_3" src="../assets/audio/fuenfteSeite/junge1.mp3" preload="auto"></audio>
-                <audio id="polizistV41" src="../assets/audio/fuenfteSeite/polizist8.mp3" preload="auto"></audio>
-                <audio id="frauV41" src="../assets/audio/fuenfteSeite/frau9.mp3" preload="auto"></audio>
-                <audio id="polizistV42" src="../assets/audio/fuenfteSeite/polizist9.mp3" preload="auto"></audio>
-                <audio id="polizistV43" src="../assets/audio/fuenfteSeite/polizist10.mp3" preload="auto"></audio>
-                <audio id="shuiV43" src="../assets/audio/fuenfteSeite/shui31.mp3" preload="auto"></audio>
 
                 <!--
                 <audio id="frau8" src="../assets/audio/fuenfteSeite/frau8.mp3" preload="auto"></audio>
@@ -299,7 +280,7 @@
 
                 <!--Frau-->
                 <a-entity id="containerFrau" class="two three cSixAll play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0">
-                    <a-entity id="Frau" class="one twoTalk twoTalk2  fourTalk sOneTalk sFourACC3 vElevenTalk v22Talk cOneTalk play"
+                    <a-entity id="Frau" class="one twoTalk twoTalk2  fourTalk sOneTalk sFourACC vElevenTalk v22Talk cOneTalk play"
                               obj-model="obj:#figurObj"
                               position="0 2 0" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl; on:one; poolsize:100; volume:5; loop:true"
@@ -315,8 +296,8 @@
 
                     </a-entity>
 
-                    <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="2.24 7.08 0.12" scale="2 2 2" rotation="90.00 90.00 0" visible="false"
-                              event-set__accFrauV="_event: sFourACC3; visible: true">
+                    <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="-49.72 7.13 -22.56" scale="2 2 2" rotation="0 0 0" visible="false"
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -335,7 +316,7 @@
                 <a-entity id="containerMann" class="five cSixAll play" position="-1.09 2 -14.02" rotation="-90 -90 0">
 
 
-                    <a-entity id="Mann" class="one fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1
+                    <a-entity id="Mann" class="one fiveAll sixTalk sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC
                               sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 vSixTalk vEighteenTalk vEighteen vEighteen2 v25Talk v29Talk play" obj-model="obj:#figurObj"
                               position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
@@ -360,8 +341,8 @@
 
                     </a-entity>
 
-                    <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
-                              event-set__accMannV="_event: sFourACC1; visible: true">
+                    <a-entity id="accMann" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="0 0 0" scale="1 1 1" rotation="0 0 0" visible="false"
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <!-- Sockel-->
@@ -421,8 +402,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity id="containerSchwaegerin" class="five play" position="5.12 1.40 25.73" rotation="-90 -90 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P4="_event: sFive_P4; visible: false">
-                    <a-entity id="Schwaegerin" class="one  fiveAll sevenTalk sFourTalk2 sFive_P3 sFive_P3s sFive_P3end sFive_P3end2 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj"
-                              position="0 2 0" scale="9.5 9.6 9.5" material="color:#737373" rotation="0 0 0" visible="true"
+                    <a-entity id="Schwaegerin" class="one  fiveAll sevenTalk sFourTalk2 sFourACC sFive_P3 sFive_P3s sFive_P3end sFive_P3end2 sFiveTalk3 sFive_P4" obj-model="obj:#figurObj"
+                              position="0 0 0" scale="9.5 9.6 9.5" material="color:#737373" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:6;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #737373"
@@ -436,11 +417,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     </a-entity>
 
-                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="0.95 1.9 0.13" scale="1 1 1" rotation="0 10 0" visible="true">
+                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="true">
                     <!--<a-animation id="SchwaegerinSchuh1" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
                     <a-animation id="SchwaegerinSchuh1-2" attribute="position" dur="2500" to="9.60 2 26.38" repeat="0" begin="sFive_P3"></a-animation>-->
                     </a-entity>
-                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="-0.88 1.9 0.12" scale="1 1 1" rotation="0 10 0" visible="true">
+                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="7.23 1.95 21.55" scale="1 1 1" rotation="0 -90 0" visible="true">
                     <!--event-set__sFourACC="_event: sFourACC; visible: true">
                     <a-animation id="SchwaegerinSchuh2" attribute="rotation" dur="2500" to="0 180  0" repeat="0" begin="sFive_P3"></a-animation>
                     <a-animation id="SchwaegerinSchuh2-2" attribute="position" dur="2500" to="11.46 2 26.38" repeat="0" begin="sFive_P3"></a-animation>-->
@@ -462,7 +443,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <a-entity id="containerGroßvater" class="cSeven cEight cNine play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cNine; visible: false">
 
-                    <a-entity id="Großvater" class="one five fiveAll sFourACC4 cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
+                    <a-entity id="Großvater" class="one five fiveAll sFourACC cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
 					 scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:4;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
@@ -476,8 +457,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 						<a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
                     </a-entity>
 
-                    <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
-                              event-set__accGroßvaterV="_event: sFourACC4; visible: true">
+                    <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="7.23 1.95 23.41" scale="1 1 1" rotation="0 -90 0" visible="false"
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <a-animation id="GroßvaterAnimFive" attribute="rotation" dur="2500" to="0 125.00  0" repeat="0" begin="five"></a-animation>
@@ -493,7 +474,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Neffe-->
-                <a-entity id="containerNeffe"  class="five sFourACC2 sFive_P1 sFive_P2 sFive_P3 play" position="2.44 1.76 -6.73" rotation="-90 90 0"
+                <a-entity id="containerNeffe"  class="five sFourACC sFive_P1 sFive_P2 sFive_P3 play" position="2.44 1.76 -6.73" rotation="-90 90 0"
                           event-set__sTwo_P1="position: 14.30 0.28  -19.39"
                           event-set__sFive_P3="_event: sFive_P3; visible: false">
                     <a-entity id="Neffe" class="one twoTalk fiveAll fiveTalk2 sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="0 0 0" visible="true"
@@ -512,8 +493,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     </a-entity>
 
-                    <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0.00 13.95 -0.56" scale="1 1 1" rotation="-10.36 0 0" visible="false"
-                              event-set__accNeffeV="_event: sFourACC2; visible: true">
+                    <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0.95 -0.46 -2.08" scale="1 1 1" rotation="0 -270 0" visible="false"
+                              event-set__pWearable="_event: sFourACC; visible: true">
                     </a-entity>
 
                     <a-animation id="NeffeAnimFive" attribute="rotation" dur="2500" to="0 90  0" repeat="0" begin="five"></a-animation>
@@ -556,7 +537,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--Junge-->
                 <a-entity id="containerJunge"  class="five sOne_P2 sOne_P3 sFourP3begin sFour_P3 cSixAll play" position="19.02 13.52 -22.88" rotation="-90 -180 0"
                           event-set__sFour_P3="_event: sFour_P3; visible: false">
-                    <a-entity id="Junge" class="one  fiveAll v40Talk3 play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D9D9D9" visible="true"
+                    <a-entity id="Junge" class="one  fiveAll play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D9D9D9" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
                               event-set__5="_event: sound-ended; material.color: #D9D9D9"
@@ -566,7 +547,6 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-animation id="Junge_sFourP3begin-2" class="wait" attribute="position" dur="2500" to="15.59 2 -16.85" repeat="0" begin="sFourP3begin"></a-animation>
 -->
 
-                        <a-sound id="v40Talk3Junge" class="wait" src="#jungeV40_3" volume="10" on="v40Talk3"></a-sound>
 
                     </a-entity>
 
@@ -590,8 +570,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
 
                     <a-entity id="ShuiTa"  class="two four six seven fourTalk fourTalk2 sixTalk sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp2 sSeven_P2end vTwoTalk vSixTalk vNineTalk vElevenTalk
-                              vFourTalk vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
-                              v31Talk v33Talk v34Talk v36Talk v37Talk v38Talk v39Talk v40Talk v43Talk cTwoTalk play"
+                              vFourTalk vSixTalk vNineTalk vElevenTalk vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
+                              v31Talk v33Talk v34Talk v36Talk cTwoTalk play"
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5"
                               material="color:#262626" rotation="0 0 0" visible="true"
                               event-set__2="_event: two; visible: true">
@@ -622,17 +602,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="v33TalkShui" class="wait" src="#shuiV33" volume="10" on="v33Talk"></a-sound>
                         <a-sound id="v34TalkShui" class="wait" src="#shuiV34" volume="10" on="v34Talk"></a-sound>
                         <a-sound id="v36TalkShui" class="wait" src="#shuiV36" volume="10" on="v36Talk"></a-sound>
-                        <a-sound id="v37TalkShui" class="wait" src="#shuiV37" volume="10" on="v37Talk"></a-sound>
-                        <a-sound id="v38TalkShui" class="wait" src="#shuiV38" volume="10" on="v38Talk"></a-sound>
-                        <a-sound id="v39TalkShui" class="wait" src="#shuiV39" volume="10" on="v39Talk"></a-sound>
-                        <a-sound id="v40TalkShui" class="wait" src="#shuiV40" volume="10" on="v40Talk"></a-sound>
-                        <a-sound id="v43TalkShui" class="wait" src="#shuiV43" volume="10" on="v43Talk"></a-sound>
+
 						 <a-sound id="cTwoTalkShui" class="wait" src="#cShui33" volume="10" on="cTwoTalk"></a-sound>
 
                     </a-entity>
 
                     <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl"
-                              position="0.41 13.16 0.05" scale="1 1 1" rotation="0 0 0" visible="true">
+                              position="-4.42 -0.84 -0.47" scale="1 1 1" rotation="0 0 0" visible="true">
                         <!-- <a-animation class="wait" attribute="position" to="0.54 -0.62 -33.83" begin="seven"></a-animation> -->
                     </a-entity>
 
@@ -710,7 +686,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="SchreinerAnimVFifteenR" class="wait" attribute="rotation" dur="2500" to="0 90 0"
                                 repeat="0" begin="vFifteen"></a-animation>
                     <!-- zu Tür -->
-                    <a-animation id="SchreinerAnimVSixteenP" attribute="position" dur="2500" to="-13 2 -15" repeat="0"
+                    <a-animation id="SchreinerAnimVSixteenP" attribute="position" dur="2500" to="-7 2 -16" repeat="0"
                                 begin="vSixteen"></a-animation>
                     <a-animation id="SchreinerAnimVSixteenR" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                 begin="vSixteen"></a-animation>
@@ -721,18 +697,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <a-entity id="containerPolizist"  class="v32 cFive play" visible="false" position="11.42 2.00 -36.67"
                           event-set="_event: v32; visible: true"  ><!---11.42 2.00 -36.67-->
-                    <a-entity id="Polizist" class="v32 v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk cTwoTalk cFourTalkplay"
+                    <a-entity id="Polizist" class="v32 v34Talk cTwoTalk cFourTalkplay"
                               obj-model="obj:#figurObj" position="0 0 0"  scale="9.5 9.7 9.5" material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
                         <a-sound id="v34TalkPolizist" class="wait" src="#polizistV34" volume="10" on="v34Talk"></a-sound>
-                        <a-sound id="v37TalkPolizist" class="wait" src="#polizistV37" volume="10" on="v37Talk"></a-sound>
-                        <a-sound id="v38TalkPolizist" class="wait" src="#polizistV38" volume="10" on="v38Talk"></a-sound>
-                        <a-sound id="v40TalkPolizist" class="wait" src="#polizistV40" volume="10" on="v40Talk"></a-sound>
-                        <a-sound id="v40Talk2Polizist" class="wait" src="#polizistV40_2" volume="10" on="v40Talk2"></a-sound>
-                        <a-sound id="v40Talk3Polizist" class="wait" src="#polizistV40_3" volume="10" on="v40Talk3"></a-sound>
-                        <a-sound id="v41TalkPolizist" class="wait" src="#polizistV41" volume="10" on="v41Talk"></a-sound>
-                        <a-sound id="v42TalkPolizist" class="wait" src="#polizistV42" volume="10" on="v42Talk"></a-sound>
-                        <a-sound id="v43TalkPolizist" class="wait" src="#polizistV43" volume="10" on="v43Talk"></a-sound>
+
             			<a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
             			<a-sound id="cFourTalkPolizist" class="wait" src="#cPolizist12" volume="10" on="cFourTalk"></a-sound>
 
@@ -758,14 +727,6 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!-- Tabakladen -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen1.DAE)" id="tabakladen" position="4.31 -1.02 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
-
-                <a-box id="triggerTuer" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="6.23 20.54 -19.92">
-                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
-                </a-box>
-
-                <a-box id="triggerHinten" color="white" depth="2" height="2" width="2" rotation="-45 0 0" position="-10.50 20.54 8.12">
-                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
-                </a-box>
 
                 <!-- Türe -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882" id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 clickable" position="-9.84 0 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
