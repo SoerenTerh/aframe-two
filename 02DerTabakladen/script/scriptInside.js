@@ -21,7 +21,7 @@ var eventArr = ["one",
                 "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 //                "sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
                 "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
-                "vOneTalk",
+                "vOne", "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
@@ -153,8 +153,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P2end = ["#ShuiTa"], // Mann legt Schlafplätze auf dem Regal ab
     /*sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],*/
 
-
-    vOneTalk = ["#Schreiner", "#ShuiTa"], // Schreiner redet
+    vOne = ["#ShuiTa"],
+    vOneTalk = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // Rechnung fliegt zu ShuiTa
     vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
     vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
