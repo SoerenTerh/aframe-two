@@ -277,7 +277,7 @@
             <a-entity rotation="0 180 0">
 
                 <!--Frau-->
-                <a-entity id="containerFrau" class="two three cSix play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0">
+                <a-entity id="containerFrau" class="two three cSix cSix1 cSix2 play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
                     <a-entity id="Frau" class="one twoTalk twoTalk2  fourTalk sOneTalk sFourACC3 vElevenTalk v22Talk
                                                m5threeTalk m5sevenTalk2
                                                cOneTalk play"
@@ -312,12 +312,16 @@
                                  repeat="0" begin="three"></a-animation>
                     <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="-1.71 0.00  -21.22"
                                  repeat="0" begin="three"></a-animation>
-					<a-animation id="cfrauanimp" class="wait" attribute="position" dur="2500" to="-5 0.00  -21.22"
-                                 repeat="0" begin="cSix"></a-animation>
+					 <a-animation id="cfrauanimpP" class="wait" attribute="position" dur="2500" to="13.54 0 -11.71" repeat="0" begin="cSix"></a-animation>
+					<a-animation id="cfrauanimpR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
+					
+					<a-animation id="cfrauanimp1P" class="wait" attribute="position" dur="2500" to="-6.75 0 -11.71" repeat="0" begin="cSix1"></a-animation>
+					<a-animation id="cfrauanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0" begin="cSix1"></a-animation>
                 </a-entity>
 
                 <!--Mann-->
-                <a-entity id="containerMann" class="five m5one m5one2 cSix play" position="-1.09 2 -14.02" rotation="-90 -90 0">
+
+                <a-entity id="containerMann" class="five m5one m5one2 cSix cSix1 cSix2 play" position="-1.09 2 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
                     <a-entity id="Mann" class="one fiveAll sixTalk sevenTalk 
                                                sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2 
                                                vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk v29Talk 
@@ -397,8 +401,12 @@
                                  begin="m5one"></a-animation>
                     <a-animation id="m5one2MannAnimP" attribute="position" dur="2500" to="-7 2 -15"
                                  begin="m5one2"></a-animation>
-                    
-                    
+		
+					 <a-animation id="cmannanimPp" class="wait" attribute="position" dur="2500" to="13.77 0 -17.92" repeat="0" begin="cSix"></a-animation>
+					<a-animation id="cmannanimrR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
+					
+					<a-animation id="cmannimp1" class="wait" attribute="position" dur="2500" to="-5.33 0 -14.02" repeat="0" begin="cSix1"></a-animation>
+					<a-animation id="cmannanimr1" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0" begin="cSix1"></a-animation>
 
                 </a-entity>
 
@@ -559,9 +567,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!--Junge-->
-                <a-entity id="containerJunge"  class="five sOne_P2 sOne_P3 sFourP3begin sFour_P3 m5six m5six2 m5seven m5sevenTalk cSix play" position="19.02 13.52 -22.88" rotation="-90 -180 0"
+           <a-entity id="containerJunge"  class="five sOne_P2 sOne_P3 sFourP3begin sFour_P3 m5six m5six2 m5seven m5sevenTalk cSix cSix1 cSix2 play" position="19.02 13.52 -22.88" rotation="-90 -180 0"
                           event-set__sFour_P3="_event: sFour_P3; visible: false"
-                          event-set__m5six="_event: m5six; visible: true">
+                          event-set__m5six="_event: m5six; visible: true"
+                            event-set__cSix2="_event: cSix2; visible: false">
+
                     <a-entity id="Junge" class="one  fiveAll play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D9D9D9" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:10"
@@ -595,10 +605,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="m5sevenAnimJunge" class="wait" attribute="position" to="-7.82 0 -21.22" repeat="0" begin="m5seven"></a-animation>
                     
                     
-                    
-                    
-                    
                     <a-animation id="cjungeanimp" class="wait" attribute="position" dur="2500" to="12.92 2 -20" repeat="0" begin="cSix"></a-animation>
+
+                    <a-animation id="cjungeanimpP" class="wait" attribute="position" dur="2500" to="14.79 0 -6.64" repeat="0" begin="cSix"></a-animation>
+					<a-animation id="cjungeanimpR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
+					
+					<a-animation id="cjungeanimp1P" class="wait" attribute="position" dur="2500" to="-8.18 0 -6.64" repeat="0" begin="cSix1"></a-animation>
+					<a-animation id="cjungeanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0" begin="cSix1"></a-animation>
                 </a-entity>
 
                 <!--ShuiTa-->
@@ -702,14 +715,14 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="ShuiTaAnim32R" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                           begin="v32"></a-animation>
 <!--                    verneigen-->
-                    <a-animation id="m5fiveAnimShui" class="wait" attribute="rotation" dur="3500" to="10 180 0" repeat="0"
+                    <a-animation id="m5fiveAnimShui" class="wait" attribute="rotation" dur="1500" to="10 180 0" repeat="0"
                                  begin="m5five"></a-animation>
-                    <a-animation id="m5five2AnimShui"  class="wait" attribute="rotation" dur="3500" to="0 180 0" repeat="0"
+                    <a-animation id="m5five2AnimShui"  class="wait" attribute="rotation" dur="1500" to="0 180 0" repeat="0"
                                  begin="m5five2"></a-animation>
                     
-				    <a-animation id="cShuiThreeAnim" class="wait" attribute="rotation" dur="3500" to="10 180 0" repeat="0"
+                    <a-animation id="cShuiThreeAnim" class="wait" attribute="rotation" dur="1500" to="10 180 0" repeat="0"
                                  begin="cThree"></a-animation>
-				   <a-animation id="cShuiThreeAnim1"  class="wait" attribute="rotation" dur="3500" to="0 180 0" repeat="0"
+                    <a-animation id="cShuiThreeAnim1"  class="wait" attribute="rotation" dur="1500" to="0 180 0" repeat="0"
                                 begin="cThree1"></a-animation>
 
 
@@ -768,12 +781,12 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!-- Polizist -->
-
-                <a-entity id="containerPolizist"  class="v32 m5four cFive cFive1 cFive2 play" visible="true" position="11.42 0 -36.67"
-                          event-set="_event: v32; visible: true"  ><!---11.42 2.00 -36.67-->
+                <a-entity id="containerPolizist"  class="v32 m5four cFour cFive1 cFive2 cFive3 play" visible="true" position="11.42 0 -36.67"
+                          event-set__v="_event: v32; visible: true" 
+                          event-set__c="_event: cFive3; visible: false" ><!---11.42 2.00 -36.67-->
                     <a-entity id="Polizist" class="v32 v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk 
                                                    m5oneTalk m5fourTalk m5fiveTalk2 m5six2Talk m5sevenTalk m5sevenTalk2 m5sevenTalk3 m5sevenTalk4
-                                                   cTwoTalk cFourTalk play"
+                                                   cTwoTalk cFiveTalk play"
                               obj-model="obj:#figurObj" position="0 2 0"  scale="9.5 9.7 9.5" material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
                         <a-sound id="v34TalkPolizist" class="wait" src="#polizistV34" volume="10" on="v34Talk"></a-sound>
@@ -791,7 +804,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                      begin="m5four"></a-animation>
                         
                         <a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
-                        <a-sound id="cFourTalkPolizist" class="wait" src="#cPolizist12" volume="10" on="cFourTalk"></a-sound>
+                        <a-sound id="cFivePolizist" class="wait" src="#cPolizist12" volume="10" on="cFiveTalk"></a-sound>
 
                     </a-entity>
 
@@ -800,18 +813,18 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     
 					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-7.33 0 20.07" repeat="0"
-                                begin="cFive"></a-animation>
+                                begin="cFour"></a-animation>
 					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 137.51 0" repeat="0"
-                                 begin="cFive"></a-animation>
+                                 begin="cFour"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.17 0 58.42" repeat="0"
+					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.84 0 -19.02" repeat="0"
                                 begin="cFive1"></a-animation>
-					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 -177.62 0" repeat="0"
+					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 89.38 0" repeat="0"
                                 begin="cFive1"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-23.40 0 30.50" repeat="0"
+					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
                                 begin="cFive2"></a-animation>
-					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 102.56 0" repeat="0"
+					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -173 0" repeat="0"
                                 begin="cFive2"></a-animation>
 
                 </a-entity>
@@ -888,7 +901,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                   v29Talk v30Talk v31Talk
                                   v33Talk
                                   v34Talk
-                                  cOneTalk cTwoTalk cThree cFourTalk cFive cSixAll cSeven cSevenTalk cEight cNine play"
+                                  cOneTalk cTwoTalk cThree cFive cFive cSixAll cSeven cSevenTalk cEight cNine play"
                           data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:#blow_candle;on:click" material="" >
 <!--                    class="one play"-->
                     <a-entity class="one six play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"

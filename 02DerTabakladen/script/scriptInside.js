@@ -37,10 +37,11 @@ var eventArr = ["one",
                 "v34Talk",
                 //                "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 //                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
+                
                 "m5zeroTalk", "m5one", "m5one2", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5five2", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
                 "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cFive1", "cFive2", "cSix", "cSeven", "cSevenTalk", "cEight", "cNine"
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -224,11 +225,15 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
     cThree1 = ["#containerShuiTa"],
-    cFourTalk = ["#Polizist"], //vorwärts
-    cFive = ["#containerPolizist"],
+	cFour = ["#containerPolizist"],
+    cFiveTalk = ["#Polizist"], //vorwärts
+	cSix = ["#containerFrau", "#containerMann", "#containerJunge"],
 	cFive1 = ["#containerPolizist"],
+	cSix1 = ["#containerFrau", "#containerMann", "#containerJunge"],
+	cSix2 = ["#containerFrau", "#containerMann", "#containerJunge"],
 	cFive2 = ["#containerPolizist"],//Polizist treibt sie
-    cSix = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+     //werden getrieben und gehen ab
+	cFive3 = ["#containerPolizist"],
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ],
