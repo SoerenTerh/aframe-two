@@ -14,13 +14,13 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-               /* "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
+                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "seven2", "seven3", "seven4", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
-                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",*/
-                //"sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
-                /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-              /*  "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                //                "sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
+                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -34,11 +34,12 @@ var eventArr = ["one",
                 "v29Talk", "v30Talk", "v31Talk",
                 //"v32",
                 "v33Talk",
-                "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
-                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
-                "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
-                "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
-                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",*/
+                "v34Talk",
+                //                "v36Talk", "v37Talk", "v38Talk", "v39Talk",
+                //                "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
+                "m5zeroTalk", "m5one", "m5one2", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
+                "m5fourTalk", "m5five", "m5five2", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
+                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cFive1", "cFive2", "cSix", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
@@ -102,6 +103,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     sixTalk = ["#ShuiTa",  "#Mann"],
     seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    seven4 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
     //  eight = [],
     //  nine = [],
@@ -189,24 +193,26 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
 
-    m5one = ["#Mann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
+    m5one = ["#containerMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
+    m5one2 = ["#containerMann"],
     m5oneTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
 
     m5three = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
     m5threeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
 
-    m5four = ["#Polizist"], //tritt ein
+    m5four = ["#containerPolizist"], //tritt ein
     m5fourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
 
-    m5five = [], //Man verbeugt sich?? ("#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte")
+    m5five = ["#containerShuiTa"], //Man verbeugt sich?? ("#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte")
+    m5five2 = ["#containerShuiTa"],
     m5fiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
-    m5fiveTalk2 = ["#ShuiTa", "#tabakladenTUERi", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
+    m5fiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
 
-    m5six = ["#Junge", "#fladen01", "#kuchen01"], //Kuch*en* und Flad*en* fallen aus Bluse
-    m5six2 = ["#Frau", "#Junge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
+    m5six = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
+    m5six2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
     m5six2Talk = ["#Polizist"], //polizist6
 
-    m5seven = ["#Polizist"], //Hält Jungen fest
+    m5seven = ["#containerPolizist"], //Hält Jungen fest
     m5sevenTalk = ["#Polizist", "#Junge"], //polizist7, junge1
     m5sevenTalk2 = ["#Polizist", "#Frau"], //polizist8, frau9
     m5sevenTalk3 = ["#Polizist"], //polizist9,
@@ -338,6 +344,7 @@ function storyline(currentTarget, currentEvent) {
                     }
 
                 }
+                
             } else {
                 next = true;
             }
@@ -365,14 +372,14 @@ function playableFound(currentTarget) {
             }
             if (next === true) {
                 console.log("Next= " + at);
-                timeoutId = setTimeout(function () {
-                    for (m; m < window[at].length; m++) {
-                        fireAt = window[at][m];
-                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-                        //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-                    }
-                }, 5000);
+//                timeoutId = setTimeout(function () {
+//                    for (m; m < window[at].length; m++) {
+//                        fireAt = window[at][m];
+//                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+//                        //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
+//                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
+//                    }
+//                }, 5000);
             }
         }
     }
