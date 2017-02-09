@@ -193,8 +193,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
 
-    m5one = ["#containerMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
-    m5one2 = ["#containerMann"],
+    m5one = ["#Mann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
+    m5one2 = ["#Mann"],
     m5oneTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
 
     m5three = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
