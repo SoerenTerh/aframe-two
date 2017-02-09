@@ -783,7 +783,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!-- Polizist -->
-                <a-entity id="containerPolizist"  class="v32 m5four cFour cFive1 cFive2 cFive3 play" visible="false" position="-5 0 -30"
+                <a-entity id="containerPolizist"  class="v32 m5four cFour cFive1 cFive2 cFive3 play" visible="false" position="-5 0 -36"
                           event-set__v="_event: v32; visible: true"
                           event-set__c="_event: cFive3; visible: false" ><!---11.42 2.00 -36.67-->
                     <a-entity id="Polizist" class="v32 v32Talk v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk
@@ -803,6 +803,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="m5sevenTalk3" class="wait" src="#polizist9" volume="10" on="m5sevenTalk3"></a-sound>
                         <a-sound id="m5sevenTalk4" class="wait" src="#polizist10" volume="10" on="m5sevenTalk4"></a-sound>
 
+                        <a-animation id="polizistAnimv32" class="wait" attribute="position" dur="2500" to="-5 0 30" repeat="0"
+                                     begin="v32"></a-animation>
                         <a-animation id="m5fourPolizistAnimP" class="wait" attribute="position" dur="2500" to="-3.10 0 -13" repeat="0"
                                      begin="m5four"></a-animation>
 
