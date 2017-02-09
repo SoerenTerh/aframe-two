@@ -1031,12 +1031,14 @@ begin="vSixteen"></a-animation>
                 <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
-                <!-- sky-->
-                <a-sky src="#audience" id="sky" class="m5fiveTalk2 play" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01">
-                    <!--                        fünfte Seite-->
-                    <a-sound id="m5fiveTalk2StimmeAusDemOff" class="wait" src="#stimmeausdemoff1" volume="10" on="m5fiveTalk2"></a-sound>
-                </a-sky>
+                
             </a-entity>
+            <!-- sky-->
+            <a-sky src="#audience" id="sky" class="m5fiveTalk2 play" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01">
+                <!--                        fünfte Seite-->
+                <a-sound id="m5fiveTalk2StimmeAusDemOff" class="wait" src="#stimmeausdemoff1" volume="10" on="m5fiveTalk2"></a-sound>
+            </a-sky>
+            
         </a-scene>
         <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
         <script src="script/utility_indoor.js"></script>
