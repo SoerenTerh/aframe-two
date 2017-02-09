@@ -15,12 +15,12 @@ var eventArr = ["one",
                 "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
+               "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
                 "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+               "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -39,7 +39,7 @@ var eventArr = ["one",
                 "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
                 "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cFive1", "cFive2", "cSix", "cFive3", "cSeven", "cSevenTalk", "cEight", "cNine"
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -220,9 +220,12 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cThree1 = ["#containerShuiTa"],
 	cFour = ["#containerPolizist"],
     cFiveTalk = ["#Polizist"], //vorwärts
+	cSix = ["#containerFrau", "#containerMann", "#containerJunge"],
 	cFive1 = ["#containerPolizist"],
+	cSix1 = ["#containerFrau", "#containerMann", "#containerJunge"],
+	cSix2 = ["#containerFrau", "#containerMann", "#containerJunge"],
 	cFive2 = ["#containerPolizist"],//Polizist treibt sie
-    cSix = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+     //werden getrieben und gehen ab
 	cFive3 = ["#containerPolizist"],
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
