@@ -189,7 +189,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
     v33Talk = ["#ShuiTa"], // "Shui Ta"
     v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
-
+    v36Talk = ["#ShuiTa"],
 
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
