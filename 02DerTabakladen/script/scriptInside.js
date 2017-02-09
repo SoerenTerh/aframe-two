@@ -14,13 +14,13 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-               /* "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
+               "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
-                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",*/
-                //"sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 /*"sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",*/
-              /*  "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
+                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", "sEight",
                 "vOneTalk",
                 "vTwo",
                 "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
@@ -32,14 +32,14 @@ var eventArr = ["one",
                 "v21Talk", "v21", "v21_2", "v21_3",
                 "v22Talk", "v23Talk", "v25Talk", "v27Talk", "v28Talk",
                 "v29Talk", "v30Talk", "v31Talk",
-                //"v32",
+                "v32",
                 "v33Talk",
                 "v34Talk", "v36Talk", "v37Talk", "v38Talk", "v39Talk",
                 "v40Talk", "v40Talk2", "v40Talk3", "v41Talk", "v42Talk", "v43Talk",
                 "m5zeroTalk", "m5one", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
-                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",*/
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFourTalk", "cFive", "cFive1", "cFive2", "cSix", "cSeven", "cSevenTalk", "cEight", "cNine"
+                "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cFive1", "cFive2", "cSix", "cFive3", "cSeven", "cSevenTalk", "cEight", "cNine"
                ];
 
 at = eventArr[0];
@@ -218,11 +218,12 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
     cThree1 = ["#containerShuiTa"],
-    cFourTalk = ["#Polizist"], //vorwärts
-    cFive = ["#containerPolizist"],
+	cFour = ["#containerPolizist"],
+    cFiveTalk = ["#Polizist"], //vorwärts
 	cFive1 = ["#containerPolizist"],
 	cFive2 = ["#containerPolizist"],//Polizist treibt sie
     cSix = ["#containerJunge", "#containerFrau", "#containerMann" ], //werden getrieben und gehen ab
+	cFive3 = ["#containerPolizist"],
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ],

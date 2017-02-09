@@ -675,9 +675,9 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                  begin="v32"></a-animation>
                     <a-animation id="ShuiTaAnim32R" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                           begin="v32"></a-animation>
-				    <a-animation id="cShuiThreeAnim" class="wait" attribute="rotation" dur="3500" to="10 180 0" repeat="0"
+				    <a-animation id="cShuiThreeAnim" class="wait" attribute="rotation" dur="1500" to="10 180 0" repeat="0"
                           begin="cThree"></a-animation>
-				   <a-animation id="cShuiThreeAnim1"  class="wait" attribute="rotation" dur="3500" to="0 180 0" repeat="0"
+				   <a-animation id="cShuiThreeAnim1"  class="wait" attribute="rotation" dur="1500" to="0 180 0" repeat="0"
                           begin="cThree1"></a-animation>
 
 
@@ -737,11 +737,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!-- Polizist -->
 
-                <a-entity id="containerPolizist"  class="v32 cFive cFive1 cFive2 play" visible="true" position="11.42 0 -36.67"
-                          event-set="_event: v32; visible: true"  ><!---11.42 2.00 -36.67-->
+                <a-entity id="containerPolizist"  class="v32 cFour cFive1 cFive2 cFive3 play" visible="false" position="11.42 0 -36.67"
+                          event-set="_event: v32; visible: true" event-set="_event: cFive3; visible: false" ><!---11.42 2.00 -36.67-->
                     <a-entity id="Polizist" class="v32 v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk 
                                                    m5oneTalk m5fourTalk m5fiveTalk2 m5six2Talk m5sevenTalk m5sevenTalk2 m5sevenTalk3 m5sevenTalk4
-                                                   cTwoTalk cFourTalk play"
+                                                   cTwoTalk cFiveTalk play"
                               obj-model="obj:#figurObj" position="0 2 0"  scale="9.5 9.7 9.5" material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
                         <a-sound id="v34TalkPolizist" class="wait" src="#polizistV34" volume="10" on="v34Talk"></a-sound>
@@ -758,7 +758,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         
                         
                         <a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
-                        <a-sound id="cFourTalkPolizist" class="wait" src="#cPolizist12" volume="10" on="cFourTalk"></a-sound>
+                        <a-sound id="cFivePolizist" class="wait" src="#cPolizist12" volume="10" on="cFiveTalk"></a-sound>
 
                     </a-entity>
 
@@ -766,18 +766,18 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
 					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-7.33 0 20.07" repeat="0"
-                                begin="cFive"></a-animation>
+                                begin="cFour"></a-animation>
 					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 137.51 0" repeat="0"
-                                 begin="cFive"></a-animation>
+                                 begin="cFour"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.17 0 58.42" repeat="0"
+					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.84 0 -19.02" repeat="0"
                                 begin="cFive1"></a-animation>
-					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 -177.62 0" repeat="0"
+					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 89.38 0" repeat="0"
                                 begin="cFive1"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-23.40 0 30.50" repeat="0"
+					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
                                 begin="cFive2"></a-animation>
-					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 102.56 0" repeat="0"
+					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -173 0" repeat="0"
                                 begin="cFive2"></a-animation>
 
                 </a-entity>
@@ -848,7 +848,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                   v29Talk v30Talk v31Talk
                                   v33Talk
                                   v34Talk
-                                  cOneTalk cTwoTalk cThree cFourTalk cFive cSixAll cSeven cSevenTalk cEight cNine play"
+                                  cOneTalk cTwoTalk cThree cFive cFive cSixAll cSeven cSevenTalk cEight cNine play"
                           data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze" sound="src:#blow_candle;on:click" material="" >
 <!--                    class="one play"-->
                     <a-entity class="one six play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:2" position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"
