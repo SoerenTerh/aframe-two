@@ -154,8 +154,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     /*sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],*/
 
 
-    vOneTalk = ["#Schreiner"], // Schreiner redet
-    vTwo = ["#Rechnung"], // Rechnung fliegt zu ShuiTa
+    vOneTalk = ["#Schreiner", "#ShuiTa"], // Schreiner redet
+    vTwo = ["#ShuiTa", "#Rechnung"], // Rechnung fliegt zu ShuiTa
     vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
     vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
     vFive = ["#Rechnung"], // Rechnung wieder weg
