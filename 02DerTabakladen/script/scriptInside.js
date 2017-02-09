@@ -146,11 +146,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSixTalk2 = ["#ShuiTa"],
     sSixTalk3 = ["#ShuiTa"],
 
-    sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Mann räumt Schlafplätze vom Boden auf
+    sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
 
     sSeven_P2rot = ["#ShuiTa"],
     sSeven_PickUp2 = ["#ShuiTa", "#bett-3", "#bett-4", "#bett-5"],
-    sSeven_P2end = ["#ShuiTa"], // Mann legt Schlafplätze auf dem Regal ab
+    sSeven_P2end = ["#ShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
     /*sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],*/
 
     vOne = ["#ShuiTa"],
