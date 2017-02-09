@@ -41,7 +41,7 @@ var eventArr = ["one",
                 "m5zeroTalk", "m5one", "m5one2", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5five2", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
                 "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight", "cNine"
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 
 at = eventArr[0];
@@ -236,8 +236,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 	cFive3 = ["#containerPolizist"],
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
-    cEight = ["#containerGroßvater" ],
-    cNine = ["#containerGroßvater" ]; //Grossvater verschwindet
+    cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
