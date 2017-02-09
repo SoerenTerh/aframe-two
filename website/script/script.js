@@ -15,6 +15,8 @@ $(document).ready(function () {
         $(".sevenInfo").addClass("hide");
         $(".eightInfo").addClass("hide");
         $(".nineInfo").addClass("hide");
+        $(".futureInfo").addClass("hide");
+        
     }
 
     //Process Bar
@@ -28,10 +30,21 @@ $(document).ready(function () {
         totalTime = (endDate - beginDate + holidays),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
-//                dateProgress = new Date("01/26/2017")- beginDate,
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.1),
+        //        dateProgress = new Date("02/30/2017") - beginDate,
 
-        output = completionPercentage + 10 + "%";
+        completionPercentage = 0,
+        output = 0;
+    
+//    if (dateProgress < endDate) {
+//        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.07);
+//        output = completionPercentage  + "%";
+//    } else {
+    output = 91  + "%";
+//    }
+
+
+
+       
     $(".progress-bar").css('width', output);
 
 
@@ -102,6 +115,13 @@ $(document).ready(function () {
         if ($(".nineInfo").hasClass("hide")) {
             hide();
             $(".nineInfo").removeClass("hide");
+        }
+    });
+    $(".future").on('click mouseover', function () {
+        color(this);
+        if ($(".futureInfo").hasClass("hide")) {
+            hide();
+            $(".futureInfo").removeClass("hide");
         }
     });
 

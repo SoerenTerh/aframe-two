@@ -80,6 +80,7 @@ $(".clickable").on('click', function () {
     }
 });
 
+
 //Cursor is not on .clickable
 $("a-entity").on('fusing', function () {
     'use strict';
