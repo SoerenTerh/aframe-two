@@ -236,6 +236,23 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
+	
+	/*    cOneTalk = ["#Frau"], // Frau redet
+    cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
+    cThree = ["#containerShuiTa"],
+    cThree1 = ["#containerShuiTa"],
+	cFour = ["#containerPolizist"],
+    cFiveTalk = ["#Polizist"], //vorwärts
+	cSix = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+	cFive1 = ["#containerPolizist"],
+	cSix1 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+	cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+	cFive2 = ["#containerPolizist"],//Polizist treibt sie
+     //werden getrieben und gehen ab
+	cFive3 = ["#containerPolizist"],
+	cSeven = ["#containerGroßvater"],
+    cSevenTalk = ["#Großvater"], // Guten Tag
+    cEight = ["#containerGroßvater" ]; //Grossvater verschwindet*/
 
 
 // Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
