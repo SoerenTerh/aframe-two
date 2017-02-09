@@ -785,8 +785,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
 
                 <!-- Polizist -->
-                <a-entity id="containerPolizist"  class="v32 m5four cFour cFive1 cFive2 cFive3 play" visible="false" position="-5 0 -36"
-                          event-set__v="_event: v32; visible: true"
+                <a-entity id="containerPolizist"  class="v31Talk v32 m5four cFour cFive1 cFive2 cFive3 play" visible="true" position="-5 0 -106"
                           event-set__c="_event: cFive3; visible: false" ><!---11.42 2.00 -36.67-->
                     <a-entity id="Polizist" class="v32 v32Talk v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk v43Talk
                                                    m5oneTalk m5fourTalk m5fiveTalk2 m5six2Talk m5sevenTalk m5sevenTalk2 m5sevenTalk3 m5sevenTalk4
@@ -805,8 +804,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="m5sevenTalk3" class="wait" src="#polizist9" volume="10" on="m5sevenTalk3"></a-sound>
                         <a-sound id="m5sevenTalk4" class="wait" src="#polizist10" volume="10" on="m5sevenTalk4"></a-sound>
 
-                        <a-animation id="polizistAnimv32" class="wait" attribute="position" dur="2500" to="-5 0 30" repeat="0"
-                                     begin="v32"></a-animation>
+
                         <a-animation id="m5fourPolizistAnimP" class="wait" attribute="position" dur="2500" to="-3.10 0 -13" repeat="0"
                                      begin="m5four"></a-animation>
 
@@ -822,6 +820,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <!-- Sockel-->
                     <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
+                    <a-animation id="polizistAnimv32" class="wait" attribute="position" dur="2500" to="-5 0 30" repeat="0"
+                                 begin="v32"></a-animation>
 
 					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-7.33 0 20.07" repeat="0"
                                 begin="cFour"></a-animation>
@@ -1033,14 +1033,14 @@ begin="vSixteen"></a-animation>
                 <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
-                
+
             </a-entity>
             <!-- sky-->
             <a-sky src="#audience" id="sky" class="m5fiveTalk2 play" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01">
                 <!--                        fünfte Seite-->
                 <a-sound id="m5fiveTalk2StimmeAusDemOff" class="wait" src="#stimmeausdemoff1" volume="10" on="m5fiveTalk2"></a-sound>
             </a-sky>
-            
+
         </a-scene>
         <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
         <script src="script/utility_indoor.js"></script>
