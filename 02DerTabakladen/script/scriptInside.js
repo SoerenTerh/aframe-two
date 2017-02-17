@@ -1,7 +1,8 @@
 //Variables
 var at = 0;
+var last = 0;
 var trigggerEvent = 0;
-var i = 0, j = 0, l = 0, m = 0;
+var i = 0, j = 0, l = 0, m = 0, n = 0, o = 0;
 var currentTarget = 0;
 var fireAt = 0;
 var fireAtString = 0;
@@ -14,7 +15,7 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two", "twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                "fourTalk", "fourTalk2", "five", "fiveAll", "fiveTalk2", "fiveAndAHalf", "six", "sixTalk", "seven", "seven2", "seven3", "seven4", "sevenTalk",
+                "fourTalk", "fourTalk2", "five", "fiveAll", "sixTalk", "six", "six2", "sixTalk2", "seven", "seven2", "seven3", "seven4", "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
@@ -30,19 +31,17 @@ var eventArr = ["one",
                 "vEighteen3",
                 "vEighteenTalk",
                 "v21Talk", "v21", "v21_2",
-                "v22Talk","v21_3", "v23Talk", "v25Talk", "v27Talk", "v28", "v28Talk",
+                "v22Talk", "v21_3", "v23Talk", "v25Talk", "v27Talk", "v28", "v28Talk",
                 "v29Talk", "v30Talk", "v31Talk",
                 "v32", "v32Talk",
                 "v33Talk",
                 "v34Talk",
                 "v36Talk",
-
                 "m5zeroTalk", "m5one", "m5one2", "m5oneTalk", "m5three", "m5threeTalk", "m5four",
                 "m5fourTalk", "m5five", "m5five2", "m5fiveTalk", "m5fiveTalk2", "m5six", "m5six2",
                 "m5six2Talk", "m5seven", "m5sevenTalk", "m5sevenTalk2", "m5sevenTalk3", "m5sevenTalk4",
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
-
 at = eventArr[0];
 
 var persons = ["#Frau",
@@ -81,7 +80,7 @@ var personColors = ["#4D4D4D",
                     "#FFF"];
 
 //ersteSeite
-var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //alle schlafen + Lampe brennt
+var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
@@ -97,11 +96,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
             "#sockelBruder", "#containerBruder",
             "#sockelNichte", "#containerNichte"], //alle Wachen auf
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
-    fiveTalk2 = ["#Neffe"],
+    sixTalk = ["#Neffe"],
 
-    fiveAndAHalf = ["#containerShuiTa"],
-    six = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
-    sixTalk = ["#ShuiTa",  "#Mann"],
+    six = ["#containerShuiTa"],
+    six2 = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
+    sixTalk2 = ["#ShuiTa",  "#Mann"],
     seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
@@ -193,25 +192,20 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
 
-    m5one = ["#Mann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
-    m5one2 = ["#Mann"],
+    m5one = ["#Mann", "#accMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
+    m5one2 = ["#Mann", "#accMann"],
     m5oneTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
-
     m5three = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
     m5threeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
-
     m5four = ["#containerPolizist"], //tritt ein
     m5fourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
-
-    m5five = ["#containerShuiTa"], //Man verbeugt sich?? ("#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte")
+    m5five = ["#containerShuiTa"], //Man (ShuiTa) verbeugt sich
     m5five2 = ["#containerShuiTa"],
     m5fiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
     m5fiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
-
     m5six = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
     m5six2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
     m5six2Talk = ["#Polizist"], //polizist6
-
     m5seven = ["#containerPolizist"], //Hält Jungen fest
     m5sevenTalk = ["#Polizist", "#Junge"], //polizist7, junge1
     m5sevenTalk2 = ["#Polizist", "#Frau"], //polizist8, frau9
@@ -236,30 +230,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 	cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
-	
-	/*    cOneTalk = ["#Frau"], // Frau redet
-    cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
-    cThree = ["#containerShuiTa"],
-    cThree1 = ["#containerShuiTa"],
-	cFour = ["#containerPolizist"],
-    cFiveTalk = ["#Polizist"], //vorwärts
-	cSix = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
-	cFive1 = ["#containerPolizist"],
-	cSix1 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
-	cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
-	cFive2 = ["#containerPolizist"],//Polizist treibt sie
-     //werden getrieben und gehen ab
-	cFive3 = ["#containerPolizist"],
-	cSeven = ["#containerGroßvater"],
-    cSevenTalk = ["#Großvater"], // Guten Tag
-    cEight = ["#containerGroßvater" ]; //Grossvater verschwindet*/
-
-
-// Melanie: bis Shui Ta "nichts mehr für Sie tun kann."
-// Melanie 2: Der Mann: "Wenn er quathsct, bis der Junge ..." bis Shui Ta: "Ich bin außer mir, dass in meinem Lokal"
-// Sören: Die Frau erschüttert: "Und wir hielten Sie für einen guten Menschen!" bis Shui Ta Er macht sich daran, den Laden aufzuräumen
-// Vera: Der Schreiner: "Ich sehe, dass Sie sich bemühen" bis Shui Ta: "Vielleicht ein wenig warm"
-// Cata: Die Frau: "Er hat zugesehen,als der Junge wegging!" bis Der Großvater: "Guten Tag" (und alle raus)
 
 //Functions
 //change color back to normal
@@ -276,24 +246,28 @@ function getColorOfPerson(fireAt) {
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
+    var k = 0,
+        animated = 0,
+        narrate = 0;
+    next = false;
     if (window[currentEvent].length !== 0) {
-        var k = 0,
-            animated = 0,
-            narrate = 0;
-        next = false;
+        
         (function startNext() {
-
+            window.clearTimeout(timeoutId);
+            
             function wait(animated) {
-                document.querySelector(animated).addEventListener('animationend', function () {
+                document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
+                    window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
             function wait2(narrate) {
-                document.querySelector(narrate).addEventListener('sound-ended', function () {
+                document.querySelector(narrate).addEventListener('sound-ended', function waited() {
                   //  document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
-                    document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt)); //Test
+                    document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt));
                     console.log("--------------------Narration End--------------------");
+                    window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
@@ -323,6 +297,7 @@ function storyline(currentTarget, currentEvent) {
 
                         if (narrate !== null) {
                             document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
+                            window.clearTimeout(timeoutId);
                             wait2(narrate);
                         } else {
                             startNext();
@@ -353,6 +328,7 @@ function storyline(currentTarget, currentEvent) {
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
+                            window.clearTimeout(timeoutId);
                             wait(animated);
                         } else {
                             startNext();
@@ -362,64 +338,78 @@ function storyline(currentTarget, currentEvent) {
                         console.log("No animation at: " + currentEvent + "-->" + fireAt);
                         startNext();
                     }
-
                 }
 
             } else {
                 next = true;
+                window.clearTimeout(timeoutId);
+                console.log("Finished: " + currentTarget);
+                
+                //transition to next event
+                last = at;
+                at = eventArr[++i];
+                
+                //clean up event name
+                if (last.search("Talk") !== -1) {
+                    last = last.replace('Talk', '');
+                } else if (last.search("All") !== -1) {
+                    last = last.replace('All', '');
+                }
+                last = last.replace(/\d+/g, '');
+
+                //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
+                if (at.search(last) !== -1) {
+                    playableFound(at);
+                }
             }
         }());
 
-
+        window.clearTimeout(timeoutId);
         return 1;
     } else {
         return 0;
     }
 }
 
-
 //starts narration when .play was found
 function playableFound(currentTarget) {
     'use strict';
+
     if (i < eventArr.length && at !== undefined) {
         if (next === true) {
             if (currentTarget.search(at) !== -1) {
-                currentTarget = "#" + at;
                 window.clearTimeout(timeoutId);
-                if ((storyline(currentTarget, at)) === 1) {
-                    at = eventArr[++i];
+                for (n = 0; n < persons.length; n++) { //change hint coloring back to normal
+                    try {
+                        document.querySelector(persons[n]).setAttribute('material', 'color', getColorOfPerson(persons[n]));
+                    } catch (err9) {
+                        console.log(err9 + " - while firing at  " + fireAt);
+                    }
+                    
+                }
+                
+                currentTarget = "#" + at;
+                
+                if (storyline(currentTarget, at) !== 1) {
+                    conole.log("problem?!");
                 }
             }
-            if (next === true) {
-                console.log("Next= " + at);
-//                timeoutId = setTimeout(function () {
-//                    for (m; m < window[at].length; m++) {
-//                        fireAt = window[at][m];
-//                        console.log("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-//                        //                                        document.querySelector(fireAt).setAttribute('event__0000', 'material.color', 'red');
-//                        document.querySelector(fireAt).append('<a-animation attribute="material.color" dur="2500" from=getColorOfPerson(fireAt) to="red" direction="alternate"></a-animation>');
-//                    }
-//                }, 5000);
-            }
+            
         }
+        console.log("Next= " + at);
+        timeoutId = setTimeout(function showHint() {  //hint at next onPlayFusing()
+            for (m = 0; m < window[at].length; m++) {
+                fireAt = window[at][m];
+                if (fireAt.search("container") !== -1) {
+                    fireAt = fireAt.replace('container', '');
+                } else if (fireAt.search("sockel") !== -1) {
+                    fireAt = fireAt.replace('sockel', '');
+                }
+                document.querySelector(fireAt).setAttribute('material', 'color', 'red');
+            }
+        }, 30000);  
     }
 }
-
-//function hint(currentTarget) {
-//    'use strict';
-//    if (next === true) {
-//        if (currentTarget.search(at) !== -1) {
-//            currentTarget = "#" + at;
-//            if ((storyline(currentTarget, at)) === 1) {
-//                at = eventArr[++i];
-//            }
-//        }
-//        console.log("Next= " + at);
-//    }
-//}
-
-
-
 
 //Event Methods
 //$(".clickable").each(function () {
@@ -429,7 +419,7 @@ function playableFound(currentTarget) {
 //});
 
 //Cursor found .clickable
-$(".clickable").on('fusing', function () {
+$(".clickable").on('fusing', function onclickableFusing() {
     'use strict';
     if (at === "two" || at === "three") {
         currentTarget = $(this).closest("a-entity").attr("class");
@@ -444,12 +434,10 @@ $(".clickable").on('fusing', function () {
         document.querySelector(currentTarget).emit(trigggerEvent);
         lastClickableFused = currentTarget;
     }
-
-
 });
 
 //Cursor triggers click on .clickable
-$(".clickable").on('click', function () {
+$(".clickable").on('click', function onclickableClick() {
     'use strict';
     if (at !== "two" || at !== "three" || at !== "four") {
         currentTarget = '#' + $(this).closest("a-entity").attr('id');
@@ -462,14 +450,29 @@ $(".clickable").on('click', function () {
     }
 });
 
-$(".clickableTrigger").on('click', function () {
+//Camera jump
+$(".clickableTrigger").on('click', function onClickableTriggerClick() {
     'use strict';
+    currentTarget = '#' + $(this).closest("a-box").attr('id');
+    trigggerEvent = "clickableClick";
+    nowClicked = currentTarget;
+    if (nowClicked === lastClickableFused) {
+        document.querySelector("#cursor").emit(trigggerEvent);
+    }
+});
+$(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
+    'use strict';
+    currentTarget = '#' + $(this).closest("a-box").attr('id');
+    console.log(currentTarget);
+
     trigggerEvent = "clickableFound";
     document.querySelector("#cursor").emit(trigggerEvent);
+    lastClickableFused = currentTarget;
 });
 
+
 //Cursor is not on .clickable
-$("a-entity").on('fusing', function () {
+$("a-entity").on('fusing', function onAEntityFusing() {
     'use strict';
     currentTarget = "#cursor";
     trigggerEvent = "notClickable";
@@ -477,19 +480,17 @@ $("a-entity").on('fusing', function () {
 });
 
 //trigger storyline after start was iniciated
-$(".play").on('fusing', function () {
+$(".play").on('fusing', function onPlayFusing() {
     'use strict';
     currentTarget = $(this).closest("a-entity").attr("class");
     if (i < eventArr.length && at !== undefined) {
         playableFound(currentTarget);
     }
-
-
 });
 
 
 //auto-enter VR (https://github.com/aframevr/aframe/issues/1473)
-window.addEventListener('load', function () {
+window.addEventListener('load', function onLoadEnterVR() {
     'use strict';
     var scene = document.querySelector('a-scene');
     if (scene.hasLoaded) {
@@ -503,16 +504,18 @@ window.addEventListener('load', function () {
 
 //Event Listener
 //start storyline
-document.querySelector('a-scene').addEventListener('loaded', function () {
+document.querySelector('a-scene').addEventListener('loaded', function szeneLoaded() {
     'use strict';
-    setTimeout(function () {
+    
+    setTimeout(function loadTimeout() {
+        var scene = document.querySelector('a-scene');
+        if (scene.hasLoaded) {
+            scene.enterVR();
+        }
         $("#giveMeTime").remove();
 
         currentTarget = "#one";
         at = "one";
-        if ((storyline(currentTarget, at)) === 1) {
-            at = eventArr[++i];
-
-        }
-    }, 10000);
+        storyline(currentTarget, at);
+    }, 20000);
 });

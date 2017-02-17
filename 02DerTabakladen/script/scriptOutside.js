@@ -80,6 +80,26 @@ $(".clickable").on('click', function () {
     }
 });
 
+//Camera jump
+$(".clickableTrigger").on('click', function onClickableTriggerClick() {
+    'use strict';
+    currentTarget = '#' + $(this).closest("a-box").attr('id');
+    trigggerEvent = "clickableClick";
+    nowClicked = currentTarget;
+    if (nowClicked === lastClickableFused) {
+        document.querySelector("#cursor").emit(trigggerEvent);
+    }
+});
+$(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
+    'use strict';
+    currentTarget = '#' + $(this).closest("a-box").attr('id');
+    console.log(currentTarget);
+
+    trigggerEvent = "clickableFound";
+    document.querySelector("#cursor").emit(trigggerEvent);
+    lastClickableFused = currentTarget;
+});
+
 
 //Cursor is not on .clickable
 $("a-entity").on('fusing', function () {
