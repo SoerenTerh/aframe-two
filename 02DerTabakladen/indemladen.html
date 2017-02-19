@@ -417,9 +417,9 @@
                                              begin="v21_3"></a-animation>
                     <a-animation id="MannAnimV26" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                 begin="v26"></a-animation>
-                    <a-animation id="MannAnimV26two" attribute="rotation" dur="2500" to="0 90 0" repeat="0"
+                    <a-animation id="MannAnimV26two" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0"
                                 begin="v26two"></a-animation>
-                    <a-animation id="MannAnimV26two" attribute="position" dur="2500" to="12 2 -12" repeat="0"
+                    <a-animation id="MannAnimV26two" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0"
                                 begin="v26two"></a-animation>
                     <a-animation id="MannAnimV26three" attribute="rotation" class="wait" dur="2500" to="0 270 0" repeat="0"
                                 begin="v26three"></a-animation>
@@ -722,7 +722,6 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                                  begin="seven4"></a-animation>
 
 
-
                     <a-animation id="ShuiTasSevenP1" class="wait" attribute="position" to="9.05 0 -8.38" repeat="0" begin="sSeven_P1"></a-animation>
                     <a-animation id="ShuiTasSeven_P2rot" class="wait" attribute="rotation" to="0 0 0" repeat="0" begin="sSeven_P2rot"></a-animation>
 
@@ -735,10 +734,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <a-animation id="ShuiTaVOneP" class="wait" attribute="position" to="13 0 1" repeat="0"
                                  begin="vOne"></a-animation>
 
-                    <a-animation id="ShuiTaAnim32P" class="wait" attribute="position" dur="2500" to="-5 2 -26" repeat="0"
+                    <a-animation id="ShuiTaAnim32P" class="wait" attribute="position" dur="2500" to="-5 0 -26" repeat="0"
                                  begin="v32"></a-animation>
-                    <a-animation id="ShuiTaAnim32R" class="wait" attribute="rotation" dur="2500" to="10 180 0" repeat="0"
-                          begin="v32"></a-animation>
 <!--                    verneigen-->
                     <a-animation id="m5fiveAnimShui" class="wait" attribute="rotation" dur="1500" to="10 180 0" repeat="0"
                                  begin="m5five"></a-animation>
@@ -755,10 +752,11 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                 <!--Schreiner-->
 
-                <a-entity id="containerSchreiner"  class="two four vOne vFifteen v28 v30Talk vSixteen play" visible="false" position="-13.44 0 -38.82"
-                          event-set__2="_event: two; visible: true">
-                    <a-entity id="Schreiner" class="two four vOne vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk
-                              vElevenTalk vSixteenTalk vEighteen vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
+                <a-entity id="containerSchreiner"  class="two v32 four vOne vFifteen v28 v30Talk vSixteen play" visible="false" position="-13.44 0 -38.82"
+                          event-set__2="_event: two; visible: true"
+                          event-set__3="_event: v32; visible: false">
+                    <a-entity id="Schreiner" class="two four vOne vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk vSixteen
+                              vElevenTalk vSixteenTalk vEighteen vEighteenTalk v21Talk v22Talk v23Talk v27Talk v32 play"
                               obj-model="obj:#figurObj" position="0 2 0"  scale="9.5 9.7 9.5"
                               material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
@@ -848,7 +846,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                     <!-- Sockel-->
                     <a-entity id="sockelPolizistr" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
-                    <a-animation id="polizistAnimv32" class="wait" attribute="position" dur="2500" to="-5 0 30" repeat="0"
+                    <a-animation id="polizistAnimv32" class="wait" attribute="position" dur="2500" to="-5 0 -30" repeat="0"
                                  begin="v32"></a-animation>
 
 <!--                    fünfte Seite-->
@@ -857,20 +855,20 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
 
 
-					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-7.33 0 20.07" repeat="0"
-                                begin="cFour"></a-animation>
-					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 137.51 0" repeat="0"
-                                 begin="cFour"></a-animation>
+          					<a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-7.33 0 20.07" repeat="0"
+                                          begin="cFour"></a-animation>
+          					<a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 137.51 0" repeat="0"
+                                           begin="cFour"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.84 0 -19.02" repeat="0"
-                                begin="cFive1"></a-animation>
-					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 89.38 0" repeat="0"
-                                begin="cFive1"></a-animation>
+          					<a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.84 0 -19.02" repeat="0"
+                                          begin="cFive1"></a-animation>
+          					<a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 89.38 0" repeat="0"
+                                          begin="cFive1"></a-animation>
 
-					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
-                                begin="cFive2"></a-animation>
-					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -173 0" repeat="0"
-                                begin="cFive2"></a-animation>
+          					<a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
+                                          begin="cFive2"></a-animation>
+          					<a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -173 0" repeat="0"
+                                          begin="cFive2"></a-animation>
 
 
                 </a-entity>
@@ -1009,7 +1007,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!-- Ablage_Stellage -->
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.04 -0.31 -18.41" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
-                          id="stellage_ohne-rechnung" material="" class="vSixteen v21_2 play">
+                          id="stellage_ohne-rechnung" material="" class="vSixteen v26 v21_2 play"
+                          event-set="_event: v26; visible: false;">>
                   <a-animation id="StellageAnimVSixteenP" attribute="position" dur="2500" to="-4 -0.31 -23" repeat="0"
                           begin="vSixteen"></a-animation>
                   <a-animation id="StellageAnimVSixteenR" attribute="rotation" dur="2500" to="0 180 0" repeat="0"

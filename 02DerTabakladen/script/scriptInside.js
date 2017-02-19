@@ -179,9 +179,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     // vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
     vEleven = ["#Frau"], // Frau aus dem Weg räumen
     // vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
-    vFifteen = ["#containerSchreiner"], // geht zu Stellage
+    vFifteen = ["#Schreiner"], // geht zu Stellage
     // vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
-    vSixteen = ["#containerSchreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
     // vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann", "#Schreiner"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
@@ -195,20 +195,20 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     // v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
     //v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
     // v25Talk = ["#Mann"], // genug für verschnittene Bretter
-    v26 = ["#Mann"], // trägt 2. Stellage zurück: drehen
+    v26 = ["#Mann", "#stellage_ohne-rechnung"], // trägt 2. Stellage zurück: drehen
     v26two = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zurück
     v26three = ["#Mann"],
-    v27Talk = ["#Schreiner"], // zu betrinken
+    //v27Talk = ["#Schreiner"], // zu betrinken
     v28 = ["#Schreiner"], // ab
-    v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
-    v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
-    v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
-    v31Talk = ["#ShuiTa"], // Wie ihr wollt
-    v32 = ["#ShuiTa", "#tabakladenTUERi", "#containerPolizist"], // Shui zur Tür, Polizist taucht auf
-    v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
-    v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
-    v36Talk = ["#ShuiTa"],
+    // v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
+    // v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
+    // v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
+    // v31Talk = ["#ShuiTa"], // Wie ihr wollt
+    v32 = ["#Schreiner", "#ShuiTa", "#tabakladenTUERi", "#containerPolizist"], // Shui zur Tür, Polizist taucht auf
+    // v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
+    // v33Talk = ["#ShuiTa"], // "Shui Ta"
+    // v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
+    // v36Talk = ["#ShuiTa"],
 
     //fünfteSeite
     m5zeroTalk = ["#Mann"], //mann14
