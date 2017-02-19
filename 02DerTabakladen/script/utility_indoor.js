@@ -20,7 +20,7 @@ $('#triggerTuer').on('click', function () {
 
 $('#triggerHinten').on('click', function () {
     AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -11.25, y:13.60, z:2.86});
-    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:90.00, z:0});
+    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:105.00, z:0});
 });
 
 
