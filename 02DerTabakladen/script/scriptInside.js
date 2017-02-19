@@ -13,18 +13,28 @@ var timeoutId = null;
 
 //Arrays
 var eventArr = ["one",
-                "two", "twoTalk", "twoTalk2",
+                "two",
+                //"twoTalk", "twoTalk2",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
-                "fourTalk", "fourTalk2", "five", "fiveAll", "sixTalk", "six", "six2", "sixTalk2", "seven", "seven2", "seven3", "seven4", "sevenTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2",
+                //"fourTalk", "fourTalk2",
+                "five",
+                //"fiveAll", "sixTalk",
+                "six", "six2",
+                //"sixTalk2",
+                "seven", "seven2", "seven3", "seven4",
+                //"sevenTalk",
+                //"sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
+                //"sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
-                "sFourP3begin", "sFour_P3", "sFiveTalk", "sFiveTalk2", "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFourP3begin", "sFour_P3",
+                // "sFiveTalk", "sFiveTalk2",
+                "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
                 //                "sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
-                "sSixTalk1", "sSixTalk2", "sSixTalk3", "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
+                //"sSixTalk1", "sSixTalk2", "sSixTalk3",
+                "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
                 "vOne", "vOneTalk",
                 "vTwo",
-                "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vElevenTalk",
+                "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vTen", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen",
                 "vSixteenTalk",
                 "vEighteen", "vEighteen2",
@@ -82,12 +92,12 @@ var personColors = ["#4D4D4D",
 //ersteSeite
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //alle schlafen + Lampe brennt
     two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
-    twoTalk = ["#Frau", "#Neffe"],
-    twoTalk2 = ["#Frau"], //Frau lacht
+    //twoTalk = ["#Frau", "#Neffe"],
+    //twoTalk2 = ["#Frau"], //Frau lacht
     three = ["#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
-    fourTalk = ["#ShuiTa", "#Frau"],
-    fourTalk2 = ["#ShuiTa"],
+    //fourTalk = ["#ShuiTa", "#Frau"],
+    //fourTalk2 = ["#ShuiTa"],
     five = ["#sockelNeffe", "#containerNeffe",
             "#sockelMann", "#containerMann",
             '#sockelSchwaegerin', '#containerSchwaegerin',
@@ -95,17 +105,17 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
             "#sockelJunge", "#containerJunge",
             "#sockelBruder", "#containerBruder",
             "#sockelNichte", "#containerNichte"], //alle Wachen auf
-    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
-    sixTalk = ["#Neffe"],
+    //fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
+    //sixTalk = ["#Neffe"],
 
     six = ["#containerShuiTa"],
     six2 = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
-    sixTalk2 = ["#ShuiTa",  "#Mann"],
+    //sixTalk2 = ["#ShuiTa",  "#Mann"],
     seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven4 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
-    sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
+    //sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
     //  eight = [],
     //  nine = [],
     //  ten = [],
@@ -117,13 +127,13 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
     */
 
-    sOneTalk = ["#Frau"],
-    sTwoTalk = ["#Neffe"],
-    sThreeTalk = ["#Mann"],
-
-    sFourTalkStart = ["#Mann"],
-    sFourTalk1 = ["#Mann", "#Schwaegerin"],
-    sFourTalk2 = ["#Mann"],
+    // sOneTalk = ["#Frau"],
+    // sTwoTalk = ["#Neffe"],
+    // sThreeTalk = ["#Mann"],
+    //
+    // sFourTalkStart = ["#Mann"],
+    // sFourTalk1 = ["#Mann", "#Schwaegerin"],
+    // sFourTalk2 = ["#Mann"],
     /*sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],*/
 
     sFourACC1 = ["#accMann"],
@@ -134,15 +144,15 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
-    sFiveTalk = ["#ShuiTa"],
-    sFiveTalk2 = ["#Neffe"],
+    // sFiveTalk = ["#ShuiTa"],
+    // sFiveTalk2 = ["#Neffe"],
     sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
     sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
     sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
     sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
-    sSixTalk1 = ["#ShuiTa", "#Mann"],
-    sSixTalk2 = ["#ShuiTa"],
-    sSixTalk3 = ["#ShuiTa"],
+    // sSixTalk1 = ["#ShuiTa", "#Mann"],
+    // sSixTalk2 = ["#ShuiTa"],
+    // sSixTalk3 = ["#ShuiTa"],
 
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
 
@@ -151,7 +161,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P2end = ["#ShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
     /*sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],*/
 
-    vOne = ["#ShuiTa"],
+    vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
     vOneTalk = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // Rechnung fliegt zu ShuiTa
     vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
@@ -159,6 +169,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vFive = ["#Rechnung"], // Rechnung wieder weg
     vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ], // 20 Dollar, Nussbaum
     vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
+    vTen = ["#Frau"], // Frau aus dem Weg räumen
     vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
     vFifteen = ["#containerSchreiner"], // geht zu Stellage
     vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
@@ -251,10 +262,10 @@ function storyline(currentTarget, currentEvent) {
         narrate = 0;
     next = false;
     if (window[currentEvent].length !== 0) {
-        
+
         (function startNext() {
             window.clearTimeout(timeoutId);
-            
+
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
@@ -344,11 +355,11 @@ function storyline(currentTarget, currentEvent) {
                 next = true;
                 window.clearTimeout(timeoutId);
                 console.log("Finished: " + currentTarget);
-                
+
                 //transition to next event
                 last = at;
                 at = eventArr[++i];
-                
+
                 //clean up event name
                 if (last.search("Talk") !== -1) {
                     last = last.replace('Talk', '');
@@ -385,16 +396,16 @@ function playableFound(currentTarget) {
                     } catch (err9) {
                         console.log(err9 + " - while firing at  " + fireAt);
                     }
-                    
+
                 }
-                
+
                 currentTarget = "#" + at;
-                
+
                 if (storyline(currentTarget, at) !== 1) {
                     conole.log("problem?!");
                 }
             }
-            
+
         }
         console.log("Next= " + at);
         timeoutId = setTimeout(function showHint() {  //hint at next onPlayFusing()
@@ -407,7 +418,7 @@ function playableFound(currentTarget) {
                 }
                 document.querySelector(fireAt).setAttribute('material', 'color', 'red');
             }
-        }, 30000);  
+        }, 30000);
     }
 }
 
@@ -506,7 +517,7 @@ window.addEventListener('load', function onLoadEnterVR() {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function szeneLoaded() {
     'use strict';
-    
+
     setTimeout(function loadTimeout() {
         var scene = document.querySelector('a-scene');
         if (scene.hasLoaded) {
