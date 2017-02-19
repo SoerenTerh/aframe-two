@@ -280,7 +280,7 @@
 
                 <!--Frau-->
                 <a-entity id="containerFrau" class="two three cSix cSix1 cSix2 play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
-                    <a-entity id="Frau" class="one twoTalk twoTalk2  fourTalk sOneTalk sFourACC3 vOne vTen vElevenTalk v22Talk
+                    <a-entity id="Frau" class="one twoTalk twoTalk2  fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
                                                m5threeTalk m5sevenTalk2
                                                cOneTalk play"
                               obj-model="obj:#figurObj"
@@ -316,10 +316,10 @@
                                  repeat="0" begin="three"></a-animation>
                     <a-animation id="FrauAnimVOne" class="wait" attribute="rotation" dur="2500" to="0 70 0"
                                  repeat="0" begin="vOne"></a-animation>
-                    <a-animation id="FrauAnimVTenR" class="wait" attribute="rotation" dur="2500" to="0 90 0"
-                                 repeat="0" begin="vTen"></a-animation>
-                    <a-animation id="FrauAnimVTenP" class="wait" attribute="position" dur="2500" to="1 0 -6"
-                                  repeat="0" begin="vTen"></a-animation>
+                    <a-animation id="FrauAnimvElevenR" class="wait" attribute="rotation" dur="2500" to="0 90 0"
+                                 repeat="0" begin="vEleven"></a-animation>
+                    <a-animation id="FrauAnimvElevenP" class="wait" attribute="position" dur="2500" to="1 0 -6"
+                                  repeat="0" begin="vEleven"></a-animation>
         					  <a-animation id="cfrauanimpP" class="wait" attribute="position" dur="2500" to="13.54 0 -11.71" repeat="0" begin="cSix"></a-animation>
         					  <a-animation id="cfrauanimpR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
 
@@ -331,7 +331,8 @@
                 <a-entity id="containerMann" class="five  cSix cSix1 cSix2 play" position="-1.09 2 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
                     <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk
                                                sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
-                                               vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk v29Talk
+                                               vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3
+                                               v25Talk v26 v26two v26three v29Talk
                                                m5zeroTalk m5fourTalk m5fiveTalk m5one m5one2
                                                play" obj-model="obj:#figurObj"
                               position="0 2 0"
@@ -399,7 +400,6 @@
 
                     <a-animation id="MannAnimV18_2P" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0" begin="vEighteen2"></a-animation>
                     <a-animation id="MannAnimV18_2R" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0" begin="vEighteen2"></a-animation>
-					<!-- <a-animation id="cmannanimp" attribute="position" class="wait" dur="2500" to="12 2 30" repeat="0" begin="cSix"></a-animation>-->
 
                     <a-animation id="MannAnimV18_3P" attribute="position" dur="2500" to="4 0 -15" repeat="0"
                                  begin="vEighteen3"></a-animation>
@@ -415,8 +415,14 @@
                                  begin="v21_3"></a-animation>
                     <a-animation id="MannAnimV21_3R" attribute="rotation" dur="2500" to="0 0 0" repeat="0"
                                              begin="v21_3"></a-animation>
-
-
+                    <a-animation id="MannAnimV26" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                                begin="v26"></a-animation>
+                    <a-animation id="MannAnimV26two" attribute="rotation" dur="2500" to="0 90 0" repeat="0"
+                                begin="v26two"></a-animation>
+                    <a-animation id="MannAnimV26two" attribute="position" dur="2500" to="12 2 -12" repeat="0"
+                                begin="v26two"></a-animation>
+                    <a-animation id="MannAnimV26three" attribute="rotation" class="wait" dur="2500" to="0 270 0" repeat="0"
+                                begin="v26three"></a-animation>
 
 					 <a-animation id="cmannanimPp" class="wait" attribute="position" dur="2500" to="13.77 0 -17.92" repeat="0" begin="cSix"></a-animation>
 					<a-animation id="cmannanimrR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
@@ -750,9 +756,9 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <!--Schreiner-->
 
                 <a-entity id="containerSchreiner"  class="two four vOne vFifteen v28 v30Talk vSixteen play" visible="false" position="-13.44 0 -38.82"
-                          event-set__2="_event: two; visible: true"  >
+                          event-set__2="_event: two; visible: true">
                     <a-entity id="Schreiner" class="two four vOne vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk
-                              vElevenTalk vSixteenTalk vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
+                              vElevenTalk vSixteenTalk vEighteen vEighteenTalk v21Talk v22Talk v23Talk v27Talk play"
                               obj-model="obj:#figurObj" position="0 2 0"  scale="9.5 9.7 9.5"
                               material="color:#CCCCCC" rotation="0 0 0" visible="true">
 
@@ -989,13 +995,13 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="4.33 13.39 -3.36"
                           scale="0.25 0.25 0.25" rotation="-90 180 0" id="Rechnung" sound="src:#paper;on:click"
                           visible="true" material="" class="vTwo vFive play">
-                    <a-animation id="RechnungAnimVTwoR" class="wait" attribute="rotation" dur="500" to="0 180 0"
+                    <a-animation id="RechnungAnimVTwoR" class="wait" attribute="rotation" dur="1500" to="0 180 0"
                                  repeat="0" begin="vTwo"></a-animation>
-                    <a-animation id="RechnungAnimVTwoP" class="wait" attribute="position" dur="500" to="12 8 -4.5"
+                    <a-animation id="RechnungAnimVTwoP" class="wait" attribute="position" dur="1500" to="12 8 -4.5"
                                  repeat="0" begin="vTwo"></a-animation>
-                    <a-animation id="RechnungAnimVFiveR" class="wait" attribute="rotation" dur="500" to="-90 180 0"
+                    <a-animation id="RechnungAnimVFiveR" class="wait" attribute="rotation" dur="1500" to="-90 180 0"
                                  repeat="0" begin="vFive"></a-animation>
-                    <a-animation id="RechnungAnimVFiveP" class="wait" attribute="position" dur="500" to="4.33 13.39 -3.36"
+                    <a-animation id="RechnungAnimVFiveP" class="wait" attribute="position" dur="1500" to="4.33 13.39 -3.36"
                                   repeat="0" begin="vFive"></a-animation>
 
                 </a-entity>
@@ -1013,11 +1019,15 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                 </a-entity>
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.01 -0.23 -10.79" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
-                          id="stellage_ohne-rechnung-2" class="vEighteen3 play" material="">
+                          id="stellage_ohne-rechnung-2" class="vEighteen3 v26two play" material="">
                   <a-animation id="StellageAnimV18_3P" attribute="position" dur="2500" to="4 -0.31 -23" repeat="0"
                           begin="vEighteen3"></a-animation>
                   <a-animation id="StellageAnimV18_3R" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                           begin="vEighteen3"></a-animation>
+                  <a-animation id="StellageAnimV26twoP" attribute="position" dur="2500" to="21.01 -0.23 -10.79" repeat="0"
+                          begin="v26two"></a-animation>
+                  <a-animation id="StellageAnimV26twoR" attribute="rotation" dur="2500" to="0 90 0" repeat="0"
+                          begin="v26two"></a-animation>
                 </a-entity>
                 <a-entity data-brackets-id="890" obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl"
                           position="21.03 -0.31 -3.05" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true"
