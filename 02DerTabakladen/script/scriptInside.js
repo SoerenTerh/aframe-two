@@ -26,9 +26,9 @@ var eventArr = ["one",
                 //"sOneTalk", "sTwoTalk", "sThreeTalk", "sFourTalkStart",
                 //"sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
-                "sFourP3begin", "sFour_P3",
+                "sFourP3begin", "sFourMove", "sFour_P3",
                 // "sFiveTalk", "sFiveTalk2",
-                "sFive_P1", "sFive_P2", "sFive_P3", "sFive_P3no",
+                "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3no",
                 //                "sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
                 //"sSixTalk1", "sSixTalk2", "sSixTalk3",
                 "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
@@ -150,13 +150,16 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourACC4 = ["#accGroßvater"],
 
     sFourP3begin = ["#Junge", "#tabakladenTUERi"],
+    sFourMove = ["#Junge"],
     sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
 
     // sFiveTalk = ["#ShuiTa"],
     // sFiveTalk2 = ["#Neffe"],
     sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
     sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
+    sFive_P2Move = ["#Neffe", "#Bruder"],
     sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
+    sFive_P3Move = ["#Nichte"],
     sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
     // sSixTalk1 = ["#ShuiTa", "#Mann"],
     // sSixTalk2 = ["#ShuiTa"],
