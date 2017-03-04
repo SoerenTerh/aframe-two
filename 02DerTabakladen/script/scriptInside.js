@@ -18,23 +18,22 @@ var eventArr = ["one",
                 "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 //                "fourTalk", "fourTalk2",
                 "five",
-                //                "fiveAll", 
+                //                "fiveAll",
                 //                "sixTalk",
                 "six", "six2",
                 //                "sixTalk2",
                 //                "sevenTalk0",
                 "seven", "seven2", "seven3", "seven4",
-                //                "sevenTalk",
-                //                "sOneTalk", "sTwoTalk", "sThreeTalk", 
+                                "sevenTalk",
+                //                "sOneTalk", "sTwoTalk", "sThreeTalk",
                 "sFourTalkStart",
-                //                "sFour Talk1", "sFourTalk2",
+                //                "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
                 "sFourP3begin", "sFourMove", "sFour_P3",
                 //                "sFiveTalk", "sFiveTalk2",
-                "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3no",
-                //                "sFive_P3s", "sFive_P3end", "sFive_P3end2", "sFiveTalk3",
+                "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
                 //                "sSixTalk1", "sSixTalk2", "sSixTalk3",
-                "sSeven_P1", "sSeven_P2rot", "sSeven_PickUp2", "sSeven_P2end", /*"sEight",*/
+                "sSeven_P1", "sSeven_P2rot", "sSevenPickUp1", "sSevenPickUp2", "sSevenPRotaPU", "sSeven_P2end", /*"sEight",*/
                 "vOne",
                 //                "vOneTalk",
                 "vTwo",
@@ -149,7 +148,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourTalkStart = ["#Mann"],
     sFourTalk1 = ["#Mann", "#Schwaegerin"],
     sFourTalk2 = ["#Mann"],
-    sFourACC = ["#accMann, #accNeffe, #accSchwaegerin", "#accGroßvater", "#accFrau"],
 
     sFourACC1 = ["#accMann"],
     sFourACC2 = ["#accNeffe"],
@@ -175,7 +173,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
 
     sSeven_P2rot = ["#ShuiTa"],
-    sSeven_PickUp2 = ["#ShuiTa", "#bett-3", "#bett-4", "#bett-5"],
+    sSevenPickUp1 = ["#ShuiTa"],
+    sSevenPickUp2 = ["#bett-3", "#bett-4", "#bett-5"],
+    sSevenPRotaPU = ["ShuiTa"],
     sSeven_P2end = ["#ShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
     sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
@@ -434,7 +434,7 @@ function playableFound(currentTarget) {
 
                 window.clearTimeout(timeoutId);
                 if (storyline(currentTarget, at) !== 1) {
-                    conole.log("problem?!");
+                    console.log("problem?!");
                 }
             }
 
@@ -448,7 +448,11 @@ function playableFound(currentTarget) {
                 } else if (fireAt.search("sockel") !== -1) {
                     fireAt = fireAt.replace('sockel', '');
                 }
+                if($.isArray(fireAt)){
+                    document.querySelector(fireAt[0]).setAttribute('material', 'color', 'red');
+                }else{
                 document.querySelector(fireAt).setAttribute('material', 'color', 'red');
+                }
             }
         }, 30000);
     }
