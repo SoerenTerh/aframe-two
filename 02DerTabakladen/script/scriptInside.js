@@ -15,7 +15,7 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two",
                 //                "twoTalk", "twoTalk2",
-                "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
+               "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
                 //                "fourTalk", "fourTalk2",
                 "five",
                 //                "fiveAll",
@@ -28,7 +28,7 @@ var eventArr = ["one",
                 //                "sOneTalk", "sTwoTalk", "sThreeTalk",
                 //"sFourTalkStart",
                 //                "sFourTalk1", "sFourTalk2",
-                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+               "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
                 "sFourP3begin", "sFourMove", "sFour_P3",
                 //                "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
@@ -251,10 +251,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cThree1 = ["#containerShuiTa"],
     cFour = ["#containerPolizist"],
     cFiveTalk = ["#Polizist"], //vorwärts
-    cSix = ["#containerFrau", "#containerMann", "#containerJunge"],
+    cSix = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cFive1 = ["#containerPolizist"],
-    cSix1 = ["#containerFrau", "#containerMann", "#containerJunge"],
-    cSix2 = ["#containerFrau", "#containerMann", "#containerJunge"],
+    cSix1 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+    cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cFive2 = ["#containerPolizist"],//Polizist treibt sie
     //werden getrieben und gehen ab
     cFive3 = ["#containerPolizist"],
