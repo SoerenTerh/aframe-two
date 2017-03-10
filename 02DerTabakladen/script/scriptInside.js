@@ -28,12 +28,12 @@ var eventArr = ["one",
                 //                "sOneTalk", "sTwoTalk", "sThreeTalk",
                 //"sFourTalkStart",
                 //                "sFourTalk1", "sFourTalk2",
-               "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4",
+               "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6",
                 "sFourP3begin", "sFourMove", "sFour_P3",
                 //                "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
                 //                "sSixTalk1", "sSixTalk2", "sSixTalk3",
-                "sSeven_P1", "sSeven_P2rot", "sSevenPickUp1", "sSevenPickUp2", "sSevenPRotaPU", "sSeven_P2end", /*"sEight",*/
+                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end", "sSevenPickUp2", /*"sEight",*/
                 "vOne",
                 //                "vOneTalk",
                 "vTwo",
@@ -153,10 +153,12 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourACC2 = ["#accNeffe"],
     sFourACC3 = ["#accFrau"],
     sFourACC4 = ["#accGroßvater"],
+    sFourACC5 = ["#accJunge"],
+    sFourACC6 = ["#accNichte"],
 
-    sFourP3begin = ["#Junge", "#tabakladenTUERi"],
-    sFourMove = ["#Junge"],
-    sFour_P3 = [ "#Junge", "#tabakladenTUERi"],
+    sFourP3begin = ["#containerJunge", "#tabakladenTUERi"],
+    sFourMove = ["#containerJunge"],
+    sFour_P3 = [ "#containerJunge", "#tabakladenTUERi"],
 
     sFiveTalk = ["#ShuiTa"],
     sFiveTalk2 = ["#Neffe"],
@@ -172,11 +174,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
 
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
 
-    sSeven_P2rot = ["#ShuiTa"],
-    sSevenPickUp1 = ["#ShuiTa"],
+    sSeven_P2rot = ["#containerShuiTa"],
+    sSevenPRotaPU = ["containerShuiTa"],
+    sSeven_P2end = ["#containerShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
     sSevenPickUp2 = ["#bett-3", "#bett-4", "#bett-5"],
-    sSevenPRotaPU = ["ShuiTa"],
-    sSeven_P2end = ["#ShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
     sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],

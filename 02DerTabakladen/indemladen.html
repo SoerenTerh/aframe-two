@@ -273,6 +273,12 @@
                 <a-asset-item id="PolizeiObj" src="models/UnsereAssets/000/polizei000.obj"></a-asset-item>
                 <a-asset-item id="PolizeiMtl" src="models/UnsereAssets/000/polizei000.mtl"></a-asset-item>
 
+                <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>
+                <a-asset-item id="SchalMtl" src="models/UnsereAssets/000/schal000.mtl"></a-asset-item>
+
+                <a-asset-item id="TascheObj" src="models/UnsereAssets/000/tasche000.obj"></a-asset-item>
+                <a-asset-item id="TascheMtl" src="models/UnsereAssets/000/tasche000.mtl"></a-asset-item>
+
 
                 <img src="../assets/panorama-3.png" id="audience" alt="audience">
             </a-assets>
@@ -477,8 +483,8 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
                         <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
                     </a-entity>
 
-                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="0.95 1.85 0.13" scale="1 1 1" rotation="0 10 0" visible="true"></a-entity>
-                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="-0.88 1.85 0.12" scale="1 1 1" rotation="0 10 0" visible="true"></a-entity>
+                    <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0" visible="true"></a-entity>
+                    <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0" visible="true"></a-entity>
 
                     <a-animation id="SchaegerinAnimFive" attribute="rotation" dur="2500" to="0 -130.00 0" repeat="0" begin="five"></a-animation>
                     <a-animation id="SchwaegerinAnimFive2" attribute="position" dur="2500" to="7.82 0 25.73" repeat="0" begin="five"></a-animation>
@@ -578,6 +584,10 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                     <a-animation id="NichteAnimFive" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="five"></a-animation>
                     <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="12.13 0 -3.84" repeat="0" begin="five"></a-animation>
 
+                    <a-entity id="accNichte" obj-model="obj:#TascheObj;" material="color: #302013"
+                              position="2 6 -0.2" scale="1 1 1" rotation="0 0 0" visible="false" event-set__accNichteV="_event: sFourACC6; visible: true">
+                    </a-entity>
+
                     <!-- Sockel-->
                     <a-entity id="sockelNichte" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"></a-entity>
@@ -605,10 +615,15 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
 
                     </a-entity>
 
+                    <a-entity id="accJunge" obj-model="obj:#SchalObj;" material="color: #ffebcd"
+                              position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="false" event-set__accJungeV="_event: sFourACC5; visible: true">
+                    </a-entity>
+
                     <!-- Sockel-->
                     <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true"
-                              event-set__sFourP3begin="_event: sFourP3begin; position: 14.46 2 -19.34"></a-entity>
+                              event-set__sFourP3begin="_event: sFourP3begin; position: 14.46 2 -19.34"
+                    ></a-entity>
                     <!--<a-animation id="JungeSockel_sFour_P2" class="wait" attribute="position" dur="2500" to="-18.81 2 0" repeat="0" begin="sFourP3begin"></a-animation>-->
 
                     <a-animation id="JungeAnimV21" attribute="position" dur="2500" to="-7 0 -16" repeat="0"
@@ -644,11 +659,11 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                 <!--ShuiTa-->
 
 
-                <a-entity id="containerShuiTa" class="two four six six2 seven seven2 seven3 vOne v32 mfour mfive mfive2 mseven2 cThree cThree1 play" position="-8.09 0 -35" visible="false"
+                <a-entity id="containerShuiTa" class="two four six six2 seven seven2 seven3 sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end vOne v32 mfour mfive mfive2 mseven2 cThree cThree1 play" position="-8.09 0 -35" visible="false"
                           event-set__2="_event: two; visible: true">
                     <!-- <a-entity id="containerShuiTa" class="two four six2 seven v32 cThree cThree1 play" position="-8.09 0 -35" visible="false"-->
 
-                    <a-entity id="ShuiTa" class="two four six2 seven fourTalk fourTalk2 sixTalk2 sevenTalk0 sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4 sSeven_P1 sSeven_P2rot sSeven_PickUp1 sSeven_PickUp2 sSevenPRotaPU sSeven_P2end
+                    <a-entity id="ShuiTa" class="two four six2 seven fourTalk fourTalk2 sixTalk2 sevenTalk0 sevenTalk sFiveTalk sSixTalk1 sSixTalk3 sSixTalk4
                                                  vOne vTwoTalk vSixTalk vNineTalk vElevenTalk
                                                  vFourTalk vSixTalk vNineTalk vElevenTalk vFourteenTalk vSixteenTalk vEighteenTalk v22Talk v23Talk v28Talk v29Talk v30Talk
                                                  mtwoTalk mthreeTalk mfourTalk mfiveTalk mfiveTalk2 msevenTalk4
@@ -732,13 +747,22 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
                                  begin="seven4"></a-animation>
 
 
-                    <a-animation id="ShuiTasSevenP1" class="wait" attribute="position" to="9.05 0 -8.38" repeat="0" dur="2500" begin="sSeven_P1"></a-animation>
+                    <!--<a-animation id="ShuiTasSevenP1" class="wait" attribute="position" to="9.05 0 -8.38" repeat="0" dur="2500" begin="sSevenP1_before"></a-animation>
                     <a-animation id="ShuiTasSeven_P1rot" class="wait" attribute="rotation" to="0 0 0" repeat="0" dur="2500" begin="sSeven_P2rot"></a-animation>
 
-                    <a-animation id="ShuiTasSeven_PickUp1" class="wait" attribute="position" to="4.74 0 15.87" dur="2500" repeat="0" begin="sSevenPickUp1"></a-animation>
+                    <a-animation id="ShuiTasSeven_PickUp1" class="wait" attribute="position" to="4.74 0 15.87" dur="2500" repeat="0" begin="sSeven_P2rot"></a-animation>
 
                     <a-animation id="ShuiTasSeven_PRotaPU" class="wait" attribute="rotation" to="0 -180 0" repeat="0" dur="2500" begin="sSevenPRotaPU"></a-animation>
                     <a-animation id="ShuiTasSeven_P22" class="wait" attribute="position" to="-6.78 0 21.70" dur="2500" repeat="0" begin="sSevenP2end"></a-animation>
+                    -->
+
+                    <a-animation id="ShuiTasSevenP1" class="wait" attribute="position" to="9.05 0 -8.38" repeat="0" dur="2500" begin="sSeven_P1"></a-animation>
+                    <a-animation id="ShuiTasSeven_P1rot" class="wait" attribute="rotation" to="0 0 0" repeat="0" dur="2500" begin="sSeven_P2rot"></a-animation>
+
+                    <a-animation id="ShuiTasSeven_PRotaPU" class="wait" attribute="rotation" to="0 -180 0" repeat="0" dur="2500" begin="sSevenPRotaPU"></a-animation>
+                    <a-animation id="ShuiTasSeven_P22" class="wait" attribute="position" to="-6.78 0 21.70" dur="2500" repeat="0" begin="sSeven_P2end"></a-animation>
+
+
 
                     <a-animation id="ShuiTaVOneR" class="wait" attribute="rotation" to="0 180 0" repeat="0"
                                  begin="vOne"></a-animation>
