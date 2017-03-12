@@ -33,7 +33,7 @@ var eventArr = ["one",
                 //                "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
                 //                "sSixTalk1", "sSixTalk2", "sSixTalk3",
-                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end", "sSevenPickUp2", /*"sEight",*/
+                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end", "sSeven_PickUp2", /*"sEight",*/
                 "vOne",
                 //                "vOneTalk",
                 "vTwo",
@@ -157,7 +157,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourACC5 = ["#accJunge"],
     sFourACC6 = ["#accNichte"],
     sFourACC7 = ["#accSchwaegerin"],
-    sFourACC8 = ["#accSchwaegerin2"]
+    sFourACC8 = ["#accSchwaegerin2"],
 
     sFourP3begin = ["#containerJunge", "#tabakladenTUERi"],
     sFourMove = ["#containerJunge"],
@@ -176,12 +176,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSixTalk3 = ["#ShuiTa"],
 
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
-
-    sSeven_P2rot = ["#containerShuiTa"],
-    sSevenPRotaPU = ["containerShuiTa"],
-    sSeven_P2end = ["#containerShuiTa"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
-    sSevenPickUp2 = ["#bett-3", "#bett-4", "#bett-5"],
-    sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
+    sSeven_P2rot = ["#containerShuiTa", "#bett-7", "#bett-8"],
+    sSevenPRotaPU = ["#containerShuiTa"],
+    sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-4", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
+    //sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
     vOneTalk = ["#Schreiner"], // Schreiner redet
@@ -398,7 +396,11 @@ function storyline(currentTarget, currentEvent) {
                 //clean up event name
                 if (last.search("Talk") !== -1) {
                     last = last.replace('Talk', '');
-                } else if (last.search("All") !== -1) {
+                }if (last.search("begin") !== -1) {
+                    last = last.replace('begin', '');
+                }if (last.search("Move") !== -1) {
+                    last = last.replace('Move', '');
+                }else if (last.search("All") !== -1) {
                     last = last.replace('All', '');
                 }
                 last = last.replace(/\d+/g, '');
