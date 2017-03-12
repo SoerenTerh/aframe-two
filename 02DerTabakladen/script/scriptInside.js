@@ -28,7 +28,7 @@ var eventArr = ["one",
                 //                "sOneTalk", "sTwoTalk", "sThreeTalk",
                 //"sFourTalkStart",
                 //                "sFourTalk1", "sFourTalk2",
-               "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
                 "sFourP3begin", "sFourMove", "sFour_P3",
                 //                "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
@@ -155,6 +155,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFourACC4 = ["#accGroßvater"],
     sFourACC5 = ["#accJunge"],
     sFourACC6 = ["#accNichte"],
+    sFourACC7 = ["#accSchwaegerin"],
+    sFourACC8 = ["#accSchwaegerin2"]
 
     sFourP3begin = ["#containerJunge", "#tabakladenTUERi"],
     sFourMove = ["#containerJunge"],
