@@ -15,14 +15,12 @@ $('#tabakladenTUERa').on('click', function () {
     });
 
 $('#triggerBaeume').on('click', function () {
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: 22.19, y:5.8, z:-8.11});
-    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:-90, z:0});
-
-
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -5, y:5.8, z:-10.11});
+    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:90, z:0});
 });
 
 $('#triggerBaeckerei').on('click', function () {
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -14.71, y:5.8, z:-37.20});
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -10.71, y:5.8, z:-50.20});
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:0.00, z:0});
 
 });
@@ -33,7 +31,7 @@ $('#triggerTabakladenDefault').on('click', function () {
 });
 
 $('#triggerTeppichladen').on('click', function () {
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -38.50, y:5.8, z:19.83});
-    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:180.00, z:0});
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -27.5 , y:5.8, z:-10});
+    AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y:0, z:0});
 });
 
