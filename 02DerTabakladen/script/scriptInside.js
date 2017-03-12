@@ -66,7 +66,8 @@ var eventArr = ["one",
                 "mzeroTalk", "mone", "mone2", "mtwoTalk", "mthree", "mthreeTalk", "mfour",
                 "mfourTalk", "mfive", "mfive2", "mfiveTalk", "mfiveTalk2", "msix", "msix2",
                 "msix2Talk", "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3", "mseven2", "msevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1",
+                "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 at = eventArr[0];
 
@@ -288,6 +289,7 @@ function storyline(currentTarget, currentEvent) {
         (function startNext() {
             //window.clearTimeout(timeoutId);
 
+
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
@@ -306,111 +308,123 @@ function storyline(currentTarget, currentEvent) {
                     startNext();
                 });
             }
-            if (k <  window[currentEvent].length) {
-                next = false;
-                fireAt = window[currentEvent][k];
-                fireAtString = fireAt.slice(1);
-                console.log("Fire at= " + fireAt);
-                //window.clearTimeout(timeoutId);
+            if (i < eventArr.length) {
+                if (k <  window[currentEvent].length) {
+                    next = false;
+                    fireAt = window[currentEvent][k];
+                    fireAtString = fireAt.slice(1);
+                    console.log("Fire at= " + fireAt);
+                    //window.clearTimeout(timeoutId);
 
 
-                if (currentEvent.search("Talk") !== -1) {
-                    try {
-                        document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').emit(currentEvent);
-                    } catch (err) {
-                        console.log(err + " - while firing at  " + fireAt);
-                    }
-
-                    k++;
-                    try {
-
-                        if (document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]') !== null) {
-                            console.log(document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]'));
-                            narrate = "#" + document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').id;
-                            console.log(narrate);
+                    if (currentEvent.search("Talk") !== -1) {
+                        try {
+                            document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').emit(currentEvent);
+                        } catch (err) {
+                            console.log(err + " - while firing at  " + fireAt);
                         }
 
+                        k++;
+                        try {
 
-                        if (narrate !== null) {
-                            if (fireAt !== "#sky") {
-                                document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
+                            if (document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]') !== null) {
+                                console.log(document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]'));
+                                narrate = "#" + document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').id;
+                                console.log(narrate);
                             }
 
-                            //window.clearTimeout(timeoutId);
-                            wait2(narrate);
-                        } else {
+
+                            if (narrate !== null) {
+                                if (fireAt !== "#sky") {
+                                    document.querySelector(fireAt).setAttribute('material', 'color', '#a2e665');
+                                }
+
+                                //window.clearTimeout(timeoutId);
+                                wait2(narrate);
+                            } else {
+                                //window.clearTimeout(timeoutId);
+                                startNext();
+                            }
+
+                        } catch (err6) {
+                            console.log("No narration at: " + currentEvent + "-->" + fireAt);
                             //window.clearTimeout(timeoutId);
                             startNext();
                         }
 
-                    } catch (err6) {
-                        console.log("No narration at: " + currentEvent + "-->" + fireAt);
-                        //window.clearTimeout(timeoutId);
-                        startNext();
+
+
+                    } else {
+                        try {
+                            document.querySelector(fireAt).emit(currentEvent);
+                        } catch (err8) {
+                            console.log(err8 + " - while firing at  " + fireAt);
+                        }
+                        k++;
+                        try {
+                            if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
+                                console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
+                                animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
+                                console.log(animated);
+                            }
+                            if (currentEvent.search("All") !== -1) {
+                                document.querySelector(fireAt).setAttribute('material', 'color', '#a2e665');
+                            }
+
+                            if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
+                                //window.clearTimeout(timeoutId);
+                                wait(animated);
+                            } else {
+                                //window.clearTimeout(timeoutId);
+                                startNext();
+                            }
+
+                        } catch (err2) {
+                            console.log("No animation at: " + currentEvent + "-->" + fireAt);
+                            //window.clearTimeout(timeoutId);
+                            startNext();
+                        }
                     }
-
-
 
                 } else {
-                    try {
-                        document.querySelector(fireAt).emit(currentEvent);
-                    } catch (err8) {
-                        console.log(err8 + " - while firing at  " + fireAt);
-                    }
-                    k++;
-                    try {
-                        if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
-                            console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
-                            animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
-                            console.log(animated);
-                        }
-                        if (currentEvent.search("All") !== -1) {
-                            document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
-                        }
-
-                        if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
-                            //window.clearTimeout(timeoutId);
-                            wait(animated);
-                        } else {
-                            //window.clearTimeout(timeoutId);
-                            startNext();
-                        }
-
-                    } catch (err2) {
-                        console.log("No animation at: " + currentEvent + "-->" + fireAt);
-                        //window.clearTimeout(timeoutId);
-                        startNext();
-                    }
-                }
-
-            } else {
-                next = true;
-                //window.clearTimeout(timeoutId);
-                console.log("Finished: " + currentTarget);
-
-                //transition to next event
-                last = at;
-                at = eventArr[++i];
-
-                //clean up event name
-                if (last.search("Talk") !== -1) {
-                    last = last.replace('Talk', '');
-                }
-                if (last.search("begin") !== -1) {
-                    last = last.replace('begin', '');
-                }
-                if (last.search("Move") !== -1) {
-                    last = last.replace('Move', '');
-                } else if (last.search("All") !== -1) {
-                    last = last.replace('All', '');
-                }
-                last = last.replace(/\d+/g, '');
-
-                //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
-                if (at.search(last) !== -1) {
+                    next = true;
                     //window.clearTimeout(timeoutId);
-                    playableFound(at);
+                    console.log("Finished: " + currentTarget);
+
+
+
+                    if (i === eventArr.length - 1) {
+                        console.log("END");
+                        return 1;
+                    } else {
+                        //transition to next event
+                        last = at;
+                        at = eventArr[++i];
+                    }
+
+
+                    //clean up event name
+                    if (last.search("Talk") !== -1) {
+                        last = last.replace('Talk', '');
+                    }
+                    if (last.search("begin") !== -1) {
+                        last = last.replace('begin', '');
+                    }
+                    if (last.search("Move") !== -1) {
+                        last = last.replace('Move', '');
+                    } else if (last.search("All") !== -1) {
+                        last = last.replace('All', '');
+                    }
+                    last = last.replace(/\d+/g, '');
+
+                    //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
+                    if (at.search(last) !== -1) {
+                        //window.clearTimeout(timeoutId);
+                        playableFound(at);
+                    }
                 }
+            } else {
+                console.log("END");
             }
         }());
 
@@ -425,29 +439,33 @@ function storyline(currentTarget, currentEvent) {
 function playableFound(currentTarget) {
     'use strict';
 
-    if (i < eventArr.length && at !== undefined) {
+    if (i < eventArr.length || at !== undefined) {
         if (next === true) {
             if (currentTarget.search(at) !== -1) {
-                //window.clearTimeout(timeoutId);
-                for (n = 0; n < persons.length; n++) { //change hint coloring back to normal
-                    try {
-                        document.querySelector(persons[n]).setAttribute('material', 'color', getColorOfPerson(persons[n]));
-                    } catch (err9) {
-                        console.log(err9 + " - while firing at  " + fireAt);
-                    }
-
-                }
-
                 currentTarget = "#" + at;
 
                 //window.clearTimeout(timeoutId);
+                //                for (n = 0; n < persons.length; n++) { //change hint coloring back to normal
+                //                    try {
+                //                        document.querySelector(persons[n]).setAttribute('material', 'color', getColorOfPerson(persons[n]));
+                //                    } catch (err9) {
+                //                        console.log(err9 + " - while firing at  " + fireAt);
+                //                    }
+                //                }
+
+                //window.clearTimeout(timeoutId);
                 if (storyline(currentTarget, at) !== 1) {
-                    console.log("problem?!");
+                    console.log("Problem occured?!");
                 }
             }
-
         }
-        console.log("Next= " + at);
+        if (i !== eventArr.length - 1) {
+            console.log("Next= " + at);
+        } else {
+            i++;
+            console.log("......................");
+        }
+
         ////hint at next onPlayFusing()
         //        timeoutId = setTimeout(function showHint() {  
         //            for (m = 0; m < window[at].length; m++) {
