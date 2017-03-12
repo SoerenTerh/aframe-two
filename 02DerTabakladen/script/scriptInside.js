@@ -66,6 +66,7 @@ var eventArr = ["one",
                 "mzeroTalk", "mone", "mone2", "mtwoTalk", "mthree", "mthreeTalk", "mfour",
                 "mfourTalk", "mfive", "mfive2", "mfiveTalk", "mfiveTalk2", "msix", "msix2",
                 "msix2Talk", "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3", "mseven2", "msevenTalk4",
+
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1", "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 at = eventArr[0];
@@ -216,6 +217,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
     v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
     v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
+
     v31Talk = ["#ShuiTa"], // Wie ihr wollt
     v32 = ["#Schreiner", "#ShuiTa", "#tabakladenTUERi", "#containerPolizist"], // Shui zur Tür, Polizist taucht auf
     v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
