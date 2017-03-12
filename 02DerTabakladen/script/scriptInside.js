@@ -286,12 +286,12 @@ function storyline(currentTarget, currentEvent) {
     if (window[currentEvent].length !== 0) {
 
         (function startNext() {
-            window.clearTimeout(timeoutId);
+            //window.clearTimeout(timeoutId);
 
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
-                    window.clearTimeout(timeoutId);
+                    //window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
@@ -302,7 +302,7 @@ function storyline(currentTarget, currentEvent) {
                         document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt));
                     }
                     console.log("--------------------Narration End--------------------");
-                    window.clearTimeout(timeoutId);
+                    //window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
@@ -311,7 +311,7 @@ function storyline(currentTarget, currentEvent) {
                 fireAt = window[currentEvent][k];
                 fireAtString = fireAt.slice(1);
                 console.log("Fire at= " + fireAt);
-                window.clearTimeout(timeoutId);
+                //window.clearTimeout(timeoutId);
 
 
                 if (currentEvent.search("Talk") !== -1) {
@@ -336,16 +336,16 @@ function storyline(currentTarget, currentEvent) {
                                 document.querySelector(fireAt).setAttribute('material', 'color', 'turquoise');
                             }
 
-                            window.clearTimeout(timeoutId);
+                            //window.clearTimeout(timeoutId);
                             wait2(narrate);
                         } else {
-                            window.clearTimeout(timeoutId);
+                            //window.clearTimeout(timeoutId);
                             startNext();
                         }
 
                     } catch (err6) {
                         console.log("No narration at: " + currentEvent + "-->" + fireAt);
-                        window.clearTimeout(timeoutId);
+                        //window.clearTimeout(timeoutId);
                         startNext();
                     }
 
@@ -369,23 +369,23 @@ function storyline(currentTarget, currentEvent) {
                         }
 
                         if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
-                            window.clearTimeout(timeoutId);
+                            //window.clearTimeout(timeoutId);
                             wait(animated);
                         } else {
-                            window.clearTimeout(timeoutId);
+                            //window.clearTimeout(timeoutId);
                             startNext();
                         }
 
                     } catch (err2) {
                         console.log("No animation at: " + currentEvent + "-->" + fireAt);
-                        window.clearTimeout(timeoutId);
+                        //window.clearTimeout(timeoutId);
                         startNext();
                     }
                 }
 
             } else {
                 next = true;
-                window.clearTimeout(timeoutId);
+                //window.clearTimeout(timeoutId);
                 console.log("Finished: " + currentTarget);
 
                 //transition to next event
@@ -395,24 +395,26 @@ function storyline(currentTarget, currentEvent) {
                 //clean up event name
                 if (last.search("Talk") !== -1) {
                     last = last.replace('Talk', '');
-                }if (last.search("begin") !== -1) {
+                }
+                if (last.search("begin") !== -1) {
                     last = last.replace('begin', '');
-                }if (last.search("Move") !== -1) {
+                }
+                if (last.search("Move") !== -1) {
                     last = last.replace('Move', '');
-                }else if (last.search("All") !== -1) {
+                } else if (last.search("All") !== -1) {
                     last = last.replace('All', '');
                 }
                 last = last.replace(/\d+/g, '');
 
                 //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
                 if (at.search(last) !== -1) {
-                    window.clearTimeout(timeoutId);
+                    //window.clearTimeout(timeoutId);
                     playableFound(at);
                 }
             }
         }());
 
-        window.clearTimeout(timeoutId);
+        //window.clearTimeout(timeoutId);
         return 1;
     } else {
         return 0;
@@ -426,7 +428,7 @@ function playableFound(currentTarget) {
     if (i < eventArr.length && at !== undefined) {
         if (next === true) {
             if (currentTarget.search(at) !== -1) {
-                window.clearTimeout(timeoutId);
+                //window.clearTimeout(timeoutId);
                 for (n = 0; n < persons.length; n++) { //change hint coloring back to normal
                     try {
                         document.querySelector(persons[n]).setAttribute('material', 'color', getColorOfPerson(persons[n]));
@@ -438,7 +440,7 @@ function playableFound(currentTarget) {
 
                 currentTarget = "#" + at;
 
-                window.clearTimeout(timeoutId);
+                //window.clearTimeout(timeoutId);
                 if (storyline(currentTarget, at) !== 1) {
                     console.log("problem?!");
                 }
@@ -446,21 +448,22 @@ function playableFound(currentTarget) {
 
         }
         console.log("Next= " + at);
-        timeoutId = setTimeout(function showHint() {  //hint at next onPlayFusing()
-            for (m = 0; m < window[at].length; m++) {
-                fireAt = window[at][m];
-                if (fireAt.search("container") !== -1) {
-                    fireAt = fireAt.replace('container', '');
-                } else if (fireAt.search("sockel") !== -1) {
-                    fireAt = fireAt.replace('sockel', '');
-                }
-                if($.isArray(fireAt)){
-                    document.querySelector(fireAt[0]).setAttribute('material', 'color', 'red');
-                }else{
-                    document.querySelector(fireAt).setAttribute('material', 'color', 'red');
-                }
-            }
-        }, 30000);
+        ////hint at next onPlayFusing()
+        //        timeoutId = setTimeout(function showHint() {  
+        //            for (m = 0; m < window[at].length; m++) {
+        //                fireAt = window[at][m];
+        //                if (fireAt.search("container") !== -1) {
+        //                    fireAt = fireAt.replace('container', '');
+        //                } else if (fireAt.search("sockel") !== -1) {
+        //                    fireAt = fireAt.replace('sockel', '');
+        //                }
+        //                if($.isArray(fireAt)){
+        //                    document.querySelector(fireAt[0]).setAttribute('material', 'color', 'red');
+        //                }else{
+        //                    document.querySelector(fireAt).setAttribute('material', 'color', 'red');
+        //                }
+        //            }
+        //        }, 30000);
     }
 }
 
