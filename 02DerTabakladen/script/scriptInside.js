@@ -33,7 +33,7 @@ var eventArr = ["one",
                 //                "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
                 //                "sSixTalk1", "sSixTalk2", "sSixTalk3",
-                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end", "sSeven_PickUp2", /*"sEight",*/
+                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end",
                 "vOne",
                 //                "vOneTalk",
                 "vTwo",
