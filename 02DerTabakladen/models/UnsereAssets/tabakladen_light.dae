@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
-  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2017-03-13T19:37:15Z</created><keywords></keywords><modified>2017-03-13T19:37:15Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2017-03-13T19:47:16Z</created><keywords></keywords><modified>2017-03-13T19:47:16Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
   <library_materials>
     <material id="door" name="door">
       <instance_effect url="#door-fx"/>
@@ -2081,12 +2081,12 @@
     </geometry>
   </library_geometries>
   <library_visual_scenes>
-    <visual_scene id="tabakladen_lighter" name="tabakladen_lighter">
+    <visual_scene id="tabakladen_light" name="tabakladen_light">
       <node name="tabakladen" id="tabakladen" sid="tabakladen"><matrix sid="matrix">0.010000 0.000000 0.000000 0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 0.010000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="house" id="house" sid="house"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="pCube2" id="pCube2" sid="pCube2"><matrix sid="matrix">1.000000 0.000000 0.000000 -287.948975 0.000000 0.861552 0.000000 221.035950 0.000000 0.000000 1.061324 104.963142 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#pCube2-lib"><bind_material><technique_common><instance_material symbol="door" target="#door"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="house_ncl1_1" id="house_ncl1_1" sid="house_ncl1_1"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.000000 0.000000 1.000000 0.000000 -0.000000 0.000000 0.000000 1.000000 -1.127475 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#house_ncl1_1-lib"><bind_material><technique_common><instance_material symbol="door" target="#door"/><instance_material symbol="pasted__door" target="#pasted__door"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node><node name="roof" id="roof" sid="roof"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.016442 0.000000 241.000000 0.000000 0.000000 1.000000 0.611384 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#roof-lib"><bind_material><technique_common><instance_material symbol="aluminium_roof" target="#aluminium_roof"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="window2" id="window2" sid="window2"><matrix sid="matrix">1.000000 0.000000 0.000000 -286.344147 0.000000 1.000000 0.000000 132.552704 0.000000 0.000000 1.000000 -65.924644 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#window2-lib"><bind_material><technique_common><instance_material symbol="window" target="#window"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
       <extra><technique profile="MAX3D"><frame_rate>24.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.041667</start_time><end_time>8.333333</end_time></technique></extra>
     </visual_scene>
   </library_visual_scenes>
   <scene>
-    <instance_visual_scene url="#tabakladen_lighter"></instance_visual_scene>
+    <instance_visual_scene url="#tabakladen_light"></instance_visual_scene>
   </scene>
 </COLLADA>
