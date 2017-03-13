@@ -30,7 +30,7 @@
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
 
-        <a-scene id="innen" physics="debug: false" auto-enter-vr="display: all">
+        <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
             <!--   position="6 0 -20" rotation= "0 185 0"-->
             <!-- camera-->
             <a-entity id="camera" position="0.00 13.6 0">
@@ -488,7 +488,7 @@ event-set__sTwo_P4="_event: sTwo_P4; visible: false"-->
 
                     <a-animation id="SchaegerinAnimFive" attribute="rotation" dur="2500" to="0 -130.00 0" repeat="0" begin="five"></a-animation>
                     <a-animation id="SchwaegerinAnimFive2" attribute="position" dur="2500" to="7.82 0 25.73" repeat="0" begin="five"></a-animation>
-					
+
 					<a-animation id="cschwaegerinp" class="wait" attribute="position" dur="2500" to="8.79 0 -18.67" repeat="0" begin="cSix"></a-animation>
                     <a-animation id="cschwaegerinR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
 
@@ -959,7 +959,8 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
 
                 <!-- Ladentisch -->
                 <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="2.36 0 -3.96" scale="0.24 0.4 0.19" rotation="0 0 0" visible="true" id="theke" material=""></a-entity>
-                <a-box id="ladentischBox" static-body="shape:Primitives" position="-2 4 0" width=23 height="10" depth="4" visible="false"></a-box>
+                <a-box id="ladentischBox1" static-body="shape:Primitives" position="-2 4 0" width="23" height="10" depth="4" visible="false"></a-box>
+                <a-box id="ladentischBox2" static-body="shape:Primitives" position="5.5 4 4" width="6" height="10" depth="14" visible="false"></a-box>
 
                 <!--Essen-->
                 <a-entity id="containerEssen" class="msix play" visible="false" position="-6.38 2 -17.07" scale="0.3 0.3 0.3"
