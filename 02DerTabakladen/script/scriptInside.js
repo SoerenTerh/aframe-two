@@ -403,19 +403,17 @@ function storyline(currentTarget, currentEvent) {
                     }
 
 
-                    //clean up event name
-                    if (last.search("Talk") !== -1) {
-                        last = last.replace('Talk', '');
-                    }
-                    if (last.search("begin") !== -1) {
-                        last = last.replace('begin', '');
-                    }
-                    if (last.search("Move") !== -1) {
-                        last = last.replace('Move', '');
-                    } else if (last.search("All") !== -1) {
-                        last = last.replace('All', '');
-                    }
-                    last = last.replace(/\d+/g, '');
+                //clean up event name
+                if (last.search("Talk") !== -1) {
+                    last = last.replace('Talk', '');
+                }
+                if (last.search("begin") !== -1) {
+                    last = last.replace('begin', '');
+                }
+                else if (last.search("All") !== -1) {
+                    last = last.replace('All', '');
+                }
+                last = last.replace(/\d+/g, '');
 
                     //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
                     if (at.search(last) !== -1) {
