@@ -919,7 +919,12 @@ scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
 
                 <!-- Tabakladen -->
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen_light.dae)" id="tabakladen" position="4.31 -1.02 3.47"
-                          scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true"></a-entity>
+                          scale="10 10 10" rotation="0 -89.95437383553924 0" visible="true">
+                </a-entity>
+                <a-box id="wallLeft" static-body="shape:Primitives" position="22 4 3" width="3" height="10" depth="60" visible="false"></a-box>
+                <a-box id="wallFront" static-body="shape:Primitives" position="9 4 -25" width="3" height="10" depth="20" rotation="0 90 0" visible="false"></a-box>
+                <a-box id="wallRight" static-body="shape:Primitives" position="-14 4 3" width="3" height="10" depth="60" visible="false"></a-box>
+                <a-box id="wallBack" static-body="shape:Primitives" position="5 4 32" width="3" height="10" depth="40" rotation="0 90 0" visible="false"></a-box>
 
                 <a-box id="triggerTuer" class="clickableTrigger" color="lightgrey" depth="2" height="2" width="2" rotation="-45 0 0" position="6.23 20.54 -19.92">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
