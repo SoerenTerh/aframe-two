@@ -26,10 +26,7 @@
     <link href="style/style.css" rel="stylesheet">
   </head>
   <body>
-    <div id="giveMeTime">
-      <img id="loader" src="gif/ring.gif" alt="loader"/>
-    </div>
-
+    <div id="giveMeTime"><img id="loader" src="gif/ring.gif" alt="loader"/></div>
     <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
       <!-- camera-->
       <a-entity id="camera" position="0.00 13.6 0">
@@ -76,10 +73,8 @@
         <audio id="paper_rip" src="../assets/sounds/paper_rip.mp3" preload="auto"></audio>
         <audio id="paper" src="../assets/sounds/paper.mp3" preload="auto"></audio>
         <audio id="place_object" src="../assets/sounds/place_object.mp3" preload="auto"></audio>
-
         <audio id="mickey" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
         <audio id="duck" src="../assets/audio/test/DonaldDuck.mp3" preload="auto"></audio>
-
         <!--ersteSeite-->
         <audio id="frau1" src="../assets/audio/ersteSeite/frau1.mp3" preload="auto"></audio>
         <audio id="frau2" src="../assets/audio/ersteSeite/frau2.mp3" preload="auto"></audio>
@@ -95,7 +90,6 @@
         <audio id="shui3" src="../assets/audio/ersteSeite/shui3.mp3" preload="auto"></audio>
         <audio id="shui4" src="../assets/audio/ersteSeite/shui4.mp3" preload="auto"></audio>
         <audio id="shuiNein" src="../assets/audio/ersteSeite/nein.mp3" preload="auto"></audio>
-
         <!--zweiteSeite-->
         <audio id="frau4" src="../assets/audio/zweiteSeite/frau4.mp3" preload="auto"></audio>
         <audio id="neffe3" src="../assets/audio/zweiteSeite/neffe3.mp3" preload="auto"></audio>
@@ -111,10 +105,7 @@
         <audio id="shui6" src="../assets/audio/zweiteSeite/shui6.mp3" preload="auto"></audio>
         <audio id="shui7" src="../assets/audio/zweiteSeite/shui7.mp3" preload="auto"></audio>
         <audio id="shui8" src="../assets/audio/zweiteSeite/shui8.mp3" preload="auto"></audio>
-
-
         <!-- dritte Seite -->
-
         <audio id="schreinerV1" src="../assets/audio/dritteSeite/schreiner1.mp3" preload="auto"></audio>
         <audio id="shuiV2" src="../assets/audio/dritteSeite/shui9.mp3" preload="auto"></audio>
         <audio id="schreinerV3" src="../assets/audio/dritteSeite/schreiner2.mp3" preload="auto"></audio>
@@ -156,7 +147,6 @@
         <audio id="shuiV34" src="../assets/audio/vierteSeite/shui25.mp3" preload="auto"></audio>
         <audio id="polizistV34" src="../assets/audio/vierteSeite/polizist2.mp3" preload="auto"></audio>
         <audio id="shuiV36" src="../assets/audio/vierteSeite/shui26.mp3" preload="auto"></audio>
-
         <!--fünfteSeite-->
         <audio id="frau8" src="../assets/audio/fuenfteSeite/frau8.mp3" preload="auto"></audio>
         <audio id="frau9" src="../assets/audio/fuenfteSeite/frau9.mp3" preload="auto"></audio>
@@ -179,16 +169,12 @@
         <audio id="shui31" src="../assets/audio/fuenfteSeite/shui31.mp3" preload="auto"></audio>
         <audio id="shui32" src="../assets/audio/fuenfteSeite/shui32.mp3" preload="auto"></audio>
         <audio id="stimmeausdemoff1" src="../assets/audio/fuenfteSeite/stimmeausdemoff1.mp3" preload="auto"></audio>
-
-
         <!--Seite 200-->
         <audio id="cFrau10" src="../assets/audio/sechsteSeite/frau10.mp3" preload="auto"></audio>
         <audio id="cShui33" src="../assets/audio/sechsteSeite/shui33.mp3" preload="auto"></audio>
         <audio id="cPolizist11" src="../assets/audio/sechsteSeite/polizist11.mp3" preload="auto"></audio>
         <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
         <audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
-
-
         <!--    Modelle-->
         <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
         <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
@@ -244,7 +230,6 @@
         <a-asset-item id="BettgestellObj" src="models/UnsereAssets/Bettgestell_Schlafplatz.obj"></a-asset-item>
         <a-asset-item id="BettgestellMtl" src="models/UnsereAssets/Bettgestell_Schlafplatz.mtl"></a-asset-item>
 
-
         <!-- Identifizierung: Gegenstände -->
         <a-asset-item id="MonokelObj" src="models/UnsereAssets/000/monokel000.obj"></a-asset-item>
         <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>
@@ -281,16 +266,15 @@
       </a-assets>
 
       <a-entity rotation="0 180 0">
-
-        <!--Frau-->
-        <a-entity id="containerFrau" class="two three msix2 cSix cSix1 cSix2 play" position="-1.71 1.36 -21.22" rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
-          <a-entity id="Frau" class="one twoTalk twoTalk2 fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
-                                     mthreeTalk msevenTalk2
-                                     cOneTalk play"
-                    obj-model="obj:#figurObj"
-                    position="0 2 0" scale="9.5 9.4 9.5" material="color:#4D4D4D" rotation="0 0 0" visible="true"
-                    sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
-                    event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+         <!--Frau-->
+         <a-entity id="containerFrau" class="two three msix2 cSix cSix1 cSix2 play" position="-1.71 1.36 -21.22"
+                   rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
+           <a-entity id="Frau" class="one twoTalk twoTalk2 fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
+                                      mthreeTalk msevenTalk2
+                                      cOneTalk play"
+                     obj-model="obj:#figurObj"position="0 2 0" scale="9.5 9.4 9.5" material="color:#4D4D4D"
+                     rotation="0 0 0" visible="true" sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
+                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="twoTalkFrau" class="wait" src="#frau1" volume="10" on="twoTalk"></a-sound>
             <a-sound id="twoTalkFrau2" class="wait" src="#frau2" volume="10" on="twoTalk2"></a-sound>
             <a-sound id="fourTalkFrau" class="wait" src="#frau3" volume="10" on="fourTalk"></a-sound>
@@ -317,41 +301,36 @@
                        repeat="0" begin="three"></a-animation>
           <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="-1.71 0.00 -21.22"
                        repeat="0" begin="three"></a-animation>
-
           <a-animation id="FrauAnimVOne" class="wait" attribute="rotation" dur="2500" to="0 70 0"
                        repeat="0" begin="vOne"></a-animation>
           <a-animation id="FrauAnimvElevenR" class="wait" attribute="rotation" dur="2500" to="0 90 0"
                        repeat="0" begin="vEleven"></a-animation>
           <a-animation id="FrauAnimvElevenP" class="wait" attribute="position" dur="2500" to="1 0 -6"
                        repeat="0" begin="vEleven"></a-animation>
-
           <!-- fünfte Seite-->
           <a-animation id="FrauAnimvSixP" class="wait" attribute="rotation" dur="2500" to="0 -90 0"
                        repeat="0" begin="msix2"></a-animation>
-
-
-          <a-animation id="cfrauanimpP" class="wait" attribute="position" dur="2500" to="13.54 0 -11.71" repeat="0" begin="cSix"></a-animation>
-          <a-animation id="cfrauanimpR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="cSix"></a-animation>
-
-          <a-animation id="cfrauanimp1P" class="wait" attribute="position" dur="2500" to="-6.75 0 -11.71" repeat="0" begin="cSix1"></a-animation>
-          <a-animation id="cfrauanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0" begin="cSix1"></a-animation>
+          <a-animation id="cfrauanimpP" class="wait" attribute="position" dur="2500" to="13.54 0 -11.71"
+                       repeat="0" begin="cSix"></a-animation>
+          <a-animation id="cfrauanimpR" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
+                       begin="cSix"></a-animation>
+          <a-animation id="cfrauanimp1P" class="wait" attribute="position" dur="2500" to="-6.75 0 -11.71"
+                       repeat="0" begin="cSix1"></a-animation>
+          <a-animation id="cfrauanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0"
+                       begin="cSix1"></a-animation>
         </a-entity>
 
           <!--Mann-->
         <a-entity id="containerMann" class="five cSix cSix1 cSix2 play" position="-1.09 2 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
-          <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk
-                                     sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
-                                     vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3
-                                     v25Talk v26 v26two v26three v29Talk
-                                     mzeroTalk mfourTalk mfiveTalk mone mone2
-                                     play" obj-model="obj:#figurObj"
-                    position="0 2 0"
-                    scale="9.5 9.5 9.5" material="color:#404040" rotation="0 0 0" visible="true"
-                    sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
+          <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
+                                     sFourACC1 sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22sSeven_P2
+                                     vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
+                                     v26 v26two v26three v29TalkmzeroTalk mfourTalk mfiveTalk mone mone2play"
+                    obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#404040"
+                    rotation="0 0 0" visible="true" sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                     event-set__5="_event: sound-ended; material.color: #404040"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-
             <a-sound id="sixTalk2Mann" class="wait" src="#mann1" volume="10" on="sixTalk2"></a-sound>
             <a-sound id="sevenTalkMann" class="wait" src="#mann2" volume="10" on="sevenTalk"></a-sound>
             <a-sound id="sThreeTalkMann" class="wait" src="#mann3" volume="10" on="sThreeTalk"></a-sound>
@@ -370,14 +349,12 @@
             <a-sound id="mfourTalkMann" class="wait" src="#mann15" volume="10" on="mfourTalk"></a-sound>
             <a-sound id="mfiveTalkMann" class="wait" src="#mann16" volume="10" on="mfiveTalk"></a-sound>
 
-
-            <a-animation id="moneMannAnimP" attribute="position" dur="2500" to="0 5 0"
-                         begin="mone"></a-animation>
-            <a-animation id="mone2MannAnimP" attribute="position" dur="2500" to="0 2 0"
-                         begin="mone2"></a-animation>
+            <a-animation id="moneMannAnimP" attribute="position" dur="2500" to="0 5 0" begin="mone"></a-animation>
+            <a-animation id="mone2MannAnimP" attribute="position" dur="2500" to="0 2 0" begin="mone2"></a-animation>
           </a-entity>
 
-          <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj; mtl: #KappeMtl" position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
+          <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj; mtl: #KappeMtl"
+                    position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
                     event-set__accMannV="_event: sFourACC1; visible: true">
             <a-animation id="moneAccMannAnimP" class="wait" attribute="position" dur="2500" to="0 19.43 -0.40"
                          begin="mone"></a-animation>
@@ -386,28 +363,34 @@
           </a-entity>
 
           <!-- Sockel-->
-          <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
+          <a-entity id="sockelMann" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11"
+                    material="color:#000000" rotation="0 -180 0" visible="false"
                     event-set__5="_event: five; visible: true"></a-entity>
+          <a-animation id="MannAnimFive" attribute="rotation" class="wait" dur="2500" to="0 -90 0" repeat="0"
+                       begin="five"></a-animation>
+          <a-animation id="MannAnimFive2_P1" attribute="position" class="wait" dur="2500" to="3.01 0.00 -14.02"
+                       repeat="0" begin="five"></a-animation>
 
-          <a-animation id="MannAnimFive" attribute="rotation" class="wait" dur="2500" to="0 -90 0" repeat="0" begin="five"></a-animation>
-          <a-animation id="MannAnimFive2_P1" attribute="position" class="wait" dur="2500" to="3.01 0.00 -14.02" repeat="0" begin="five"></a-animation>
+          <a-animation id="MannAnimsSeven_P1_R" attribute="rotation" class="wait" dur="2500" to="0 0 0" repeat="0"
+                       begin="sSeven_P1_P"></a-animation>
+          <a-animation id="MannAnimsSeven_P1" attribute="position" class="wait" dur="2500" to="-2 2 -14.75" repeat="0"
+                       begin="sSeven_P1"></a-animation>
 
+          <a-animation id="MannAnimFive2_P2" attribute="position" class="wait" dur="2500" to="11 2 3" repeat="0"
+                       begin="sSeven_P22"></a-animation>
 
-
-
-          <a-animation id="MannAnimsSeven_P1_R" attribute="rotation" class="wait" dur="2500" to="0 0 0" repeat="0" begin="sSeven_P1_P"></a-animation>
-          <a-animation id="MannAnimsSeven_P1" attribute="position" class="wait" dur="2500" to="-2 2 -14.75" repeat="0" begin="sSeven_P1"></a-animation>
-
-          <a-animation id="MannAnimFive2_P2" attribute="position" class="wait" dur="2500" to="11 2 3" repeat="0" begin="sSeven_P22"></a-animation>
-
-          <a-animation id="MannAnimsSeven_P2" attribute="position" class="wait" dur="2500" to="-3 2 18" repeat="0" begin="sSeven_P2"></a-animation>
+          <a-animation id="MannAnimsSeven_P2" attribute="position" class="wait" dur="2500" to="-3 2 18" repeat="0"
+                       begin="sSeven_P2"></a-animation>
 
           <a-animation id="MannAnimVOne" class="wait" attribute="rotation" dur="2500" to="0 70 0"
                        repeat="0" begin="vOne"></a-animation>
-          <a-animation id="MannAnimV18R" attribute="rotation" class="wait" dur="2500" to="0 180 0" repeat="0" begin="vEighteen"></a-animation>
+          <a-animation id="MannAnimV18R" attribute="rotation" class="wait" dur="2500" to="0 180 0" repeat="0"
+                       begin="vEighteen"></a-animation>
 
-          <a-animation id="MannAnimV18_2P" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0" begin="vEighteen2"></a-animation>
-          <a-animation id="MannAnimV18_2R" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0" begin="vEighteen2"></a-animation>
+          <a-animation id="MannAnimV18_2P" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0"
+                       begin="vEighteen2"></a-animation>
+          <a-animation id="MannAnimV18_2R" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0"
+                       begin="vEighteen2"></a-animation>
 
           <a-animation id="MannAnimV18_3P" attribute="position" class="wait" dur="2500" to="4 0 -15" repeat="0"
                        begin="vEighteen3"></a-animation>
