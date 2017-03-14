@@ -26,8 +26,16 @@
     <link href="style/style.css" rel="stylesheet">
   </head>
   <body>
+<<<<<<< HEAD
     <div id="giveMeTime"><img id="loader" src="gif/ring.gif" alt="loader"/></div>
     <a-scene id="innen" physics="debug: true" auto-enter-vr="display: all">
+=======
+    <div id="giveMeTime">
+      <img id="loader" src="gif/ring.gif" alt="loader"/>
+    </div>
+
+    <a-scene id="innen"  auto-enter-vr="display: all">
+>>>>>>> origin/develop
       <!-- camera-->
       <a-entity id="camera" position="0.00 13.6 0">
         <a-entity camera
@@ -974,7 +982,11 @@
           </a-entity>
 
           <!-- Silberdollar -->
-          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
+          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.60 9.45 0.72" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar" material=""></a-entity>
+          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.79 9.42 0.35" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar2" material=""></a-entity>
+          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-6.17 9.43 0.34" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar3" material=""></a-entity>
+          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.72" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar4" material=""></a-entity>
+          <a-entity data-brackets-id="896" obj-model="obj:#SilberdollarObj;mtl:#SilberdollarMtl" position="-5.93 9.43 0.47" scale="0.02 0.02 0.02" rotation="0 90 0" visible="true" id="silberdollar5" material=""></a-entity>
 
           <!-- Schlafplatz -->
         <  <a-entity class="sSeven_P1 sEight play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="6.69 -0.02 -19.05" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett" material="" event-set__sevp1="_event: sSeven_P1; visible: false" event-set__plcB="_event: sEight; visible: true; position: -4.47 2.52 25.03; rotation: 0 180 0;"></a-entity>
@@ -1067,6 +1079,96 @@
               <a-animation attribute="position" dur="1000" fill="forwards" from="-11.05 9.45 2.95" to="-11.02 9.51 1.32" repeat="0" begin="clickableClick"></a-animation>
           </a-entity>
 
+          <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.15 0.15 0.15" position="-9.76 9.45 0.30" rotation="-90 90 0" visible="true" id="zigarette4" material="">
+          </a-entity>
+          <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.15 0.15 0.15" position="-9.93 9.45 0.30" rotation="-90 90 0" visible="true" id="zigarette5" material="">
+          </a-entity>
+          <a-entity obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.15 0.15 0.15" position="-9.83 9.57 0.30" rotation="-90 90 0" visible="true" id="zigarette6" material="">
+          </a-entity>
+
+
+          <!-- zigarrettenkiste 2 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 2.10" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen2" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 2.11" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen2" material="">
+          </a-entity>
+          <!-- z3 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen3" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen3" material="">
+          </a-entity>
+
+          <!-- z4 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 3.6" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen4" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 3.6" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen4" material="">
+          </a-entity>
+
+          <!-- z5 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen5" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen5" material="">
+          </a-entity>
+
+          <!-- z6 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 7.37 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen6" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen6" material="">
+          </a-entity>
+
+          <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="14.69 13.37 -3.33"
+                    scale="0.25 0.25 0.25" rotation="-81 -90 0" id="Rechnung2" sound="src:#paper;on:click"
+                    visible="true" material=""></a-entity>
+        <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="14.69 13.37 -6.48"
+                    scale="0.25 0.25 0.25" rotation="-81 -90 0" id="Rechnung3" sound="src:#paper;on:click"
+                    visible="true" material=""></a-entity>
+
+          <!-- z7 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen7" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen7" material="">
+          </a-entity>
+
+          <!-- z8 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 9.04" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen8" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 9.04" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen8" material="">
+          </a-entity>
+
+          <!-- z9 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 7.39 11.63" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen9" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.08 7.39 11.66" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen9" material="">
+          </a-entity>
+
+          <!-- z10 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen10" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen10" material="">
+          </a-entity>
+
+          <!-- z11 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.83 -14.23" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen11" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.85 -14.20" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen11" material="">
+          </a-entity>
+
+          <!-- z12 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.07 7.47 -12.35" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen12" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 7.45 -12.37" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen12" material="">
+          </a-entity>
+
+          <!-- z13 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.02 9.78 -20.52" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen13" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.76 -20.50" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen13" material="">
+          </a-entity>
+
+          <!-- z14 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.07 5.11 -19.31" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen14" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.25 5.10 -19.29" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen14" material="">
+          </a-entity>
+
+          <!-- z15 -->
+          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl" position="17.07 3.06 -12.38" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen15" material=""></a-entity>
+          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 3.10 -12.37" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen15" material="">
+          </a-entity>
+
+          <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="14.10 6.35 -6.47"
+                    scale="0.25 0.25 0.25" rotation="-81 -90 0" id="Rechnung3" sound="src:#paper;on:click"
+                    visible="true" material=""></a-entity>
+          <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="14.85 6.43 -3.33"
+                    scale="0.25 0.25 0.25" rotation="-81 -90 0" id="Rechnung4" sound="src:#paper;on:click"
+                    visible="true" material=""></a-entity>
 
           <!-- ground-->
           <a-box scale="0.20 0.25 0.25" width="555" height="2" depth="555" static-body="shape:box;sphereRadius:NaN" position="4.19 -1.23 6.5" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="#333437"></a-box>
