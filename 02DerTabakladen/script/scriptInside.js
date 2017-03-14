@@ -134,14 +134,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven4 = ["#containerShuiTa"],
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
-
-
-    sOne = ["#Mann", "#Frau", "#Neffe",  '#Schwaegerin', "#Großvater", "#Junge", "#Bruder"], //Mann organisiert alle (du und du und du....)
-    sTwo = ["#Junge", "#tabakladenTUERi", "#Frau", "#Neffe", "#Bruder", '#Schwaegerin', "#Alte", "#Großvater"], //Junge nickt und verschindet aus laden (Richtung Bäckerei); alle ziehen sich an
-    sThree = ["#Neffe", "#Bruder", '#Schwaegerin', "#Nichte"], //Neffe, Bruder, Schwaegerin & Nichte verlassen Laden
-    sFour = ["#ShuiTa", "#bett"], //ShuiTa räumt auf
-
-
+    
     sOneTalk = ["#Frau"],
     sTwoTalk = ["#Neffe"],
     sThreeTalk = ["#Mann"],
@@ -179,7 +172,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P2rot = ["#containerShuiTa", "#bett-7", "#bett-8"],
     sSevenPRotaPU = ["#containerShuiTa"],
     sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-4", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
-    //sEight = ["#bett", "#bett-2", "#bett-3", "#bett-4", "#bett-5", "#bett-6"],
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
     vOneTalk = ["#Schreiner"], // Schreiner redet
