@@ -591,3 +591,6 @@ AFRAME.registerComponent('auto-init-vr', {
 
 
 document.querySelector('a-scene').enterVR();
+
+
+
