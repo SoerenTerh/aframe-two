@@ -85,8 +85,8 @@ var persons = ["#Frau",
 
                "#ShuiTa",
                "#Schreiner",
-               "#Polizist",
-               /*"#Hausbesitzerin"*/];
+               "#Polizist"
+               /*,"#Hausbesitzerin"*/];
 
 
 var personColors = ["#4D4D4D",
@@ -103,8 +103,8 @@ var personColors = ["#4D4D4D",
 
                     "#262626",
                     "#CCCCCC",
-                    "#595959",
-                    /*"#FFF"*/];
+                    "#595959"
+                    /*,"#FFF"*/];
 
 //ersteSeite
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
@@ -281,7 +281,6 @@ function storyline(currentTarget, currentEvent) {
         (function startNext() {
             //window.clearTimeout(timeoutId);
 
-
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
@@ -402,6 +401,8 @@ function storyline(currentTarget, currentEvent) {
                         last = last.replace('begin', '');
                     } else if (last.search("All") !== -1) {
                         last = last.replace('All', '');
+                    } else if (last.search("_P") !== -1) {
+                        last = last.replace('_P', '');
                     }
                     last = last.replace(/\d+/g, '');
 
