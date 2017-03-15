@@ -3,7 +3,7 @@
   <head>
     <!-- In dem Laden -->
     <meta charset="utf-8">
-    <title>VR-Theater</title>
+    <title>In dem Laden</title>
     <meta name="description" content="VR-Theater">
 
     <!-- jQuery-->
@@ -51,6 +51,7 @@
       </a-entity>
 
       <a-assets timeout="5000">
+          <!--audio-->
         <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3"></audio>
         <audio id="snore" src="../assets/sounds/snore.mp3"></audio>
         <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3"></audio>
@@ -169,7 +170,8 @@
         <audio id="cPolizist11" src="../assets/audio/sechsteSeite/polizist11.mp3" preload="auto"></audio>
         <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
         <audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
-        <!--    Modelle-->
+          
+        <!--Modelle-->
         <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
         <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
 
@@ -203,19 +205,14 @@
         <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.obj"></a-asset-item>
         <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.mtl"></a-asset-item>
 
-
         <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/000/Zigarettenkiste_innen000.obj"></a-asset-item>
         <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/000/Zigarettenkiste_innen000.mtl"></a-asset-item>
 
-
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
-
         
         <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
 
-
-        
         <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>
         <a-asset-item id="SockelMtl" src="models/UnsereAssets/000/sockel000.mtl"></a-asset-item>
 
@@ -253,11 +250,11 @@
         <a-asset-item id="TascheObj" src="models/UnsereAssets/000/tasche000.obj"></a-asset-item>
         <a-asset-item id="TascheMtl" src="models/UnsereAssets/000/tasche000.mtl"></a-asset-item>
 
-
+          <!--images-->
         <img src="../assets/panorama-3.png" id="audience" alt="audience">
       </a-assets>
 
-      <a-entity rotation="0 180 0">
+      <a-entity id="innenSzene" rotation="0 180 0">
          <!--Frau-->
          <a-entity id="containerFrau" class="two three msix2 cSix cSix1 cSix2 play" position="-1.71 1.36 -21.22"
                    rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
@@ -288,7 +285,7 @@
           <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                     event-set__3="_event: three; visible: true"></a-entity>
 
-          <!--     erste Seite-->
+          <!--erste Seite-->
           <a-animation id="FrauAnimThree" class="wait" attribute="rotation" dur="2500" to="0 -90 0"
                        repeat="0" begin="three"></a-animation>
           <a-animation id="FrauAnimThree2" class="wait" attribute="position" dur="2500" to="-1.71 0.00 -21.22"
@@ -476,7 +473,6 @@
         </a-entity>
 
         <!--Großvater-->
-
         <a-entity id="containerGroßvater" class="sFourACC4 cSeven cEight play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cEight; visible: false">
           <a-entity id="Großvater" class="one five fiveAll cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
                     scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
@@ -500,7 +496,6 @@
           <a-animation id="cGrossvaterSeven1" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
                        begin="cSeven"></a-animation>
          
-
           <!-- Sockel-->
           <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                     event-set__5="_event: five; visible: true"></a-entity>
@@ -596,7 +591,6 @@
 
               <!--      fünfte Seite-->
             <a-sound id="msevenTalkJunge" class="wait" src="#junge1" volume="10" on="msevenTalk"></a-sound>
-
 
           </a-entity>
 
@@ -703,7 +697,6 @@
 
           <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl"
                     position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true">
-            
           </a-entity>
 
           <!-- Sockel-->
@@ -961,7 +954,6 @@
               <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
                         visible="true" id="fladen2"></a-entity>
           </a-entity>
-
 
           <!-- Laterne --> <!-- Cheat -->
           <a-entity class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
@@ -1261,8 +1253,6 @@
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen14">
               </a-entity>
           </a-entity>
-          
-          
 
           <a-entity data-brackets-id="898" obj-model="mtl:#RechnungMtl;obj:#RechnungObj" position="14.10 6.35 -6.47"
                     scale="0.25 0.25 0.25" rotation="-81 -90 0" id="Rechnung4" sound="src:#paper;on:click"
@@ -1283,13 +1273,11 @@
         <!-- sky-->
       <a-sky src="#audience" id="sky" class="mfiveTalk2 play" scale="-0.02 0.02 0.02" position="0 17 0"
              rotation="0 0 4.01">
-          <!--      fünfte Seite-->
         <a-sound id="mfiveTalk2StimmeAusDemOff" class="wait" src="#stimmeausdemoff1" volume="10"
                  on="mfiveTalk2"></a-sound>
       </a-sky>
 
     </a-scene>
-    
     <script src="script/utility_indoor.js"></script>
     <script src="script/scriptInside.js"></script>
   </body>
