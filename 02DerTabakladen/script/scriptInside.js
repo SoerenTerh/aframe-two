@@ -160,7 +160,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFiveTalk2 = ["#Neffe"],
     sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
     sFive_P2 = ["#Neffe", /*"#Bruder",*/ "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
-    sFive_P2Move = ["#Neffe", "#Bruder"],
+    sFive_P2Move = ["#Neffe"/*, "#Bruder"*/],
     sFive_P3 = ["#Neffe", /*"#Bruder",*/ "#Nichte"],
     sFive_P3Move = ["#Nichte"],
     sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
@@ -185,11 +185,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
     vFifteen = ["#Schreiner"], // geht zu Stellage
     vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
-    vSixteen = ["#Schreiner", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
+    vSixteen = ["#Schreiner", "#ZigarettenkisteRegalLinks", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
     vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann", "#Schreiner"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
-    vEighteen3 = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
+    vEighteen3 = ["#Mann", "#ZigarettenkisteRegalLinksFast", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
     vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
     v21Talk = ["#Schreiner"], // 100
     v21 = [ "#Mann", "#tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
@@ -551,10 +551,10 @@ window.addEventListener('load', function onLoadEnterVR() {
     var scene = document.querySelector('a-scene');
     if (scene.hasLoaded) {
         scene.enterVR();
-        //    } else {
-        //        el.addEventListener('loaded', function () {
-        //            scene.enterVR();
-        //        });
+    } else {
+        el.addEventListener('loaded', function () {
+            scene.enterVR();
+        });
     }
 });
 
@@ -562,7 +562,6 @@ window.addEventListener('load', function onLoadEnterVR() {
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function szeneLoaded() {
     'use strict';
-
     setTimeout(function loadTimeout() {
         var scene = document.querySelector('a-scene');
         if (scene.hasLoaded) {

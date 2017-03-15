@@ -51,6 +51,19 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     nineteen = [],
     twenty = [];
 
+//auto-enter VR (https://github.com/aframevr/aframe/issues/1473)
+window.addEventListener('load', function onLoadEnterVR() {
+    'use strict';
+    var scene = document.querySelector('a-scene');
+    if (scene.hasLoaded) {
+        scene.enterVR();
+    } else {
+        el.addEventListener('loaded', function () {
+            scene.enterVR();
+        });
+    }
+});
+
 
 //Cursor found .clickable
 $(".clickable").on('fusing', function () {
