@@ -552,7 +552,7 @@ window.addEventListener('load', function onLoadEnterVR() {
     if (scene.hasLoaded) {
         scene.enterVR();
     } else {
-        el.addEventListener('loaded', function () {
+        el.addEventListener('loaded', function loaded() {
             scene.enterVR();
         });
     }
@@ -574,3 +574,20 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
         storyline(currentTarget, at);
     }, 20000);
 });
+
+AFRAME.registerComponent('auto-init-vr', {
+    init: function () {
+        'use strict';
+        var scene = this;
+
+        scene.el.addEventListener('loaded', function () {
+            setTimeout(function () {
+                console.log('Automatically entering VR...');
+                scene.el.sceneEl.enterVR();
+            }, 1000);
+        });
+    }
+});
+
+
+document.querySelector('a-scene').enterVR();
