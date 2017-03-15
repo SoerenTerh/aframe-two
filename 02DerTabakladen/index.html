@@ -5,18 +5,13 @@
         <title>Vor dem Laden</title>
         <meta name="description" content="VR-Theater">
 
-        <!--        jQuery-->
+        <!--jQuery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-        <!--        a-frame-->
+        <!--a-frame-->
         <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
-        <!--        a-frame extras (used are e.g. physics)-->
+        <!--a-frame extras (used are e.g. physics)-->
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.2.0/dist/aframe-extras.min.js"></script>
-        <!--        a-frame look controls-->
-        <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
-
-        <!--        ?-->
-        <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 
         <script src="script/entity.js"></script>
         <link href="style/style.css" rel="stylesheet">
@@ -26,9 +21,6 @@
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
         <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all">
-            <!-- fog="style: linear; color:black; near:1"
-#B0C4DE-->
-
             <!--camera-->
             <a-entity  id="camera" position="0 5.8 0">
                 <a-entity camera
@@ -42,7 +34,6 @@
                               geometry="primitive: ring"
                               scale="0.04 0.04 0.04"
                               material="color: white">
-                        <!--on .clickable"-->
                         <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
                                      fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
                         <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
@@ -64,31 +55,14 @@
 
                     <a-animation attribute="position" to="2 4 -8" begin="tabakladendefault"></a-animation>
                     <a-animation attribute="rotation" to="0 -90.00 0" begin="tabakladendefaultROT"></a-animation>
-
-
                 </a-entity>
             </a-entity>
 
             <a-assets timeout="5000">
-
+                <!--assets-->
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
                 
-                <audio id="coin" src="../assets/sounds/coin.wav" preload="auto"></audio>
-                <audio id="door_knock" src="../assets/sounds/door_knock.wav" preload="auto"></audio>
-                <audio id="drawer" src="../assets/sounds/drawer.wav" preload="auto"></audio>
-                <audio id="fall" src="../assets/sounds/fall.wav" preload="auto"></audio>
-                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.wav" preload="auto"></audio>
-                <audio id="footsteps" src="../assets/sounds/footsteps.wav" preload="auto"></audio>
-                <audio id="getup_bed" src="../assets/sounds/getup_bed.wav" preload="auto"></audio>
-                <audio id="outdoor" src="../assets/sounds/outdoor.wav" preload="auto"></audio>
-                <audio id="paper_rip" src="../assets/sounds/paper_rip.wav" preload="auto"></audio>
-                <audio id="paper" src="../assets/sounds/paper.wav" preload="auto"></audio>
-                <audio id="place_object" src="../assets/sounds/place_object.wav" preload="auto"></audio>
-                <audio id="snore_girl" src="../assets/sounds/snore_girl.wav" preload="auto"></audio>
-                <audio id="snore" src="../assets/sounds/snore.wav" preload="auto"></audio>
-                <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
-
                 <a-asset-item id="platzObj" src="models/UnsereAssets/platz.obj"></a-asset-item>
                 <a-asset-item id="platzMtl" src="models/UnsereAssets/platz.mtl"></a-asset-item>
 
@@ -96,7 +70,6 @@
                 <a-asset-item id="brunnenMtl" src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
 
                 <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
-                <!--<a-asset-item id="figurMtl" src="models/mfigur.mtl"></a-asset-item>-->
 
                 <a-asset-item id="teppichObj" src="models/UnsereAssets/teppich.obj"></a-asset-item>
                 <a-asset-item id="teppichMtl" src="models/UnsereAssets/teppich.mtl"></a-asset-item>
@@ -131,24 +104,35 @@
                 <a-asset-item id="roofObj" src="models/UnsereAssets/roof.obj"></a-asset-item>
                 <a-asset-item id="roofMtl" src="models/UnsereAssets/roof.mtl"></a-asset-item>
 
-
+                <!--images-->
                 <img src="../assets/panorama-3.png" id="sky" alt="sky">
+                
+                <!--audio-->
+                <audio id="coin" src="../assets/sounds/coin.mp3" preload="auto"></audio>
+                <audio id="door_knock" src="../assets/sounds/door_knock.mp3" preload="auto"></audio>
+                <audio id="drawer" src="../assets/sounds/drawer.mp3" preload="auto"></audio>
+                <audio id="fall" src="../assets/sounds/fall.mp3" preload="auto"></audio>
+                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.mp3" preload="auto"></audio>
+                <audio id="footsteps" src="../assets/sounds/footsteps.mp3" preload="auto"></audio>
+                <audio id="getup_bed" src="../assets/sounds/getup_bed.mp3" preload="auto"></audio>
+                <audio id="outdoor" src="../assets/sounds/outdoor.mp3" preload="auto"></audio>
+                <audio id="paper_rip" src="../assets/sounds/paper_rip.mp3" preload="auto"></audio>
+                <audio id="paper" src="../assets/sounds/paper.mp3" preload="auto"></audio>
+                <audio id="place_object" src="../assets/sounds/place_object.mp3" preload="auto"></audio>
+                <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
+                <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
+                <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
             </a-assets>
 
-
-            <a-entity scale="0.5 0.5 0.5">
-                <a-box id="triggerBaeume" class="clickable" color="white" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
+            <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
+                <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
-
-                <!--                test-box-->
-                <!--
-<a-box static-body="shape:Primitives" position="0 0 0" width="20" height="20" depth="20" rotation="0 0 0" scale="1 1 1" visible="true" color="black"></a-box>
--->
+                
                 <!-- Brunnen -->
                 <a-entity static-body="shape:box" id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" ></a-entity>
 
-                <a-box id="triggerTabakladenDefault" class="clickable" color="white" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 40">
+                <a-box id="triggerTabakladenDefault" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 40">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
@@ -173,12 +157,11 @@
                 <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 146.40" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage5" ></a-entity>
 
                 <!-- Schlafplatz -->
-                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" ></a-entity>
-                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" ></a-entity>
-                <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-8.78 1.77 157.44" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.wav);on:click;volume:0.1" ></a-entity>
+                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
+                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
+                <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-8.78 1.77 157.44" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
 
-
-                <a-box id="triggerBaeckerei" class="clickable" color="white" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 -70.00">
+                <a-box id="triggerBaeckerei" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 -70.00">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
@@ -196,7 +179,7 @@
                 <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei" ></a-entity>
 
                 <!-- Bäckerei - Lampe -->
-                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.wav);on:click" ></a-entity>
+                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.mp3);on:click" ></a-entity>
 
                 <!-- Bäckerei - Ablage f. Kuchen -->
                 <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -124.87" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-1" ></a-entity>
@@ -221,23 +204,19 @@
                 <a-entity id="fladen05" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.73 3.69 -115.88" scale="0.08 0.05 0.05"></a-entity>
                 <a-entity id="fladen06" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.68 3.69 -113.92" scale="0.08 0.05 0.05"></a-entity>
 
-                <!--Testfigur-->
-<!--                <a-entity id="figur" class="two, play" obj-model="obj:#figurObj" position="-4.77 1.5 6.52" scale="11 9.5 11" material="color:#ffa477" rotation="0 -180 0" visible="true"></a-entity>-->
-
                 <!-- Platz -->
                 <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2" sound="src: #outdoor; autoplay: true; loop: true; volume: 2"></a-entity>
-
-
+                
                 <!-- Bäume -->
                 <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="11.5 0 -30.00" scale="0.15 0.15 0.15"></a-entity>
-
-                <a-box id="triggerTeppichladen" class="clickable" color="white" depth="3" height="3" width="3" rotation="-45 0 0" position="-75.00 30.00 6">
-                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
-                </a-box>
 
                 <!-- Teppichladen -->
                 <a-entity collada-model="url(models/UnsereAssets/teppichladen1.DAE)" id="teppichladen" position="-109.25 0 -4.24" scale="4 8 5.5" rotation="0 180 0" ></a-entity>
                 <a-box id="teppichladenBox" static-body="shape:Primitives" position="-129.25 0 -3.54" width="70" height="20" depth="62" visible="false" rotation="0 180 0"></a-box>
+                
+                <a-box id="triggerTeppichladen" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-75.00 30.00 6">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
 
                 <!-- Teppichladen - Stellagen mit Teppich -->
                 <a-entity obj-model="obj:#teppichObj; mtl:#teppichMtl" id="teppich01" position="-131 0 10.5" scale="4 4 4" rotation="-0.85 150 0" ></a-entity>
@@ -246,14 +225,11 @@
 
                 <!-- Teppichladen - Ladentisch -->
                 <a-entity data-brackets-id="883" obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-112.84 0 -19.20" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="theke" ></a-entity>
-                <!--                position="-5.88 0.8 -100"-->
 
                 <!-- non-specific houses -->
-
                 <a-entity obj-model="obj:#houseObj;mtl:#houseMtl" position="-119.97 0 53.34" scale="0.20 0.25 0.19" rotation="0 180.00 0" visible="true" id="house_base1" ></a-entity>
                 <a-entity obj-model="obj:#roofObj;mtl:#roofMtl" position="-120.22 0 53.75" scale="0.20 0.25 0.19" rotation="0 180.00 0" visible="true" id="house_roof1" ></a-entity>
                 <a-plane color="black" position="-98.55 11.00 53.74" rotation="0 90.00 0" height="20" width="25"></a-plane>
-
 
                 <a-entity obj-model="obj:#houseObj;mtl:#houseMtl" position="-54.51 0 -117.37" scale="0.17 0.20 0.20" rotation="0 90.00 0" visible="true" id="house_base2" ></a-entity>
                 <a-entity obj-model="obj:#roofObj;mtl:#roofMtl" position="-54.88 -19.94 -117.87" scale="0.17 0.40 0.19" rotation="0 90.00 0" visible="true" id="house_roof2" ></a-entity>
@@ -267,29 +243,18 @@
                 <a-light type="ambient" color="#ccc" light="" position="-50 80 -50" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -50" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" position="-50 80 -50" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
-
                 
-                <!--                <a-grid scale="5.5 5.5 5.5" static-body position="" rotation="" visible="" geometry="" ></a-grid>-->
-
-                <!--                ground-->
+                <!--ground-->
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 
-                <!--                boundaries-->
+                <!--boundaries-->
                 <a-box static-body="shape:Primitives" position="-165.65 10 0" width="20" height="20" depth="350" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 <a-box static-body="shape:Primitives" position="165.65 10 0" width="20" height="20" depth="350" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 <a-box static-body="shape:Primitives" position="0 10 -155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 <a-box static-body="shape:Primitives" position="0 10 155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
-
-<!--                <a-sky color="#B0C4DE" id="sky"></a-sky>-->
-
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
-
-
-            <!-- führt zu fehler bei inspector
-<canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969" style="width: 1920px; height: 969px;"></canvas>-->
         </a-scene>
-        <!-- hier auskommentieren für Testen ohne Sprung in andere Szene -->
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
     </body>
