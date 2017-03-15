@@ -56,6 +56,8 @@ $(".clickableTrigger").on('click', function onClickableTriggerClick() {
         document.querySelector("#cursor").emit(trigggerEvent);
     }
 });
+
+//Cursor triggers fuse on .clickable
 $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
     'use strict';
     currentTarget = '#' + $(this).closest("a-box").attr('id');

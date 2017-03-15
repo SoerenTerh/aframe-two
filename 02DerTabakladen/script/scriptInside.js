@@ -15,7 +15,7 @@ var timeoutId = null;
 var eventArr = ["one",
                 "two",
                 "twoTalk", "twoTalk2",
-                "three", "four", // drin lassen für Schreiner und Shui Ta im Raum
+                "three", "four",
                 "fourTalk", "fourTalk2",
                 "five",
                 "fiveAll",
@@ -239,7 +239,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     mseven2 = ["#containerShuiTa"], //Timeout -> ShuiTa schweigt
     msevenTalk4 = ["#Polizist", "#ShuiTa"], //polizist10, shui32
 
-
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
     cThree = ["#containerShuiTa"],
@@ -342,9 +341,6 @@ function storyline(currentTarget, currentEvent) {
                             //window.clearTimeout(timeoutId);
                             startNext();
                         }
-
-
-
                     } else {
                         try {
                             document.querySelector(fireAt).emit(currentEvent);
@@ -392,7 +388,6 @@ function storyline(currentTarget, currentEvent) {
                         last = at;
                         at = eventArr[++i];
                     }
-
 
                     //clean up event name
                     if (last.search("Talk") !== -1) {
@@ -543,7 +538,6 @@ $(".play").on('fusing', function onPlayFusing() {
         playableFound(currentTarget);
     }
 });
-
 
 ////auto-enter VR (https://github.com/aframevr/aframe/issues/1473) -> not yet working
 //window.addEventListener('load', function onLoadEnterVR() {
