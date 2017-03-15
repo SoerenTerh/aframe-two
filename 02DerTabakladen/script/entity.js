@@ -15,15 +15,6 @@
 //    }
 //});
 
-
-//Event Methods
-//$(".clickable").each(function () {
-//    'use strict';
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
-//});
-
-
 //AFRAME.registerComponent('log', {
 //    schema: {
 //        event: {type: 'string', default: ''},
@@ -47,3 +38,28 @@
 //        }
 //    }
 //});
+
+//Event Methods
+//$(".clickable").each(function () {
+//    'use strict';
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
+//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
+//});
+
+////auto-enter VR -> not yet working
+//AFRAME.registerComponent('auto-init-vr', {
+//    init: function () {
+//        'use strict';
+//        var scene = this;
+//
+//        scene.el.addEventListener('loaded', function () {
+//            setTimeout(function () {
+//                console.log('Automatically entering VR...');
+//                scene.el.sceneEl.enterVR();
+//            }, 1000);
+//        });
+//    }
+//});
+//
+//
+//document.querySelector('a-scene').enterVR();
