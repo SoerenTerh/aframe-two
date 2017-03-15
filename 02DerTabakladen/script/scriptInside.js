@@ -76,7 +76,7 @@ var persons = ["#Frau",
                "#Mann",
 
                "#Schwaegerin",
-               "#Bruder",
+               /*"#Bruder",*/
 
                "#Großvater",
                "#Junge",
@@ -86,7 +86,7 @@ var persons = ["#Frau",
                "#ShuiTa",
                "#Schreiner",
                "#Polizist",
-               "#Hausbesitzerin"];
+               /*"#Hausbesitzerin"*/];
 
 
 var personColors = ["#4D4D4D",
@@ -94,7 +94,7 @@ var personColors = ["#4D4D4D",
                     "#404040",
 
                     "#737373",
-                    "#595959",
+                    /*"#595959",*/
 
                     "#8C8C8C",
                     "#D9D9D9",
@@ -103,12 +103,12 @@ var personColors = ["#4D4D4D",
 
                     "#262626",
                     "#CCCCCC",
-                    "#FFF",
-                    "#FFF"];
+                    "#595959",
+                    /*"#FFF"*/];
 
 //ersteSeite
-var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
+    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
     three = ["#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
@@ -120,9 +120,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
             '#sockelSchwaegerin', '#containerSchwaegerin',
             "#sockelGroßvater", "#containerGroßvater",
             "#sockelJunge", "#containerJunge",
-            "#sockelBruder", "#containerBruder",
+            /*"#sockelBruder",*/ /*"#containerBruder",*/
             "#sockelNichte", "#containerNichte"], //alle Wachen auf
-    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", "#Bruder", "#Nichte"],
+    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"],
     sixTalk = ["#Neffe"],
 
     six = ["#containerShuiTa"],
@@ -159,9 +159,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFiveTalk = ["#ShuiTa"],
     sFiveTalk2 = ["#Neffe"],
     sFive_P1 = ["#Neffe", "#Bruder"], // Bewegen an Ladentisch vorbei
-    sFive_P2 = ["#Neffe", "#Bruder", "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
+    sFive_P2 = ["#Neffe", /*"#Bruder",*/ "#tabakladenTUERi"], // Bewegen Richtung Türe vorbei
     sFive_P2Move = ["#Neffe", "#Bruder"],
-    sFive_P3 = ["#Neffe", "#Bruder", "#Nichte"],
+    sFive_P3 = ["#Neffe", /*"#Bruder",*/ "#Nichte"],
     sFive_P3Move = ["#Nichte"],
     sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
     sSixTalk1 = ["#ShuiTa", "#Mann"],
@@ -395,17 +395,15 @@ function storyline(currentTarget, currentEvent) {
                     }
 
 
-                //clean up event name
-                if (last.search("Talk") !== -1) {
-                    last = last.replace('Talk', '');
-                }
-                if (last.search("begin") !== -1) {
-                    last = last.replace('begin', '');
-                }
-                else if (last.search("All") !== -1) {
-                    last = last.replace('All', '');
-                }
-                last = last.replace(/\d+/g, '');
+                    //clean up event name
+                    if (last.search("Talk") !== -1) {
+                        last = last.replace('Talk', '');
+                    } else if (last.search("begin") !== -1) {
+                        last = last.replace('begin', '');
+                    } else if (last.search("All") !== -1) {
+                        last = last.replace('All', '');
+                    }
+                    last = last.replace(/\d+/g, '');
 
                     //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
                     if (at.search(last) !== -1) {
@@ -449,7 +447,7 @@ function playableFound(currentTarget) {
                 }
             }
         }
-        if (i !== eventArr.length - 1) {
+        if (i < eventArr.length) {
             console.log("Next= " + at);
         } else {
             i++;
@@ -474,13 +472,6 @@ function playableFound(currentTarget) {
         //        }, 30000);
     }
 }
-
-//Event Methods
-//$(".clickable").each(function () {
-//    'use strict';
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableFound');
-//    $(this).attr('event-animate', 'target:#cursor; event:clickableClick');
-//});
 
 //Cursor found .clickable
 $(".clickable").on('fusing', function onclickableFusing() {
