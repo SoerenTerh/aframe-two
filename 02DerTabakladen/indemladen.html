@@ -24,8 +24,6 @@
      ?
     <script src="https://rawgit.com/ngokevin/aframe-animation-component/master/dist/aframe-animation-component.min.js"></script>
 -->
-      <script src="https://rawgit.com/chenzlabs/aframe/fix-auto-enter-vr-dist/dist/aframe-master.js"></script>
-      <script src="https://rawgit.com/chenzlabs/aframe/fix-auto-enter-vr-dist/dist/aframe-master.min.js"></script>
 
 
     <script src="script/entity.js"></script>
@@ -33,7 +31,7 @@
   </head>
   <body>
     <div id="giveMeTime"><img id="loader" src="gif/ring.gif" alt="loader"/></div>
-    <a-scene id="innen" auto-enter-vr="display:all">
+    <a-scene id="innen" auto-enter-vr>
       <!-- camera-->
       <a-entity id="camera" position="0.00 13.6 0">
         <a-entity camera
