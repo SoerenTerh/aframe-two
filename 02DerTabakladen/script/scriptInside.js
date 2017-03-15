@@ -171,7 +171,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
     sSeven_P2rot = ["#containerShuiTa", "#bett-7", "#bett-8"],
     sSevenPRotaPU = ["#containerShuiTa"],
-    sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-4", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
+    sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
     vOneTalk = ["#Schreiner"], // Schreiner redet
