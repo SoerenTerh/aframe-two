@@ -26,7 +26,7 @@ var eventArr = ["one",
                 "seven", "seven2", "seven3", "seven4",
                 "sevenTalk",
                 "sOneTalk", "sTwoTalk", "sThreeTalk",
-                "sFourStart",
+                "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
                 "sFourP3begin", "sFourMove", "sFour_P3",
@@ -134,12 +134,12 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven4 = ["#containerShuiTa"],
     sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
-    
+
     sOneTalk = ["#Frau"],
     sTwoTalk = ["#Neffe"],
     sThreeTalk = ["#Mann"],
 
-    sFourStart = ["#Mann"],
+    sFourTalkStart = ["#Mann"],
     sFourTalk1 = ["#Mann", "#Schwaegerin"],
     sFourTalk2 = ["#Mann"],
 
