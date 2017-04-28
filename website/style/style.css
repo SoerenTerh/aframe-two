@@ -98,14 +98,29 @@ nav, .navbar-brand{
 
 
 /*progressbar*/
+.progressbar_1, .progressbar_2 {
+    margin: 2.5% 0 2.5% 1.5%;
+}
+
+.progressbar_1 h1, .progressbar_2 h1 {
+    margin-left: 2.5%;
+}
+
 .progress-bar {
    border: 0px solid rgba(245, 245, 245, 1); border-radius: 15px; height: 20px;}
 
 .progress {
-    margin-top: 5%;
-    width: 91%;
+    margin-top: 2.5%;
+    width: 100%;
 }
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future{
+
+.progress__2 {
+    margin-top: 5%;
+}
+
+
+
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -113,13 +128,13 @@ nav, .navbar-brand{
     width:40px;
     border-radius:25px;
 }
-.one{
+.one {
     left:9%;
 }
-.two{
+.two {
     left:18%;
 }
-.three{
+.three {
     left:27%;
 }
 .four {
@@ -144,6 +159,46 @@ nav, .navbar-brand{
     left:90%;
 }
 
+.s2_one {
+    left: 5%;
+}
+
+.s2_two {
+    left: 14%;
+}
+
+.s2_three {
+    left: 23%;
+}
+
+.s2_four {
+    left: 32%;
+}
+
+.s2_five {
+    left: 41%;
+}
+
+.s2_six {
+    left: 50%;
+}
+
+.s2_seven {
+    left: 59%;
+}
+.s2_eight {
+    left: 68%;
+}
+.s2_nine {
+    left: 77%;
+}
+.s2_ten {
+    left: 86%
+}
+.s2_eleven {
+    left: 95%;
+}
+
 
 .primary-color{
     background-color:turquoise;
@@ -161,6 +216,10 @@ nav, .navbar-brand{
     color: white;
     font-weight: bold;
     font: 30px 'Amatic SC', cursive;
+}
+
+.s2_ten p, .s2_eleven p {
+    margin-left: 30%;
 }
 
 .imgUs {
