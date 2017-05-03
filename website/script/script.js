@@ -16,36 +16,34 @@ $(document).ready(function () {
         $(".eightInfo").addClass("hide");
         $(".nineInfo").addClass("hide");
         $(".futureInfo").addClass("hide");
-        
+
+        $(".s2_oneInfo").addClass("hide");
+        $(".s2_twoInfo").addClass("hide");
+        $(".s2_threeInfo").addClass("hide");
+        $(".s2_fourInfo").addClass("hide");
+        $(".s2_fiveInfo").addClass("hide");
+        $(".s2_sixInfo").addClass("hide");
+        $(".s2_sevenInfo").addClass("hide");
+        $(".s2_eightInfo").addClass("hide");
+        $(".s2_nineInfo").addClass("hide");
+        $(".s2_tenInfo").addClass("hide");
+        $(".s2_elevenInfo").addClass("hide");
+
     }
 
     //Process Bar
-    var endDate = new Date("02/09/2017"),
-        beginDate = new Date("11/17/2016"),
-
-        endHolidays = new Date("01/08/2017"),
-        beginHolidays = new Date("12/24/2016"),
-        holidays = (endHolidays - beginHolidays),
-
-        totalTime = (endDate - beginDate + holidays),
+    var endDate = new Date("07/26/2017"),
+        beginDate = new Date("05/03/2017"),
+        totalTime = (endDate - beginDate),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
-        //        dateProgress = new Date("02/30/2017") - beginDate,
-
-        completionPercentage = 0,
-        output = 0;
-    
-//    if (dateProgress < endDate) {
-//        completionPercentage = (Math.round((dateProgress / totalTime) * 100) * 1.07);
-//        output = completionPercentage  + "%";
-//    } else {
-    output = 91  + "%";
-//    }
-
-
+        completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
+        output = completionPercentage + 7 + "%";
 
        
-    $(".progress-bar").css('width', output);
+    $(".progress-bar.semester-1").css('width', 100 + "%");
+
+    $(".progress-bar.semester-2").css('width', output);
 
 
     function color(x) {
@@ -122,6 +120,84 @@ $(document).ready(function () {
         if ($(".futureInfo").hasClass("hide")) {
             hide();
             $(".futureInfo").removeClass("hide");
+        }
+    });
+
+    $(".s2_one").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_oneInfo").hasClass("hide")) {
+            hide();
+            $(".s2_oneInfo").removeClass("hide");
+        }
+    });
+    $(".s2_two").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_twoInfo").hasClass("hide")) {
+            hide();
+            $(".s2_twoInfo").removeClass("hide");
+        }
+    });
+    $(".s2_three").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_threeInfo").hasClass("hide")) {
+            hide();
+            $(".s2_threeInfo").removeClass("hide");
+        }
+    });
+    $(".s2_four").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_fourInfo").hasClass("hide")) {
+            hide();
+            $(".s2_fourInfo").removeClass("hide");
+        }
+    });
+    $(".s2_five").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_fiveInfo").hasClass("hide")) {
+            hide();
+            $(".s2_fiveInfo").removeClass("hide");
+        }
+    });
+    $(".s2_six").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_sixInfo").hasClass("hide")) {
+            hide();
+            $(".s2_sixInfo").removeClass("hide");
+        }
+    });
+    $(".s2_seven").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_sevenInfo").hasClass("hide")) {
+            hide();
+            $(".s2_sevenInfo").removeClass("hide");
+        }
+    });
+    $(".s2_eight").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_eightInfo").hasClass("hide")) {
+            hide();
+            $(".s2_eightInfo").removeClass("hide");
+        }
+    });
+    $(".s2_nine").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_nineInfo").hasClass("hide")) {
+            hide();
+            $(".s2_nineInfo").removeClass("hide");
+        }
+    });
+    $(".s2_ten").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_tenInfo").hasClass("hide")) {
+            hide();
+            $(".s2_tenInfo").removeClass("hide");
+        }
+    });
+    $(".s2_eleven").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_elevenInfo").hasClass("hide")) {
+            hide();
+            $(".s2_elevenInfo").removeClass("hide");
         }
     });
 
