@@ -52,7 +52,18 @@
         </nav>
 
         <div class="container-fluid site">
-            <div class="row progressbar_1">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span class="dropdown_text">Semesterauswahl</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a id="semester_1" href="">Semester 1</a></li>
+                    <li><a id="semester_2" href="">Semester 2</a></li>
+                </ul>
+            </div>
+
+            <div class="row progressbar_1 hide">
                 <h1>First semester</h1>
                 <div class="progress">
                     <div class="one primary-color"><p>1</p></div>
@@ -69,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="row progressbar_2">
+            <div class="row progressbar_2 hide">
                 <h1>Second semester</h1>
                 <div class="progress progress__2">
                     <div class="s2_one primary-color current"><p>1</p></div>
@@ -87,12 +98,21 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="s2_oneInfo current">
+            <div class="row hide content_row">
+                <div class="s2_oneInfo">
                     <div class="col-sm-4"><h2>
                         03.05.2017 - 10.05.2017 <br>- aframe oder Unity - das ist hier die Frage</h2></div>
                     <div class="col-sm-8">
-                        
+                        <p class="text">Der Fokus liegt bei diesem Sprint zunächst auf der Veränderung sehr grundlegender Teile der Szene, welche
+                        im letzten Semester erstellt wurde. Dabei soll vor allem die Performanz betrachtet werden, wobei die 3D-Modelle
+                        insofern angepasst werden, als dass deren Modellierung überarbeitet werden soll, um entsprechende Dateigrößen zu verringern.
+                        Außerdem sollen diese Woche die Figuren etwas gefärbt werden - ihren Accessoires angepasst - um sich untereinander noch etwas 
+                        besser zu unterscheiden.
+                        </p>
+                        <p class="text">
+                            Auch soll diese Woche genutzt werden, die kommunikative Basis mit Nadine - aus dem Masterstudiengang und von nun an unser SCRUM Master - geschaffen und arrangiert werden.
+
+                        </p>
                     </div>
                 </div>
 
