@@ -38,7 +38,7 @@ $(document).ready(function () {
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
         completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
-        output = completionPercentage + 7 + "%";
+        output = completionPercentage + 5 + "%";
 
        
     $(".progress-bar.semester-1").css('width', 100 + "%");
@@ -199,6 +199,28 @@ $(document).ready(function () {
             hide();
             $(".s2_elevenInfo").removeClass("hide");
         }
+    });
+
+
+
+    $("#semester_1").click(function(e){
+        event.preventDefault();
+        $('.dropdown_text').text("Semester 1");
+        $('#semester_2').removeClass("active");
+        $('#semester_1').addClass("active");
+        $('.progressbar_1').removeClass("hide");
+        $('.progressbar_2').addClass("hide");
+        $('.content_row').removeClass("hide");
+    });
+
+    $("#semester_2").click(function(e){
+        event.preventDefault();
+        $('.dropdown_text').text("Semester 2");
+        $('#semester_1').removeClass("active");
+        $('#semester_2').addClass("active");
+        $('.progressbar_2').removeClass("hide");
+        $('.progressbar_1').addClass("hide");
+        $('.content_row').removeClass("hide");
     });
 
     //fancybox

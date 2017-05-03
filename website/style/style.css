@@ -96,6 +96,9 @@ nav, .navbar-brand{
 	padding-bottom: 5%;
 }
 
+.dropdown {
+    padding: 2.5rem 0;
+}
 
 /*progressbar*/
 .progressbar_1, .progressbar_2 {
