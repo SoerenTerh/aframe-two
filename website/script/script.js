@@ -203,7 +203,7 @@ $(document).ready(function () {
 
 
 
-    $("#semester_1").click(function(e){
+    $("#semester_1").click(function(event){
         event.preventDefault();
         $('.dropdown_text').text("Semester 1");
         $('#semester_2').removeClass("active");
@@ -213,7 +213,7 @@ $(document).ready(function () {
         $('.content_row').removeClass("hide");
     });
 
-    $("#semester_2").click(function(e){
+    $("#semester_2").click(function(event){
         event.preventDefault();
         $('.dropdown_text').text("Semester 2");
         $('#semester_1').removeClass("active");
