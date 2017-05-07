@@ -172,7 +172,7 @@
         <audio id="cPolizist11" src="../assets/audio/sechsteSeite/polizist11.mp3" preload="auto"></audio>
         <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
         <audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
-          
+
         <!--Modelle-->
         <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
         <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
@@ -212,7 +212,7 @@
 
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
-        
+
         <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
 
         <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>
@@ -497,7 +497,7 @@
                        repeat="0" begin="cSeven"></a-animation>
           <a-animation id="cGrossvaterSeven1" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
                        begin="cSeven"></a-animation>
-         
+
           <!-- Sockel-->
           <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                     event-set__5="_event: five; visible: true"></a-entity>
@@ -876,7 +876,7 @@
         </a-entity>
 
           <!-- Tabakladen -->
-          <a-entity collada-model="url(models/UnsereAssets/tabakladen_floor.dae)" id="tabakladen"
+          <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen"
                     position="4.31 -1.02 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0"
                     visible="true"></a-entity>
           <a-box id="wallLeft" static-body="shape:Primitives" position="22 4 3" width="3" height="10" depth="60"
@@ -901,7 +901,7 @@
           </a-box>
 
           <!-- Türe -->
-          <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882"
+          <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" data-brackets-id="882"
                     id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v32 clickable"
                     position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                     sound="src:#door_knock;on:two;poolsize:100;volume:30;"
@@ -1236,7 +1236,7 @@
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen15">
               </a-entity>
           </a-entity>
-              
+
           <a-entity id="ZigarettenkisteRegalLinks" class="vSixteen play"
                     event-set__1="_event: vSixteen; visible: false">
               <!-- z13 -->
