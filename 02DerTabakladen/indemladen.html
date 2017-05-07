@@ -18,6 +18,9 @@
       <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
       <!-- a-frame event set component-->
       <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
+      <!-- aframe-randomizer-components-->
+      <script src="script/workingAFrame_0.5.0/aframe-randomizer-components.min.js"></script>
+     
 
     <script src="script/entity.js"></script>
     <link href="style/style.css" rel="stylesheet">
@@ -195,10 +198,10 @@
         <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
 
         <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.mtl"></a-asset-item>
+<!--        <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.mtl"></a-asset-item>-->
 
         <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/000/Zigarettenkiste_innen000.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/000/Zigarettenkiste_innen000.mtl"></a-asset-item>
+<!--        <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/000/Zigarettenkiste_innen000.mtl"></a-asset-item>-->
 
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
@@ -216,31 +219,23 @@
         <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>
 
         <a-asset-item id="KappeObj" src="models/UnsereAssets/000/kappe000.obj"></a-asset-item>
-        <a-asset-item id="KappeMtl" src="models/UnsereAssets/000/kappe000.mtl"></a-asset-item>
 
         <a-asset-item id="HausschuheObj" src="models/UnsereAssets/000/hausschuhe000.obj"></a-asset-item>
-        <a-asset-item id="HausschuheMtl" src="models/UnsereAssets/000/hausschuhe000.mtl"></a-asset-item>
 
         <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/000/kappe_gedreht000.obj"></a-asset-item>
-        <a-asset-item id="Kappe_gedrehtMtl" src="models/UnsereAssets/000/kappe_gedreht000.mtl"></a-asset-item>
 
         <a-asset-item id="WerkzeugkisteObj" src="models/UnsereAssets/000/werkzeugkiste000.obj"></a-asset-item>
-        <a-asset-item id="WerkzeugkisteMtl" src="models/UnsereAssets/000/werkzeugkiste000.mtl"></a-asset-item>
 
         <a-asset-item id="BartObj" src="models/UnsereAssets/000/bart000.obj"></a-asset-item>
-        <a-asset-item id="BartMtl" src="models/UnsereAssets/000/bart000.mtl"></a-asset-item>
 
         <a-asset-item id="KochlöffelObj" src="models/UnsereAssets/000/kochloeffel000.obj"></a-asset-item>
-        <a-asset-item id="KochlöffelMtl" src="models/UnsereAssets/000/kochloeffel000.mtl"></a-asset-item>
 
         <a-asset-item id="PolizeiObj" src="models/UnsereAssets/000/polizei000.obj"></a-asset-item>
         <a-asset-item id="PolizeiMtl" src="models/UnsereAssets/000/polizei000.mtl"></a-asset-item>
 
         <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>
-        <a-asset-item id="SchalMtl" src="models/UnsereAssets/000/schal000.mtl"></a-asset-item>
 
         <a-asset-item id="TascheObj" src="models/UnsereAssets/000/tasche000.obj"></a-asset-item>
-        <a-asset-item id="TascheMtl" src="models/UnsereAssets/000/tasche000.mtl"></a-asset-item>
 
           <!--images-->
           <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
@@ -271,7 +266,7 @@
             <a-sound id="msevenTalk2Frau" class="wait" src="#frau9" volume="10" on="msevenTalk2"></a-sound>
           </a-entity>
 
-          <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0" visible="false"
+             <a-entity id="accFrau" obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0" visible="false"
                     event-set__accFrauV="_event: sFourACC3; visible: true">
           </a-entity>
 
@@ -336,7 +331,7 @@
             <a-animation id="mone2MannAnimP" attribute="position" dur="2500" to="0 2 0" begin="mone2"></a-animation>
           </a-entity>
 
-          <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj; mtl: #KappeMtl"
+            <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj" material="color: red"
                     position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
                     event-set__accMannV="_event: sFourACC1; visible: true">
             <a-animation id="moneAccMannAnimP" class="wait" attribute="position" dur="2500" to="0 19.43 -0.40"
@@ -439,10 +434,10 @@
             <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
           </a-entity>
 
-          <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="0.95 2 0.13"
+            <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13"
                     scale="1 1 1" rotation="0 10 0" visible="false"
                     event-set__schwaegerinV="_event: sFourACC7; visible: true"></a-entity>
-          <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="-0.88 2 0.12"
+            <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12"
                     scale="1 1 1" rotation="0 10 0" visible="false"
                     event-set__schwaegerin2V="_event: sFourACC8; visible: true"></a-entity>
 
@@ -477,7 +472,7 @@
             <a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
           </a-entity>
 
-          <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
+            <a-entity id="accGroßvater" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accGroßvaterV="_event: sFourACC4; visible: true">
           </a-entity>
 
@@ -512,7 +507,7 @@
             <a-sound id="sFiveTalk2Neffe" class="wait" src="#neffe4" volume="10" on="sFiveTalk2"></a-sound>
           </a-entity>
 
-          <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0 14.14 -0.49"
+            <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49"
                     scale="1 1 1" rotation="-10.36 0 0" visible="false"
                     event-set__accNeffeV="_event: sFourACC2; visible: true">
           </a-entity>
@@ -552,7 +547,7 @@
           <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="12.13 0 -3.84" repeat="0"
                        begin="five"></a-animation>
 
-          <a-entity id="accNichte" obj-model="obj:#TascheObj;" material="color: #302013"
+            <a-entity id="accNichte" obj-model="obj:#TascheObj;" material="color: brown"
                     position="2 6 -0.2" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accNichteV="_event: sFourACC6; visible: true">
           </a-entity>
@@ -588,7 +583,7 @@
 
           </a-entity>
 
-          <a-entity id="accJunge" obj-model="obj:#SchalObj;" material="color: darkgreen"
+          <a-entity id="accJunge" obj-model="obj:#SchalObj;" material="color: seagreen"
                     position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accJungeV="_event: sFourACC5; visible: true">
           </a-entity>
@@ -775,9 +770,8 @@
             <a-sound id="v27TalkSchreiner" class="wait" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
           </a-entity>
 
-          <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj; mtl: #WerkzeugkisteMtl"
-                    position="2.32 6.58 -0.56" scale="0.75 0.5 0.75" rotation="0 0 0" visible="true"
-                    material="color:#CCCCCC">
+            <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj" material="color: chocolate"
+                    position="2.32 6.58 -0.56" scale="0.75 0.5 0.75" rotation="0 0 0" visible="true">
           </a-entity>
 
           <!-- Sockel-->
@@ -1105,11 +1099,11 @@
           </a-entity>
 
           <!-- ZigarettenkisteAußen -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="-11.00 9.52 0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen"
                    ></a-entity>
           <!-- ZigarettenkisteInnen -->
-          <a-entity class="clickable" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl"
+          <a-entity class="clickable" random-color obj-model="obj:#ZigarettenkisteInnenObj"
                     position="-11.02 9.51 0.75" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen"
                    >
           </a-entity>
@@ -1126,41 +1120,41 @@
 
 
           <!-- zigarrettenkiste 2 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 2.10" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen2"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 2.11"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 2.11"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen2">
           </a-entity>
           <!-- z3 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen3"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen3">
           </a-entity>
 
           <!-- z4 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 3.6" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen4"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 3.6"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 3.6"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen4">
           </a-entity>
 
           <!-- z5 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen5"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 0.73"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 0.73"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen5">
           </a-entity>
 
           <!-- z6 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen6"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 0.73"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 0.73"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen6">
           </a-entity>
 
@@ -1172,59 +1166,59 @@
                     visible="true"></a-entity>
 
           <!-- z7 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen7"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen7">
           </a-entity>
 
           <!-- z8 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 9.04" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen8"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 9.04"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 9.04"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen8">
           </a-entity>
 
           <!-- z9 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.39 11.63" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen9"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.08 7.39 11.66"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.08 7.39 11.66"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen9">
           </a-entity>
 
           <!-- z10 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen10"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen10">
           </a-entity>
 
           <a-entity id="ZigarettenkisteRegalLinksFast" class="vEighteen3 play"
                     event-set__1="_event: vEighteen3; visible: false">
               <!-- z11 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.02 9.83 -14.23" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen11"> </a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.85 -14.20"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 9.85 -14.20"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen11">
               </a-entity>
 
               <!-- z12 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 7.47 -12.35" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen12"></a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 7.45 -12.37"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 7.45 -12.37"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen12">
               </a-entity>
 
               <!-- z15 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 3.06 -12.38" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen15"></a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 3.10 -12.37"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 3.10 -12.37"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen15">
               </a-entity>
           </a-entity>
@@ -1232,18 +1226,18 @@
           <a-entity id="ZigarettenkisteRegalLinks" class="vSixteen play"
                     event-set__1="_event: vSixteen; visible: false">
               <!-- z13 -->
-              <a-entity class="vSixteen play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vSixteen play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.02 9.78 -20.52" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen13" ></a-entity>
-              <a-entity class="vSixteen play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.76 -20.50"
+              <a-entity class="vSixteen play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 9.76 -20.50"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen13">
               </a-entity>
 
               <!-- z14 -->
-              <a-entity class="vSixteen play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vSixteen play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 5.11 -19.31" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen14"></a-entity>
-              <a-entity class="vSixteen play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.25 5.10 -19.29"
+              <a-entity class="vSixteen play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.25 5.10 -19.29"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen14">
               </a-entity>
           </a-entity>
