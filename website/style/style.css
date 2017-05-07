@@ -123,7 +123,7 @@ nav, .navbar-brand{
 
 
 
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven{
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven, .s2_twelve{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -163,43 +163,47 @@ nav, .navbar-brand{
 }
 
 .s2_one {
-    left: 5%;
+    left: 2%;
 }
 
 .s2_two {
-    left: 14%;
+    left: 12%;
 }
 
 .s2_three {
-    left: 23%;
+    left: 20%;
 }
 
 .s2_four {
-    left: 32%;
+    left: 28%;
 }
 
 .s2_five {
-    left: 41%;
+    left: 36%;
 }
 
 .s2_six {
-    left: 50%;
+    left: 44%;
 }
 
 .s2_seven {
-    left: 59%;
+    left: 52%;
 }
 .s2_eight {
-    left: 68%;
+    left: 60%;
 }
 .s2_nine {
-    left: 77%;
+    left: 68%;
 }
 .s2_ten {
-    left: 86%
+    left: 76%
 }
 .s2_eleven {
-    left: 95%;
+    left: 84%;
+}
+
+.s2_twelve {
+    left: 92%;
 }
 
 
@@ -221,7 +225,7 @@ nav, .navbar-brand{
     font: 30px 'Amatic SC', cursive;
 }
 
-.s2_ten p, .s2_eleven p {
+.s2_ten p, .s2_eleven p, .s2_twelve p {
     margin-left: 30%;
 }
 

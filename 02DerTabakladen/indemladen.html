@@ -53,26 +53,16 @@
       </a-entity>
 
       <a-assets timeout="5000">
-          <!--audio-->
+        <!--audio-->
+        <!-- All audio files are free for non-commercial use. For detailed licence information see ../assets/sounds/licence.txt -->
         <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3"></audio>
         <audio id="snore" src="../assets/sounds/snore.mp3"></audio>
         <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3"></audio>
-
         <audio id="blow_candle" src="../assets/sounds/blow_candle.mp3" preload="auto"></audio>
-        <audio id="coin" src="../assets/sounds/coin.mp3" preload="auto"></audio>
         <audio id="door_knock" src="../assets/sounds/door_knock.mp3" preload="auto"></audio>
-        <audio id="drawer" src="../assets/sounds/drawer.mp3" preload="auto"></audio>
-        <audio id="fall" src="../assets/sounds/fall.mp3" preload="auto"></audio>
-        <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.mp3" preload="auto"></audio>
-        <audio id="footsteps" src="../assets/sounds/footsteps.mp3" preload="auto"></audio>
-        <audio id="getup_bed" src="../assets/sounds/getup_bed.mp3" preload="auto"></audio>
-        <audio id="outdoor" src="../assets/sounds/outdoor.mp3" preload="auto"></audio>
-        <audio id="paper_rip" src="../assets/sounds/paper_rip.mp3" preload="auto"></audio>
         <audio id="paper" src="../assets/sounds/paper.mp3" preload="auto"></audio>
-        <audio id="place_object" src="../assets/sounds/place_object.mp3" preload="auto"></audio>
-        <audio id="mickey" src="../assets/audio/test/MickeyMouse.mp3" preload="auto"></audio>
-        <audio id="duck" src="../assets/audio/test/DonaldDuck.mp3" preload="auto"></audio>
         <!--ersteSeite-->
+        <!-- the following audio files have been recorded by us -->
         <audio id="frau1" src="../assets/audio/ersteSeite/frau1.mp3" preload="auto"></audio>
         <audio id="frau2" src="../assets/audio/ersteSeite/frau2.mp3" preload="auto"></audio>
         <audio id="frau3" src="../assets/audio/ersteSeite/frau3.mp3" preload="auto"></audio>
@@ -172,7 +162,7 @@
         <audio id="cPolizist11" src="../assets/audio/sechsteSeite/polizist11.mp3" preload="auto"></audio>
         <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
         <audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
-          
+
         <!--Modelle-->
         <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
         <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
@@ -212,7 +202,7 @@
 
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
-        
+
         <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
 
         <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>
@@ -253,6 +243,8 @@
         <a-asset-item id="TascheMtl" src="models/UnsereAssets/000/tasche000.mtl"></a-asset-item>
 
           <!--images-->
+          <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
+          <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
         <img src="../assets/panorama-3.png" id="audience" alt="audience">
       </a-assets>
 
@@ -497,7 +489,7 @@
                        repeat="0" begin="cSeven"></a-animation>
           <a-animation id="cGrossvaterSeven1" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
                        begin="cSeven"></a-animation>
-         
+
           <!-- Sockel-->
           <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="false"
                     event-set__5="_event: five; visible: true"></a-entity>
@@ -876,7 +868,7 @@
         </a-entity>
 
           <!-- Tabakladen -->
-          <a-entity collada-model="url(models/UnsereAssets/tabakladen_floor.dae)" id="tabakladen"
+          <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen"
                     position="4.31 -1.02 3.47" scale="10 10 10" rotation="0 -89.95437383553924 0"
                     visible="true"></a-entity>
           <a-box id="wallLeft" static-body="shape:Primitives" position="22 4 3" width="3" height="10" depth="60"
@@ -901,7 +893,7 @@
           </a-box>
 
           <!-- Türe -->
-          <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" data-brackets-id="882"
+          <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" data-brackets-id="882"
                     id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v32 clickable"
                     position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                     sound="src:#door_knock;on:two;poolsize:100;volume:30;"
@@ -1236,7 +1228,7 @@
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen15">
               </a-entity>
           </a-entity>
-              
+
           <a-entity id="ZigarettenkisteRegalLinks" class="vSixteen play"
                     event-set__1="_event: vSixteen; visible: false">
               <!-- z13 -->

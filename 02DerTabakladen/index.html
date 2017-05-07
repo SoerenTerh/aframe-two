@@ -10,7 +10,7 @@
 
         <!-- a-frame-->
         <script src="script/workingAFrame_0.5.0/aframe0.5.0.min.js"></script>
-        
+
         <!-- a-frame physics system -->
         <script src="script/workingAFrame_0.5.0/aframe-physics-system.min.js"></script>
         <!-- a-frame extras (used are e.g. controles)-->
@@ -66,7 +66,7 @@
                 <!--assets-->
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
-                
+
                 <a-asset-item id="platzObj" src="models/UnsereAssets/platz.obj"></a-asset-item>
                 <a-asset-item id="platzMtl" src="models/UnsereAssets/platz.mtl"></a-asset-item>
 
@@ -109,20 +109,14 @@
                 <a-asset-item id="roofMtl" src="models/UnsereAssets/roof.mtl"></a-asset-item>
 
                 <!--images-->
-                <img src="../assets/panorama-3.png" id="sky" alt="sky">
-                
+                <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
+                <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
+                <img src="../assets/panorama-3.png" id="sky" alt="sky"> 
+
                 <!--audio-->
-                <audio id="coin" src="../assets/sounds/coin.mp3" preload="auto"></audio>
-                <audio id="door_knock" src="../assets/sounds/door_knock.mp3" preload="auto"></audio>
-                <audio id="drawer" src="../assets/sounds/drawer.mp3" preload="auto"></audio>
-                <audio id="fall" src="../assets/sounds/fall.mp3" preload="auto"></audio>
-                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.mp3" preload="auto"></audio>
-                <audio id="footsteps" src="../assets/sounds/footsteps.mp3" preload="auto"></audio>
-                <audio id="getup_bed" src="../assets/sounds/getup_bed.mp3" preload="auto"></audio>
+                <!-- All audio files are free for non-commercial use. For detailed licence information see ../assets/sounds/licence.txt -->
+                <audio id="blow_candle" src="../assets/sounds/blow_candle.mp3" preload="auto"></audio>
                 <audio id="outdoor" src="../assets/sounds/outdoor.mp3" preload="auto"></audio>
-                <audio id="paper_rip" src="../assets/sounds/paper_rip.mp3" preload="auto"></audio>
-                <audio id="paper" src="../assets/sounds/paper.mp3" preload="auto"></audio>
-                <audio id="place_object" src="../assets/sounds/place_object.mp3" preload="auto"></audio>
                 <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
                 <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
                 <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
@@ -132,7 +126,7 @@
                 <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
-                
+
                 <!-- Brunnen -->
                 <a-entity static-body="shape:box" id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" ></a-entity>
 
@@ -141,10 +135,10 @@
                 </a-box>
 
                 <!-- Ta⁄bakladen -->
-                <a-entity collada-model="url(models/UnsereAssets/tabakladen1.DAE)" id="tabakladen" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible="" ></a-entity>
+                <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible="" ></a-entity>
 
                 <!-- Tabakladen Tür -->
-                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuer.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" visible="" sound="src: #squeeky_door; on: click; volume: 10">
+                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" visible="" sound="src: #squeeky_door; on: click; volume: 10">
                     <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 </a-entity>
@@ -170,7 +164,7 @@
                 </a-box>
 
                 <!-- Bäcker -->
-                <a-entity collada-model="url(models/UnsereAssets/baeckerei.DAE)" id="baeckerladen" position="-5.88 0.8 -120.5" scale="8 8 10" rotation="0 90 0" visible="" ></a-entity>
+                <a-entity collada-model="url(models/UnsereAssets/baecker.dae)" id="baeckerladen" position="-5.88 0.8 -120.5" scale="8 8 10" rotation="0 90 0" visible="" ></a-entity>
                 <a-box id="baeckerBox" static-body="shape:Primitives" position="-5.88 0.8 -120.5" width="70" height="20" depth="40" visible="false" rotation="0 90 0"></a-box>
 
                 <!-- Bäcker Tür -->
@@ -183,7 +177,7 @@
                 <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei" ></a-entity>
 
                 <!-- Bäckerei - Lampe -->
-                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.mp3);on:click" ></a-entity>
+                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src: #blow_candle; on:click" ></a-entity>
 
                 <!-- Bäckerei - Ablage f. Kuchen -->
                 <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -124.87" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-1" ></a-entity>
@@ -210,14 +204,14 @@
 
                 <!-- Platz -->
                 <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2" sound="src: #outdoor; autoplay: true; loop: true; volume: 2"></a-entity>
-                
+
                 <!-- Bäume -->
                 <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="11.5 0 -30.00" scale="0.15 0.15 0.15"></a-entity>
 
                 <!-- Teppichladen -->
-                <a-entity collada-model="url(models/UnsereAssets/teppichladen1.DAE)" id="teppichladen" position="-109.25 0 -4.24" scale="4 8 5.5" rotation="0 180 0" ></a-entity>
+                <a-entity collada-model="url(models/UnsereAssets/teppichladen.dae)" id="teppichladen" position="-109.25 0 -4.24" scale="4 8 5.5" rotation="0 180 0" ></a-entity>
                 <a-box id="teppichladenBox" static-body="shape:Primitives" position="-129.25 0 -3.54" width="70" height="20" depth="62" visible="false" rotation="0 180 0"></a-box>
-                
+
                 <a-box id="triggerTeppichladen" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-75.00 30.00 6">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
@@ -247,7 +241,7 @@
                 <a-light type="ambient" color="#ccc" light="" position="-50 80 -50" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -50" rotation="" scale="" visible=""></a-light>
                 <a-light color="#ddf" position="-50 80 -50" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
-                
+
                 <!--ground-->
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 

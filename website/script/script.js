@@ -30,6 +30,7 @@ $(document).ready(function () {
         $(".s2_nineInfo").addClass("hide");
         $(".s2_tenInfo").addClass("hide");
         $(".s2_elevenInfo").addClass("hide");
+        $(".s2_twelveInfo").addClass("hide")
 
     }
 
@@ -40,7 +41,7 @@ $(document).ready(function () {
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
         completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
-        output = completionPercentage + 5 + "%";
+        output = completionPercentage + 2 + "%";
 
        
     $(".progress-bar.semester-1").css('width', 100 + "%");
@@ -200,6 +201,13 @@ $(document).ready(function () {
         if ($(".s2_elevenInfo").hasClass("hide")) {
             hide();
             $(".s2_elevenInfo").removeClass("hide");
+        }
+    });
+    $(".s2_twelve").on('click mouseover', function () {
+        color(this);
+        if ($(".s2_twelveInfo").hasClass("hide")) {
+            hide();
+            $(".s2_twelveInfo").removeClass("hide");
         }
     });
 
