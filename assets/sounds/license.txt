@@ -25,7 +25,7 @@ https://www.freesound.org/people/xserra/sounds/178856/
 #getup_bed
 https://www.freesound.org/people/avakas/sounds/172359/
 
-#outdoor
+#outdoor Personal license
 http://soundbible.com/295-Summer-Crickets-Chirping.html
 
 #paper_rip
