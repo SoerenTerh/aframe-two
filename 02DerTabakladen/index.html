@@ -112,17 +112,9 @@
                 <img src="../assets/panorama-3.png" id="sky" alt="sky">
 
                 <!--audio-->
-                <audio id="coin" src="../assets/sounds/coin.mp3" preload="auto"></audio>
-                <audio id="door_knock" src="../assets/sounds/door_knock.mp3" preload="auto"></audio>
-                <audio id="drawer" src="../assets/sounds/drawer.mp3" preload="auto"></audio>
-                <audio id="fall" src="../assets/sounds/fall.mp3" preload="auto"></audio>
-                <audio id="footsteps_shuffle" src="../assets/sounds/footsteps_shuffle.mp3" preload="auto"></audio>
-                <audio id="footsteps" src="../assets/sounds/footsteps.mp3" preload="auto"></audio>
-                <audio id="getup_bed" src="../assets/sounds/getup_bed.mp3" preload="auto"></audio>
+                <!-- All audio files are free for non-commercial use. For detailed licence information see ../assets/sounds/licence.txt -->
+                <audio id="blow_candle" src="../assets/sounds/blow_candle.mp3" preload="auto"></audio>
                 <audio id="outdoor" src="../assets/sounds/outdoor.mp3" preload="auto"></audio>
-                <audio id="paper_rip" src="../assets/sounds/paper_rip.mp3" preload="auto"></audio>
-                <audio id="paper" src="../assets/sounds/paper.mp3" preload="auto"></audio>
-                <audio id="place_object" src="../assets/sounds/place_object.mp3" preload="auto"></audio>
                 <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
                 <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
                 <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
@@ -183,7 +175,7 @@
                 <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei" ></a-entity>
 
                 <!-- Bäckerei - Lampe -->
-                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src:url(../assets/sounds/blow_candle.mp3);on:click" ></a-entity>
+                <a-entity obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="-21.12 9.30 -107.64" scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="lampeBäckerei" sound="src: #blow_candle; on:click" ></a-entity>
 
                 <!-- Bäckerei - Ablage f. Kuchen -->
                 <a-entity obj-model="obj:#AblagenBaeckereiObj;mtl:#AblagenBaeckereiMtl" position="10.40 -0.31 -124.87" scale="0.25 0.25 0.15" rotation="0 90 0" visible="true" id="ablageKuchen-1" ></a-entity>
