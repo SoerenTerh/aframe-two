@@ -5,6 +5,8 @@ $(document).ready(function () {
         $(this).attr('target', '_blank');
     });
 
+    $('.dropdown_text').text("Semester 2");
+
     function hide() {
         $(".oneInfo").addClass("hide");
         $(".twoInfo").addClass("hide");
