@@ -89,21 +89,21 @@ var persons = ["#Frau",
                /*,"#Hausbesitzerin"*/];
 
 
-var personColors = ["#4D4D4D",
-                    "#A6A6A6",
-                    "#404040",
+var personColors = ["#EBD3B9",/*Frau ja*/
+                    "#C5E2E4", /*Neffe ja */
+                    "#FFD9D9",/*Mann ja*/
 
-                    "#737373",
+                    "#FFE0A8", /*Schwaegerin*/
                     /*"#595959",*/
 
-                    "#8C8C8C",
-                    "#D9D9D9",
+                    "#B99C79",/*Grossvater ja */
+                    "#D2E6C1",/*Junge ja*/
 
-                    "#BFBFBF",
+                    "#E08989",/*Nichte ja*/
 
-                    "#262626",
-                    "#CCCCCC",
-                    "#595959"
+                    "#CACACA", /*Shui Ta ja */
+                    "#EDAE81",/*Schreiner ja*/
+                    "#CDCCF7"/*Polizist*/
                     /*,"#FFF"*/];
 
 //ersteSeite
