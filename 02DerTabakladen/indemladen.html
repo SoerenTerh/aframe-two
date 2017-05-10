@@ -20,7 +20,7 @@
       <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
       <!-- aframe-randomizer-components-->
       <script src="script/workingAFrame_0.5.0/aframe-randomizer-components.min.js"></script>
-     
+
 
     <script src="script/entity.js"></script>
     <link href="style/style.css" rel="stylesheet">
@@ -205,6 +205,9 @@
 
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
+
+        <a-asset-item id="NotizbuchObj" src="models/UnsereAssets/Notizbuch.obj"></a-asset-item>
+        <a-asset-item id="NotizbuchMtl" src="models/UnsereAssets/Notizbuch.mtl"></a-asset-item>
 
         <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
 
@@ -573,7 +576,7 @@
                   event-set__cSix2="_event: cSix2; visible: false">
 
           <a-entity id="Junge" class="one fiveAll play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
-                    material="color:#D2E6C1 visible="true" sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
+                    material="color:#D2E6C1" visible="true" sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                     event-set__5="_event: sound-ended; material.color: #D2E6C1"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
@@ -944,24 +947,12 @@
           </a-entity>
 
           <!-- Laterne --> <!-- Cheat -->
-          <a-entity class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
-                           sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
-                           sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
-                           sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
-                           sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
-                           sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end sSevenPickUp2 vOne vOneTalk vTwo
-                           vTwoTalk vFourTalk vFive vSixTalk vNineTalk vEleven vElevenTalk vFifteen vFourteenTalk
-                           vSixteen vSixteenTalk vEighteen vEighteen2 vEighteen3 vEighteenTalk v21Talk v21 v21_2
-                           v22Talk v21_3 v23Talk v25Talk v26 v26two v26three v27Talk v28 v28Talk v29Talk v30Talk v31Talk
-                           v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mone2 mtwoTalk mthree mthreeTalk mfour
-                           mfourTalk mfive mfive2 mfiveTalk mfiveTalk2 msix msix2 msix2Talk mseven msevenTalk msevenTalk2 msevenTalk3 mseven2 msevenTalk4
-                           cOneTalk cTwoTalk cThree cThree1 cFour cFiveTalk cSix cFive1 cSix1 cSix2 cFive2 cFive3
-                           cSeven cSevenTalk cEight play"
+          <a-entity class="one six2 play five"
                     data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
                                   scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"
                                   sound="src:#blow_candle;on:click" >
               <a-entity class="one six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
-                        position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"
+                        position="-6 28 -11" rotation="0 0 0" scale="1 1 1" visible="false"
                         event-set__1="_event: one; visible: true"
                         event-set__2="_event: six2; visible: false">
                   <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
@@ -1031,7 +1022,24 @@
                            repeat="0" begin="vFive"></a-animation>
               <a-animation id="RechnungAnimVFiveP" class="wait" attribute="position" dur="1500" to="4.33 13.39 -3.36"
                            repeat="0" begin="vFive"></a-animation>
+          </a-entity>
 
+          <!-- Notizbuch --> <!-- neuer cheat -->
+          <a-entity id="notizbuch" obj-model="obj: #NotizbuchObj; mtl: #NotizbuchMtl" position="0 10 1"
+                    scale="0.2 0.2 0.2" rotation="0 90 0"
+                    class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
+                                     sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
+                                     sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
+                                     sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
+                                     sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
+                                     sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end sSevenPickUp2 vOne vOneTalk vTwo
+                                     vTwoTalk vFourTalk vFive vSixTalk vNineTalk vEleven vElevenTalk vFifteen vFourteenTalk
+                                     vSixteen vSixteenTalk vEighteen vEighteen2 vEighteen3 vEighteenTalk v21Talk v21 v21_2
+                                     v22Talk v21_3 v23Talk v25Talk v26 v26two v26three v27Talk v28 v28Talk v29Talk v30Talk v31Talk
+                                     v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mone2 mtwoTalk mthree mthreeTalk mfour
+                                     mfourTalk mfive mfive2 mfiveTalk mfiveTalk2 msix msix2 msix2Talk mseven msevenTalk msevenTalk2 msevenTalk3 mseven2 msevenTalk4
+                                     cOneTalk cTwoTalk cThree cThree1 cFour cFiveTalk cSix cFive1 cSix1 cSix2 cFive2 cFive3
+                                     cSeven cSevenTalk cEight play">
           </a-entity>
 
           <!-- Ablage_Stellage -->
