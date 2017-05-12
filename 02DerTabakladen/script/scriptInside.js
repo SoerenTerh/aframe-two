@@ -108,14 +108,14 @@ var personColors = ["#EBD3B9",/*Frau ja*/
 
 //ersteSeite
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+    two = ["#kerzeFlamme", "#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
-    three = ["#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+    three = ["#kerzeFlamme", "#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
     fourTalk = ["#ShuiTa", "#Frau"],
     fourTalk2 = ["#ShuiTa"],
-    five = ["#sockelNeffe", "#containerNeffe",
+    five = ["#kerzeFlamme", "#sockelNeffe", "#containerNeffe",
             "#sockelMann", "#containerMann",
             '#sockelSchwaegerin', '#containerSchwaegerin',
             "#sockelGroßvater", "#containerGroßvater",
@@ -451,7 +451,7 @@ function playableFound(currentTarget) {
         }
 
         ////hint at next onPlayFusing()
-        //        timeoutId = setTimeout(function showHint() {  
+        //        timeoutId = setTimeout(function showHint() {
         //            for (m = 0; m < window[at].length; m++) {
         //                fireAt = window[at][m];
         //                if (fireAt.search("container") !== -1) {
