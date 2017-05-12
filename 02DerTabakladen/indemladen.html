@@ -947,16 +947,19 @@
           </a-entity>
 
           <!-- Laterne --> <!-- Cheat -->
-          <a-entity class="one six2 play five"
+          <a-entity id="kerze" class="clickable"
                     data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
-                                  scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"
-                                  sound="src:#blow_candle;on:click" >
-              <a-entity class="one six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
-                        position="-6 28 -11" rotation="0 0 0" scale="1 1 1" visible="false"
-                        event-set__1="_event: one; visible: true"
-                        event-set__2="_event: six2; visible: false">
+                                  scale="0.06 0.06 0.06" rotation="0 0 0" visible="true"
+                                  sound="src:#blow_candle;on:click">
+              <a-entity class="one three five play clickable" id="kerzeFlamme"
+                        light="type: point; intensity: 2; distance: 50; decay: 3"
+                        position="-6 28 -11" rotation="0 0 0" scale="20 20 20">
                   <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
-                               end="five" begin="one"></a-animation>
+                               begin="one" end="five"></a-animation>
+                  <!-- <a-animation attribute="light.decay" from="10" to="4" begin="five"></a-animation> -->
+                  <!-- <a-animation attribute="light.decay" from="1" to="20" repeat="indefinite" direction="alternate"
+                               end="six2" begin="clickableFound"></a-animation> -->
+                  <!-- <a-animation attribute="light.intensity" from"0.75" to "3" begin="clickableFound"></a-animation> -->
               </a-entity>
           </a-entity>
 
@@ -1262,9 +1265,10 @@
                  geometry="primitive:box;width:555;height:0.1;depth:555" color="#333437"></a-box>
 
           <!-- lights-->⁄
-          <a-light type="ambient" color="#ccc" light="" position="-50 80 -150"></a-light>
-          <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150"></a-light>
-          <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point"></a-light>
+          <a-entity light="type: ambient; color: #ccc; intensity: 1" id="ambientLight" class="two" position="50 80 -150">
+          </a-light>
+          <a-light type="point" color="#ddf" distance="100" intensity="2" light="" position="-50 80 -150"></a-light>
+          <a-light type="point" color="#ddf" position="-50 80 -150" distance="50" intensity="2"></a-light>
       </a-entity>
         <!-- sky-->
       <a-sky src="#audience" id="sky" class="mfiveTalk2 play" scale="-0.02 0.02 0.02" position="0 17 0"
