@@ -947,16 +947,25 @@
           </a-entity>
 
           <!-- Laterne --> <!-- Cheat -->
-          <a-entity class="one six2 play five"
+          <a-entity class="one two three six2 play five clickable"
                     data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
                                   scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"
                                   sound="src:#blow_candle;on:click" >
-              <a-entity class="one six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
+              <a-entity class="one two three six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
                         position="-6 28 -11" rotation="0 0 0" scale="1 1 1" visible="false"
                         event-set__1="_event: one; visible: true"
                         event-set__2="_event: six2; visible: false">
-                  <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
+                  <!-- funktioniert -->
+                  <a-animation attribute="light.intensity" from="0" to="10" repeat="indefinite" direction="alternate"
                                begin="one"></a-animation>
+                  <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
+                              begin="one"></a-animation>
+
+                  <!-- funktioniert nicht -->
+                  <!-- <a-animation attribute="light.intensity" from="0" to="10" repeat="indefinite" direction="alternate"
+                               begin="two"></a-animation> -->
+                  <!-- <a-animation attribute="light.intensity" to="5" begin="two"</a-animation>
+                  <a-animation attribute="light.intensity" to="0" begin="five"</a-animation> -->
               </a-entity>
           </a-entity>
 
