@@ -947,20 +947,16 @@
           </a-entity>
 
           <!-- Laterne --> <!-- Cheat -->
-          <a-entity class=""
+          <a-entity class="clickable"
                     data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
                                   scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"
                                   sound="src:#blow_candle;on:click" >
-              <a-entity class="one two three six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
+              <a-entity class="one six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
                         position="-6 28 -11" rotation="0 0 0" scale="1 1 1" visible="false"
                         event-set__1="_event: one; visible: true"
-                        event-set__2="_event: six2; visible: false"
-                        event-set__3="_event: three; _target: #ambLight; light.intensity: 0.2">
+                        event-set__2="_event: six2; light.intensity: 0">
                   <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
                               begin="one"></a-animation>
-                <!-- only one animation works, not both together -->
-                  <a-animation id="kerzeHeller" attribute="light.intensity" to="8" begin="two"</a-animation>
-                  <a-animation id="kerzeDunkler" attribute="light.intensity" to="0" begin="three"</a-animation>
               </a-entity>
           </a-entity>
 
