@@ -27,10 +27,9 @@ $('#triggerHinten').on('click', function triggerHinten() {
 var candle = document.querySelector('#kerzeFlamme');
 var room = document.querySelector('#ambLight')
 $('#kerze').on('click', function triggerKerze() {
-  'use strict';
   var stateCandle = AFRAME.utils.entity.getComponentProperty(candle, 'light.intensity');
   var stateRoom = AFRAME.utils.entity.getComponentProperty(room, 'light.intensity');
-  console.log(stateCandle);
+
   switch (stateCandle) {
     case 0:
       if (stateRoom == 1) {
