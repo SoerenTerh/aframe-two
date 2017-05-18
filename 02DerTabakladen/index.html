@@ -17,10 +17,14 @@
         <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
         <!-- a-frame event set component-->
         <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
+        <script src="script/workingAFrame_0.5.0/aframe-html-source.js"></script>
 
         <script src="script/entity.js"></script>
         <link href="style/style.css" rel="stylesheet">
     </head>
+
+    
+
     <body>
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
@@ -32,6 +36,8 @@
                           universal-controls
                           kinematic-body
                           position="0 1 16">
+                    <a-image html-src="#test" position="0 5.5 5"></a-image>
+                    <a-image html-src="#lost" position="0 0 0"></a-image>
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout:2500"
                               position="0 0 -1"
@@ -129,6 +135,7 @@
             </a-assets>
 
             <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
+
                 <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
@@ -259,7 +266,19 @@
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
         </a-scene>
+
+        <section id="test">
+            <p>Kuchen gesammelt:<span id="counter"></span></p>
+        </section>
+
+        <section id="lost">
+            <p>Spiel leider verloren! Versuche es beim nächsten Mal nochmal.</p>
+        </section>
+
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
+        <script src="script/spiel_kuchen.js"></script>
     </body>
+
+    
 </html>
