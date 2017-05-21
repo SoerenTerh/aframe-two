@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 #loader {
     position: fixed;
     z-index: 999;
@@ -31,25 +33,30 @@
     height: 100%;
 }
 
-#test {
-    width: 10%;
-    background: transparent;
+#counterKuchen {
+    background: white;
     display: block;
     position: absolute;
     bottom: 25px;
     right: 25px;
-    padding: 1.5rem;
+    padding: 0.5rem;
+    font-family: 'VT323', monospace;
+    border-radius: 45px;
 }
 
 #lost {
     display: none;
+    border-radius: 45px;
+    text-align: center;
+    justify-content: center;
     background-color: white;
-    width: 150px;
+    width: 100px;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 50%; 
-    padding: 2rem;
+    top: 50%;
+    padding: 1rem;
+    font-family: 'VT323', monospace;
 }

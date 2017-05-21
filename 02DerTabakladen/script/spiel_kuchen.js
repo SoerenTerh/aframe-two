@@ -30,7 +30,7 @@ function game(el) {
 
 /* generate entity to display counter */
 
-$('#test #counter').text(counter);
+$('#counterKuchen #counter').text(counter);
 
 /* read sessionstorage */
 function readSessionStorage(key) {
@@ -46,7 +46,7 @@ function setSessionStorage(key, value) {
 
 /* update counter */
 function updateCounter() {
-    $('#test #counter').text(counter);
+    $('#counterKuchen #counter').text(counter);
 }
 
 function gameLost() {
@@ -54,5 +54,6 @@ function gameLost() {
     $('#lost').css("display", "initial");
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
+    $('#counterKuchen').css("display", "none");
     setTimeout(function(){ $('#lost').fadeOut(1500) }, 2000);
 }
