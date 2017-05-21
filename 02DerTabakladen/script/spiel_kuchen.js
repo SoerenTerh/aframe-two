@@ -2,31 +2,31 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
-$('#brunnen').on('click', function game(el) {
-    console.log(el);
-    
+$('.Minispiel_Kuchen').on('click', function(el){
+    game(el);
+    var cakeNR = "#" + el.currentTarget.id;
+    $('.Minispiel_Kuchen' + cakeNR).remove();
+});
+
+$('.Minispiel_Zigarette').on('click', function(el){
+    game(el);
+});
+
+function game(el) {    
     var sessionStorage = readSessionStorage(skey);
     var element = el;
 
-    if(!sessionStorage) {
-        alert("hiihi");
+    if(element.currentTarget.classList.contains('Minispiel_Kuchen')){
+        counter++;
+        updateCounter();
         setSessionStorage(skey, counter);
     }else{
-        if(element.currentTarget.classList.contains('cake')){
-            counter++;
-            updateCounter();
-        }else{
-            if(element.currentTarget.classList.contains("cigarette")){
-                $('#test').css("display", "none");
-                gameLost();
-            }else{
-                alert("nope!!");
-            }
+        if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
+            $('#test').css("display", "none");
+            gameLost();
         }
     }
-
-    alert("test");
-});
+};
 
 /* generate entity to display counter */
 
@@ -50,9 +50,9 @@ function updateCounter() {
 }
 
 function gameLost() {
+    $('#lostCounter').html("Du hast " + counter + " Kuchen gesammelt!");
     $('#lost').css("display", "initial");
-    setTimeout(
-        function(){
-             alert("Hello"); 
-            },3000);
+    $('.Minispiel_Kuchen').remove();
+    $('.Minispiel_Zigarette').remove();
+    setTimeout(function(){ $('#lost').fadeOut(1500) }, 2000);
 }
