@@ -36,3 +36,8 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
+var textbox = document.querySelector('#textbox')
+$('#triggerTextbox').on('click', function() {
+  console.log('Hallo');
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+});
