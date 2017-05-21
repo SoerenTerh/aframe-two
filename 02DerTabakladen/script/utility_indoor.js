@@ -32,39 +32,28 @@ $('#kerze').on('click', function triggerKerze() {
 
   switch (stateCandle) {
     case 0:
-      if (stateRoom == 1) {//raum wird überblendet
+      if (stateRoom == 1) { //Raum wird überblendet
         AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 1);
         AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 2);
 			  var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-an.wav');
-					audio.play();
-		
+				audio.play();
       }
-      else {
-	  //Licht ist aus, wird angemacht
+      else { //Licht ist aus, wird angemacht
         AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0.75);
         AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 1);
-		
-		
       }
       break;
-    case 1:
-	// raum ist überblendet, licht wird ausgemacht
+    case 1: // Raum ist überblendet, Licht wird ausgemacht
       AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0);
       AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 1);
-	  AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0);
-      AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 0.2);
-	  var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.wav');
-					audio.play();
-	  
-      break;
-    case 0.75:
-	//Licht wird aus gemacht
+	    break;
+    case 0.75: // Kerze ist an, Licht wird aus gemacht
       AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0);
       AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 0.2);
-	  var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.wav');
-					audio.play();
-
+	    var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.wav');
+			audio.play();
       break;
     default:
+      break;
   }
 });
