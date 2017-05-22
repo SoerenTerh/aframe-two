@@ -245,11 +245,17 @@
                 <!--ground-->
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 
-                <!-- text -->
-                <a-entity id="textbox" position="0 15 14">
+                <!-- Info-Boxen -->
+                <a-entity id="textbox" position="0 15 22">
                   <a-box id="textbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible=true>
                   </a-box>
-                  <a-entity id="hello" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 2 .001">
+                  <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
+                  </a-entity>
+                  <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
+                            width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                  </a-entity>
+                  <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
+                            width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
                   </a-entity>
                   <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
                 </a-entity>
