@@ -37,7 +37,10 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
 });
 
 var textbox = document.querySelector('#textbox')
-$('#triggerTextbox').on('click', function() {
-  console.log('Hallo');
+$('#closeTextbox').on('click', function() {
   AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+});
+
+$('#openTextbox').on('click', function() {
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
 });
