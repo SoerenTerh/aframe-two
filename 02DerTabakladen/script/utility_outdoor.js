@@ -36,7 +36,9 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
-//$('#brunnen').on('click', function triggerBrunnen (){
+$('#brunnen').on('click', function triggerBrunnen (){
+
+$('a-scene').attr('rain', '');
 
 AFRAME.registerComponent('rain', {
   schema: {
@@ -333,4 +335,4 @@ AFRAME.registerComponent('rain', {
 	 
   }
 });
-//});
+});
