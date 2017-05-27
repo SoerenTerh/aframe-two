@@ -36,3 +36,7 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
+var memory = document.querySelector('#memoryGame');
+$('#cardStack').on('click', function triggerMemory() {
+  AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+});

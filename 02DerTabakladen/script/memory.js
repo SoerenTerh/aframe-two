@@ -19,8 +19,6 @@ var card17 = document.createElement('a-entity');
 var card18 = document.createElement('a-entity');
 var card19 = document.createElement('a-entity');
 
-
-
 AFRAME.utils.entity.setComponentProperty(card1, 'position', {x: 0, y: 0.5, z: 0});
 AFRAME.utils.entity.setComponentProperty(card1, 'geometry', 'primitive: box');
 AFRAME.utils.entity.setComponentProperty(card1, 'scale', {x: 0.17, y: 0.005, z: 0.1});
