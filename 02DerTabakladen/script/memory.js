@@ -152,17 +152,20 @@ memoryEntity.appendChild(card19);
 
 // memory game
 $('.memoryCard').on('fusing', function turnCard() {
-  card = '#' + $(this).closest("a-box").attr('id');
+  var card = '#' + $(this).closest("a-box").attr('id');
+
+  // var animation = document.createElement('a-animation');
+  // document.querySelector(card).appendChild(animation);
+  //
+  // AFRAME.utils.entity.setComponentProperty(animation, 'attribute', 'rotation');
+  // AFRAME.utils.entity.setComponentProperty(animation, 'from', "0 0 0");
+  // AFRAME.utils.entity.setComponentProperty(animation, 'to', "0 180 0");
+  // AFRAME.utils.entity.setComponentProperty(animation, 'begin', 'turnCard');
+  // AFRAME.utils.entity.setComponentProperty(animation, 'duration', '2000');
+  // AFRAME.utils.entity.setComponentProperty(animation, 'fill', 'backwards');
+  // AFRAME.utils.entity.setComponentProperty(animation, 'repeat', '0');
+
   triggerEvent = "turnCard";
   document.querySelector(card).emit(triggerEvent);
+  // document.querySelector(card).removeChild(animation);
 });
-
-// $("memoryCard").on('fusing', function onFusingClickable() {
-//     card = this;
-//     console.log(card);
-//
-//     trigggerEvent = "clickableFound";
-//     document.querySelector("#cursor").emit(trigggerEvent);
-//     document.querySelector(card).emit(trigggerEvent);
-//     lastClickableFused = currentTarget;
-// });
