@@ -1,3 +1,4 @@
+// Add cards to table
 var memoryEntity = document.querySelector('#cardStack');
 var card1 = document.createElement('a-entity');
 var card2 = document.createElement('a-entity');
@@ -147,3 +148,5 @@ memoryEntity.appendChild(card16);
 memoryEntity.appendChild(card17);
 memoryEntity.appendChild(card18);
 memoryEntity.appendChild(card19);
+
+// Add memory playing cards in air
