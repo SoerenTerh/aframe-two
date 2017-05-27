@@ -149,4 +149,20 @@ memoryEntity.appendChild(card17);
 memoryEntity.appendChild(card18);
 memoryEntity.appendChild(card19);
 
-// Add memory playing cards in air
+
+// memory game
+$('.memoryCard').on('fusing', function turnCard() {
+  card = '#' + $(this).closest("a-box").attr('id');
+  triggerEvent = "turnCard";
+  document.querySelector(card).emit(triggerEvent);
+});
+
+// $("memoryCard").on('fusing', function onFusingClickable() {
+//     card = this;
+//     console.log(card);
+//
+//     trigggerEvent = "clickableFound";
+//     document.querySelector("#cursor").emit(trigggerEvent);
+//     document.querySelector(card).emit(trigggerEvent);
+//     lastClickableFused = currentTarget;
+// });

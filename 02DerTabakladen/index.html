@@ -314,23 +314,71 @@
             <a-entity class="clickableTrigger" id="cardStack" geometry="primitive: box" material="color: red" position="-16 2 0" scale="3 3 3">
             </a-entity>
 
-            <a-entity id="memoryGame" position="-16 10 -10" visible=false>
-              <a-box id="memoryCard1" color="white" width="4" height="4" depth="0.001" position="-5 -5 0"></a-box>
-              <a-box id="memoryCard2" color="white" width="4" height="4" depth="0.001" position="-5 0 0"></a-box>
-              <a-box id="memoryCard3" color="white" width="4" height="4" depth="0.001" position="-5 5 0"></a-box>
-              <a-box id="memoryCard4" color="white" width="4" height="4" depth="0.001" position="-5 10 0"></a-box>
-              <a-box id="memoryCard5" color="white" width="4" height="4" depth="0.001" position="0 -5 0"></a-box>
-              <a-box id="memoryCard6" color="white" width="4" height="4" depth="0.001" position="0 0 0"></a-box>
-              <a-box id="memoryCard7" color="white" width="4" height="4" depth="0.001" position="0 5 0"></a-box>
-              <a-box id="memoryCard8" color="white" width="4" height="4" depth="0.001" position="0 10 0"></a-box>
-              <a-box id="memoryCard9" color="white" width="4" height="4" depth="0.001" position="5 -5 0"></a-box>
-              <a-box id="memoryCard10" color="white" width="4" height="4" depth="0.001" position="5 0 0"></a-box>
-              <a-box id="memoryCard11" color="white" width="4" height="4" depth="0.001" position="5 5 0"></a-box>
-              <a-box id="memoryCard12" color="white" width="4" height="4" depth="0.001" position="5 10 0"></a-box>
-              <a-box id="memoryCard13" color="white" width="4" height="4" depth="0.001" position="10 -5 0"></a-box>
-              <a-box id="memoryCard14" color="white" width="4" height="4" depth="0.001" position="10 0 0"></a-box>
-              <a-box id="memoryCard15" color="white" width="4" height="4" depth="0.001" position="10 5 0"></a-box>
-              <a-box id="memoryCard16" color="white" width="4" height="4" depth="0.001" position="10 10 0"></a-box>
+            <a-entity id="memoryGame" position="-16 10 -10" visible=true>
+              <a-box id="memoryCard1" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="-5 -5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard2" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="-5 0 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard3" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="-5 5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard4" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="-5 10 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard5" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="0 -5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard6" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="0 0 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard7" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="0 5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard8" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="0 10 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard9" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="5 -5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard10" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="5 0 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard11" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="5 5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard12" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="5 10 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard13" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="10 -5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard14" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="10 0 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard15" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="10 5 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
+              <a-box id="memoryCard16" class="clickableTrigger memoryCard" color="white" width="4" height="4"
+                     depth="0.001" position="10 10 0">
+                <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+              </a-box>
             </a-entity>
         </a-scene>
 
