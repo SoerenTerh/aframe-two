@@ -1,4 +1,4 @@
-var memoryEntity = document.querySelector('#memoryGame');
+var memoryEntity = document.querySelector('#cardStack');
 var card1 = document.createElement('a-entity');
 var card2 = document.createElement('a-entity');
 var card3 = document.createElement('a-entity');
