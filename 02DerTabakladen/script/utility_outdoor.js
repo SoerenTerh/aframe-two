@@ -36,9 +36,12 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
+//Regen-Funktion
+
 $('#brunnen').on('click', function triggerBrunnen (){
 
-$('a-scene').attr('rain', '');
+//var attr = $('a-scene').attr('rain');
+//if (attr == 0) { //es fängt an zu regnen
 
 AFRAME.registerComponent('rain', {
   schema: {
@@ -335,4 +338,11 @@ AFRAME.registerComponent('rain', {
 	 
   }
 });
+$('a-scene').attr('rain', '');
+	$('a-scene').play;
+//}
+//else{
+//	$('a-scene').removeAttr('rain');
+//}
+
 });
