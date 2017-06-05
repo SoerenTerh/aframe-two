@@ -278,8 +278,8 @@
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
             
-            
-            <!-- entities used for the cake minigame-->
+        <a-entity id="cakeGame" visible="false">
+                <!-- entities used for the cake minigame-->
             <a-entity class="Minispiel_Kuchen" id="cake1" mixin="kuchenMixin"></a-entity>
             <a-entity class="Minispiel_Kuchen" id="cake2" mixin="kuchenMixin"></a-entity>
             <a-entity class="Minispiel_Kuchen" id="cake3" mixin="kuchenMixin"></a-entity>
@@ -311,12 +311,14 @@
             <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
             <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
 
+            <section id="counterKuchen">
+                <p>Kuchen gesammelt:<span id="counter"></span></p>
+            </section>
 
+        </a-entity>
         </a-scene>
 
-        <section id="counterKuchen">
-            <p>Kuchen gesammelt:<span id="counter"></span></p>
-        </section>
+        
 
         <section id="lost">
             <p>Spiel leider verloren!</p>
