@@ -10,13 +10,17 @@
 
         <!-- a-frame-->
         <script src="script/workingAFrame_0.5.0/aframe0.5.0.min.js"></script>
-
+        
         <!-- a-frame physics system -->
         <script src="script/workingAFrame_0.5.0/aframe-physics-system.min.js"></script>
         <!-- a-frame extras (used are e.g. controles)-->
         <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
         <!-- a-frame event set component-->
         <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
+        <script src="script/workingAFrame_0.5.0/aframe-html-source.js"></script>
+
+        <script src="script/downloads/aframe-entity-generator-components.min.js"></script>
+        <script src="script/downloads/EDITED_aframe-randomizer-components.js"></script>
 
         <script src="script/entity.js"></script>
         <link href="style/style.css" rel="stylesheet">
@@ -108,6 +112,10 @@
                 <a-asset-item id="roofObj" src="models/UnsereAssets/roof.obj"></a-asset-item>
                 <a-asset-item id="roofMtl" src="models/UnsereAssets/roof.mtl"></a-asset-item>
 
+                <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/000/zigarette000.obj"></a-asset-item>
+                <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
+
+
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
                 <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
@@ -120,6 +128,17 @@
                 <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
                 <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
                 <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
+
+                <a-mixin id="kuchenMixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.75 -42; max: 46 0.75 43;"></a-mixin>
+                <a-mixin id="kuchen_area2_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
+                <a-mixin id="kuchen_area3_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
+                <a-mixin id="kuchen_area4_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
+
+                <a-mixin id="zigaretteMixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.3 0.3 0.3" random-position="min: -63 1 -65; max: 57 1 65;"></a-mixin>
+                <a-mixin id="zigarette_area2_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
+                <a-mixin id="zigarette_area3_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
+                <a-mixin id="zigarette_area4_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
+
             </a-assets>
 
             <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
@@ -255,45 +274,42 @@
           
         <a-entity id="cakeGame" visible="false">
                 <!-- entities used for the cake minigame-->
-            <a-entity class="Minispiel_Kuchen" id="cake1" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake2" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake3" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake4" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake5" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake6" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake7" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake8" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake9" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake1" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake2" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake3" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake4" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake5" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake6" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake7" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake8" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake9" mixin="kuchenMixin"></a-entity>
 
-            <a-entity class="Minispiel_Kuchen" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Kuchen" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Kuchen" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen clickableTrigger" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette1" mixin="zigaretteMixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette2" mixin="zigaretteMixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette1" mixin="zigaretteMixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette2" mixin="zigaretteMixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area3_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette5" mixin="zigarette_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette6" mixin="zigarette_area3_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
-
-            <section id="counterKuchen">
-                <p>Kuchen gesammelt:<span id="counter"></span></p>
-            </section>
-
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette7" mixin="zigarette_area4_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette clickableTrigger" id="cigarette8" mixin="zigarette_area4_Mixin"></a-entity>
         </a-entity>
         </a-scene>
 
-        
+        <section id="counterKuchen">
+            <p>Kuchen gesammelt:<span id="counter"></span></p>
+        </section>
 
         <section id="lost">
             <p>Spiel leider verloren!</p>
@@ -301,5 +317,6 @@
         </section>
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
+        <script src="script/spiel_kuchen.js"></script>
     </body>
 </html>
