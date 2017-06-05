@@ -17,31 +17,21 @@
         <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
         <!-- a-frame event set component-->
         <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
-        <script src="script/workingAFrame_0.5.0/aframe-html-source.js"></script>
 
-        <script src="script/downloads/aframe-entity-generator-components.min.js"></script>
-        <script src="script/downloads/EDITED_aframe-randomizer-components.js"></script>
-
-
-<!--        <script src="script/entity.js"></script>-->
+        <script src="script/entity.js"></script>
         <link href="style/style.css" rel="stylesheet">
     </head>
-
-    
-
     <body>
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
-        <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all" stats>
+        <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all">
             <!--camera-->
             <a-entity  id="camera" position="0 5.8 0">
                 <a-entity camera
                           universal-controls
                           kinematic-body
                           position="0 1 16">
-                    <a-image html-src="#counterKuchen" position="0 5.5 5"></a-image>
-                    <a-image html-src="#lost" position="0 0 0"></a-image>
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout:2500"
                               position="0 0 -1"
@@ -118,9 +108,6 @@
                 <a-asset-item id="roofObj" src="models/UnsereAssets/roof.obj"></a-asset-item>
                 <a-asset-item id="roofMtl" src="models/UnsereAssets/roof.mtl"></a-asset-item>
 
-                <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/000/zigarette000.obj"></a-asset-item>
-                <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
-
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
                 <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
@@ -133,21 +120,9 @@
                 <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
                 <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
                 <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
-
-                <a-mixin id="kuchenMixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.75 -42; max: 46 0.75 43;"></a-mixin>
-                <a-mixin id="kuchen_area2_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
-                <a-mixin id="kuchen_area3_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
-                <a-mixin id="kuchen_area4_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
-
-                <a-mixin id="zigaretteMixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.3 0.3 0.3" random-position="min: -63 1 -65; max: 57 1 65;"></a-mixin>
-                <a-mixin id="zigarette_area2_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
-                <a-mixin id="zigarette_area3_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
-                <a-mixin id="zigarette_area4_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
-
             </a-assets>
-            
-            <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
 
+            <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
                 <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
@@ -277,7 +252,7 @@
                 <a-box static-body="shape:Primitives" position="0 10 155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
-            
+          
         <a-entity id="cakeGame" visible="false">
                 <!-- entities used for the cake minigame-->
             <a-entity class="Minispiel_Kuchen" id="cake1" mixin="kuchenMixin"></a-entity>
@@ -324,11 +299,7 @@
             <p>Spiel leider verloren!</p>
             <span id="lostCounter"></span>
         </section>
-
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
-        <script src="script/spiel_kuchen.js"></script>
     </body>
-
-    
 </html>
