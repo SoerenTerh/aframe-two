@@ -150,14 +150,41 @@ memoryEntity.appendChild(card19);
 
 
 // memory game
+
+var tries = 0;
+
 $('.memoryCard').on('fusing', function turnCard() {
   var card = '#' + $(this).closest("a-box").attr('id');
-  var image = '#' + $(this).closest("a-box").children("a-image").attr('id');
-  var imageCard = document.querySelector(image);
+  var cardEntity = document.querySelector(card);
+  var imageId = '#' + $(this).closest("a-box").children("a-image").attr('id');
+  var imageEntity = document.querySelector(imageId);
+
+  var cardType = '#' + $(this).closest("a-box").children("a-image").attr('name');
 
   // triggerEvent = "turnCard";
   // document.querySelector(card).emit(triggerEvent);
-  AFRAME.utils.entity.setComponentProperty(imageCard, 'visible', true).delay(2500);
+  AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', true);
+
+  if (tries == 0) {
+    tries = 1;
+    first = cardType;
+    firstImage = imageEntity;
+    console.log("First: " + first);
+  }
+  else if (tries == 1) {
+    tries = 0;
+    second = cardType;
+    secondImage = imageEntity;
+    console.log("Second: " + second);
+
+    if (first == second) {
+      console.log("Hurra!")
+    }
+    else {
+      AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
+      AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
+    }
+  }
 });
 
 var cards = [
@@ -180,32 +207,79 @@ var cards = [
 ]
 
 var images = [
-  '../../assets/icons/html5-logo.png',
-  '../../assets/icons/html5-logo.png',
-  '../../assets/icons/autodesk_logo.png',
-  '../../assets/icons/autodesk_logo.png',
-  '../../assets/icons/github-logo.png',
-  '../../assets/icons/github-logo.png',
-  '../../assets/icons/css3-logo.png',
-  '../../assets/icons/css3-logo.png',
-  '../../assets/icons/atom-logo.png',
-  '../../assets/icons/atom-logo.png',
-  '../../assets/icons/aframe-logo.png',
-  '../../assets/icons/aframe-logo.png',
-  '../../assets/icons/nodejs-logo.png',
-  '../../assets/icons/nodejs-logo.png',
-  '../../assets/icons/jquery-logo.png',
-  '../../assets/icons/jquery-logo.png'
+  {
+		name: "html5",
+    img: '../../assets/icons/html5-logo.png',
+	},
+  {
+		name: "html5",
+    img: '../../assets/icons/html5-logo.png',
+	},
+  {
+		name: "autodesk",
+    img: '../../assets/icons/autodesk_logo.png',
+	},
+  {
+    name: "autodesk",
+    img: '../../assets/icons/autodesk_logo.png',
+  },
+  {
+    name: "github",
+    img: '../../assets/icons/github-logo.png',
+  },
+  {
+    name: "github",
+    img: '../../assets/icons/github-logo.png',
+  },
+  {
+    name: "css3",
+    img: '../../assets/icons/css3-logo.png',
+  },
+  {
+    name: "css3",
+    img: '../../assets/icons/css3-logo.png',
+  },
+  {
+    name: "atom",
+    img: '../../assets/icons/atom-logo.png',
+  },
+  {
+    name: "atom",
+    img: '../../assets/icons/atom-logo.png',
+  },
+  {
+    name: "aframe",
+    img: '../../assets/icons/aframe-logo.png',
+  },
+  {
+    name: "aframe",
+    img: '../../assets/icons/aframe-logo.png',
+  },
+  {
+    name: "nodejs",
+    img: '../../assets/icons/nodejs-logo.png',
+  },
+  {
+    name: "nodejs",
+    img: '../../assets/icons/nodejs-logo.png',
+  },
+  {
+    name: "jquery",
+    img: '../../assets/icons/jquery-logo.png',
+  },
+  {
+    name: "nodejs",
+    img: '../../assets/icons/jquery-logo.png',
+  }
 ]
-
 randomizeImages();
-
 
 for (var i, j = 0; i, j < cards.length; i++, j++) {
   card = cards[i];
   image = images[j];
-  AFRAME.utils.entity.setComponentProperty(card, 'src', image);
+  AFRAME.utils.entity.setComponentProperty(card, 'src', image.img);
   AFRAME.utils.entity.setComponentProperty(card, 'id', 'm-image' + i);
+  AFRAME.utils.entity.setComponentProperty(card, 'name', image.name);
 }
 
 
