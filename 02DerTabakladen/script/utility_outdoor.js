@@ -70,3 +70,4 @@ $('#cardStack').on('click', function beginCake() {
 var memory = document.querySelector('#memoryGame');
 $('#cardStack').on('click', function triggerMemory() {
   AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+});
