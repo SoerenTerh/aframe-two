@@ -124,7 +124,7 @@
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
                 <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
-                <img src="../assets/panorama-3.png" id="sky" alt="sky"> 
+                <img src="../assets/panorama-3.png" id="sky" alt="sky">
 
                 <!--audio-->
                 <!-- All audio files are free for non-commercial use. For detailed licence information see ../assets/sounds/licence.txt -->
@@ -269,6 +269,48 @@
 
                 <!--ground-->
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
+
+                <!-- Info-Boxen -->
+                <a-entity id="textbox" position="0 15 22" visible=false>
+                  <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible=true>
+                  </a-box>
+                  <a-entity id="infobox" visible=true>
+                    <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
+                    </a-entity>
+                    <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                    </a-entity>
+                    <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
+                    </a-entity>
+                    <a-entity id="titleSpecials"
+                              text="color: white; value: Specials; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                              scale="4 4 4" position="0.4 -3.2 .001">
+                    </a-entity>
+                    <a-image id="toggleSpecials" class="clickableTrigger" src="../assets/icons/ic_local_activity_black_24px.svg" scale="1 1 1" position="-4 -2.5 0.001"></a-image>
+                  </a-entity>
+
+                  <a-entity id="specialsbox" visible=false>
+                    <a-entity id="specialsHeadline" text="color: white; value: Here be specials!; width: 2" scale="5 5 5" position="0 3 .001">
+                    </a-entity>
+                    <a-entity id="specialsExplanation" text="color: white; value: - Kerze
+                              - Kuchenspiel
+                              - was uns sonst noch einfaellt;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                    </a-entity>
+                    <a-entity id="titleInfo"
+                              text="color: white; value: Info; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                              scale="4 4 4" position="4.7 -3.2 .001">
+                    </a-entity>
+                    <a-image id="toggleInfo" class="clickableTrigger" src="../assets/icons/ic_info_outline_white_24px.svg" scale="1 1 1" position="0 -2.5 0.001"></a-image>
+                  </a-entity>
+
+                  <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
+                </a-entity>
+
+                <a-entity id="textbox-nav">
+                  <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/ic_info_outline_black_24px.svg" position="0 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
+                </a-entity>
 
                 <!--boundaries-->
                 <a-box static-body="shape:Primitives" position="-165.65 10 0" width="20" height="20" depth="350" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
