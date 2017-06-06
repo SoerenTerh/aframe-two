@@ -25,7 +25,6 @@ AFRAME.utils.entity.setComponentProperty(card1, 'geometry', 'primitive: box');
 AFRAME.utils.entity.setComponentProperty(card1, 'scale', {x: 0.17, y: 0.005, z: 0.1});
 AFRAME.utils.entity.setComponentProperty(card1, 'material', 'color: white');
 
-
 AFRAME.utils.entity.setComponentProperty(card2, 'position', {x: 0, y: 0.505, z: 0});
 AFRAME.utils.entity.setComponentProperty(card2, 'rotation', {x: 0, y: 2, z: 0});
 AFRAME.utils.entity.setComponentProperty(card2, 'geometry', 'primitive: box');
@@ -153,68 +152,62 @@ memoryEntity.appendChild(card19);
 // memory game
 $('.memoryCard').on('fusing', function turnCard() {
   var card = '#' + $(this).closest("a-box").attr('id');
+  var image = '#' + $(this).closest("a-box").children("a-image").attr('id');
+  var imageCard = document.querySelector(image);
 
-  // var animation = document.createElement('a-animation');
-  // document.querySelector(card).appendChild(animation);
-  //
-  // AFRAME.utils.entity.setComponentProperty(animation, 'attribute', 'rotation');
-  // AFRAME.utils.entity.setComponentProperty(animation, 'from', "0 0 0");
-  // AFRAME.utils.entity.setComponentProperty(animation, 'to', "0 180 0");
-  // AFRAME.utils.entity.setComponentProperty(animation, 'begin', 'turnCard');
-  // AFRAME.utils.entity.setComponentProperty(animation, 'duration', '2000');
-  // AFRAME.utils.entity.setComponentProperty(animation, 'fill', 'backwards');
-  // AFRAME.utils.entity.setComponentProperty(animation, 'repeat', '0');
-
-  triggerEvent = "turnCard";
-  document.querySelector(card).emit(triggerEvent);
-  // document.querySelector(card).removeChild(animation);
+  // triggerEvent = "turnCard";
+  // document.querySelector(card).emit(triggerEvent);
+  AFRAME.utils.entity.setComponentProperty(imageCard, 'visible', true).delay(2500);
 });
 
+var cards = [
+  document.querySelector('#mcard1'),
+  document.querySelector('#mcard2'),
+  document.querySelector('#mcard3'),
+  document.querySelector('#mcard4'),
+  document.querySelector('#mcard5'),
+  document.querySelector('#mcard6'),
+  document.querySelector('#mcard7'),
+  document.querySelector('#mcard8'),
+  document.querySelector('#mcard9'),
+  document.querySelector('#mcard10'),
+  document.querySelector('#mcard11'),
+  document.querySelector('#mcard12'),
+  document.querySelector('#mcard13'),
+  document.querySelector('#mcard14'),
+  document.querySelector('#mcard15'),
+  document.querySelector('#mcard16')
+]
 
 var images = [
-  {
-		name: "php",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/php-logo_1.png",
-		id: 1,
-	},
-	{
-		name: "css3",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/css3-logo.png",
-		id: 2
-	},
-	{
-		name: "html5",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/html5-logo.png",
-		id: 3
-	},
-	{
-		name: "jquery",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/jquery-logo.png",
-		id: 4
-	},
-	{
-		name: "javascript",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/js-logo.png",
-		id: 5
-	},
-	{
-		name: "node",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png",
-		id: 6
-	},
-	{
-		name: "photoshop",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/photoshop-logo.png",
-		id: 7
-	},
-	{
-		name: "python",
-		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/python-logo.png",
-		id: 8
-	},
-];
+  '../../assets/icons/html5-logo.png',
+  '../../assets/icons/html5-logo.png',
+  '../../assets/icons/autodesk_logo.png',
+  '../../assets/icons/autodesk_logo.png',
+  '../../assets/icons/github-logo.png',
+  '../../assets/icons/github-logo.png',
+  '../../assets/icons/css3-logo.png',
+  '../../assets/icons/css3-logo.png',
+  '../../assets/icons/atom-logo.png',
+  '../../assets/icons/atom-logo.png',
+  '../../assets/icons/aframe-logo.png',
+  '../../assets/icons/aframe-logo.png',
+  '../../assets/icons/nodejs-logo.png',
+  '../../assets/icons/nodejs-logo.png',
+  '../../assets/icons/jquery-logo.png',
+  '../../assets/icons/jquery-logo.png'
+]
 
 randomizeImages();
+
+
+for (var i, j = 0; i, j < cards.length; i++, j++) {
+  card = cards[i];
+  image = images[j];
+  AFRAME.utils.entity.setComponentProperty(card, 'src', image);
+  AFRAME.utils.entity.setComponentProperty(card, 'id', 'm-image' + i);
+}
+
 
 // output images then hide them
 // var output = "<ol>";
@@ -270,19 +263,19 @@ randomizeImages();
 //   }
 // });
 //
-// // randomize array of images
-// function randomizeImages(){
-//   Array.prototype.randomize = function()
-//   {
-//     var i = this.length, j, temp;
-//     while ( --i )
-//     {
-//       j = Math.floor( Math.random() * (i - 1) );
-//       temp = this[i];
-//       this[i] = this[j];
-//       this[j] = temp;
-//     }
-//   };
-//
-//   images.randomize();
-// }
+// randomize array of images
+function randomizeImages(){
+  Array.prototype.randomize = function()
+  {
+    var i = this.length, j, temp;
+    while ( --i )
+    {
+      j = Math.floor( Math.random() * (i - 1) );
+      temp = this[i];
+      this[i] = this[j];
+      this[j] = temp;
+    }
+  };
+
+  images.randomize();
+}
