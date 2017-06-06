@@ -36,13 +36,37 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
+var textbox = document.querySelector('#textbox')
+var infobox = document.querySelector('#infobox')
+var specialsbox = document.querySelector('#specialsbox')
 
-var memory = document.querySelector('#memoryGame');
-$('#cardStack').on('click', function triggerMemory() {
-  AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+$('#closeTextbox').on('click', function() {
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+});
+
+$('#openTextbox').on('click', function() {
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
+});
+
+$('#toggleSpecials').on('click', function() {
+  var here = $(this);
+  console.log(here)
+  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
+  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
+});
+
+$('#toggleInfo').on('click', function() {
+  var here = $(this);
+  console.log(here);
+  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
+  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
 });
 
 var cakeEntity = document.querySelector('#cakeGame');
 $('#cardStack').on('click', function beginCake() {
   AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
 });
+
+var memory = document.querySelector('#memoryGame');
+$('#cardStack').on('click', function triggerMemory() {
+  AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
