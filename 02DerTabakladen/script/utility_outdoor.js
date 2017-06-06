@@ -61,3 +61,8 @@ $('#toggleInfo').on('click', function() {
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
 });
+
+var cakeEntity = document.querySelector('#cakeGame');
+$('#cardStack').on('click', function beginCake() {
+  AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+});
