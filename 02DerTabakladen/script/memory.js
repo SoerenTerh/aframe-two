@@ -169,3 +169,120 @@ $('.memoryCard').on('fusing', function turnCard() {
   document.querySelector(card).emit(triggerEvent);
   // document.querySelector(card).removeChild(animation);
 });
+
+
+var images = [
+  {
+		name: "php",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/php-logo_1.png",
+		id: 1,
+	},
+	{
+		name: "css3",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/css3-logo.png",
+		id: 2
+	},
+	{
+		name: "html5",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/html5-logo.png",
+		id: 3
+	},
+	{
+		name: "jquery",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/jquery-logo.png",
+		id: 4
+	},
+	{
+		name: "javascript",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/js-logo.png",
+		id: 5
+	},
+	{
+		name: "node",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png",
+		id: 6
+	},
+	{
+		name: "photoshop",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/photoshop-logo.png",
+		id: 7
+	},
+	{
+		name: "python",
+		img: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/python-logo.png",
+		id: 8
+	},
+];
+
+randomizeImages();
+
+// output images then hide them
+var output = "<ol>";
+for (var i = 0; i < 16; i++) {
+  output += "<li>";
+  output += "<img src = '" + images[i] + "'/>";
+  output += "</li>";
+}
+output += "</ol>";
+document.getElementById("container").innerHTML = output;
+$("img").hide();
+
+var guess1 = "";
+var guess2 = "";
+var count = 0;
+
+$("li").click(function() {
+  if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
+
+    // increment guess count, show image, mark it as face up
+    count++;
+    $(this).children("img").show();
+    $(this).children("img").addClass("face-up");
+
+    //guess #1
+    if (count === 1 ) {
+      guess1 = $(this).children("img").attr("src");
+    }
+
+    //guess #2
+    else {
+      guess2 = $(this).children("img").attr("src");
+
+      // since it's the 2nd guess check for match
+      if (guess1 === guess2) {
+        console.log("match");
+        $("li").children("img[src='" + guess2 + "']").addClass("match");
+      }
+
+      // else it's a miss
+      else {
+        console.log("miss");
+        setTimeout(function() {
+          $("img").not(".match").hide();
+          $("img").not(".match").removeClass("face-up");
+        }, 1000);
+      }
+
+      // reset
+      count = 0;
+      setTimeout(function() { console.clear(); }, 60000);
+    }
+  }
+});
+
+// randomize array of images
+function randomizeImages(){
+  Array.prototype.randomize = function()
+  {
+    var i = this.length, j, temp;
+    while ( --i )
+    {
+      j = Math.floor( Math.random() * (i - 1) );
+      temp = this[i];
+      this[i] = this[j];
+      this[j] = temp;
+    }
+  };
+
+  images.randomize();
+}
