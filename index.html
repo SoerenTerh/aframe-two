@@ -1,562 +1,444 @@
 <!DOCTYPE html>
 <html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Brüssel, Heidkamp, Steins, Terhorst">
+        <title>Tabakladen | Teil 2</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Brüssel, Heidkamp, Steins, Terhorst">
-    <title>Tabakladen | Teil 2</title>
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Source+Code+Pro" rel="stylesheet">
 
-    <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Source+Code+Pro" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="website/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="website/bootstrap/sticky-footer.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="website/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="website/bootstrap/sticky-footer.css" rel="stylesheet">
+        <!--icomoon-->
+        <link href="icomoon.css" rel="stylesheet">
 
-    <!--icomoon-->
-    <link href="icomoon.css" rel="stylesheet">
+        <!--fancybox-->
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
 
-    <!--fancybox-->
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+        <!--css-->
+        <link href="website/style/style.css" rel="stylesheet">
 
-    <!--css-->
-    <link href="website/style/style.css" rel="stylesheet">
+    </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <!--                        <span class="sr-only">Toggle navigation</span>-->
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                <a class="navbar-brand" href="index.html">../02 der Tabakladen</a>
+                    <a class="navbar-brand" href="index.html">../02 der Tabakladen</a>
 
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"><a href="index.html"><p class="navText">Projektinformationen</p></a></li>
+                        <li><a href="mitglieder.html"><p class="navText">Mitwirkende</p></a></li>
+                        <li><a href="02DerTabakladen/index.html" class="link"><p class="navText">VR-Szene</p></a></li>
+                        <!-- <li><a href="https://github.com/VeraCologne/aframe" class="link"><span class="icon-github"></span></a></li>-->
+                        <li><a href="https://github.com/VeraCologne/aframe-two" class="link"><span class="icon-github"></span></a></li>
+                    </ul>
+                </div>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
+        </nav>
 
-                    <li class="active">
-                        <a href="index.html">
-                            <p class="navText">Projektinformationen</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mitglieder.html">
-                            <p class="navText">Mitwirkende</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="02DerTabakladen/index.html" class="link">
-                            <p class="navText">VR-Szene</p>
-                        </a>
-                    </li>
-                    <!-- <li><a href="https://github.com/VeraCologne/aframe" class="link"><span class="icon-github"></span></a></li>-->
-                    <li><a href="https://github.com/VeraCologne/aframe-two" class="link"><span class="icon-github"></span></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container-fluid site">
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <div class="container-fluid site">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     <span class="dropdown_text">Semesterauswahl</span>
                     <span class="caret"></span>
                 </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a id="semester_1" href="#">Semester 1</a></li>
-                <li><a id="semester_2" href="#">Semester 2</a></li>
-            </ul>
-        </div>
-
-        <div class="row progressbar_1 hide">
-            <h1>Erstes Semester <a href="https://github.com/VeraCologne/aframe" class="link"><span class="icon-github"></span></a> </h1>
-
-
-            <div class="progress">
-                <div class="one primary-color">
-                    <p>1</p>
-                </div>
-                <div class="two primary-color">
-                    <p>2</p>
-                </div>
-                <div class="three primary-color">
-                    <p>3</p>
-                </div>
-                <div class="four primary-color">
-                    <p>4</p>
-                </div>
-                <div class="five primary-color">
-                    <p>5</p>
-                </div>
-                <div class="six primary-color ">
-                    <p>6</p>
-                </div>
-                <div class="seven primary-color">
-                    <p>7</p>
-                </div>
-                <div class="eight primary-color">
-                    <p>8</p>
-                </div>
-                <div class="nine primary-color">
-                    <p>9</p>
-                </div>
-                <div class="progress-bar semester-1"></div>
-                <div class="future no-color">
-                    <p>?</p>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a id="semester_1" href="#">Semester 1</a></li>
+                    <li><a id="semester_2" href="#">Semester 2</a></li>
+                </ul>
             </div>
-        </div>
 
-        <div class="row progressbar_2">
-            <h1>Zweites Semester</h1>
-            <div class="progress progress__2">
-                <div class="s2_one primary-color">
-                    <p>1</p>
-                </div>
-                <div class="s2_two primary-color">
-                    <p>2</p>
-                </div>
-                <div class="s2_three primary-color">
-                    <p>3</p>
-                </div>
-                <div class="s2_four primary-color">
-                    <p>4</p>
-                </div>
-                <div class="s2_five primary-color">
-                    <p>5</p>
-                </div>
-                <div class="s2_six primary-color current">
-                    <p>6</p>
-                </div>
-                <div class="s2_seven primary-color">
-                    <p>7</p>
-                </div>
-                <div class="s2_eight primary-color">
-                    <p>8</p>
-                </div>
-                <div class="s2_nine primary-color">
-                    <p>9</p>
-                </div>
-                <div class="s2_ten primary-color">
-                    <p>10</p>
-                </div>
-                <div class="s2_eleven primary-color">
-                    <p>11</p>
-                </div>
-                <div class="s2_twelve primary-color">
-                    <p>12</p>
-                </div>
-                <div class="progress-bar semester-2"></div>
-            </div>
-        </div>
+            <div class="row progressbar_1 hide">
+                <h1>Erstes Semester <a href="https://github.com/VeraCologne/aframe" class="link"><span class="icon-github"></span></a> </h1>
 
-        <div class="row content_row">
 
-            <div class="s2_oneInfo hide">
-                <div class="col-sm-4">
-                    <h2>
-                        26.04.2017 - 03.05.2017 <br>- aframe oder Unity - das ist hier die Frage</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class="text">
-                        "Teambesprechung zur Vorgehensweise in diesem Semester"
-                    </p>
-                    <ul>
-                        <li>Besprechung zur Entscheidung, welche Technologie benutzt werden soll</li>
-                        <li>Aufstellen einer Pro- und Contraliste für bzw. gegen aframe und Unity</li>
-                        <li>Informieren über aktuellen Stand von aframe, welches sich über die vorlesungsfreie Zeit weiterentwickelt hat - neuer Stand: v0.5</li>
-                    </ul>
+                <div class="progress">
+                    <div class="one primary-color"><p>1</p></div>
+                    <div class="two primary-color"><p>2</p></div>
+                    <div class="three primary-color"><p>3</p></div>
+                    <div class="four primary-color"><p>4</p></div>
+                    <div class="five primary-color"><p>5</p></div>
+                    <div class="six primary-color "><p>6</p></div>
+                    <div class="seven primary-color"><p>7</p></div>
+                    <div class="eight primary-color"><p>8</p></div>
+                    <div class="nine primary-color"><p>9</p></div>
+                    <div class="progress-bar semester-1"></div>
+                    <div class="future no-color"><p>?</p></div>
                 </div>
             </div>
 
-            <div class="s2_twoInfo hide">
-                <div class="col-sm-4">
-                    <h2>
-                        03.05.2017 - 10.05.2017 <br>- NELS - Never Ending Love Story</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class="text">Der Fokus liegt bei diesem Sprint zunächst auf der Veränderung sehr grundlegender Teile der Szene, welche im letzten Semester erstellt wurde. Dabei soll vor allem die Performanz betrachtet werden, wobei die 3D-Modelle insofern angepasst werden, als dass deren Modellierung überarbeitet werden soll, um entsprechende Dateigrößen zu verringern. Außerdem sollen diese Woche die Figuren etwas gefärbt werden - ihren Accessoires angepasst - um sich untereinander noch etwas besser zu unterscheiden.
-                    </p>
-                    <p class="text">
-                        Auch soll diese Woche genutzt werden, die kommunikative Basis mit Nadine - aus dem Masterstudiengang und von nun an unser SCRUM Master - geschaffen und arrangiert werden.
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="s2_threeInfo hide">
-                <div class="col-sm-4">
-                    <h2>10.05.2017 - 17.05.2017 <br>- Sieben Elefanten</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class="text">"Entwicklung der ersten Interaktionsmöglichkeiten sowie die Verbesserung der Performanz"
-                    </p>
-                    <ul class='list'>
-                        <li>Einsprechen der Texte für das Minispiel und der Interaktion mit der Kerze </li>
-                        <li>Zusammenführung der HTML-Dateien</li>
-                        <li>Entwicklung des Minispiels (Spiellogik, Ein- und Ausblenden des GUIs)</li>
-                        <li>Entwicklung der Interaktion mit der Kerze (Erleuchtung, Überbeleuchtung und Abdunkelung des Raumes) </li>
-                        <li>Verlagerung des Cheats von der Kerze auf den Notizblock</li>
-                    </ul>
-                    <img class="img-responsive content" src="website/img/collage_licht.jpg" alt="Collage Licht">
+            <div class="row progressbar_2">
+                <h1>Zweites Semester</h1>
+                <div class="progress progress__2">
+                    <div class="s2_one primary-color"><p>1</p></div>
+                    <div class="s2_two primary-color"><p>2</p></div>
+                    <div class="s2_three primary-color"><p>3</p></div>
+                    <div class="s2_four primary-color current"><p>4</p></div>
+                    <div class="s2_five primary-color"><p>5</p></div>
+                    <div class="s2_six primary-color "><p>6</p></div>
+                    <div class="s2_seven primary-color"><p>7</p></div>
+                    <div class="s2_eight primary-color"><p>8</p></div>
+                    <div class="s2_nine primary-color"><p>9</p></div>
+                    <div class="s2_ten primary-color"><p>10</p></div>
+                    <div class="s2_eleven primary-color"><p>11</p></div>
+                    <div class="s2_twelve primary-color"><p>12</p></div>
+                    <div class="progress-bar semester-2"></div>
                 </div>
             </div>
 
-            <div class="s2_fourInfo hide">
-                <div class="col-sm-4">
-                    <h2>17.05.2017 - 24.05.2017 <br>- We need Cake!</h2>
+            <div class="row content_row">
+
+                <div class="s2_oneInfo hide">
+                    <div class="col-sm-4"><h2>
+                        26.04.2017 - 03.05.2017 <br>- aframe oder Unity - das ist hier die Frage</h2></div>
+                    <div class="col-sm-8">
+                        <p class="text">
+                            "Teambesprechung zur Vorgehensweise in diesem Semester"
+                        </p>
+                        <ul>
+                            <li>Besprechung zur Entscheidung, welche Technologie benutzt werden soll</li>
+                            <li>Aufstellen einer Pro- und Contraliste für bzw. gegen aframe und Unity</li>
+                            <li>Informieren über aktuellen Stand von aframe, welches sich über die vorlesungsfreie Zeit weiterentwickelt hat - neuer Stand: v0.5</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <p class="text">"Implementation weiterer Interaktionsmöglichkeiten sowie die Weiterführung des Minispiels. Verbesserung der User-Experience und Performanz."
-                    </p>
-                    <ul class='list'>
-                        <li>Implementierung von Text-Tafeln</li>
-                        <li>Finalisierung der Zusammenführung der HTML-Dateien</li>
-                        <li>Testen, ob die Funktionalität der Tür nach der Zusammenführung gegeben ist</li>
-                        <li>Weiterführung der Entwicklung des Minispiels (Randomisierung der Position der Kuchen)</li>
-                        <li>Entwicklung der Interaktion mit dem Brunnen (Regen)</li>
-                        <li>Integration des Voice-Overs bei der Interaktion mit der Kerze</li>
-                        <li>Anschreiben des Schauspielhauses</li>
 
-                    </ul>
+                <div class="s2_twoInfo hide">
+                    <div class="col-sm-4"><h2>
+                        03.05.2017 - 10.05.2017 <br>- NELS - Never Ending Love Story</h2></div>
+                    <div class="col-sm-8">
+                        <p class="text">Der Fokus liegt bei diesem Sprint zunächst auf der Veränderung sehr grundlegender Teile der Szene, welche
+                            im letzten Semester erstellt wurde. Dabei soll vor allem die Performanz betrachtet werden, wobei die 3D-Modelle
+                            insofern angepasst werden, als dass deren Modellierung überarbeitet werden soll, um entsprechende Dateigrößen zu verringern.
+                            Außerdem sollen diese Woche die Figuren etwas gefärbt werden - ihren Accessoires angepasst - um sich untereinander noch etwas
+                            besser zu unterscheiden.
+                        </p>
+                        <p class="text">
+                            Auch soll diese Woche genutzt werden, die kommunikative Basis mit Nadine - aus dem Masterstudiengang und von nun an unser SCRUM Master - geschaffen und arrangiert werden.
 
-
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="s2_fiveInfo hide">
-                <div class="col-sm-4">
-                    <h2>24.05.2017 - 31.05.2017 <br>- Wo ist Tom?</h2>
+                <div class="s2_threeInfo hide">
+                    <div class="col-sm-4"><h2>10.05.2017 - 17.05.2017 <br>- Sieben Elefanten</h2></div>
+                    <div class="col-sm-8">
+                        <p class="text">"Entwicklung der ersten Interaktionsmöglichkeiten sowie die Verbesserung der Performanz"
+                        </p>
+                        <ul class='list'>
+                            <li>Einsprechen der Texte für das Minispiel und der Interakton mit der Kerze </li>
+                            <li>Zusammenführung der HTML-Datein</li>
+                            <li>Entwicklung des Minispiels (Spiellogik, Ein- und Ausblenden des GUIs)</li>
+                            <li>Entwicklung der Interaktion mit der Kerze (Erleuchtung, Überbeleuchtung und Abdunkelung des Raumes) </li>
+                            <li>Verlagerung des Cheats von der Kerze auf den Notizblock</li>
+                        </ul>
+                        <img class="img-responsive content" src="website/img/collage_licht.jpg" alt="Collage Licht">
+
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <p class="text">„Mehr Interaktion durch weitere Spielelemente und Regen“</p>
-                    <ul class="list">
-                        <li>Interaktion mit dem Brunnen soll Regenschauer ermöglichen</li>
-                        <li>zwei weitere Spiele, Memory und eine Personensuche, sollen implementiert werden</li>
-                        <li>Versuch weiterhin bestehende Physik Probleme bei dem Zusammenführen der HTML Dateien in der Gruppe zu besprechen und zu löschen</li>
-                        <li>Final touch an Interaktionselementen von Sprint 4 ( z.B. u.A. Verbesserung des Gebäcks-Spawning für das Suchspiel)</li>
-                    </ul>
+
+                <div class="s2_fourInfo">
+                    <div class="col-sm-4"><h2>17.05.2017 - 24.05.2017 <br>- We need Cake!</h2></div>
+                    <div class="col-sm-8">
+                        <p class="text">"Implementation weiterer Interaktionsmöglichkeiten sowie die Weiterführung des Minispiels. Verbesserung der User-Experience und Performanz."
+                        </p>
+                        <ul class='list'>
+                            <li>Implementierung von Text-Tafeln</li>
+                            <li>Finalisierung der Zusammenführung der HTML-Datein</li>
+                            <li>Testen, ob die Funktionalität der Tür nach der Zusammenführung gegeben ist</li>
+                            <li>Weiterführung der Entwicklung des Minispiels (Randomisierung der Position der Kuchen)</li>
+                            <li>Entwicklung der Interaktion mit dem Brunnen (Regen)</li>
+                            <li>Integration des Voice-Overs bei der Interaktion mit der Kerze</li>
+                            <li>Anschreiben des Schauspielhauses</li>
+
+                        </ul>
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="s2_sixInfo">
-                <div class="col-sm-4">
-                    <h2>31.05.2017 - 14.06.2017<br>- Github Unicorn 2.0</h2>
+                <div class="s2_fiveInfo hide">
+                    <div class="col-sm-4"><h2>24.05.2017 - 31.05.2017 <br>- tbd</h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <p class="text">„Weiterführen der angefangenen Epics aus der vorigen Woche“</p>
-                    <ul class="list">
-                        <li>Weiterführen der Inplimentation von:
-                            <ul class="list">
-                                <li>Memory</li>
-                                <li>Personensuche</li>
-                                <li>Regen</li>
-                            </ul>
-                        </li>
-                        <li>Weiterer Versuch das Physics Problem beim Zusammenführen der HTML-Dateien zu lösen</li>
-                        <li>Vorbereitung der Präsentation</li>
-                    </ul>
 
+                <div class="s2_sixInfo hide">
+                    <div class="col-sm-4"><h2>31.05.2017 - 14.06.2017<br>- tbd</h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="s2_sevenInfo hide">
-                <div class="col-sm-4">
-                    <h2>14.06.2017 - 21.06.2017<br>- tbd </h2>
+                <div class="s2_sevenInfo hide">
+                    <div class="col-sm-4"><h2>14.06.2017 - 21.06.2017<br>- tbd </h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-                <div class="col-sm-8">
 
+
+                <div class="s2_eightInfo hide">
+                    <div class="col-sm-4"><h2>21.06.2017 - 28.06.2017 <br>- tbd </h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-            </div>
 
 
-            <div class="s2_eightInfo hide">
-                <div class="col-sm-4">
-                    <h2>21.06.2017 - 28.06.2017 <br>- tbd </h2>
+                <div class="s2_nineInfo hide">
+                    <div class="col-sm-4"><h2>28.06.2017 - 05.07.2017 <br>- tbd </h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-                <div class="col-sm-8">
 
+                <div class="s2_tenInfo hide">
+                    <div class="col-sm-4"><h2>05.07.2017 - 12.07.2017 <br>- tbd </h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-            </div>
 
+                <div class="s2_elevenInfo hide">
+                    <div class="col-sm-4"><h2>12.07.2017 - 19.07.2017 <br>- tbd </h2></div>
+                    <div class="col-sm-8">
 
-            <div class="s2_nineInfo hide">
-                <div class="col-sm-4">
-                    <h2>28.06.2017 - 05.07.2017 <br>- tbd </h2>
+                    </div>
                 </div>
-                <div class="col-sm-8">
 
+                <div class="s2_twelveInfo hide">
+                    <div class="col-sm-4"><h2>19.07.2017 - 26.07.2017 <br>- tbd </h2></div>
+                    <div class="col-sm-8">
+
+                    </div>
                 </div>
-            </div>
 
-            <div class="s2_tenInfo hide">
-                <div class="col-sm-4">
-                    <h2>05.07.2017 - 12.07.2017 <br>- tbd </h2>
-                </div>
-                <div class="col-sm-8">
-
-                </div>
-            </div>
-
-            <div class="s2_elevenInfo hide">
-                <div class="col-sm-4">
-                    <h2>12.07.2017 - 19.07.2017 <br>- tbd </h2>
-                </div>
-                <div class="col-sm-8">
-
-                </div>
-            </div>
-
-            <div class="s2_twelveInfo hide">
-                <div class="col-sm-4">
-                    <h2>19.07.2017 - 26.07.2017 <br>- tbd </h2>
-                </div>
-                <div class="col-sm-8">
-
-                </div>
-            </div>
-
-            <!--
+                <!--
 Semester 1
 -->
 
-            <div class="oneInfo hide">
-                <div class="col-sm-4">
-                    <h2>
-                        17.11.2016 – 24.11.2016 <br>- Party Parrotting</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>“Das Team hat ein gemeinsames Verständnis der Nutzung aller Tools und das Projekt ist so aufgesetzt, dass mit einer iterativen Entwicklung begonnen werden kann.”</p>
-                    <ul class='list'>
-                        <li>Grundsätzliches Projektmanagement</li>
-                        <li>Recherchen zu A-Frame, Licht, Ton, Kamera, Interaktion und Bewegung</li>
-                        <li>Storyboard erstellen</li>
-                        <li>Github aufsetzen</li>
-                        <li>Google Drive für das Projekt</li>
-                        <li>Evaluierung von Tools zum Einsatz für das Projekt (Modellierung u.ä.)</li>
-                        <li>Exposé reflektieren</li>
-                        <li>Powerpoint-Präsentation für Sprint 1</li>
-                    </ul>
-                    <div class="embed-responsive embed-responsive-16by9 content">
-                        <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1NZigQy5gJGmfRPxZqUnzVJ4Dj-1PvXQzSMEHcU-cxEI/embed?start=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <div class="oneInfo hide">
+                    <div class="col-sm-4"><h2>
+                        17.11.2016 – 24.11.2016 <br>- Party Parrotting</h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>“Das Team hat ein gemeinsames Verständnis der Nutzung aller Tools und das Projekt ist so aufgesetzt, dass mit einer iterativen Entwicklung begonnen werden kann.”</p>
+                        <ul class='list'>
+                            <li>Grundsätzliches Projektmanagement</li>
+                            <li>Recherchen zu A-Frame, Licht, Ton, Kamera, Interaktion und Bewegung</li>
+                            <li>Storyboard erstellen</li>
+                            <li>Github aufsetzen</li>
+                            <li>Google Drive für das Projekt</li>
+                            <li>Evaluierung von Tools zum Einsatz für das Projekt (Modellierung u.ä.)</li>
+                            <li>Exposé reflektieren</li>
+                            <li>Powerpoint-Präsentation für Sprint 1</li>
+                        </ul>
+                        <div class="embed-responsive embed-responsive-16by9 content">
+                            <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/1NZigQy5gJGmfRPxZqUnzVJ4Dj-1PvXQzSMEHcU-cxEI/embed?start=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="twoInfo hide">
-                <div class="col-sm-4">
-                    <h2>24.11.2016 - 01.12.2016 <br>- Deepwater Horizon</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>“Eine simple Szene ist angelegt, in der Funktionen von Kamera, Ton, Animation, Bewegung getestet werden können.”</p>
-                    <ul class='list'>
-                        <li>Testszene</li>
-                        <li>Testmodelle erstellen</li>
-                        <li>Sounds sammeln</li>
-                        <li>Skizze der Szene für grundsätzlichen Aufbau</li>
-                        <li>Offen gebliebene Frage zu Interaktion klären</li>
-                        <li>Funktionen in Testszene testen</li>
-                    </ul>
-                    <img class="img-responsive content" src="website/img/Skizze.jpg" alt="Modelle">
-                </div>
-            </div>
-
-
-            <div class="threeInfo hide">
-                <div class="col-sm-4">
-                    <h2>01.12.2016 - 08.12.2016 <br>- Apple & Curtains</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"3D Modelle liegen vor"</p>
-                    <ul class='list'>
-                        <li>Erste Szene</li>
-                        <li>Modelle für erste Szene erstellen</li>
-                        <li>Github-Page aufsetzen</li>
-                        <li>Problem lösen: animierte Figur als .dae-Modell in Szene einbinden</li>
-                    </ul>
-                    <img class="img-responsive content" src="website/img/sprint03.jpg" alt="Modelle">
-                </div>
-            </div>
-
-            <div class="fourInfo hide">
-                <div class="col-sm-4">
-                    <h2>08.12.2016 - 15.12.2016 <br>- *Home* Run</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"Personen werden animiert und die 'Bühnenwelt' zusammengesetzt"</p>
-                    <ul class='list'>
-                        <li>Modelle vervollständigen</li>
-                        <li>alle Modelle zu einer Szene zusammensetzen</li>
-                        <li>Figur animieren</li>
-                        <li>PowerPoint erstellen</li>
-                        <li>Webseite aktualisieren</li>
-                    </ul>
-                    <div class="embed-responsive embed-responsive-16by9 content">
-                        <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/19GyTY7vWxsYsD1WRefEWTFEbayO7XB3ZILn5WIiCsKU/embed?start=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <div class="twoInfo hide">
+                    <div class="col-sm-4"><h2>24.11.2016 - 01.12.2016 <br>- Deepwater Horizon</h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>“Eine simple Szene ist angelegt, in der Funktionen von Kamera, Ton, Animation, Bewegung getestet werden können.”</p>
+                        <ul class='list'>
+                            <li>Testszene</li>
+                            <li>Testmodelle erstellen</li>
+                            <li>Sounds sammeln</li>
+                            <li>Skizze der Szene für grundsätzlichen Aufbau</li>
+                            <li>Offen gebliebene Frage zu Interaktion klären</li>
+                            <li>Funktionen in Testszene testen</li>
+                        </ul>
+                        <img class="img-responsive content" src="website/img/Skizze.jpg" alt="Modelle">
                     </div>
                 </div>
-            </div>
 
-            <div class="fiveInfo hide">
-                <div class="col-sm-4">
-                    <h2>15.12.2016 - 22.12.2016<br>- Pixar in a Frame </h2>
+
+                <div class="threeInfo hide">
+                    <div class="col-sm-4"><h2>01.12.2016 - 08.12.2016 <br>- Apple & Curtains</h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"3D Modelle liegen vor"</p>
+                        <ul class='list'>
+                            <li>Erste Szene</li>
+                            <li>Modelle für erste Szene erstellen</li>
+                            <li>Github-Page aufsetzen</li>
+                            <li>Problem lösen: animierte Figur als .dae-Modell in Szene einbinden</li>
+                        </ul>
+                        <img class="img-responsive content" src="website/img/sprint03.jpg" alt="Modelle">
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <p class=text>"Integration von Personen und Sound"</p>
-                    <ul class='list'>
-                        <li>Finale Anordnung und Skalierung der Kulisse in a-frame</li>
-                        <li>Einfügen der Geräusche</li>
-                        <li>Einsetzen erster Elemente in zeitlicher Abfolge</li>
-                        <li>Fertigstellen der Animationen</li>
-                    </ul>
-                    <div class="embed-responsive embed-responsive-16by9 content">
-                        <video width="280" controls class="embed-responsive-item">
+
+                <div class="fourInfo hide">
+                    <div class="col-sm-4"><h2>08.12.2016 - 15.12.2016 <br>- *Home* Run</h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Personen werden animiert und die 'Bühnenwelt' zusammengesetzt"</p>
+                        <ul class='list'>
+                            <li>Modelle vervollständigen</li>
+                            <li>alle Modelle zu einer Szene zusammensetzen</li>
+                            <li>Figur animieren</li>
+                            <li>PowerPoint erstellen</li>
+                            <li>Webseite aktualisieren</li>
+                        </ul>
+                        <div class="embed-responsive embed-responsive-16by9 content">
+                            <iframe class="embed-responsive-item" src="https://docs.google.com/presentation/d/19GyTY7vWxsYsD1WRefEWTFEbayO7XB3ZILn5WIiCsKU/embed?start=false" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fiveInfo hide">
+                    <div class="col-sm-4"><h2>15.12.2016 - 22.12.2016<br>- Pixar in a Frame </h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Integration von Personen und Sound"</p>
+                        <ul class='list'>
+                            <li>Finale Anordnung und Skalierung der Kulisse in a-frame</li>
+                            <li>Einfügen der Geräusche</li>
+                            <li>Einsetzen erster Elemente in zeitlicher Abfolge</li>
+                            <li>Fertigstellen der Animationen</li>
+                        </ul>
+                        <div class="embed-responsive embed-responsive-16by9 content">
+                            <video width="280" controls class="embed-responsive-item">
                                 <source src="website/video/LetsMoveIt.mp4" type="video/mp4">
                             </video>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="sixInfo hide">
-                <div class="col-sm-4">
-                    <h2>12.01.2017 - 19.01.2017<br>- Github Unicorn </h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"Fertigstellung des Environments und Umsetzung der neuen Figuren-Idee"</p>
-                    <ul class='list'>
-                        <li> Tonaufnahme klären</li>
-                        <li> Skalierung überprüfen</li>
-                        <li> Einrichten der Läden</li>
-                        <li> Figur-Sockel Lösung umsetzen</li>
-                        <li> Planung der nächsten Wochen</li>
-                        <li> Szenenabfolge austesten </li>
-                        <li> Repository auf PUBLIC stellen </li>
-                        <li> Bäckerei unbegehbar machen</li>
-                        <li> Beschränkung der Szene</li>
-                        <li> Wände undurchgängig machen</li>
-                    </ul>
-                    <div class="embed-responsive embed-responsive-16by9 content">
-                        <video width="280" controls class="embed-responsive-item">
+                <div class="sixInfo hide">
+                    <div class="col-sm-4"><h2>12.01.2017 - 19.01.2017<br>- Github Unicorn </h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Fertigstellung des Environments und Umsetzung der neuen Figuren-Idee"</p>
+                        <ul class='list'>
+                            <li> Tonaufnahme klären</li>
+                            <li> Skalierung überprüfen</li>
+                            <li> Einrichten der Läden</li>
+                            <li> Figur-Sockel Lösung umsetzen</li>
+                            <li> Planung der nächsten Wochen</li>
+                            <li> Szenenabfolge austesten </li>
+                            <li> Repository auf PUBLIC stellen </li>
+                            <li> Bäckerei unbegehbar machen</li>
+                            <li> Beschränkung der Szene</li>
+                            <li> Wände undurchgängig machen</li>
+                        </ul>
+                        <div class="embed-responsive embed-responsive-16by9 content">
+                            <video width="280" controls class="embed-responsive-item">
                                 <source src="website/video/FreeToFall.mp4" type="video/mp4">
                             </video>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="sevenInfo hide">
-                <div class="col-sm-4">
-                    <h2>19.01.2017 - 26.01.2017 <br>- Busy Bee </h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"Finalisierung der Szenenabfolge"</p>
-                    <ul class='list'>
-                        <li> Szenenabfolge </li>
-                        <li> Animationen verbessern </li>
-                        <li> Interaktionsmöglichkeiten klären</li>
-                        <li> Synchonisation der Szenenabfolge in dem Tabakladen und außerhalb</li>
-                        <li> Beschriftung der Läden</li>
-                    </ul>
+                <div class="sevenInfo hide">
+                    <div class="col-sm-4"><h2>19.01.2017 - 26.01.2017 <br>- Busy Bee </h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Finalisierung der Szenenabfolge"</p>
+                        <ul class='list'>
+                            <li> Szenenabfolge </li>
+                            <li> Animationen verbessern </li>
+                            <li> Interaktionsmöglichkeiten klären</li>
+                            <li> Synchonisation der Szenenabfolge in dem Tabakladen und außerhalb</li>
+                            <li> Beschriftung der Läden</li>
+                        </ul>
 
-                    <div class="img-responsive content">
-                        <audio controls>
+                        <div class="img-responsive content">
+                            <audio controls>
                                 <source src="website/sound/TonspurLang.mp3" type="audio/mp3">
                             </audio>
+                        </div>
+                        <img class="img-responsive content" src="website/img/webseiteaudacity.png" alt="audacity">
                     </div>
-                    <img class="img-responsive content" src="website/img/webseiteaudacity.png" alt="audacity">
                 </div>
-            </div>
 
 
-            <div class="eightInfo hide">
-                <div class="col-sm-4">
-                    <h2>26.01.2017 – 02.02.2017 <br>- "Shen Te! Es klopft!" </h2>
+                <div class="eightInfo hide">
+                    <div class="col-sm-4"><h2>26.01.2017 – 02.02.2017 <br>- "Shen Te! Es klopft!"  </h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Integration des Voice-Overs und der Beleuchtung der Szene"</p>
+                        <ul class='list'>
+                            <li> Integration erster Dialoge</li>
+                            <li> Ausleuchtung der Szene</li>
+                        </ul>
+                        <img class="img-responsive content" src="website/img/sky.PNG" alt="Sky">
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <p class=text>"Integration des Voice-Overs und der Beleuchtung der Szene"</p>
-                    <ul class='list'>
-                        <li> Integration erster Dialoge</li>
-                        <li> Ausleuchtung der Szene</li>
-                    </ul>
-                    <img class="img-responsive content" src="website/img/sky.PNG" alt="Sky">
+
+                <!--current-->
+                <div class="nineInfo hide">
+                    <div class="col-sm-4"><h2>02.02.2017 - 09.02.2017 <br>- Final Sparkle  </h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Die letzten Dialoge werden eingebunden und die Szene wird auf restliche Fehler getestet"</p>
+                        <ul class='list'>
+                            <li> Zusammenfassen, welche Funktionen erstellt wurden, jedoch verworfen werden mussten und zukünftige mögliche Schritte festhalten</li>
+                            <li> Restliche Dialoge einbinden</li>
+                            <li> Alle Funktionen testen</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!--current-->
-            <div class="nineInfo hide">
-                <div class="col-sm-4">
-                    <h2>02.02.2017 - 09.02.2017 <br>- Final Sparkle </h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"Die letzten Dialoge werden eingebunden und die Szene wird auf restliche Fehler getestet"</p>
-                    <ul class='list'>
-                        <li> Zusammenfassen, welche Funktionen erstellt wurden, jedoch verworfen werden mussten und zukünftige mögliche Schritte festhalten</li>
-                        <li> Restliche Dialoge einbinden</li>
-                        <li> Alle Funktionen testen</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="futureInfo hide">
-                <div class="col-sm-4">
-                    <h2>Ausblick</h2>
-                </div>
-                <div class="col-sm-8">
-                    <p class=text>"Ideen für den weiteren Projektverlauf"</p>
-                    <ul class='list'>
-                        <li> Umsetzung des restlichen Dialoges </li>
-                        <li> Verknüpfung der Außenszene mit der im Tabakladen, sodasss die Narration auch außerhalb des Ladens vortgeführt werden kann </li>
-                        <li> weitere Interaktionsmöglichketien mit Objekten, die für die Narration nicht relevant sind </li>
-                        <li> Vereinfachung des Narrationseinbindungsprozesses</li>
-                        <li> Einfügen weiterer Geräusche</li>
-                        <li> Fehlerbehebung der Funktion (zzt. auskommentiert), welche die nächste Person o.Ä aufleuchten lässt, die die Szene weiterführt.
-                            <br> Diese ermöglicht dem Nutzer eine bessere Verfolgung des Szenenablaufes sowie die reibungslose Gestaltung dessen.
-                        </li>
-                        <li>Das Laden der Assets beschleunigen.</li>
-                        <li>Den VR-Modus beim Szenenwechsel beibehalten.</li>
+                <div class="futureInfo hide">
+                    <div class="col-sm-4"><h2>Ausblick</h2></div>
+                    <div class="col-sm-8">
+                        <p class=text>"Ideen für den weiteren Projektverlauf"</p>
+                        <ul class='list'>
+                            <li> Umsetzung des restlichen Dialoges </li>
+                            <li> Verknüpfung der Außenszene mit der im Tabakladen, sodasss die Narration auch außerhalb des Ladens vortgeführt werden kann </li>
+                            <li> weitere Interaktionsmöglichketien mit Objekten, die für die Narration nicht relevant sind </li>
+                            <li> Vereinfachung des Narrationseinbindungsprozesses</li>
+                            <li> Einfügen weiterer Geräusche</li>
+                            <li> Fehlerbehebung der Funktion (zzt. auskommentiert), welche die nächste Person o.Ä aufleuchten lässt, die die Szene weiterführt.
+                                <br> Diese ermöglicht dem Nutzer eine bessere Verfolgung des Szenenablaufes sowie die reibungslose Gestaltung dessen.
+                            </li>
+                            <li>Das Laden der Assets beschleunigen.</li>
+                            <li>Den VR-Modus beim Szenenwechsel beibehalten.</li>
 
 
-                    </ul>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer class="footer">
-        <div class="container-fluid grey">
-            <h3>Grundkonzept</h3>
-            <p>Die Szene soll so gestaltet werden, dass der Benutzer zunächst vor dem Tabakladen steht. Der Benutzer sieht die angrenzende Umgebung um sich herum. Da der Bereich auf die Spielstätte beschränkt werden soll, befinden sich weiter weg liegende Bereiche im Dunkeln (Spotlights auf dem Bereich vor dem Tabakladen). Dem Benutzer soll es möglich sein, sich zu bewegen, um sich die direkte, ausgeleuchtete Umgebung anschauen zu können. Die weiteren, nicht ausgeleuchteten Bereiche können nicht betreten werden. Die Szene wird so lange abgespielt, bis eine neue Figur auftritt. Ist dies der Fall, wird die Szene so lange unterbrochen, bis der Benutzer die Tür, durch die die neue Figur auftritt, fixiert. Dies löst das Fortsetzen der Handlung aus. Die Szene soll als Loop gestaltet werden – sie soll wieder von vorne anfangen, wenn sie zu Ende ist, damit der Benutzer die Möglichkeit hat, sich die Umgebung anzuschauen, ohne die Szene selbst zu verpassen.</p>
-        </div>
-        <div class="container-fluid foot">
-            <p class="text-muted pull-right">Copyright © 2017 <a href="index.html">../02 der Tabakladen</a>. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
+        <footer class="footer">
+            <div class="container-fluid grey">
+                <h3>Grundkonzept</h3>
+                <p>Die Szene soll so gestaltet werden, dass der Benutzer zunächst vor dem Tabakladen steht. Der Benutzer sieht die angrenzende Umgebung um sich herum. Da der Bereich auf die Spielstätte beschränkt werden soll, befinden sich weiter weg liegende Bereiche im Dunkeln (Spotlights auf dem Bereich vor dem Tabakladen). Dem Benutzer soll es möglich sein, sich zu bewegen, um sich die direkte, ausgeleuchtete Umgebung anschauen zu können. Die weiteren, nicht ausgeleuchteten Bereiche können nicht betreten werden. Die Szene wird so lange abgespielt, bis eine neue Figur auftritt. Ist dies der Fall, wird die Szene so lange unterbrochen, bis der Benutzer die Tür, durch die die neue Figur auftritt, fixiert. Dies löst das Fortsetzen der Handlung aus. Die Szene soll als Loop gestaltet werden – sie soll wieder von vorne anfangen, wenn sie zu Ende ist, damit der Benutzer die Möglichkeit hat, sich die Umgebung anzuschauen, ohne die Szene selbst zu verpassen.</p>
+            </div>
+            <div class="container-fluid foot">
+                <p class="text-muted pull-right">Copyright © 2017 <a href="index.html">../02 der Tabakladen</a>. Alle Rechte vorbehalten.</p>
+            </div>
+        </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="website/bootstrap/jquery.min.js"><\/script>')
-    </script>
-    <script src="website/bootstrap/bootstrap.min.js"></script>
-    <script src="website/bootstrap/ie10-viewport-bug-workaround.js"></script>
-    <!--fancybox-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="website/bootstrap/jquery.min.js"><\/script>')</script>
+        <script src="website/bootstrap/bootstrap.min.js"></script>
+        <script src="website/bootstrap/ie10-viewport-bug-workaround.js"></script>
+        <!--fancybox-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.js"></script>
 
 
-    <!--JavaScipt-->
-    <script src="website/script/script.js"></script>
-</body>
-
+        <!--JavaScipt-->
+        <script src="website/script/script.js"></script>
+    </body>
 </html>
