@@ -36,9 +36,7 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
-// to do: Kuchen auf Tisch als Faktor zum Auslösen
 var cakeEntity = document.querySelector('#cakeGame');
-$('#brunnen').on('click', function beginCake() {
+$('#cardStack').on('click', function beginCake() {
   AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-  $('#counterKuchen').css('display', 'block');
 });

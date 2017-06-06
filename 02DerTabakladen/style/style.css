@@ -30,31 +30,3 @@
     width: 100%;
     height: 100%;
 }
-
-#counterKuchen {
-    background: white;
-    display: none;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    padding: 0.5rem;
-    font-family: 'VT323', monospace;
-    border-radius: 45px;
-}
-
-#lost {
-    display: none;
-    border-radius: 45px;
-    text-align: center;
-    justify-content: center;
-    background-color: white;
-    width: 100px;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 50%;
-    padding: 1rem;
-    font-family: 'VT323', monospace;
-}
