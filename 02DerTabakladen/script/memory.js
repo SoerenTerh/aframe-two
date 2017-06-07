@@ -176,7 +176,7 @@ $('.memoryCard').on('click', function turnCard() {
       AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
     }, 1200);
   }
-  else if (tries == 1 && cardType != first) {
+  else if (tries == 1 && card != firstCard) {
     tries = 0;
     second = cardType;
     secondImage = imageEntity;
