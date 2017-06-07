@@ -161,13 +161,6 @@ $('.memoryCard').on('click', function turnCard() {
 
   var cardType = '#' + $(this).closest("a-box").children("a-image").attr('name');
 
-  triggerEvent = "turnCard";
-  document.querySelector(card).emit(triggerEvent);
-  setTimeout(function() {
-    AFRAME.utils.entity.setComponentProperty(cardEntity, 'color', 'white')
-    AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
-  }, 1200);
-
   if (tries == 0) {
     tries = 1;
     first = cardType;
@@ -175,14 +168,28 @@ $('.memoryCard').on('click', function turnCard() {
     firstCard = card;
     firstCardEntity = cardEntity;
     console.log("First: " + first);
+
+    triggerEvent = "turnCard";
+    document.querySelector(card).emit(triggerEvent);
+    setTimeout(function() {
+      AFRAME.utils.entity.setComponentProperty(cardEntity, 'color', 'white')
+      AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
+    }, 1200);
   }
-  else if (tries == 1) {
+  else if (tries == 1 && cardType != first) {
     tries = 0;
     second = cardType;
     secondImage = imageEntity;
     secondCard = card;
     secondCardEntity = cardEntity;
     console.log("Second: " + second);
+
+    triggerEvent = "turnCard";
+    document.querySelector(card).emit(triggerEvent);
+    setTimeout(function() {
+      AFRAME.utils.entity.setComponentProperty(cardEntity, 'color', 'white')
+      AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
+    }, 1200);
 
     if (first == second) {
       console.log("Hurra!")
