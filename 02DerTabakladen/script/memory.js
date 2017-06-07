@@ -153,6 +153,8 @@ memoryEntity.appendChild(card19);
 // some of this is adapted from https://codepen.io/natewiley/pen/HBrbL
 
 var tries = 0;
+var count = 0;
+var matches = 0;
 
 $('.memoryCard').on('click', function turnCard() {
   var card = '#' + $(this).closest("a-box").attr('id');
@@ -192,7 +194,10 @@ $('.memoryCard').on('click', function turnCard() {
       AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
     }, 1200);
 
-    if (first != second) {
+    if (first == second) {
+      matches++
+    }
+    else {
       setTimeout(function() {
         triggerEvent = "turnCard";
         document.querySelector(firstCard).emit(triggerEvent);
@@ -206,6 +211,10 @@ $('.memoryCard').on('click', function turnCard() {
         }, 1200);
       }, 3500);
     }
+  }
+  if (matches == 8) {
+    console.log("Hurra!");
+    matches == 0;
   }
 });
 
