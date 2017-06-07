@@ -161,20 +161,27 @@ $('.memoryCard').on('click', function turnCard() {
 
   var cardType = '#' + $(this).closest("a-box").children("a-image").attr('name');
 
-  // triggerEvent = "turnCard";
-  // document.querySelector(card).emit(triggerEvent);
-  AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', true);
+  triggerEvent = "turnCard";
+  document.querySelector(card).emit(triggerEvent);
+  setTimeout(function() {
+    AFRAME.utils.entity.setComponentProperty(cardEntity, 'color', 'white')
+    AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
+  }, 1200);
 
   if (tries == 0) {
     tries = 1;
     first = cardType;
     firstImage = imageEntity;
+    firstCard = card;
+    firstCardEntity = cardEntity;
     console.log("First: " + first);
   }
   else if (tries == 1) {
     tries = 0;
     second = cardType;
     secondImage = imageEntity;
+    secondCard = card;
+    secondCardEntity = cardEntity;
     console.log("Second: " + second);
 
     if (first == second) {
@@ -182,9 +189,17 @@ $('.memoryCard').on('click', function turnCard() {
     }
     else {
       setTimeout(function() {
-        AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
-        AFRAME.utils.entity.setComponentProperty(secondImage, 'visible', false);
-      }, 2000);
+        triggerEvent = "turnCard";
+        document.querySelector(firstCard).emit(triggerEvent);
+        document.querySelector(secondCard).emit(triggerEvent);
+
+        setTimeout(function() {
+          AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
+          AFRAME.utils.entity.setComponentProperty(secondImage, 'visible', false);
+          AFRAME.utils.entity.setComponentProperty(firstCardEntity, 'color', '#eb2348');
+          AFRAME.utils.entity.setComponentProperty(secondCardEntity, 'color', '#eb2348');
+        }, 1200);
+      }, 3500);
     }
   }
 });
