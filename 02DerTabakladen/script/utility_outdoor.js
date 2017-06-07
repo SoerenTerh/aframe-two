@@ -40,10 +40,12 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
 
 $('#brunnen').on('click', function triggerBrunnen (){
 
-//var attr = $('a-scene').attr('rain');
-//if (attr == 0) { //es fängt an zu regnen
+var attr = $('a-scene').attr('rain');
+if (attr) { //es fängt an zu regnen
+$('a-scene').removeAttr('rain');
 
-AFRAME.registerComponent('rain', {
+}
+else{AFRAME.registerComponent('rain', {
   schema: {
     color: {type: 'color', default: '#ddf'},
     count: {type: 'int', default: 50000},
@@ -58,6 +60,7 @@ AFRAME.registerComponent('rain', {
     vector: {type: 'vec3', default: '0, -40.0 0'},
     width: {type: 'number', default: 150.0}
   },
+  
 
   init: function () {
     this.model = null;
@@ -340,9 +343,7 @@ AFRAME.registerComponent('rain', {
 });
 $('a-scene').attr('rain', '');
 	$('a-scene').play;
-//}
-//else{
-//	$('a-scene').removeAttr('rain');
-//}
+	
+}
 
 });
