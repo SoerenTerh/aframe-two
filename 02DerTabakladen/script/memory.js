@@ -150,6 +150,7 @@ memoryEntity.appendChild(card19);
 
 
 // memory game
+// some of this is adapted from https://codepen.io/natewiley/pen/HBrbL
 
 var tries = 0;
 
