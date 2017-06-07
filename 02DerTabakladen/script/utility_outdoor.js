@@ -37,7 +37,7 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
 });
 
 //Regen-Funktion
-
+//component wird registriert
 AFRAME.registerComponent('rain', {
 	  schema: {
 		color: {type: 'color', default: '#ddf'},
@@ -338,11 +338,11 @@ AFRAME.registerComponent('rain', {
 $('#brunnen').on('click', function triggerBrunnen (){
 
 	var attr = $('a-scene').attr('rain');
-	if (attr) { //es fängt an zu regnen
+	if (attr) { //es hört auf zu regnen
 	$('a-scene').removeAttr('rain');
 
 	}
-	else{
+	else{ // es regnet
 	$('a-scene').attr('rain', '');
 		$('a-scene').play;
 	}
