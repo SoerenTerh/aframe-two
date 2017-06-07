@@ -192,10 +192,7 @@ $('.memoryCard').on('click', function turnCard() {
       AFRAME.utils.entity.setComponentProperty(imageEntity, 'visible', 'true');
     }, 1200);
 
-    if (first == second) {
-      console.log("Hurra!")
-    }
-    else {
+    if (first != second) {
       setTimeout(function() {
         triggerEvent = "turnCard";
         document.querySelector(firstCard).emit(triggerEvent);
