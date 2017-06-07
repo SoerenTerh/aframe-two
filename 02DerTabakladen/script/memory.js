@@ -264,12 +264,12 @@ var images = [
     img: '../../assets/icons/css3-logo.png',
   },
   {
-    name: "atom",
-    img: '../../assets/icons/atom-logo.png',
+    name: "slack",
+    img: '../../assets/icons/slack-logo.png',
   },
   {
-    name: "atom",
-    img: '../../assets/icons/atom-logo.png',
+    name: "slack",
+    img: '../../assets/icons/slack-logo.png',
   },
   {
     name: "aframe",
