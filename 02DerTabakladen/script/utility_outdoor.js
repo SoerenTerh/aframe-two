@@ -38,14 +38,7 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
 
 //Regen-Funktion
 
-$('#brunnen').on('click', function triggerBrunnen (){
-
-	var attr = $('a-scene').attr('rain');
-	if (attr) { //es fängt an zu regnen
-	$('a-scene').removeAttr('rain');
-
-	}
-	else{AFRAME.registerComponent('rain', {
+AFRAME.registerComponent('rain', {
 	  schema: {
 		color: {type: 'color', default: '#ddf'},
 		count: {type: 'int', default: 50000},
@@ -341,9 +334,17 @@ $('#brunnen').on('click', function triggerBrunnen (){
 		 
 	  }
 	});
+	
+$('#brunnen').on('click', function triggerBrunnen (){
+
+	var attr = $('a-scene').attr('rain');
+	if (attr) { //es fängt an zu regnen
+	$('a-scene').removeAttr('rain');
+
+	}
+	else{
 	$('a-scene').attr('rain', '');
 		$('a-scene').play;
-		
 	}
 
 });
