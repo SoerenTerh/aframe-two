@@ -153,7 +153,7 @@ memoryEntity.appendChild(card19);
 
 var tries = 0;
 
-$('.memoryCard').on('fusing', function turnCard() {
+$('.memoryCard').on('click', function turnCard() {
   var card = '#' + $(this).closest("a-box").attr('id');
   var cardEntity = document.querySelector(card);
   var imageId = '#' + $(this).closest("a-box").children("a-image").attr('id');
@@ -181,8 +181,10 @@ $('.memoryCard').on('fusing', function turnCard() {
       console.log("Hurra!")
     }
     else {
-      AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
-      AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
+      setTimeout(function() {
+        AFRAME.utils.entity.setComponentProperty(firstImage, 'visible', false);
+        AFRAME.utils.entity.setComponentProperty(secondImage, 'visible', false);
+      }, 2000);
     }
   }
 });
@@ -268,7 +270,7 @@ var images = [
     img: '../../assets/icons/jquery-logo.png',
   },
   {
-    name: "nodejs",
+    name: "jquery",
     img: '../../assets/icons/jquery-logo.png',
   }
 ]
@@ -282,61 +284,6 @@ for (var i, j = 0; i, j < cards.length; i++, j++) {
   AFRAME.utils.entity.setComponentProperty(card, 'name', image.name);
 }
 
-
-// output images then hide them
-// var output = "<ol>";
-// for (var i = 0; i < 16; i++) {
-//   output += "<li>";
-//   output += "<img src = '" + images[i] + "'/>";
-//   output += "</li>";
-// }
-// output += "</ol>";
-// document.getElementById("container").innerHTML = output;
-// $("img").hide();
-//
-// var guess1 = "";
-// var guess2 = "";
-// var count = 0;
-//
-// $("li").click(function() {
-//   if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
-//
-//     // increment guess count, show image, mark it as face up
-//     count++;
-//     $(this).children("img").show();
-//     $(this).children("img").addClass("face-up");
-//
-//     //guess #1
-//     if (count === 1 ) {
-//       guess1 = $(this).children("img").attr("src");
-//     }
-//
-//     //guess #2
-//     else {
-//       guess2 = $(this).children("img").attr("src");
-//
-//       // since it's the 2nd guess check for match
-//       if (guess1 === guess2) {
-//         console.log("match");
-//         $("li").children("img[src='" + guess2 + "']").addClass("match");
-//       }
-//
-//       // else it's a miss
-//       else {
-//         console.log("miss");
-//         setTimeout(function() {
-//           $("img").not(".match").hide();
-//           $("img").not(".match").removeClass("face-up");
-//         }, 1000);
-//       }
-//
-//       // reset
-//       count = 0;
-//       setTimeout(function() { console.clear(); }, 60000);
-//     }
-//   }
-// });
-//
 // randomize array of images
 function randomizeImages(){
   Array.prototype.randomize = function()
