@@ -36,6 +36,7 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
+<<<<<<< HEAD
 //Regen-Funktion
 //component wird registriert
 AFRAME.registerComponent('rain', {
@@ -347,4 +348,35 @@ $('#brunnen').on('click', function triggerBrunnen (){
 		$('a-scene').play;
 	}
 
+=======
+var textbox = document.querySelector('#textbox')
+var infobox = document.querySelector('#infobox')
+var specialsbox = document.querySelector('#specialsbox')
+
+$('#closeTextbox').on('click', function() {
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+});
+
+$('#openTextbox').on('click', function() {
+  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
+});
+
+$('#toggleSpecials').on('click', function() {
+  var here = $(this);
+  console.log(here)
+  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
+  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
+});
+
+$('#toggleInfo').on('click', function() {
+  var here = $(this);
+  console.log(here);
+  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
+  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
+});
+
+var cakeEntity = document.querySelector('#cakeGame');
+$('#cardStack').on('click', function beginCake() {
+  AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+>>>>>>> refs/remotes/origin/develop
 });

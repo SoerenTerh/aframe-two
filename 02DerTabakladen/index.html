@@ -17,10 +17,18 @@
         <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
         <!-- a-frame event set component-->
         <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
+        <script src="script/workingAFrame_0.5.0/aframe-html-source.js"></script>
+
+        <script src="script/downloads/aframe-entity-generator-components.min.js"></script>
+        <script src="script/downloads/EDITED_aframe-randomizer-components.js"></script>
+
 
 <!--        <script src="script/entity.js"></script>-->
         <link href="style/style.css" rel="stylesheet">
     </head>
+
+    
+
     <body>
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
@@ -32,6 +40,8 @@
                           universal-controls
                           kinematic-body
                           position="0 1 16">
+                    <a-image html-src="#counterKuchen" position="0 5.5 5"></a-image>
+                    <a-image html-src="#lost" position="0 0 0"></a-image>
                     <a-entity id="cursor"
                               cursor="fuse: true; fuseTimeout:2500"
                               position="0 0 -1"
@@ -108,10 +118,13 @@
                 <a-asset-item id="roofObj" src="models/UnsereAssets/roof.obj"></a-asset-item>
                 <a-asset-item id="roofMtl" src="models/UnsereAssets/roof.mtl"></a-asset-item>
 
+                <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/000/zigarette000.obj"></a-asset-item>
+                <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
+
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
                 <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
-                <img src="../assets/panorama-3.png" id="sky" alt="sky"> 
+                <img src="../assets/panorama-3.png" id="sky" alt="sky">
 
                 <!--audio-->
                 <!-- All audio files are free for non-commercial use. For detailed licence information see ../assets/sounds/licence.txt -->
@@ -120,9 +133,21 @@
                 <audio id="snore_girl" src="../assets/sounds/snore_girl.mp3" preload="auto"></audio>
                 <audio id="snore" src="../assets/sounds/snore.mp3" preload="auto"></audio>
                 <audio id="squeeky_door" src="../assets/sounds/squeeky_door.mp3" preload="auto"></audio>
-            </a-assets>
 
+                <a-mixin id="kuchenMixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.75 -42; max: 46 0.75 43;"></a-mixin>
+                <a-mixin id="kuchen_area2_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
+                <a-mixin id="kuchen_area3_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
+                <a-mixin id="kuchen_area4_Mixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
+
+                <a-mixin id="zigaretteMixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.3 0.3 0.3" random-position="min: -63 1 -65; max: 57 1 65;"></a-mixin>
+                <a-mixin id="zigarette_area2_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
+                <a-mixin id="zigarette_area3_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
+                <a-mixin id="zigarette_area4_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
+
+            </a-assets>
+            
             <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
+
                 <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
@@ -249,6 +274,48 @@
                 <!--ground-->
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 
+                <!-- Info-Boxen -->
+                <a-entity id="textbox" position="0 15 22" visible=false>
+                  <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible=true>
+                  </a-box>
+                  <a-entity id="infobox" visible=true>
+                    <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
+                    </a-entity>
+                    <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                    </a-entity>
+                    <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
+                    </a-entity>
+                    <a-entity id="titleSpecials"
+                              text="color: white; value: Specials; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                              scale="4 4 4" position="0.4 -3.2 .001">
+                    </a-entity>
+                    <a-image id="toggleSpecials" class="clickableTrigger" src="../assets/icons/ic_local_activity_black_24px.svg" scale="1 1 1" position="-4 -2.5 0.001"></a-image>
+                  </a-entity>
+
+                  <a-entity id="specialsbox" visible=false>
+                    <a-entity id="specialsHeadline" text="color: white; value: Here be specials!; width: 2" scale="5 5 5" position="0 3 .001">
+                    </a-entity>
+                    <a-entity id="specialsExplanation" text="color: white; value: - Kerze
+                              - Kuchenspiel
+                              - was uns sonst noch einfaellt;
+                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                    </a-entity>
+                    <a-entity id="titleInfo"
+                              text="color: white; value: Info; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                              scale="4 4 4" position="4.7 -3.2 .001">
+                    </a-entity>
+                    <a-image id="toggleInfo" class="clickableTrigger" src="../assets/icons/ic_info_outline_white_24px.svg" scale="1 1 1" position="0 -2.5 0.001"></a-image>
+                  </a-entity>
+
+                  <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
+                </a-entity>
+
+                <a-entity id="textbox-nav">
+                  <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/ic_info_outline_black_24px.svg" position="0 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
+                </a-entity>
+
                 <!--boundaries-->
                 <a-box static-body="shape:Primitives" position="-165.65 10 0" width="20" height="20" depth="350" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 <a-box static-body="shape:Primitives" position="165.65 10 0" width="20" height="20" depth="350" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
@@ -256,8 +323,58 @@
                 <a-box static-body="shape:Primitives" position="0 10 155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
+            
+        <a-entity id="cakeGame" visible="false">
+                <!-- entities used for the cake minigame-->
+            <a-entity class="Minispiel_Kuchen" id="cake1" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake2" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake3" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake4" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake5" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake6" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake7" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake8" mixin="kuchenMixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake9" mixin="kuchenMixin"></a-entity>
+
+            <a-entity class="Minispiel_Kuchen" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
+
+            <a-entity class="Minispiel_Kuchen" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
+
+            <a-entity class="Minispiel_Kuchen" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
+            <a-entity class="Minispiel_Kuchen" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
+
+            <a-entity class="Minispiel_Zigarette" id="cigarette1" mixin="zigaretteMixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette" id="cigarette2" mixin="zigaretteMixin"></a-entity>
+
+            <a-entity class="Minispiel_Zigarette" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
+
+            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area3_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area3_Mixin"></a-entity>
+
+            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
+            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area4_Mixin"></a-entity>
+
+            <section id="counterKuchen">
+                <p>Kuchen gesammelt:<span id="counter"></span></p>
+            </section>
+
+        </a-entity>
         </a-scene>
+
+        
+
+        <section id="lost">
+            <p>Spiel leider verloren!</p>
+            <span id="lostCounter"></span>
+        </section>
+
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
+        <script src="script/spiel_kuchen.js"></script>
     </body>
+
+    
 </html>
