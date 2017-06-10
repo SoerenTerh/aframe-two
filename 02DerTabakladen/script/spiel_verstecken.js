@@ -3,9 +3,11 @@ var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 35.5, 71, 71, 35, 13.5, 
 var personLeft = 6;
 var personFound = 0;
 
-if($("#HideAndSeek").attr('visible')){
+//function for activation through item on the table
+/*$('TABLEITEM').on('click', function(el){
     $('#counterPerson').css("display", "initial");
-}
+    $("#HideAndSeek").attr('visible', 'true');
+});*/
 
 updateCounterPerson();
 

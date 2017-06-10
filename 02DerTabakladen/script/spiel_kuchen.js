@@ -2,9 +2,11 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
-if($("#cakeGame").attr('visible')){
-    $('#counterKuchen').css("display", "initial");
-}
+//function for activation through item on the table
+/*$('TABLEITEM').on('click', function(el){
+    $('#counterPerson').css("display", "initial");
+    $("#HideAndSeek").attr('visible', 'true');
+});*/
 
 $('.Minispiel_Kuchen').on('click', function(el){
     game(el);
