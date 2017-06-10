@@ -36,9 +36,9 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
-var textbox = document.querySelector('#textbox')
-var infobox = document.querySelector('#infobox')
-var specialsbox = document.querySelector('#specialsbox')
+var textbox = document.querySelector('#textbox');
+var infobox = document.querySelector('#infobox');
+var specialsbox = document.querySelector('#specialsbox');
 
 $('#closeTextbox').on('click', function() {
   AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
@@ -49,15 +49,11 @@ $('#openTextbox').on('click', function() {
 });
 
 $('#toggleSpecials').on('click', function() {
-  var here = $(this);
-  console.log(here)
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
 });
 
 $('#toggleInfo').on('click', function() {
-  var here = $(this);
-  console.log(here);
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
 });
