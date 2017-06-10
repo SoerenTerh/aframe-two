@@ -30,7 +30,7 @@ function game(el) {
             gameLost();
         }
     }
-};
+}
 
 /* generate entity to display counter */
 
