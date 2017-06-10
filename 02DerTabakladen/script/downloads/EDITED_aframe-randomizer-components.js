@@ -110,7 +110,7 @@
 				}
 			}
 
-			if(indexCigarette == 7){
+			if(indexCigarette == 8){
 				for(var i = 0; i<indexCigarette-1; i++){
 					if((this.el.getAttribute('position').x - zigarette[i].getAttribute('position').x) <= 75){
 						var newX = Math.random() * (max.x - min.x) + min.x;
