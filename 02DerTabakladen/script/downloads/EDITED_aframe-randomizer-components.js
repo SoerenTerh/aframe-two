@@ -161,9 +161,9 @@
 	    var max = data.max;
 	    var min = data.min;
 	    this.el.setAttribute('rotation', {
-	      x: Math.random() * max.x + min.x,
+	      x: 0,
 	      y: Math.random() * max.y + min.y,
-	      z: Math.random() * max.z + min.z
+	      z: 0
 	    });
 	  }
 	});
