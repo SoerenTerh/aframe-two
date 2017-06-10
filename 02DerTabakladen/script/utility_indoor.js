@@ -25,14 +25,14 @@ $('#triggerHinten').on('click', function triggerHinten() {
 });
 
 var candle = document.querySelector('#kerzeFlamme');
-var room = document.querySelector('#ambLight')
+var room = document.querySelector('#ambLight');
 $('#kerze').on('click', function triggerKerze() {
   var stateCandle = AFRAME.utils.entity.getComponentProperty(candle, 'light.intensity');
   var stateRoom = AFRAME.utils.entity.getComponentProperty(room, 'light.intensity');
 
   switch (stateCandle) {
     case 0:
-      if (stateRoom == 1) { //Raum wird überblendet
+      if (stateRoom === 1) { //Raum wird überblendet
         AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 1);
         AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 2);
 			  var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-an.mp3');
