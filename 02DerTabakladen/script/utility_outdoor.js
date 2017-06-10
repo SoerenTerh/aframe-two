@@ -36,9 +36,9 @@ $('#triggerTeppichladen').on('click', function triggerTeppichladen() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 0, z: 0});
 });
 
-var textbox = document.querySelector('#textbox')
-var infobox = document.querySelector('#infobox')
-var specialsbox = document.querySelector('#specialsbox')
+var textbox = document.querySelector('#textbox');
+var infobox = document.querySelector('#infobox');
+var specialsbox = document.querySelector('#specialsbox');
 
 $('#closeTextbox').on('click', function() {
   AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
@@ -50,7 +50,7 @@ $('#openTextbox').on('click', function() {
 
 $('#toggleSpecials').on('click', function() {
   var here = $(this);
-  console.log(here)
+  console.log(here);
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
 });
@@ -166,17 +166,18 @@ AFRAME.registerComponent('rain', {
 			timeOffsetArray[i] = duration * Math.random();
 		  }
 
+            var y;
 		  var minY = positionArray[1];
 		  var maxY = positionArray[1];
-		  for (var i = 1, il = positionArray.length / 3; i < il; i++) {
-			var y = positionArray[i * 3 + 1];
+		  for (i = 1, il = positionArray.length / 3; i < il; i++) {
+			y = positionArray[i * 3 + 1];
 			minY = Math.min(y, minY);
 			maxY = Math.max(y, maxY);
 		  }
 
 		  var baseOpacity = 0.0;
-		  for (var i = 0, il = positionArray.length / 3; i < il; i++) {
-			var y = positionArray[i * 3 + 1];
+		  for (0, il = positionArray.length / 3; i < il; i++) {
+			y = positionArray[i * 3 + 1];
 			opacityArray[i] = baseOpacity +
 			  (maxY - y) / (maxY - minY) * (1.0 - baseOpacity);
 		  }
@@ -221,7 +222,7 @@ AFRAME.registerComponent('rain', {
 		  var countPerGroup = 1;
 		  var dropDuration = getDropDuration();
 		  var duration = getSplashDuration();
-		  for (var i = 0; i < count; i++) {
+		  for (i = 0; i < count; i++) {
 			if (i % countPerGroup === 0) {
 			  translateX = dropDuration * vector.x + (Math.random() - 0.5) * width;
 			  translateZ = dropDuration * vector.z + (Math.random() - 0.5) * width;
@@ -375,6 +376,6 @@ $('#brunnen').on('click', function triggerBrunnen (){
 	}
 	else{ // es regnet
 	$('a-scene').attr('rain', '');
-		$('a-scene').play;
+		$('a-scene').play();
 	}
 	});
