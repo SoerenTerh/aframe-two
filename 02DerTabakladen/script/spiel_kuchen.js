@@ -2,6 +2,10 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
+if($("#cakeGame").attr('visible')){
+    $('#counterKuchen').css("display", "initial");
+}
+
 $('.Minispiel_Kuchen').on('click', function(el){
     game(el);
     var cakeNR = "#" + el.currentTarget.id;

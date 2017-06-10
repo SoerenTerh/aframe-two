@@ -74,6 +74,19 @@
 
             <a-assets timeout="5000">
                 <!--assets-->
+                <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
+                <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>
+                <a-asset-item id="SockelMtl" src="models/UnsereAssets/000/sockel000.mtl"></a-asset-item>
+                <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>
+                <a-asset-item id="MonokelObj" src="models/UnsereAssets/000/monokel000.obj"></a-asset-item>
+                <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>
+                <a-asset-item id="HausschuheObj" src="models/UnsereAssets/000/hausschuhe000.obj"></a-asset-item>
+                <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/000/kappe_gedreht000.obj"></a-asset-item>
+                <a-asset-item id="BartObj" src="models/UnsereAssets/000/bart000.obj"></a-asset-item>
+                <a-asset-item id="KochlöffelObj" src="models/UnsereAssets/000/kochloeffel000.obj"></a-asset-item>
+
+
+
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
 
@@ -82,8 +95,6 @@
 
                 <a-asset-item id="brunnenObj" src="models/UnsereAssets/brunnen.obj"></a-asset-item>
                 <a-asset-item id="brunnenMtl" src="models/UnsereAssets/brunnen.mtl"></a-asset-item>
-
-                <a-asset-item id="figurObj" src="models/UnsereAssets/figurNeu2017.obj"></a-asset-item>
 
                 <a-asset-item id="teppichObj" src="models/UnsereAssets/teppich.obj"></a-asset-item>
                 <a-asset-item id="teppichMtl" src="models/UnsereAssets/teppich.mtl"></a-asset-item>
@@ -375,6 +386,50 @@
             </section>
 
         </a-entity>
+
+        <a-entity id="HideAndSeek" visible="true">
+            <a-entity id="containerJunge" class="clickable HaSperson" scale="0.425 0.425 0.425" random-position-person random-rotation>
+                <a-entity id="Junge" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
+                <a-entity id="accJunge" obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+            </a-entity>
+            <a-entity id="containerFrau" class="clickable HaSperson" random-position-person rotation="0 0 0" scale="0.45 0.45 0.45">
+                <a-entity id="Frau" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9" rotation="0 0 0" visible="true" > </a-entity>
+                <a-entity id="accFrau" obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0">
+                </a-entity>
+                <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+            </a-entity>
+
+            <a-entity id="containerGroßvater" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                <a-entity id="Großvater" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0"></a-entity>
+                <a-entity id="accGroßvater" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0"></a-entity>
+                <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+            </a-entity>
+
+            <a-entity id="containerShuiTa" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                <a-entity id="ShuiTa" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5" material="color:#CACACA" rotation="0 0 0"></a-entity>
+                <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+            </a-entity>
+
+            <a-entity id="containerNeffe" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                <a-entity id="Neffe" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0"></a-entity>
+                <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49" scale="1 1 1" rotation="-10.36 0 0"></a-entity>
+                <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+            </a-entity>
+
+            <a-entity id="containerSchwaegerin" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                <a-entity id="Schwaegerin" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0"></a-entity>
+                <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0"></a-entity>
+                <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0"></a-entity>
+                <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0"></a-entity>
+            </a-entity>
+
+            <section id="counterPerson">
+                <p>Personen gefunden: <span id="counterPersonFound"></span></p>
+                <p>Übrig: <span id="counterPersonLeft"></span></p>
+            </section>
+        </a-entity>
         </a-scene>
 
         
@@ -384,9 +439,14 @@
             <span id="lostCounter"></span>
         </section>
 
+        <section id="HaSwon">
+            <p>Herzlichen Glückwunsch! Du hast alle Personen gefunden!</p>
+        </section>
+
         <script src="script/utility_outdoor.js"></script>
         <script src="script/scriptOutside.js"></script>
         <script src="script/spiel_kuchen.js"></script>
+        <script src="script/spiel_verstecken.js"></script>
     </body>
 
     
