@@ -2,6 +2,12 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
+//function for activation through item on the table
+/*$('TABLEITEM').on('click', function(el){
+    $('#counterPerson').css("display", "initial");
+    $("#HideAndSeek").attr('visible', 'true');
+});*/
+
 $('.Minispiel_Kuchen').on('click', function(el){
     game(el);
     var cakeNR = "#" + el.currentTarget.id;
@@ -13,36 +19,22 @@ $('.Minispiel_Zigarette').on('click', function(el){
 });
 
 function game(el) {
-    var sessionStorage = readSessionStorage(skey);
     var element = el;
 
     if(element.currentTarget.classList.contains('Minispiel_Kuchen')){
         counter++;
         updateCounter();
-        setSessionStorage(skey, counter);
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
             gameLost();
         }
     }
-};
+}
 
 /* generate entity to display counter */
 
 $('#counterKuchen #counter').text(counter);
-
-/* read sessionstorage */
-function readSessionStorage(key) {
-    if(!sessionStorage.getItem(key)){
-        return false;
-    }
-    else {return true};
-}
-/* set sessionstorage */
-function setSessionStorage(key, value) {
-    sessionStorage.setItem(key, value);
-}
 
 /* update counter */
 function updateCounter() {
@@ -55,5 +47,5 @@ function gameLost() {
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
-    setTimeout(function(){ $('#lost').fadeOut(1500) }, 2000);
+    setTimeout(function(){ $('#lost').fadeOut(1500); }, 2000);
 }

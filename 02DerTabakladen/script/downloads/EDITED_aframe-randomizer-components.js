@@ -97,7 +97,7 @@
 			var kuchen = $('.Minispiel_Kuchen');
 			var zigarette = $('.Minispiel_Zigarette');
 
-			if(indexCake == 15){
+			if(indexCake == 21){
 				for(var i = 0; i<indexCake-1; i++){
 					if((this.el.getAttribute('position').x - kuchen[i].getAttribute('position').x) <= 75){
 						var newX = Math.random() * (max.x - min.x) + min.x;
@@ -110,7 +110,7 @@
 				}
 			}
 
-			if(indexCigarette == 7){
+			if(indexCigarette == 8){
 				for(var i = 0; i<indexCigarette-1; i++){
 					if((this.el.getAttribute('position').x - zigarette[i].getAttribute('position').x) <= 75){
 						var newX = Math.random() * (max.x - min.x) + min.x;
@@ -161,9 +161,9 @@
 	    var max = data.max;
 	    var min = data.min;
 	    this.el.setAttribute('rotation', {
-	      x: Math.random() * max.x + min.x,
+	      x: 0,
 	      y: Math.random() * max.y + min.y,
-	      z: Math.random() * max.z + min.z
+	      z: 0
 	    });
 	  }
 	});
