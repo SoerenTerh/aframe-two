@@ -35,7 +35,7 @@
         </div>
         <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all" stats>
             <!--camera-->
-            <a-entity  id="camera" position="0 5.8 0">
+            <a-entity  id="camera" position="3 5.8 0">
                 <a-entity camera
                           universal-controls
                           kinematic-body
@@ -153,7 +153,11 @@
                 </a-box>
 
                 <!-- Brunnen -->
-                <a-entity static-body="shape:box" id="brunnen" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" ></a-entity>
+                <a-entity class="clickable"
+						  static-body="shape:box" 
+						  obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible=""
+						  id="brunnen" >
+				</a-entity>
 
                 <a-box id="triggerTabakladenDefault" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 40">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
