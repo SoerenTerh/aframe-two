@@ -25,18 +25,17 @@ $('#triggerHinten').on('click', function triggerHinten() {
 });
 
 var candle = document.querySelector('#kerzeFlamme');
-var room = document.querySelector('#ambLight');
+var room = document.querySelector('#ambLight')
 $('#kerze').on('click', function triggerKerze() {
   var stateCandle = AFRAME.utils.entity.getComponentProperty(candle, 'light.intensity');
   var stateRoom = AFRAME.utils.entity.getComponentProperty(room, 'light.intensity');
 
-    var audio;
   switch (stateCandle) {
     case 0:
       if (stateRoom == 1) { //Raum wird überblendet
         AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 1);
         AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 2);
-			  audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-an.mp3');
+			  var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-an.mp3');
 				audio.play();
       }
       else { //Licht ist aus, wird angemacht
@@ -51,7 +50,7 @@ $('#kerze').on('click', function triggerKerze() {
     case 0.75: // Kerze ist an, Licht wird aus gemacht
       AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0);
       AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 0.2);
-	    audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.mp3');
+	    var audio = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.mp3');
 			audio.play();
       break;
     default:
