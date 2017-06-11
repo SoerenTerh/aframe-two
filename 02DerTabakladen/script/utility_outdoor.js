@@ -176,7 +176,7 @@ AFRAME.registerComponent('rain', {
 		  }
 
 		  var baseOpacity = 0.0;
-		  for (0, il = positionArray.length / 3; i < il; i++) {
+		   for ( i = 0, il = positionArray.length / 3; i < il; i++) {
 			y = positionArray[i * 3 + 1];
 			opacityArray[i] = baseOpacity +
 			  (maxY - y) / (maxY - minY) * (1.0 - baseOpacity);
@@ -376,6 +376,6 @@ $('#brunnen').on('click', function triggerBrunnen (){
 	}
 	else{ // es regnet
 	$('a-scene').attr('rain', '');
-		$('a-scene').play();
+		$('a-scene').play;
 	}
 	});
