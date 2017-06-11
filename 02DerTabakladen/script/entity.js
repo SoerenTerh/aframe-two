@@ -363,3 +363,28 @@ AFRAME.registerComponent('rain', {
 	  }
 	});
 	
+	
+	//verstecken
+	
+	AFRAME.registerComponent('random-position-person', {
+	  schema: {
+	    min: {default: {x: -10, y: -10, z: -10}, type: 'vec3'},
+	    max: {default: {x: 10, y: 10, z: 10}, type: 'vec3'}
+	  },
+
+      
+	  update: function () {
+	    var data = this.data;
+
+        var index = Math.floor(Math.random() * xPos.length);
+        
+        this.el.setAttribute('position', {
+	      x: xPos[index],
+	      y: 1,
+	      z: yPos[index]
+	    });
+
+        xPos.splice(index, 1);
+        yPos.splice(index, 1);
+		}
+	});
