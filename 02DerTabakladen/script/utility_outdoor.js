@@ -49,11 +49,15 @@ $('#openTextbox').on('click', function() {
 });
 
 $('#toggleSpecials').on('click', function() {
+  var here = $(this);
+  console.log(here);
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
 });
 
 $('#toggleInfo').on('click', function() {
+  var here = $(this);
+  console.log(here);
   AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
   AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
 });
@@ -67,3 +71,17 @@ var memory = document.querySelector('#memoryGame');
 $('#cardStack').on('click', function triggerMemory() {
   AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
 });
+
+
+$('#brunnen').on('click', function triggerBrunnen (){
+
+	var attr = $('a-scene').attr('rain');
+	if (attr) { //es hört auf zu regnen
+	$('a-scene').removeAttr('rain');
+
+	}
+	else{ // es regnet
+	$('a-scene').attr('rain', '');
+		$('a-scene').play;
+	}
+	});
