@@ -374,8 +374,8 @@ $('#brunnen').on('click', function triggerBrunnen (){
 	$('a-scene').removeAttr('rain');
 
 	}
-	else{ // es regnet
-	$('a-scene').attr('rain', '');
-		$('a-scene').play();
-	}
-	});
+    else{ // es regnet
+        $('a-scene').attr('rain', '');
+        $('a-scene').play;
+    }
+});
