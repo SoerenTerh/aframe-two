@@ -89,33 +89,33 @@ var persons = ["#Frau",
                /*,"#Hausbesitzerin"*/];
 
 
-var personColors = ["#4D4D4D",
-                    "#A6A6A6",
-                    "#404040",
+var personColors = ["#EBD3B9",/*Frau ja*/
+                    "#C5E2E4", /*Neffe ja */
+                    "#FFD9D9",/*Mann ja*/
 
-                    "#737373",
+                    "#FFE0A8", /*Schwaegerin*/
                     /*"#595959",*/
 
-                    "#8C8C8C",
-                    "#D9D9D9",
+                    "#B99C79",/*Grossvater ja */
+                    "#D2E6C1",/*Junge ja*/
 
-                    "#BFBFBF",
+                    "#E08989",/*Nichte ja*/
 
-                    "#262626",
-                    "#CCCCCC",
-                    "#595959"
+                    "#CACACA", /*Shui Ta ja */
+                    "#EDAE81",/*Schreiner ja*/
+                    "#CDCCF7"/*Polizist*/
                     /*,"#FFF"*/];
 
 //ersteSeite
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
-    two = ["#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
+    two = ["#kerzeFlamme", "#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
     twoTalk2 = ["#Frau"], //Frau lacht
-    three = ["#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
+    three = ["#kerzeFlamme", "#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
     fourTalk = ["#ShuiTa", "#Frau"],
     fourTalk2 = ["#ShuiTa"],
-    five = ["#sockelNeffe", "#containerNeffe",
+    five = ["#kerzeFlamme", "#sockelNeffe", "#containerNeffe",
             "#sockelMann", "#containerMann",
             '#sockelSchwaegerin', '#containerSchwaegerin',
             "#sockelGroßvater", "#containerGroßvater",
@@ -451,7 +451,7 @@ function playableFound(currentTarget) {
         }
 
         ////hint at next onPlayFusing()
-        //        timeoutId = setTimeout(function showHint() {  
+        //        timeoutId = setTimeout(function showHint() {
         //            for (m = 0; m < window[at].length; m++) {
         //                fireAt = window[at][m];
         //                if (fireAt.search("container") !== -1) {

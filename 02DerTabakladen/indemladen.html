@@ -18,13 +18,16 @@
       <script src="script/workingAFrame_0.5.0/aframe-extras.min.js"></script>
       <!-- a-frame event set component-->
       <script src="script/workingAFrame_0.5.0/aframe-event-set-component.min.js"></script>
+      <!-- aframe-randomizer-components-->
+      <script src="script/workingAFrame_0.5.0/aframe-randomizer-components.min.js"></script>
+
 
     <script src="script/entity.js"></script>
     <link href="style/style.css" rel="stylesheet">
   </head>
   <body>
     <div id="giveMeTime"><img id="loader" src="gif/ring.gif" alt="loader"/></div>
-    <a-scene id="innen" auto-enter-vr="display: all">
+      <a-scene id="innen" auto-enter-vr="display: all" stats>
       <!-- camera-->
       <a-entity id="camera" position="0.00 13.6 0">
           <a-entity camera
@@ -163,6 +166,9 @@
         <audio id="cPolizist12" src="../assets/audio/sechsteSeite/polizist12.mp3" preload="auto"></audio>
         <audio id="cGrossvater1" src="../assets/audio/sechsteSeite/großvater1.mp3" preload="auto"></audio>
 
+		<!--Lichtspiel-->
+		
+		
         <!--Modelle-->
         <a-asset-item id="ladentischObj" src="models/UnsereAssets/ladentisch.obj"></a-asset-item>
         <a-asset-item id="ladentischMtl" src="models/UnsereAssets/ladentisch.mtl"></a-asset-item>
@@ -195,13 +201,16 @@
         <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
 
         <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.mtl"></a-asset-item>
+<!--        <a-asset-item id="ZigarettenkisteAußenMtl" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.mtl"></a-asset-item>-->
 
         <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/000/Zigarettenkiste_innen000.obj"></a-asset-item>
-        <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/000/Zigarettenkiste_innen000.mtl"></a-asset-item>
+<!--        <a-asset-item id="ZigarettenkisteInnenMtl" src="models/UnsereAssets/000/Zigarettenkiste_innen000.mtl"></a-asset-item>-->
 
         <a-asset-item id="RechnungObj" src="models/UnsereAssets/Rechnung.obj"></a-asset-item>
         <a-asset-item id="RechnungMtl" src="models/UnsereAssets/Rechnung.mtl"></a-asset-item>
+
+        <a-asset-item id="NotizbuchObj" src="models/UnsereAssets/Notizbuch.obj"></a-asset-item>
+        <a-asset-item id="NotizbuchMtl" src="models/UnsereAssets/Notizbuch.mtl"></a-asset-item>
 
         <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
 
@@ -216,31 +225,23 @@
         <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>
 
         <a-asset-item id="KappeObj" src="models/UnsereAssets/000/kappe000.obj"></a-asset-item>
-        <a-asset-item id="KappeMtl" src="models/UnsereAssets/000/kappe000.mtl"></a-asset-item>
 
         <a-asset-item id="HausschuheObj" src="models/UnsereAssets/000/hausschuhe000.obj"></a-asset-item>
-        <a-asset-item id="HausschuheMtl" src="models/UnsereAssets/000/hausschuhe000.mtl"></a-asset-item>
 
         <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/000/kappe_gedreht000.obj"></a-asset-item>
-        <a-asset-item id="Kappe_gedrehtMtl" src="models/UnsereAssets/000/kappe_gedreht000.mtl"></a-asset-item>
 
         <a-asset-item id="WerkzeugkisteObj" src="models/UnsereAssets/000/werkzeugkiste000.obj"></a-asset-item>
-        <a-asset-item id="WerkzeugkisteMtl" src="models/UnsereAssets/000/werkzeugkiste000.mtl"></a-asset-item>
 
         <a-asset-item id="BartObj" src="models/UnsereAssets/000/bart000.obj"></a-asset-item>
-        <a-asset-item id="BartMtl" src="models/UnsereAssets/000/bart000.mtl"></a-asset-item>
 
         <a-asset-item id="KochlöffelObj" src="models/UnsereAssets/000/kochloeffel000.obj"></a-asset-item>
-        <a-asset-item id="KochlöffelMtl" src="models/UnsereAssets/000/kochloeffel000.mtl"></a-asset-item>
 
         <a-asset-item id="PolizeiObj" src="models/UnsereAssets/000/polizei000.obj"></a-asset-item>
         <a-asset-item id="PolizeiMtl" src="models/UnsereAssets/000/polizei000.mtl"></a-asset-item>
 
         <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>
-        <a-asset-item id="SchalMtl" src="models/UnsereAssets/000/schal000.mtl"></a-asset-item>
 
         <a-asset-item id="TascheObj" src="models/UnsereAssets/000/tasche000.obj"></a-asset-item>
-        <a-asset-item id="TascheMtl" src="models/UnsereAssets/000/tasche000.mtl"></a-asset-item>
 
           <!--images-->
           <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
@@ -255,7 +256,7 @@
            <a-entity id="Frau" class="one twoTalk twoTalk2 fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
                                       mthreeTalk msevenTalk2
                                       cOneTalk play"
-                     obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#4D4D4D"
+                     obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9"
                      rotation="0 0 0" visible="true" sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
                      event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="twoTalkFrau" class="wait" src="#frau1" volume="10" on="twoTalk"></a-sound>
@@ -271,7 +272,7 @@
             <a-sound id="msevenTalk2Frau" class="wait" src="#frau9" volume="10" on="msevenTalk2"></a-sound>
           </a-entity>
 
-          <a-entity id="accFrau" obj-model="obj:#KochlöffelObj; mtl: #KochlöffelMtl" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0" visible="false"
+             <a-entity id="accFrau" obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0" visible="false"
                     event-set__accFrauV="_event: sFourACC3; visible: true">
           </a-entity>
 
@@ -309,10 +310,10 @@
                                      sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                      vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
                                      v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone mone2 play"
-                    obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#404040"
+                    obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#FFD9D9"
                     rotation="0 0 0" visible="true" sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #404040"
+                    event-set__5="_event: sound-ended; material.color: #FFD9D9"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="sixTalk2Mann" class="wait" src="#mann1" volume="10" on="sixTalk2"></a-sound>
             <a-sound id="sevenTalkMann" class="wait" src="#mann2" volume="10" on="sevenTalk"></a-sound>
@@ -336,7 +337,7 @@
             <a-animation id="mone2MannAnimP" attribute="position" dur="2500" to="0 2 0" begin="mone2"></a-animation>
           </a-entity>
 
-          <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj; mtl: #KappeMtl"
+            <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj" material="color: red"
                     position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
                     event-set__accMannV="_event: sFourACC1; visible: true">
             <a-animation id="moneAccMannAnimP" class="wait" attribute="position" dur="2500" to="0 19.43 -0.40"
@@ -430,19 +431,19 @@
         <a-entity id="containerSchwaegerin" class="five cSix cSix1 cSix2 play" position="5.12 1.40 25.73" rotation="-90 -90 0"
                   event-set__sTwo_P1="position: 14.30 0.28 -19.39" event-set__cSix2="_event: cSix2; visible: false">
           <a-entity id="Schwaegerin" class="one fiveAll sevenTalk sFourTalk2 sFiveTalk3" obj-model="obj:#figurObj"
-                    position="0 2 0" scale="9.5 9.6 9.5" material="color:#737373" rotation="0 0 0" visible="true"
+                    position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0" visible="true"
                     sound="src:#snore_girl;on:one;poolsize:100;volume:5;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #737373"
+                    event-set__5="_event: sound-ended; material.color: #FFE0A8"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="sevenTalkSchwaegerin" class="wait" src="#schwaegerin1" volume="10" on="sevenTalk"></a-sound>
             <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
           </a-entity>
 
-          <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="0.95 2 0.13"
+            <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13"
                     scale="1 1 1" rotation="0 10 0" visible="false"
                     event-set__schwaegerinV="_event: sFourACC7; visible: true"></a-entity>
-          <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj; mtl: #HausschuheMtl" position="-0.88 2 0.12"
+            <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12"
                     scale="1 1 1" rotation="0 10 0" visible="false"
                     event-set__schwaegerin2V="_event: sFourACC8; visible: true"></a-entity>
 
@@ -469,15 +470,15 @@
         <!--Großvater-->
         <a-entity id="containerGroßvater" class="sFourACC4 cSeven cEight play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cEight; visible: false">
           <a-entity id="Großvater" class="one five fiveAll cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
-                    scale="9.5 9.5 9.5" material="color:#8C8C8C" rotation="0 0 0" visible="true"
+                    scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0" visible="true"
                     sound="src:#snore;on:one;poolsize:100;volume:3;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #8C8C8C"
+                    event-set__5="_event: sound-ended; material.color: #B99C79"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
           </a-entity>
 
-          <a-entity id="accGroßvater" obj-model="obj:#BartObj; mtl: #BartMtl" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
+            <a-entity id="accGroßvater" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accGroßvaterV="_event: sFourACC4; visible: true">
           </a-entity>
 
@@ -501,10 +502,10 @@
                   event-set__sTwo_P1="position: 14.30 0.28 -19.39"
                   event-set__sFive_P3="_event: sFive_P3; visible: false">
           <a-entity id="Neffe" class="one twoTalk fiveAll sixTalk sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj"
-                    position="0 2 0" scale="9.5 9.3 9.5" material="color:#A6A6A6" rotation="0 0 0" visible="true"
+                    position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0" visible="true"
                     sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #A6A6A6"
+                    event-set__5="_event: sound-ended; material.color: #C5E2E4"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
             <a-sound id="twoTalkNeffe" class="wait" src="#neffe1" volume="10" on="twoTalk"></a-sound>
             <a-sound id="sixTalkNeffe" class="wait" src="#neffe2" volume="20" on="sixTalk"></a-sound>
@@ -512,7 +513,7 @@
             <a-sound id="sFiveTalk2Neffe" class="wait" src="#neffe4" volume="10" on="sFiveTalk2"></a-sound>
           </a-entity>
 
-          <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj; mtl: #Kappe_gedrehtMtl" position="0 14.14 -0.49"
+            <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49"
                     scale="1 1 1" rotation="-10.36 0 0" visible="false"
                     event-set__accNeffeV="_event: sFourACC2; visible: true">
           </a-entity>
@@ -540,10 +541,10 @@
                   event-set__sTwo_P1="position: 14.30 0.28 -19.39"
                   event-set__sFive_P3no="_event: sFive_P3no; visible: false">
           <a-entity id="Nichte" class="one sFive_P3Move sFive_P3no fiveAll play" obj-model="obj:#figurObj"
-                    position="0 2 0" scale="9.5 9.4 9.5" material="color:#BFBFBF" rotation="0 0 0" visible="true"
+                    position="0 2 0" scale="9.5 9.4 9.5" material="color:#E08989" rotation="0 0 0" visible="true"
                     sound="src:#snore_girl;on:one;poolsize:100;volume:5;loop:true"
                     sound__5="src:#gaeste1; class:wait; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #BFBFBF"
+                    event-set__5="_event: sound-ended; material.color: #E08989"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
           </a-entity>
 
@@ -552,7 +553,7 @@
           <a-animation id="NichteAnimFive2" attribute="position" dur="2500" to="12.13 0 -3.84" repeat="0"
                        begin="five"></a-animation>
 
-          <a-entity id="accNichte" obj-model="obj:#TascheObj;" material="color: #302013"
+            <a-entity id="accNichte" obj-model="obj:#TascheObj;" material="color: brown"
                     position="2 6 -0.2" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accNichteV="_event: sFourACC6; visible: true">
           </a-entity>
@@ -578,9 +579,9 @@
                   event-set__cSix2="_event: cSix2; visible: false">
 
           <a-entity id="Junge" class="one fiveAll play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
-                    material="color:#D9D9D9" visible="true" sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
+                    material="color:#D2E6C1" visible="true" sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                     sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
-                    event-set__5="_event: sound-ended; material.color: #D9D9D9"
+                    event-set__5="_event: sound-ended; material.color: #D2E6C1"
                     event-set__2="_event: two; sound.loop: false; sound.volume: 0">
 
               <!--      fünfte Seite-->
@@ -588,7 +589,7 @@
 
           </a-entity>
 
-          <a-entity id="accJunge" obj-model="obj:#SchalObj;" material="color: darkgreen"
+          <a-entity id="accJunge" obj-model="obj:#SchalObj;" material="color: seagreen"
                     position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="false"
                     event-set__accJungeV="_event: sFourACC5; visible: true">
           </a-entity>
@@ -650,7 +651,7 @@
                                        v22Talk v23Talk v28Talk v29Talk v30Talk mtwoTalk mthreeTalk mfourTalk mfiveTalk
                                        mfiveTalk2 msevenTalk4 v31Talk v32Talk v33Talk v34Talk v36Talk cTwoTalk play"
                     obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5"
-                    material="color:#262626" rotation="0 0 0" visible="true"
+                    material="color:#CACACA" rotation="0 0 0" visible="true"
                     event-set__2="_event: two; visible: true">
             <a-sound id="fourTalkShuiTa" class="wait" src="#shui1" volume="10" on="fourTalk"></a-sound>
             <a-sound id="fourTalkShuiTa2" class="wait" src="#shui2" volume="10" on="fourTalk2"></a-sound>
@@ -760,7 +761,7 @@
           <a-entity id="Schreiner" class="two four vOne vOneTalk vTwoTalk vFourTalk vSixTalk vNineTalk vSixteen
                                           vElevenTalk vSixteenTalk vEighteen vEighteenTalk v21Talk v22Talk v23Talk v27Talk v32 play"
                     obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5"
-                    material="color:#CCCCCC" rotation="0 0 0" visible="true">
+                    material="color:#EDAE81" rotation="0 0 0" visible="true">
             <a-sound id="vOneTalk" class="wait" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
             <a-sound id="vTwoTalkSchreiner" class="wait" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
             <a-sound id="vFourTalkSchreiner" class="wait" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
@@ -775,9 +776,8 @@
             <a-sound id="v27TalkSchreiner" class="wait" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
           </a-entity>
 
-          <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj; mtl: #WerkzeugkisteMtl"
-                    position="2.32 6.58 -0.56" scale="0.75 0.5 0.75" rotation="0 0 0" visible="true"
-                    material="color:#CCCCCC">
+            <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj" material="color: chocolate"
+                    position="2.32 6.58 -0.56" scale="0.75 0.5 0.75" rotation="0 0 0" visible="true">
           </a-entity>
 
           <!-- Sockel-->
@@ -816,7 +816,7 @@
           <a-entity id="Polizist" class="v32 v32Talk v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk
                                          v43Talk mtwoTalk mfourTalk mfiveTalk2 msix2Talk msevenTalk msevenTalk2
                                          msevenTalk3 msevenTalk4 cTwoTalk cFiveTalk play"
-                    obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5" material="color:#CCCCCC"
+                    obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5" material="color:#CDCCF7"
                     rotation="0 0 0" visible="true">
             <a-sound id="v32TalkPolizist" class="wait" src="#polizistV32" volume="10" on="v32Talk"></a-sound>
             <a-sound id="v34TalkPolizist" class="wait" src="#polizistV34" volume="10" on="v34Talk"></a-sound>
@@ -950,28 +950,16 @@
           </a-entity>
 
           <!-- Laterne --> <!-- Cheat -->
-          <a-entity class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
-                           sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
-                           sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
-                           sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
-                           sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
-                           sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end sSevenPickUp2 vOne vOneTalk vTwo
-                           vTwoTalk vFourTalk vFive vSixTalk vNineTalk vEleven vElevenTalk vFifteen vFourteenTalk
-                           vSixteen vSixteenTalk vEighteen vEighteen2 vEighteen3 vEighteenTalk v21Talk v21 v21_2
-                           v22Talk v21_3 v23Talk v25Talk v26 v26two v26three v27Talk v28 v28Talk v29Talk v30Talk v31Talk
-                           v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mone2 mtwoTalk mthree mthreeTalk mfour
-                           mfourTalk mfive mfive2 mfiveTalk mfiveTalk2 msix msix2 msix2Talk mseven msevenTalk msevenTalk2 msevenTalk3 mseven2 msevenTalk4
-                           cOneTalk cTwoTalk cThree cThree1 cFour cFiveTalk cSix cFive1 cSix1 cSix2 cFive2 cFive3
-                           cSeven cSevenTalk cEight play"
+          <a-entity class="clickable"
                     data-brackets-id="886" obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
                                   scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"
                                   sound="src:#blow_candle;on:click" >
               <a-entity class="one six2 play" id="kerzeFlamme" light="type:point;intensity:0.75;distance:50;decay:3"
-                        position="0 28.25 -15.58" rotation="0 0 0" scale="1 1 1" visible="false"
+                        position="-6 28 -11" rotation="0 0 0" scale="1 1 1" visible="false"
                         event-set__1="_event: one; visible: true"
-                        event-set__2="_event: six2; visible: false">
+                        event-set__2="_event: six2; light.intensity: 0">
                   <a-animation attribute="light.decay" from="4" to="10" repeat="indefinite" direction="alternate"
-                               end="five" begin="one"></a-animation>
+                              begin="one"></a-animation>
               </a-entity>
           </a-entity>
 
@@ -1037,7 +1025,24 @@
                            repeat="0" begin="vFive"></a-animation>
               <a-animation id="RechnungAnimVFiveP" class="wait" attribute="position" dur="1500" to="4.33 13.39 -3.36"
                            repeat="0" begin="vFive"></a-animation>
+          </a-entity>
 
+          <!-- Notizbuch --> <!-- neuer cheat -->
+          <a-entity id="notizbuch" obj-model="obj: #NotizbuchObj; mtl: #NotizbuchMtl" position="1 9.7 3"
+                    scale="0.2 0.2 0.2" rotation="0 90 0"
+                    class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
+                                     sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
+                                     sFourTalkStart sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
+                                     sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
+                                     sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
+                                     sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end sSevenPickUp2 vOne vOneTalk vTwo
+                                     vTwoTalk vFourTalk vFive vSixTalk vNineTalk vEleven vElevenTalk vFifteen vFourteenTalk
+                                     vSixteen vSixteenTalk vEighteen vEighteen2 vEighteen3 vEighteenTalk v21Talk v21 v21_2
+                                     v22Talk v21_3 v23Talk v25Talk v26 v26two v26three v27Talk v28 v28Talk v29Talk v30Talk v31Talk
+                                     v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mone2 mtwoTalk mthree mthreeTalk mfour
+                                     mfourTalk mfive mfive2 mfiveTalk mfiveTalk2 msix msix2 msix2Talk mseven msevenTalk msevenTalk2 msevenTalk3 mseven2 msevenTalk4
+                                     cOneTalk cTwoTalk cThree cThree1 cFour cFiveTalk cSix cFive1 cSix1 cSix2 cFive2 cFive3
+                                     cSeven cSevenTalk cEight play">
           </a-entity>
 
           <!-- Ablage_Stellage -->
@@ -1105,11 +1110,11 @@
           </a-entity>
 
           <!-- ZigarettenkisteAußen -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="-11.00 9.52 0.71" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zaußen"
                    ></a-entity>
           <!-- ZigarettenkisteInnen -->
-          <a-entity class="clickable" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl"
+          <a-entity class="clickable" random-color obj-model="obj:#ZigarettenkisteInnenObj"
                     position="-11.02 9.51 0.75" scale="0.15 0.15 0.15" rotation="0 90 0" visible="true" id="zinnen"
                    >
           </a-entity>
@@ -1126,41 +1131,41 @@
 
 
           <!-- zigarrettenkiste 2 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 2.10" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen2"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 2.11"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 2.11"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen2">
           </a-entity>
           <!-- z3 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen3"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen3">
           </a-entity>
 
           <!-- z4 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 3.6" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen4"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 3.6"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 3.6"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen4">
           </a-entity>
 
           <!-- z5 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen5"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 0.73"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 0.73"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen5">
           </a-entity>
 
           <!-- z6 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 0.73" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen6"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 0.73"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 0.73"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen6">
           </a-entity>
 
@@ -1172,59 +1177,59 @@
                     visible="true"></a-entity>
 
           <!-- z7 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen7"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen7">
           </a-entity>
 
           <!-- z8 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 9.78 9.04" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen8"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 9.76 9.04"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 9.76 9.04"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen8">
           </a-entity>
 
           <!-- z9 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.39 11.63" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen9"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.08 7.39 11.66"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.08 7.39 11.66"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen9">
           </a-entity>
 
           <!-- z10 -->
-          <a-entity data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+          <a-entity data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                     position="17.02 7.37 5" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen10"
                    ></a-entity>
-          <a-entity obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.06 7.37 5"
+          <a-entity random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.06 7.37 5"
                     scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen10">
           </a-entity>
 
           <a-entity id="ZigarettenkisteRegalLinksFast" class="vEighteen3 play"
                     event-set__1="_event: vEighteen3; visible: false">
               <!-- z11 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.02 9.83 -14.23" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zaußen11"> </a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.85 -14.20"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 9.85 -14.20"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen11">
               </a-entity>
 
               <!-- z12 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 7.47 -12.35" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen12"></a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 7.45 -12.37"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 7.45 -12.37"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen12">
               </a-entity>
 
               <!-- z15 -->
-              <a-entity class="vEighteen3 play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vEighteen3 play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 3.06 -12.38" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen15"></a-entity>
-              <a-entity class="vEighteen3 play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 3.10 -12.37"
+              <a-entity class="vEighteen3 play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 3.10 -12.37"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen15">
               </a-entity>
           </a-entity>
@@ -1232,18 +1237,18 @@
           <a-entity id="ZigarettenkisteRegalLinks" class="vSixteen play"
                     event-set__1="_event: vSixteen; visible: false">
               <!-- z13 -->
-              <a-entity class="vSixteen play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vSixteen play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.02 9.78 -20.52" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen13" ></a-entity>
-              <a-entity class="vSixteen play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.03 9.76 -20.50"
+              <a-entity class="vSixteen play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.03 9.76 -20.50"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen13">
               </a-entity>
 
               <!-- z14 -->
-              <a-entity class="vSixteen play" data-brackets-id="895" obj-model="obj:#ZigarettenkisteAußenObj;mtl:#ZigarettenkisteAußenMtl"
+              <a-entity class="vSixteen play" data-brackets-id="895" random-color obj-model="obj:#ZigarettenkisteAußenObj"
                         position="17.07 5.11 -19.31" scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true"
                         id="zaußen14"></a-entity>
-              <a-entity class="vSixteen play" obj-model="obj:#ZigarettenkisteInnenObj;mtl:#ZigarettenkisteInnenMtl" position="17.25 5.10 -19.29"
+              <a-entity class="vSixteen play" random-color obj-model="obj:#ZigarettenkisteInnenObj" position="17.25 5.10 -19.29"
                         scale="0.15 0.15 0.15" rotation="0 180 -10.3" visible="true" id="zinnen14">
               </a-entity>
           </a-entity>
@@ -1260,7 +1265,7 @@
                  geometry="primitive:box;width:555;height:0.1;depth:555" color="#333437"></a-box>
 
           <!-- lights-->⁄
-          <a-light type="ambient" color="#ccc" light="" position="-50 80 -150"></a-light>
+          <a-light type="ambient" id="ambLight" color="#ccc" light="" position="-50 80 -150"></a-light>
           <a-light color="#ddf" distance="100" intensity="2" type="point" light="" position="-50 80 -150"></a-light>
           <a-light color="#ddf" position="-50 80 -150" distance="50" intensity="2" type="point"></a-light>
       </a-entity>
