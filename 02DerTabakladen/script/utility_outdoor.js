@@ -63,8 +63,15 @@ $('#toggleInfo').on('click', function() {
 });
 
 var cakeEntity = document.querySelector('#cakeGame');
-$('#cardStack').on('click', function beginCake() {
+$('#cakeTrigger').on('click', function beginCake() {
   AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+  $('#counterKuchen').css("display", "initial");
+});
+
+var HideAndSeekEntity = document.querySelector('#HideAndSeek');
+$('#hideAndSeekTrigger').on('click', function beginCake() {
+  AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+  $('#counterPerson').css("display", "initial");
 });
 
 var memory = document.querySelector('#memoryGame');

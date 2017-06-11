@@ -13,13 +13,11 @@ $('.Minispiel_Zigarette').on('click', function(el){
 });
 
 function game(el) {
-    var sessionStorage = readSessionStorage(skey);
     var element = el;
 
     if(element.currentTarget.classList.contains('Minispiel_Kuchen')){
         counter++;
         updateCounter();
-        setSessionStorage(skey, counter);
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
@@ -31,18 +29,6 @@ function game(el) {
 /* generate entity to display counter */
 
 $('#counterKuchen #counter').text(counter);
-
-/* read sessionstorage */
-function readSessionStorage(key) {
-    if(!sessionStorage.getItem(key)){
-        return false;
-    }
-    else {return true};
-}
-/* set sessionstorage */
-function setSessionStorage(key, value) {
-    sessionStorage.setItem(key, value);
-}
 
 /* update counter */
 function updateCounter() {
