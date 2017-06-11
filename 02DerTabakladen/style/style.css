@@ -33,19 +33,18 @@
     height: 100%;
 }
 
-#counterKuchen, #counterPerson {
+#counterKuchen {
     background: white;
-    display: none;
+    display: block;
     position: absolute;
     bottom: 25px;
     right: 25px;
     padding: 0.5rem;
     font-family: 'VT323', monospace;
     border-radius: 45px;
-    z-index: 5;
 }
 
-#lost, #HaSwon {
+#lost {
     display: none;
     border-radius: 45px;
     text-align: center;
