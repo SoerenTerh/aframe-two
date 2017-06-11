@@ -364,6 +364,7 @@ AFRAME.registerComponent('rain', {
 	});
 	
 AFRAME.registerComponent('random-position-person', {
+	
 	  schema: {
 	    min: {default: {x: -10, y: -10, z: -10}, type: 'vec3'},
 	    max: {default: {x: 10, y: 10, z: 10}, type: 'vec3'}
@@ -371,6 +372,8 @@ AFRAME.registerComponent('random-position-person', {
 
       
 	  update: function () {
+			var xPos = [-36, -13.5, 8.5, 25, 43, 43, 43, 78, 82, 14.5, -11.5, -74, -76, -75.5, -5.5];
+			var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 35.5, 71, 71, 35, 13.5, -17.5, -6];	
 	    var data = this.data;
 
         var index = Math.floor(Math.random() * xPos.length);
