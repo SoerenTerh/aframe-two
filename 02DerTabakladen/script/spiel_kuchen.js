@@ -24,7 +24,7 @@ function game(el) {
             gameLost();
         }
     }
-};
+}
 
 /* generate entity to display counter */
 
@@ -41,5 +41,5 @@ function gameLost() {
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
-    setTimeout(function(){ $('#lost').fadeOut(1500) }, 2000);
+    setTimeout(function(){ $('#lost').fadeOut(1500); }, 2000);
 }

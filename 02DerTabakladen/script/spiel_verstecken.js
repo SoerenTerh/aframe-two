@@ -11,7 +11,7 @@ $('.HaSperson').on('click', function(el){
     personFound++;
     updateCounterPerson();
 
-    if(personLeft == 0){
+    if(personLeft === 0){
         won();
         $('#counterPerson').css("display", "none");
     }
@@ -24,6 +24,6 @@ function updateCounterPerson() {
 
 function won(){
     $('#HaSwon').css("display", "initial");
-    setTimeout(function(){ $('#HaSwon').fadeOut(1500) }, 2000);
+    setTimeout(function(){ $('#HaSwon').fadeOut(1500); }, 2000);
 }
 

@@ -157,176 +157,176 @@ var count = 0;
 var matches = 0;
 
 $(".memoryCard").on("click", function turnCard() {
-  var card = "#" + $(this).closest("a-box").attr("id");
-  var cardEntity = document.querySelector(card);
-  var imageId = "#" + $(this).closest("a-box").children("a-image").attr("id");
-  var imageEntity = document.querySelector(imageId);
+    var card = "#" + $(this).closest("a-box").attr("id");
+    var cardEntity = document.querySelector(card);
+    var imageId = "#" + $(this).closest("a-box").children("a-image").attr("id");
+    var imageEntity = document.querySelector(imageId);
 
-  var cardType = "#" + $(this).closest("a-box").children("a-image").attr("name");
+    var cardType = "#" + $(this).closest("a-box").children("a-image").attr("name");
 
-  if (tries == 0) {
-    tries = 1;
-    first = cardType;
-    firstImage = imageEntity;
-    firstCard = card;
-    firstCardEntity = cardEntity;
-    console.log("First: " + first);
+    if (tries === 0) {
+        tries = 1;
+        first = cardType;
+        firstImage = imageEntity;
+        firstCard = card;
+        firstCardEntity = cardEntity;
+        console.log("First: " + first);
 
-    triggerEvent = "turnCard";
-    document.querySelector(card).emit(triggerEvent);
-    setTimeout(function() {
-      AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white")
-      AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
-    }, 1200);
-  }
-  else if (tries == 1 && card != firstCard) {
-    tries = 0;
-    second = cardType;
-    secondImage = imageEntity;
-    secondCard = card;
-    secondCardEntity = cardEntity;
-    console.log("Second: " + second);
-
-    triggerEvent = "turnCard";
-    document.querySelector(card).emit(triggerEvent);
-    setTimeout(function() {
-      AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white")
-      AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
-    }, 1200);
-
-    if (first == second) {
-      matches++;
-    }
-    else {
-      setTimeout(function() {
         triggerEvent = "turnCard";
-        document.querySelector(firstCard).emit(triggerEvent);
-        document.querySelector(secondCard).emit(triggerEvent);
-
-        setTimeout(function() {
-          AFRAME.utils.entity.setComponentProperty(firstImage, "visible", false);
-          AFRAME.utils.entity.setComponentProperty(secondImage, "visible", false);
-          AFRAME.utils.entity.setComponentProperty(firstCardEntity, "color", "#eb2348");
-          AFRAME.utils.entity.setComponentProperty(secondCardEntity, "color", "#eb2348");
+        document.querySelector(card).emit(triggerEvent);
+        setTimeout(function colorAndVisibleTurn() {
+            AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
+            AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
         }, 1200);
-      }, 3500);
     }
-  }
-  if (matches == 8) {
-    console.log("Hurra!");
-    matches == 0;
-  }
+    else if (tries == 1 && card != firstCard) {
+        tries = 0;
+        second = cardType;
+        secondImage = imageEntity;
+        secondCard = card;
+        secondCardEntity = cardEntity;
+        console.log("Second: " + second);
+
+        triggerEvent = "turnCard";
+        document.querySelector(card).emit(triggerEvent);
+        setTimeout(function colorAndVisibleTurn() {
+            AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
+            AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
+        }, 1200);
+
+        if (first == second) {
+            matches++;
+        }
+        else {
+            setTimeout(function triggerGurnCard() {
+                triggerEvent = "turnCard";
+                document.querySelector(firstCard).emit(triggerEvent);
+                document.querySelector(secondCard).emit(triggerEvent);
+
+                setTimeout(function colorAndVisibleForFound() {
+                    AFRAME.utils.entity.setComponentProperty(firstImage, "visible", false);
+                    AFRAME.utils.entity.setComponentProperty(secondImage, "visible", false);
+                    AFRAME.utils.entity.setComponentProperty(firstCardEntity, "color", "#eb2348");
+                    AFRAME.utils.entity.setComponentProperty(secondCardEntity, "color", "#eb2348");
+                }, 1200);
+            }, 3500);
+        }
+    }
+    if (matches == 8) {
+        console.log("Hurra!");
+        matches = 0;
+    }
 });
 
 var cards = [
-  document.querySelector("#mcard1"),
-  document.querySelector("#mcard2"),
-  document.querySelector("#mcard3"),
-  document.querySelector("#mcard4"),
-  document.querySelector("#mcard5"),
-  document.querySelector("#mcard6"),
-  document.querySelector("#mcard7"),
-  document.querySelector("#mcard8"),
-  document.querySelector("#mcard9"),
-  document.querySelector("#mcard10"),
-  document.querySelector("#mcard11"),
-  document.querySelector("#mcard12"),
-  document.querySelector("#mcard13"),
-  document.querySelector("#mcard14"),
-  document.querySelector("#mcard15"),
-  document.querySelector("#mcard16")
+    document.querySelector("#mcard1"),
+    document.querySelector("#mcard2"),
+    document.querySelector("#mcard3"),
+    document.querySelector("#mcard4"),
+    document.querySelector("#mcard5"),
+    document.querySelector("#mcard6"),
+    document.querySelector("#mcard7"),
+    document.querySelector("#mcard8"),
+    document.querySelector("#mcard9"),
+    document.querySelector("#mcard10"),
+    document.querySelector("#mcard11"),
+    document.querySelector("#mcard12"),
+    document.querySelector("#mcard13"),
+    document.querySelector("#mcard14"),
+    document.querySelector("#mcard15"),
+    document.querySelector("#mcard16")
 ];
 
 var images = [
-  {
-    name: "html5",
-    img: "../../assets/icons/html5-logo.png",
-	},
-  {
-		name: "html5",
-    img: "../../assets/icons/html5-logo.png",
-	},
-  {
-		name: "autodesk",
-    img: "../../assets/icons/autodesk_logo.png",
-	},
-  {
-    name: "autodesk",
-    img: "../../assets/icons/autodesk_logo.png",
-  },
-  {
-    name: "github",
-    img: "../../assets/icons/github-logo.png",
-  },
-  {
-    name: "github",
-    img: "../../assets/icons/github-logo.png",
-  },
-  {
-    name: "css3",
-    img: "../../assets/icons/css3-logo.png",
-  },
-  {
-    name: "css3",
-    img: "../../assets/icons/css3-logo.png",
-  },
-  {
-    name: "slack",
-    img: "../../assets/icons/slack-logo.png",
-  },
-  {
-    name: "slack",
-    img: "../../assets/icons/slack-logo.png",
-  },
-  {
-    name: "aframe",
-    img: "../../assets/icons/aframe-logo.png",
-  },
-  {
-    name: "aframe",
-    img: "../../assets/icons/aframe-logo.png",
-  },
-  {
-    name: "nodejs",
-    img: "../../assets/icons/nodejs-logo.png",
-  },
-  {
-    name: "nodejs",
-    img: "../../assets/icons/nodejs-logo.png",
-  },
-  {
-    name: "jquery",
-    img: "../../assets/icons/jquery-logo.png",
-  },
-  {
-    name: "jquery",
-    img: "../../assets/icons/jquery-logo.png",
-  }
+    {
+        name: "html5",
+        img: "../../assets/icons/html5-logo.png",
+    },
+    {
+        name: "html5",
+        img: "../../assets/icons/html5-logo.png",
+    },
+    {
+        name: "autodesk",
+        img: "../../assets/icons/autodesk_logo.png",
+    },
+    {
+        name: "autodesk",
+        img: "../../assets/icons/autodesk_logo.png",
+    },
+    {
+        name: "github",
+        img: "../../assets/icons/github-logo.png",
+    },
+    {
+        name: "github",
+        img: "../../assets/icons/github-logo.png",
+    },
+    {
+        name: "css3",
+        img: "../../assets/icons/css3-logo.png",
+    },
+    {
+        name: "css3",
+        img: "../../assets/icons/css3-logo.png",
+    },
+    {
+        name: "slack",
+        img: "../../assets/icons/slack-logo.png",
+    },
+    {
+        name: "slack",
+        img: "../../assets/icons/slack-logo.png",
+    },
+    {
+        name: "aframe",
+        img: "../../assets/icons/aframe-logo.png",
+    },
+    {
+        name: "aframe",
+        img: "../../assets/icons/aframe-logo.png",
+    },
+    {
+        name: "nodejs",
+        img: "../../assets/icons/nodejs-logo.png",
+    },
+    {
+        name: "nodejs",
+        img: "../../assets/icons/nodejs-logo.png",
+    },
+    {
+        name: "jquery",
+        img: "../../assets/icons/jquery-logo.png",
+    },
+    {
+        name: "jquery",
+        img: "../../assets/icons/jquery-logo.png",
+    }
 ];
 
 randomizeImages();
 
 for (var i, j = 0; i, j < cards.length; i++, j++) {
-  card = cards[i];
-  image = images[j];
-  AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
-  AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
-  AFRAME.utils.entity.setComponentProperty(card, "name", image.name);
+    card = cards[i];
+    image = images[j];
+    AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
+    AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
+    AFRAME.utils.entity.setComponentProperty(card, "name", image.name);
 }
 
 // randomize array of images
 function randomizeImages(){
-  Array.prototype.randomize = function()
-  {
-    var i = this.length, j, temp;
-    while ( --i )
+    Array.prototype.randomize = function()
     {
-      j = Math.floor( Math.random() * (i - 1) );
-      temp = this[i];
-      this[i] = this[j];
-      this[j] = temp;
-    }
-  };
+        var i = this.length, j, temp;
+        while ( --i )
+        {
+            j = Math.floor( Math.random() * (i - 1) );
+            temp = this[i];
+            this[i] = this[j];
+            this[j] = temp;
+        }
+    };
 
-  images.randomize();
+    images.randomize();
 }
