@@ -36,7 +36,7 @@ function updateCounter() {
 }
 
 function gameLost() {
-    $('#lostCounter').html("Du hast " + counter + " Kuchen gesammelt!");
+    $('#lostCounter').html("Du hast " + counter + " Gebäckstücke gesammelt, jedoch eine verbotene Zigarre eingesammelt!");
     $('#lost').css("display", "initial");
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
