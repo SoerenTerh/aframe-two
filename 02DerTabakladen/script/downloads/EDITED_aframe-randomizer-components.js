@@ -97,7 +97,7 @@
 			var kuchen = $('.Minispiel_Kuchen');
 			var zigarette = $('.Minispiel_Zigarette');
 
-			if(indexCake == 21){
+			if(indexCake === 25){
 				for(var i = 0; i<indexCake-1; i++){
 					if((this.el.getAttribute('position').x - kuchen[i].getAttribute('position').x) <= 75){
 						var newX = Math.random() * (max.x - min.x) + min.x;
@@ -110,7 +110,7 @@
 				}
 			}
 
-			if(indexCigarette == 8){
+			if(indexCigarette === 8){
 				for(var i = 0; i<indexCigarette-1; i++){
 					if((this.el.getAttribute('position').x - zigarette[i].getAttribute('position').x) <= 75){
 						var newX = Math.random() * (max.x - min.x) + min.x;
