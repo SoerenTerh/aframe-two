@@ -33,7 +33,7 @@
     height: 100%;
 }
 
-#counterKuchen, #counterPerson {
+#counterKuchen, #counterPerson  {
     background: white;
     display: none;
     position: absolute;
@@ -45,7 +45,7 @@
     z-index: 5;
 }
 
-#lost, #HaSwon {
+#lost, #HaSwon  {
     display: none;
     border-radius: 45px;
     text-align: center;

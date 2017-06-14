@@ -41,42 +41,57 @@ var infobox = document.querySelector('#infobox');
 var specialsbox = document.querySelector('#specialsbox');
 
 $('#closeTextbox').on('click', function() {
-  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+    AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
 });
 
 $('#openTextbox').on('click', function() {
-  AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
+    AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
 });
 
 $('#toggleSpecials').on('click', function() {
-  var here = $(this);
-  console.log(here);
-  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
-  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
+    var here = $(this);
+    console.log(here);
+    AFRAME.utils.entity.setComponentProperty(infobox, 'visible', false);
+    AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', true);
 });
 
 $('#toggleInfo').on('click', function() {
-  var here = $(this);
-  console.log(here);
-  AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
-  AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
+    var here = $(this);
+    console.log(here);
+    AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
+    AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
 });
 
 var cakeEntity = document.querySelector('#cakeGame');
-$('#cardStack').on('click', function beginCake() {
-  AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+$('#cakeTrigger').on('click', function beginCake() {
+    AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+    $('#counterKuchen').css("display", "initial");
 });
 
+var HideAndSeekEntity = document.querySelector('#HideAndSeek');
+$('#hideAndSeekTrigger').on('click', function beginCake() {
+    AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+    $('#counterPerson').css("display", "initial");
+});
+
+var memory = document.querySelector('#memoryGame');
+$('#cardStack').on('click', function triggerMemory() {
+    if (AFRAME.utils.entity.getComponentProperty(memory, 'visible') === true) {
+        AFRAME.utils.entity.setComponentProperty(memory, 'visible', false);
+    } else {
+        AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+    }
+});
 
 $('#brunnen').on('click', function triggerBrunnen (){
 
-	var attr = $('a-scene').attr('rain');
-	if (attr) { //es hört auf zu regnen
-	$('a-scene').removeAttr('rain');
+    var attr = $('a-scene').attr('rain');
+    if (attr) { //es hört auf zu regnen
+        $('a-scene').removeAttr('rain');
+    }
+    else{ // es regnet
+        $('a-scene').attr('rain', '');
+        $('a-scene').play;
+    }
+});
 
-	}
-	else{ // es regnet
-	$('a-scene').attr('rain', '');
-		$('a-scene').play;
-	}
-	});

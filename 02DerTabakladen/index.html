@@ -22,18 +22,18 @@
         <script src="script/downloads/aframe-entity-generator-components.min.js"></script>
         <script src="script/downloads/EDITED_aframe-randomizer-components.js"></script>
 
+        <script src="script/entity.js"></script>
 
-		<script src="script/entity.js"></script>
         <link href="style/style.css" rel="stylesheet">
     </head>
 
-    
+
 
     <body>
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
-        <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all" stats>
+        <a-scene physics="debug: false" id="außen" auto-enter-vr="display: all"> <!--stats-->
             <!--camera-->
             <a-entity  id="camera" position="3 5.8 0">
                 <a-entity camera
@@ -73,20 +73,18 @@
             </a-entity>
 
             <a-assets timeout="5000">
-                <!--assets-->
-                <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>
-                <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>
-                <a-asset-item id="SockelMtl" src="models/UnsereAssets/000/sockel000.mtl"></a-asset-item>
-                <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>
-                <a-asset-item id="MonokelObj" src="models/UnsereAssets/000/monokel000.obj"></a-asset-item>
-                <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>
-                <a-asset-item id="HausschuheObj" src="models/UnsereAssets/000/hausschuhe000.obj"></a-asset-item>
-                <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/000/kappe_gedreht000.obj"></a-asset-item>
-                <a-asset-item id="BartObj" src="models/UnsereAssets/000/bart000.obj"></a-asset-item>
+
+                <a-asset-item id="figurObj" src="models/UnsereAssets/000/figur000.obj"></a-asset-item>		
+                <a-asset-item id="SockelObj" src="models/UnsereAssets/000/sockel000.obj"></a-asset-item>		
+                <a-asset-item id="SockelMtl" src="models/UnsereAssets/000/sockel000.mtl"></a-asset-item>		
+                <a-asset-item id="SchalObj" src="models/UnsereAssets/000/schal000.obj"></a-asset-item>		
+                <a-asset-item id="MonokelObj" src="models/UnsereAssets/000/monokel000.obj"></a-asset-item>		
+                <a-asset-item id="MonokelMtl" src="models/UnsereAssets/000/monokel000.mtl"></a-asset-item>		
+                <a-asset-item id="HausschuheObj" src="models/UnsereAssets/000/hausschuhe000.obj"></a-asset-item>		
+                <a-asset-item id="Kappe_gedrehtObj" src="models/UnsereAssets/000/kappe_gedreht000.obj"></a-asset-item>		
+                <a-asset-item id="BartObj" src="models/UnsereAssets/000/bart000.obj"></a-asset-item>		
                 <a-asset-item id="KochlöffelObj" src="models/UnsereAssets/000/kochloeffel000.obj"></a-asset-item>
-
-
-
+                <!--assets-->
                 <a-asset-item id="bäumeObj" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.obj"></a-asset-item>
                 <a-asset-item id="bäumeMtl" src="models/UnsereAssets/platzmitpark_nur_b%C3%A4ume.mtl"></a-asset-item>
 
@@ -132,6 +130,9 @@
                 <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/000/zigarette000.obj"></a-asset-item>
                 <a-asset-item id="ZigaretteMtl" src="models/UnsereAssets/000/zigarette000.mtl"></a-asset-item>
 
+                <a-asset-item id="LupeObj" src="models/UnsereAssets/Lupe.obj"></a-asset-item>
+                <a-asset-item id="LupeMtl" src="models/UnsereAssets/Lupe.mtl"></a-asset-item>
+
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
                 <!--panorama-3.png: Aufnahmedatum: Aug. 2016; ©2017 Google: https://www.google.de/maps/@51.500983,-0.1774561,3a,75y,236.9h,80.17t/data=!3m6!1e1!3m4!1svWBl97E5gIsAAAQ1y8o7Aw!2e0!7i13312!8i6656!6m1!1e1-->
@@ -154,13 +155,13 @@
                 <a-mixin id="zigarette_area2_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -60; max: -49 0.75 -30;"></a-mixin>
                 <a-mixin id="zigarette_area3_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.75 -40; max: -15 0.75 76;"></a-mixin>
                 <a-mixin id="zigarette_area4_Mixin" obj-model="obj:#ZigaretteObj;mtl:#ZigaretteMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.75 -67; max: 76 0.75 11;"></a-mixin>
-                <a-mixin id="fladenMixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.85 -42; max: 46 0.85 43;"></a-mixin>
-                <a-mixin id="fladen_area2_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.85 -60; max: -49 0.85 -30;"></a-mixin>
-                <a-mixin id="fladen_area3_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.85 -40; max: -15 0.85 76;"></a-mixin>
-                <a-mixin id="fladen_area4_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.85 -67; max: 76 0.85 11;"></a-mixin>
 
+                <a-mixin id="fladenMixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.85 -42; max: 46 0.85 43;"></a-mixin>		
+                <a-mixin id="fladen_area2_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.85 -60; max: -49 0.85 -30;"></a-mixin>		
+                <a-mixin id="fladen_area3_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: -73 0.85 -40; max: -15 0.85 76;"></a-mixin>		
+                <a-mixin id="fladen_area4_Mixin" obj-model="obj:#FladenObj;mtl:#FladenMtl" scale="0.05 0.05 0.05" random-position="min: 51 0.85 -67; max: 76 0.85 11;"></a-mixin>
             </a-assets>
-            
+
             <a-entity id="aussenSzene" scale="0.5 0.5 0.5">
 
                 <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
@@ -168,11 +169,13 @@
                 </a-box>
 
                 <!-- Brunnen -->
+
                 <a-entity class="clickable"
-						  static-body="shape:box" 
-						  obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible=""
-						  id="brunnen" >
-				</a-entity>
+                          static-body="shape:box"
+                          obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible=""
+                          id="brunnen" >
+                </a-entity>
+
 
                 <a-box id="triggerTabakladenDefault" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 40">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
@@ -290,45 +293,45 @@
                 <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="0 0 0" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 
                 <!-- Info-Boxen -->
-                <a-entity id="textbox" position="0 15 22" visible=false>
-                  <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible=true>
-                  </a-box>
-                  <a-entity id="infobox" visible=true>
-                    <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
+                <a-entity id="textbox" position="0 15 22" visible="false">
+                    <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
+                    </a-box>
+                    <a-entity id="infobox" visible="true">
+                        <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
+                        </a-entity>
+                        <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
+                                                         width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                        </a-entity>
+                        <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
+                                                  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
+                        </a-entity>
+                        <a-entity id="titleSpecials"
+                                  text="color: white; value: Specials; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                                  scale="4 4 4" position="0.4 -3.2 .001">
+                        </a-entity>
+                        <a-image id="toggleSpecials" class="clickableTrigger" src="../assets/icons/ic_local_activity_black_24px.svg" scale="1 1 1" position="-4 -2.5 0.001"></a-image>
                     </a-entity>
-                    <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
-                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
-                    </a-entity>
-                    <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
-                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
-                    </a-entity>
-                    <a-entity id="titleSpecials"
-                              text="color: white; value: Specials; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
-                              scale="4 4 4" position="0.4 -3.2 .001">
-                    </a-entity>
-                    <a-image id="toggleSpecials" class="clickableTrigger" src="../assets/icons/ic_local_activity_black_24px.svg" scale="1 1 1" position="-4 -2.5 0.001"></a-image>
-                  </a-entity>
 
-                  <a-entity id="specialsbox" visible=false>
-                    <a-entity id="specialsHeadline" text="color: white; value: Here be specials!; width: 2" scale="5 5 5" position="0 3 .001">
+                    <a-entity id="specialsbox" visible="false">
+                        <a-entity id="specialsHeadline" text="color: white; value: Here be specials!; width: 2" scale="5 5 5" position="0 3 .001">
+                        </a-entity>
+                        <a-entity id="specialsExplanation" text="color: white; value: - Kerze
+                                                                 - Kuchenspiel
+                                                                 - was uns sonst noch einfaellt;
+                                                                 width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
+                        </a-entity>
+                        <a-entity id="titleInfo"
+                                  text="color: white; value: Info; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
+                                  scale="4 4 4" position="4.7 -3.2 .001">
+                        </a-entity>
+                        <a-image id="toggleInfo" class="clickableTrigger" src="../assets/icons/ic_info_outline_white_24px.svg" scale="1 1 1" position="0 -2.5 0.001"></a-image>
                     </a-entity>
-                    <a-entity id="specialsExplanation" text="color: white; value: - Kerze
-                              - Kuchenspiel
-                              - was uns sonst noch einfaellt;
-                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
-                    </a-entity>
-                    <a-entity id="titleInfo"
-                              text="color: white; value: Info; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
-                              scale="4 4 4" position="4.7 -3.2 .001">
-                    </a-entity>
-                    <a-image id="toggleInfo" class="clickableTrigger" src="../assets/icons/ic_info_outline_white_24px.svg" scale="1 1 1" position="0 -2.5 0.001"></a-image>
-                  </a-entity>
 
-                  <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
+                    <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
                 </a-entity>
 
                 <a-entity id="textbox-nav">
-                  <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/ic_info_outline_black_24px.svg" position="0 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
+                    <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/ic_info_outline_black_24px.svg" position="0 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
                 </a-entity>
 
                 <!--boundaries-->
@@ -338,101 +341,195 @@
                 <a-box static-body="shape:Primitives" position="0 10 155" width="20" height="20" depth="350" rotation="0 90 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
-            
-        <a-entity id="cakeGame" visible="false">
+
+            <a-entity id="cakeGame" visible="false">
                 <!-- entities used for the cake minigame-->
-            <a-entity class="Minispiel_Kuchen" id="cake1" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake2" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake3" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake4" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake5" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake6" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake7" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake8" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake9" mixin="kuchenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake16" mixin="fladenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake17" mixin="fladenMixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake18" mixin="fladenMixin"></a-entity>
-
-            <a-entity class="Minispiel_Kuchen" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake19" mixin="fladen_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake2" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake4" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake5" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake6" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake7" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake8" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake9" mixin="kuchenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake16" mixin="fladenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake17" mixin="fladenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake18" mixin="fladenMixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake25" mixin="fladenMixin"></a-entity>
 
 
-            <a-entity class="Minispiel_Kuchen" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake20" mixin="fladen_area3_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake19" mixin="fladen_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake22" mixin="fladen_area4_Mixin"></a-entity>
 
 
-            <a-entity class="Minispiel_Kuchen" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
-            <a-entity class="Minispiel_Kuchen" id="cake21" mixin="fladen_area4_Mixin"></a-entity>
+
+                <a-entity class="Minispiel_Kuchen clickable" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake20" mixin="fladen_area3_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake23" mixin="fladen_area4_Mixin"></a-entity>
 
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette1" mixin="zigaretteMixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette2" mixin="zigaretteMixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake21" mixin="fladen_area4_Mixin"></a-entity>
+                <a-entity class="Minispiel_Kuchen clickable" id="cake24" mixin="fladen_area4_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette5" mixin="zigarette_area3_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette6" mixin="zigarette_area3_Mixin"></a-entity>
 
-            <a-entity class="Minispiel_Zigarette" id="cigarette7" mixin="zigarette_area4_Mixin"></a-entity>
-            <a-entity class="Minispiel_Zigarette" id="cigarette8" mixin="zigarette_area4_Mixin"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette1" mixin="zigaretteMixin"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette2" mixin="zigaretteMixin"></a-entity>
 
-            <div id="counterKuchen">
-                <p>Kuchen gesammelt:<span id="counter"></span></p>
-            </div>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
 
-        </a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette5" mixin="zigarette_area3_Mixin"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette6" mixin="zigarette_area3_Mixin"></a-entity>
 
-        <a-entity id="HideAndSeek" visible="false">
-            <a-entity id="containerJunge" class="clickable HaSperson" scale="0.425 0.425 0.425" random-position-person random-rotation>
-                <a-entity id="Junge" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
-                <a-entity id="accJunge" obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
-                <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette7" mixin="zigarette_area4_Mixin"></a-entity>
+                <a-entity class="Minispiel_Zigarette clickable" id="cigarette8" mixin="zigarette_area4_Mixin"></a-entity>
+
+                <div id="counterKuchen">
+                    <p>Gebäck gesammelt gesammelt:<span id="counter"></span></p>
+                </div>
             </a-entity>
-            <a-entity id="containerFrau" class="clickable HaSperson" random-position-person rotation="0 0 0" scale="0.45 0.45 0.45">
-                <a-entity id="Frau" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9" rotation="0 0 0" visible="true" > </a-entity>
-                <a-entity id="accFrau" obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0">
+
+            <a-entity id="cakeTrigger" class="clickable" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="-17.2 3.5 -0.7" scale="0.025 0.025 0.025"></a-entity>
+            <a-entity id="hideAndSeekTrigger" class="clickable" obj-model="obj:#LupeObj;mtl:#LupeMtl" position="-14.25 3.5 1" scale="0.045 0.07 0.045"></a-entity>
+
+            <!-- Memory-Spiel -->
+            <a-entity class="clickableTrigger" id="cardStack" geometry="primitive: box" material="color: red" position="-16 2 0" scale="4 3 3">
+            </a-entity>
+
+            <a-entity id="memoryGame" position="-16 10 -10" visible="false">
+                <a-box id="memoryCard1" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="-5 -5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard1" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard2" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="-5 0 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard2" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard3" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="-5 5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard3" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard4" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="-5 10 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard4" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard5" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="0 -5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard5" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard6" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="0 0 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard6" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard7" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="0 5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard7" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard8" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="0 10 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard8" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard9" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="5 -5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard9" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard10" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="5 0 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard10" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard11" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="5 5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard11" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard12" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="5 10 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard12" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard13" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="10 -5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard13" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard14" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="10 0 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard14" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard15" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="10 5 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard15" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+                <a-box id="memoryCard16" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
+                       depth="0.001" position="10 10 0">
+                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                    <a-image id="mcard16" src="" scale="3 3 3" position="0 0 0.02" visible="false"></a-image>
+                </a-box>
+            </a-entity>
+
+            <a-entity id="HideAndSeek" visible="false">
+                <a-entity class="clickable HaSperson" id="HaSperson1" scale="0.425 0.425 0.425" random-position-person random-rotation>
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
+                    <a-entity obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
                 </a-entity>
-                <a-entity id="sockelFrau" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
-            </a-entity>
+                <a-entity class="clickable HaSperson" id="HaSperson2" random-position-person rotation="0 0 0" scale="0.45 0.45 0.45">
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9" rotation="0 0 0" visible="true" > </a-entity>
+                    <a-entity obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0">
+                    </a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                </a-entity>
 
-            <a-entity id="containerGroßvater" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                <a-entity id="Großvater" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0"></a-entity>
-                <a-entity id="accGroßvater" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0"></a-entity>
-                <a-entity id="sockelGroßvater" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
-            </a-entity>
+                <a-entity class="clickable HaSperson" id="HaSperson3" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0"></a-entity>
+                    <a-entity obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0"></a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                </a-entity>
 
-            <a-entity id="containerShuiTa" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                <a-entity id="ShuiTa" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5" material="color:#CACACA" rotation="0 0 0"></a-entity>
-                <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
-                <a-entity id="sockelShuiTa" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-            </a-entity>
+                <a-entity class="clickable HaSperson" id="HaSperson4" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5" material="color:#CACACA" rotation="0 0 0"></a-entity>
+                    <a-entity obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                </a-entity>
 
-            <a-entity id="containerNeffe" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                <a-entity id="Neffe" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0"></a-entity>
-                <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49" scale="1 1 1" rotation="-10.36 0 0"></a-entity>
-                <a-entity id="sockelNeffe" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
-            </a-entity>
+                <a-entity class="clickable HaSperson" id="HaSperson5" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0"></a-entity>
+                    <a-entity obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49" scale="1 1 1" rotation="-10.36 0 0"></a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                </a-entity>
 
-            <a-entity id="containerSchwaegerin" class="clickable HaSperson" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                <a-entity id="Schwaegerin" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0"></a-entity>
-                <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0"></a-entity>
-                <a-entity id="accSchwaegerin2" obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0"></a-entity>
-                <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0"></a-entity>
-            </a-entity>
+                <a-entity class="clickable HaSperson" id="HaSperson6" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0"></a-entity>
+                    <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0"></a-entity>
+                    <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0"></a-entity>
+                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0"></a-entity>
+                </a-entity>
 
-            <div id="counterPerson">
-                <p>Personen gefunden: <span id="counterPersonFound"></span></p>
-                <p>Übrig: <span id="counterPersonLeft"></span></p>
-            </div>
-        </a-entity>
+                <div id="counterPerson">
+                    <p>Personen gefunden: <span id="counterPersonFound"></span></p>
+                    <p>Übrig: <span id="counterPersonLeft"></span></p>
+                </div>
+            </a-entity>
         </a-scene>
-
-        
 
         <div id="lost">
             <p>Spiel leider verloren!</p>
@@ -447,7 +544,8 @@
         <script src="script/scriptOutside.js"></script>
         <script src="script/spiel_kuchen.js"></script>
         <script src="script/spiel_verstecken.js"></script>
+        <script src="script/memory.js"></script>
     </body>
 
-    
+
 </html>
