@@ -26,4 +26,3 @@ function won(){
     $('#HaSwon').css("display", "initial");
     setTimeout(function(){ $('#HaSwon').fadeOut(1500); }, 2000);
 }
-

@@ -81,20 +81,17 @@ $('#cardStack').on('click', function triggerMemory() {
     } else {
         AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
     }
-    
-    
 });
-
 
 $('#brunnen').on('click', function triggerBrunnen (){
 
     var attr = $('a-scene').attr('rain');
     if (attr) { //es hört auf zu regnen
         $('a-scene').removeAttr('rain');
-
     }
     else{ // es regnet
         $('a-scene').attr('rain', '');
         $('a-scene').play;
     }
 });
+
