@@ -156,6 +156,96 @@ var tries = 0;
 var count = 0;
 var matches = 0;
 
+var cards = [
+    document.querySelector("#mcard1"),
+    document.querySelector("#mcard2"),
+    document.querySelector("#mcard3"),
+    document.querySelector("#mcard4"),
+    document.querySelector("#mcard5"),
+    document.querySelector("#mcard6"),
+    document.querySelector("#mcard7"),
+    document.querySelector("#mcard8"),
+    document.querySelector("#mcard9"),
+    document.querySelector("#mcard10"),
+    document.querySelector("#mcard11"),
+    document.querySelector("#mcard12"),
+    document.querySelector("#mcard13"),
+    document.querySelector("#mcard14"),
+    document.querySelector("#mcard15"),
+    document.querySelector("#mcard16")
+];
+
+var images = [
+    {
+        name: "html5",
+        img: "../assets/icons/html5-logo.png",
+    },
+    {
+        name: "html5",
+        img: "../assets/icons/html5-logo.png",
+    },
+    {
+        name: "autodesk",
+        img: "../assets/icons/autodesk_logo.png",
+    },
+    {
+        name: "autodesk",
+        img: "../assets/icons/autodesk_logo.png",
+    },
+    {
+        name: "github",
+        img: "../assets/icons/github-logo.png",
+    },
+    {
+        name: "github",
+        img: "../assets/icons/github-logo.png",
+    },
+    {
+        name: "css3",
+        img: "../assets/icons/css3-logo.png",
+    },
+    {
+        name: "css3",
+        img: "../assets/icons/css3-logo.png",
+    },
+    {
+        name: "slack",
+        img: "../assets/icons/slack-logo.png",
+    },
+    {
+        name: "slack",
+        img: "../assets/icons/slack-logo.png",
+    },
+    {
+        name: "aframe",
+        img: "../assets/icons/aframe-logo.png",
+    },
+    {
+        name: "aframe",
+        img: "../assets/icons/aframe-logo.png",
+    },
+    {
+        name: "nodejs",
+        img: "../assets/icons/nodejs-logo.png",
+    },
+    {
+        name: "nodejs",
+        img: "../assets/icons/nodejs-logo.png",
+    },
+    {
+        name: "jquery",
+        img: "../assets/icons/jquery-logo.png",
+    },
+    {
+        name: "jquery",
+        img: "../assets/icons/jquery-logo.png",
+    }
+];
+
+$('#cardStack').on('click', function () {
+  buildMemory(cards, images);
+});
+
 $(".memoryCard").on("click", function turnCard() {
     var card = "#" + $(this).closest("a-box").attr("id");
     var cardEntity = document.querySelector(card);
@@ -218,115 +308,38 @@ $(".memoryCard").on("click", function turnCard() {
     }
 });
 
-var cards = [
-    document.querySelector("#mcard1"),
-    document.querySelector("#mcard2"),
-    document.querySelector("#mcard3"),
-    document.querySelector("#mcard4"),
-    document.querySelector("#mcard5"),
-    document.querySelector("#mcard6"),
-    document.querySelector("#mcard7"),
-    document.querySelector("#mcard8"),
-    document.querySelector("#mcard9"),
-    document.querySelector("#mcard10"),
-    document.querySelector("#mcard11"),
-    document.querySelector("#mcard12"),
-    document.querySelector("#mcard13"),
-    document.querySelector("#mcard14"),
-    document.querySelector("#mcard15"),
-    document.querySelector("#mcard16")
-];
+function buildMemory(cards, images) {
+  console.log('In Build, cards: ');
+  console.log(cards); // kommt was raus
+  randomizeImages();
 
-var images = [
-    {
-        name: "html5",
-        img: "../../assets/icons/html5-logo.png",
-    },
-    {
-        name: "html5",
-        img: "../../assets/icons/html5-logo.png",
-    },
-    {
-        name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png",
-    },
-    {
-        name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png",
-    },
-    {
-        name: "github",
-        img: "../../assets/icons/github-logo.png",
-    },
-    {
-        name: "github",
-        img: "../../assets/icons/github-logo.png",
-    },
-    {
-        name: "css3",
-        img: "../../assets/icons/css3-logo.png",
-    },
-    {
-        name: "css3",
-        img: "../../assets/icons/css3-logo.png",
-    },
-    {
-        name: "slack",
-        img: "../../assets/icons/slack-logo.png",
-    },
-    {
-        name: "slack",
-        img: "../../assets/icons/slack-logo.png",
-    },
-    {
-        name: "aframe",
-        img: "../../assets/icons/aframe-logo.png",
-    },
-    {
-        name: "aframe",
-        img: "../../assets/icons/aframe-logo.png",
-    },
-    {
-        name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png",
-    },
-    {
-        name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png",
-    },
-    {
-        name: "jquery",
-        img: "../../assets/icons/jquery-logo.png",
-    },
-    {
-        name: "jquery",
-        img: "../../assets/icons/jquery-logo.png",
-    }
-];
+  for (i, j = 0; i, j < cards.length; i++, j++) {
+      console.log('In for, cards: ');
+      console.log(cards) // kommt was raus
+      card = cards[i];
+      console.log('In for, eine Karte: ');
+      console.log(card);
+      image = images[j];
+      AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
+      AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
+      AFRAME.utils.entity.setComponentProperty(card, "name", image.name);
+  }
 
-randomizeImages();
+  // randomize array of images
+  function randomizeImages(){
+      Array.prototype.randomize = function()
+      {
+          var i = this.length, j, temp;
+          while ( --i )
+          {
+              j = Math.floor( Math.random() * (i - 1) );
+              temp = this[i];
+              this[i] = this[j];
+              this[j] = temp;
+          }
+      };
 
-for (var i, j = 0; i, j < cards.length; i++, j++) {
-    card = cards[i];
-    image = images[j];
-    AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
-    AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
-    AFRAME.utils.entity.setComponentProperty(card, "name", image.name);
-}
+      images.randomize();
+  }
 
-// randomize array of images
-function randomizeImages(){
-    Array.prototype.randomize = function()
-    {
-        var i = this.length, j, temp;
-        while ( --i )
-        {
-            j = Math.floor( Math.random() * (i - 1) );
-            temp = this[i];
-            this[i] = this[j];
-            this[j] = temp;
-        }
-    };
-
-    images.randomize();
 }
