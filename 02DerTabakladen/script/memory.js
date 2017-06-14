@@ -309,16 +309,10 @@ $(".memoryCard").on("click", function turnCard() {
 });
 
 function buildMemory(cards, images) {
-  console.log('In Build, cards: ');
-  console.log(cards); // kommt was raus
   randomizeImages();
 
   for (i, j = 0; i, j < cards.length; i++, j++) {
-      console.log('In for, cards: ');
-      console.log(cards) // kommt was raus
       card = cards[i];
-      console.log('In for, eine Karte: ');
-      console.log(card);
       image = images[j];
       AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
       AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
