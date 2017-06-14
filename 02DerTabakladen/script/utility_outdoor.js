@@ -94,4 +94,3 @@ $('#brunnen').on('click', function triggerBrunnen (){
         $('a-scene').play;
     }
 });
-
