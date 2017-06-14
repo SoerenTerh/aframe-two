@@ -76,6 +76,7 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
 
 var memory = document.querySelector('#memoryGame');
 $('#cardStack').on('click', function triggerMemory() {
+  console.log('Build fertig')
     if (AFRAME.utils.entity.getComponentProperty(memory, 'visible') === true) {
         AFRAME.utils.entity.setComponentProperty(memory, 'visible', false);
     } else {
@@ -94,4 +95,3 @@ $('#brunnen').on('click', function triggerBrunnen (){
         $('a-scene').play;
     }
 });
-
