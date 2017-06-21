@@ -111,23 +111,6 @@ AFRAME.utils.entity.setComponentProperty(card16, "geometry", "primitive: box");
 AFRAME.utils.entity.setComponentProperty(card16, "scale", {x: 0.17, y: 0.005, z: 0.1});
 AFRAME.utils.entity.setComponentProperty(card16, "material", "color: white");
 
-AFRAME.utils.entity.setComponentProperty(card17, "position", {x: 0, y: 0.58, z: 0});
-AFRAME.utils.entity.setComponentProperty(card1, "rotation", {x: 0, y: 3, z: 0});
-AFRAME.utils.entity.setComponentProperty(card17, "geometry", "primitive: box");
-AFRAME.utils.entity.setComponentProperty(card17, "scale", {x: 0.17, y: 0.005, z: 0.1});
-AFRAME.utils.entity.setComponentProperty(card17, "material", "color: white");
-
-AFRAME.utils.entity.setComponentProperty(card18, "position", {x: 0, y: 0.585, z: 0});
-AFRAME.utils.entity.setComponentProperty(card1, "rotation", {x: 0, y: 2, z: 0});
-AFRAME.utils.entity.setComponentProperty(card18, "geometry", "primitive: box");
-AFRAME.utils.entity.setComponentProperty(card18, "scale", {x: 0.17, y: 0.005, z: 0.1});
-AFRAME.utils.entity.setComponentProperty(card18, "material", "color: white");
-
-AFRAME.utils.entity.setComponentProperty(card19, "position", {x: 0, y: 0.59, z: 0});
-AFRAME.utils.entity.setComponentProperty(card19, "geometry", "primitive: box");
-AFRAME.utils.entity.setComponentProperty(card19, "scale", {x: 0.17, y: 0.001, z: 0.1});
-AFRAME.utils.entity.setComponentProperty(card19, "material", "color: white");
-
 memoryEntity.appendChild(card1);
 memoryEntity.appendChild(card2);
 memoryEntity.appendChild(card3);
@@ -144,9 +127,6 @@ memoryEntity.appendChild(card13);
 memoryEntity.appendChild(card14);
 memoryEntity.appendChild(card15);
 memoryEntity.appendChild(card16);
-memoryEntity.appendChild(card17);
-memoryEntity.appendChild(card18);
-memoryEntity.appendChild(card19);
 
 
 // memory game
@@ -155,6 +135,25 @@ memoryEntity.appendChild(card19);
 var tries = 0;
 var count = 0;
 var matches = 0;
+
+var memoryCards = [
+  document.querySelector("#memoryCard1"),
+  document.querySelector("#memoryCard2"),
+  document.querySelector("#memoryCard3"),
+  document.querySelector("#memoryCard4"),
+  document.querySelector("#memoryCard5"),
+  document.querySelector("#memoryCard6"),
+  document.querySelector("#memoryCard7"),
+  document.querySelector("#memoryCard8"),
+  document.querySelector("#memoryCard9"),
+  document.querySelector("#memoryCard10"),
+  document.querySelector("#memoryCard11"),
+  document.querySelector("#memoryCard12"),
+  document.querySelector("#memoryCard13"),
+  document.querySelector("#memoryCard14"),
+  document.querySelector("#memoryCard15"),
+  document.querySelector("#memoryCard16")
+]
 
 var cards = [
     document.querySelector("#mcard1"),
@@ -242,8 +241,23 @@ var images = [
     }
 ];
 
+var memoryVisible = false;
+
+var memory = document.querySelector('#memoryGame');
+$('#cardStack').on('click', function triggerMemory() {
+  if (memoryVisible == false) {
+    AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+    memoryVisible = true;
+    // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten? 
+  }
+  else {
+    AFRAME.utils.entity.setComponentProperty(memory, 'visible', false);
+    memoryVisible = false;
+  }
+});
+
 $('#cardStack').on('click', function () {
-  buildMemory(cards, images);
+  buildMemory(cards, images, memoryCards);
 });
 
 $(".memoryCard").on("click", function turnCard() {
@@ -288,7 +302,7 @@ $(".memoryCard").on("click", function turnCard() {
             matches++;
         }
         else {
-            setTimeout(function triggerGurnCard() {
+            setTimeout(function triggerTurnCard() {
                 triggerEvent = "turnCard";
                 document.querySelector(firstCard).emit(triggerEvent);
                 document.querySelector(secondCard).emit(triggerEvent);
@@ -302,24 +316,21 @@ $(".memoryCard").on("click", function turnCard() {
             }, 3500);
         }
     }
-    if (matches == 8) {
+    if (matches == 1) {
         console.log("Hurra!");
         matches = 0;
     }
 });
 
-function buildMemory(cards, images) {
-  console.log('In Build, cards: ');
-  console.log(cards); // kommt was raus
+function buildMemory(cards, images, memoryCards) {
   randomizeImages();
 
   for (i, j = 0; i, j < cards.length; i++, j++) {
-      console.log('In for, cards: ');
-      console.log(cards) // kommt was raus
+      memoryCard = memoryCards[i];
+      console.log(memoryCard);
       card = cards[i];
-      console.log('In for, eine Karte: ');
-      console.log(card);
       image = images[j];
+      AFRAME.utils.entity.setComponentProperty(memoryCard, "color", "#eb2348"); // funktioniert beim ersten Aufrufen, danach aber nicht mehr!?
       AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
       AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
       AFRAME.utils.entity.setComponentProperty(card, "name", image.name);

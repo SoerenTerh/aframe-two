@@ -67,12 +67,6 @@ $('#cardStack').on('click', function beginCake() {
   AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
 });
 
-var memory = document.querySelector('#memoryGame');
-$('#cardStack').on('click', function triggerMemory() {
-  AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
-});
-
-
 $('#brunnen').on('click', function triggerBrunnen (){
 
 	var attr = $('a-scene').attr('rain');
