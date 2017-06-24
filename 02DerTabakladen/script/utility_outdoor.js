@@ -74,15 +74,6 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
     $('#counterPerson').css("display", "initial");
 });
 
-var memory = document.querySelector('#memoryGame');
-$('#cardStack').on('click', function triggerMemory() {
-    if (AFRAME.utils.entity.getComponentProperty(memory, 'visible') === true) {
-        AFRAME.utils.entity.setComponentProperty(memory, 'visible', false);
-    } else {
-        AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
-    }
-});
-
 $('#brunnen').on('click', function triggerBrunnen (){
 
     var attr = $('a-scene').attr('rain');
