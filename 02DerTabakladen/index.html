@@ -342,6 +342,12 @@
             </a-entity>
             <a-sky material="fog: false" src="#sky" id="asky" scale="-0.02 0.02 0.02" position="0 17 0" rotation="0 0 4.01"></a-sky>
 
+
+            <!-- Games -->
+
+            <a-entity id="table" geometry="primitive: box" material="color: red" position="-16 2 0" scale="4 3 3">
+            </a-entity>
+
             <a-entity id="cakeGame" visible="false">
                 <!-- entities used for the cake minigame-->
                 <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
@@ -400,9 +406,6 @@
             <a-entity id="hideAndSeekTrigger" class="clickable" obj-model="obj:#LupeObj;mtl:#LupeMtl" position="-14.25 3.5 1" scale="0.045 0.07 0.045"></a-entity>
 
             <!-- Memory-Spiel -->
-            <a-entity class="clickableTrigger" id="cardStack" geometry="primitive: box" material="color: red" position="-16 2 0" scale="4 3 3">
-            </a-entity>
-
             <a-entity id="memoryGame" position="-16 10 -10" visible=false>
               <a-box id="memoryCard1" class="clickableTrigger memoryCard" color="#eb2348" width="4" height="4"
                      depth="0.001" position="-5 -5 0">

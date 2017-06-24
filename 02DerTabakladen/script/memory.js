@@ -1,5 +1,5 @@
 // Add cards to table
-var memoryEntity = document.querySelector("#cardStack");
+var memoryEntity = document.querySelector("#table");
 var card1 = document.createElement("a-entity");
 var card2 = document.createElement("a-entity");
 var card3 = document.createElement("a-entity");
@@ -107,6 +107,8 @@ AFRAME.utils.entity.setComponentProperty(card16, "rotation", {x: 0, y: 5, z: 0})
 AFRAME.utils.entity.setComponentProperty(card16, "geometry", "primitive: box");
 AFRAME.utils.entity.setComponentProperty(card16, "scale", {x: 0.17, y: 0.005, z: 0.1});
 AFRAME.utils.entity.setComponentProperty(card16, "material", "color: white");
+AFRAME.utils.entity.setComponentProperty(card16, "id", "cardStack");
+AFRAME.utils.entity.setComponentProperty(card16, "class", "clickableTrigger");
 
 memoryEntity.appendChild(card1);
 memoryEntity.appendChild(card2);
