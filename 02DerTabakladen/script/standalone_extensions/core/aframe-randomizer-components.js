@@ -1,5 +1,5 @@
 /*by https://github.com/ngokevin || https://rawgit.com/ngokevin/aframe-randomizer-components/master/dist/aframe-randomizer-components.min.js*/
-/* Adjusted to work in a proper way for the project: soerenterh */
+/*Version: 14.06.2017*/
 
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -82,9 +82,6 @@
 	  },
 
 	  update: function () {
-			var indexCake = this.el.getAttribute('id').replace('cake', '');
-			var indexCigarette = this.el.getAttribute('id').replace('cigarette', '');
-
 	    var data = this.data;
 	    var max = data.max;
 	    var min = data.min;
@@ -93,32 +90,7 @@
 	      y: Math.random() * (max.y - min.y) + min.y,
 	      z: Math.random() * (max.z - min.z) + min.z
 	    });
-
-			var kuchen = $('.Minispiel_Kuchen');
-			var zigarette = $('.Minispiel_Zigarette');
-
-			if(indexCake == 15){
-				for(var i = 0; i<indexCake-1; i++){
-					if((this.el.getAttribute('position').x - kuchen[i].getAttribute('position').x) <= 75){
-						var newX = Math.random() * (max.x - min.x) + min.x;
-						var newY = Math.random() * (max.x - min.x) + min.x;
-
-						this.el.setAttribute('position', newX);
-						this.el.setAttribute('position', newY);
-
-					}
-				}
-			}
-
-			if(indexCigarette == 7){
-				for(var i = 0; i<indexCigarette-1; i++){
-					if((this.el.getAttribute('position').x - zigarette[i].getAttribute('position').x) <= 75){
-						var newX = Math.random() * (max.x - min.x) + min.x;
-						this.el.setAttribute('position', newX);
-					}
-				}
-			}
-		}
+	  }
 	});
 
 	/**

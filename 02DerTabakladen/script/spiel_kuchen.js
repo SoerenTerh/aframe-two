@@ -13,36 +13,22 @@ $('.Minispiel_Zigarette').on('click', function(el){
 });
 
 function game(el) {
-    var sessionStorage = readSessionStorage(skey);
     var element = el;
 
     if(element.currentTarget.classList.contains('Minispiel_Kuchen')){
         counter++;
         updateCounter();
-        setSessionStorage(skey, counter);
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
             gameLost();
         }
     }
-};
+}
 
 /* generate entity to display counter */
 
 $('#counterKuchen #counter').text(counter);
-
-/* read sessionstorage */
-function readSessionStorage(key) {
-    if(!sessionStorage.getItem(key)){
-        return false;
-    }
-    else {return true};
-}
-/* set sessionstorage */
-function setSessionStorage(key, value) {
-    sessionStorage.setItem(key, value);
-}
 
 /* update counter */
 function updateCounter() {
@@ -50,10 +36,10 @@ function updateCounter() {
 }
 
 function gameLost() {
-    $('#lostCounter').html("Du hast " + counter + " Kuchen gesammelt!");
+    $('#lostCounter').html("Du hast " + counter + " Gebäckstücke gesammelt, jedoch eine verbotene Zigarre eingesammelt!");
     $('#lost').css("display", "initial");
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
-    setTimeout(function(){ $('#lost').fadeOut(1500) }, 2000);
+    setTimeout(function(){ $('#lost').fadeOut(1500); }, 2000);
 }
