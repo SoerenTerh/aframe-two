@@ -16,9 +16,6 @@ var card13 = document.createElement("a-entity");
 var card14 = document.createElement("a-entity");
 var card15 = document.createElement("a-entity");
 var card16 = document.createElement("a-entity");
-var card17 = document.createElement("a-entity");
-var card18 = document.createElement("a-entity");
-var card19 = document.createElement("a-entity");
 
 AFRAME.utils.entity.setComponentProperty(card1, "position", {x: 0, y: 0.5, z: 0});
 AFRAME.utils.entity.setComponentProperty(card1, "geometry", "primitive: box");
@@ -153,7 +150,7 @@ var memoryCards = [
   document.querySelector("#memoryCard14"),
   document.querySelector("#memoryCard15"),
   document.querySelector("#memoryCard16")
-]
+];
 
 var cards = [
     document.querySelector("#mcard1"),
@@ -177,86 +174,86 @@ var cards = [
 var images = [
     {
         name: "html5",
-        img: "../../assets/icons/html5-logo.png",
+        img: "../../assets/icons/html5-logo.png"
     },
     {
         name: "html5",
-        img: "../../assets/icons/html5-logo.png",
+        img: "../../assets/icons/html5-logo.png"
     },
     {
         name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png",
+        img: "../../assets/icons/autodesk_logo.png"
     },
     {
         name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png",
+        img: "../../assets/icons/autodesk_logo.png"
     },
     {
         name: "github",
-        img: "../../assets/icons/github-logo.png",
+        img: "../../assets/icons/github-logo.png"
     },
     {
         name: "github",
-        img: "../../assets/icons/github-logo.png",
+        img: "../../assets/icons/github-logo.png"
     },
     {
         name: "css3",
-        img: "../../assets/icons/css3-logo.png",
+        img: "../../assets/icons/css3-logo.png"
     },
     {
         name: "css3",
-        img: "../../assets/icons/css3-logo.png",
+        img: "../../assets/icons/css3-logo.png"
     },
     {
         name: "slack",
-        img: "../../assets/icons/slack-logo.png",
+        img: "../../assets/icons/slack-logo.png"
     },
     {
         name: "slack",
-        img: "../../assets/icons/slack-logo.png",
+        img: "../../assets/icons/slack-logo.png"
     },
     {
         name: "aframe",
-        img: "../../assets/icons/aframe-logo.png",
+        img: "../../assets/icons/aframe-logo.png"
     },
     {
         name: "aframe",
-        img: "../../assets/icons/aframe-logo.png",
+        img: "../../assets/icons/aframe-logo.png"
     },
     {
         name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png",
+        img: "../../assets/icons/nodejs-logo.png"
     },
     {
         name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png",
+        img: "../../assets/icons/nodejs-logo.png"
     },
     {
         name: "jquery",
-        img: "../../assets/icons/jquery-logo.png",
+        img: "../../assets/icons/jquery-logo.png"
     },
     {
         name: "jquery",
-        img: "../../assets/icons/jquery-logo.png",
+        img: "../../assets/icons/jquery-logo.png"
     }
 ];
 
 var memoryVisible = false;
 
-var memory = document.querySelector('#memoryGame');
-$('#cardStack').on('click', function triggerMemory() {
+var memory = document.querySelector("#memoryGame");
+$("#cardStack").on("click", function triggerMemory() {
   if (memoryVisible == false) {
-    AFRAME.utils.entity.setComponentProperty(memory, 'visible', true);
+    AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
     memoryVisible = true;
     // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
   }
   else {
-    AFRAME.utils.entity.setComponentProperty(memory, 'visible', false);
+    AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
     memoryVisible = false;
   }
 });
 
-$('#cardStack').on('click', function () {
+$("#cardStack").on("click", function () {
   buildMemory(cards, images, memoryCards);
 });
 
