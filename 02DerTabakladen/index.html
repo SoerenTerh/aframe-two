@@ -185,7 +185,7 @@
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible="" ></a-entity>
 
                 <!-- Tabakladen Tür -->
-                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" visible="" sound="src: #squeeky_door; on: click; volume: 10">
+                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" sound="src: #squeeky_door; on: click; volume: 10; poolSize: 100;">
                     <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 </a-entity>
