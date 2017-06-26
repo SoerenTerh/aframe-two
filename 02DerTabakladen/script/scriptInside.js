@@ -566,5 +566,5 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
         currentTarget = "#one";
         at = "one";
         storyline(currentTarget, at);
-    }, 20000);
+    }, 2500);
 });

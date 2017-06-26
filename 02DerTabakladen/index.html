@@ -185,7 +185,7 @@
                 <a-entity collada-model="url(models/UnsereAssets/tabakladen.dae)" id="tabakladen" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible="" ></a-entity>
 
                 <!-- Tabakladen Tür -->
-                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" sound="src: #squeeky_door; on: click; volume: 10; poolSize: 100;">
+                <a-entity collada-model="url(models/UnsereAssets/tabakladenTuerSmaller.dae)" id="tabakladenTUERa" class="clickable" position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" sound="src: #squeeky_door; on: click; volume: 8; poolSize: 100;">
                     <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
                 </a-entity>
@@ -202,9 +202,9 @@
                 <a-entity obj-model="obj:#Ablage_Stellage_ohne_RechnungObj;mtl:#Ablage_Stellage_ohne_RechnungMtl" position="16.40 -0.31 146.40" scale="0.21 0.21 0.25" rotation="0 90 0" visible="true" id="tAblage5" ></a-entity>
 
                 <!-- Schlafplatz -->
-                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
-                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
-                <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-8.78 1.77 157.44" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:0.1" ></a-entity>
+                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 119.73" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:5" ></a-entity>
+                <a-entity obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="16.29 12.40 138.93" scale="0.14 0.06 0.12" rotation="0 90 0" visible="true" id="bett-2" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:5" ></a-entity>
+                <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-8.78 1.77 157.44" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell" sound="src:url(../assets/sounds/snore.mp3);on:click;volume:5" ></a-entity>
 
                 <a-box id="triggerBaeckerei" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="0 30.00 -70.00">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
@@ -250,7 +250,7 @@
                 <a-entity id="fladen06" obj-model="obj:#FladenObj;mtl:#FladenMtl" position="6.68 3.69 -113.92" scale="0.08 0.05 0.05"></a-entity>
 
                 <!-- Platz -->
-                <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2" sound="src: #outdoor; autoplay: true; loop: true; volume: 2"></a-entity>
+                <a-entity id="platz" obj-model="obj:#platzObj;mtl:#platzMtl" position="1 0 -1" scale="0.2 0.2 0.2" sound="src: #outdoor; autoplay: true; loop: true; volume: 6"></a-entity>
 
                 <!-- Bäume -->
                 <a-entity id="bäume" obj-model="obj:#bäumeObj;mtl:#bäumeMtl" position="11.5 0 -30.00" scale="0.15 0.15 0.15"></a-entity>
