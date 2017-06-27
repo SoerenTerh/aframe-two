@@ -357,9 +357,8 @@
 			<a-entity position="-17.649 1.79 1.153" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:cylinder;openEnded:false;radius:0.2;height:2" material="color:#533d2f"  id="tischbein3"></a-entity>
 			<a-entity position="-14.292 1.79 1.153" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:cylinder;openEnded:false;radius:0.2;height:2" material="color:#533d2f" id="tischbein4"></a-entity>
 
-
+            <!-- cakeGame entity and child elements -->
             <a-entity id="cakeGame" visible="false">
-                <!-- entities used for the cake minigame-->
                 <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
                 <a-entity class="Minispiel_Kuchen clickable" id="cake2" mixin="kuchenMixin"></a-entity>
                 <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
@@ -549,6 +548,10 @@
         <div id="lost">
             <p>Spiel leider verloren!</p>
             <span id="lostCounter"></span>
+        </div>
+
+        <div id="cakeWon">
+            <p>Du hast alle Gebäcke gefunden und keine Zigarette aufgesammelt!</p>
         </div>
 
         <div id="HaSwon">

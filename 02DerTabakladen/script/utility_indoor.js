@@ -12,6 +12,7 @@ $('#tabakladenTUERi').on('click', function doorClick() {
     }, 1500);
 });
 
+/** Trigger points to move in the room */
 $('#triggerTuer').on('click', function triggerTuer() {
     'use strict';
     AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: 0.25, y: 13.6, z: 0});
@@ -24,6 +25,9 @@ $('#triggerHinten').on('click', function triggerHinten() {
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 105.00, z: 0});
 });
 
+/**
+ * Change the candle's light intensity depending on the previous light intensity level
+ */
 var candle = document.querySelector('#kerzeFlamme');
 var room = document.querySelector('#ambLight');
 $('#kerze').on('click', function triggerKerze() {

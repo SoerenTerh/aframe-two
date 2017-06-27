@@ -242,6 +242,7 @@ var images = [
 
 var memoryVisible = false;
 
+/** Check game status and show memory game, if no other game is in progress */
 var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
   if(checkGameStatus(games[2])!=false){
@@ -257,6 +258,7 @@ $("#cardStack").on("click", function triggerMemory() {
   }
 });
 
+/** Generate new memory game, if no other game is in progress */
 $("#cardStack").on("click", function () {
   if(checkGameStatus(games[2])!=false){
     buildMemory(cards, images, memoryCards);
@@ -324,6 +326,13 @@ $(".memoryCard").on("click", function turnCard() {
         matches = 0;
     }
 });
+
+/**
+ * Generate new memory game based on given parameters
+ * @param {array} cards - array of entities already set in the html
+ * @param {array} images - array of images to set as background images
+ * @param {memoryCards} memoryCards - array of entities to set the background images on
+ */
 
 function buildMemory(cards, images, memoryCards) {
   randomizeImages();
