@@ -13,6 +13,11 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
 
 updateCounterPerson();
 
+/**
+ * Main method of the game
+ * updateCounterPerson(): Overlay in the bottom right corner
+ * won(): Hide overlays and set game entity back to visible: false to make determination of game state possible
+ */
 $('.HaSperson').on('click', function(el){
     $("#" + el.currentTarget.id).remove();
     personLeft--;
