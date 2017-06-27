@@ -35,7 +35,7 @@ $(document).ready(function () {
     }
 
     //Process Bar
-    var endDate = new Date("07/26/2017"),
+    var endDate = new Date("08/02/2017"), //Habe eine woche nach hinten verschoben, da wir eine woche frei hatten
         beginDate = new Date("05/03/2017"),
         totalTime = (endDate - beginDate),
         d = new Date(),
