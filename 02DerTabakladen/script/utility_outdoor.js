@@ -1,6 +1,18 @@
 /* außen */
 
 var entity = document.querySelector('#camera');
+var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
+
+function checkGameStatus(curr) {
+  var gamesWOcurr = games.filter(function(e){return e !== curr});
+    for(var i = 0; i<gamesWOcurr.length; i++){
+      var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
+      if(status){
+          console.log("another game is already running");
+          return false;
+      }
+    }
+}
 
 $('#tabakladenTUERa').on('click', function doorClick() {
     'use strict';
@@ -64,14 +76,18 @@ $('#toggleInfo').on('click', function() {
 
 var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
-    AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-    $('#counterKuchen').css("display", "initial");
+    if(checkGameStatus(games[0])!=false){
+        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+        $('#counterKuchen').css("display", "initial");
+    }
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginCake() {
-    AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
-    $('#counterPerson').css("display", "initial");
+    if(checkGameStatus(games[1])!=false){
+        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+        $('#counterPerson').css("display", "initial");
+    }
 });
 
 $('#brunnen').on('click', function triggerBrunnen (){

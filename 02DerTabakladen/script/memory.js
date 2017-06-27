@@ -244,19 +244,23 @@ var memoryVisible = false;
 
 var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
-  if (memoryVisible == false) {
-    AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
-    memoryVisible = true;
-    // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
-  }
-  else {
-    AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
-    memoryVisible = false;
+  if(checkGameStatus(games[2])!=false){
+    if (memoryVisible == false) {
+        AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
+        memoryVisible = true;
+        // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
+    }
+    else {
+        AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
+        memoryVisible = false;
+    }
   }
 });
 
 $("#cardStack").on("click", function () {
-  buildMemory(cards, images, memoryCards);
+  if(checkGameStatus(games[2])!=false){
+    buildMemory(cards, images, memoryCards);
+  }
 });
 
 $(".memoryCard").on("click", function turnCard() {
