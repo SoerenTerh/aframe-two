@@ -411,7 +411,8 @@ function buildMemory(cards, images, memoryCards) {
         console.log(memoryCard);
         var buildCard = cards[iii];
         var image = images[jjj];
-        AFRAME.utils.entity.setComponentProperty(memoryCard, "color", "#eb2348"); // funktioniert beim ersten Aufrufen, danach aber nicht mehr!?
+        AFRAME.utils.entity.setComponentProperty(memoryCard, "color", "#eb2348");
+        AFRAME.utils.entity.setComponentProperty(buildCard, "visible", false);
         AFRAME.utils.entity.setComponentProperty(buildCard, "src", image.img);
         AFRAME.utils.entity.setComponentProperty(buildCard, "id", "m-image" + iii);
         AFRAME.utils.entity.setComponentProperty(buildCard, "name", image.name);
