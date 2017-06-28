@@ -539,13 +539,13 @@ $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
 });
 
 
-//Cursor is not on .clickable
-$("a-entity").on('fusing', function onAEntityFusing() {
-    'use strict';
-    currentTarget = "#cursor";
-    trigggerEvent = "notClickable";
-    document.querySelector(currentTarget).emit(trigggerEvent);
-});
+////Cursor is not on .clickable
+//$("a-entity").on('fusing', function onAEntityFusing() {
+//    'use strict';
+//    currentTarget = "#cursor";
+//    trigggerEvent = "notClickable";
+//    document.querySelector(currentTarget).emit(trigggerEvent);
+//});
 
 //trigger storyline after start was iniciated
 $(".play").on('fusing', function onPlayFusing() {
