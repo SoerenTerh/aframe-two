@@ -1,16 +1,6 @@
 /* innen */
 
-var entity = document.querySelector('#camera');
-
-$('#tabakladenTUERi').on('click', function doorClick() {
-    'use strict';
-    var out = "index.html";
-    setTimeout(function timoutFadeOut() {
-        $('#innen').fadeOut("slow", function timeoutSlow() {
-            window.location = out;
-        });
-    }, 1500);
-});
+var entity = document.querySelector('#cameraInnen');
 
 /** Trigger points to move in the room */
 $('#triggerTuer').on('click', function triggerTuer() {

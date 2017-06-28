@@ -1,6 +1,6 @@
 /* außen */
 
-var entity = document.querySelector('#camera');
+var entity = document.querySelector('#cameraAussen');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
 
 /**

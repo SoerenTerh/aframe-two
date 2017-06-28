@@ -10,6 +10,7 @@ var lastClickableFused = 0;
 var nowClicked = 0;
 var next = true;
 var timeoutId = null;
+var currentCursor;
 
 /**
  * Array of events - used in the methods below
@@ -275,6 +276,23 @@ function getColorOfPerson(fireAt) {
     }
 }
 
+//emit event for right cursor
+function cursorEmitEvent(trigggerEvent) {
+    if(window.location.hash == '#Tabakladen') {
+        currentCursor = "#cursorInnen";
+    } else if (window.location.hash == '#Platz') {
+        currentCursor = "#cursorAussen";
+    } else {
+        console.log("ERROR: hash not found");
+    }
+
+    if (trigggerEvent != "notClickable") { //Testing
+        console.log(currentCursor, " -> ", trigggerEvent);
+    }
+
+    document.querySelector(currentCursor).emit(trigggerEvent);
+}
+
 /**
  * Main method to proceed through the storyline
  * @param {string} currentTarget - string value of corresponding object target position
@@ -360,7 +378,7 @@ function storyline(currentTarget, currentEvent) {
                         }
                         k++;
                         try {
-                        // Perform animations from inline html
+                            // Perform animations from inline html
                             if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
                                 console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
                                 animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
@@ -487,7 +505,7 @@ function playableFound(currentTarget) {
 //Cursor found .clickable
 $(".clickable").on('fusing', function onclickableFusing() {
     'use strict';
-    if (at === "two" || at === "three") {
+    if ((at === "two" || at === "three") && window.location.hash == '#Tabakladen') { //maybe....
         currentTarget = $(this).closest("a-entity").attr("class");
         playableFound(currentTarget);
 
@@ -496,7 +514,8 @@ $(".clickable").on('fusing', function onclickableFusing() {
         console.log(currentTarget);
 
         trigggerEvent = "clickableFound";
-        document.querySelector("#cursor").emit(trigggerEvent);
+        cursorEmitEvent(trigggerEvent);
+
         document.querySelector(currentTarget).emit(trigggerEvent);
         lastClickableFused = currentTarget;
     }
@@ -507,15 +526,15 @@ $(".clickable").on('fusing', function onclickableFusing() {
  */
 $(".clickable").on('click', function onclickableClick() {
     'use strict';
-    if (at !== "two" || at !== "three" || at !== "four" || at !== "sTwo" || at !== "sFourP3begin" || at !== "sFour_p3" || at !== "sFive_P2" || at !== "sFive_P3no" || at !== "v21" || at !== "v21_3" || at !== "V32") {
-        currentTarget = '#' + $(this).closest("a-entity").attr('id');
-        trigggerEvent = "clickableClick";
-        nowClicked = currentTarget;
-        if (nowClicked === lastClickableFused) {
-            document.querySelector("#cursor").emit(trigggerEvent);
-            document.querySelector(currentTarget).emit(trigggerEvent);
-        }
+    //if (at !== "two" || at !== "three" || at !== "four" || at !== "sTwo" || at !== "sFourP3begin" || at !== "sFour_p3" || at !== "sFive_P2" || at !== "sFive_P3no" || at !== "v21" || at !== "v21_3" || at !== "V32") {
+    currentTarget = '#' + $(this).closest("a-entity").attr('id');
+    trigggerEvent = "clickableClick";
+    nowClicked = currentTarget;
+    if (nowClicked === lastClickableFused) {
+        cursorEmitEvent(trigggerEvent);
+        document.querySelector(currentTarget).emit(trigggerEvent);
     }
+    //}
 });
 
 //Camera jump
@@ -525,7 +544,7 @@ $(".clickableTrigger").on('click', function onClickableTriggerClick() {
     trigggerEvent = "clickableClick";
     nowClicked = currentTarget;
     if (nowClicked === lastClickableFused) {
-        document.querySelector("#cursor").emit(trigggerEvent);
+        cursorEmitEvent(trigggerEvent);
     }
 });
 $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
@@ -534,18 +553,17 @@ $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
     console.log(currentTarget);
 
     trigggerEvent = "clickableFound";
-    document.querySelector("#cursor").emit(trigggerEvent);
+    cursorEmitEvent(trigggerEvent);
     lastClickableFused = currentTarget;
 });
 
 
-//Cursor is not on .clickable
-$("a-entity").on('fusing', function onAEntityFusing() {
-    'use strict';
-    currentTarget = "#cursor";
-    trigggerEvent = "notClickable";
-    document.querySelector(currentTarget).emit(trigggerEvent);
-});
+////Cursor is not on .clickable
+//$("a-entity").on('fusing', function onAEntityFusing() {
+//    'use strict';
+//    trigggerEvent = "notClickable";
+//    cursorEmitEvent(trigggerEvent);
+//});
 
 //trigger storyline after start was iniciated
 $(".play").on('fusing', function onPlayFusing() {
@@ -586,5 +604,5 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
         currentTarget = "#one";
         at = "one";
         storyline(currentTarget, at);
-    }, 2500);
+    }, 1500);
 });
