@@ -10,7 +10,7 @@ var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
  */
     
 function checkGameStatus(curr) {
-  var gamesWOcurr = games.filter(function(e){return e !== curr});
+  var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
       var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
       if(status){
@@ -84,6 +84,24 @@ $('#toggleInfo').on('click', function() {
     console.log(here);
     AFRAME.utils.entity.setComponentProperty(infobox, 'visible', true);
     AFRAME.utils.entity.setComponentProperty(specialsbox, 'visible', false);
+});
+
+
+
+var cakeEntity = document.querySelector('#cakeGame');
+$('#cakeTrigger').on('click', function beginCake() {
+    if(checkGameStatus(games[0])!==false){
+        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+        $('#counterKuchen').css("display", "initial");
+    }
+});
+
+var HideAndSeekEntity = document.querySelector('#HideAndSeek');
+$('#hideAndSeekTrigger').on('click', function beginCake() {
+    if(checkGameStatus(games[1])!==false){
+        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+        $('#counterPerson').css("display", "initial");
+    }
 });
 
 /** Trigger rain component already registered in entity.js */

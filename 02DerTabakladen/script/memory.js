@@ -134,24 +134,26 @@ memoryEntity.appendChild(card16);
 var tries = 0;
 var count = 0;
 var matches = 0;
+var foundCards = [];
+var tempFoundCards = [];
 
 var memoryCards = [
-  document.querySelector("#memoryCard1"),
-  document.querySelector("#memoryCard2"),
-  document.querySelector("#memoryCard3"),
-  document.querySelector("#memoryCard4"),
-  document.querySelector("#memoryCard5"),
-  document.querySelector("#memoryCard6"),
-  document.querySelector("#memoryCard7"),
-  document.querySelector("#memoryCard8"),
-  document.querySelector("#memoryCard9"),
-  document.querySelector("#memoryCard10"),
-  document.querySelector("#memoryCard11"),
-  document.querySelector("#memoryCard12"),
-  document.querySelector("#memoryCard13"),
-  document.querySelector("#memoryCard14"),
-  document.querySelector("#memoryCard15"),
-  document.querySelector("#memoryCard16")
+    document.querySelector("#memoryCard1"),
+    document.querySelector("#memoryCard2"),
+    document.querySelector("#memoryCard3"),
+    document.querySelector("#memoryCard4"),
+    document.querySelector("#memoryCard5"),
+    document.querySelector("#memoryCard6"),
+    document.querySelector("#memoryCard7"),
+    document.querySelector("#memoryCard8"),
+    document.querySelector("#memoryCard9"),
+    document.querySelector("#memoryCard10"),
+    document.querySelector("#memoryCard11"),
+    document.querySelector("#memoryCard12"),
+    document.querySelector("#memoryCard13"),
+    document.querySelector("#memoryCard14"),
+    document.querySelector("#memoryCard15"),
+    document.querySelector("#memoryCard16")
 ];
 
 var cards = [
@@ -241,89 +243,155 @@ var images = [
 ];
 
 var memoryVisible = false;
+var turnCardEvent = false;
 
 /** Check game status and show memory game, if no other game is in progress */
 var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
-  if(checkGameStatus(games[2])!=false){
-    if (memoryVisible == false) {
-        AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
-        memoryVisible = true;
-        // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
+    if(checkGameStatus(games[2])!==false){
+        if (memoryVisible === false) {
+            AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
+            memoryVisible = true;
+            // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
+        }
+        else {
+            AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
+            memoryVisible = false;
+        }
     }
-    else {
-        AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
-        memoryVisible = false;
-    }
-  }
 });
 
 /** Generate new memory game, if no other game is in progress */
 $("#cardStack").on("click", function () {
-  if(checkGameStatus(games[2])!=false){
-    buildMemory(cards, images, memoryCards);
-  }
+    if(checkGameStatus(games[2])!==false){
+        buildMemory(cards, images, memoryCards);
+    }
 });
 
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
+function wait(on) {
+    document.querySelector(on).addEventListener('animationend', function (evt) {
+        console.log(on + ' ->This Animation is done');
+    });
+}
+
+
+var ready = true;
+var first, firstImage, firstCard, firstCardEntity,
+    second, secondImage, secondCard, secondCardEntity,
+    triggerEvent;
+function removeFromArray(temp) {
+    if(temp != -1) {
+        foundCards.splice(temp, 1);
+    }
+}
+
+
 $(".memoryCard").on("click", function turnCard() {
-    var card = "#" + $(this).closest("a-box").attr("id");
-    var cardEntity = document.querySelector(card);
-    var imageId = "#" + $(this).closest("a-box").children("a-image").attr("id");
-    var imageEntity = document.querySelector(imageId);
+    if (ready === true) {
+        var foundcard = "#" + $(this).closest("a-box").attr("id");
+        console.log(isInArray(foundcard, foundCards));
 
-    var cardType = "#" + $(this).closest("a-box").children("a-image").attr("name");
+        if (isInArray(foundcard, foundCards) === false && tempFoundCards.length < 2) {
 
-    if (tries === 0) {
-        tries = 1;
-        first = cardType;
-        firstImage = imageEntity;
-        firstCard = card;
-        firstCardEntity = cardEntity;
-        console.log("First: " + first);
+            var card = foundcard;
+            var cardEntity = document.querySelector(card);
+            var imageId = "#" + $(this).closest("a-box").children("a-image").attr("id");
+            var imageEntity = document.querySelector(imageId);
+            var cardType = "#" + $(this).closest("a-box").children("a-image").attr("name");
 
-        triggerEvent = "turnCard";
-        document.querySelector(card).emit(triggerEvent);
-        setTimeout(function colorAndVisibleTurn() {
-            AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
-            AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
-        }, 1200);
-    }
-    else if (tries == 1 && card != firstCard) {
-        tries = 0;
-        second = cardType;
-        secondImage = imageEntity;
-        secondCard = card;
-        secondCardEntity = cardEntity;
-        console.log("Second: " + second);
+            //    if (!isInArray(card, foundCards) && tempFoundCards.length < 2) {
+            foundCards.push(card);
+            tempFoundCards.push(card);
+            if (tries === 0) {
+                tries = 1;
+                first = cardType;
+                firstImage = imageEntity;
+                firstCard = card;
+                firstCardEntity = cardEntity;
+                console.log("First: " + first);
 
-        triggerEvent = "turnCard";
-        document.querySelector(card).emit(triggerEvent);
-        setTimeout(function colorAndVisibleTurn() {
-            AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
-            AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
-        }, 1200);
 
-        if (first == second) {
-            matches++;
-        }
-        else {
-            setTimeout(function triggerTurnCard() {
                 triggerEvent = "turnCard";
-                document.querySelector(firstCard).emit(triggerEvent);
-                document.querySelector(secondCard).emit(triggerEvent);
-
-                setTimeout(function colorAndVisibleForFound() {
-                    AFRAME.utils.entity.setComponentProperty(firstImage, "visible", false);
-                    AFRAME.utils.entity.setComponentProperty(secondImage, "visible", false);
-                    AFRAME.utils.entity.setComponentProperty(firstCardEntity, "color", "#eb2348");
-                    AFRAME.utils.entity.setComponentProperty(secondCardEntity, "color", "#eb2348");
+                document.querySelector(card).emit(triggerEvent);
+                setTimeout(function colorAndVisibleTurn() {
+                    AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
+                    AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
                 }, 1200);
-            }, 3500);
+            }
+            else if (tries == 1 && card != firstCard) {
+                ready = false;
+                tries = 0;
+                second = cardType;
+                secondImage = imageEntity;
+                secondCard = card;
+                secondCardEntity = cardEntity;
+                console.log("Second: " + second);
+
+
+                triggerEvent = "turnCard";
+                document.querySelector(card).emit(triggerEvent);
+                setTimeout(function colorAndVisibleTurn() {
+                    AFRAME.utils.entity.setComponentProperty(cardEntity, "color", "white");
+                    AFRAME.utils.entity.setComponentProperty(imageEntity, "visible", "true");
+                }, 1200);
+
+                if (first == second) {
+                    matches++;
+                }
+                else {
+                    var tempFirst = first, 
+                        tempFirstImage = firstImage, 
+                        tempFirstCard = firstCard, 
+                        tempFirstCardEntity = firstCardEntity,
+                        tempSecond = second, 
+                        tempSecondImage = secondImage, 
+                        tempSecondCard = secondCard, 
+                        tempSecondCardEntity = secondCardEntity,
+                        tempTriggerEvent = triggerEvent;
+
+                    setTimeout(function triggerTurnCard() {
+                        console.log("foundCards: "+ foundCards);
+
+                        var temp1 = foundCards.indexOf(tempFirstCard);
+                        removeFromArray(temp1);
+                        var temp2 = foundCards.indexOf(tempSecondCard);
+                        removeFromArray(temp2);
+
+                        console.log("foundCards: "+ foundCards);
+                        document.querySelector(tempFirstCard).emit(tempTriggerEvent);
+                        document.querySelector(tempSecondCard).emit(tempTriggerEvent);
+                        turnCardEvent = false;
+
+                        setTimeout(function colorAndVisibleForFound() {
+                            AFRAME.utils.entity.setComponentProperty(tempFirstImage, "visible", false);
+                            AFRAME.utils.entity.setComponentProperty(tempSecondImage, "visible", false);
+                            AFRAME.utils.entity.setComponentProperty(tempFirstCardEntity, "color", "#eb2348");
+                            AFRAME.utils.entity.setComponentProperty(tempSecondCardEntity, "color", "#eb2348");
+
+                        }, 1200);
+                    }, 3500);
+                }
+                console.log("tempFoundCards: " + tempFoundCards);
+                for (var ii = 0; ii < tempFoundCards.length; ii++) {
+                    wait(tempFoundCards[ii]);
+                }
+                tempFoundCards=[];
+                ready = true;
+
+            }
+            if (matches == 1) {
+                console.log("Hurra!");
+                matches = 0;
+            }
+
+            if (foundCards.length == cards.length) {
+                console.log("Hip Hip Hurra!");
+            }
         }
-    }
-    if (matches == 1) {
-        console.log("Hurra!");
-        matches = 0;
     }
 });
 
@@ -335,34 +403,33 @@ $(".memoryCard").on("click", function turnCard() {
  */
 
 function buildMemory(cards, images, memoryCards) {
-  randomizeImages();
+    foundCards = [];
+    randomizeImages();
 
-  for (i, j = 0; i, j < cards.length; i++, j++) {
-      memoryCard = memoryCards[i];
-      console.log(memoryCard);
-      card = cards[i];
-      image = images[j];
-      AFRAME.utils.entity.setComponentProperty(memoryCard, "color", "#eb2348"); // funktioniert beim ersten Aufrufen, danach aber nicht mehr!?
-      AFRAME.utils.entity.setComponentProperty(card, "src", image.img);
-      AFRAME.utils.entity.setComponentProperty(card, "id", "m-image" + i);
-      AFRAME.utils.entity.setComponentProperty(card, "name", image.name);
-  }
+    for (var iii = 0, jjj = 0; iii, jjj < cards.length; iii++, jjj++) {
+        var memoryCard = memoryCards[iii];
+        console.log(memoryCard);
+        var buildCard = cards[iii];
+        var image = images[jjj];
+        AFRAME.utils.entity.setComponentProperty(memoryCard, "color", "#eb2348"); // funktioniert beim ersten Aufrufen, danach aber nicht mehr!?
+        AFRAME.utils.entity.setComponentProperty(buildCard, "src", image.img);
+        AFRAME.utils.entity.setComponentProperty(buildCard, "id", "m-image" + iii);
+        AFRAME.utils.entity.setComponentProperty(buildCard, "name", image.name);
+    }
 
-  // randomize array of images
-  function randomizeImages(){
-      Array.prototype.randomize = function()
-      {
-          var i = this.length, j, temp;
-          while ( --i )
-          {
-              j = Math.floor( Math.random() * (i - 1) );
-              temp = this[i];
-              this[i] = this[j];
-              this[j] = temp;
-          }
-      };
-
-      images.randomize();
-  }
-
+    // randomize array of images
+    function randomizeImages(){
+        Array.prototype.randomize = function()
+        {
+            var i = this.length, j, temp;
+            while ( --i )
+            {
+                j = Math.floor( Math.random() * (i - 1) );
+                temp = this[i];
+                this[i] = this[j];
+                this[j] = temp;
+            }
+        };
+        images.randomize();
+    }
 }
