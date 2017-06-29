@@ -10,7 +10,6 @@
 
         <!-- a-frame-->
         <script src="script/workingAFrame_0.5.0/aframe.min.js"></script>
-        <script src="script/workingAFrame_0.5.0/aframe.min.js.map"></script>
 
         <!-- a-frame physics system -->
         <script src="script/workingAFrame_0.5.0/aframe-physics-system.min.js"></script>
@@ -32,7 +31,7 @@
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
-        <a-scene physics="debug: true" id="scene" auto-enter-vr="display: all" set-cam> <!--stats-->
+        <a-scene physics="debug: false" id="scene" auto-enter-vr="display: all" set-cam> <!--stats-->
 
             <!--camera Aussen-->
             <a-entity id="cameraAussen"
@@ -321,7 +320,7 @@
             <a-entity id="aussenSzene" scale="1 1 1" rotation="0 0 0" position="0 0 0">
 
                 <!-- TriggerPoints -->
-                <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22.19 30.00 -8.11">
+                <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22 30.00 -8">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
                 
@@ -330,6 +329,22 @@
                 </a-box>
                 
                 <a-box id="triggerTeppichladen" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-75.00 30.00 6">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
+
+                <a-box id="triggerTeppichladenxBaeckerei" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-100 30 -65">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
+                
+                <a-box id="triggerBaeumeV2" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="57 30 -40">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
+                
+                <a-box id="triggerBaeumexTabakladen" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="57 30 84">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
+
+                <a-box id="triggerTabakladenxTeppichladen" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-60 30 84">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
