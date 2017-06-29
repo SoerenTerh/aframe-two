@@ -26,6 +26,7 @@
         <script src="script/entity.js"></script>
 
         <link href="style/style.css" rel="stylesheet">
+
     </head>
 
 
@@ -318,39 +319,87 @@
                 <!-- Info-Boxen -->
                 <a-entity id="textbox" position="0 15 22" visible="false">
                     <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
+					
                     </a-box>
                     <a-entity id="infobox" visible="true">
-                        <a-entity id="welcome" text="color: white; value: Herzlich Willkommen in Sezuan!; width: 2" scale="5 5 5" position="0 3 .001">
-                        </a-entity>
-                        <a-entity id="explanation" text="color: white; value: Du befindest dich hier in einer virtuellen Umsetzung der 2. Szene, die im Tabakladen spielt. Bewege dich durch die Szenen, indem du die grauen Boxen ansteuerst. Du gelangst in den Tabakladen, in dem die eigentliche Theater-Szene startet, indem du die Tuer des Tabakladens hinter dir fokussierst.;
-                                                         width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
-                        </a-entity>
-                        <a-entity id="info" text="color: white; value: Fokussiere die Icons fuer mehr Infos. Schliesse dieses Textfeld, indem du das X fokussierst. Du kannst es jederzeit ueber das Info-Icon auf dem Brunnen wieder oeffnen.;
-                                                  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 -1 .001">
-                        </a-entity>
-                        <a-entity id="titleSpecials"
-                                  text="color: white; value: Specials; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
-                                  scale="4 4 4" position="0.4 -3.2 .001">
-                        </a-entity>
-                        <a-image id="toggleSpecials" class="clickableTrigger" src="../assets/icons/ic_local_activity_black_24px.svg" scale="1 1 1" position="-4 -2.5 0.001"></a-image>
-                    </a-entity>
-
-                    <a-entity id="specialsbox" visible="false">
-                        <a-entity id="specialsHeadline" text="color: white; value: Here be specials!; width: 2" scale="5 5 5" position="0 3 .001">
-                        </a-entity>
-                        <a-entity id="specialsExplanation" text="color: white; value: - Kerze
-                                                                 - Kuchenspiel
-                                                                 - was uns sonst noch einfaellt;
-                                                                 width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0 1 .001">
-                        </a-entity>
-                        <a-entity id="titleInfo"
-                                  text="color: white; value: Info; width: 2.5; lineHeight: 60; align: left; wrapCount: 60"
-                                  scale="4 4 4" position="4.7 -3.2 .001">
-                        </a-entity>
-                        <a-image id="toggleInfo" class="clickableTrigger" src="../assets/icons/ic_info_outline_white_24px.svg" scale="1 1 1" position="0 -2.5 0.001"></a-image>
+					<!-------------------------Commited after Merge ------------------------->          
+						<!--location-->
+						<a-entity id="locationver" position="0 -0.932 0">
+							<a-entity id="locationex" text="color: white; value: Platz in Sezuan;
+															 width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.452 0.001">									
+							</a-entity>
+							
+							<a-entity id="locationerkl" text="color: white; value: Shen Tes Tabakladen;
+															 width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.135 .001">									
+							</a-entity>
+							<a-image id="location" src="../assets/icons/location.svg" scale="0.5 0.5 0.5" position="-5 3.33 0.002"></a-image>
+						</a-entity>
+						<!-- Linse-->
+						<a-entity id="linsever" position="0 -1.3 0">
+							<a-entity id="linse" text="color: white; value: Dein virtuelles Auge;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 2.358 .001">
+							</a-entity>
+							<a-image id="radioUn" src="../assets/icons/radio-unchecked.svg" scale="0.5 0.5 0.5" position="-5 2.33 0.002"></a-image>
+							
+						</a-entity>
+						<a-entity id="linsever1" position="0 -2.3 0">	
+							<a-entity id="linse2" text="color: white; value: Interaktionsmöglichkeit gefunden;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 1.340 .001">
+							</a-entity>
+							<a-image id="radio" src="../assets/icons/radio-checked.svg" scale="0.5 0.5 0.5" position="-5 1.33 0.002"></a-image>	
+						</a-entity>
+						<!-- Trigger-->
+						<a-entity id="triggerver" position="0 -2.713 0">
+							<a-entity id="trigger" text="color: white; value: Teleportationspunkte;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 0.357 .001">
+							</a-entity>
+							<a-image id="stop" src="../assets/icons/stop2.svg" scale="0.5 0.5 0.5" position="-5 0.33 0.002"></a-image>
+						</a-entity>
+						
+						<!-- enter-->
+						<a-entity id="enterver" position="5.831 3.068 0">
+							<a-entity id="enterex" text="color: white; value: Wechsel der Szene;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -0.618 .001">
+							</a-entity>
+							
+							<a-image id="enter" src="../assets/icons/enter.svg" scale="0.5 0.5 0.5" position="-5 -0.66 0.002"></a-image>										
+						</a-entity>
+						<!--dice-->
+						<a-entity id="dicever" position="5.831 2.6 0">
+							<a-entity id="diceex" text="color: white; value: Memory;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -1.494 .001">
+							</a-entity>
+							
+							<a-entity id="diceex1" text="color: white; value: Versteck-Spiel;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -1.796 .001">
+							</a-entity>
+						
+							<a-entity id="diceex2" text="color: white; value: Kuchen-Such-Spiel;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -2.124 .001">
+							</a-entity>
+							
+							<a-image id="dice" src="../assets/icons/dice.svg" scale="0.5 0.5 0.5" position="-5 -1.66 0.002"></a-image>
+						</a-entity>
+						<!-- cross-->
+						<a-entity id="crossver" position="5.831 1.7 0">
+							<a-entity id="crossex" text="color: white; value: Schliessen der Text-Tafel;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -2.655 .001">
+							</a-entity>
+						
+							<a-image id="cross" src="../assets/icons/cross.svg" scale="0.5 0.5 0.5" position="-5 -2.66 0.002"></a-image>
+						</a-entity>
+						<!--volume-->
+						<a-entity id="volumever" position="5.831 1.2 0">
+							<a-entity id="volumeex" text="color: white; value: Schalte deinen Ton ein;
+													  width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -3.622 .001">
+							</a-entity>	
+						
+                        <a-image id="volume" src="../assets/icons/volume-high.svg" scale="0.5 0.5 0.5" position="-5 -3.66 0.002"></a-image>
+						</a-entity>	
                     </a-entity>
 
                     <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
+									
                 </a-entity>
 
                 <a-entity id="textbox-nav">
