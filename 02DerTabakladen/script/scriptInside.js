@@ -20,8 +20,8 @@ var eventArr = ["one",
                 "twoTalk", "twoTalk2",
                 "three", "four",
                 "fourTalk", "fourTalk2",
-                "five",
                 "fiveAll",
+                "five",
                 "sixTalk",
                 "six", "six2",
                 "sixTalk2",
@@ -122,6 +122,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
     fourTalk = ["#ShuiTa", "#Frau"],
     fourTalk2 = ["#ShuiTa"],
+    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"],
     five = ["#kerzeFlamme", "#sockelNeffe", "#containerNeffe",
             "#sockelMann", "#containerMann",
             '#sockelSchwaegerin', '#containerSchwaegerin',
@@ -129,7 +130,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
             "#sockelJunge", "#containerJunge",
             /*"#sockelBruder",*/ /*"#containerBruder",*/
             "#sockelNichte", "#containerNichte"], //alle Wachen auf
-    fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"],
     sixTalk = ["#Neffe"],
 
     six = ["#containerShuiTa"],
@@ -451,7 +451,7 @@ function storyline(currentTarget, currentEvent) {
 
 /**
  * Check whether a target has the play class
- * @param {string} currentTarget 
+ * @param {string} currentTarget
  */
 function playableFound(currentTarget) {
     'use strict';
