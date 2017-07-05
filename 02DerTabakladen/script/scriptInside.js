@@ -17,18 +17,18 @@ var currentCursor;
  */
 var eventArr = ["one",
                 "two",
-                "twoTalk", "twoTalk2",
+              //  "twoTalk", "twoTalk2",
                 "three", "four",
-                "fourTalk", "fourTalk2",
+                //"fourTalk", "fourTalk2",
                 "fiveAll",
                 "five",
-                "sixTalk",
+              //  "sixTalk",
                 "six", "six2",
-                "sixTalk2",
-                "sevenTalk0",
+              //  "sixTalk2",
+            //    "sevenTalk0",
                 "seven", "seven2", "seven3", "seven4",
-                "sevenTalk",
-                "sOneTalk", "sTwoTalk", "sThreeTalk",
+            //    "sevenTalk",
+              //  "sOneTalk", "sTwoTalk", "sThreeTalk",
                 "sFourTalkStart",
                 "sFourTalk1", "sFourTalk2",
                 "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
@@ -116,12 +116,12 @@ var personColors = ["#EBD3B9",/*Frau ja*/
  */
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
     two = ["#kerzeFlamme", "#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
-    twoTalk = ["#Frau", "#Neffe"],
-    twoTalk2 = ["#Frau"], //Frau lacht
+    // twoTalk = ["#Frau", "#Neffe"],
+    // twoTalk2 = ["#Frau"], //Frau lacht
     three = ["#kerzeFlamme", "#sockelFrau", "#containerFrau", "#tabakladenTUERi"], //Frau öffnet Tür für Schreiner und ShuiTa
     four = ["#containerShuiTa", "#containerSchreiner", "#tabakladenTUERi"], //ShuiTa und Schreiner treten ein
-    fourTalk = ["#ShuiTa", "#Frau"],
-    fourTalk2 = ["#ShuiTa"],
+    // fourTalk = ["#ShuiTa", "#Frau"],
+    // fourTalk2 = ["#ShuiTa"],
     fiveAll = ["#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"],
     five = ["#kerzeFlamme", "#sockelNeffe", "#containerNeffe",
             "#sockelMann", "#containerMann",
@@ -130,23 +130,24 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
             "#sockelJunge", "#containerJunge",
             /*"#sockelBruder",*/ /*"#containerBruder",*/
             "#sockelNichte", "#containerNichte"], //alle Wachen auf
-    sixTalk = ["#Neffe"],
+    // sixTalk = ["#Neffe"],
 
     six = ["#containerShuiTa"],
     six2 = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
-    sixTalk2 = ["#ShuiTa",  "#Mann"],
-    sevenTalk0 = ["#ShuiTa"],
+    // sixTalk2 = ["#ShuiTa",  "#Mann"],
+    // sevenTalk0 = ["#ShuiTa"],
     seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
     seven4 = ["#containerShuiTa"],
-    sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
-
-    sOneTalk = ["#Frau"],
-    sTwoTalk = ["#Neffe"],
-    sThreeTalk = ["#Mann"],
+    // sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
+    //
+    // sOneTalk = ["#Frau"],
+    // sTwoTalk = ["#Neffe"],
+    // sThreeTalk = ["#Mann"],
 
     sFourTalkStart = ["#Mann"],
+    // ADD "Du, du und du" ANIMATIONS HERE!!!
     sFourTalk1 = ["#Mann", "#Schwaegerin"],
     sFourTalk2 = ["#Mann"],
 
