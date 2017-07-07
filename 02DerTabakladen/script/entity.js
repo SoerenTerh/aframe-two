@@ -15,7 +15,7 @@ AFRAME.registerComponent('set-cam-outdoor', {
             document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
             document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
 
-            AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 16});
+            AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 20});
             AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
             console.log("OUT");
         });
@@ -73,7 +73,7 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
                     document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
 
-                    AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 16});
+                    AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 20});
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
 
                     console.log("LOADING");
