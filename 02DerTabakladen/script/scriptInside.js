@@ -534,6 +534,7 @@ $(".clickable").on('click', function onclickableClick() {
     if (nowClicked === lastClickableFused) {
         cursorEmitEvent(trigggerEvent);
         document.querySelector(currentTarget).emit(trigggerEvent);
+        console.log(currentTarget);
     }
     //}
 });

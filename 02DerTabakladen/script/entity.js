@@ -5,6 +5,8 @@ AFRAME.registerComponent('set-cam-outdoor', {
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#cameraAussen');
 
+            this.el.emit('open');  
+            console.log(this.el);
             document.location.hash = 'Platz';
             document.querySelector('#cameraAussen').setAttribute('camera', 'active', true);  
             document.getElementById("innenSzene").setAttribute('visible', 'false');
