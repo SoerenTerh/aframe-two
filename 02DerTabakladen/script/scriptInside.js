@@ -62,10 +62,10 @@ var eventArr = ["one",
                 "v28",
                 // "v28Talk", "v29Talk", "v30Talk", "v31Talk",
                 "v32",
-                "v32Talk",
-                "v33Talk",
-                "v34Talk",
-                "v36Talk",
+                // "v32Talk",
+                // "v33Talk",
+                // "v34Talk",
+                // "v36Talk",
                 "mzeroTalk", "mone", "mone2", "mtwoTalk", "mthree", "mthreeTalk", "mfour",
                 "mfourTalk", "mfive", "mfive2", "mfiveTalk", "mfiveTalk2", "msix", "msix2",
                 "msix2Talk", "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3", "mseven2", "msevenTalk4",
@@ -203,26 +203,26 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     // v21Talk = ["#Schreiner"], // 100
     v21 = [ "#Mann", "#tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
     v21_2 = ["#Mann", "#stellage_ohne-rechnung"],
-    v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
+    // v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
     v21_3 = [ "#Mann", "#tabakladenTUERi"], // Mann kommt wieder rein
-    v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
+    // v23Talk = ["#Schreiner", "#ShuiTa"], // legt Münzen auf Tisch
     v24 = ["#ShuiTa", "#Mann"], // legt Münzen auf Tisch, Mann trägt 1. Stellage zurück
-    v25Talk = ["#Mann"], // genug für verschnittene Bretter
+    // v25Talk = ["#Mann"], // genug für verschnittene Bretter
     v26 = ["#Mann", "#stellage_ohne-rechnung"], // trägt 2. Stellage zurück: drehen
     v26two = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zurück
     v26three = ["#Mann"],
-    v27Talk = ["#Schreiner"], // zu betrinken
+    // v27Talk = ["#Schreiner"], // zu betrinken
     v28 = ["#Schreiner"], // ab
-    v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
-    v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
-    v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
+    // v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
+    // v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
+    // v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
 
-    v31Talk = ["#ShuiTa"], // Wie ihr wollt
+    // v31Talk = ["#ShuiTa"], // Wie ihr wollt
     v32 = ["#Schreiner", "#ShuiTa", "#tabakladenTUERi", "#containerPolizist"], // Shui zur Tür, Polizist taucht auf
-    v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
-    v33Talk = ["#ShuiTa"], // "Shui Ta"
-    v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
-    v36Talk = ["#ShuiTa"],
+    // v32Talk = ["#ShuiTa", "#Polizist"], // Beamter Viertel? Jawohl
+    // v33Talk = ["#ShuiTa"], // "Shui Ta"
+    // v34Talk = ["#ShuiTa", "#Polizist"], // schönes Wetter, bisschen warm ENDE VERA
+    // v36Talk = ["#ShuiTa"],
 
     //fünfteSeite
     mzeroTalk = ["#Mann"], //mann14
