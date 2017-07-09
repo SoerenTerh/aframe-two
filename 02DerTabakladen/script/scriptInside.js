@@ -38,29 +38,29 @@ var eventArr = ["one",
                 // "sSixTalk1", "sSixTalk2", "sSixTalk3",
                 "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU","sSeven_P2", "sSeven_P2end",
                 "vOne",
-                "vOneTalk",
+                // "vOneTalk",
                 "vTwo",
-                "vTwoTalk", "vFourTalk",
+                // "vTwoTalk", "vFourTalk",
                 "vFive",
-                "vSixTalk", "vNineTalk",
+                // "vSixTalk", "vNineTalk",
                 "vEleven",
-                "vElevenTalk",
+                // "vElevenTalk",
                 "vFifteen",
-                "vFourteenTalk",
+                // "vFourteenTalk",
                 "vSixteen",
-                "vSixteenTalk",
+                // "vSixteenTalk",
                 "vEighteen", "vEighteen2",
                 "vEighteen3",
-                "vEighteenTalk",
-                "v21Talk",
+                // "vEighteenTalk",
+                // "v21Talk",
                 "v21", "v21_2",
-                "v22Talk",
+                // "v22Talk",
                 "v21_3",
-                "v23Talk", "v25Talk",
+                // "v23Talk", "v25Talk",
                 "v26", "v26two", "v26three",
-                "v27Talk",
+                // "v27Talk",
                 "v28",
-                "v28Talk", "v29Talk", "v30Talk", "v31Talk",
+                // "v28Talk", "v29Talk", "v30Talk", "v31Talk",
                 "v32",
                 "v32Talk",
                 "v33Talk",
@@ -183,24 +183,24 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
-    vOneTalk = ["#Schreiner"], // Schreiner redet
+    // vOneTalk = ["#Schreiner"], // Schreiner redet
     vTwo = ["#ShuiTa", "#Rechnung"], // Rechnung fliegt zu ShuiTa
-    vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
-    vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
+    // vTwoTalk = ["#ShuiTa", "#Schreiner"], // zu viel, ernähren
+    // vFourTalk = ["#ShuiTa", "#Schreiner"], // wie viele Kinder
     vFive = ["#Rechnung"], // Rechnung wieder weg
-    vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ], // 20 Dollar, Nussbaum
-    vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
+    // vSixTalk = ["#ShuiTa", "#Mann", "#Schreiner" ], // 20 Dollar, Nussbaum
+    // vNineTalk = ["#ShuiTa", "#Schreiner"], // dann weg, was
     vEleven = ["#Frau"], // Frau aus dem Weg räumen
-    vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
+    // vElevenTalk = ["#ShuiTa", "#Frau", "#Schreiner"], // zu teuer, gut gegeben, ShenTe soll kommen
     vFifteen = ["#Schreiner"], // geht zu Stellage
-    vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
+    // vFourteenTalk = ["#ShuiTa"], // Sie ist ruiniert
     vSixteen = ["#Schreiner", "#ZigarettenkisteRegalLinks", "#stellage_ohne-rechnung"], // nimmt Stellage und trägt zur Tür
-    vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
+    // vSixteenTalk = ["#Schreiner", "#ShuiTa"], // auf dem Boden, Mann helfen
     vEighteen = ["#Mann", "#Schreiner"], // umdrehen
     vEighteen2 = ["#Mann"], // zu Stellage
     vEighteen3 = ["#Mann", "#ZigarettenkisteRegalLinksFast", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zur Tür
-    vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
-    v21Talk = ["#Schreiner"], // 100
+    // vEighteenTalk = ["#Mann", "#Schreiner", "#ShuiTa"], // hinaus, du Hund, 20 Dollar
+    // v21Talk = ["#Schreiner"], // 100
     v21 = [ "#Mann", "#tabakladenTUERi"], // Mann trägt Stellage aus Tür raus
     v21_2 = ["#Mann", "#stellage_ohne-rechnung"],
     v22Talk = ["#Schreiner", "#ShuiTa", "#Frau"], // nach Maß, 20, quietschen
