@@ -589,7 +589,7 @@
 
                 <!--Mann-->
                 <a-entity id="containerMann" class="five cSix cSix1 cSix2 play" position="-1.09 .5 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
-                    <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
+                    <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourMove1 sFourMove2 sFourMove3 sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                                vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
                                                v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone mone2 play"
@@ -637,7 +637,12 @@
                                  begin="five"></a-animation>
                     <a-animation id="MannAnimFive2_P1" attribute="position" class="wait" dur="2500" to="6 0 -19"
                                  repeat="0" begin="five"></a-animation>
-
+                    <a-animation id="MannAnimsFourMove1" attribute="rotation" class="wait" dur="1000" to="0 -20 0" repeat="0"
+                                 begin="sFourMove1">  </a-animation>
+                    <a-animation id="MannAnimsFourMove2" attribute="rotation" class="wait" dur="1000" to="0 25 0" repeat="0"
+                                 begin="sFourMove2"></a-animation>
+                    <a-animation id="MannAnimsFourMove3" attribute="rotation" class="wait" dur="1000" to="0 76 0" repeat="0"
+                                 begin="sFourMove3"></a-animation>
                     <a-animation id="MannAnimsSeven_P1_R" attribute="rotation" class="wait" dur="2500" to="0 0 0" repeat="0"
                                  begin="sSeven_P1_P"></a-animation>
                     <a-animation id="MannAnimsSeven_P1" attribute="position" class="wait" dur="2500" to="-2 2 -14.75" repeat="0"
