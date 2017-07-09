@@ -26,7 +26,7 @@ var eventArr = ["one",
                 "six", "six2",
               //  "sixTalk2",
             //    "sevenTalk0",
-                "seven", "seven2", "seven3", "seven4",
+                // "seven", "seven2", "seven3", "seven4",
             //    "sevenTalk",
               //  "sOneTalk", "sTwoTalk", "sThreeTalk",
                 // "sFourTalkStart",
@@ -35,8 +35,8 @@ var eventArr = ["one",
                 "sFourP3begin", "sFourMove", "sFour_P3",
               //  "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
-                "sSixTalk1", "sSixTalk2", "sSixTalk3",
-                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU", "sSeven_P2end",
+                // "sSixTalk1", "sSixTalk2", "sSixTalk3",
+                "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU","sSeven_P2", "sSeven_P2end",
                 "vOne",
                 "vOneTalk",
                 "vTwo",
@@ -136,10 +136,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     six2 = ["#containerShuiTa", "#kerzeFlamme"], //ShuiTa geht zu lampe und löscht diese
     // sixTalk2 = ["#ShuiTa",  "#Mann"],
     // sevenTalk0 = ["#ShuiTa"],
-    seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
-    seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
-    seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
-    seven4 = ["#containerShuiTa"],
+    // seven = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    // seven2 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    // seven3 = ["#containerShuiTa"], //ShuiTa Schüttelt Kopf
+    // seven4 = ["#containerShuiTa"],
     // sevenTalk = ["#Mann", '#Schwaegerin', "#ShuiTa"],
     //
     // sOneTalk = ["#Frau"],
@@ -172,13 +172,14 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     sFive_P3 = ["#Neffe", /*"#Bruder",*/ "#Nichte"],
     sFive_P3Move = ["#Nichte"],
     sFive_P3no = ["#Nichte", "#tabakladenTUERi"],
-    sSixTalk1 = ["#ShuiTa", "#Mann"],
-    sSixTalk2 = ["#ShuiTa"],
-    sSixTalk3 = ["#ShuiTa"],
+    // sSixTalk1 = ["#ShuiTa", "#Mann"],
+    // sSixTalk2 = ["#ShuiTa"],
+    // sSixTalk3 = ["#ShuiTa"],
 
     sSeven_P1 = ["#ShuiTa", "#bett", "#bett-2", "#bett-6"], // Shui Ta räumt Schlafplätze vom Boden auf
     sSeven_P2rot = ["#containerShuiTa", "#bett-7", "#bett-8"],
     sSevenPRotaPU = ["#containerShuiTa"],
+    sSeven_P2 = ["#containerShuiTa"],
     sSeven_P2end = ["#containerShuiTa", "#bett-3", "#bett-5"], // Shui Ta legt Schlafplätze auf dem Bettgestell ab
 
     vOne = ["#ShuiTa", "#Schreiner", "#Frau", "#Mann"],
