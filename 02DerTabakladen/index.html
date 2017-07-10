@@ -589,7 +589,7 @@
 
                 <!--Mann-->
                 <a-entity id="containerMann" class="five cSix cSix1 cSix2 play" position="-1.09 .5 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
-                    <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart1 sFourTalkStart2 sFourTalkStart3 sFourTalkStart sFourTalk1 sFourTalk2
+                    <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                                vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
                                                v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone mone2 play"
@@ -639,10 +639,10 @@
                                  repeat="0" begin="five"></a-animation>
                     <a-animation id="MannsFourTalkStart1" attribute="rotation" class="wait" dur="1000" to="0 -20 0" repeat="0"
                                  begin="sFourTalkStart">  </a-animation>
-                    <a-animation id="MannsFourTalkStart2" attribute="rotation" class="wait" dur="1000" to="0 25 0" repeat="0"
-                                 begin="sFourTalkStart1"></a-animation>
-                    <a-animation id="MannsFourTalkStart3" attribute="rotation" class="wait" dur="1000" to="0 76 0" repeat="0"
-                                 begin="sFourTalkStart2"></a-animation>
+                    <a-animation id="MannsFourTalkStart2" attribute="rotation" class="wait" delay="1000" dur="1000" to="0 25 0" repeat="0"
+                                 begin="sFourTalkStart"></a-animation>
+                    <a-animation id="MannsFourTalkStart3" attribute="rotation" class="wait" delay="1000" dur="1000" to="0 76 0" repeat="0"
+                                 begin="sFourTalkStart"></a-animation>
                     <a-animation id="MannAnimsSeven_P1_R" attribute="rotation" class="wait" dur="2500" to="0 0 0" repeat="0"
                                  begin="sSeven_P1_P"></a-animation>
                     <a-animation id="MannAnimsSeven_P1" attribute="position" class="wait" dur="2500" to="-2 2 -14.75" repeat="0"
@@ -1322,7 +1322,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                           scale="0.2 0.2 0.2" rotation="0 90 0"
                           class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
                                  sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
-                                 sFourTalkStart sFourTalkStart1 sFourTalkStart2 sFourTalkStart3 sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
+                                 sFourTalkStart sFourTalkStart1 sFourTalkStart2 sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
                                  sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
                                  sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
                                  sSeven_P1 sSeven_P2rot sSevenPRotaPU sSeven_P2end sSevenPickUp2 vOne vOneTalk vTwo
