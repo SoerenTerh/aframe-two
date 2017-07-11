@@ -1,6 +1,6 @@
 /* außen */
 
-var cameraForTrigger = document.querySelector('#cameraAussen');
+var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
 
 /**
@@ -20,15 +20,15 @@ function checkGameStatus(curr) {
     }
 }
 
-$('#tabakladenTUERa').on('click', function doorClick() {
-    'use strict';
-    var innen = "indemladen.html";
-    setTimeout(function timoutFadeOut() {
-        $('#außen').fadeOut("slow", function timeoutSlow() {
-            window.location = innen;
-        });
-    }, 1500);
-});
+//$('#tabakladenTUERa').on('click', function doorClick() {
+//    'use strict';
+//    var innen = "indemladen.html";
+//    setTimeout(function timoutFadeOut() {
+//        $('#außen').fadeOut("slow", function timeoutSlow() {
+//            window.location = innen;
+//        });
+//    }, 1500);
+//});
 
 
     

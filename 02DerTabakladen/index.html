@@ -34,7 +34,7 @@
         <a-scene physics="debug: true" id="scene" auto-enter-vr="display: all" set-cam> <!--stats-->
 
             <!--camera Aussen-->
-            <a-entity id="cameraAussen"
+            <a-entity id="camera"
                       universal-controls="movementSpeed:10"
                       kinematic-body="height:13.6"
                       position="3 14 16"
@@ -42,7 +42,7 @@
                 <a-image html-src="#counterKuchen" position="0 5.5 5"></a-image>
                 <a-image html-src="#lost" position="0 0 0"></a-image>
 
-                <a-entity id="cursorAussen"
+                <a-entity id="cursor"
                           cursor="fuse: true; fuseTimeout:2500"
                           position="0 0 -1"
                           geometry="primitive: ring"
@@ -77,36 +77,18 @@
 
                     <a-animation begin="click" easing="ease-in" attribute="material.color" to="white" delay="1000"></a-animation>
 
+                    <a-animation attribute="position" to="16.80 5.80 -33.15" begin="baeume"></a-animation>
+                    <a-animation attribute="rotation" to="0 -90.00 0" begin="baeumeROT"></a-animation>
 
-                </a-entity>
+                    <a-animation attribute="position" to="2 4 -8" begin="baeckerei"></a-animation>
+                    <a-animation attribute="rotation" to="0 -90.00 0" begin="baeckereiROT"></a-animation>
 
-                <a-animation attribute="position" to="16.80 5.80 -33.15" begin="baeume"></a-animation>
-                <a-animation attribute="rotation" to="0 -90.00 0" begin="baeumeROT"></a-animation>
+                    <a-animation attribute="position" to="2 4 -8" begin="teppichladen"></a-animation>
+                    <a-animation attribute="rotation" to="0 -90.00 0" begin="teppichladenROT"></a-animation>
 
-                <a-animation attribute="position" to="2 4 -8" begin="baeckerei"></a-animation>
-                <a-animation attribute="rotation" to="0 -90.00 0" begin="baeckereiROT"></a-animation>
-
-                <a-animation attribute="position" to="2 4 -8" begin="teppichladen"></a-animation>
-                <a-animation attribute="rotation" to="0 -90.00 0" begin="teppichladenROT"></a-animation>
-
-                <a-animation attribute="position" to="2 4 -8" begin="tabakladendefault"></a-animation>
-                <a-animation attribute="rotation" to="0 -90.00 0" begin="tabakladendefaultROT"></a-animation>
-            </a-entity>
-
-
-            <!-- camera Innen-->
-            <a-entity id="cameraInnen"
-                      universal-controls="movementSpeed:5"
-                      kinematic-body="height:13.6"
-                      position="5 13.6 20"
-                      rotation="0 180 0">
-
-                <a-entity id="cursorInnen"
-                          cursor="fuse: true; fuseTimeout:2500"
-                          position="0 0 -1"
-                          geometry="primitive: ring"
-                          scale="0.04 0.04 0.04"
-                          material="color: white">
+                    <a-animation attribute="position" to="2 4 -8" begin="tabakladendefault"></a-animation>
+                    <a-animation attribute="rotation" to="0 -90.00 0" begin="tabakladendefaultROT"></a-animation>
+            
                     <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
                                  fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
                     <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
@@ -1265,7 +1247,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                               visible="true" id="fladen2"></a-entity>
                 </a-entity>
 
-                <!-- Laterne --> <!-- Cheat -->
+                <!-- Laterne -->
                 <a-entity class="clickable"
                           obj-model="obj:#LaterneObj;mtl:#LaterneMtl" position="17.399 12.32 12.95"
                           scale="0.06 0.06 0.06" rotation="0 0 0" visible="true" id="kerze"

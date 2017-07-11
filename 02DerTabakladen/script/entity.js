@@ -3,12 +3,12 @@ var myCamera;
 AFRAME.registerComponent('set-cam-outdoor', {
     init() { 
         this.el.addEventListener('click', () => {
-            myCamera = document.querySelector('#cameraAussen');
+            myCamera = document.querySelector('#camera');
 
             this.el.emit('open');  
             console.log(this.el);
             document.location.hash = 'Platz';
-            document.querySelector('#cameraAussen').setAttribute('camera', 'active', true);  
+            document.querySelector('#camera').setAttribute('camera', 'active', true);  
             document.getElementById("innenSzene").setAttribute('visible', 'false');
             document.getElementById("aussenSzene").setAttribute('visible', 'true');
 
@@ -25,10 +25,10 @@ AFRAME.registerComponent('set-cam-outdoor', {
 AFRAME.registerComponent('set-cam-indoor', {
     init() {   
         this.el.addEventListener('click', () => {
-            myCamera = document.querySelector('#cameraInnen');
+            myCamera = document.querySelector('#camera');
 
             document.location.hash = 'Tabakladen';
-            document.querySelector('#cameraInnen').setAttribute('camera', 'active', true);    
+            document.querySelector('#camera').setAttribute('camera', 'active', true);    
             document.getElementById("aussenSzene").setAttribute('visible', 'false');
             document.getElementById("innenSzene").setAttribute('visible', 'true');
 
@@ -52,9 +52,9 @@ AFRAME.registerComponent('set-cam', {
                 document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
                 if (window.location.hash == '#Tabakladen') {
-                    myCamera = document.querySelector('#cameraInnen');
+                    myCamera = document.querySelector('#camera');
                     document.location.hash = 'Tabakladen';
-                    document.querySelector('#cameraInnen').setAttribute('camera', 'active', true);    
+                    document.querySelector('#camera').setAttribute('camera', 'active', true);    
                     document.getElementById("aussenSzene").setAttribute('visible', 'false');
                     document.getElementById("innenSzene").setAttribute('visible', 'true');
                     document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
@@ -64,9 +64,9 @@ AFRAME.registerComponent('set-cam', {
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
                 } else {
 
-                    myCamera = document.querySelector('#cameraAussen');
+                    myCamera = document.querySelector('#camera');
                     document.location.hash = 'Platz';
-                    document.querySelector('#cameraAussen').setAttribute('camera', 'active', true);  
+                    document.querySelector('#camera').setAttribute('camera', 'active', true);  
                     document.getElementById("innenSzene").setAttribute('visible', 'false');
                     document.getElementById("aussenSzene").setAttribute('visible', 'true');
 
@@ -81,6 +81,8 @@ AFRAME.registerComponent('set-cam', {
             }, 1500);
         });
         console.log("LOADING SCRIPT");
+        console.log("AAAAAAAAAAAAAAAAA: " + document.getElementById("camera").hasAttributes('camera', 'active', true));
+        console.log("BBBBBBBBBBBBBBBBB: " + document.getElementById("camera").hasAttributes('camera', 'active', true));
     }
 });
 

@@ -282,12 +282,12 @@ function getColorOfPerson(fireAt) {
 
 //emit event for right cursor
 function cursorEmitEvent(trigggerEvent) {
-    if(window.location.hash == '#Tabakladen') {
-        currentCursor = "#cursorInnen";
-    } else {
-        window.location.hash = '#Platz'; //make sure hash is Platz
-        currentCursor = "#cursorAussen";
-    } 
+//    if(window.location.hash == '#Tabakladen') {
+        currentCursor = "#cursor";
+//    } else {
+//        window.location.hash = '#Platz'; //make sure hash is Platz
+//        currentCursor = "#cursor";
+//    } 
 
     if (trigggerEvent != "notClickable") { //Testing
         console.log(currentCursor, " -> ", trigggerEvent);

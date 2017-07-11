@@ -1,6 +1,6 @@
 /* innen */
 
-var entity = document.querySelector('#cameraInnen');
+var entity = document.querySelector('#camera');
 
 /** Trigger points to move in the room */
 $('#triggerTuer').on('click', function triggerTuer() {
