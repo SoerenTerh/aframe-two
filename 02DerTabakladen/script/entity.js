@@ -13,7 +13,7 @@ AFRAME.registerComponent('set-cam-outdoor', {
             document.getElementById("aussenSzene").setAttribute('visible', 'true');
 
             document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
-            document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
+            document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
             AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 20});
             AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
@@ -33,7 +33,7 @@ AFRAME.registerComponent('set-cam-indoor', {
             document.getElementById("innenSzene").setAttribute('visible', 'true');
 
             document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
-            document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
+            document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
             AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 5, y: 13.6, z: 20});
             AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
@@ -48,8 +48,8 @@ AFRAME.registerComponent('set-cam', {
     init() {   
         this.el.addEventListener('loaded', () => {
             setTimeout(function loadTimeout() {
-                document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
-                document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
+                document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
+                document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
                 if (window.location.hash == '#Tabakladen') {
                     myCamera = document.querySelector('#cameraInnen');
@@ -58,7 +58,7 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("aussenSzene").setAttribute('visible', 'false');
                     document.getElementById("innenSzene").setAttribute('visible', 'true');
                     document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
-                    document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
+                    document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 5, y: 13.6, z: 20});
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
@@ -71,7 +71,7 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("aussenSzene").setAttribute('visible', 'true');
 
                     document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
-                    document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 1000, z: 0});
+                    document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
 
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 3, y: 14, z: 20});
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
