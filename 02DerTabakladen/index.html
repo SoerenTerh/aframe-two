@@ -31,7 +31,7 @@
         <div id="giveMeTime">
             <img id="loader" src="gif/ring.gif" alt="loader"/>
         </div>
-        <a-scene physics="debug: false" id="scene" auto-enter-vr="display: all" set-cam> <!--stats-->
+        <a-scene physics="debug: true" id="scene" auto-enter-vr="display: all" set-cam> <!--stats-->
 
             <!--camera Aussen-->
             <a-entity id="cameraAussen"
@@ -385,6 +385,9 @@
                     <!-- Game Trigger -->
                     <a-entity id="cakeTrigger" class="clickable" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="-17.2 2.895 0.047" scale="0.025 0.025 0.025"></a-entity>
                     <a-entity id="hideAndSeekTrigger" class="clickable" obj-model="obj:#LupeObj;mtl:#LupeMtl" position="-14.2 2.937 -0.50" rotation="0 90 0" scale="0.045 0.07 0.045"></a-entity>
+                    
+                    <!--bounding box-->
+                    <a-box static-body="shape:Primitives" position="-16 2.742 0"  width="8" height="8" depth="8" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 </a-entity>
 
                 <!-- Ta⁄bakladen -->
