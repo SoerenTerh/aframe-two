@@ -2,7 +2,7 @@
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <asset>
     <contributor>
-      <author>Sören</author>
+      <author>Soeren</author>
       <authoring_tool>OpenCOLLADA for 3ds Max;  Version: 1.6;  Revision: 36</authoring_tool>
       <source_data>file:///C:/Users/S%C3%B6ren/Documents/3dsMax/scenes/tabakladen.max</source_data>
     </contributor>
