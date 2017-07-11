@@ -284,11 +284,10 @@ function getColorOfPerson(fireAt) {
 function cursorEmitEvent(trigggerEvent) {
     if(window.location.hash == '#Tabakladen') {
         currentCursor = "#cursorInnen";
-    } else if (window.location.hash == '#Platz') {
-        currentCursor = "#cursorAussen";
     } else {
-        console.log("ERROR: hash not found");
-    }
+        window.location.hash = '#Platz'; //make sure hash is Platz
+        currentCursor = "#cursorAussen";
+    } 
 
     if (trigggerEvent != "notClickable") { //Testing
         console.log(currentCursor, " -> ", trigggerEvent);
