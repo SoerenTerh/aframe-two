@@ -81,8 +81,6 @@ AFRAME.registerComponent('set-cam', {
             }, 1500);
         });
         console.log("LOADING SCRIPT");
-        console.log("AAAAAAAAAAAAAAAAA: " + document.getElementById("camera").hasAttributes('camera', 'active', true));
-        console.log("BBBBBBBBBBBBBBBBB: " + document.getElementById("camera").hasAttributes('camera', 'active', true));
     }
 });
 
