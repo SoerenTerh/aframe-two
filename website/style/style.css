@@ -123,7 +123,7 @@ nav, .navbar-brand{
 
 
 
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven, .s2_twelve{
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven, .s2_twelve, .future2{
     position:absolute;
     margin-top:-10px;
     z-index:1;
@@ -204,6 +204,11 @@ nav, .navbar-brand{
 
 .s2_twelve {
     left: 92%;
+}
+
+
+.future2 {
+    left: 98%;
 }
 
 
