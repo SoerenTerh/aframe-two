@@ -11,7 +11,9 @@ var nowClicked = 0;
 var next = true;
 var timeoutId = null;
 
-//Arrays
+/**
+ * Array of events - used in the methods below
+ */
 var eventArr = ["one",
                 "two",
                 "twoTalk", "twoTalk2",
@@ -88,7 +90,9 @@ var persons = ["#Frau",
                "#Polizist"
                /*,"#Hausbesitzerin"*/];
 
-
+/**
+ * Different default color for figures
+ */
 var personColors = ["#EBD3B9",/*Frau ja*/
                     "#C5E2E4", /*Neffe ja */
                     "#FFD9D9",/*Mann ja*/
@@ -106,7 +110,9 @@ var personColors = ["#EBD3B9",/*Frau ja*/
                     "#CDCCF7"/*Polizist*/
                     /*,"#FFF"*/];
 
-//ersteSeite
+/**
+ * Array of figures to trigger depending on event name - animations and sounds are set as attributes in the corresponding html
+ */
 var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //alle schlafen + Lampe brennt
     two = ["#kerzeFlamme", "#tabakladenTUERi",  "#ShuiTa", "#Schreiner", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großvater", "#Junge", /*"#Bruder",*/ "#Nichte"], //ShuiTa Klopft (schnarchen stoppt)
     twoTalk = ["#Frau", "#Neffe"],
@@ -256,8 +262,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
 
-//Functions
-//change color back to normal
+/**
+ * Set color of person back to default after animation/sound
+ * @param {integer} fireAt
+ */
 function getColorOfPerson(fireAt) {
     'use strict';
     for (j = 0; j < persons.length; j++) {
@@ -267,7 +275,11 @@ function getColorOfPerson(fireAt) {
     }
 }
 
-//Trigger all neccessary events at that point in the story
+/**
+ * Main method to proceed through the storyline
+ * @param {string} currentTarget - string value of corresponding object target position
+ * @param {string} currentEvent - string value of corresponding event array position
+ */
 function storyline(currentTarget, currentEvent) {
     'use strict';
     console.log("Target= " + currentTarget);
@@ -277,13 +289,11 @@ function storyline(currentTarget, currentEvent) {
     next = false;
     if (window[currentEvent].length !== 0) {
 
+        // Wait for animations/sounds to finish before moving onto the next story part
         (function startNext() {
-            //window.clearTimeout(timeoutId);
-
             function wait(animated) {
                 document.querySelector(animated).addEventListener('animationend', function animationEnd() {
                     console.log("--------------------Animation End--------------------");
-                    //window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
@@ -294,10 +304,10 @@ function storyline(currentTarget, currentEvent) {
                         document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt));
                     }
                     console.log("--------------------Narration End--------------------");
-                    //window.clearTimeout(timeoutId);
                     startNext();
                 });
             }
+            // Move on with the story if event array is not entirely run through yet
             if (i < eventArr.length) {
                 if (k <  window[currentEvent].length) {
                     next = false;
@@ -306,7 +316,7 @@ function storyline(currentTarget, currentEvent) {
                     console.log("Fire at= " + fireAt);
                     //window.clearTimeout(timeoutId);
 
-
+                    // Play sound if Talk is found
                     if (currentEvent.search("Talk") !== -1) {
                         try {
                             document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').emit(currentEvent);
@@ -342,6 +352,7 @@ function storyline(currentTarget, currentEvent) {
                             startNext();
                         }
                     } else {
+                        // Fire other specified events otherwise
                         try {
                             document.querySelector(fireAt).emit(currentEvent);
                         } catch (err8) {
@@ -349,6 +360,7 @@ function storyline(currentTarget, currentEvent) {
                         }
                         k++;
                         try {
+                        // Perform animations from inline html
                             if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
                                 console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
                                 animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
@@ -419,7 +431,10 @@ function storyline(currentTarget, currentEvent) {
     }
 }
 
-//starts narration when .play was found
+/**
+ * Check whether a target has the play class
+ * @param {string} currentTarget 
+ */
 function playableFound(currentTarget) {
     'use strict';
 
@@ -487,7 +502,9 @@ $(".clickable").on('fusing', function onclickableFusing() {
     }
 });
 
-//Cursor triggers click on .clickable
+/** Detect clickable target on click
+ * Prevent interaction with objects on specific story passages when door / entities close to the door have to be clicked
+ */
 $(".clickable").on('click', function onclickableClick() {
     'use strict';
     if (at !== "two" || at !== "three" || at !== "four" || at !== "sTwo" || at !== "sFourP3begin" || at !== "sFour_p3" || at !== "sFive_P2" || at !== "sFive_P3no" || at !== "v21" || at !== "v21_3" || at !== "V32") {
@@ -522,13 +539,13 @@ $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
 });
 
 
-//Cursor is not on .clickable
-$("a-entity").on('fusing', function onAEntityFusing() {
-    'use strict';
-    currentTarget = "#cursor";
-    trigggerEvent = "notClickable";
-    document.querySelector(currentTarget).emit(trigggerEvent);
-});
+////Cursor is not on .clickable
+//$("a-entity").on('fusing', function onAEntityFusing() {
+//    'use strict';
+//    currentTarget = "#cursor";
+//    trigggerEvent = "notClickable";
+//    document.querySelector(currentTarget).emit(trigggerEvent);
+//});
 
 //trigger storyline after start was iniciated
 $(".play").on('fusing', function onPlayFusing() {
@@ -552,8 +569,11 @@ $(".play").on('fusing', function onPlayFusing() {
 //    }
 //});
 
-//Event Listener
-//start storyline
+/**
+ * Trigger story line
+ * @param {string} currentTarget - starting target of the story / first position of object target array
+ * @param {string} at - starting point of the story / first position of event array
+ */
 document.querySelector('a-scene').addEventListener('loaded', function szeneLoaded() {
     'use strict';
     setTimeout(function loadTimeout() {
@@ -566,5 +586,5 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
         currentTarget = "#one";
         at = "one";
         storyline(currentTarget, at);
-    }, 20000);
+    }, 2500);
 });

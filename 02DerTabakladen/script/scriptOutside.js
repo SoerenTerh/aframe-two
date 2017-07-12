@@ -68,13 +68,13 @@ $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
     lastClickableFused = currentTarget;
 });
 
-//Cursor is not on .clickable
-$("a-entity").on('fusing', function onFusingEntity() {
-    'use strict';
-    currentTarget = "#cursor";
-    trigggerEvent = "notClickable";
-    document.querySelector(currentTarget).emit(trigggerEvent);
-});
+////Cursor is not on .clickable
+//$("a-entity").on('fusing', function onFusingEntity() {
+//    'use strict';
+//    currentTarget = "#cursor";
+//    trigggerEvent = "notClickable";
+//    document.querySelector(currentTarget).emit(trigggerEvent);
+//});
 
 //start storyline
 document.querySelector('a-scene').addEventListener('loaded', function onLoadedScene() {
