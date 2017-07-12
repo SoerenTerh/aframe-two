@@ -247,22 +247,22 @@
               <color>0 0 0 1</color>
             </ambient>
             <diffuse>
-              <color>0.116237 0.116237 0.116237 1</color>
+              <color>0.400000  0.400000 0.400000 1.000000</color>
             </diffuse>
             <specular>
               <color>0.5 0.5 0.5 1</color>
             </specular>
             <shininess>
-              <float>26.58049</float>
+              <float>6.311791</float>
             </shininess>
             <reflective>
               <color>0 0 0 1</color>
             </reflective>
-            <transparent opaque="A_ONE">
-              <color>1 1 1 1</color>
+            <transparent opaque="RGB_ZERO">
+              <color>0.650000  0.650000 0.650000 1.000000</color>
             </transparent>
             <transparency>
-              <float>0.025635</float>
+              <float>.6</float>
             </transparency>
           </phong>
         </technique>
