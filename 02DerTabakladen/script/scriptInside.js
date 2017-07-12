@@ -68,9 +68,14 @@ var eventArr = ["one",
                 // "v33Talk",
                 // "v34Talk",
                 // "v36Talk",
-                "mzeroTalk", "mone", "mone2", "mtwoTalk", "mthree", "mthreeTalk", "mfour",
-                "mfourTalk", "mfive", "mfive2", "mfiveTalk", "mfiveTalk2", "msix", "msix2",
-                "msix2Talk", "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3", "mseven2", "msevenTalk4",
+                //"mzeroTalk",
+                "mone",
+                "mtwoTalk", "mthree", "mthreeTalk", "mfour",
+                "mfourTalk", "mfive", "mfive2", //"mfiveTalk", "mfiveTalk2",
+                "msix", "msix2",
+                "msix2Talk",
+                "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3",
+                "mseven2", "msevenTalk4",
                 "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1",
                 "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
@@ -227,10 +232,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     // v36Talk = ["#ShuiTa"],
 
     //fünfteSeite
-    mzeroTalk = ["#Mann"], //mann14
+    //mzeroTalk = ["#Mann"], //mann14
 
     mone = ["#Mann", "#accMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
-    mone2 = ["#Mann", "#accMann"],
     mtwoTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
     mthree = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
     mthreeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28

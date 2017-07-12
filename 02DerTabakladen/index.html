@@ -646,7 +646,7 @@
                     <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                                vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
-                                               v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone mone2 play"
+                                               v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone play"
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#FFD9D9"
                               rotation="0 0 0" visible="true" sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
@@ -671,7 +671,7 @@
                         <a-sound id="mfiveTalkMann" src="#mann16" volume="10" on="mfiveTalk"></a-sound>
 
                         <a-animation id="moneMannAnimP" attribute="position" dur="500" to="0 5 0" begin="mone"></a-animation>
-                        <a-animation id="mone2MannAnimP" attribute="position" dur="500" to="0 2 0" begin="mone2"></a-animation>
+                        <a-animation id="mone2MannAnimP" attribute="position" dur="500" delay="600" from="0 5 0" to="0 2 0" begin="mone"></a-animation>
                     </a-entity>
 
                     <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj" material="color: red"
@@ -1207,14 +1207,14 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-animation id="mSevenPolizistAnimP" class="wait" attribute="rotation" dur="2500" to="0 -140 0" repeat="0"
                                  begin="mseven"></a-animation>
 
-                    <a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="-2.33 0 20.07" repeat="0"
+                    <a-animation id="cPolizistFiveAnim1" class="wait" attribute="position" dur="2500" to="6 0 -10" repeat="0"
                                  begin="cFour"></a-animation>
-                    <a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 137.51 0" repeat="0"
+                    <a-animation id="cPolizistFiveAnim2" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0"
                                  begin="cFour"></a-animation>
 
-                    <a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-9.84 0 -19.02" repeat="0"
+                    <a-animation id="cPolizistFiveAnim3" class="wait" attribute="position" dur="2500" to="-10 0 -19" repeat="0"
                                  begin="cFive1"></a-animation>
-                    <a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 89.38 0" repeat="0"
+                    <a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 90 0" repeat="0"
                                  begin="cFive1"></a-animation>
 
                     <a-animation id="cPolizistFiveAnim" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
@@ -1396,7 +1396,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                                  vTwoTalk vFourTalk vFive vSixTalk vNineTalk vEleven vElevenTalk vFifteen vFourteenTalk
                                  vSixteen vSixteenTalk vEighteen vEighteen2 vEighteen3 vEighteenTalk v21Talk v21 v21_2
                                  v22Talk v21_3 v23Talk v25Talk v26 v26two v26three v27Talk v28 v28Talk v29Talk v30Talk v31Talk
-                                 v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mone2 mtwoTalk mthree mthreeTalk mfour
+                                 v32 v32Talk v33Talk v34Talk v36Talk mzeroTalk mone mtwoTalk mthree mthreeTalk mfour
                                  mfourTalk mfive mfive2 mfiveTalk mfiveTalk2 msix msix2 msix2Talk mseven msevenTalk msevenTalk2 msevenTalk3 mseven2 msevenTalk4
                                  cOneTalk cTwoTalk cThree cThree1 cFour cFiveTalk cSix cFive1 cSix1 cSix2 cFive2 cFive3
                                  cSeven cSevenTalk cEight play">
