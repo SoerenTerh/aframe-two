@@ -70,13 +70,16 @@ var eventArr = ["one",
                 // "v36Talk",
                 //"mzeroTalk",
                 "mone",
-                "mtwoTalk", "mthree", "mthreeTalk", "mfour",
-                "mfourTalk", "mfive", "mfive2", //"mfiveTalk", "mfiveTalk2",
+                //"mtwoTalk",
+                "mthree", //"mthreeTalk",
+                "mfour",
+                //"mfourTalk",
+                "mfive", "mfive2", //"mfiveTalk", "mfiveTalk2",
                 "msix", "msix2",
-                "msix2Talk",
-                "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3",
-                "mseven2", "msevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cSix", "cFive1",
+              //  "msix2Talk",
+                "mseven", //"msevenTalk", "msevenTalk2", "msevenTalk3",
+                "mseven2", //"msevenTalk4",
+                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cFive1", "cSix",
                 "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 at = eventArr[0];
@@ -235,24 +238,24 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //mzeroTalk = ["#Mann"], //mann14
 
     mone = ["#Mann", "#accMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
-    mtwoTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
+  //  mtwoTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
     mthree = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
-    mthreeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
+    //mthreeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
     mfour = ["#containerShuiTa", "#containerPolizist"], //tritt ein
-    mfourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
+    //mfourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
     mfive = ["#containerShuiTa"], //Man (ShuiTa) verbeugt sich
     mfive2 = ["#containerShuiTa"],
-    mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
-    mfiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
+  //  mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
+    //mfiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
     msix = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
     msix2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
-    msix2Talk = ["#Polizist"], //polizist6
+    //msix2Talk = ["#Polizist"], //polizist6
     mseven = ["#containerPolizist", "#containerJunge"], //Hält Jungen fest
-    msevenTalk = ["#Polizist", "#Junge"], //polizist7, junge1
-    msevenTalk2 = ["#Polizist", "#Frau"], //polizist8, frau9
-    msevenTalk3 = ["#Polizist"], //polizist9,
+    //msevenTalk = ["#Polizist", "#Junge"], //polizist7, junge1
+    //msevenTalk2 = ["#Polizist", "#Frau"], //polizist8, frau9
+    //msevenTalk3 = ["#Polizist"], //polizist9,
     mseven2 = ["#containerShuiTa"], //Timeout -> ShuiTa schweigt
-    msevenTalk4 = ["#Polizist", "#ShuiTa"], //polizist10, shui32
+    //msevenTalk4 = ["#Polizist", "#ShuiTa"], //polizist10, shui32
 
     cOneTalk = ["#Frau"], // Frau redet
     cTwoTalk = ["#ShuiTa", "#Polizist"], //shui, und polizist
@@ -260,8 +263,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cThree1 = ["#containerShuiTa"],
     cFour = ["#containerPolizist"],
     cFiveTalk = ["#Polizist"], //vorwärts
-    cSix = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cFive1 = ["#containerPolizist"],
+    cSix = ["#containerSchwaegerin"],
     cSix1 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cFive2 = ["#containerPolizist"],//Polizist treibt sie
