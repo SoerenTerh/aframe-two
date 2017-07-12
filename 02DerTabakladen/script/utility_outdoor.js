@@ -95,14 +95,30 @@ $('#triggerBrunnen').on('click', function triggerBrunnen(){
 var textbox = document.querySelector('#textbox');
 var infobox = document.querySelector('#infobox');
 var specialsbox = document.querySelector('#specialsbox');
+var textboxMain = document.querySelector('#textboxMain');
 
 $('#closeTextbox').on('click', function() {
     AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
 });
 
+$('#closeTextboxMain').on('click', function() {
+    AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', false);
+});
+
 $('#openTextbox').on('click', function() {
+    AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', true);
+});
+
+$('#buttonErklaerungen').on('click', function() {
+    AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', false);
     AFRAME.utils.entity.setComponentProperty(textbox, 'visible', true);
 });
+
+$('#buttonBack').on('click', function() {
+    AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
+    AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', true);
+});
+
 
 $('#toggleSpecials').on('click', function() {
     var here = $(this);

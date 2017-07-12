@@ -61,3 +61,8 @@
     padding: 1rem;
     font-family: 'VT323', monospace;
 }
+
+#buttonErklaerungen path {
+    color: white;
+    fill: white;
+}

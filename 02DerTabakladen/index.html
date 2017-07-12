@@ -490,7 +490,30 @@
                 <a-light color="#ddf" position="-50 80 -50" distance="50" intensity="2" type="point" light="" rotation="" scale="" visible=""></a-light>
 
                 <!-- Info-Boxen -->
-                <a-entity id="textbox" position="3 12 14" visible="true">
+                <a-entity id="textboxMain" position="3 12 14">
+                    <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
+                    </a-box>
+
+                    <a-entity text="color: white; value: Wilkommen in Sezuan – Spielstaette und Haupthandlungsort des Theaterstuecks 'Der gute Mensch von Sezuan' von Bertolt Brecht.;
+                                    width: 2; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="-0.5 3 0.001">
+                    </a-entity>
+                    <a-entity text="color: white; value: Drei Goetter kommen nach Sezuan, um zu beweisen, dass in der Provinz Sezuan auch gute Menschen leben. Auf der Suche nach einer Unterkunft bezahlen sie Shen Te – der Protagonistin des Stücks – eine hohe Geldsumme fuer ihr Entgegenkommen ihres Nachtlagers. Durch ihre Gutmuetigkeit verschuldet sich Shen Te mehr und mehr, da sie immer mehr Menschen Zuflucht gewaehrt.;
+                                    width: 2; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="-0.5 1 0.001">
+                    </a-entity>
+                    <a-entity text="color: white; value: Wie geht es mit dem Stueck weiter? Die folgende Szene zeigt im Stil einer VR-Anwendung, wie die Handlung weitergeht! Betritt einfach den Tabakladen und schaue dir das Treiben an!;
+                                    width: 2; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="-0.5 -1 0.001">
+                    </a-entity>
+
+                    <a-entity text="color: white; value: Moechtest du mehr ueber die Steuerung und Nutzung erfahren?;
+                                    width: 2; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="-0.5 -2 0.001">
+                    </a-entity>
+                    <a-entity text="color: white; value: Schau dir gerne die verschiedenen Moeglichkeiten und Erklaerungen an!;
+                                    width: 2; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="-0.5 -2.7 0.001">
+                    </a-entity>
+                    <a-image id="buttonErklaerungen" color="#fff" class="clickableTrigger" src="../assets/icons/ic_arrow-right.svg" scale="0.8 0.8 0.8" position="5 -2.65 0.01"></a-image>
+                    <a-image id="closeTextboxMain" color="#fff" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5 3.25 0.01"></a-image>
+                </a-entity>
+                <a-entity id="textbox" position="3 12 14" visible="false">
                     <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
                     </a-box>
                     <a-entity id="infobox" visible="true">
@@ -569,8 +592,8 @@
                         </a-entity>
                     </a-entity>
 
-                    <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
-
+                    <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5 3 0.05"></a-image>
+                    <a-image id="buttonBack" class="clickableTrigger" src="../assets/icons/ic_arrow-left.svg" scale="0.8 0.8 0.8" position="-5.35 3.4 0.01"></a-image>
                 </a-entity>
 
                 <a-entity id="textbox-nav">
