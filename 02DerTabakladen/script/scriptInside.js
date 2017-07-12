@@ -31,8 +31,8 @@ var eventArr = ["one",
                 // "seven", "seven2", "seven3", "seven4",
             //    "sevenTalk",
               //  "sOneTalk", "sTwoTalk", "sThreeTalk",
-                "sFourTalkStart",
-                "sFourTalk1", "sFourTalk2",
+                //"sFourTalkStart",
+                //"sFourTalk1", "sFourTalk2",
                 // "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
                 "sFourP3begin", "sFourMove", "sFour_P3",
               //  "sFiveTalk", "sFiveTalk2",
@@ -148,9 +148,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     // sTwoTalk = ["#Neffe"],
     // sThreeTalk = ["#Mann"],
 
-    sFourTalkStart = ["#Mann"],
+    //sFourTalkStart = ["#Mann"],
     // ADD "Du, du und du" ANIMATIONS HERE!!!
-    sFourTalk1 = ["#Mann", "#Schwaegerin"],
+    //sFourTalk1 = ["#Mann", "#Schwaegerin"],
     // sFourTalk2 = ["#Mann"],
     //
     // sFourACC1 = ["#accMann"],

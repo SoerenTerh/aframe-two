@@ -88,7 +88,7 @@
 
                     <a-animation attribute="position" to="2 4 -8" begin="tabakladendefault"></a-animation>
                     <a-animation attribute="rotation" to="0 -90.00 0" begin="tabakladendefaultROT"></a-animation>
-            
+
                     <a-animation begin="clickableFound" easing="ease-in" attribute="scale"
                                  fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
                     <a-animation begin="clickableClick" easing="ease-in" attribute="scale"
@@ -223,7 +223,7 @@
                 <audio id="polizistSpielaufruf" src="../assets/audio/Spiel/Verstecken/polizist_Spielaufruf.mp3" preload="auto"></audio>
                 <!--Memory-->
                 <audio id="SpielaufrufGrossvater" src="../assets/audio/Spiel/Memory/Spielaufruf_Grossvater.mp3" preload="auto"></audio>
-        
+
 
                 <!--images-->
                 <!--Das 360° Bild stammt von Google und ist unter Einhaltung der Nutzungsbedinungen sowie der Namensnennung verwendbar-->
@@ -231,7 +231,7 @@
                 <img src="../assets/panorama-new.png" id="audience" alt="audience">
 
 
-                <!--Modelle (sorted by id!)-->        
+                <!--Modelle (sorted by id!)-->
                 <a-asset-item id="Ablage_Stellage_ohne_RechnungMtl" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.mtl"></a-asset-item>
                 <a-asset-item id="Ablage_Stellage_ohne_RechnungObj" src="models/UnsereAssets/Ablage_Stellage_ohne_Rechnung.obj"></a-asset-item>
                 <a-asset-item id="Ablage_StellageMtl" src="models/UnsereAssets/Ablage_Stellage.mtl"></a-asset-item>
@@ -291,19 +291,19 @@
                 <a-asset-item id="ZigarettenkisteAußenObj" src="models/UnsereAssets/000/Zigarettenkiste_aussen000.obj"></a-asset-item>
                 <a-asset-item id="ZigarettenkisteInnenObj" src="models/UnsereAssets/000/Zigarettenkiste_innen000.obj"></a-asset-item>
                 <a-asset-item id="ZigaretteObj" src="models/UnsereAssets/000/zigarette000.obj"></a-asset-item>
-                
+
                 <!--collada-->
                 <a-asset-item id="tabakladenDAE" src="models/UnsereAssets/tabakladen.dae"></a-asset-item>
                 <a-asset-item id="tabakladenTuerSmallerDAE" src="models/UnsereAssets/tabakladenTuerSmaller.dae"></a-asset-item>
-                
+
                 <a-asset-item id="baeckerDAE" src="models/UnsereAssets/baecker.dae"></a-asset-item>
                 <a-asset-item id="baeckerTuer_positionDAE" src="models/UnsereAssets/baeckerTuer_position.dae"></a-asset-item>
                 <a-asset-item id="teppichladenDAE" src="models/UnsereAssets/teppichladen.dae"></a-asset-item>
-                
-                
-                
-                
-                
+
+
+
+
+
 
                 <!--Mixins-->
                 <a-mixin id="kuchenMixin" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" scale="0.05 0.05 0.05" random-position="min: -41 0.75 -42; max: 46 0.75 43;"></a-mixin>
@@ -380,7 +380,7 @@
                     <!-- Game Trigger -->
                     <a-entity id="cakeTrigger" class="clickable" obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="-17.2 2.895 0.047" scale="0.025 0.025 0.025"></a-entity>
                     <a-entity id="hideAndSeekTrigger" class="clickable" obj-model="obj:#LupeObj;mtl:#LupeMtl" position="-14.2 2.937 -0.50" rotation="0 90 0" scale="0.045 0.07 0.045"></a-entity>
-                    
+
                     <!--bounding box-->
                     <a-box static-body="shape:Primitives" position="-16 2.742 0"  width="8" height="16" depth="8" rotation="0 0 0" scale="1 1 1" visible="true" color="black" opacity="0.01"></a-box>
                 </a-entity>
@@ -492,16 +492,16 @@
                 <!-- Info-Boxen -->
                 <a-entity id="textbox" position="3 12 14" visible="true">
                     <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
-                    </a-box>  
-                    <a-entity id="infobox" visible="true">					      
+                    </a-box>
+                    <a-entity id="infobox" visible="true">
                         <!--location-->
                         <a-entity id="locationver" position="0 -0.932 0">
                             <a-entity id="locationex" text="color: white; value: Platz in Sezuan;
-                                                            width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.452 0.001">									
+                                                            width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.452 0.001">
                             </a-entity>
 
                             <a-entity id="locationerkl" text="color: white; value: Shen Tes Tabakladen;
-                                                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.135 .001">									
+                                                              width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 3.135 .001">
                             </a-entity>
                             <a-image id="location" src="../assets/icons/location.svg" scale="0.5 0.5 0.5" position="-5 3.33 0.002"></a-image>
                         </a-entity>
@@ -513,11 +513,11 @@
                             <a-image id="radioUn" src="../assets/icons/radio-unchecked.svg" scale="0.5 0.5 0.5" position="-5 2.33 0.002"></a-image>
 
                         </a-entity>
-                        <a-entity id="linsever1" position="0 -2.3 0">	
+                        <a-entity id="linsever1" position="0 -2.3 0">
                             <a-entity id="linse2" text="color: white; value: Interaktionsmöglichkeit gefunden;
                                                         width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 1.340 .001">
                             </a-entity>
-                            <a-image id="radio" src="../assets/icons/radio-checked.svg" scale="0.5 0.5 0.5" position="-5 1.33 0.002"></a-image>	
+                            <a-image id="radio" src="../assets/icons/radio-checked.svg" scale="0.5 0.5 0.5" position="-5 1.33 0.002"></a-image>
                         </a-entity>
                         <!-- Trigger-->
                         <a-entity id="triggerver" position="0 -2.713 0">
@@ -533,7 +533,7 @@
                                                          width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -0.618 .001">
                             </a-entity>
 
-                            <a-image id="enter" src="../assets/icons/enter.svg" scale="0.5 0.5 0.5" position="-5 -0.66 0.002"></a-image>										
+                            <a-image id="enter" src="../assets/icons/enter.svg" scale="0.5 0.5 0.5" position="-5 -0.66 0.002"></a-image>
                         </a-entity>
                         <!--dice-->
                         <a-entity id="dicever" position="5.831 2.6 0">
@@ -563,10 +563,10 @@
                         <a-entity id="volumever" position="5.831 1.2 0">
                             <a-entity id="volumeex" text="color: white; value: Schalte deinen Ton ein;
                                                           width: 2.5; lineHeight: 60; align: left; wrapCount: 60" scale="4 4 4" position="0.350 -3.622 .001">
-                            </a-entity>	
+                            </a-entity>
 
                             <a-image id="volume" src="../assets/icons/volume-high.svg" scale="0.5 0.5 0.5" position="-5 -3.66 0.002"></a-image>
-                        </a-entity>	
+                        </a-entity>
                     </a-entity>
 
                     <a-image id="closeTextbox" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5.5 3.5 0.01"></a-image>
@@ -596,17 +596,17 @@
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9"
                               rotation="0 0 0" visible="true" sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-sound id="twoTalkFrau" class="wait" src="#frau1" volume="10" on="twoTalk"></a-sound>
-                        <a-sound id="twoTalkFrau2" class="wait" src="#frau2" volume="10" on="twoTalk2"></a-sound>
-                        <a-sound id="fourTalkFrau" class="wait" src="#frau3" volume="10" on="fourTalk"></a-sound>
-                        <a-sound id="sOneTalkFrau" class="wait" src="#frau4" volume="10" on="sOneTalk"></a-sound>
-                        <a-sound id="vElevenTalkFrau" class="wait" src="#frauV12" volume="10" on="vElevenTalk"></a-sound>
-                        <a-sound id="v22TalkFrau" class="wait" src="#frauV22" volume="10" on="v22Talk"></a-sound>
-                        <a-sound id="v28TalkFrau" class="wait" src="#frauV28" volume="10" on="v28Talk"></a-sound>
-                        <a-sound id="cOneTalkFrau" class="wait" src="#cFrau10" volume="10" on="cOneTalk"></a-sound>
+                        <a-sound id="twoTalkFrau"  src="#frau1" volume="10" on="twoTalk"></a-sound>
+                        <a-sound id="twoTalkFrau2"  src="#frau2" volume="10" on="twoTalk2"></a-sound>
+                        <a-sound id="fourTalkFrau"  src="#frau3" volume="10" on="fourTalk"></a-sound>
+                        <a-sound id="sOneTalkFrau"  src="#frau4" volume="10" on="sOneTalk"></a-sound>
+                        <a-sound id="vElevenTalkFrau"  src="#frauV12" volume="10" on="vElevenTalk"></a-sound>
+                        <a-sound id="v22TalkFrau"  src="#frauV22" volume="10" on="v22Talk"></a-sound>
+                        <a-sound id="v28TalkFrau"  src="#frauV28" volume="10" on="v28Talk"></a-sound>
+                        <a-sound id="cOneTalkFrau"  src="#cFrau10" volume="10" on="cOneTalk"></a-sound>
                         <!--      fünfte Seite-->
-                        <a-sound id="mthreeTalkFrau" class="wait" src="#frau8" volume="10" on="mthreeTalk"></a-sound>
-                        <a-sound id="msevenTalk2Frau" class="wait" src="#frau9" volume="10" on="msevenTalk2"></a-sound>
+                        <a-sound id="mthreeTalkFrau"  src="#frau8" volume="10" on="mthreeTalk"></a-sound>
+                        <a-sound id="msevenTalk2Frau"  src="#frau9" volume="10" on="msevenTalk2"></a-sound>
                     </a-entity>
 
                     <a-entity id="accFrau" obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0" visible="false"
@@ -652,23 +652,23 @@
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #FFD9D9"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-sound id="sixTalk2Mann" class="wait" src="#mann1" volume="10" on="sixTalk2"></a-sound>
-                        <a-sound id="sevenTalkMann" class="wait" src="#mann2" volume="10" on="sevenTalk"></a-sound>
-                        <a-sound id="sThreeTalkMann" class="wait" src="#mann3" volume="10" on="sThreeTalk"></a-sound>
-                        <a-sound id="sFourTalkStartMann" class="wait" src="#mann4" volume="10" on="sFourTalkStart"></a-sound>
-                        <a-sound id="sFourTalk1Mann" class="wait" src="#mann5" volume="10" on="sFourTalk1"></a-sound>
-                        <a-sound id="sFourTalk2-Mann" class="wait" src="#mann6" volume="10" on="sFourTalk2"></a-sound>
-                        <a-sound id="sSixTalk1-Mann" class="wait" src="#mann7" volume="10" on="sSixTalk1"></a-sound>
-                        <a-sound id="vSixTalkMann" class="wait" src="#mannV7" volume="10" on="vSixTalk"></a-sound>
-                        <a-sound id="vEighteenTalkMann" class="wait" src="#mannV18" volume="10" on="vEighteenTalk"></a-sound>
-                        <a-sound id="v25TalkMann" class="wait" src="#mannV25" volume="10" on="v25Talk"></a-sound>
-                        <a-sound id="v28TalkMann" class="wait" src="#mannV28" volume="10" on="v28Talk"></a-sound>
-                        <a-sound id="v29TalkMann" class="wait" src="#mannV29" volume="10" on="v29Talk"></a-sound>
-                        <a-sound id="v30TalkMann" class="wait" src="#mannV30" volume="10" on="v30Talk"></a-sound>
+                        <a-sound id="sixTalk2Mann" src="#mann1" volume="10" on="sixTalk2"></a-sound>
+                        <a-sound id="sevenTalkMann" src="#mann2" volume="10" on="sevenTalk"></a-sound>
+                        <a-sound id="sThreeTalkMann" src="#mann3" volume="10" on="sThreeTalk"></a-sound>
+                        <a-sound id="sFourTalkStartMann" src="#mann4" volume="10" on="sFourTalkStart"></a-sound>
+                        <a-sound id="sFourTalk1Mann" src="#mann5" volume="10" on="sFourTalk1"></a-sound>
+                        <a-sound id="sFourTalk2-Mann" src="#mann6" volume="10" on="sFourTalk2"></a-sound>
+                        <a-sound id="sSixTalk1-Mann" src="#mann7" volume="10" on="sSixTalk1"></a-sound>
+                        <a-sound id="vSixTalkMann" src="#mannV7" volume="10" on="vSixTalk"></a-sound>
+                        <a-sound id="vEighteenTalkMann" src="#mannV18" volume="10" on="vEighteenTalk"></a-sound>
+                        <a-sound id="v25TalkMann" src="#mannV25" volume="10" on="v25Talk"></a-sound>
+                        <a-sound id="v28TalkMann" src="#mannV28" volume="10" on="v28Talk"></a-sound>
+                        <a-sound id="v29TalkMann" src="#mannV29" volume="10" on="v29Talk"></a-sound>
+                        <a-sound id="v30TalkMann" src="#mannV30" volume="10" on="v30Talk"></a-sound>
                         <!--      fünfte Seite-->
-                        <a-sound id="mzeroTalkMann" class="wait" src="#mann14" volume="10" on="mzeroTalk"></a-sound>
-                        <a-sound id="mfourTalkMann" class="wait" src="#mann15" volume="10" on="mfourTalk"></a-sound>
-                        <a-sound id="mfiveTalkMann" class="wait" src="#mann16" volume="10" on="mfiveTalk"></a-sound>
+                        <a-sound id="mzeroTalkMann" src="#mann14" volume="10" on="mzeroTalk"></a-sound>
+                        <a-sound id="mfourTalkMann" src="#mann15" volume="10" on="mfourTalk"></a-sound>
+                        <a-sound id="mfiveTalkMann" src="#mann16" volume="10" on="mfiveTalk"></a-sound>
 
                         <a-animation id="moneMannAnimP" attribute="position" dur="500" to="0 5 0" begin="mone"></a-animation>
                         <a-animation id="mone2MannAnimP" attribute="position" dur="500" to="0 2 0" begin="mone2"></a-animation>
@@ -778,8 +778,8 @@ event-set__5="_event: five; visible: true"></a-entity>
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #FFE0A8"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-sound id="sevenTalkSchwaegerin" class="wait" src="#schwaegerin1" volume="10" on="sevenTalk"></a-sound>
-                        <a-sound id="sFourTalk2Schwaegerin" class="wait" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
+                        <a-sound id="sevenTalkSchwaegerin" src="#schwaegerin1" volume="10" on="sevenTalk"></a-sound>
+                        <a-sound id="sFourTalk2Schwaegerin" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
                     </a-entity>
 
                     <a-entity id="accSchwaegerin" obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13"
@@ -817,7 +817,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #B99C79"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-sound id="cSevenTalkGrossvater" class="wait" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
+                        <a-sound id="cSevenTalkGrossvater" src="#cGrossvater1" volume="10" on="cSevenTalk"></a-sound>
                     </a-entity>
 
                     <a-entity id="accGroßvater" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="false"
@@ -848,10 +848,10 @@ event-set__5="_event: five; visible: true"></a-entity>
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #C5E2E4"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
-                        <a-sound id="twoTalkNeffe" class="wait" src="#neffe1" volume="10" on="twoTalk"></a-sound>
-                        <a-sound id="sixTalkNeffe" class="wait" src="#neffe2" volume="20" on="sixTalk"></a-sound>
-                        <a-sound id="sTwoTalkNeffe" class="wait" src="#neffe3" volume="10" on="sTwoTalk"></a-sound>
-                        <a-sound id="sFiveTalk2Neffe" class="wait" src="#neffe4" volume="10" on="sFiveTalk2"></a-sound>
+                        <a-sound id="twoTalkNeffe" src="#neffe1" volume="10" on="twoTalk"></a-sound>
+                        <a-sound id="sixTalkNeffe" src="#neffe2" volume="20" on="sixTalk"></a-sound>
+                        <a-sound id="sTwoTalkNeffe" src="#neffe3" volume="10" on="sTwoTalk"></a-sound>
+                        <a-sound id="sFiveTalk2Neffe" src="#neffe4" volume="10" on="sFiveTalk2"></a-sound>
                     </a-entity>
 
                     <a-entity id="accNeffe" obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49"
@@ -885,7 +885,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-entity id="Nichte" class="one sFive_P3Move sFive_P3no fiveAll play" obj-model="obj:#figurObj"
                               position="0 2 0" scale="9.5 9.4 9.5" material="color:#E08989" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:5;loop:true"
-                              sound__5="src:#gaeste1; class:wait; on:fiveAll; poolsize:100; volume:5"
+                              sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #E08989"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                     </a-entity>
@@ -928,7 +928,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
 
                         <!--      fünfte Seite-->
-                        <a-sound id="msevenTalkJunge" class="wait" src="#junge1" volume="10" on="msevenTalk"></a-sound>
+                        <a-sound id="msevenTalkJunge" src="#junge1" volume="10" on="msevenTalk"></a-sound>
 
                     </a-entity>
 
@@ -998,41 +998,41 @@ event-set__5="_event: five; visible: true"></a-entity>
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5"
                               material="color:#CACACA" rotation="0 0 0" visible="true"
                               event-set__2="_event: two; visible: true">
-                        <a-sound id="fourTalkShuiTa" class="wait" src="#shui1" volume="10" on="fourTalk"></a-sound>
-                        <a-sound id="fourTalkShuiTa2" class="wait" src="#shui2" volume="10" on="fourTalk2"></a-sound>
-                        <a-sound id="sixTalk2ShuiTa" class="wait" src="#shui3" volume="10" on="sixTalk2"></a-sound>
-                        <a-sound id="sevenShuiTa" class="wait" src="#shuiNein" volume="40" on="sevenTalk0"></a-sound>
-                        <a-sound id="sevenTalkShuiTa" class="wait" src="#shui4" volume="10" on="sevenTalk"></a-sound>
-                        <a-sound id="sFiveTalkShuiTa" class="wait" src="#shui5" volume="10" on="sFiveTalk"></a-sound>
-                        <a-sound id="sSixTalk1ShuiTa" class="wait" src="#shui6" volume="10" on="sSixTalk1"></a-sound>
-                        <a-sound id="sSixTalk3ShuiTa" class="wait" src="#shui7" volume="10" on="sSixTalk2"></a-sound>
-                        <a-sound id="sSixTalk4ShuiTa" class="wait" src="#shui8" volume="10" on="sSixTalk3"></a-sound>
-                        <a-sound id="vTwoTalkShui" class="wait" src="#shuiV2" volume="10" on="vTwoTalk"></a-sound>
-                        <a-sound id="vFourTalkShui" class="wait" src="#shuiV4" volume="10" on="vFourTalk"></a-sound>
-                        <a-sound id="vSixTalkShui" class="wait" src="#shuiV6" volume="10" on="vSixTalk"></a-sound>
-                        <a-sound id="vNineTalkShui" class="wait" src="#shuiV9" volume="10" on="vNineTalk"></a-sound>
-                        <a-sound id="vElevenTalkShui" class="wait" src="#shuiV11" volume="10" on="vElevenTalk"></a-sound>
-                        <a-sound id="vFourteenTalkShui" class="wait" src="#shuiV14" volume="10" on="vFourteenTalk"></a-sound>
-                        <a-sound id="vSixteenTalkShui" class="wait" src="#shuiV17" volume="10" on="vSixteenTalk"></a-sound>
-                        <a-sound id="vEighteenTalkShui" class="wait" src="#shuiV20" volume="10" on="vEighteenTalk"></a-sound>
-                        <a-sound id="v22TalkShui" class="wait" src="#shuiV22" volume="10" on="v22Talk"></a-sound>
-                        <a-sound id="v23TalkShui" class="wait" src="#shuiV23" volume="10" on="v23Talk"></a-sound>
-                        <a-sound id="v28TalkShui" class="wait" src="#shuiV28" volume="10" on="v28Talk"></a-sound>
-                        <a-sound id="v29TalkShui" class="wait" src="#shuiV29" volume="10" on="v29Talk"></a-sound>
-                        <a-sound id="v30TalkShui" class="wait" src="#shuiV30" volume="10" on="v30Talk"></a-sound>
-                        <a-sound id="v31TalkShui" class="wait" src="#shuiV31" volume="10" on="v31Talk"></a-sound>
-                        <a-sound id="v32TalkShui" class="wait" src="#shuiV32" volume="10" on="v32Talk"></a-sound>
-                        <a-sound id="v33TalkShui" class="wait" src="#shuiV33" volume="10" on="v33Talk"></a-sound>
-                        <a-sound id="v34TalkShui" class="wait" src="#shuiV34" volume="10" on="v34Talk"></a-sound>
-                        <a-sound id="v36TalkShui" class="wait" src="#shuiV36" volume="10" on="v36Talk"></a-sound>
+                        <a-sound id="fourTalkShuiTa" src="#shui1" volume="10" on="fourTalk"></a-sound>
+                        <a-sound id="fourTalkShuiTa2" src="#shui2" volume="10" on="fourTalk2"></a-sound>
+                        <a-sound id="sixTalk2ShuiTa" src="#shui3" volume="10" on="sixTalk2"></a-sound>
+                        <a-sound id="sevenShuiTa" src="#shuiNein" volume="40" on="sevenTalk0"></a-sound>
+                        <a-sound id="sevenTalkShuiTa" src="#shui4" volume="10" on="sevenTalk"></a-sound>
+                        <a-sound id="sFiveTalkShuiTa" src="#shui5" volume="10" on="sFiveTalk"></a-sound>
+                        <a-sound id="sSixTalk1ShuiTa" src="#shui6" volume="10" on="sSixTalk1"></a-sound>
+                        <a-sound id="sSixTalk3ShuiTa" src="#shui7" volume="10" on="sSixTalk2"></a-sound>
+                        <a-sound id="sSixTalk4ShuiTa" src="#shui8" volume="10" on="sSixTalk3"></a-sound>
+                        <a-sound id="vTwoTalkShui" src="#shuiV2" volume="10" on="vTwoTalk"></a-sound>
+                        <a-sound id="vFourTalkShui" src="#shuiV4" volume="10" on="vFourTalk"></a-sound>
+                        <a-sound id="vSixTalkShui" src="#shuiV6" volume="10" on="vSixTalk"></a-sound>
+                        <a-sound id="vNineTalkShui" src="#shuiV9" volume="10" on="vNineTalk"></a-sound>
+                        <a-sound id="vElevenTalkShui" src="#shuiV11" volume="10" on="vElevenTalk"></a-sound>
+                        <a-sound id="vFourteenTalkShui" src="#shuiV14" volume="10" on="vFourteenTalk"></a-sound>
+                        <a-sound id="vSixteenTalkShui" src="#shuiV17" volume="10" on="vSixteenTalk"></a-sound>
+                        <a-sound id="vEighteenTalkShui" src="#shuiV20" volume="10" on="vEighteenTalk"></a-sound>
+                        <a-sound id="v22TalkShui" src="#shuiV22" volume="10" on="v22Talk"></a-sound>
+                        <a-sound id="v23TalkShui" src="#shuiV23" volume="10" on="v23Talk"></a-sound>
+                        <a-sound id="v28TalkShui" src="#shuiV28" volume="10" on="v28Talk"></a-sound>
+                        <a-sound id="v29TalkShui" src="#shuiV29" volume="10" on="v29Talk"></a-sound>
+                        <a-sound id="v30TalkShui" src="#shuiV30" volume="10" on="v30Talk"></a-sound>
+                        <a-sound id="v31TalkShui" src="#shuiV31" volume="10" on="v31Talk"></a-sound>
+                        <a-sound id="v32TalkShui" src="#shuiV32" volume="10" on="v32Talk"></a-sound>
+                        <a-sound id="v33TalkShui" src="#shuiV33" volume="10" on="v33Talk"></a-sound>
+                        <a-sound id="v34TalkShui" src="#shuiV34" volume="10" on="v34Talk"></a-sound>
+                        <a-sound id="v36TalkShui" src="#shuiV36" volume="10" on="v36Talk"></a-sound>
                         <!--      fünfte Seite-->
-                        <a-sound id="mtwoTalkShui" class="wait" src="#shui27" volume="10" on="mtwoTalk"></a-sound>
-                        <a-sound id="mthreeTalkShui" class="wait" src="#shui28" volume="10" on="mthreeTalk"></a-sound>
-                        <a-sound id="mfourTalkShui" class="wait" src="#shui29" volume="10" on="mfourTalk"></a-sound>
-                        <a-sound id="mfiveTalkShui" class="wait" src="#shui30" volume="10" on="mfiveTalk"></a-sound>
-                        <a-sound id="mfiveTalk2Shui" class="wait" src="#shui31" volume="10" on="mfiveTalk2"></a-sound>
-                        <a-sound id="msevenTalk4Shui" class="wait" src="#shui32" volume="10" on="msevenTalk4"></a-sound>
-                        <a-sound id="cTwoTalkShui" class="wait" src="#cShui33" volume="10" on="cTwoTalk"></a-sound>
+                        <a-sound id="mtwoTalkShui" src="#shui27" volume="10" on="mtwoTalk"></a-sound>
+                        <a-sound id="mthreeTalkShui" src="#shui28" volume="10" on="mthreeTalk"></a-sound>
+                        <a-sound id="mfourTalkShui" src="#shui29" volume="10" on="mfourTalk"></a-sound>
+                        <a-sound id="mfiveTalkShui" src="#shui30" volume="10" on="mfiveTalk"></a-sound>
+                        <a-sound id="mfiveTalk2Shui" src="#shui31" volume="10" on="mfiveTalk2"></a-sound>
+                        <a-sound id="msevenTalk4Shui" src="#shui32" volume="10" on="msevenTalk4"></a-sound>
+                        <a-sound id="cTwoTalkShui" src="#cShui33" volume="10" on="cTwoTalk"></a-sound>
                     </a-entity>
 
                     <a-entity id="accShuiTa" obj-model="obj:#MonokelObj; mtl: #MonokelMtl"
@@ -1105,18 +1105,30 @@ event-set__5="_event: five; visible: true"></a-entity>
                                                     vElevenTalk vSixteenTalk vEighteen vEighteenTalk v21Talk v22Talk v23Talk v27Talk v32 play"
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5"
                               material="color:#EDAE81" rotation="0 0 0" visible="true">
-                        <a-sound id="vOneTalk" class="wait" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
-                        <a-sound id="vTwoTalkSchreiner" class="wait" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
-                        <a-sound id="vFourTalkSchreiner" class="wait" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
-                        <a-sound id="vSixTalkSchreiner" class="wait" src="#schreinerV8" volume="10" on="vSixTalk"></a-sound>
-                        <a-sound id="vNineTalkSchreiner" class="wait" src="#schreinerV10" volume="10" on="vNineTalk"></a-sound>
-                        <a-sound id="vElevenTalkSchreiner" class="wait" src="#schreinerV13" volume="10" on="vElevenTalk"></a-sound>
-                        <a-sound id="vSixteenTalkSchreiner" class="wait" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
-                        <a-sound id="vEighteenTalkSchreiner" class="wait" src="#schreinerV19" volume="10" on="vEighteenTalk"></a-sound>
-                        <a-sound id="v21TalkSchreiner" class="wait" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
-                        <a-sound id="v22TalkSchreiner" class="wait" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
-                        <a-sound id="v23TalkSchreiner" class="wait" src="#schreinerV23" volume="10" on="v23Talk"></a-sound>
-                        <a-sound id="v27TalkSchreiner" class="wait" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
+                        <a-sound id="vOneTalk" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
+                        <a-sound id="vOneTalk" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
+                        <a-sound id="vTwoTalkSchreiner" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
+                        <a-sound id="vTwoTalkSchreiner" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
+                        <a-sound id="vFourTalkSchreiner" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
+                        <a-sound id="vFourTalkSchreiner" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
+                        <a-sound id="vSixTalkSchreiner" src="#schreinerV8" volume="10" on="vSixTalk"></a-sound>
+                        <a-sound id="vSixTalkSchreiner" src="#schreinerV8" volume="10" on="vSixTalk"></a-sound>
+                        <a-sound id="vNineTalkSchreiner" src="#schreinerV10" volume="10" on="vNineTalk"></a-sound>
+                        <a-sound id="vNineTalkSchreiner" src="#schreinerV10" volume="10" on="vNineTalk"></a-sound>
+                        <a-sound id="vElevenTalkSchreiner" src="#schreinerV13" volume="10" on="vElevenTalk"></a-sound>
+                        <a-sound id="vElevenTalkSchreiner" src="#schreinerV13" volume="10" on="vElevenTalk"></a-sound>
+                        <a-sound id="vSixteenTalkSchreiner" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
+                        <a-sound id="vSixteenTalkSchreiner" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
+                        <a-sound id="vEighteenTalkSchreiner" src="#schreinerV19" volume="10" on="vEighteenTalk"></a-sound>
+                        <a-sound id="vEighteenTalkSchreiner" src="#schreinerV19" volume="10" on="vEighteenTalk"></a-sound>
+                        <a-sound id="v21TalkSchreiner" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
+                        <a-sound id="v21TalkSchreiner" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
+                        <a-sound id="v22TalkSchreiner" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
+                        <a-sound id="v22TalkSchreiner" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
+                        <a-sound id="v23TalkSchreiner" src="#schreinerV23" volume="10" on="v23Talk"></a-sound>
+                        <a-sound id="v23TalkSchreiner" src="#schreinerV23" volume="10" on="v23Talk"></a-sound>
+                        <a-sound id="v27TalkSchreiner" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
+                        <a-sound id="v27TalkSchreiner" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
                     </a-entity>
 
                     <a-entity id="accSchreiner" obj-model="obj:#WerkzeugkisteObj" material="color: chocolate"
@@ -1128,6 +1140,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                               material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
                     <!-- Schreiner in Laden -->
+                    <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-9 0 -11"
                     <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-9 0 -11"
                                  repeat="0" begin="four"></a-animation>
                     <a-animation id="SchreinerAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 150 0"
@@ -1164,16 +1177,16 @@ event-set__5="_event: five; visible: true"></a-entity>
                         <a-sound id="v32TalkPolizist" class="wait" src="#polizistV32" volume="10" on="v32Talk"></a-sound>
                         <a-sound id="v34TalkPolizist" class="wait" src="#polizistV34" volume="10" on="v34Talk"></a-sound>
                         <!--      fünfte Seite-->
-                        <a-sound id="mtwoTalk" class="wait" src="#polizist3" volume="10" on="mtwoTalk"></a-sound>
-                        <a-sound id="mfourTalk" class="wait" src="#polizist4" volume="10" on="mfourTalk"></a-sound>
-                        <a-sound id="mfiveTalk2" class="wait" src="#polizist5" volume="10" on="mfiveTalk2"></a-sound>
-                        <a-sound id="msix2Talk" class="wait" src="#polizist6" volume="10" on="msix2Talk"></a-sound>
-                        <a-sound id="msevenTalk" class="wait" src="#polizist7" volume="10" on="msevenTalk"></a-sound>
-                        <a-sound id="msevenTalk2" class="wait" src="#polizist8" volume="10" on="msevenTalk2"></a-sound>
-                        <a-sound id="msevenTalk3" class="wait" src="#polizist9" volume="10" on="msevenTalk3"></a-sound>
-                        <a-sound id="msevenTalk4" class="wait" src="#polizist10" volume="10" on="msevenTalk4"></a-sound>
-                        <a-sound id="cTwoTalkPolizist" class="wait" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
-                        <a-sound id="cFivePolizist" class="wait" src="#cPolizist12" volume="10" on="cFiveTalk"></a-sound>
+                        <a-sound id="mtwoTalk" src="#polizist3" volume="10" on="mtwoTalk"></a-sound>
+                        <a-sound id="mfourTalk" src="#polizist4" volume="10" on="mfourTalk"></a-sound>
+                        <a-sound id="mfiveTalk2" src="#polizist5" volume="10" on="mfiveTalk2"></a-sound>
+                        <a-sound id="msix2Talk" src="#polizist6" volume="10" on="msix2Talk"></a-sound>
+                        <a-sound id="msevenTalk" src="#polizist7" volume="10" on="msevenTalk"></a-sound>
+                        <a-sound id="msevenTalk2" src="#polizist8" volume="10" on="msevenTalk2"></a-sound>
+                        <a-sound id="msevenTalk3" src="#polizist9" volume="10" on="msevenTalk3"></a-sound>
+                        <a-sound id="msevenTalk4" src="#polizist10" volume="10" on="msevenTalk4"></a-sound>
+                        <a-sound id="cTwoTalkPolizist" src="#cPolizist11" volume="10" on="cTwoTalk"></a-sound>
+                        <a-sound id="cFivePolizist" src="#cPolizist12" volume="10" on="cFiveTalk"></a-sound>
 
                     </a-entity>
 
@@ -1236,7 +1249,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-box>
 
                 <!-- Türe -->
-                <a-entity collada-model="#tabakladenTuerSmallerDAE" 
+                <a-entity collada-model="#tabakladenTuerSmallerDAE"
                           id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v32 clickable"
                           position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;"
