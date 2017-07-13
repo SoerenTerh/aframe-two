@@ -1,12 +1,22 @@
 var myCamera;
+
 //--================SET OUTDOOR CAMERA COMPONENT=========================
 AFRAME.registerComponent('set-cam-outdoor', {
     init() { 
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
+            var aussenSound = document.querySelector('#aussenSzene [sound]');
+            aussenSound.components.sound.playSound();
 
-            this.el.emit('open');  
-            console.log(this.el);
+            var gameInProgress = document.querySelector(gameActive);
+            gameInProgress.setAttribute('visible', 'true');
+
+            if(gameActive === "#cakeGame"){
+              $('#counterKuchen').css('display', 'block');
+            } else if (gameActive === "#HideAndSeek") {
+              $('#counterPerson').css('display', 'block');
+            }
+
             document.location.hash = 'Platz';
             document.querySelector('#camera').setAttribute('camera', 'active', true);  
             document.getElementById("innenSzene").setAttribute('visible', 'false');
@@ -26,6 +36,19 @@ AFRAME.registerComponent('set-cam-indoor', {
     init() {   
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
+            console.log(document.querySelector('#platz'));
+            var aussenSound = document.querySelector('#aussenSzene [sound]');
+            aussenSound.components.sound.stopSound();
+
+            if ($('a-scene').hasClass('rain')) {
+              $('a-scene').removeAttr('rain');
+            }
+
+            document.querySelector('#HideAndSeek').setAttribute('visible', 'false');
+            document.querySelector('#memoryGame').setAttribute('visible', 'false');
+            document.querySelector('#cakeGame').setAttribute('visible', 'false');
+            $('#counterKuchen').css('display', 'none');
+            $('#counterPerson').css('display', 'none');
 
             document.location.hash = 'Tabakladen';
             document.querySelector('#camera').setAttribute('camera', 'active', true);    

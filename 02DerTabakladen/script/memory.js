@@ -252,6 +252,7 @@ $("#cardStack").on("click", function triggerMemory() {
         if (memoryVisible === false) {
             AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
             memoryVisible = true;
+            gameActive = "#memoryGame";
             // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
         }
         else {

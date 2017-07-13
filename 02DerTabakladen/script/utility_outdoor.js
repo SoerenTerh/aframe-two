@@ -2,7 +2,7 @@
 
 var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
-
+var gameActive;
 /**
  * Check game status to prevent starting multiple games
  * param: array position of game in games[]
@@ -141,6 +141,7 @@ $('#cakeTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[0])!==false){
         AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
         $('#counterKuchen').css("display", "initial");
+        gameActive = '#cakeGame';
     }
 });
 
@@ -149,6 +150,7 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
         $('#counterPerson').css("display", "initial");
+        gameActive = '#HideAndSeek';
     }
 });
 
