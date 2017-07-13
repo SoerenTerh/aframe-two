@@ -31,6 +31,7 @@ $(document).ready(function () {
         $(".s2_tenInfo").addClass("hide");
         $(".s2_elevenInfo").addClass("hide");
         $(".s2_twelveInfo").addClass("hide");
+        $(".future2info").addClass("hide");
 
     }
 
@@ -208,6 +209,14 @@ $(document).ready(function () {
         if ($(".s2_twelveInfo").hasClass("hide")) {
             hide();
             $(".s2_twelveInfo").removeClass("hide");
+        }
+    });
+	
+	$(".future2").on('click mouseover', function () {
+        color(this);
+        if ($(".future2info").hasClass("hide")) {
+            hide();
+            $(".future2info").removeClass("hide");
         }
     });
 
