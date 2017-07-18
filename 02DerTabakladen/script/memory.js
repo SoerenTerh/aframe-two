@@ -249,7 +249,13 @@ var turnCardEvent = false;
 var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
     if(checkGameStatus(games[2])!==false){
-        if (memoryVisible === false) {
+        if (memoryVisible === false) { 
+            
+            //document.querySelector("#containerGroßvaterGame" + ' > a-sound[on=\"Spielaufruf"]').emit("Spielaufruf");
+            //#SpielaufrufGrossvater
+            document.querySelector("#containerGroßvaterGame" + ' > a-sound' ).emit("Spielaufruf");
+            document.querySelector("#containerGroßvaterGame" + ' > a-animation' ).emit("Spielaufruf");
+            
             AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
             memoryVisible = true;
             gameActive = "#memoryGame";
