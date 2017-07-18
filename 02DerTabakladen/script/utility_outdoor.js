@@ -148,7 +148,7 @@ $('#cakeTrigger').on('click', function beginCake() {
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
-$('#hideAndSeekTrigger').on('click', function beginCake() {
+$('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
     if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
         document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
