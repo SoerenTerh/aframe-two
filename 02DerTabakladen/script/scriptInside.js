@@ -79,8 +79,11 @@ var eventArr = ["one",
               //  "msix2Talk",
                 "mseven", //"msevenTalk", "msevenTalk2", "msevenTalk3",
                 "mseven2", //"msevenTalk4",
-                "cOneTalk", "cTwoTalk", "cThree", "cThree1", "cFour", "cFiveTalk", "cFive1", "cSix",
-                "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
+                //"cOneTalk", "cTwoTalk",
+                "cThree", "cThree1", "cFour",
+                //"cFiveTalk",
+                "cFive1", "cSix",
+                "cSix1", "cSix2", "cSix3", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 at = eventArr[0];
 
