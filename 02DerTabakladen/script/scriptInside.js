@@ -266,7 +266,8 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cFive1 = ["#containerPolizist"],
     cSix = ["#containerSchwaegerin"],
     cSix1 = ["#containerJunge", "#containerSchwaegerin"],
-    cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+    cSix2 = ["#containerJunge", "#containerSchwaegerin"],
+    cSix3 = ["#containerFrau", "#containerMann"],
     cFive2 = ["#containerPolizist"],//Polizist treibt sie
     //werden getrieben und gehen ab
     cFive3 = ["#containerPolizist"],
