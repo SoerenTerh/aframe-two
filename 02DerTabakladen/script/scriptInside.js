@@ -24,18 +24,18 @@ var eventArr = ["one",
                 //"fourTalk", "fourTalk2",
                 // "fiveAll",
                 "five",
-              //  "sixTalk",
+                //  "sixTalk",
                 "six", "six2",
-              //  "sixTalk2",
-            //    "sevenTalk0",
+                //  "sixTalk2",
+                //    "sevenTalk0",
                 // "seven", "seven2", "seven3", "seven4",
-            //    "sevenTalk",
-              //  "sOneTalk", "sTwoTalk", "sThreeTalk",
+                //    "sevenTalk",
+                //  "sOneTalk", "sTwoTalk", "sThreeTalk",
                 //"sFourTalkStart",
                 //"sFourTalk1", "sFourTalk2",
                 // "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
                 "sFourP3begin", "sFourMove", "sFour_P3",
-              //  "sFiveTalk", "sFiveTalk2",
+                //  "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
                 // "sSixTalk1", "sSixTalk2", "sSixTalk3",
                 "sSeven_P1", "sSeven_P2rot", "sSevenPRotaPU","sSeven_P2", "sSeven_P2end",
@@ -76,7 +76,7 @@ var eventArr = ["one",
                 //"mfourTalk",
                 "mfive", "mfive2", //"mfiveTalk", "mfiveTalk2",
                 "msix", "msix2",
-              //  "msix2Talk",
+                //  "msix2Talk",
                 "mseven", //"msevenTalk", "msevenTalk2", "msevenTalk3",
                 "mseven2", //"msevenTalk4",
                 //"cOneTalk", "cTwoTalk",
@@ -241,14 +241,14 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //mzeroTalk = ["#Mann"], //mann14
 
     mone = ["#Mann", "#accMann"], //Zeichen an Shui Ta (unbeachtet bei diesem)
-  //  mtwoTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
+    //  mtwoTalk = ["#ShuiTa", "#Polizist"], //shui27, polizist3
     mthree = ["#Frau", "#Mann"], //Frau zu Mann (drehen)
     //mthreeTalk = ["#Frau", "#ShuiTa"], //frau8, shui28
     mfour = ["#containerShuiTa", "#containerPolizist"], //tritt ein
     //mfourTalk = ["#Polizist", "#Mann", "#ShuiTa"], //polizist4, mann15, shui29
     mfive = ["#containerShuiTa"], //Man (ShuiTa) verbeugt sich
     mfive2 = ["#containerShuiTa"],
-  //  mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
+    //  mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
     //mfiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
     msix = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
     msix2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg

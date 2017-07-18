@@ -38,7 +38,17 @@ function game(el) {
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
-            gameLost();
+            document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielfehler"); //geht irgendwie nicht obwoh lgenau das an einer stelle in utiiy_outdoor.js problemlos geht
+            
+            document.querySelector("#containerJungeGame").addEventListener('sound-ended', function waited() { //kann nicht getested werden wegen Z.41
+                
+                console.log("--------------------Narration \"Spielfehler\" End--------------------");
+                
+                gameLost();
+                
+            });
+            gameLost(); //nur hier bis Z. 43 getested werden kann
+            
         }
     }
 }
@@ -72,6 +82,7 @@ function gameWon() {
 function gameLost() {
     $('#lostCounter').html("Du hast " + counter + " Gebäckstücke gesammelt, jedoch eine verbotene Zigarre eingesammelt!");
     $('#lost').css("display", "initial");
+    
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
