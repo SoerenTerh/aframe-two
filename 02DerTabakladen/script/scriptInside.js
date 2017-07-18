@@ -272,7 +272,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cSix2 = ["#containerJunge", "#containerSchwaegerin", "#containerFrau", "#containerMann"],
     cFive2 = ["#containerPolizist"],//Polizist treibt sie
     //werden getrieben und gehen ab
-    cFive3 = ["#containerPolizist"],
+    cFive3 = ["#containerMann", "#containerPolizist"],
     cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
