@@ -7,7 +7,7 @@ var skey = "theCakeIsALie";
  */
 var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[0])!=false){
+    if(checkGameStatus(games[0])!==false){
         AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
         $('#counterKuchen').css("display", "initial");
     }
