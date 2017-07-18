@@ -62,19 +62,19 @@ $('#triggerTeppichladenxBaeckerei').on('click', function triggerTeppichladenxBae
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: -100, y: 14, z: -65});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerBaeumeV2').on('click', function triggerBaeumeV2(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 49, y: 14, z: -40});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerBaeumexTabakladen').on('click', function triggerBaeumexTabakladen(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 57, y: 14, z: 84});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerTabakladenxTeppichladen').on('click', function triggerTabakladenxTeppichladen(){
     'use strict';
@@ -82,13 +82,13 @@ $('#triggerTabakladenxTeppichladen').on('click', function triggerTabakladenxTepp
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
     console.log(entity);
     console.log(entity.getAttribute('position'));
-})
+});
 
 $('#triggerBrunnen').on('click', function triggerBrunnen(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: -18, y: 14, z: 2});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 /** Toggle functions to show or hide informational text boxes*/
 

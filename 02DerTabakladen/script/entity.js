@@ -207,6 +207,7 @@ AFRAME.registerComponent('rain', {
             }
 
             var y;
+            var il;
             var minY = positionArray[1];
             var maxY = positionArray[1];
             for (i = 1, il = positionArray.length / 3; i < il; i++) {
