@@ -8,15 +8,15 @@ var gameActive;
  * param: array position of game in games[]
  * return: false - if other game is running
  */
-    
+
 function checkGameStatus(curr) {
-  var gamesWOcurr = games.filter(function(e){return e !== curr;});
+    var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
-      var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
-      if(status){
-          console.log("another game is already running");
-          return false;
-      }
+        var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
+        if(status){
+            console.log("another game is already running");
+            return false;
+        }
     }
 }
 
@@ -31,7 +31,7 @@ function checkGameStatus(curr) {
 //});
 
 
-    
+
 /** Trigger points to move across the outside area */
 
 $('#triggerBaeume').on('click', function triggerBaeume() {
