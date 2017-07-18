@@ -38,9 +38,9 @@ function game(el) {
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
-            document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielfehler"); //geht irgendwie nicht obwoh lgenau das an einer stelle in utiiy_outdoor.js problemlos geht
+            document.querySelector("#falscheAnzahl").play();
             
-            document.querySelector("#containerJungeGame").addEventListener('sound-ended', function waited() { //kann nicht getested werden wegen Z.41
+            document.querySelector("#falscheAnzahl").addEventListener('sound-ended', function waited() {
                 
                 console.log("--------------------Narration \"Spielfehler\" End--------------------");
                 

@@ -9,7 +9,9 @@ AFRAME.registerComponent('set-cam-outdoor', {
             aussenSound.components.sound.playSound();
 
             var gameInProgress = document.querySelector(gameActive);
-            gameInProgress.setAttribute('visible', 'true');
+            if(gameInProgress!== null && gameInProgress !== ""){
+                gameInProgress.setAttribute('visible', 'true');
+            }
 
             if(gameActive === "#cakeGame"){
                 $('#counterKuchen').css('display', 'block');
