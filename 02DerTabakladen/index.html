@@ -611,10 +611,10 @@
             <!--scene Innen-->
             <a-entity id="innenSzene" scale="1 1 1" rotation="0 180 0" position="0 0 0">
                 <!--Frau-->
-                <a-entity id="containerFrau" class="two three msix2 cSix1 cSix2 play" position="-1.71 .5 -21.22"
+                <a-entity id="containerFrau" class="two three msix2 cSix1 cSix3 play" position="-1.71 .5 -21.22"
                           rotation="-90.00 -90.00 0">
                     <a-entity id="Frau" class="one twoTalk twoTalk2 fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
-                                               mthreeTalk msevenTalk2 cSix3
+                                               mthreeTalk msevenTalk2
                                                cOneTalk play"
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9"
                               rotation="0 0 0" visible="true" sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
@@ -664,7 +664,7 @@
                 </a-entity>
 
                 <!--Mann-->
-                <a-entity id="containerMann" class="five cSix1 cSix2 play" position="-1.09 .5 -14.02" rotation="-90 -90 0">
+                <a-entity id="containerMann" class="five cSix1 cSix3 play" position="-1.09 .5 -14.02" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                                vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
@@ -972,6 +972,17 @@ event-set__5="_event: five; visible: true"></a-entity>
                               event-set__5="_event: five; visible: true">
                     </a-entity>
 
+                    <!--Essen-->
+                    <a-entity id="containerEssen" class="msix play" visible="false" position="0 6.5 1.7" scale="0.3 0.3 0.3"
+                              event-set="_event: msix; visible: true">
+                        <a-entity obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="kuchen1"></a-entity>
+                        <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="fladen1"></a-entity>
+                        <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="fladen2"></a-entity>
+                    </a-entity>
+
                     <a-animation id="JungeAnimV21" attribute="position" dur="2500" to="-7 0 -16" repeat="0"
                                  begin="v21"></a-animation>
 
@@ -995,13 +1006,13 @@ event-set__5="_event: five; visible: true"></a-entity>
                                  begin="msix"></a-animation>
                     <a-animation id="msix2AnimJungeP" class="wait" attribute="position" to="-7.82 0 -25.22" repeat="0"
                                  begin="msix2"></a-animation>
-                    <a-animation id="msix2AnimJungeR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
-                                 begin="msix2"></a-animation>
+                    <!-- <a-animation id="msix2AnimJungeR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                                 begin="msix2"></a-animation> -->
                     <a-animation id="msevenAnimJunge" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0"
                                  begin="mseven"></a-animation>
+                    <a-animation id="cjungeanimp1R" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+                                  begin="cSix1"></a-animation>
                     <a-animation id="cjungeanimp1P" class="wait" attribute="position" dur="2500" to="-8.18 0 -40" repeat="0"
-                                 begin="cSix1"></a-animation>
-                    <a-animation id="cjungeanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0"
                                  begin="cSix1"></a-animation>
                     <a-animation id="cjungeanimp2" class="wait" attribute="position" dur="2500" to="20 0 -70" repeat="0"
                                  begin="cSix2"></a-animation>
@@ -1316,17 +1327,6 @@ event-set__5="_event: five; visible: true"></a-entity>
                        visible="false"></a-box>
                 <a-box id="ladentischBox2" static-body="shape:Primitives" position="5.5 4 4" width="6" height="10" depth="14"
                        visible="false"></a-box>
-
-                <!--Essen-->
-                <a-entity id="containerEssen" class="msix play" visible="false" position="-6.38 2 -17.07" scale="0.3 0.3 0.3"
-                          event-set="_event: msix; visible: true">
-                    <a-entity obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="kuchen1"></a-entity>
-                    <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="fladen1"></a-entity>
-                    <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="fladen2"></a-entity>
-                </a-entity>
 
                 <!-- Laterne -->
                 <a-entity class="clickable"
