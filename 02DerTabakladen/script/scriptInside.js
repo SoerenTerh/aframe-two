@@ -265,7 +265,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cFiveTalk = ["#Polizist"], //vorwärts
     cFive1 = ["#containerPolizist"],
     cSix = ["#containerSchwaegerin"],
-    cSix1 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
+    cSix1 = ["#containerJunge", "#containerSchwaegerin"],
     cSix2 = ["#containerFrau", "#containerMann", "#containerJunge", "#containerSchwaegerin"],
     cFive2 = ["#containerPolizist"],//Polizist treibt sie
     //werden getrieben und gehen ab
