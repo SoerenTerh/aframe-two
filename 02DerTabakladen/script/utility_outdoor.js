@@ -140,6 +140,8 @@ var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[0])!==false){
         AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+        document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterKuchen').css("display", "initial");
         gameActive = '#cakeGame';
     }

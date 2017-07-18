@@ -1635,6 +1635,26 @@ begin="msix2"></a-animation> -->
 
                 <!-- cakeGame entity and child elements -->
                 <a-entity id="cakeGame" visible="false">
+                    <!--Junge--> 
+                    <a-entity id="containerJungeGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
+                        <a-entity id="JungeGame" class="play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
+                                  material="color:#D2E6C1" visible="true"></a-entity>
+
+                            <a-entity id="accJungeGame" obj-model="obj:#SchalObj;" material="color: seagreen"
+                                      position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true">
+                            </a-entity>
+
+                            <a-sound id="SpielaufrufJungeId" src="#spielanfrage" volume="10" on="Spielaufruf"></a-sound>
+                            <a-sound id="SpielfehlerJungeId" src="#falscheAnzahl" volume="10" on="Spielfehler"></a-sound>
+
+                            <a-animation id="JungeAnimFive2Game" attribute="position" dur="2500" to="-10 0.8 10" repeat="0"
+                                         begin="Spielaufruf"></a-animation>
+
+                            <!-- Sockel-->
+                            <a-entity id="sockelJungeGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                        
+                    </a-entity>
+
                     <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake2" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
@@ -1689,8 +1709,7 @@ begin="msix2"></a-animation> -->
 
                 <!-- Memory-Spiel -->
                 <a-entity id="memoryGame" position="-16 10 -10" visible=false>
-                    
-                    
+
                     <!--Großvater-->
                     <a-entity id="containerGroßvaterGame" class="play" position="10 -9.035 55" rotation="0 -145 0" scale="0.5 0.5 0.5">
                         <a-entity id="GroßvaterGame" class="play" obj-model="obj:#figurObj" position="0 2 0"
@@ -1699,17 +1718,16 @@ begin="msix2"></a-animation> -->
 
                         <a-entity id="accGroßvaterGame" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="true">
                         </a-entity>
-                        
+
                         <a-sound id="SpielaufrufGrossvaterId" src="#SpielaufrufGrossvater" volume="10" on="Spielaufruf"></a-sound>
-                        
+
                         <a-animation id="GroßvaterAnimFive2Game" attribute="position" dur="2500" to="10 -9.035 20.1" repeat="0"
                                      begin="Spielaufruf"></a-animation>
 
                         <!-- Sockel-->
                         <a-entity id="sockelGroßvaterGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
                     </a-entity>
-                    
-                    
+
                     <a-box id="memoryCard1" class="memoryCard" color="#eb2348" width="4" height="4"
                            depth="0.001" position="-5 -5 0">
                         <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
@@ -1811,8 +1829,7 @@ begin="msix2"></a-animation> -->
                         <!-- Sockel-->
                         <a-entity id="sockelPolizistGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
                     </a-entity>
-                    
-                    
+
                     <a-entity class="clickable HaSperson" id="HaSperson1" scale="0.425 0.425 0.425" random-position-person random-rotation>
                         <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
                         <a-entity obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
