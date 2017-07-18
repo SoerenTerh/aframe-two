@@ -1701,19 +1701,9 @@ begin="msix2"></a-animation> -->
                         </a-entity>
                         
                         <a-sound id="SpielaufrufGrossvaterId" src="#SpielaufrufGrossvater" volume="10" on="Spielaufruf"></a-sound>
-
-<!--
-                        <a-animation id="GroßvaterAnimFiveGame" attribute="rotation" dur="2500" to="0 125.00 0" repeat="0"
-                                     begin="Spielaufruf"></a-animation>
--->
+                        
                         <a-animation id="GroßvaterAnimFive2Game" attribute="position" dur="2500" to="10 -9.035 20.1" repeat="0"
                                      begin="Spielaufruf"></a-animation>
-<!--
-                        <a-animation id="cGrossvaterSevenGame" class="wait" attribute="position" dur="2500" to="0.18 0 -19"
-                                     repeat="0" begin="Spielaufruf"></a-animation>
-                        <a-animation id="cGrossvaterSeven1Game" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
-                                     begin="Spielaufruf"></a-animation>
--->
 
                         <!-- Sockel-->
                         <a-entity id="sockelGroßvaterGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
@@ -1803,6 +1793,26 @@ begin="msix2"></a-animation> -->
                 </a-entity>
 
                 <a-entity id="HideAndSeek" visible="false">
+                    <!--Polizist--> 
+                    <a-entity id="containerPolizistGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
+                        <a-entity id="PolizistGame" class="play" obj-model="obj:#figurObj" position="0 2 0"
+                                  scale="9.5 9.5 9.5" material="color:#CDCCF7" rotation="0 0 0" visible="true">
+                        </a-entity>
+
+                        <a-entity id="accPolizistGame" obj-model="obj:#PolizeiObj; mtl: #PolizeiMtl" position="0 15.15 -0.31"
+                                  scale="1 0.75 1" rotation="0 0 0" visible="true" material="color:#CCCCCC">
+                        </a-entity>
+
+                        <a-sound id="SpielaufrufPolizistId" src="#polizistSpielaufruf" volume="10" on="Spielaufruf"></a-sound>
+
+                        <a-animation id="PolizistAnimFive2Game" attribute="position" dur="2500" to="-10 0.8 10" repeat="0"
+                                     begin="Spielaufruf"></a-animation>
+
+                        <!-- Sockel-->
+                        <a-entity id="sockelPolizistGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    </a-entity>
+                    
+                    
                     <a-entity class="clickable HaSperson" id="HaSperson1" scale="0.425 0.425 0.425" random-position-person random-rotation>
                         <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
                         <a-entity obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>

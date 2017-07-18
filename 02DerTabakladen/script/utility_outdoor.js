@@ -149,6 +149,8 @@ var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+        document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterPerson').css("display", "initial");
         gameActive = '#HideAndSeek';
     }
