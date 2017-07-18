@@ -52,7 +52,15 @@ $('#kerze').on('click', function triggerKerze() {
                        }
 });
 
-document.querySelector('#open').addEventListener('animationend', function(){
+/*document.querySelector('#open').addEventListener('animationend', function(){
     console.log("animationStop");
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
+});*/
+
+/*$('#icontuer').on('click', function triggericon() {
+
+document.querySelector('#tabakladenTUERi').emit('#open');
+});*/
+$('#enterInnen').on('click', function triggericon() {
+document.querySelector('#icontuer').emit('#open');
 });
