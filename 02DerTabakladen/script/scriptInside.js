@@ -83,7 +83,7 @@ var eventArr = ["one",
                 "cThree", "cThree1", "cFour",
                 //"cFiveTalk",
                 "cFive1", "cSix",
-                "cSix1", "cSix2", "cFive2",  "cFive3", "cSeven", "cSevenTalk", "cEight"
+                "cSix1", "cSix2", "cFive3", "cSeven", "cSevenTalk", "cEight"
                ];
 at = eventArr[0];
 
@@ -270,7 +270,6 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cSix = ["#containerSchwaegerin"],
     cSix1 = ["#containerJunge", "#containerSchwaegerin"],
     cSix2 = ["#containerJunge", "#containerSchwaegerin", "#containerFrau", "#containerMann"],
-    cFive2 = ["#containerPolizist"],//Polizist treibt sie
     //werden getrieben und gehen ab
     cFive3 = ["#containerMann", "#containerPolizist"],
     cSeven = ["#containerGroßvater"],
