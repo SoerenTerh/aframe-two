@@ -8,15 +8,15 @@ var gameActive;
  * param: array position of game in games[]
  * return: false - if other game is running
  */
-    
+
 function checkGameStatus(curr) {
-  var gamesWOcurr = games.filter(function(e){return e !== curr;});
+    var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
-      var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
-      if(status){
-          console.log("another game is already running");
-          return false;
-      }
+        var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
+        if(status){
+            console.log("another game is already running");
+            return false;
+        }
     }
 }
 
@@ -31,7 +31,7 @@ function checkGameStatus(curr) {
 //});
 
 
-    
+
 /** Trigger points to move across the outside area */
 
 $('#triggerBaeume').on('click', function triggerBaeume() {
@@ -140,15 +140,19 @@ var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[0])!==false){
         AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+        document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterKuchen').css("display", "initial");
         gameActive = '#cakeGame';
     }
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
-$('#hideAndSeekTrigger').on('click', function beginCake() {
+$('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
     if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+        document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterPerson').css("display", "initial");
         gameActive = '#HideAndSeek';
     }

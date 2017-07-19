@@ -9,12 +9,14 @@ AFRAME.registerComponent('set-cam-outdoor', {
             aussenSound.components.sound.playSound();
 
             var gameInProgress = document.querySelector(gameActive);
-            gameInProgress.setAttribute('visible', 'true');
+            if(gameInProgress!== null && gameInProgress !== ""){
+                gameInProgress.setAttribute('visible', 'true');
+            }
 
             if(gameActive === "#cakeGame"){
-              $('#counterKuchen').css('display', 'block');
+                $('#counterKuchen').css('display', 'block');
             } else if (gameActive === "#HideAndSeek") {
-              $('#counterPerson').css('display', 'block');
+                $('#counterPerson').css('display', 'block');
             }
 
             document.location.hash = 'Platz';
@@ -41,7 +43,7 @@ AFRAME.registerComponent('set-cam-indoor', {
             aussenSound.components.sound.stopSound();
 
             if ($('a-scene').hasClass('rain')) {
-              $('a-scene').removeAttr('rain');
+                $('a-scene').removeAttr('rain');
             }
 
             document.querySelector('#HideAndSeek').setAttribute('visible', 'false');

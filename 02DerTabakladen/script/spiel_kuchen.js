@@ -38,7 +38,17 @@ function game(el) {
     }else{
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
-            gameLost();
+            document.querySelector("#falscheAnzahl").play();
+            
+            document.querySelector("#falscheAnzahl").addEventListener('sound-ended', function waited() {
+                
+                console.log("--------------------Narration \"Spielfehler\" End--------------------");
+                
+                gameLost();
+                
+            });
+            gameLost(); //nur hier bis Z. 43 getested werden kann
+            
         }
     }
 }
@@ -72,6 +82,7 @@ function gameWon() {
 function gameLost() {
     $('#lostCounter').html("Du hast " + counter + " Gebäckstücke gesammelt, jedoch eine verbotene Zigarre eingesammelt!");
     $('#lost').css("display", "initial");
+    
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
