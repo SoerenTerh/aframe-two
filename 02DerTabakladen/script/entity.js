@@ -1,11 +1,12 @@
 var myCamera;
+var storyProgress = false;
 
 //--================SET OUTDOOR CAMERA COMPONENT=========================
 AFRAME.registerComponent('set-cam-outdoor', {
     init() { 
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
-            var aussenSound = document.querySelector('#aussenSzene [sound]');
+            var aussenSound = document.querySelector('#platz');
             aussenSound.components.sound.playSound();
 
             var gameInProgress = document.querySelector(gameActive);
@@ -39,7 +40,7 @@ AFRAME.registerComponent('set-cam-indoor', {
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
             console.log(document.querySelector('#platz'));
-            var aussenSound = document.querySelector('#aussenSzene [sound]');
+            var aussenSound = document.querySelector('#platz');
             aussenSound.components.sound.stopSound();
 
             if ($('a-scene').hasClass('rain')) {
@@ -51,6 +52,12 @@ AFRAME.registerComponent('set-cam-indoor', {
             document.querySelector('#cakeGame').setAttribute('visible', 'false');
             $('#counterKuchen').css('display', 'none');
             $('#counterPerson').css('display', 'none');
+
+            // Trigger story when setting cam indoor
+            if(!storyProgress) {
+                storyline("#one", "one");
+                storyProgress = true;
+            }
 
             document.location.hash = 'Tabakladen';
             document.querySelector('#camera').setAttribute('camera', 'active', true);    
@@ -84,6 +91,14 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("innenSzene").setAttribute('visible', 'true');
                     document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
                     document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
+                    var aussenSound = document.querySelector('#platz');
+                    aussenSound.components.sound.stopSound();
+
+                    if(!storyProgress) {
+                        storyline("#one", "one");
+                        storyProgress = true;
+                    }
+
 
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 5, y: 13.6, z: 20});
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});

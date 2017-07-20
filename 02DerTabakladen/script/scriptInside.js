@@ -609,9 +609,6 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
             scene.enterVR();
         }
         $("#giveMeTime").remove();
-
-        currentTarget = "#one";
-        at = "one";
         storyline(currentTarget, at);
     }, 1500);
 });
