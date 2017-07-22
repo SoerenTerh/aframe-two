@@ -57,7 +57,7 @@ document.querySelector('#open').addEventListener('animationend', function(){
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
 });
 
-$('#icontuer').on('click', function triggericon() {
+$('#icontuer').on('clickableFound', function triggericon() {
 	console.log("tuerInnen");
 	document.querySelector('#tabakladenTUERi' + '> a-animation').emit('open');
 	
