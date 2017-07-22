@@ -59,8 +59,8 @@ document.querySelector('#open').addEventListener('animationend', function(){
 
 $("#icontuer").on("click", function triggericon() {
 	console.log("Hallo");
-	document.querySelector("#tabakladenTUERi" '> a-animation').emit("open");
-	document.querySelector("#tabakladenTUERi" '> a-sound').emit("open");
+	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("open");
+	document.querySelector("#tabakladenTUERi" + '> a-sound').emit("open");
 	
 	});
 	
