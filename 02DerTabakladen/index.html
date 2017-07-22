@@ -1263,7 +1263,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-box>
 
                 <!-- Türe -->
-				<a-entity id="icontuer" class="clickable">
+				<a-entity id="icontuer" class="clickableTrigger">
 				 <a-image id="enterInnen" src="../assets/icons/enter.svg" scale="3 3 3" position="0.24 17.26 -23.95"></a-image>
 				 
 				</a-entity>
@@ -1271,12 +1271,12 @@ event-set__5="_event: five; visible: true"></a-entity>
                           id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v32 clickable"
                           position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;"
-                          sound__1="src:#squeeky_door;on:clickableFound;poolsize:100;volume:10"
+                          sound__1="src:#squeeky_door;on:open;poolsize:100;volume:10"
                           set-cam-outdoor>
 
 
  <!-- -->           <a-animation attribute="rotation" dur="2500" to="0 -45 0" repeat="0"
-                                begin="clickableFound" id="open"></a-animation>
+                                begin="open" id="open"></a-animation>
                     <a-animation attribute="rotation" dur="1000" to="0 0 0" repeat="0"
                                  begin="close" id="close"></a-animation>
 
