@@ -64,7 +64,7 @@ $("#icontuer").on("clickableFound", function triggericon() {
 	});
 	
 
-/*NEU*/
+/*NEU Funktioniert nicht in utility_outdoor!*/
 $("#iconAussen").on("clickableFound", function triggericonaussen() {
 	console.log("Hallo");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
