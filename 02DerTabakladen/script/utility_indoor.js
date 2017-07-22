@@ -57,9 +57,9 @@ document.querySelector('#open').addEventListener('animationend', function(){
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
 });
 
-$("#icontuer").on("clickableFound", function triggericon() {
+$("#icontuer").on("open", function triggericon() {
 	console.log("Hallo");
-	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableFound");
+	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("open");
 	
 	});
 	
