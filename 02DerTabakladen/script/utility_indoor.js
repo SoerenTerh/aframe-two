@@ -57,13 +57,19 @@ document.querySelector('#open').addEventListener('animationend', function(){
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
 });
 
-$("#icontuer").on("click", function triggericon() {
+$("#icontuer").on("clickableFound", function triggericon() {
 	console.log("Hallo");
 	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("open");
 	document.querySelector("#tabakladenTUERi" + '> a-sound').emit("open");
 	
 	});
 	
+$("#iconAussen").on("clickableFound", function triggericonaussen() {
+	console.log("Hallo");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+	//document.querySelector("#tabakladenTUERi" + '> a-sound').emit("clickableFound");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+	});
 /*$('#icontuer').on('fusing', function iconfuse() {
 	console.log('Hallo');
 	document.querySelector('#tabakladenTUERi > a-animation').emit('open');
