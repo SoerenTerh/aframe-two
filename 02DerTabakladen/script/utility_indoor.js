@@ -64,3 +64,13 @@ $('#icontuer').on('click', function triggericon() {
 	});
 	
 
+/*NEU*/
+$("#iconAussen").on("clickableFound", function triggericonaussen() {
+	console.log("clickFound");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+});
+	
+$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
+	console.log("clickClick");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+});
