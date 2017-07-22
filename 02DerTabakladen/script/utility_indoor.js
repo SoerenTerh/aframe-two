@@ -58,7 +58,7 @@ document.querySelector('#open').addEventListener('animationend', function(){
 });
 
 $('#icontuer').on('click', function triggericon() {
-	console.log("Hallo");
+	console.log("tuerInnen");
 	document.querySelector('#tabakladenTUERi' + '> a-animation').emit('open');
 	
 	});

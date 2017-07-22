@@ -167,11 +167,11 @@ $('#brunnen').on('click', function triggerBrunnen (){
 
 /*NEU Funktioniert nicht in utility_outdoor!*/
 $("#iconAussen").on("clickableFound", function triggericonaussen() {
-	console.log("Hallo");
+	console.log("foundInnen");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
 });
 	
 $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
-	console.log("Hallo");
+	console.log("clickInnen");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
 });
