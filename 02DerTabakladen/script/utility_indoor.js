@@ -57,20 +57,10 @@ document.querySelector('#open').addEventListener('animationend', function(){
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
 });
 
-$("#icontuer").on("open", function triggericon() {
+$('#icontuer').on('open', function triggericon() {
 	console.log("Hallo");
-	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("open");
+	document.querySelector('#tabakladenTUERi' + '> a-animation').emit('open');
 	
 	});
 	
 
-/*NEU Funktioniert nicht in utility_outdoor!*/
-$("#iconAussen").on("clickableFound", function triggericonaussen() {
-	console.log("Hallo");
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
-});
-	
-$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
-	console.log("Hallo");
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
-});
