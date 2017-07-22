@@ -165,3 +165,13 @@ $('#brunnen').on('click', function triggerBrunnen (){
     }
 });
 
+/*NEU*/
+$("#iconAussen").on("clickableFound", function triggericonaussen() {
+	console.log("Hallo");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+});
+	
+$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
+	console.log("Hallo");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+});

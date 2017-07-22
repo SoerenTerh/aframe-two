@@ -64,19 +64,4 @@ $("#icontuer").on("clickableFound", function triggericon() {
 	
 	});
 	
-$("#iconAussen").on("clickableFound", function triggericonaussen() {
-	console.log("Hallo");
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
-	document.querySelector("#tabakladenTUERi" + '> a-sound').emit("clickableFound");
-	});
-	
-	$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
-	console.log("Hallo");
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
-	});
-/*$('#icontuer').on('fusing', function iconfuse() {
-	console.log('Hallo');
-	document.querySelector('#tabakladenTUERi > a-animation').emit('open');
-	document.querySelector('#tabakladenTUERi > a-sound').emit('open');
-	
-	});*/
+
