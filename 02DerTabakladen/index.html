@@ -700,10 +700,10 @@
                     <a-entity id="accMann" class="mone mone2 play" obj-model="obj:#KappeObj" material="color: red"
                               position="0 14.43 -0.40" scale="1 1 1" rotation="3.98 175.00 0" visible="false"
                               event-set__accMannV="_event: sFourACC1; visible: true">
-                        <a-animation id="moneAccMannAnimP" class="wait" attribute="position" dur="2500" to="0 19.43 -0.40"
+                        <a-animation id="moneAccMannAnimP" attribute="position" dur="500" to="0 19.43 -0.40"
                                      begin="mone"></a-animation>
-                        <a-animation id="mone2AccMannAnimP" class="wait" attribute="position" dur="2500" to="0 14.43 -0.40"
-                                     begin="mone2"></a-animation>
+                        <a-animation id="mone2AccMannAnimP" attribute="position" dur="500" delay="600" from="0 19.43 -0.40" to="0 14.43 -0.40"
+                                     begin="mone"></a-animation>
                     </a-entity>
 
                     <!-- Sockel-->
