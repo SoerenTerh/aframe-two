@@ -58,9 +58,11 @@ document.querySelector('#open').addEventListener('animationend', function(){
 });
 
 $("#icontuer").on("clickableFound", function triggerinnen() {
+  console.log("HALLO");
 	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableFound");
 });
 
 $("#icontuer").on("clickableClick", function triggerinnenclick() {
+  console.log("HALLO")
 	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableClick");
 });
