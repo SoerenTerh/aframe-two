@@ -249,7 +249,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     mfive = ["#containerShuiTa"], //Man (ShuiTa) verbeugt sich
     mfive2 = ["#containerShuiTa"],
     //  mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
-    //mfiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
+    //mfiveTalk2 = ["#ShuiTa", "#asky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
     msix = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
     msix2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
     //msix2Talk = ["#Polizist"], //polizist6
@@ -325,7 +325,7 @@ function storyline(currentTarget, currentEvent) {
             function wait2(narrate) {
                 document.querySelector(narrate).addEventListener('sound-ended', function waited() {
                     //  document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
-                    if (fireAt !== "#sky") {
+                    if (fireAt !== "#asky") {
                         document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt));
                     }
                     console.log("--------------------Narration End--------------------");
@@ -360,7 +360,7 @@ function storyline(currentTarget, currentEvent) {
 
 
                             if (narrate !== null) {
-                                if (fireAt !== "#sky") {
+                                if (fireAt !== "#asky") {
                                     document.querySelector(fireAt).setAttribute('material', 'color', '#a2e665');
                                 }
 
