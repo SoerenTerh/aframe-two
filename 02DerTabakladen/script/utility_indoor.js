@@ -52,6 +52,7 @@ $('#kerze').on('click', function triggerKerze() {
                        }
 });
 
+<<<<<<< Updated upstream
 document.querySelector('#open').addEventListener('animationend', function(){
     console.log("animationStop");
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
@@ -74,3 +75,8 @@ $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
 	console.log("clickClick");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
 });
+=======
+$('#enterInnen').on('click', function triggericon() {
+  this.emit(openEvent);
+});
+>>>>>>> Stashed changes
