@@ -52,7 +52,6 @@ $('#kerze').on('click', function triggerKerze() {
                        }
 });
 
-<<<<<<< Updated upstream
 document.querySelector('#open').addEventListener('animationend', function(){
     console.log("animationStop");
     setTimeout(function(){document.querySelector('#tabakladenTUERi').setAttribute('rotation', {x:0, y:-90, z:0});}, 1000);
@@ -61,22 +60,17 @@ document.querySelector('#open').addEventListener('animationend', function(){
 $('#icontuer').on('clickableFound', function triggericon() {
 	console.log("tuerInnen");
 	document.querySelector('#tabakladenTUERi' + '> a-animation').emit('open');
-	
+
 	});
-	
+
 
 /*NEU*/
 $("#iconAussen").on("clickableFound", function triggericonaussen() {
 	console.log("clickFound");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
 });
-	
+
 $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
 	console.log("clickClick");
 	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
 });
-=======
-$('#enterInnen').on('click', function triggericon() {
-  this.emit(openEvent);
-});
->>>>>>> Stashed changes
