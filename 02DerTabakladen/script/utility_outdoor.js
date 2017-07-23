@@ -2,7 +2,7 @@
 
 var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
-
+var gameActive;
 /**
  * Check game status to prevent starting multiple games
  * param: array position of game in games[]
@@ -10,13 +10,13 @@ var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
  */
 
 function checkGameStatus(curr) {
-  var gamesWOcurr = games.filter(function(e){return e !== curr;});
+    var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
-      var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
-      if(status){
-          console.log("another game is already running");
-          return false;
-      }
+        var status = document.querySelector(gamesWOcurr[i]).getAttribute('visible');
+        if(status){
+            console.log("another game is already running");
+            return false;
+        }
     }
 }
 
@@ -30,17 +30,14 @@ function checkGameStatus(curr) {
 //    }, 1500);
 //});
 
-
 /*NEU*/
 $("#iconAussen").on("clickableFound", function triggericonaussen() {
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+	  document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
 });
 
 $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
-	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+	  document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
 });
-
-
 
 /** Trigger points to move across the outside area */
 
@@ -72,19 +69,19 @@ $('#triggerTeppichladenxBaeckerei').on('click', function triggerTeppichladenxBae
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: -100, y: 14, z: -65});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerBaeumeV2').on('click', function triggerBaeumeV2(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 49, y: 14, z: -40});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerBaeumexTabakladen').on('click', function triggerBaeumexTabakladen(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 57, y: 14, z: 84});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 $('#triggerTabakladenxTeppichladen').on('click', function triggerTabakladenxTeppichladen(){
     'use strict';
@@ -92,13 +89,13 @@ $('#triggerTabakladenxTeppichladen').on('click', function triggerTabakladenxTepp
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
     console.log(entity);
     console.log(entity.getAttribute('position'));
-})
+});
 
 $('#triggerBrunnen').on('click', function triggerBrunnen(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: -18, y: 14, z: 2});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
-})
+});
 
 /** Toggle functions to show or hide informational text boxes*/
 
@@ -150,15 +147,21 @@ var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
     if(checkGameStatus(games[0])!==false){
         AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+        document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterKuchen').css("display", "initial");
+        gameActive = '#cakeGame';
     }
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
-$('#hideAndSeekTrigger').on('click', function beginCake() {
+$('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
     if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+        document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
+        document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
         $('#counterPerson').css("display", "initial");
+        gameActive = '#HideAndSeek';
     }
 });
 

@@ -5,7 +5,7 @@ var personFound = 0;
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[1])!=false){
+    if(checkGameStatus(games[1])!==false){
         AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
         $('#counterPerson').css("display", "initial");
     }

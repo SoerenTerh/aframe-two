@@ -1,12 +1,25 @@
 var myCamera;
+var storyProgress = false;
+
 //--================SET OUTDOOR CAMERA COMPONENT=========================
 AFRAME.registerComponent('set-cam-outdoor', {
     init() { 
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
+            var aussenSound = document.querySelector('#platz');
+            aussenSound.components.sound.playSound();
 
-            this.el.emit('open');  
-            console.log(this.el);
+            var gameInProgress = document.querySelector(gameActive);
+            if(gameInProgress!== null && gameInProgress !== ""){
+                gameInProgress.setAttribute('visible', 'true');
+            }
+
+            if(gameActive === "#cakeGame"){
+                $('#counterKuchen').css('display', 'block');
+            } else if (gameActive === "#HideAndSeek") {
+                $('#counterPerson').css('display', 'block');
+            }
+
             document.location.hash = 'Platz';
             document.querySelector('#camera').setAttribute('camera', 'active', true);  
             document.getElementById("innenSzene").setAttribute('visible', 'false');
@@ -26,6 +39,25 @@ AFRAME.registerComponent('set-cam-indoor', {
     init() {   
         this.el.addEventListener('click', () => {
             myCamera = document.querySelector('#camera');
+            console.log(document.querySelector('#platz'));
+            var aussenSound = document.querySelector('#platz');
+            aussenSound.components.sound.stopSound();
+
+            if ($('a-scene').hasClass('rain')) {
+                $('a-scene').removeAttr('rain');
+            }
+
+            document.querySelector('#HideAndSeek').setAttribute('visible', 'false');
+            document.querySelector('#memoryGame').setAttribute('visible', 'false');
+            document.querySelector('#cakeGame').setAttribute('visible', 'false');
+            $('#counterKuchen').css('display', 'none');
+            $('#counterPerson').css('display', 'none');
+
+            // Trigger story when setting cam indoor
+            if(!storyProgress) {
+                storyline("#one", "one");
+                storyProgress = true;
+            }
 
             document.location.hash = 'Tabakladen';
             document.querySelector('#camera').setAttribute('camera', 'active', true);    
@@ -59,6 +91,14 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("innenSzene").setAttribute('visible', 'true');
                     document.getElementById("innenSzene").setAttribute('position', {x: 0, y: 0, z: 0});
                     document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
+                    var aussenSound = document.querySelector('#platz');
+                    aussenSound.components.sound.stopSound();
+
+                    if(!storyProgress) {
+                        storyline("#one", "one");
+                        storyProgress = true;
+                    }
+
 
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 5, y: 13.6, z: 20});
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
@@ -184,6 +224,7 @@ AFRAME.registerComponent('rain', {
             }
 
             var y;
+            var il;
             var minY = positionArray[1];
             var maxY = positionArray[1];
             for (i = 1, il = positionArray.length / 3; i < il; i++) {

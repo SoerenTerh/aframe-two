@@ -5,13 +5,13 @@ var entity = document.querySelector('#camera');
 /** Trigger points to move in the room */
 $('#triggerTuer').on('click', function triggerTuer() {
     'use strict';
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: 0.25, y: 13.6, z: 0});
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -6, y: 13.6, z: 20});
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 15, z: 0});
 });
 
 $('#triggerHinten').on('click', function triggerHinten() {
     'use strict';
-    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: -11.25, y: 13.60, z: 2.86});
+    AFRAME.utils.entity.setComponentProperty(entity, 'position', {x: 11, y: 13.60, z: -8});
     AFRAME.utils.entity.setComponentProperty(entity, 'rotation', {x: 0, y: 105.00, z: 0});
 });
 
@@ -58,11 +58,11 @@ document.querySelector('#open').addEventListener('animationend', function(){
 });
 
 $("#icontuer").on("clickableFound", function triggerinnen() {
-  console.log("HALLO");
-	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableFound");
+    console.log("HALLO");
+    document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableFound");
 });
 
 $("#icontuer").on("clickableClick", function triggerinnenclick() {
-  console.log("HALLO")
-	document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableClick");
+    console.log("HALLO")
+	  document.querySelector("#tabakladenTUERi" + '> a-animation').emit("clickableClick");
 });

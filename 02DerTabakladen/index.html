@@ -63,7 +63,7 @@
                           position="0 0 -1"
                           geometry="primitive: ring"
                           scale="0.04 0.04 0.04"
-                          material="color: white">
+                          material="color: white" visible="false">
                     <a-animation begin="fuseing" easing="ease-in" attribute="scale"
                                  fill="backwards" from="0.04 0.04 0.04" to="0.01 0.01 0.01" dur="2500"></a-animation>
 
@@ -494,7 +494,7 @@
 
                 <!-- Info-Boxen -->
                 <a-entity id="textboxMain" position="3 12 14">
-                    <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
+                    <a-box id="backgroundTextbox1" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
                     </a-box>
 
                     <a-entity text="color: white; value: Wilkommen in Sezuan – Spielstaette und Haupthandlungsort des Theaterstuecks 'Der gute Mensch von Sezuan' von Bertolt Brecht.;
@@ -517,7 +517,7 @@
                     <a-image id="closeTextboxMain" color="#fff" class="clickableTrigger" src="../assets/icons/ic_clear_black_24px.svg" scale="1 1 1" position="5 3.25 0.01"></a-image>
                 </a-entity>
                 <a-entity id="textbox" position="3 12 14" visible="false">
-                    <a-box id="backgroundTextbox" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
+                    <a-box id="backgroundTextbox2" opacity="0.7" color="black" width="12" height="8" depth="0.001" visible="true">
                     </a-box>
                     <a-entity id="infobox" visible="true">
                         <!--location-->
@@ -615,13 +615,14 @@
             <a-entity id="innenSzene" scale="1 1 1" rotation="0 180 0" position="0 0 0">
                 <!--Frau-->
                 <a-entity id="containerFrau" class="two three msix2 cSix1 cSix2 play" position="-1.71 .5 -21.22"
-                          rotation="-90.00 -90.00 0" event-set__cSix2="_event: cSix2; visible: false">
+                          rotation="-90.00 -90.00 0">
                     <a-entity id="Frau" class="one twoTalk twoTalk2 fourTalk sOneTalk sFourACC3 vOne vEleven vElevenTalk v22Talk
                                                mthreeTalk msevenTalk2
                                                cOneTalk play"
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9"
                               rotation="0 0 0" visible="true" sound="src:#snore_girl; on:one; poolsize:100; volume:3; loop:true"
-                              event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                              event-set__2="_event: two; sound.loop: false; sound.volume: 0"
+                              event-set__cSevenMann="_event: cSeven; visible: false">
                         <a-sound id="twoTalkFrau"  src="#frau1" volume="10" on="twoTalk"></a-sound>
                         <a-sound id="twoTalkFrau2"  src="#frau2" volume="10" on="twoTalk2"></a-sound>
                         <a-sound id="fourTalkFrau"  src="#frau3" volume="10" on="fourTalk"></a-sound>
@@ -659,14 +660,14 @@
                                  repeat="0" begin="msix2"></a-animation>
                     <a-animation id="cfrauanimpP" class="wait" attribute="position" dur="2500" to="13.54 0 -11.71"
                                  repeat="0" begin="cSix"></a-animation>
-                    <a-animation id="cfrauanimp1P" class="wait" attribute="position" dur="2500" to="-6.75 0 -11.71"
-                                 repeat="0" begin="cSix1"></a-animation>
-                    <a-animation id="cfrauanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0"
-                                 begin="cSix1"></a-animation>
+                    <a-animation id="cfrauanimp1P" class="wait" attribute="position" dur="2500" to="-15 0 -70"
+                                 repeat="0" begin="cSix2"></a-animation>
+                    <a-animation id="cfrauanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0"
+                                 begin="cSix2"></a-animation>
                 </a-entity>
 
                 <!--Mann-->
-                <a-entity id="containerMann" class="five cSix1 cSix2 play" position="-1.09 .5 -14.02" rotation="-90 -90 0" event-set__cSix2="_event: cSix2; visible: false">
+                <a-entity id="containerMann" class="five cSix1 cSix2 cFive3 play" position="-1.09 .5 -14.02" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
                                                vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
@@ -675,7 +676,8 @@
                               rotation="0 0 0" visible="true" sound="src:#snore;on:one;poolsize:100;volume:1;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #FFD9D9"
-                              event-set__2="_event: two; sound.loop: false; sound.volume: 0">
+                              event-set__2="_event: two; sound.loop: false; sound.volume: 0"
+                              event-set__cSevenMann="_event: cSeven; visible: false">
                         <a-sound id="sixTalk2Mann" src="#mann1" volume="10" on="sixTalk2"></a-sound>
                         <a-sound id="sevenTalkMann" src="#mann2" volume="10" on="sevenTalk"></a-sound>
                         <a-sound id="sThreeTalkMann" src="#mann3" volume="10" on="sThreeTalk"></a-sound>
@@ -765,8 +767,12 @@
                     <a-animation id="MannAnimV26three" attribute="rotation" class="wait" dur="2500" to="0 -90 0" repeat="0"
                                  begin="v26three"></a-animation>
 
-                    <a-animation id="cmannimp1" class="wait" attribute="position" dur="2500" to="-5.33 0 -14.02" repeat="0" begin="cSix1"></a-animation>
-                    <a-animation id="cmannanimr1" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0" begin="cSix1"></a-animation>
+                    <a-animation id="cmannimp1" class="wait" attribute="position" dur="2500" to="-5.33 0 -14.02"
+                                 repeat="0" begin="cSix2"></a-animation>
+                    <a-animation id="cmannanimr1" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0"
+                                 repeat="0" begin="cSix2"></a-animation>
+                     <a-animation id="cmannimp2" class="wait" attribute="position" dur="2500" to="-6 0 -60"
+                                  repeat="0" begin="cFive3"></a-animation>
                 </a-entity>
 
                 <!--Bruder-->
@@ -791,13 +797,14 @@ event-set__5="_event: five; visible: true"></a-entity>
 </a-entity> -->
 
                 <!--Schwaegerin-->
-                <a-entity id="containerSchwaegerin" class="five cSix cSix1 cSix2 play" position="5.12 0.8 25.73" rotation="-85 -90 0"
-                          event-set__sTwo_P1="position: 14.30 0.28 -19.39" event-set__cSix2="_event: cSix2; visible: false">
+                <a-entity id="containerSchwaegerin" class="five cSix cSix1 cSix2 cFive3 play" position="5.12 0.8 25.73" rotation="-85 -90 0"
+                          event-set__sTwo_P1="position: 14.30 0.28 -19.39">
                     <a-entity id="Schwaegerin" class="one fiveAll sevenTalk sFourTalk2 sFiveTalk3" obj-model="obj:#figurObj"
                               position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:5;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #FFE0A8"
+                              event-set__cSeven="_event: cFive3; visible: false;"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                         <a-sound id="sevenTalkSchwaegerin" src="#schwaegerin1" volume="10" on="sevenTalk"></a-sound>
                         <a-sound id="sFourTalk2Schwaegerin" src="#schwaegerin2" volume="10" on="sFourTalk1"></a-sound>
@@ -824,6 +831,9 @@ event-set__5="_event: five; visible: true"></a-entity>
                                  begin="cSix1"></a-animation>
                     <a-animation id="cschwaegerinr1" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0"
                                  begin="cSix1"></a-animation>
+                    <a-animation id="cschwaegerinp2" class="wait" attribute="position" dur="2500" to="-6 0 -70" repeat="0"
+                                 begin="cSix2"></a-animation>
+
 
                     <!-- Sockel-->
                     <a-entity id="sockelSchwaegerin" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0" visible="false"
@@ -860,7 +870,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-entity>
 
                 <!--Neffe-->
-                <a-entity id="containerNeffe" class="five sFourACC2 sFive_P1 sFive_P2 sFive_P2Move sFive_P3 play"
+                <a-entity id="containerNeffe" class="five sFourACC2 sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sSeven_P1 play"
                           position="2.44 .5 -6.73" rotation="-90 90 0"
                           event-set__sTwo_P1="position: 14.30 0.28 -19.39">
                     <a-entity id="Neffe" class="one twoTalk fiveAll sixTalk sTwoTalk sFiveTalk2 play" obj-model="obj:#figurObj"
@@ -868,6 +878,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                               sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #C5E2E4"
+                              event-set__sSevenNeffe="_event: sSeven_P1; visible: false"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                         <a-sound id="twoTalkNeffe" src="#neffe1" volume="10" on="twoTalk"></a-sound>
                         <a-sound id="sixTalkNeffe" src="#neffe2" volume="20" on="sixTalk"></a-sound>
@@ -897,17 +908,18 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-animation id="neffeAnimssFive_P2Move" attribute="position" dur="2500" to="-7 0 -30" repeat="0"
                                  begin="sFive_P2Move"></a-animation>
                     <a-animation id="neffeAnimssFive_P3" attribute="position" dur="2500" to="3 0 -40" repeat="0"
-                                begin="sFive_P3"></a-animation>
+                                 begin="sFive_P3"></a-animation>
                 </a-entity>
 
                 <!--Nichte-->
                 <a-entity id="containerNichte" class="five play" position="18.5 13.4 7" rotation="-85 -12 12"
                           event-set__sTwo_P1="position: 14.30 0.28 -19.39">
-                    <a-entity id="Nichte" class="one sFive_P3Move sFive_P3no fiveAll play" obj-model="obj:#figurObj"
+                    <a-entity id="Nichte" class="one sFive_P3Move sFive_P3no sSeven_P1 fiveAll play" obj-model="obj:#figurObj"
                               position="0 2 0" scale="9.5 9.4 9.5" material="color:#E08989" rotation="0 0 0" visible="true"
                               sound="src:#snore_girl;on:one;poolsize:100;volume:5;loop:true"
                               sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5"
                               event-set__5="_event: sound-ended; material.color: #E08989"
+                              event-set__sSevenNichte="_event: sSeven_P1; visible: false"
                               event-set__2="_event: two; sound.loop: false; sound.volume: 0">
                     </a-entity>
 
@@ -936,11 +948,13 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-entity>
 
                 <!--Junge-->
-                <a-entity id="containerJunge" class="five sOne_P2 sOne_P3 sFourP3begin sFourMove sFour_P3 msix msix2 mseven
-                                                     msevenTalk cSix cSix1 cSix2 play"
+                <a-entity id="containerJunge" class="five sOne_P2 sOne_P3 sFourP3begin sFourMove sFour_P3 sSeven_P1 msix msix2 mseven
+                                                     msevenTalk cSix1 cSix2 cFive3 play"
                           position="19 13 -23" rotation="-84 -150 -28"
+                          event-set__sSevenJunge="_event: sSeven_P1; visible: false"
                           event-set__msix="_event: msix; visible: true"
-                          event-set__cSix2="_event: cSix2; visible: false">
+                          event-set__cSeven="_event: cFive3; visible: false;">
+>
 
                     <a-entity id="Junge" class="one fiveAll play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
                               material="color:#D2E6C1" visible="true" sound="src:#snore;on:one;poolsize:100;volume:2;loop:true"
@@ -962,6 +976,17 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-entity id="sockelJunge" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11"
                               material="color:#000000" rotation="0 -180 0" visible="false"
                               event-set__5="_event: five; visible: true">
+                    </a-entity>
+
+                    <!--Essen-->
+                    <a-entity id="containerEssen" class="msix play" visible="false" position="0 6.5 1.7" scale="0.3 0.3 0.3"
+                              event-set="_event: msix; visible: true">
+                        <a-entity obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="kuchen1"></a-entity>
+                        <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="fladen1"></a-entity>
+                        <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
+                                  visible="true" id="fladen2"></a-entity>
                     </a-entity>
 
                     <a-animation id="JungeAnimV21" attribute="position" dur="2500" to="-7 0 -16" repeat="0"
@@ -987,18 +1012,16 @@ event-set__5="_event: five; visible: true"></a-entity>
                                  begin="msix"></a-animation>
                     <a-animation id="msix2AnimJungeP" class="wait" attribute="position" to="-7.82 0 -25.22" repeat="0"
                                  begin="msix2"></a-animation>
-                    <a-animation id="msix2AnimJungeR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
-                                 begin="msix2"></a-animation>
+                    <!-- <a-animation id="msix2AnimJungeR" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
+begin="msix2"></a-animation> -->
                     <a-animation id="msevenAnimJunge" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0"
                                  begin="mseven"></a-animation>
-
-                    <!-- <a-animation id="cjungeanimp" class="wait" attribute="position" dur="2500" to="12.92 2 -20" repeat="0"
-                                 begin="cSix"></a-animation> -->
-
-                    <a-animation id="cjungeanimp1P" class="wait" attribute="position" dur="2500" to="-8.18 0 -6.64" repeat="0"
+                    <a-animation id="cjungeanimp1R" class="wait" attribute="rotation" dur="2500" to="0 180 0" repeat="0"
                                  begin="cSix1"></a-animation>
-                    <a-animation id="cjungeanimp1R" class="wait" attribute="rotation" dur="2500" to="0 -175.90 0" repeat="0"
+                    <a-animation id="cjungeanimp1P" class="wait" attribute="position" dur="2500" to="-8.18 0 -40" repeat="0"
                                  begin="cSix1"></a-animation>
+                    <a-animation id="cjungeanimp2" class="wait" attribute="position" dur="2500" to="20 0 -70" repeat="0"
+                                 begin="cSix2"></a-animation>
                 </a-entity>
 
                 <!--ShuiTa-->
@@ -1090,7 +1113,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-animation id="ShuiTasSeven_PRotaPU" class="wait" attribute="rotation" to="0 180 0" repeat="0" dur="2500"
                                  begin="sSeven_P2end"></a-animation>
                     <a-animation id="ShuiTasSeven_P23" class="wait" attribute="position" to="6 0 20" dur="2500" repeat="0"
-                                begin="sSeven_P2end"></a-animation>
+                                 begin="sSeven_P2end"></a-animation>
                     <a-animation id="ShuiTaVOneP" class="wait" attribute="position" to="12 0 5" repeat="0"
                                  begin="vOne"></a-animation>
                     <a-animation id="ShuiTaAnim32P" class="wait" attribute="position" dur="2500" to="-5 0 -26" repeat="0"
@@ -1122,28 +1145,16 @@ event-set__5="_event: five; visible: true"></a-entity>
                               obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5"
                               material="color:#EDAE81" rotation="0 0 0" visible="true">
                         <a-sound id="vOneTalk" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
-                        <a-sound id="vOneTalk" src="#schreinerV1" volume="10" on="vOneTalk"></a-sound>
-                        <a-sound id="vTwoTalkSchreiner" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
                         <a-sound id="vTwoTalkSchreiner" src="#schreinerV3" volume="10" on="vTwoTalk"></a-sound>
                         <a-sound id="vFourTalkSchreiner" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
-                        <a-sound id="vFourTalkSchreiner" src="#schreinerV5" volume="10" on="vFourTalk"></a-sound>
-                        <a-sound id="vSixTalkSchreiner" src="#schreinerV8" volume="10" on="vSixTalk"></a-sound>
                         <a-sound id="vSixTalkSchreiner" src="#schreinerV8" volume="10" on="vSixTalk"></a-sound>
                         <a-sound id="vNineTalkSchreiner" src="#schreinerV10" volume="10" on="vNineTalk"></a-sound>
-                        <a-sound id="vNineTalkSchreiner" src="#schreinerV10" volume="10" on="vNineTalk"></a-sound>
-                        <a-sound id="vElevenTalkSchreiner" src="#schreinerV13" volume="10" on="vElevenTalk"></a-sound>
                         <a-sound id="vElevenTalkSchreiner" src="#schreinerV13" volume="10" on="vElevenTalk"></a-sound>
                         <a-sound id="vSixteenTalkSchreiner" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
-                        <a-sound id="vSixteenTalkSchreiner" src="#schreinerV16" volume="10" on="vSixteenTalk"></a-sound>
-                        <a-sound id="vEighteenTalkSchreiner" src="#schreinerV19" volume="10" on="vEighteenTalk"></a-sound>
                         <a-sound id="vEighteenTalkSchreiner" src="#schreinerV19" volume="10" on="vEighteenTalk"></a-sound>
                         <a-sound id="v21TalkSchreiner" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
-                        <a-sound id="v21TalkSchreiner" src="#schreinerV21" volume="10" on="v21Talk"></a-sound>
-                        <a-sound id="v22TalkSchreiner" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
                         <a-sound id="v22TalkSchreiner" src="#schreinerV22" volume="10" on="v22Talk"></a-sound>
                         <a-sound id="v23TalkSchreiner" src="#schreinerV23" volume="10" on="v23Talk"></a-sound>
-                        <a-sound id="v23TalkSchreiner" src="#schreinerV23" volume="10" on="v23Talk"></a-sound>
-                        <a-sound id="v27TalkSchreiner" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
                         <a-sound id="v27TalkSchreiner" src="#schreinerV27" volume="10" on="v27Talk"></a-sound>
                     </a-entity>
 
@@ -1156,7 +1167,6 @@ event-set__5="_event: five; visible: true"></a-entity>
                               material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
 
                     <!-- Schreiner in Laden -->
-                    <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-9 0 -11"
                     <a-animation id="SchreinerAnimFourP" class="wait" attribute="position" dur="2500" to="-9 0 -11"
                                  repeat="0" begin="four"></a-animation>
                     <a-animation id="SchreinerAnimFourR" class="wait" attribute="rotation" dur="2500" to="0 150 0"
@@ -1182,9 +1192,9 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-entity>
 
                 <!-- Polizist -->
-                <a-entity id="containerPolizist" class="v31Talk v32 mfour mseven cFour cFive1 cFive2 cFive3 play" visible="true"
+                <a-entity id="containerPolizist" class="v31Talk v32 mfour mseven cFour cFive1 cFive3 cSeven play" visible="true"
                           position="-5 0 -106"
-                          event-set__c="_event: cFive3; visible: false">
+                          event-set__c="_event: cSeven; visible: false">
                     <a-entity id="Polizist" class="v32 v32Talk v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk
                                                    v43Talk mtwoTalk mfourTalk mfiveTalk2 msix2Talk msevenTalk msevenTalk2
                                                    msevenTalk3 msevenTalk4 cTwoTalk cFiveTalk play"
@@ -1233,10 +1243,10 @@ event-set__5="_event: five; visible: true"></a-entity>
                     <a-animation id="cPolizistFiveAnim4" class="wait" attribute="rotation" dur="2500" to="0 90 0" repeat="0"
                                  begin="cFive1"></a-animation>
 
-                    <a-animation id="cPolizistFiveAnim" class="wait" attribute="position" dur="2500" to="-6.26 0 -15.02" repeat="0"
-                                 begin="cFive2"></a-animation>
-                    <a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -173 0" repeat="0"
-                                 begin="cFive2"></a-animation>
+                    <a-animation id="cPolizistFiveAnim" class="wait" attribute="position" dur="2500" to="-6.26 0 -40" repeat="0"
+                                 begin="cFive3"></a-animation>
+                    <a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0"
+                                 begin="cFive3"></a-animation>
                 </a-entity>
 
                 <!-- Tabakladen -->
@@ -1311,17 +1321,6 @@ event-set__5="_event: five; visible: true"></a-entity>
                        visible="false"></a-box>
                 <a-box id="ladentischBox2" static-body="shape:Primitives" position="5.5 4 4" width="6" height="10" depth="14"
                        visible="false"></a-box>
-
-                <!--Essen-->
-                <a-entity id="containerEssen" class="msix play" visible="false" position="-6.38 2 -17.07" scale="0.3 0.3 0.3"
-                          event-set="_event: msix; visible: true">
-                    <a-entity obj-model="obj:#KuchenObj;mtl:#KuchenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="kuchen1"></a-entity>
-                    <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="fladen1"></a-entity>
-                    <a-entity obj-model="obj:#FladenObj;mtl:#FladenMtl" position="0 0 0" scale="0.24 0.4 0.19" rotation="0 0 0"
-                              visible="true" id="fladen2"></a-entity>
-                </a-entity>
 
                 <!-- Laterne -->
                 <a-entity class="clickable"
@@ -1642,187 +1641,245 @@ event-set__5="_event: five; visible: true"></a-entity>
             <!-- Games -->
             <a-entity id="gameBox" scale="2 2 2">
 
-            <!-- cakeGame entity and child elements -->
-            <a-entity id="cakeGame" visible="false">
-                <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake2" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake4" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake5" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake6" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake7" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake8" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake9" mixin="kuchenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake16" mixin="fladenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake17" mixin="fladenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake18" mixin="fladenMixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake25" mixin="fladenMixin"></a-entity>
+                <!-- cakeGame entity and child elements -->
+                <a-entity id="cakeGame" visible="false">
+                    <!--Junge--> 
+                    <a-entity id="containerJungeGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
+                        <a-entity id="JungeGame" class="play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
+                                  material="color:#D2E6C1" visible="true"></a-entity>
 
+                            <a-entity id="accJungeGame" obj-model="obj:#SchalObj;" material="color: seagreen"
+                                      position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true">
+                            </a-entity>
 
-                <a-entity class="Minispiel_Kuchen clickable" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake19" mixin="fladen_area2_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake22" mixin="fladen_area4_Mixin"></a-entity>
+                            <a-sound id="SpielaufrufJungeId" src="#spielanfrage" volume="10" on="Spielaufruf"></a-sound>
+                            <a-sound id="SpielfehlerJungeId" src="#falscheAnzahl" volume="10" on="Spielfehler"></a-sound>
 
+                            <a-animation id="JungeAnimFive2Game" attribute="position" dur="2500" to="-10 0.8 10" repeat="0"
+                                         begin="Spielaufruf"></a-animation>
 
-
-                <a-entity class="Minispiel_Kuchen clickable" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake20" mixin="fladen_area3_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake23" mixin="fladen_area4_Mixin"></a-entity>
-
-
-
-                <a-entity class="Minispiel_Kuchen clickable" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake21" mixin="fladen_area4_Mixin"></a-entity>
-                <a-entity class="Minispiel_Kuchen clickable" id="cake24" mixin="fladen_area4_Mixin"></a-entity>
-
-
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette1" mixin="zigaretteMixin"></a-entity>
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette2" mixin="zigaretteMixin"></a-entity>
-
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
-
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette5" mixin="zigarette_area3_Mixin"></a-entity>
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette6" mixin="zigarette_area3_Mixin"></a-entity>
-
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette7" mixin="zigarette_area4_Mixin"></a-entity>
-                <a-entity class="Minispiel_Zigarette clickable" id="cigarette8" mixin="zigarette_area4_Mixin"></a-entity>
-
-                <div id="counterKuchen">
-                    <p>Gebäck gesammelt gesammelt:<span id="counter"></span></p>
-                </div>
-            </a-entity>
-
-            <!-- Memory-Spiel -->
-            <a-entity id="memoryGame" position="-16 10 -10" visible=false>
-                <a-box id="memoryCard1" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="-5 -5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard1" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard2" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="-5 0 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard2" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard3" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="-5 5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard3" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard4" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="-5 10 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard4" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard5" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="0 -5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard5" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard6" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="0 0 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard6" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard7" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="0 5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard7" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard8" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="0 10 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard8" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard9" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="5 -5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard9" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard10" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="5 0 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard10" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard11" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="5 5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard11" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard12" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="5 10 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard12" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard13" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="10 -5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard13" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard14" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="10 0 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard14" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard15" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="10 5 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard15" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-                <a-box id="memoryCard16" class="memoryCard" color="#eb2348" width="4" height="4"
-                       depth="0.001" position="10 10 0">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
-                    <a-image id="mcard16" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
-                </a-box>
-            </a-entity>
-
-            <a-entity id="HideAndSeek" visible="false">
-                <a-entity class="clickable HaSperson" id="HaSperson1" scale="0.425 0.425 0.425" random-position-person random-rotation>
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
-                    <a-entity obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-                </a-entity>
-                <a-entity class="clickable HaSperson" id="HaSperson2" random-position-person rotation="0 0 0" scale="0.45 0.45 0.45">
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9" rotation="0 0 0" visible="true" > </a-entity>
-                    <a-entity obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0">
+                            <!-- Sockel-->
+                            <a-entity id="sockelJungeGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                        
                     </a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake2" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake4" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake5" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake6" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake7" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake8" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake9" mixin="kuchenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake16" mixin="fladenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake17" mixin="fladenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake18" mixin="fladenMixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake25" mixin="fladenMixin"></a-entity>
+
+
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake10" mixin="kuchen_area2_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake11" mixin="kuchen_area2_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake19" mixin="fladen_area2_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake22" mixin="fladen_area4_Mixin"></a-entity>
+
+
+
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake12" mixin="kuchen_area3_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake13" mixin="kuchen_area3_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake20" mixin="fladen_area3_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake23" mixin="fladen_area4_Mixin"></a-entity>
+
+
+
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake14" mixin="kuchen_area4_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake15" mixin="kuchen_area4_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake21" mixin="fladen_area4_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Kuchen clickable" id="cake24" mixin="fladen_area4_Mixin"></a-entity>
+
+
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette1" mixin="zigaretteMixin"></a-entity>
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette2" mixin="zigaretteMixin"></a-entity>
+
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette3" mixin="zigarette_area2_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette4" mixin="zigarette_area2_Mixin"></a-entity>
+
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette5" mixin="zigarette_area3_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette6" mixin="zigarette_area3_Mixin"></a-entity>
+
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette7" mixin="zigarette_area4_Mixin"></a-entity>
+                    <a-entity class="Minispiel_Zigarette clickable" id="cigarette8" mixin="zigarette_area4_Mixin"></a-entity>
+
+                    <div id="counterKuchen">
+                        <p>Gebäck gesammelt gesammelt:<span id="counter"></span></p>
+                    </div>
                 </a-entity>
 
-                <a-entity class="clickable HaSperson" id="HaSperson3" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0"></a-entity>
-                    <a-entity obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0"></a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                <!-- Memory-Spiel -->
+                <a-entity id="memoryGame" position="-16 10 -10" visible=false>
+
+                    <!--Großvater-->
+                    <a-entity id="containerGroßvaterGame" class="play" position="10 -9.035 55" rotation="0 -145 0" scale="0.5 0.5 0.5">
+                        <a-entity id="GroßvaterGame" class="play" obj-model="obj:#figurObj" position="0 2 0"
+                                  scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0" visible="true">
+                        </a-entity>
+
+                        <a-entity id="accGroßvaterGame" obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0" visible="true">
+                        </a-entity>
+
+                        <a-sound id="SpielaufrufGrossvaterId" src="#SpielaufrufGrossvater" volume="10" on="Spielaufruf"></a-sound>
+
+                        <a-animation id="GroßvaterAnimFive2Game" attribute="position" dur="2500" to="10 -9.035 20.1" repeat="0"
+                                     begin="Spielaufruf"></a-animation>
+
+                        <!-- Sockel-->
+                        <a-entity id="sockelGroßvaterGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    </a-entity>
+
+                    <a-box id="memoryCard1" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="-5 -5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard1" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard2" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="-5 0 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard2" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard3" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="-5 5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard3" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard4" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="-5 10 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard4" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard5" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="0 -5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard5" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard6" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="0 0 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard6" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard7" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="0 5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard7" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard8" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="0 10 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard8" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard9" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="5 -5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard9" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard10" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="5 0 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard10" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard11" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="5 5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard11" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard12" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="5 10 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard12" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard13" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="10 -5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard13" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard14" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="10 0 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard14" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard15" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="10 5 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard15" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
+                    <a-box id="memoryCard16" class="memoryCard" color="#eb2348" width="4" height="4"
+                           depth="0.001" position="10 10 0">
+                        <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 0 0" to="0 180 0" repeat="0" begin="turnCard"></a-animation>
+                        <a-image id="mcard16" src="" scale="3 3 3" position="0 0 0.02" visible=false></a-image>
+                    </a-box>
                 </a-entity>
 
-                <a-entity class="clickable HaSperson" id="HaSperson4" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5" material="color:#CACACA" rotation="0 0 0"></a-entity>
-                    <a-entity obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-                </a-entity>
+                <a-entity id="HideAndSeek" visible="false">
+                    <!--Polizist--> 
+                    <a-entity id="containerPolizistGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
+                        <a-entity id="PolizistGame" class="play" obj-model="obj:#figurObj" position="0 2 0"
+                                  scale="9.5 9.5 9.5" material="color:#CDCCF7" rotation="0 0 0" visible="true">
+                        </a-entity>
 
-                <a-entity class="clickable HaSperson" id="HaSperson5" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0"></a-entity>
-                    <a-entity obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49" scale="1 1 1" rotation="-10.36 0 0"></a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
-                </a-entity>
+                        <a-entity id="accPolizistGame" obj-model="obj:#PolizeiObj; mtl: #PolizeiMtl" position="0 15.15 -0.31"
+                                  scale="1 0.75 1" rotation="0 0 0" visible="true" material="color:#CCCCCC">
+                        </a-entity>
 
-                <a-entity class="clickable HaSperson" id="HaSperson6" scale="0.45 0.45 0.45" random-position-person random-rotation>
-                    <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0"></a-entity>
-                    <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0"></a-entity>
-                    <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0"></a-entity>
-                    <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0"></a-entity>
-                </a-entity>
+                        <a-sound id="SpielaufrufPolizistId" src="#polizistSpielaufruf" volume="10" on="Spielaufruf"></a-sound>
 
-                <div id="counterPerson">
-                    <p>Personen gefunden: <span id="counterPersonFound"></span></p>
-                    <p>Übrig: <span id="counterPersonLeft"></span></p>
-                </div>
-            </a-entity>
+                        <a-animation id="PolizistAnimFive2Game" attribute="position" dur="2500" to="-10 0.8 10" repeat="0"
+                                     begin="Spielaufruf"></a-animation>
+
+                        <!-- Sockel-->
+                        <a-entity id="sockelPolizistGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    </a-entity>
+
+                    <a-entity class="clickable HaSperson" id="HaSperson1" scale="0.425 0.425 0.425" random-position-person random-rotation>
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65" material="color:#D2E6C1" visible="true"></a-entity>
+                        <a-entity obj-model="obj:#SchalObj" material="color: seagreen" position="-0.2 9.8 -0.2" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    </a-entity>
+                    <a-entity class="clickable HaSperson" id="HaSperson2" random-position-person rotation="0 0 0" scale="0.45 0.45 0.45">
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.4 9.5" material="color:#EBD3B9" rotation="0 0 0" visible="true" > </a-entity>
+                        <a-entity obj-model="obj:#KochlöffelObj" material="color: peru" position="2.24 7.08 0.00" scale="3.75 3 3" rotation="90.00 90.00 0">
+                        </a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                    </a-entity>
+
+                    <a-entity class="clickable HaSperson" id="HaSperson3" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0"></a-entity>
+                        <a-entity obj-model="obj:#BartObj" material="color: burlywood" position="-0.24 13.53 0.63" scale="1 1 1" rotation="0 0 0"></a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                    </a-entity>
+
+                    <a-entity class="clickable HaSperson" id="HaSperson4" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.2 9.5" material="color:#CACACA" rotation="0 0 0"></a-entity>
+                        <a-entity obj-model="obj:#MonokelObj; mtl: #MonokelMtl" position="0.44 13.2 0" scale="1 1 1" rotation="0 0 0" visible="true"></a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
+                    </a-entity>
+
+                    <a-entity class="clickable HaSperson" id="HaSperson5" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.3 9.5" material="color:#C5E2E4" rotation="0 0 0"></a-entity>
+                        <a-entity obj-model="obj:#Kappe_gedrehtObj" material="color: lightblue" position="0 14.14 -0.49" scale="1 1 1" rotation="-10.36 0 0"></a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0"></a-entity>
+                    </a-entity>
+
+                    <a-entity class="clickable HaSperson" id="HaSperson6" scale="0.45 0.45 0.45" random-position-person random-rotation>
+                        <a-entity obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.6 9.5" material="color:#FFE0A8" rotation="0 0 0"></a-entity>
+                        <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="0.95 2 0.13" scale="1 1 1" rotation="0 10 0"></a-entity>
+                        <a-entity obj-model="obj:#HausschuheObj" material="color: orange" position="-0.88 2 0.12" scale="1 1 1" rotation="0 10 0"></a-entity>
+                        <a-entity obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 0 0"></a-entity>
+                    </a-entity>
+
+                    <div id="counterPerson">
+                        <p>Personen gefunden: <span id="counterPersonFound"></span></p>
+                        <p>Übrig: <span id="counterPersonLeft"></span></p>
+                    </div>
+                </a-entity>
             </a-entity>
 
 
