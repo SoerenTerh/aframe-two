@@ -838,7 +838,7 @@ event-set__5="_event: five; visible: true"></a-entity>
                 </a-entity>
 
                 <!--Großvater-->
-                <a-entity id="containerGroßvater" class="sFourACC4 cSeven cEight play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cEight; visible: false">
+                <a-entity id="containerGroßvater" class="sFourACC4 cSix1 cFive3 cSeven cEight play" position="3.64 1.26 15.21" rotation="-90 90 0" event-set="_event: cEight; visible: false">
                     <a-entity id="Großvater" class="one five fiveAll cSevenTalk play" obj-model="obj:#figurObj" position="0 2 0"
                               scale="9.5 9.5 9.5" material="color:#B99C79" rotation="0 0 0" visible="true"
                               sound="src:#snore;on:one;poolsize:100;volume:3;loop:true"
@@ -856,6 +856,12 @@ event-set__5="_event: five; visible: true"></a-entity>
                                  begin="five"></a-animation>
                     <a-animation id="GroßvaterAnimFive2" attribute="position" dur="2500" to="-3.07 0 15.21" repeat="0"
                                  begin="five"></a-animation>
+                    <a-animation id="cGrossvaterSix" class="wait" attribute="position" dur="2500" to="12 0 -11"
+                                 repeat="0" begin="cSix1"></a-animation>
+                    <a-animation id="cGrossvaterSixR" class="wait" attribute="rotation" dur="2500" to="0 190 0" repeat="0"
+                                 begin="cSix1"></a-animation>
+                    <a-animation id="cGrossvaterFive" class="wait" attribute="position" dur="2500" to="3 0 -19"
+                                 repeat="0" begin="cFive3"></a-animation>
                     <a-animation id="cGrossvaterSeven" class="wait" attribute="position" dur="2500" to="0.18 0 -19"
                                  repeat="0" begin="cSeven"></a-animation>
                     <a-animation id="cGrossvaterSeven1" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0"
@@ -1639,7 +1645,7 @@ begin="msix2"></a-animation> -->
 
                 <!-- cakeGame entity and child elements -->
                 <a-entity id="cakeGame" visible="false">
-                    <!--Junge--> 
+                    <!--Junge-->
                     <a-entity id="containerJungeGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
                         <a-entity id="JungeGame" class="play" obj-model="obj:#figurObj" position="0 2 0" scale="6.65 6.65 6.65"
                                   material="color:#D2E6C1" visible="true"></a-entity>
@@ -1656,7 +1662,7 @@ begin="msix2"></a-animation> -->
 
                             <!-- Sockel-->
                             <a-entity id="sockelJungeGame" obj-model="obj:#SockelObj" position="0 0 0" scale="11 11 11" material="color:#000000" rotation="0 -180 0" visible="true"></a-entity>
-                        
+
                     </a-entity>
 
                     <a-entity class="Minispiel_Kuchen clickable" id="cake1" mixin="kuchenMixin"></a-entity>
@@ -1815,7 +1821,7 @@ begin="msix2"></a-animation> -->
                 </a-entity>
 
                 <a-entity id="HideAndSeek" visible="false">
-                    <!--Polizist--> 
+                    <!--Polizist-->
                     <a-entity id="containerPolizistGame" class="play" position="-5 0.8 45" rotation="0 -145 0" scale="0.5 0.5 0.5">
                         <a-entity id="PolizistGame" class="play" obj-model="obj:#figurObj" position="0 2 0"
                                   scale="9.5 9.5 9.5" material="color:#CDCCF7" rotation="0 0 0" visible="true">
