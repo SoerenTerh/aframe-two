@@ -8,7 +8,7 @@ var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
  * param: array position of game in games[]
  * return: false - if other game is running
  */
-    
+
 function checkGameStatus(curr) {
   var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
@@ -31,7 +31,19 @@ function checkGameStatus(curr) {
 //});
 
 
-    
+/*NEU*/
+$("#iconAussen").on("clickableFound", function triggericonaussen() {
+	console.log("clickFound");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+});
+
+$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
+	console.log("clickClick");
+	document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+});
+
+
+
 /** Trigger points to move across the outside area */
 
 $('#triggerBaeume').on('click', function triggerBaeume() {
@@ -164,4 +176,3 @@ $('#brunnen').on('click', function triggerBrunnen (){
         $('a-scene').play;
     }
 });
-
