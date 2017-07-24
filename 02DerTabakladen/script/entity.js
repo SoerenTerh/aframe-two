@@ -411,8 +411,7 @@ AFRAME.registerComponent('rain', {
         var splashMesh = new THREE.Mesh(splashGeometry, splashMaterial);
         dropMesh.add(splashMesh);
 
-        // TODO: set appropriate boundingSphere instead of setting frustumCulled false
-        //       for the optimization
+
         dropMesh.frustumCulled = false;
         splashMesh.frustumCulled = false;
 

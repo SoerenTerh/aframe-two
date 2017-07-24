@@ -20,18 +20,6 @@ function checkGameStatus(curr) {
     }
 }
 
-//$('#tabakladenTUERa').on('click', function doorClick() {
-//    'use strict';
-//    var innen = "indemladen.html";
-//    setTimeout(function timoutFadeOut() {
-//        $('#außen').fadeOut("slow", function timeoutSlow() {
-//            window.location = innen;
-//        });
-//    }, 1500);
-//});
-
-
-
 /** Trigger points to move across the outside area */
 
 $('#triggerBaeume').on('click', function triggerBaeume() {

@@ -251,7 +251,6 @@ $("#cardStack").on("click", function triggerMemory() {
     if(checkGameStatus(games[2])!==false){
         if (memoryVisible === false) { 
             
-            //document.querySelector("#containerGroßvaterGame" + ' > a-sound[on=\"Spielaufruf"]').emit("Spielaufruf");
             //#SpielaufrufGrossvater
             document.querySelector("#containerGroßvaterGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerGroßvaterGame" + ' > a-animation' ).emit("Spielaufruf");

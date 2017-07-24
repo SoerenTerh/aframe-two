@@ -92,7 +92,6 @@ var persons = ["#Frau",
                "#Mann",
 
                "#Schwaegerin",
-               /*"#Bruder",*/
 
                "#Großvater",
                "#Junge",
@@ -101,28 +100,25 @@ var persons = ["#Frau",
 
                "#ShuiTa",
                "#Schreiner",
-               "#Polizist"
-               /*,"#Hausbesitzerin"*/];
+               "#Polizist"];
 
 /**
  * Different default color for figures
  */
-var personColors = ["#EBD3B9",/*Frau ja*/
-                    "#C5E2E4", /*Neffe ja */
-                    "#FFD9D9",/*Mann ja*/
+var personColors = ["#EBD3B9",
+                    "#C5E2E4", 
+                    "#FFD9D9",
 
-                    "#FFE0A8", /*Schwaegerin*/
-                    /*"#595959",*/
+                    "#FFE0A8", 
 
-                    "#B99C79",/*Grossvater ja */
-                    "#D2E6C1",/*Junge ja*/
+                    "#B99C79",
+                    "#D2E6C1",
 
-                    "#E08989",/*Nichte ja*/
+                    "#E08989",
 
-                    "#CACACA", /*Shui Ta ja */
-                    "#EDAE81",/*Schreiner ja*/
-                    "#CDCCF7"/*Polizist*/
-                    /*,"#FFF"*/];
+                    "#CACACA", 
+                    "#EDAE81",
+                    "#CDCCF7"];
 
 /**
  * Array of figures to trigger depending on event name - animations and sounds are set as attributes in the corresponding html
