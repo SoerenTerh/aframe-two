@@ -615,7 +615,7 @@
                 <a-entity id="containerMann" class="five cSix1 cSix2 cFive3 play" position="-1.09 .5 -14.02" rotation="-90 -90 0">
                     <a-entity id="Mann" class="one fiveAll sixTalk2 sevenTalk sThreeTalk sFourTalkStart sFourTalk1 sFourTalk2
                                                sFourTalk3 sSixTalk1 sSixTalk2 sSixTalk3 sSeven_P1 sSeven_P22 sSeven_P2
-                                               vOne vSixTalk vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
+                                               vOne vSixTalk vEleven vEighteenTalk vEighteen vEighteen2 vEighteen3 v21 v21_2 v21_3 v25Talk
                                                v26 v26two v26three v29Talk mzeroTalk mfourTalk mfiveTalk mone play" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.5 9.5" material="color:#FFD9D9" rotation="0 0 0" visible="true" sound="src:#snore;on:one;poolsize:100;volume:1;loop:true" sound__5="src:#gaeste1; on:fiveAll; poolsize:100; volume:5" event-set__5="_event: sound-ended; material.color: #FFD9D9" event-set__2="_event: two; sound.loop: false; sound.volume: 0" event-set__cSevenMann="_event: cSeven; visible: false">
                         <a-sound id="sixTalk2Mann" src="#mann1" volume="10" on="sixTalk2"></a-sound>
                         <a-sound id="sevenTalkMann" src="#mann2" volume="10" on="sevenTalk"></a-sound>
@@ -663,6 +663,8 @@
                     <a-animation id="MannAnimsSeven_P2" attribute="position" class="wait" dur="2500" to="-3 2 18" repeat="0" begin="sSeven_P2"></a-animation>
 
                     <a-animation id="MannAnimVOne" class="wait" attribute="rotation" dur="2500" to="0 70 0" repeat="0" begin="vOne"></a-animation>
+                    <a-animation id="MannAnimVEleven" class="wait" attribute="position" dur="2500" to="6 0 -10" repeat="0" begin="vEleven"></a-animation>
+
                     <a-animation id="MannAnimV18R" attribute="rotation" class="wait" dur="2500" to="0 180 0" repeat="0" begin="vEighteen"></a-animation>
 
                     <a-animation id="MannAnimV18_2P" attribute="position" class="wait" dur="2500" to="12 2 -12" repeat="0" begin="vEighteen2"></a-animation>
@@ -1082,7 +1084,7 @@
                 <!-- Notizbuch -->
                 <!-- neuer cheat -->
                 <a-entity id="notizbuch" obj-model="obj: #NotizbuchObj; mtl: #NotizbuchMtl" position="1 9.7 3" scale="0.2 0.2 0.2" rotation="0 90 0" class="one two twoTalk twoTalk2 three four fourTalk fourTalk2 five fiveAll sixTalk six six2
-                                 sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree
+                                 sixTalk2 sevenTalk0 seven seven2 seven3 seven4 sevenTalk sOneTalk sTwoTalk sThree sThreeTalk
                                  sFourTalkStart sFourTalkStart1 sFourTalkStart2 sFourTalk1 sFourTalk2 sFourACC1 sFourACC2 sFourACC3 sFourACC4 sFourACC5
                                  sFourACC6 sFourACC7 sFourACC8 sFourP3begin sFourMove sFour_P3 sFiveTalk sFiveTalk2
                                  sFive_P1 sFive_P2 sFive_P2Move sFive_P3 sFive_P3Move sFive_P3no sSixTalk1 sSixTalk2 sSixTalk3
@@ -1448,7 +1450,9 @@
             <!--ground -> Try not to fall-->
             <a-box scale="0.6 0.6 0.6" width="555" height="0.1" depth="555" static-body="shape:box;sphereRadius:NaN" position="4.19 -1.23 6.5" rotation="0 0 0" visible="true" geometry="primitive:box;width:555;height:0.1;depth:555" color="grey"></a-box>
 
-            <a-sky material="fog: false" src="#audience" id="asky" scale="-0.035 0.035 0.035" position="0 17 0" rotation="0 0 4.01"></a-sky>
+            <a-sky material="fog: false" src="#audience" id="asky" scale="-0.035 0.035 0.035" position="0 17 0" rotation="0 0 4.01">
+                <a-sound id="mfiveTalk2StimmeAusDemOff" class="wait" src="#stimmeausdemoff1" volume="10" on="mfiveTalk2"></a-sound>
+            </a-sky>
         </a-scene>
 
         <div id="lost">
