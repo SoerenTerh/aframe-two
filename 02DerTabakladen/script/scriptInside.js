@@ -33,7 +33,7 @@ var eventArr = ["one",
                 //  "sOneTalk", "sTwoTalk", "sThreeTalk",
                 //"sFourTalkStart",
                 //"sFourTalk1", "sFourTalk2",
-                // "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
+                "sFourACC1", "sFourACC2", "sFourACC3", "sFourACC4", "sFourACC5", "sFourACC6", "sFourACC7", "sFourACC8",
                 "sFourP3begin", "sFourMove", "sFour_P3",
                 //  "sFiveTalk", "sFiveTalk2",
                 "sFive_P1", "sFive_P2", "sFive_P2Move", "sFive_P3", "sFive_P3Move", "sFive_P3no",
@@ -160,14 +160,14 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     //sFourTalk1 = ["#Mann", "#Schwaegerin"],
     // sFourTalk2 = ["#Mann"],
     //
-    // sFourACC1 = ["#accMann"],
-    // sFourACC2 = ["#accNeffe"],
-    // sFourACC3 = ["#accFrau"],
-    // sFourACC4 = ["#accGroßvater"],
-    // sFourACC5 = ["#accJunge"],
-    // sFourACC6 = ["#accNichte"],
-    // sFourACC7 = ["#accSchwaegerin"],
-    // sFourACC8 = ["#accSchwaegerin2"],
+    sFourACC1 = ["#accMann"],
+    sFourACC2 = ["#accNeffe"],
+    sFourACC3 = ["#accFrau"],
+    sFourACC4 = ["#accGroßvater"],
+    sFourACC5 = ["#accJunge"],
+    sFourACC6 = ["#accNichte"],
+    sFourACC7 = ["#accSchwaegerin"],
+    sFourACC8 = ["#accSchwaegerin2"],
 
     sFourP3begin = ["#containerJunge", "#tabakladenTUERi"],
     sFourMove = ["#containerJunge"],
@@ -245,7 +245,7 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     mfive = ["#containerShuiTa"], //Man (ShuiTa) verbeugt sich
     mfive2 = ["#containerShuiTa"],
     //  mfiveTalk = ["#ShuiTa", "#Mann"], //shui30, mann16
-    //mfiveTalk2 = ["#ShuiTa", "#sky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
+    //mfiveTalk2 = ["#ShuiTa", "#asky", "#Polizist"], //von der Straße Lärm und Rufe;;;; shui31, stimmeausdemoff1, polizist5
     msix = ["#containerJunge", "#containerEssen"], //Kuch*en* und Flad*en* fallen aus Bluse
     msix2 = ["#containerFrau", "#containerJunge"], //Frau winkt ihn verzeifelt hinaus; Junge wendet sich und will weg
     //msix2Talk = ["#Polizist"], //polizist6
@@ -264,10 +264,10 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cFiveTalk = ["#Polizist"], //vorwärts
     cFive1 = ["#containerPolizist"],
     cSix = ["#containerSchwaegerin"],
-    cSix1 = ["#containerJunge", "#containerSchwaegerin"],
+    cSix1 = ["#containerJunge", "#containerSchwaegerin", "#containerGroßvater"],
     cSix2 = ["#containerJunge", "#containerSchwaegerin", "#containerFrau", "#containerMann"],
     //werden getrieben und gehen ab
-    cFive3 = ["#containerMann", "#containerPolizist"],
+    cFive3 = ["#containerMann", "#containerPolizist", "#containerGroßvater"],
     cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
     cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
@@ -320,7 +320,7 @@ function storyline(currentTarget, currentEvent) {
             function wait2(narrate) {
                 document.querySelector(narrate).addEventListener('sound-ended', function waited() {
                     //  document.querySelector('#sockel' + fireAtString).setAttribute('material', 'color', 'black');
-                    if (fireAt !== "#sky") {
+                    if (fireAt !== "#asky") {
                         document.querySelector(fireAt).setAttribute('material', 'color', getColorOfPerson(fireAt));
                     }
                     console.log("--------------------Narration End--------------------");
@@ -353,7 +353,7 @@ function storyline(currentTarget, currentEvent) {
                             }
 
                             if (narrate !== null) {
-                                if (fireAt !== "#sky") {
+                                if (fireAt !== "#asky") {
                                     document.querySelector(fireAt).setAttribute('material', 'color', '#a2e665');
                                 }
                                 wait2(narrate);
