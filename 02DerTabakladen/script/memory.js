@@ -130,7 +130,6 @@ memoryEntity.appendChild(card16);
 
 // memory game
 // some of this is adapted from https://codepen.io/natewiley/pen/HBrbL
-
 var tries = 0;
 var count = 0;
 var matches = 0;
@@ -250,16 +249,14 @@ var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
     if(checkGameStatus(games[2])!==false){
         if (memoryVisible === false) { 
-            
-            //document.querySelector("#containerGroßvaterGame" + ' > a-sound[on=\"Spielaufruf"]').emit("Spielaufruf");
+
             //#SpielaufrufGrossvater
             document.querySelector("#containerGroßvaterGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerGroßvaterGame" + ' > a-animation' ).emit("Spielaufruf");
-            
+
             AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
             memoryVisible = true;
             gameActive = "#memoryGame";
-            // buildMemory(cards, images); warum funktioniert das hier nicht, aber in der Funktion unten?
         }
         else {
             AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
@@ -408,7 +405,6 @@ $(".memoryCard").on("click", function turnCard() {
  * @param {array} images - array of images to set as background images
  * @param {memoryCards} memoryCards - array of entities to set the background images on
  */
-
 function buildMemory(cards, images, memoryCards) {
     foundCards = [];
     randomizeImages();

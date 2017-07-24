@@ -1,9 +1,3 @@
-/*
-font-family: 'Amatic SC', cursive;
-font-family: 'Source Code Pro', monospace;
-*/
-
-
 body {
     font: 15px 'Source Code Pro', monospace;
     padding-top: 65px; 
@@ -23,8 +17,8 @@ p {
 }
 
 .navText {
-    padding-top: 5px;
-    padding-bottom: 0;
+    font: 30px 'Amatic SC', cursive;
+    padding-bottom: 0px;
 }
 
 .navbar-nav > li > a {
@@ -118,10 +112,9 @@ nav, .navbar-brand{
 }
 
 .progress__2 {
-    margin-top: 5%;
+    margin-top: 2.5%;
+    width: 100%;
 }
-
-
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .future, .s2_one, .s2_two, .s2_three, .s2_four, .s2_five, .s2_six, .s2_seven, .s2_eight, .s2_nine, .s2_ten, .s2_eleven, .s2_twelve, .future2{
     position:absolute;
@@ -163,15 +156,15 @@ nav, .navbar-brand{
 }
 
 .s2_one {
-    left: 2%;
+    left: 7%;
 }
 
 .s2_two {
-    left: 12%;
+    left: 14%;
 }
 
 .s2_three {
-    left: 20%;
+    left: 21%;
 }
 
 .s2_four {
@@ -179,36 +172,35 @@ nav, .navbar-brand{
 }
 
 .s2_five {
-    left: 36%;
+    left: 35%;
 }
 
 .s2_six {
-    left: 44%;
+    left: 42%;
 }
 
 .s2_seven {
-    left: 52%;
+    left: 49%;
 }
 .s2_eight {
-    left: 60%;
+    left: 56%;
 }
 .s2_nine {
-    left: 68%;
+    left: 63%;
 }
 .s2_ten {
-    left: 76%
+    left: 70%
 }
 .s2_eleven {
-    left: 84%;
+    left: 77%;
 }
 
 .s2_twelve {
-    left: 92%;
+    left: 84%;
 }
 
-
 .future2 {
-    left: 98%;
+    left: 91%;
 }
 
 
@@ -284,5 +276,45 @@ a.fancybox:hover img {
     .col-lg-15 {
         width: 20%;
         float: left;
+    }
+}
+
+
+/*override toggle navbar*/
+@media (max-width: 1000px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        background-color: #222 !important;
+        border-width: 0 0 0px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    .collapse.in{
+        display:block !important;
     }
 }

@@ -92,7 +92,6 @@ var persons = ["#Frau",
                "#Mann",
 
                "#Schwaegerin",
-               /*"#Bruder",*/
 
                "#Großvater",
                "#Junge",
@@ -101,28 +100,25 @@ var persons = ["#Frau",
 
                "#ShuiTa",
                "#Schreiner",
-               "#Polizist"
-               /*,"#Hausbesitzerin"*/];
+               "#Polizist"];
 
 /**
  * Different default color for figures
  */
-var personColors = ["#EBD3B9",/*Frau ja*/
-                    "#C5E2E4", /*Neffe ja */
-                    "#FFD9D9",/*Mann ja*/
+var personColors = ["#EBD3B9",
+                    "#C5E2E4", 
+                    "#FFD9D9",
 
-                    "#FFE0A8", /*Schwaegerin*/
-                    /*"#595959",*/
+                    "#FFE0A8", 
 
-                    "#B99C79",/*Grossvater ja */
-                    "#D2E6C1",/*Junge ja*/
+                    "#B99C79",
+                    "#D2E6C1",
 
-                    "#E08989",/*Nichte ja*/
+                    "#E08989",
 
-                    "#CACACA", /*Shui Ta ja */
-                    "#EDAE81",/*Schreiner ja*/
-                    "#CDCCF7"/*Polizist*/
-                    /*,"#FFF"*/];
+                    "#CACACA", 
+                    "#EDAE81",
+                    "#CDCCF7"];
 
 /**
  * Array of figures to trigger depending on event name - animations and sounds are set as attributes in the corresponding html
@@ -296,7 +292,6 @@ function cursorEmitEvent(trigggerEvent) {
     if (trigggerEvent != "notClickable") { //Testing
         console.log(currentCursor, " -> ", trigggerEvent);
     }
-
     document.querySelector(currentCursor).emit(trigggerEvent);
 }
 
@@ -339,12 +334,11 @@ function storyline(currentTarget, currentEvent) {
                     fireAt = window[currentEvent][k];
                     fireAtString = fireAt.slice(1);
                     console.log("Fire at= " + fireAt);
-                    //window.clearTimeout(timeoutId);
 
                     // Play sound if Talk is found
                     if (currentEvent.search("Talk") !== -1) {
                         try {
-                            document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').emit(currentEvent);
+                            document.querySelector(fireAt + ' > a-sound[on="' + currentEvent + '"]').emit(currentEvent);
                         } catch (err) {
                             console.log(err + " - while firing at  " + fireAt);
                         }
@@ -352,22 +346,18 @@ function storyline(currentTarget, currentEvent) {
                         k++;
                         try {
 
-                            if (document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]') !== null) {
-                                console.log(document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]'));
-                                narrate = "#" + document.querySelector(fireAt + ' > a-sound[on=\"' + currentEvent + '\"]').id;
+                            if (document.querySelector(fireAt + ' > a-sound[on="' + currentEvent + '"]') !== null) {
+                                console.log(document.querySelector(fireAt + ' > a-sound[on="' + currentEvent + '"]'));
+                                narrate = "#" + document.querySelector(fireAt + ' > a-sound[on="' + currentEvent + '"]').id;
                                 console.log(narrate);
                             }
-
 
                             if (narrate !== null) {
                                 if (fireAt !== "#asky") {
                                     document.querySelector(fireAt).setAttribute('material', 'color', '#a2e665');
                                 }
-
-                                //window.clearTimeout(timeoutId);
                                 wait2(narrate);
                             } else {
-                                //window.clearTimeout(timeoutId);
                                 startNext();
                             }
 
@@ -386,9 +376,9 @@ function storyline(currentTarget, currentEvent) {
                         k++;
                         try {
                             // Perform animations from inline html
-                            if (document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]') !== null) {
-                                console.log(document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]'));
-                                animated = "#" + document.querySelector(fireAt + ' > a-animation[begin=\"' + currentEvent + '\"]').id;
+                            if (document.querySelector(fireAt + ' > a-animation[begin="' + currentEvent + '"]') !== null) {
+                                console.log(document.querySelector(fireAt + ' > a-animation[begin="' + currentEvent + '"]'));
+                                animated = "#" + document.querySelector(fireAt + ' > a-animation[begin="' + currentEvent + '"]').id;
                                 console.log(animated);
                             }
                             if (currentEvent.search("All") !== -1) {
@@ -396,26 +386,20 @@ function storyline(currentTarget, currentEvent) {
                             }
 
                             if (document.querySelector(fireAt + ' > a-animation[class="wait"]') !== null) {
-                                //window.clearTimeout(timeoutId);
                                 wait(animated);
                             } else {
-                                //window.clearTimeout(timeoutId);
                                 startNext();
                             }
 
                         } catch (err2) {
                             console.log("No animation at: " + currentEvent + "-->" + fireAt);
-                            //window.clearTimeout(timeoutId);
                             startNext();
                         }
                     }
 
                 } else {
                     next = true;
-                    //window.clearTimeout(timeoutId);
                     console.log("Finished: " + currentTarget);
-
-
 
                     if (i === eventArr.length - 1) {
                         console.log("END");
@@ -440,7 +424,6 @@ function storyline(currentTarget, currentEvent) {
 
                     //continue story while event matches (e.g. five, five2, fiveAll, fiveTalk, fiveTalk2, ...)
                     if (at.search(last) !== -1) {
-                        //window.clearTimeout(timeoutId);
                         playableFound(at);
                     }
                 }
@@ -448,8 +431,6 @@ function storyline(currentTarget, currentEvent) {
                 console.log("END");
             }
         }());
-
-        //window.clearTimeout(timeoutId);
         return 1;
     } else {
         return 0;
@@ -468,16 +449,6 @@ function playableFound(currentTarget) {
             if (currentTarget.search(at) !== -1) {
                 currentTarget = "#" + at;
 
-                //window.clearTimeout(timeoutId);
-                //                for (n = 0; n < persons.length; n++) { //change hint coloring back to normal
-                //                    try {
-                //                        document.querySelector(persons[n]).setAttribute('material', 'color', getColorOfPerson(persons[n]));
-                //                    } catch (err9) {
-                //                        console.log(err9 + " - while firing at  " + fireAt);
-                //                    }
-                //                }
-
-                //window.clearTimeout(timeoutId);
                 if (storyline(currentTarget, at) !== 1) {
                     console.log("Problem occured?!");
                 }
@@ -489,23 +460,6 @@ function playableFound(currentTarget) {
             i++;
             console.log("......................");
         }
-
-        ////hint at next onPlayFusing()
-        //        timeoutId = setTimeout(function showHint() {
-        //            for (m = 0; m < window[at].length; m++) {
-        //                fireAt = window[at][m];
-        //                if (fireAt.search("container") !== -1) {
-        //                    fireAt = fireAt.replace('container', '');
-        //                } else if (fireAt.search("sockel") !== -1) {
-        //                    fireAt = fireAt.replace('sockel', '');
-        //                }
-        //                if($.isArray(fireAt)){
-        //                    document.querySelector(fireAt[0]).setAttribute('material', 'color', 'red');
-        //                }else{
-        //                    document.querySelector(fireAt).setAttribute('material', 'color', 'red');
-        //                }
-        //            }
-        //        }, 30000);
     }
 }
 
@@ -533,7 +487,6 @@ $(".clickable").on('fusing', function onclickableFusing() {
  */
 $(".clickable").on('click', function onclickableClick() {
     'use strict';
-    //if (at !== "two" || at !== "three" || at !== "four" || at !== "sTwo" || at !== "sFourP3begin" || at !== "sFour_p3" || at !== "sFive_P2" || at !== "sFive_P3no" || at !== "v21" || at !== "v21_3" || at !== "V32") {
     currentTarget = '#' + $(this).closest("a-entity").attr('id');
     trigggerEvent = "clickableClick";
     nowClicked = currentTarget;
@@ -542,7 +495,6 @@ $(".clickable").on('click', function onclickableClick() {
         document.querySelector(currentTarget).emit(trigggerEvent);
         console.log(currentTarget);
     }
-    //}
 });
 
 //Camera jump
@@ -566,13 +518,6 @@ $(".clickableTrigger").on('fusing', function onClickableTriggerFusing() {
 });
 
 
-////Cursor is not on .clickable
-//$("a-entity").on('fusing', function onAEntityFusing() {
-//    'use strict';
-//    trigggerEvent = "notClickable";
-//    cursorEmitEvent(trigggerEvent);
-//});
-
 //trigger storyline after start was iniciated
 $(".play").on('fusing', function onPlayFusing() {
     'use strict';
@@ -581,19 +526,6 @@ $(".play").on('fusing', function onPlayFusing() {
         playableFound(currentTarget);
     }
 });
-
-////auto-enter VR (https://github.com/aframevr/aframe/issues/1473) -> not yet working
-//window.addEventListener('load', function onLoadEnterVR() {
-//    'use strict';
-//    var scene = document.querySelector('a-scene');
-//    if (scene.hasLoaded) {
-//        scene.enterVR();
-//    } else {
-//        el.addEventListener('loaded', function () {
-//            scene.enterVR();
-//        });
-//    }
-//});
 
 /**
  * Trigger story line
@@ -608,9 +540,6 @@ document.querySelector('a-scene').addEventListener('loaded', function szeneLoade
             scene.enterVR();
         }
         $("#giveMeTime").remove();
-
-        currentTarget = "#one";
-        at = "one";
         storyline(currentTarget, at);
     }, 1500);
 });

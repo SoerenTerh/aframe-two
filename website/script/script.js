@@ -36,19 +36,15 @@ $(document).ready(function () {
     }
 
     //Process Bar
-    var endDate = new Date("08/02/2017"), //Habe eine woche nach hinten verschoben, da wir eine woche frei hatten
+    var endDate = new Date("08/09/2017"), 
         beginDate = new Date("05/03/2017"),
         totalTime = (endDate - beginDate),
         d = new Date(),
         dateProgress = new Date(d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate()) - beginDate,
-        completionPercentage = (Math.round((dateProgress / totalTime) * 100)),
-        output = completionPercentage + 2 + "%";
-
+        completionPercentage = (Math.round((dateProgress / totalTime) * 100));
 
     $(".progress-bar.semester-1").css('width', 100 + "%");
-
-    $(".progress-bar.semester-2").css('width', output);
-
+    $(".progress-bar.semester-2").css('width', completionPercentage + "%");
 
     function color(x) {
         $(".primary-color").css("background-color", "turquoise");

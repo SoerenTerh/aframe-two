@@ -3,12 +3,12 @@
 var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
 var gameActive;
+
 /**
  * Check game status to prevent starting multiple games
  * param: array position of game in games[]
  * return: false - if other game is running
  */
-
 function checkGameStatus(curr) {
     var gamesWOcurr = games.filter(function(e){return e !== curr;});
     for(var i = 0; i<gamesWOcurr.length; i++){
@@ -19,18 +19,6 @@ function checkGameStatus(curr) {
         }
     }
 }
-
-//$('#tabakladenTUERa').on('click', function doorClick() {
-//    'use strict';
-//    var innen = "indemladen.html";
-//    setTimeout(function timoutFadeOut() {
-//        $('#außen').fadeOut("slow", function timeoutSlow() {
-//            window.location = innen;
-//        });
-//    }, 1500);
-//});
-
-
 
 /** Trigger points to move across the outside area */
 
