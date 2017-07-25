@@ -20,8 +20,12 @@ AFRAME.registerComponent('set-cam-outdoor', {
                 $('#counterPerson').css('display', 'block');
             }
 
+            if(!storyProgress) {
+              storyline(nil, nil);
+            }
+
             document.location.hash = 'Platz';
-            document.querySelector('#camera').setAttribute('camera', 'active', true);  
+            document.querySelector('#camera').setAttribute('camera', 'active', true);
             document.getElementById("innenSzene").setAttribute('visible', 'false');
             document.getElementById("aussenSzene").setAttribute('visible', 'true');
 
@@ -53,12 +57,6 @@ AFRAME.registerComponent('set-cam-indoor', {
             $('#counterKuchen').css('display', 'none');
             $('#counterPerson').css('display', 'none');
 
-            // Trigger story when setting cam indoor
-            if(!storyProgress) {
-                storyline("#one", "one");
-                storyProgress = true;
-            }
-
             document.location.hash = 'Tabakladen';
             document.querySelector('#camera').setAttribute('camera', 'active', true);    
             document.getElementById("aussenSzene").setAttribute('visible', 'false');
@@ -71,6 +69,14 @@ AFRAME.registerComponent('set-cam-indoor', {
             AFRAME.utils.entity.setComponentProperty(myCamera, 'rotation', {x: 0, y: 0, z: 0});
 
             console.log("IN");
+
+            //Trigger story when setting cam indoor
+            if(!storyProgress) {
+              setTimeout(function loadTimeout() {
+                storyline("#one", "one");
+                storyProgress = true;
+              }, 2500);
+            }
 
         });
     }
@@ -95,8 +101,10 @@ AFRAME.registerComponent('set-cam', {
                     aussenSound.components.sound.stopSound();
 
                     if(!storyProgress) {
+                      setTimeout(function loadTimeout() {
                         storyline("#one", "one");
                         storyProgress = true;
+                      }, 2500);
                     }
 
                     AFRAME.utils.entity.setComponentProperty(myCamera, 'position', {x: 5, y: 13.6, z: 20});
