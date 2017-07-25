@@ -382,20 +382,15 @@ function playableFound(currentTarget) {
 //Cursor found .clickable
 $(".clickable").on('fusing', function onclickableFusing() {
     'use strict';
-    if ((at === "two" || at === "three") && window.location.hash == '#Tabakladen') { //maybe....
-        currentTarget = $(this).closest("a-entity").attr("class");
-        playableFound(currentTarget);
+    currentTarget = '#' + $(this).closest("a-entity").attr('id');
+    console.log(currentTarget);
 
-    } else {
-        currentTarget = '#' + $(this).closest("a-entity").attr('id');
-        console.log(currentTarget);
+    trigggerEvent = "clickableFound";
+    cursorEmitEvent(trigggerEvent);
 
-        trigggerEvent = "clickableFound";
-        cursorEmitEvent(trigggerEvent);
-
-        document.querySelector(currentTarget).emit(trigggerEvent);
-        lastClickableFused = currentTarget;
-    }
+    document.querySelector(currentTarget).emit(trigggerEvent);
+    lastClickableFused = currentTarget;
+    //    }
 });
 
 /** Detect clickable target on click
