@@ -20,7 +20,7 @@ function checkGameStatus(curr) {
     }
 }
 
-<<<<<<< HEAD
+
 //$('#tabakladenTUERa').on('click', function doorClick() {
 //    'use strict';
 //    var innen = "indemladen.html";
@@ -40,8 +40,7 @@ $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
 	  document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
 });
 
-=======
->>>>>>> refs/remotes/origin/develop
+
 /** Trigger points to move across the outside area */
 
 $('#triggerBaeume').on('click', function triggerBaeume() {
