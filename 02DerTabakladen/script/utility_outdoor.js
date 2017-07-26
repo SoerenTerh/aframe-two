@@ -19,6 +19,13 @@ function checkGameStatus(curr) {
         }
     }
 }
+$("#iconAussen").on("clickableFound", function triggericonaussen() {
+	  document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableFound");
+});
+
+$("#iconAussen").on("clickableClick", function triggericonaussenclick() {
+	  document.querySelector("#tabakladenTUERa" + '> a-animation').emit("clickableClick");
+});
 
 /** Trigger points to move across the outside area */
 
