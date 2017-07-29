@@ -43,7 +43,8 @@ AFRAME.registerComponent('set-cam-indoor', {
             var aussenSound = document.querySelector('#platz');
             aussenSound.components.sound.stopSound();
 
-            if ($('a-scene').hasClass('rain')) {
+            var sceneRain = $('a-scene').attr('rain');
+            if (typeof sceneRain !== typeof undefined && sceneRain !== false) {
                 $('a-scene').removeAttr('rain');
             }
 
