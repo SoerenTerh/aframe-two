@@ -388,10 +388,7 @@
                 <a-box id="baeckerBox" static-body="shape:Primitives" position="-5.88 0.8 -120.5" width="70" height="20" depth="40" visible="false" rotation="0 90 0"></a-box>
 
                 <!-- Bäcker Tür -->
-                <a-entity collada-model="#baeckerTuer_positionDAE" id="baeckerladenTuer" class="clickable" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible="">
-                    <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 90 0" to="0 135 0" repeat="0" begin="clickableFound"></a-animation>
-                    <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 135 0" to="0 180 0" repeat="0" begin="clickableClick"></a-animation>
-                </a-entity>
+                <a-entity collada-model="#baeckerTuer_positionDAE" id="baeckerladenTuer" position="9.55 1.2 -97.3" scale="8 7.85 10.5" rotation="0 89.38 0" visible=""></a-entity>
 
                 <!-- Bäckerei - Ladentisch -->
                 <a-entity obj-model="obj:#ladentischObj;mtl:#ladentischMtl" position="-10.65 0 -111.88" scale="0.24 0.4 0.19" rotation="0 270.00 0" visible="true" id="thekeBäckerei"></a-entity>
