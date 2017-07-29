@@ -431,7 +431,7 @@ AFRAME.registerComponent('random-position-person', {
     },
 
     update: function () {
-        var xPos = [-36, -13.5, 8.5, 25, 43, 43, 43, 78, 82, 14.5, -11.5, -74, -76, -75.5, -5.5];
+        var xPos = [-36, -13.5, 8.5, 25, 43, 43.1, 43.2, 78, 82, 14.5, -11.5, -74, -76, -75.5, -5.5];
         var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 35.5, 71, 71, 35, 13.5, -17.5, -6];	
         var data = this.data;
 
@@ -442,6 +442,8 @@ AFRAME.registerComponent('random-position-person', {
             y: 1,
             z: yPos[index]
         });
+
+        console.log(xPos[index] + " " + " " + yPos[index]);
 
         xPos.splice(index, 1);
         yPos.splice(index, 1);
