@@ -39,16 +39,10 @@ function game(el) {
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
             document.querySelector("#falscheAnzahl").play();
-
-            document.querySelector("#falscheAnzahl").addEventListener('sound-ended', function waited() {
-
-                console.log("--------------------Narration \"Spielfehler\" End--------------------");
-
+            setTimeout(function(){
                 gameLost();
-
-            });
-            gameLost(); //nur hier bis Z. 43 getested werden kann
-        }
+            }, 7010);
+        };
     }
 }
 
