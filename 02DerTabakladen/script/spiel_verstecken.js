@@ -33,14 +33,10 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
         yPos.splice(indexPos);
 
         peopleArray.push(people[i].getAttribute('position').x);
-        console.log("POSX: " + posX.x);
-        console.log(xPos);
     }
 
     var dub = peopleArray.getDuplicates();
     var dubObjKeys = Object.keys(dub);
-    console.log(dub);
-    console.log(dubObjKeys.length);
 
     var positionDublicated = [];
 
@@ -51,7 +47,6 @@ $('#hideAndSeekTrigger').on('click', function beginCake() {
             positionDublicated.push(dubObj[t]);
         }
     });
-    console.log(positionDublicated);
 
     // set new position to dublicate person
     // iterate over keys
