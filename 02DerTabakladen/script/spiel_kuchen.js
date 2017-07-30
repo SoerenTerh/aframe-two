@@ -2,17 +2,6 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
-/**
- * Show cakeGame, if no other game is in progress
- */
-var cakeEntity = document.querySelector('#cakeGame');
-$('#cakeTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[0])!==false){
-        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-        $('#counterKuchen').css("display", "initial");
-    }
-});
-
 $('.Minispiel_Kuchen').on('click', function(el){
     game(el);
     var cakeNR = "#" + el.currentTarget.id;

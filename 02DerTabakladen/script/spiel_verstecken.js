@@ -18,11 +18,6 @@ Array.prototype.getDuplicates = function () {
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[1])!==false){
-        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
-        $('#counterPerson').css("display", "initial");
-    }
-
     var people = document.querySelectorAll('.HaSperson');
     var peopleArray = [];
 

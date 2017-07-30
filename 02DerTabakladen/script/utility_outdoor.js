@@ -133,23 +133,35 @@ $('#toggleInfo').on('click', function() {
 
 var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[0])!==false){
-        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-        document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
-        document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
-        $('#counterKuchen').css("display", "initial");
-        gameActive = '#cakeGame';
+    if(gameActive === '#cakeGame'){
+        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', false);
+        $('#counterKuchen').css("display", "none");
+        gameActive = '';
+    } else {
+        if(checkGameStatus(games[0])!==false){
+            AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+            document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
+            document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
+            $('#counterKuchen').css("display", "initial");
+            gameActive = '#cakeGame';
+        }   
     }
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
-    if(checkGameStatus(games[1])!==false){
-        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
-        document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
-        document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
-        $('#counterPerson').css("display", "initial");
-        gameActive = '#HideAndSeek';
+    if(gameActive === '#HideAndSeek'){
+        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', false);
+        $('#counterPerson').css("display", "none");
+        gameActive = '';
+    } else {
+        if(checkGameStatus(games[1])!==false){
+            AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+            document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
+            document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
+            $('#counterPerson').css("display", "initial");
+            gameActive = '#HideAndSeek';
+        }
     }
 });
 
