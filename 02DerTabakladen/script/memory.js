@@ -1,4 +1,6 @@
 // Add cards to table
+console.log("So. 30.07.")
+
 var memoryEntity = document.querySelector("#table");
 var card1 = document.createElement("a-entity");
 var card2 = document.createElement("a-entity");
@@ -177,67 +179,67 @@ var cards = [
 var images = [
     {
         name: "html5",
-        img: "../../assets/icons/html5-logo.png"
+        img: "../assets/icons/html5-logo.png"
     },
     {
         name: "html5",
-        img: "../../assets/icons/html5-logo.png"
+        img: "../assets/icons/html5-logo.png"
     },
     {
         name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png"
+        img: "../assets/icons/autodesk_logo.png"
     },
     {
         name: "autodesk",
-        img: "../../assets/icons/autodesk_logo.png"
+        img: "../assets/icons/autodesk_logo.png"
     },
     {
         name: "github",
-        img: "../../assets/icons/github-logo.png"
+        img: "../assets/icons/github-logo.png"
     },
     {
         name: "github",
-        img: "../../assets/icons/github-logo.png"
+        img: "../assets/icons/github-logo.png"
     },
     {
         name: "css3",
-        img: "../../assets/icons/css3-logo.png"
+        img: "../assets/icons/css3-logo.png"
     },
     {
         name: "css3",
-        img: "../../assets/icons/css3-logo.png"
+        img: "../assets/icons/css3-logo.png"
     },
     {
         name: "slack",
-        img: "../../assets/icons/slack-logo.png"
+        img: "../assets/icons/slack-logo.png"
     },
     {
         name: "slack",
-        img: "../../assets/icons/slack-logo.png"
+        img: "../assets/icons/slack-logo.png"
     },
     {
         name: "aframe",
-        img: "../../assets/icons/aframe-logo.png"
+        img: "../assets/icons/aframe-logo.png"
     },
     {
         name: "aframe",
-        img: "../../assets/icons/aframe-logo.png"
+        img: "../assets/icons/aframe-logo.png"
     },
     {
         name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png"
+        img: "../assets/icons/nodejs-logo.png"
     },
     {
         name: "nodejs",
-        img: "../../assets/icons/nodejs-logo.png"
+        img: "../assets/icons/nodejs-logo.png"
     },
     {
         name: "jquery",
-        img: "../../assets/icons/jquery-logo.png"
+        img: "../assets/icons/jquery-logo.png"
     },
     {
         name: "jquery",
-        img: "../../assets/icons/jquery-logo.png"
+        img: "../assets/icons/jquery-logo.png"
     }
 ];
 
@@ -248,7 +250,7 @@ var turnCardEvent = false;
 var memory = document.querySelector("#memoryGame");
 $("#cardStack").on("click", function triggerMemory() {
     if(checkGameStatus(games[2])!==false){
-        if (memoryVisible === false) { 
+        if (memoryVisible === false) {
 
             //#SpielaufrufGrossvater
             document.querySelector("#containerGroßvaterGame" + ' > a-sound' ).emit("Spielaufruf");
@@ -347,13 +349,13 @@ $(".memoryCard").on("click", function turnCard() {
                     matches++;
                 }
                 else {
-                    var tempFirst = first, 
-                        tempFirstImage = firstImage, 
-                        tempFirstCard = firstCard, 
+                    var tempFirst = first,
+                        tempFirstImage = firstImage,
+                        tempFirstCard = firstCard,
                         tempFirstCardEntity = firstCardEntity,
-                        tempSecond = second, 
-                        tempSecondImage = secondImage, 
-                        tempSecondCard = secondCard, 
+                        tempSecond = second,
+                        tempSecondImage = secondImage,
+                        tempSecondCard = secondCard,
                         tempSecondCardEntity = secondCardEntity,
                         tempTriggerEvent = triggerEvent;
 
