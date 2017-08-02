@@ -25,7 +25,7 @@ var eventArr = ["one", "two", "twoTalk", "twoTalk2", "three", "four", "fourTalk"
                 "vTwo", "vTwoTalk", "vFourTalk", "vFive", "vSixTalk", "vNineTalk", "vEleven", "vElevenTalk",
                 "vFifteen", "vFourteenTalk", "vSixteen", "vSixteenTalk", "vEighteen", "vEighteen2", "vEighteen3",
                 "vEighteenTalk", "v21Talk", "v21", "v21_2", "v22Talk", "v21_3", "v23Talk", "v25Talk", "v26", "v26two",
-                "v26three", "v27Talk", "v28", "v28Talk", "v29Talk", "v30Talk", "v31Talk", "v32", "v32Talk",
+                "v26three", "v27Talk", "v28", "v28Talk", "v281", "v29Talk", "v30Talk", "v31Talk", "v32", "v32Talk",
                 "v33Talk", "v34Talk", "v36Talk", "mzeroTalk", "mone", "mtwoTalk", "mthree", "mthreeTalk",
                 "mfour", "mfourTalk", "mfive", "mfive2", "mfiveTalk", "mfiveTalk2", "msix", "msix2", "msix2Talk",
                 "mseven", "msevenTalk", "msevenTalk2", "msevenTalk3", "mseven2", "msevenTalk4", "cOneTalk", "cTwoTalk",
@@ -143,8 +143,9 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     v26two = ["#Mann", "#stellage_ohne-rechnung-2"], // trägt 2. Stellage zurück
     v26three = ["#Mann"],
     v27Talk = ["#Schreiner"], // zu betrinken
-    v28 = ["#Schreiner"], // ab
+    v28 = ["#tabakladenTUERi", "#Schreiner"], // ab
     v28Talk = ["#Mann", "#Frau", "#ShuiTa"], // amüsieren, ShuiTa = raus
+	v281 =["#tabakladenTUERi"],
     v29Talk = ["#Mann", "#ShuiTa"], // wir? Diebe
     v30Talk = ["#Mann", "#ShuiTa"], // wo Junge?
     v31Talk = ["#ShuiTa"], // Wie ihr wollt

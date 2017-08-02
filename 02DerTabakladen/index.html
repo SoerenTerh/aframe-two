@@ -677,7 +677,7 @@
                     <a-animation id="MannAnimV21" attribute="position" dur="2500" to="-7 0 -16" repeat="0" begin="v21"></a-animation>
                     <a-animation id="MannAnimV21_2" attribute="position" dur="2500" to="-7 0 -30" repeat="0" begin="v21_2"></a-animation>
 
-                    <a-animation id="MannAnimV21_3P" attribute="position" dur="2500" to="2 0 -15" repeat="0" begin="v21_3"></a-animation>
+                    <a-animation id="MannAnimV21_3P" attribute="position" dur="2500" to="-5 0 -15" repeat="0" begin="v21_3"></a-animation>
                     <a-animation id="MannAnimV21_3R" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v21_3"></a-animation>
                     <a-animation id="MannAnimV26" attribute="rotation" dur="2500" to="0 180 0" repeat="0" begin="v26"></a-animation>
                     <a-animation id="MannAnimV26two" attribute="rotation" class="wait" dur="2500" to="0 90 0" repeat="0" begin="v26two"></a-animation>
@@ -1026,7 +1026,7 @@
           			    <a-image id="enterInnen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="0.24 17.26 -23.95"></a-image>
           			</a-entity>
 					<a-entity collada-model="#tabakladenTuerSmallerDAE"
-                          id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v32"
+                          id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v28 v281 v32"
                           position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;">
 
@@ -1050,7 +1050,10 @@
 
                     <a-animation id="tabakladenTUERiAnimV21" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v21"></a-animation>
                     <a-animation id="tabakladenTUERiAnimV21_3" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v21_3"></a-animation>
-                    <a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>
+					<a-animation id="tabakladenTUERiAnimV281" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v28"></a-animation>
+					<a-animation id="tabakladenTUERiAnimV282" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v281"></a-animation>
+					<a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>
+                    
                 </a-entity>
 
                 <!-- Ladentisch -->
@@ -1078,8 +1081,8 @@
                 <a-entity class="sSeven_P2end sEight play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="13.3 -1 27.59" scale="0.14 0.06 0.12" rotation="0 0 0" visible="true" id="bett-3" event-set__sevPCK="_event: sSeven_P2end; visible: false" event-set__plcB="_event: sEight; visible: true; position: -4.85 2.53 24.72; rotation: 0 180 0;"></a-entity>
                 <a-entity class="sSeven_P2end sEight play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.63 -1 13.73" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-5" event-set__sevPCK="_event: sSeven_P2end; visible: false" event-set__plcB="_event: sEight; visible: true; position: -4.31 2.68 24.87"></a-entity>
                 <a-entity class="sSeven_P1 sEight play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="-4.86 -1 -8.49" scale="0.14 0.06 0.12" rotation="0 180 0" visible="true" id="bett-6" event-set__sevp1="_event: sSeven_P1; visible: false" event-set__plcB="_event: sEight; visible: true; position: -4.17 2.83 25.57"></a-entity>
-                <a-entity class="sSeven_P2rot play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.53 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-7" event-set__sevp2b="_event: sSeven_P2rot; visible: false"></a-entity>
-                <a-entity class="sSeven_P2rot play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="17.06 12.53 -15.32" scale="0.11 0.06 0.12" rotation="0 -90 0" visible="true" id="bett-8" event-set__sevp2b="_event: sSeven_P2rot; visible: false"></a-entity>
+                <a-entity class="sSeven_P2rot play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="20.71 12.663 -0.88" scale="0.14 0.06 0.12" rotation="0 89.95437383553924 0" visible="true" id="bett-7" event-set__sevp2b="_event: sSeven_P2rot; visible: false"></a-entity>
+                <a-entity class="sSeven_P2rot play" obj-model="obj:#SchlafplatzObj;mtl:#SchlafplatzMtl" position="17.06 12.663 -15.32" scale="0.11 0.06 0.12" rotation="0 -90 0" visible="true" id="bett-8" event-set__sevp2b="_event: sSeven_P2rot; visible: false"></a-entity>
 
                 <!-- Bettgestell -->
                 <a-entity obj-model="obj:#BettgestellObj;mtl:#BettgestellMtl" position="-4.49 0 31.24" scale="0.16 0.13 0.12" rotation="0 180 0" visible="true" id="bettgestell"></a-entity>
