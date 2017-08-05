@@ -295,7 +295,7 @@
             <a-entity id="aussenSzene" scale="1 1 1" rotation="0 0 0" position="0 0 0">
 
                 <!-- TriggerPoints -->
-                <a-box id="triggerBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="22 30.00 -8">
+                <a-box id="triggerTafel" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="3 30 20">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
@@ -323,12 +323,12 @@
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
-                <a-box id="triggerBrunnen" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-30 30 6">
+                <a-box id="triggerTisch" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-30 30 6">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
 
                 <!-- Brunnen -->
-                <a-entity class="clickable" static-body="shape:box" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" id="brunnen">
+                <a-entity class="clickable" static-body="shape:box" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="-2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" id="brunnen">
                 </a-entity>
 
                 <!-- Tisch -->
@@ -563,7 +563,7 @@
                 </a-entity>
 
                 <a-entity id="textbox-nav">
-                    <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/info_outline.svg" position="0 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
+                    <a-image id="openTextbox" class="clickableTrigger" src="../assets/icons/info_outline.svg" position="-4 15 -0.5" rotation="-57 31 7" scale="2 2 2"></a-image>
                 </a-entity>
 
                 <!--boundaries-->
