@@ -29,8 +29,7 @@ $('#kerze').on('click', function triggerKerze() {
             if (stateRoom === 1) { //Raum wird überblendet
                 AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 1);
                 AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 2);
-                var audioAn = new Audio('../assets/audio/Licht/reaktion-licht-ist-an.mp3');
-                audioAn.play();
+                document.querySelector("#lichtAN").play();
             }
             else { //Licht ist aus, wird angemacht
                 AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0.75);
@@ -44,8 +43,7 @@ $('#kerze').on('click', function triggerKerze() {
         case 0.75: // Kerze ist an, Licht wird aus gemacht
             AFRAME.utils.entity.setComponentProperty(candle, 'light.intensity', 0);
             AFRAME.utils.entity.setComponentProperty(room, 'light.intensity', 0.2);
-            var audioAus = new Audio('../assets/audio/Licht/reaktion-licht-ist-aus.mp3');
-            audioAus.play();
+            document.querySelector("#lichtAUS").play();
             break;
         default:
             break;
