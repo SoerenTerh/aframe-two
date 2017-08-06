@@ -2,17 +2,6 @@
 var counter = 0;
 var skey = "theCakeIsALie";
 
-/**
- * Show cakeGame, if no other game is in progress
- */
-var cakeEntity = document.querySelector('#cakeGame');
-$('#cakeTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[0])!==false){
-        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-        $('#counterKuchen').css("display", "initial");
-    }
-});
-
 $('.Minispiel_Kuchen').on('click', function(el){
     game(el);
     var cakeNR = "#" + el.currentTarget.id;
@@ -39,16 +28,10 @@ function game(el) {
         if(element.currentTarget.classList.contains("Minispiel_Zigarette")){
             $('#test').css("display", "none");
             document.querySelector("#falscheAnzahl").play();
-
-            document.querySelector("#falscheAnzahl").addEventListener('sound-ended', function waited() {
-
-                console.log("--------------------Narration \"Spielfehler\" End--------------------");
-
+            setTimeout(function(){
                 gameLost();
-
-            });
-            gameLost(); //nur hier bis Z. 43 getested werden kann
-        }
+            }, 7010);
+        };
     }
 }
 

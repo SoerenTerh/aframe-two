@@ -1,13 +1,57 @@
-var xPos = [-36, -13.5, 8.5, 25, 43, 43, 43, 78, 75, 14.5, -11.5, -74, -76, -75.5, -5.5];
+var xPos = [-36, -13.5, 8.5, 25, 43, 43.1, 43.2, 78, 75, 14.5, -11.5, -74, -76, -75.5, -5.5];
 var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 37, 71, 71, 35, 13.5, -17.5, -6];	
 var personLeft = 6;
 var personFound = 0;
 
+// https://stackoverflow.com/questions/18417728/get-the-array-index-of-duplicates
+Array.prototype.getDuplicates = function () {
+    var duplicates = {};
+    for (var i = 0; i < this.length; i++) {
+        if(duplicates.hasOwnProperty(this[i])) {
+            duplicates[this[i]].push(i);
+        } else if (this.lastIndexOf(this[i]) !== i) {
+            duplicates[this[i]] = [i];
+        }
+    }
+    return duplicates;
+};
+
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[1])!==false){
-        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
-        $('#counterPerson').css("display", "initial");
+    var people = document.querySelectorAll('.HaSperson');
+    var peopleArray = [];
+
+    for(var i=0; i<people.length; i++){
+        var posX = people[i].getAttribute('position');
+        var indexPos = xPos.indexOf(posX);
+        xPos.splice(indexPos);
+        yPos.splice(indexPos);
+
+        peopleArray.push(people[i].getAttribute('position').x);
+    }
+
+    var dub = peopleArray.getDuplicates();
+    var dubObjKeys = Object.keys(dub);
+
+    var positionDublicated = [];
+
+    dubObjKeys.forEach(function(i){
+        var dubObj = dub[i];
+
+        for(var t=0;t<dubObj.length;t++) {
+            positionDublicated.push(dubObj[t]);
+        }
+    });
+
+    // set new position to dublicate person
+    // iterate over keys
+    for(var k=0; k<positionDublicated.length; k++){
+        var newIndexPosition = Math.floor(Math.random() * xPos.length);
+        var dublicateFigure = people[positionDublicated[k]];
+        dublicateFigure.setAttribute('position', {x: xPos[newIndexPosition], y: 1, z: yPos[newIndexPosition]});
+        // remove used position
+        xPos.splice(newIndexPosition);
+        yPos.splice(newIndexPosition);
     }
 });
 

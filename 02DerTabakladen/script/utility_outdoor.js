@@ -29,9 +29,9 @@ $("#iconAussen").on("clickableClick", function triggericonaussenclick() {
 
 /** Trigger points to move across the outside area */
 
-$('#triggerBaeume').on('click', function triggerBaeume() {
+$('#triggerTafel').on('click', function triggerBaeume() {
     'use strict';
-    AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 22, y: 14, z: -8});
+    AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 3, y: 14, z: 20});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 90, z: 0});
 });
 
@@ -79,7 +79,7 @@ $('#triggerTabakladenxTeppichladen').on('click', function triggerTabakladenxTepp
     console.log(entity.getAttribute('position'));
 });
 
-$('#triggerBrunnen').on('click', function triggerBrunnen(){
+$('#triggerTisch').on('click', function triggerTisch(){
     'use strict';
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: -30, y: 14, z: 6});
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
@@ -91,6 +91,12 @@ var textbox = document.querySelector('#textbox');
 var infobox = document.querySelector('#infobox');
 var specialsbox = document.querySelector('#specialsbox');
 var textboxMain = document.querySelector('#textboxMain');
+
+$(function(){
+    setTimeout(function(){
+        AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', false);
+    }, 30000);
+});
 
 $('#closeTextbox').on('click', function() {
     AFRAME.utils.entity.setComponentProperty(textbox, 'visible', false);
@@ -133,23 +139,35 @@ $('#toggleInfo').on('click', function() {
 
 var cakeEntity = document.querySelector('#cakeGame');
 $('#cakeTrigger').on('click', function beginCake() {
-    if(checkGameStatus(games[0])!==false){
-        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
-        document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
-        document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
-        $('#counterKuchen').css("display", "initial");
-        gameActive = '#cakeGame';
+    if(gameActive === '#cakeGame'){
+        AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', false);
+        $('#counterKuchen').css("display", "none");
+        gameActive = '';
+    } else {
+        if(checkGameStatus(games[0])!==false){
+            AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
+            document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
+            document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
+            $('#counterKuchen').css("display", "initial");
+            gameActive = '#cakeGame';
+        }   
     }
 });
 
 var HideAndSeekEntity = document.querySelector('#HideAndSeek');
 $('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
-    if(checkGameStatus(games[1])!==false){
-        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
-        document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
-        document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
-        $('#counterPerson').css("display", "initial");
-        gameActive = '#HideAndSeek';
+    if(gameActive === '#HideAndSeek'){
+        AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', false);
+        $('#counterPerson').css("display", "none");
+        gameActive = '';
+    } else {
+        if(checkGameStatus(games[1])!==false){
+            AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
+            document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
+            document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
+            $('#counterPerson').css("display", "initial");
+            gameActive = '#HideAndSeek';
+        }
     }
 });
 
