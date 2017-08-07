@@ -393,7 +393,14 @@ $(".memoryCard").on("click", function turnCard() {
             }
 
             if (foundCards.length == cards.length) {
+                $('#wonCounter').html("Du hast gewonnen!");
+                $('#won').css("display", "initial");
+                setTimeout(function(){ $('#won').fadeOut(1500); }, 3000);
                 console.log("Hip Hip Hurra!");
+                setTimeout(function(){ 
+                    AFRAME.utils.entity.setComponentProperty(memory, "visible", false); 
+                    memoryVisible = false;
+                }, 3000);
             }
         }
     }

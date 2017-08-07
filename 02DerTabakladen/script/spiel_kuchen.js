@@ -30,9 +30,7 @@ function CountCakesAndFladen() {
     
     console.log("numOfCake: " + numOfCake + "; numOfFladen: " + numOfFladen);
     if(numOfCake === 8 && numOfFladen === 12){
-        setTimeout(function(){
-            gameWon();
-    }, 7010);
+        gameWon();
     }
 }
 
@@ -81,11 +79,12 @@ function updateCounter() {
  * Set game entity back to visible: false to be able to check for it after the game is won/lost
  */
 function gameWon() {
-    $('#cakeWon').css("display", "initial");
+    $('#wonCounter').html("Du hast alle Gebäcke gefunden und keine Zigarette aufgesammelt!");
+    $('#won').css("display", "initial");
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
     $('#counterKuchen').css("display", "none");
-    setTimeout(function(){ $('#cakeWon').fadeOut(1500); }, 2000);
+    setTimeout(function(){ $('#won').fadeOut(1500); }, 2000);
     AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', false);
 }
 

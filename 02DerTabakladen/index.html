@@ -329,7 +329,7 @@
                 <a-box id="triggerTisch" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-30 30 6">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
-                
+
                 <a-box id="triggerHinterBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="110 30 20">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
@@ -361,9 +361,9 @@
                 <a-entity collada-model="#tabakladenDAE" id="tabakladen_A" position="0 1.1 130.5" scale="10 8 10" rotation="0 -90 0" visible=""></a-entity>
 
                 <!-- Tabakladen Tür -->
-        		<a-entity id="iconAussen" class="clickableTrigger" sound="src: #squeeky_door; on: clickableFound; volume: 10" set-cam-indoor>
-					<a-image id="enterAussen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="-17.790 15.905 100.168"></a-image>
-        		</a-entity>
+                <a-entity id="iconAussen" class="clickableTrigger" sound="src: #squeeky_door; on: clickableFound; volume: 10" set-cam-indoor>
+                    <a-image id="enterAussen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="-17.790 15.905 100.168"></a-image>
+                </a-entity>
                 <a-entity collada-model="#tabakladenTuerSmallerDAE" id="tabakladenTUERa"  position="-14.15 1.1 101.75" scale="10 8 10.5" rotation="0 -90 0" visible="">
                     <a-animation attribute="rotation" dur="2500" fill="backwards" from="0 -90 0" to="0 -45 0" repeat="0" begin="clickableFound"></a-animation>
                     <a-animation attribute="rotation" dur="1000" fill="backwards" from="0 -45 0" to="0 0 0" repeat="0" begin="clickableClick"></a-animation>
@@ -1009,9 +1009,9 @@
 
                     <a-animation id="cPolizistFiveAnim" class="wait" attribute="position" dur="2500" to="-5 0 -19" repeat="0"
                                  begin="cFive3"></a-animation>
-                    
+
                     <a-animation id="cPolizistFiveAnim5" class="wait" attribute="position" dur="2500" to="-12 0 -55" repeat="0"
-                    begin="cFive3Post"></a-animation>
+                                 begin="cFive3Post"></a-animation>
                     <a-animation id="cPolizistFiveAnim6" class="wait" attribute="rotation" dur="2500" to="0 -180 0" repeat="0"
                                  begin="cFive3Post"></a-animation>
                 </a-entity>
@@ -1032,18 +1032,18 @@
                 </a-box>
 
                 <!-- Türe -->
-               		<a-entity id="icontuer" class="clickableTrigger" sound="src: #squeeky_door; on: clickableFound; volume: 10" set-cam-outdoor>
-          			    <a-image id="enterInnen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="0.24 17.26 -23.95"></a-image>
-          			</a-entity>
-					<a-entity collada-model="#tabakladenTuerSmallerDAE"
-                              id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v28 v281 v32 cNine"
+                <a-entity id="icontuer" class="clickableTrigger" sound="src: #squeeky_door; on: clickableFound; volume: 10" set-cam-outdoor>
+                    <a-image id="enterInnen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="0.24 17.26 -23.95"></a-image>
+                </a-entity>
+                <a-entity collada-model="#tabakladenTuerSmallerDAE"
+                          id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v28 v281 v32 cNine"
                           position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;">
 
 
-						<a-animation attribute="rotation" dur="2500" to="0 -45 0" repeat="0"
-                                begin="clickableFound" id="open"></a-animation>
-						<a-animation attribute="rotation" dur="1000" to="0 0 0" repeat="0"
+                    <a-animation attribute="rotation" dur="2500" to="0 -45 0" repeat="0"
+                                 begin="clickableFound" id="open"></a-animation>
+                    <a-animation attribute="rotation" dur="1000" to="0 0 0" repeat="0"
                                  begin="clickableClick" id="close"></a-animation>
 
 
@@ -1060,11 +1060,11 @@
 
                     <a-animation id="tabakladenTUERiAnimV21" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v21"></a-animation>
                     <a-animation id="tabakladenTUERiAnimV21_3" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v21_3"></a-animation>
-					<a-animation id="tabakladenTUERiAnimV281" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v28"></a-animation>
-					<a-animation id="tabakladenTUERiAnimV282" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v281"></a-animation>
-					<a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>                     
-                        
-                    
+                    <a-animation id="tabakladenTUERiAnimV281" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v28"></a-animation>
+                    <a-animation id="tabakladenTUERiAnimV282" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v281"></a-animation>
+                    <a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>                     
+
+
                 </a-entity>
 
                 <!-- Ladentisch -->
@@ -1283,10 +1283,10 @@
                     <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake4" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake5" mixin="kuchenMixin"></a-entity>
-                    
+
                     <a-entity class="Minispiel_Kuchen clickable" id="cake6" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake7" mixin="kuchenMixin"></a-entity>
-                    
+
                     <a-entity class="Minispiel_Kuchen clickable" id="fladen6" mixin="fladenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="fladen7" mixin="fladenMixin"></a-entity>
 
@@ -1488,13 +1488,11 @@
             <span id="lostCounter"></span>
         </div>
 
-        <div id="cakeWon">
-            <p>Du hast alle Gebäcke gefunden und keine Zigarette aufgesammelt!</p>
+        <div id="won">
+            <p>Herzlichen Glückwunasch!</p>
+            <span id="wonCounter"></span>
         </div>
 
-        <div id="HaSwon">
-            <p>Herzlichen Glückwunsch! Du hast alle Personen gefunden!</p>
-        </div>
         <script src="script/memory.js"></script>
 
         <script src="script/utility_outdoor.js"></script>
