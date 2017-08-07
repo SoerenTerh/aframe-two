@@ -1,6 +1,4 @@
 // Add cards to table
-console.log("So. 30.07.")
-
 var memoryEntity = document.querySelector("#table");
 var card1 = document.createElement("a-entity");
 var card2 = document.createElement("a-entity");
@@ -395,7 +393,14 @@ $(".memoryCard").on("click", function turnCard() {
             }
 
             if (foundCards.length == cards.length) {
+                $('#wonCounter').html("Du hast gewonnen!");
+                $('#won').css("display", "initial");
+                setTimeout(function(){ $('#won').fadeOut(1500); }, 3000);
                 console.log("Hip Hip Hurra!");
+                setTimeout(function(){ 
+                    AFRAME.utils.entity.setComponentProperty(memory, "visible", false); 
+                    memoryVisible = false;
+                }, 3000);
             }
         }
     }

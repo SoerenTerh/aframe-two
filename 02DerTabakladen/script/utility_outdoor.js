@@ -1,5 +1,6 @@
 /* außen */
 
+var entity = document.querySelector('#camera');
 var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
 var gameActive;
@@ -85,6 +86,12 @@ $('#triggerTisch').on('click', function triggerTisch(){
     AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
 });
 
+$('#triggerHinterBaeume').on('click', function triggerHinterBaeume(){
+    'use strict';
+    AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'position', {x: 110, y: 14, z: 20});
+    AFRAME.utils.entity.setComponentProperty(cameraForTrigger, 'rotation', {x: 0, y: 0.00, z: 0});
+});
+
 /** Toggle functions to show or hide informational text boxes*/
 
 var textbox = document.querySelector('#textbox');
@@ -144,7 +151,7 @@ $('#cakeTrigger').on('click', function beginCake() {
         $('#counterKuchen').css("display", "none");
         gameActive = '';
     } else {
-        if(checkGameStatus(games[0])!==false){
+        if(checkGameStatus(games[0])!==false && $('.Minispiel_Kuchen').length !== 0){
             AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
             document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
@@ -161,7 +168,7 @@ $('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
         $('#counterPerson').css("display", "none");
         gameActive = '';
     } else {
-        if(checkGameStatus(games[1])!==false){
+        if(checkGameStatus(games[1])!==false && personLeft !== 0){
             AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
             document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");

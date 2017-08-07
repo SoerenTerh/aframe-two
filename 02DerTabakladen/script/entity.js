@@ -432,8 +432,8 @@ AFRAME.registerComponent('random-position-person', {
     },
 
     update: function () {
-        var xPos = [-36, -13.5, 8.5, 25, 43, 43.1, 43.2, 78, 82, 14.5, -11.5, -74, -76, -75.5, -5.5];
-        var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 35.5, 71, 71, 35, 13.5, -17.5, -6];	
+        var xPos = [-36, -13.5, 8.5, 25, 43, 43.1, 43.2, 78, 75, 14.5, -11.5, -74, -76, -75.5, -5.5];
+        var yPos = [-71.5, -73, -71, -50, -38, -13.5, -2.5, 15, 40, 71, 71, 35, 13.5, -17.5, -6];	
         var data = this.data;
 
         var index = Math.floor(Math.random() * xPos.length);
