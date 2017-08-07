@@ -71,7 +71,6 @@ $('.HaSperson').on('click', function(el){
 
     if(personLeft === 0){
         setTimeout(function(){
-            $('#lostCounter').html("Herzlichen Glückwunsch! Du hast die " + personFound + " Personen gefunden.");
             won();
         }, 7010);
         $('#counterPerson').css("display", "none");

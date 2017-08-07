@@ -80,7 +80,6 @@ function updateCounter() {
  * Set game entity back to visible: false to be able to check for it after the game is won/lost
  */
 function gameWon() {
-    $('#lostCounter').html("Herzlichen Glückwunsch! Du hast die benötigten " + numOfCake + " Kuchen und " + numOfFladen + " Fläden gesammelt.");
     $('#cakeWon').css("display", "initial");
     $('.Minispiel_Kuchen').remove();
     $('.Minispiel_Zigarette').remove();
