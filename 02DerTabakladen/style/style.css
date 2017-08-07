@@ -45,7 +45,7 @@
     z-index: 5;
 }
 
-#lost, #HaSwon {
+#lost, #HaSwon, #cakeWon {
     display: none;
     border-radius: 45px;
     text-align: center;

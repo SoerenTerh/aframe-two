@@ -29,6 +29,11 @@ function CountCakesAndFladen() {
         numOfFladen++;
     
     console.log("numOfCake: " + numOfCake + "; numOfFladen: " + numOfFladen);
+    if(numOfCake === 8 && numOfFladen === 12){
+        setTimeout(function(){
+            gameWon();
+    }, 7010);
+    }
 }
 
 /**
@@ -62,11 +67,7 @@ $('#counterKuchen #counter').text(counter);
 */
 function updateCounter() {
     $('#counterKuchen #counter').text(counter);
-    if(numOfCake === 8 && numOfFladen === 12){
-        setTimeout(function(){
-            gameWon();
-        }, 7010);
-    } else if(numOfCake > 8 || numOfFladen > 12){
+    if(numOfCake > 8 || numOfFladen > 12){
         document.querySelector("#falscheAnzahl").play();
         setTimeout(function(){
             $('#lostCounter').html("Du hast " + numOfCake + " Kuchen und " + numOfFladen + " Fläden gesammelt. Jedoch solltest du 8 Kuchen und 12 Fläden einsammeln!");
