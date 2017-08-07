@@ -68,7 +68,8 @@ var eventArr = ["one", "two",
                 "cFiveTalk",
                 "cFivePre1", "cFive1", "cSix", "cSix1", "cSix2", "cFive3", "cSeven",
                 "cSevenTalk", 
-                "cEight"
+                "cEight",
+                "cNine"
                ];
 at = eventArr[0];
 
@@ -224,10 +225,11 @@ var one = ["#kerzeFlamme", "#Frau", "#Neffe", "#Mann", '#Schwaegerin', "#Großva
     cSix1 = ["#containerJunge", "#containerSchwaegerin", "#containerGroßvater"],
     cSix2 = ["#containerJunge", "#containerSchwaegerin", "#containerFrau", "#containerMann"],
     cFive3 = ["#containerMann", "#containerPolizist"],
-    cFive3Post = ["#containerPolizist", "#containerGroßvater"]
+    cFive3Post = ["#containerPolizist", "#containerGroßvater"],
     cSeven = ["#containerGroßvater"],
     cSevenTalk = ["#Großvater"], // Guten Tag
-    cEight = ["#containerGroßvater" ]; //Grossvater verschwindet
+    cEight = ["#containerGroßvater" ], //Grossvater verschwindet
+    cNine = ["#containerPolizist"];
 
 /**
  * Set color of person back to default after animation/sound

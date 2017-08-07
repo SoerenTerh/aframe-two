@@ -329,6 +329,10 @@
                 <a-box id="triggerTisch" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="-30 30 6">
                     <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
                 </a-box>
+                
+                <a-box id="triggerHinterBaeume" class="clickableTrigger" color="lightgrey" depth="3" height="3" width="3" rotation="-45 0 0" position="110 30 20">
+                    <a-animation attribute="rotation" from="20 0 0" to="20 360 0" direction="alternate" dur="4000" repeat="indefinite" easing="ease"></a-animation>
+                </a-box>
 
                 <!-- Brunnen -->
                 <a-entity class="clickable" static-body="shape:box" obj-model="obj:#brunnenObj;mtl:#brunnenMtl" position="-2 0 -1" scale="0.25 0.25 0.25" rotation="" visible="" id="brunnen">
@@ -959,7 +963,7 @@
                 </a-entity>
 
                 <!-- Polizist -->
-                <a-entity id="containerPolizist" class="v31Talk v32 mfour mseven cFour cFive1 cFive3 cSeven play" visible="true" position="-5 0 -106" event-set__c="_event: cSeven; visible: false">
+                <a-entity id="containerPolizist" class="v31Talk v32 mfour mseven cFour cFive1 cFive3 cNine play" visible="true" position="-5 0 -106" event-set__c="_event: cNine; visible: false">
                     <a-entity id="Polizist" class="v32 v32Talk v34Talk v37Talk v38Talk v40Talk v40Talk2 v40Talk3 v41Talk v42Talk
                                                    v43Talk mtwoTalk mfourTalk mfiveTalk2 msix2Talk msevenTalk msevenTalk2
                                                    msevenTalk3 msevenTalk4 cTwoTalk cFiveTalk play" obj-model="obj:#figurObj" position="0 2 0" scale="9.5 9.7 9.5" material="color:#CDCCF7" rotation="0 0 0" visible="true">
@@ -1032,7 +1036,7 @@
           			    <a-image id="enterInnen" class="clickable" src="../assets/icons/enter.svg" scale="3 3 3" position="0.24 17.26 -23.95"></a-image>
           			</a-entity>
 					<a-entity collada-model="#tabakladenTuerSmallerDAE"
-                          id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v28 v281 v32"
+                              id="tabakladenTUERi" class="two three four play sFourP3begin sFour_P3 sFive_P2 v21 v21_3 v28 v281 v32 cNine"
                           position="-9.84 -1 -23.84" scale="10 10 10.60" rotation="0 -90 0" visible="true"
                           sound="src:#door_knock;on:two;poolsize:100;volume:30;">
 
@@ -1058,7 +1062,8 @@
                     <a-animation id="tabakladenTUERiAnimV21_3" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v21_3"></a-animation>
 					<a-animation id="tabakladenTUERiAnimV281" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v28"></a-animation>
 					<a-animation id="tabakladenTUERiAnimV282" class="wait" attribute="rotation" dur="2500" to="0 -90 0" repeat="0" begin="v281"></a-animation>
-					<a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>
+					<a-animation id="tabakladenTUERiAnimV32" class="wait" attribute="rotation" dur="2500" to="0 0 0" repeat="0" begin="v32"></a-animation>                     
+                        
                     
                 </a-entity>
 
@@ -1278,8 +1283,10 @@
                     <a-entity class="Minispiel_Kuchen clickable" id="cake3" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake4" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake5" mixin="kuchenMixin"></a-entity>
+<!--
                     <a-entity class="Minispiel_Kuchen clickable" id="cake6" mixin="kuchenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake7" mixin="kuchenMixin"></a-entity>
+-->
                     <a-entity class="Minispiel_Kuchen clickable" id="cake16" mixin="fladenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake17" mixin="fladenMixin"></a-entity>
                     <a-entity class="Minispiel_Kuchen clickable" id="cake18" mixin="fladenMixin"></a-entity>

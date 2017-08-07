@@ -3,9 +3,9 @@ var counter = 0;
 var skey = "theCakeIsALie";
 
 $('.Minispiel_Kuchen').on('click', function(el){
-    game(el);
     var cakeNR = "#" + el.currentTarget.id;
     $('.Minispiel_Kuchen' + cakeNR).remove();
+    game(el);
 });
 
 $('.Minispiel_Zigarette').on('click', function(el){
@@ -31,7 +31,7 @@ function game(el) {
             setTimeout(function(){
                 gameLost();
             }, 7010);
-        };
+        }
     }
 }
 
@@ -42,9 +42,11 @@ $('#counterKuchen #counter').text(counter);
  * player wins if all cakes have been picked up
 */
 function updateCounter() {
-    $('#counterKuchen #counter').text(counter);
-    if($('.Minispiel_Kuchen').length === counter){
-        gameWon();
+    $('#counterKuchen #counter').text(counter + "; noch übrbig: " + $('.Minispiel_Kuchen').length);
+    if($('.Minispiel_Kuchen').length === 0){
+        setTimeout(function(){
+            gameWon();
+        }, 7010);
     }
 }
 

@@ -1,6 +1,4 @@
 // Add cards to table
-console.log("So. 30.07.")
-
 var memoryEntity = document.querySelector("#table");
 var card1 = document.createElement("a-entity");
 var card2 = document.createElement("a-entity");
