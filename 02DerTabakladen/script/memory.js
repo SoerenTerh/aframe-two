@@ -255,11 +255,13 @@ $("#cardStack").on("click", function triggerMemory() {
             document.querySelector("#containerGroßvaterGame" + ' > a-animation' ).emit("Spielaufruf");
 
             AFRAME.utils.entity.setComponentProperty(memory, "visible", true);
+            AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", true);
             memoryVisible = true;
             gameActive = "#memoryGame";
         }
         else {
             AFRAME.utils.entity.setComponentProperty(memory, "visible", false);
+            AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", false);
             memoryVisible = false;
         }
     }
@@ -399,6 +401,7 @@ $(".memoryCard").on("click", function turnCard() {
                 console.log("Hip Hip Hurra!");
                 setTimeout(function(){ 
                     AFRAME.utils.entity.setComponentProperty(memory, "visible", false); 
+                    AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", false);
                     memoryVisible = false;
                 }, 3000);
             }
