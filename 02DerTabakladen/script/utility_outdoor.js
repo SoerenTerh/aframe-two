@@ -150,7 +150,7 @@ $('#cakeTrigger').on('click', function beginCake() {
         $('#counterKuchen').css("display", "none");
         gameActive = '';
     } else {
-        if(checkGameStatus(games[0])!==false){
+        if(checkGameStatus(games[0])!==false && $('.Minispiel_Kuchen').length !== 0){
             AFRAME.utils.entity.setComponentProperty(cakeEntity, 'visible', true);
             document.querySelector("#containerJungeGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerJungeGame" + ' > a-animation' ).emit("Spielaufruf");
@@ -167,7 +167,7 @@ $('#hideAndSeekTrigger').on('click', function beginHideAndSeek() {
         $('#counterPerson').css("display", "none");
         gameActive = '';
     } else {
-        if(checkGameStatus(games[1])!==false){
+        if(checkGameStatus(games[1])!==false && personLeft !== 0){
             AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', true);
             document.querySelector("#containerPolizistGame" + ' > a-sound' ).emit("Spielaufruf");
             document.querySelector("#containerPolizistGame" + ' > a-animation' ).emit("Spielaufruf");
