@@ -70,7 +70,10 @@ $('.HaSperson').on('click', function(el){
     updateCounterPerson();
 
     if(personLeft === 0){
-        won();
+        setTimeout(function(){
+            $('#lostCounter').html("Herzlichen Glückwunsch! Du hast die " + personFound + " Personen gefunden.");
+            won();
+        }, 7010);
         $('#counterPerson').css("display", "none");
     }
 });    
@@ -81,7 +84,5 @@ function updateCounterPerson() {
 }
 
 function won(){
-    $('#HaSwon').css("display", "initial");
-    setTimeout(function(){ $('#HaSwon').fadeOut(1500); }, 2000);
     AFRAME.utils.entity.setComponentProperty(HideAndSeekEntity, 'visible', false);
 }

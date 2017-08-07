@@ -393,6 +393,7 @@ $(".memoryCard").on("click", function turnCard() {
             }
 
             if (foundCards.length == cards.length) {
+                $('#lostCounter').html("Herzlichen Glückwunsch! Du hast gewonnen.");
                 console.log("Hip Hip Hurra!");
             }
         }

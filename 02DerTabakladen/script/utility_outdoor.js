@@ -1,5 +1,6 @@
 /* außen */
 
+var entity = document.querySelector('#camera');
 var cameraForTrigger = document.querySelector('#camera');
 var games = ["#cakeGame", "#HideAndSeek", "#memoryGame"];
 var gameActive;
