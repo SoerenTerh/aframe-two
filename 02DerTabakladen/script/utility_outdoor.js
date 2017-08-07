@@ -95,7 +95,7 @@ var textboxMain = document.querySelector('#textboxMain');
 $(function(){
     setTimeout(function(){
         AFRAME.utils.entity.setComponentProperty(textboxMain, 'visible', false);
-    }, 30000);
+    }, 60000);
 });
 
 $('#closeTextbox').on('click', function() {
