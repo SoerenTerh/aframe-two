@@ -18,6 +18,8 @@ AFRAME.registerComponent('set-cam-outdoor', {
                 $('#counterKuchen').css('display', 'block');
             } else if (gameActive === "#HideAndSeek") {
                 $('#counterPerson').css('display', 'block');
+            } else if(gameActive === "#memoryGame") {
+                AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", true);
             }
 
             document.location.hash = 'Platz';
@@ -53,6 +55,7 @@ AFRAME.registerComponent('set-cam-indoor', {
             document.querySelector('#cakeGame').setAttribute('visible', 'false');
             $('#counterKuchen').css('display', 'none');
             $('#counterPerson').css('display', 'none');
+            AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", false);
 
             // Trigger story when setting cam indoor
             if(!storyProgress) {
@@ -94,6 +97,7 @@ AFRAME.registerComponent('set-cam', {
                     document.getElementById("aussenSzene").setAttribute('position', {x: 0, y: 100, z: 0});
                     var aussenSound = document.querySelector('#platz');
                     aussenSound.components.sound.stopSound();
+                    AFRAME.utils.entity.setComponentProperty(cursorMemory, "visible", false);
 
                     if(!storyProgress) {
                         storyline("#one", "one");
